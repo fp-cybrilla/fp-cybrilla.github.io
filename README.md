@@ -1,16 +1,19 @@
-<h1>Fintech Primitives</h1>
-<img height="18px" style="margin-left: 4px;" src="https://img.shields.io/badge/v1.0.1-2018.10.05-42b983.svg"/>
+<!--<h1>Fintech Primitives</h1>-->
 
-<h2>Welcome to MFPro documentation!</h2>
+<h4>Welcome to the API only platform documentation!</h4>
 
-<h4>The following shall help your technical team to understand the flows of the system.</h4>
-<h4>You can use our API for creating investors and different types of orders; as well as getting information of previous transactions.</h4>
+<!--<h4>The guides available here shall help your technical team to understand the integration of the APIs.</h4>
+<h4>The APIs can be utilised for creating investors, KYC, handling different types of orders; as well as getting reporting on transactions.</h4>-->
 
-New user?
-> This document will help you get started with MFPro. You'll be up and running in a short time!
+<!--New visitor?-->
+> The guides here shall help you get started with the integration of the APIs. You shall be up and running in a short time!<br>
+> The APIs can be utilised for creating investors, KYC, handling different types of orders; as well as getting reporting on transactions.
 
-Have troubles?
-- Start with [Investor Workflows](/pages/workflows/create-an-investor)
+Wondering where to start?
+> Begin with creating and onboarding an [Investor](/pages/workflows/create-an-investor)
 
-<h2>Contact</h2>
-Email: [fp@cybrilla.com](mailto:fp@cybrilla.com)
+Contact
+> Mail us at - [fp@cybrilla.com](mailto:fp@cybrilla.com)
+
+<br>
+<img height="18px" style="margin-left: 4px;" src="https://img.shields.io/badge/v1.0-Updated on 05/12/2018-42b983.svg"/>

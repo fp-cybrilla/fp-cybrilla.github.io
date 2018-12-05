@@ -1,5 +1,8 @@
 ## Frequently Asked Questions
 ----------------------------------
+#### How can I keep my investors updated in case an order or payment fails or gets rejected?
+> The payments API and orders API provide a status with the rejected reason which can be used to keep the end user informed about their payments or orders related queries.
+
 #### Which API can be used to figure out if the order is lumpsum or SIP?
 > The parameter “type” in the Get Orders API helps in indicating the same.
 
