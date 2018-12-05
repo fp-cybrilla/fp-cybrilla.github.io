@@ -20,12 +20,13 @@
   - [**Goal Simulation**](/pages/workflows/goal-simulation)
   - [**KYC**](/pages/workflows/kyc-steps)
 - [FAQ](/pages/faq)
-- Other Links
-  - [About](/pages/other-links/about-us)
-  - [Regarding Support](/pages/other-links/regarding-support)
-  - <a style="display:inline;border-right-style:none;" href="/pages/other-links/registration-and-sandbox">
-      Registration and Sandbox
-    </a> <sup style="color:red;">NEW!</sup>
-  - [Activation and Live](/pages/other-links/activation-and-live)
-  - [Integration](/pages/other-links/integration)
-  - [Managed Operations](/pages/other-links/managed-operations)
+- Additional Information
+  - [About](/pages/additional-info/about-us)
+  - [Regarding Support](/pages/additional-info/regarding-support)
+  - [Pricing](/pages/additional-info/pricing)
+  - <a style="display:inline;border-right-style:none;" href="/pages/additional-info/registration-and-sandbox">Registration and Sandbox</a>
+  <sup style="color:red;">NEW!</sup>
+  - [Activation and Live](/pages/additional-info/activation-and-live)
+  - [Checklist for go live](/pages/additional-info/checklist-for-go-live)
+  - [Integration](/pages/additional-info/integration)
+  - [Managed Operations](/pages/additional-info/managed-operations)
