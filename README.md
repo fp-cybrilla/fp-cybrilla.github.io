@@ -15,8 +15,8 @@ Quick start
 We 're hiring!
 > Join the Fintech Primitives team in building a rare PaaS (Plaform as a Service) out of India.<br>
 > This is a once in a lifetime chance to not just code on any Fintech project with a friendly team.<br>
-> But also contribute and help disrupt the Indian wealth management industry.<br>
-> Mail us at [careers@cybrilla.com](mailto:careers@cybrilla.com)
+> But also contribute and help change the technology in the Indian wealth management industry.<br>
+> We are looking for enthusiastic Java developers. Mail us at [careers@cybrilla.com](mailto:careers@cybrilla.com)
 
 <br>
 <img height="18px" style="margin-left: 4px;" src="https://img.shields.io/badge/v1.1-Updated on 24/05/2019-42b983.svg"/>
