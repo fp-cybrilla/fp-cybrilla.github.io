@@ -21,12 +21,9 @@
   - [**KYC**](/pages/workflows/kyc-steps)
 - [FAQ](/pages/faq)
 - Additional Information
-  - [About](/pages/additional-info/about-us)
   - [Regarding Support](/pages/additional-info/regarding-support)
   - [Pricing](/pages/additional-info/pricing)
   - <a style="display:inline;border-right-style:none;" href="/pages/additional-info/registration-and-sandbox">Registration and Sandbox</a>
   <sup style="color:red;">NEW!</sup>
-  - [Activation and Live](/pages/additional-info/activation-and-live)
   - [Checklist for go live](/pages/additional-info/checklist-for-go-live)
-  - [Integration](/pages/additional-info/integration)
-  - [Managed Operations](/pages/additional-info/managed-operations)
+  
