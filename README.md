@@ -16,4 +16,4 @@ Contact
 > Mail us at - [fp@cybrilla.com](mailto:fp@cybrilla.com)
 
 <br>
-<img height="18px" style="margin-left: 4px;" src="https://img.shields.io/badge/v1.0-Updated on 05/12/2018-42b983.svg"/>
+<img height="18px" style="margin-left: 4px;" src="https://img.shields.io/badge/v1.0-Updated on 28/12/2018-42b983.svg"/>
