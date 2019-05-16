@@ -17,13 +17,11 @@
     - [Cancel SIP Order Installment](/pages/workflows/cancel-sip-order-installment)
     - [Display SIP Orders](/pages/workflows/display-sip-orders)
     - [Sell/Redemption Order](/pages/workflows/sell-redemption-order)
-  - [**Goal Simulation**](/pages/workflows/goal-simulation)
   - [**KYC**](/pages/workflows/kyc-steps)
+  - [**Instant Redemption**](/pages/workflows/kyc-steps)
 - [FAQ](/pages/faq)
 - Additional Information
-  - [Regarding Support](/pages/additional-info/regarding-support)
+  - [Support](/pages/additional-info/regarding-support)
   - [Pricing](/pages/additional-info/pricing)
   - <a style="display:inline;border-right-style:none;" href="/pages/additional-info/registration-and-sandbox">Registration and Sandbox</a>
-  <sup style="color:red;">NEW!</sup>
-  - [Checklist for go live](/pages/additional-info/checklist-for-go-live)
-  
+  <sup style="color:red;">NEW!</sup>  
