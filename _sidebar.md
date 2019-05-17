@@ -1,7 +1,8 @@
-- Getting started
+- **Getting started**
   - [Introduction](/)
   - [Quickstart](/pages/quickstart)
-- Workflows
+- **Workflows**
+
   - Investors
     - [Create an Investor](/pages/workflows/create-an-investor)
     - [Display Investor Details](/pages/workflows/display-investor-details)
@@ -19,9 +20,9 @@
     - [Display SIP Orders](/pages/workflows/display-sip-orders)
     - [Sell/Redemption Order](/pages/workflows/sell-redemption-order)
   - [**KYC**](/pages/workflows/kyc-steps)
-  - [**Instant Redemption**](/pages/workflows/kyc-steps)
-<!--- [FAQ](/pages/faq)-->
-- Additional Information
+
+  - [Instant Redemption](/pages/workflows/kyc-steps)
+- **Additional Information**
   - <a style="display:inline;border-right-style:none;" href="/pages/additional-info/registration-and-sandbox">Registration and Sandbox</a>
   <sup style="color:red;">NEW!</sup>  
   - [Support](/pages/additional-info/regarding-support)

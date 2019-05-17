@@ -2,7 +2,7 @@
 ------------------------------
 -->
 
-#### How I can reach out to you to resolve my issues?
+#### How I can get my issues resolved?
 
 Integration phase - 
 The product and engineering team shall help answer your queries, while you build your beautiful investor experience using our free sandbox.
