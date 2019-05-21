@@ -1,6 +1,7 @@
 <!--<h1>Fintech Primitives</h1>-->
 
-<h4>Cloud based API platform for mutual funds</h4>
+## Cloud based API platform for mutual funds
+------------------------------
 
 <!--<h4>The guides available here shall help your technical team to understand the integration of the APIs.</h4>
 <h4>The APIs can be utilised for creating investors, KYC, handling different types of orders; as well as getting reporting on transactions.</h4>-->
@@ -9,14 +10,18 @@
 The guides here shall help you get started with the integration of the APIs.<br>
 The APIs can be utilised for creating end to end workflows to enable the buy and sale of mutual funds.
 
-Quick start
-> Begin with creating and onboarding an [Investor](/pages/workflows/create-an-investor)
+><p style="font-size:18px">Quick start</p>
 
-We 're hiring!
-> Join the Fintech Primitives team in building a rare PaaS (Plaform as a Service) out of India.<br>
-> This is a once in a lifetime chance to not just code on any Fintech project.<br>
-> But contribute alongside a friendly team to help change the Indian wealth management industry.<br>
-> We are looking for enthusiastic Java developers. Mail us at [careers@cybrilla.com](mailto:careers@cybrilla.com)
+Refer the [Investment workflow](/pages/quickstart) guide to get started.
+
+><p style="font-size:18px">We 're hiring!</p>
+
+Join the Fintech Primitives team in building a unique PaaS (Plaform as a Service) out of India.<br>
+This is a rare opportunity to not just code on any Fintech project.<br>
+But create building blocks to help simplify technology in the Indian wealth management industry.<br>
+Perks of the job - A friendly team that is always learning and implementing new coll stuff.<br> 
+We are looking for enthusiastic platform and backend engineers, and strong quality engineers with experience in Java.<br>
+Mail us at [careers@cybrilla.com](mailto:careers@cybrilla.com)
 
 <br>
-<img height="18px" style="margin-left: 4px;" src="https://img.shields.io/badge/v1.1-Updated on 24/05/2019-42b983.svg"/>
+<img height="19px" style="margin-left: 4px;" src="https://img.shields.io/badge/v1.1-Updated on 24/05/2019-42b983.svg"/>

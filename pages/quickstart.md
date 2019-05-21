@@ -1,7 +1,7 @@
 ## Investment workflow sequence
 -------------------------
 
-Below is the sequence of APIs that can help implement the investment workflow for a general end user.
+Below is the sequence of APIs that can help you begin the implementation for an end user.
 
 ><p style="font-size:18px">Aunthentication (for production only)</p>
 
