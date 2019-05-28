@@ -16,7 +16,7 @@ Refer the [Investment workflow](/pages/quickstart) guide to get started.
 
 ><p style="font-size:18px">We 're hiring!</p>
 
-Join the Fintech Primitives team in building a unique PaaS (Plaform as a Service) out of India.<br>
+Join the Fintech Primitives team in building a unique PaaS (Plaform as a Service) for India.<br>
 This is a rare opportunity to not just code on any Fintech project.<br>
 But create building blocks to help simplify technology for the Indian wealth management industry.<br> 
 If you are an enthusiastic backend engineer, platform engineer or quality engineer with experience in Java, we are very interested in talking to you.<br>
