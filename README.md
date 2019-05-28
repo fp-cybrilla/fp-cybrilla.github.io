@@ -18,9 +18,9 @@ Refer the [Investment workflow](/pages/quickstart) guide to get started.
 
 Join the Fintech Primitives team in building a unique PaaS (Plaform as a Service) out of India.<br>
 This is a rare opportunity to not just code on any Fintech project.<br>
-But create building blocks to help simplify technology in the Indian wealth management industry.<br> 
-We are looking for enthusiastic platform and backend engineers, and strong quality engineers with experience in Java.<br>
-Mail us at [careers@cybrilla.com](mailto:careers@cybrilla.com)
+But create building blocks to help simplify technology for the Indian wealth management industry.<br> 
+If you are an enthusiastic backend engineer, platform engineer or quality engineer with experience in Java, we are very interested in talking to you.<br>
+Reach out to us at [careers@cybrilla.com](mailto:careers@cybrilla.com)
 
 <br>
-<img height="19px" style="margin-left: 4px;" src="https://img.shields.io/badge/v1.1-Updated on 24/05/2019-42b983.svg"/>
+<img height="19px" style="margin-left: 4px;" src="https://img.shields.io/badge/v1.1-Updated on 28/05/2019-42b983.svg"/>

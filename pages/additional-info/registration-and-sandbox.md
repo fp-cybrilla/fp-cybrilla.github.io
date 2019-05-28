@@ -10,11 +10,11 @@ Please email us at [fp@cybrilla.com](mailto:fp@cybrilla.com) or call our Fintech
 You are free to choose - build with your inhouse tech team or get the application built by us.
 
 #### What all do I receive when I sign up to use your APIs?
+- Instant sandbox access
 - Dedicated tech infrastructure setup
-- Facilitation with AMCs, Payment Gateways, Data providers, RTAs and Recommendation engine providers
+- Facilitation with all the partners (AMCs, Payment Gateways, Data providers, RTAs, KRAs, etc)
 - Review of your user experience journey from our Fintech experts
 - Tech solutioning - Assistance from our product and tech teams
-- Ops advisory / consulting - Type of agreements, type of credentials
-- Instant sandbox access
+- Operations advisory / consulting
 - Facilitation of KYC
 - Migration of offline customers (on case to case basis) - depending on volume, size, complexity, etc
