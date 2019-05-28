@@ -1,8 +1,20 @@
+<!--
 ## Registration and Sandbox
 -----------------------------
-
+-->
 #### How can I start using the platform?
-You can get started instantly. Please email us at [fp@cybrilla.com](mailto:fp@cybrilla.com) or call our Fintech experts at [+91 99165 99187](tel:+919916599187). Our experts shall get in touch with you to guide you on getting started with our API’s.
+You can get started through the sandbox instantly. <br>
+Please email us at [fp@cybrilla.com](mailto:fp@cybrilla.com) or call our Fintech experts at [+91 9740 9117 46](tel:+919740911746).
 
 #### Do I need to build my own application layer / front end application / web application / mobile app?
-The beauty of this platform is the flexibility it offers to customers to own their customer experience. You are free to define and build your own customer facing application, while our APIs power the backend processing. What this means is that you can have your own tech team or outsource to another vendor to do the same.
+You are free to choose - build with your inhouse tech team or get the application built by us.
+
+#### What all do I receive when I sign up to use your APIs?
+- Instant sandbox access
+- Dedicated tech infrastructure setup
+- Facilitation with all the partners (AMCs, Payment Gateways, Data providers, RTAs, KRAs, etc)
+- Review of your user experience journey from our Fintech experts
+- Tech solutioning - Assistance from our product and tech teams
+- Operations advisory / consulting
+- Facilitation of KYC
+- Migration of offline customers (on case to case basis) - depending on volume, size, complexity, etc
