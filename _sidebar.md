@@ -1,6 +1,25 @@
-- Getting started
+- **Getting started**
   - [Introduction](/)
-- Workflows
+  - <a style="display:inline;border-right-style:none;" href="/pages/registration-and-sandbox">Registration and Sandbox</a>
+  - [Quickstart](/pages/quickstart)
+
+- **Building blocks**
+  - **Investor Onboarding**
+    - **KYC**<sup style="color:red;"> Early Access</sup>
+      - [**Description**](/pages/workflows/what-is-kyc)
+      - [**Recommended Sequence**](/pages/workflows/video-kyc-steps)
+      - [FAQs](/pages/workflows/video-kyc-faq)
+  - **Orders**
+    - **Instant Redemption**<sup style="color:red;"> Early Access</sup>
+      - [**Description**](/pages/workflows/instant-redemption-description)
+      - [**Recommended Sequence**](/pages/workflows/instant-redemption-steps)
+      - [FAQs](/pages/workflows/instant-redemption-faq)
+- **Additional Information**
+  <!--<sup style="color:red;">NEW!</sup>  -->
+  - [Support](/pages/additional-info/regarding-support)
+  - [Pricing](/pages/additional-info/pricing)
+
+<!--
   - Investors
     - [Create an Investor](/pages/workflows/create-an-investor)
     - [Display Investor Details](/pages/workflows/display-investor-details)
@@ -17,13 +36,8 @@
     - [Cancel SIP Order Installment](/pages/workflows/cancel-sip-order-installment)
     - [Display SIP Orders](/pages/workflows/display-sip-orders)
     - [Sell/Redemption Order](/pages/workflows/sell-redemption-order)
-  - [**Goal Simulation**](/pages/workflows/goal-simulation)
-  - [**KYC**](/pages/workflows/kyc-steps)
-- [FAQ](/pages/faq)
-- Additional Information
-  - [Regarding Support](/pages/additional-info/regarding-support)
-  - [Pricing](/pages/additional-info/pricing)
-  - <a style="display:inline;border-right-style:none;" href="/pages/additional-info/registration-and-sandbox">Registration and Sandbox</a>
-  <sup style="color:red;">NEW!</sup>
-  - [Checklist for go live](/pages/additional-info/checklist-for-go-live)
-  
+
+    - [Check KYC status](/pages/workflows/kyc-status-check)
+    - [File Upload](/pages/workflows/file-upload)
+    - [Create Video KYC request](/pages/workflows/create-video-kyc)
+    - [Fetch Video KYC status](/pages/workflows/create-video-kyc)-->
