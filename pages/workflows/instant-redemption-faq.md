@@ -1,4 +1,4 @@
-#### How many AMCs have been aggregated through the API?
+#### Which AMCs have been aggregated through the API?
 
 | AMC | Available |
 |-----|-----------|
