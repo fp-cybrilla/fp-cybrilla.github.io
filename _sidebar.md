@@ -6,18 +6,33 @@
 - **Building blocks**
   - **Investor Onboarding**
     - **KYC**<sup style="color:red;"> Early Access</sup>
-      - [**Description**](/pages/workflows/what-is-kyc)
-      - [**Recommended Sequence**](/pages/workflows/video-kyc-steps)
+      - [Description](/pages/workflows/what-is-kyc)
+      - [Recommended Sequence](/pages/workflows/video-kyc-steps)
       - [FAQs](/pages/workflows/video-kyc-faq)
   - **Orders**
     - **Instant Redemption**<sup style="color:red;"> Early Access</sup>
-      - [**Description**](/pages/workflows/instant-redemption-description)
-      - [**Recommended Sequence**](/pages/workflows/instant-redemption-steps)
+      - [Description](/pages/workflows/instant-redemption-description)
+      - [Recommended Sequence](/pages/workflows/instant-redemption-steps)
       - [FAQs](/pages/workflows/instant-redemption-faq)
+
+<!--
+  - **Reports**
+    - **Holdings**
+      - [Description](/pages/workflows/what-is-capital-gains)
+      - [Recommended Sequence](/pages/workflows/capital-gains-api)
+      - [FAQs](/pages/workflows/capital-gains-faq)
+    - **Capital Gains**<sup style="color:red;"> Early Access</sup>
+      - [Description](/pages/workflows/what-is-capital-gains)
+      - [Recommended Sequence](/pages/workflows/capital-gains-api)
+      - [FAQs](/pages/workflows/capital-gains-faq)
+    - **CAS**<sup style="color:red;"> Early Access</sup>
+      - [Description](/pages/workflows/what-is-capital-gains)
+      - [Recommended Sequence](/pages/workflows/capital-gains-api)
+      - [FAQs](/pages/workflows/capital-gains-faq)
+
 - **Additional Information**
-  <!--<sup style="color:red;">NEW!</sup>  -->
   - [Support](/pages/additional-info/regarding-support)
-  - [Pricing](/pages/additional-info/pricing)
+-->
 
 <!--
   - Investors

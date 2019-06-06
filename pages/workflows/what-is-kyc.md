@@ -22,7 +22,7 @@ For the purpose of KYC Norms -
 - Online (Aadhaar eKYC)
 	- This allowed a partial KYC with an investment of upto 50,000 per scheme per financial year.<br>This had been available earlier through the APIs. However, it has been stopped in keeping with the ban on the use of Aadhaar to perform KYC.
 
-- Video based
+- Online (Video based)
 	- Digital solution to enable full KYC [Know more](../../pages/workflows/video-kyc-steps)
 
 #### How does the API help you (the distributor)?

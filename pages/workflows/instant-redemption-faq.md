@@ -1,4 +1,4 @@
-#### How many AMCs have been aggregated through the API?
+#### Which AMCs have been aggregated through the API?
 
 | AMC | Available |
 |-----|-----------|
@@ -11,7 +11,7 @@
 
 #### Order states in happy flow
 - Pending (initial state)
-- Submitted (should come after approx 30 secs. This is the final state in UAT)
+- Submitted (should come after approx 30 secs) / Failed
 - Successful / Failed (will receive this state in production)
 
 #### Test data
@@ -19,6 +19,11 @@
 |-----------|---------|
 | ISIN | INF109K01VF4 (for ICICI) |
 | ISIN | INF204K01UN9 (for Reliance) |
+| ISIN | INF209K01RU9 (for Aditya Birla) |
+| Folio Number | 427355 (for ICICI) |
+| Folio Number | EF71JK1XQYFTHZH4 (for Reliance)|
+| Folio Number | MRVYOW7BJ4UKENKE (for Aditya Birla) |
+| Investment Account | 97 (If tenant is Prueba) |
 | Folio Number | 427355 (for ICICI) |
 | Folio Number | EF71JK1XQYFTHZH4 (for Reliance)|
 | Investment Account | 97 |
