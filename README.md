@@ -23,4 +23,4 @@ If you are an enthusiastic backend engineer, platform engineer or quality engine
 Reach out to us at [careers@cybrilla.com](mailto:careers@cybrilla.com)
 
 <br>
-<img height="19px" style="margin-left: 4px;" src="https://img.shields.io/badge/v1.1-Updated on 28/05/2019-42b983.svg"/>
+<img height="19px" style="margin-left: 4px;" src="https://img.shields.io/badge/v1.1-Updated on 07/06/2019-42b983.svg"/>

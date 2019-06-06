@@ -1,6 +1,10 @@
 #### Q - Is it mandatory for the user to place an investment order along with completing the video KYC? 
 Yes. An investment order shall have to be placed with the AMC that the distributor has partnered with for completing the KYC.
 
+
+#### Q - Can the order be placed in a zero balance folio? 
+No. As per the fund schemes displayed by the distributor, the investor has to make an investment for the minimum required amount.
+
 #### Q - Is the user allowed to place an order in any scheme (liquid/equity/debt)? 
 Yes
 

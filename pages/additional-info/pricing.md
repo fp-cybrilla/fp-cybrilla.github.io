@@ -1,4 +1,4 @@
-#### What is the pricing of the APIs?
+#### What are the commercials of the platform?
 
 <p style="font-size:18px">Pay only for what you use.</p>
 

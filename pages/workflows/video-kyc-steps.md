@@ -28,6 +28,13 @@ The investor is required to submit the following mandatory documents -
 **Step 4 - Create Video KYC request**<br>
 [Create Video KYC request](https://fintechprimitives.com/api/#post-create-video-kyc-request)
 
+<!--
+**Step 5 - Create a purchase order**<br>
+As per regulations, a customer shall perform the activity of KYC only if he/she has the intent of making an investment into mutual funds. Hence, along with the KYC, a purchase transaction also needs to be submitted, and a folio created respectively. 
+
+[Create purchase order](../../pages/workflows/create-lumpsum-order)
+-->
+
 **Step 5 - Fetch status**<br>
 [Check Video KYC status](https://fintechprimitives.com/api/#get-get-video-kyc-request)
 
