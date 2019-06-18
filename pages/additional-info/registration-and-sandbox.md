@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ef6c495c445f60b9c7b064bde90faacd8b000f3a
 #### How to get access to the platform APIs?
 You can get started through the sandbox instantly. <br>
 Please email us at [fp@cybrilla.com](mailto:fp@cybrilla.com) or call our Fintech experts at [+91 9740 9117 46](tel:+919740911746).
@@ -11,6 +15,18 @@ Pass the email and password in the body of the API.
 
 - Use the generated JWT token to authenticate for using different API's.
 
+<<<<<<< HEAD
+=======
+=======
+<!--
+## Registration and Sandbox
+-----------------------------
+-->
+#### How can I start using the platform?
+You can get started through the sandbox instantly. <br>
+Please email us at [fp@cybrilla.com](mailto:fp@cybrilla.com) or call our Fintech experts at [+91 9740 9117 46](tel:+919740911746).
+>>>>>>> master
+>>>>>>> ef6c495c445f60b9c7b064bde90faacd8b000f3a
 
 #### Do I need to build my own application layer / front end application / web application / mobile app?
 You are free to choose - build with your inhouse tech team or get the application built by us.
@@ -23,5 +39,14 @@ You are free to choose - build with your inhouse tech team or get the applicatio
 - Tech solutioning - Assistance from our product and tech teams
 - Operations advisory / consulting
 - Facilitation of KYC
+<<<<<<< HEAD
 - Migration of offline customers (on case to case basis) - depending on volume, size, complexity, etc
 
+=======
+<<<<<<< HEAD
+- Migration of offline customers (on case to case basis) - depending on volume, size, complexity, etc
+
+=======
+- Migration of offline customers (on case to case basis) - depending on volume, size, complexity, etc
+>>>>>>> master
+>>>>>>> ef6c495c445f60b9c7b064bde90faacd8b000f3a

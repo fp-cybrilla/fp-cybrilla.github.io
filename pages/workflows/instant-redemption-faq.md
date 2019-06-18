@@ -24,6 +24,9 @@
 | Folio Number | EF71JK1XQYFTHZH4 (for Reliance)|
 | Folio Number | MRVYOW7BJ4UKENKE (for Aditya Birla) |
 | Investment Account | 97 (If tenant is Prueba) |
+| Folio Number | 427355 (for ICICI) |
+| Folio Number | EF71JK1XQYFTHZH4 (for Reliance)|
+| Investment Account | 97 |
 | Amount | Should be a multiple of 1. <br> Max can be 90% of the invested amount or 50,000 (whichever is lower) |
 
 
