@@ -5,24 +5,24 @@ The below data points can be fetched per folio number or per investment account 
 | Data points | Description |
 | ---------- | ------------ |
 | **Scheme Details** |
-| Scheme ISIN | Unique no to identify Fund |
+| Scheme ISIN | Unique number to identify Fund |
 | Scheme name | Fund Name |
 | Scheme type | Plan Type(Growth/Dividend reinvestment/Payout) |
 | **Holdings** |
-| Scheme holdings units | No of units cutomer is holding as on date passed in 'scheme holdings as on' |
-| Scheme holdings redeemable units | No of units available for redemption as on date. Eg for ELSS funds there is lock in of 3 years,hence units which have not completed 3 Years are not available for redemption |
-| Market value amount | Units * Last available NAV |
-| Market value redeemable amount | scheme holdings redeemable units * Last available NAV |
+| Scheme holdings units | Number of units cutomer is holding as on date passed in 'scheme holdings as on' |
+| Scheme holdings redeemable units | Number of units available for redemption as on date. Eg for ELSS funds there is lock in of 3 years,hence units which have not completed 3 Years are not available for redemption |
+| Market value amount | The market value of the units as per last available NAV |
+| Market value redeemable amount | The market value of the redeemable units as per last available NAV |
 | Invested value amount | Holding cost as on report date |
 | Payout amount | Dividend payout till date incase if holding is in dividend payout fund |
 | NAV | Per unit price |
 | Unrealized gains | Gains/loss of balance units |
 | **Redemption details** | |
 | Redemption date | Date at which units are redeemed |
-| Redemption units | No of units redeemed |
+| Redemption units | Number of units redeemed |
 | Purchase price | Price at which redeemed units were bought |
 | Purchase date | Date at which redeemed units were bought |
-| Cost | Total cost value(Units*Avg cost) |
+| Cost | Total cost value of the units |
 | Average cost | Average Price at which units were bought |
 | Realized gains | Total Gains/Loss due to selling of holdings |
 | Sale price | Price at which units were redeemed |
