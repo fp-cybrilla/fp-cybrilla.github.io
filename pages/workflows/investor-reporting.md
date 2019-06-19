@@ -9,7 +9,7 @@ The below data points can be fetched per folio number or per investment account 
 | Scheme name | Fund Name |
 | Scheme type | Plan Type(Growth/Dividend reinvestment/Payout) |
 | **Holdings** |
-| Scheme holdings units | No of units cutomer is holding as on date passed in "scheme holdings as on" |
+| Scheme holdings units | No of units cutomer is holding as on date passed in 'scheme holdings as on' |
 | Scheme holdings redeemable units | No of units available for redemption as on date. Eg for ELSS funds there is lock in of 3 years,hence units which have not completed 3 Years are not available for redemption |
 | Market value amount | Units * Last available NAV |
 | Market value redeemable amount | scheme holdings redeemable units * Last available NAV |
