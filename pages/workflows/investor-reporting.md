@@ -49,21 +49,25 @@ The below data points can be fetched per folio number or per investment account 
 
 
 #### What are the different cases supported by the reporting engine?
+
+The reporting engine incorporates rules for handling the below cases - 
 - Scheme mergers: The impact of mutual fund scheme categorizations has been built into reports like holdings and capital gains.
 - Folio consolidation: If the user decides to merge transactions of all folios into a single folio for a particular scheme.
-- Transfer in/ Transfer out: If the user changes his/her broker.
+- Transfer in/Transfer out: If the user changes his/her broker.
 - Migration of exsiting folios: Upload of investor data and transaction data; reconcilliation and then generation of data points to ensure updated data is available.
 
 
 #### Sequence of APIs for integration?
 
-Step 1 - The reporting engine supports the following different reverse feeds. An API to upload reverse feed API can be used for the same.
+**Step 1** - <br>The reporting engine supports the following different reverse feeds. 
+An API to upload reverse feed API can be used for the same.
+
 - Karvy: MFSD 201 without split
 - CAMS: WBR2
 - Franklin: MTFP (my transactions for period)
 - Sundaram: ER02
 
-Step 2 - Once the source data (from the RTA) has been uploaded, the reporting engine generates the data points that can be used for different types of reports.
+**Step 2** - <br>Once the source data (from the RTA) has been uploaded, the reporting engine generates the data points that can be used for different types of reports.
 Eg - The [holdings API](https://fintechprimitives.com/api/#get-investment-account-holdings) can be called to fetch the Portfolio holdings report.
 
 #### What are the different types of reports that can be generated from the above data points?
@@ -73,12 +77,12 @@ We currently provide two pre built reports through simple APIs.
 | Reports |
 | ------- |
 | [Portfolio Holdings](https://fintechprimitives.com/api/#get-investment-account-holdings) |
-| [Capital Gains]() |
+| [Capital Gains](https://fintechprimitives.com/api/#get-capital-gain-report) |
 
-More reports like the following can be generated using the above data points.
+Additional reports like the following can be generated using the above data points.
 
-| Reports that can be generated |
-| ----------------------------- |
+| Additonal Reports |
+| ----------------- |
 | Segmentation of holdings by asset class |
 | Segmentation of underlying holdings (by stocks) |
 | Profit/Loss Statement | 
