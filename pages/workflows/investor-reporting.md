@@ -1,6 +1,6 @@
 #### What are the data points that the reporting APIs provide?
 
-The below data points can be fetched per folio number or per investment account respectively.
+The below data points can be fetched per folio number or per investment account.
 
 | Data points | Description |
 | ---------- | ------------ |
@@ -9,8 +9,8 @@ The below data points can be fetched per folio number or per investment account 
 | Scheme name | Fund Name |
 | Scheme type | Plan Type(Growth/Dividend reinvestment/Payout) |
 | **Holdings** |
-| Scheme holdings units | Number of units cutomer is holding as on date passed in 'scheme holdings as on' |
-| Scheme holdings redeemable units | Number of units available for redemption as on date. Eg for ELSS funds there is lock in of 3 years,hence units which have not completed 3 Years are not available for redemption |
+| Scheme holdings units | Number of units customer is holding |
+| Scheme holdings redeemable units | Number of units available for redemption. Eg for ELSS funds there is lock in of 3 years, hence units which have not completed 3 Years are not available for redemption |
 | Market value amount | The market value of the units as per last available NAV |
 | Market value redeemable amount | The market value of the redeemable units as per last available NAV |
 | Invested value amount | Holding cost as on report date |
@@ -47,7 +47,7 @@ An API to upload reverse feed API can be used for the same.
 - Sundaram: ER02
 
 **Step 2** - <br>Once the source data (from the RTA) has been uploaded, the reporting engine generates the data points that can be used for different types of reports.
-Eg - The [holdings API](https://fintechprimitives.com/api/#get-investment-account-holdings) can be called to fetch the Portfolio holdings report.
+Eg - The [holdings API](https://fintechprimitives.com/api/#get-holding-report) can be called to fetch the Portfolio holdings report.
 
 #### What are the different types of reports that can be generated using the above data points?
 
@@ -55,7 +55,7 @@ We currently provide two pre built reports through simple APIs.
 
 | Reports |
 | ------- |
-| [Portfolio Holdings](https://fintechprimitives.com/api/#get-investment-account-holdings) |
+| [Portfolio Holdings](https://fintechprimitives.com/api/#get-holding-report) |
 | [Capital Gains](https://fintechprimitives.com/api/#get-capital-gain-report) |
 
 Additional reports like the following can be generated using the above data points.
