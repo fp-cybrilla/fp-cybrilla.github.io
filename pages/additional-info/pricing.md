@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-#### What are the commercials of the platform?
-=======
-<<<<<<< HEAD
-#### What are the commercials of the platform?
-=======
 #### What is the pricing of the APIs?
->>>>>>> master
->>>>>>> ef6c495c445f60b9c7b064bde90faacd8b000f3a
 
 <p style="font-size:18px">Pay only for what you use.</p>
 
