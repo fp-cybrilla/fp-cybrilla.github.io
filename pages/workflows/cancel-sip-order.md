@@ -1,9 +1,8 @@
-## Cancel Sip Order
+## Cancel SIP Order
 ----------------
 
 |     Steps    |     Method       |    Reference    |
 |--------------|------------------|-----------------|
-| Fetch Bank Account ID | GET | [Get Investor Details](https://fintechprimitives.com/api/#get-investor-details) |
 | Fetch investment account ID | GET | [Get Investment Account Details](https://fintechprimitives.com/api/#get-investment-accounts) |
-| Fetch SIP IDs | GET | [Get SIP List](https://fintechprimitives.com/api/#get-list-sip-order) |
-| Update SIP Order | POST | [Update SIP Order](https://fintechprimitives.com/api/#patch-update-sip-order) |
+| Fetch SIP order details | GET | [Get SIP Order details](https://fintechprimitives.com/api/#get-single-sip-order-detail) |
+| Cancel SIP Order | POST | [Cancel SIP Order](https://fintechprimitives.com/api/#patch-cancel-sip-order) |

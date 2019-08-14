@@ -7,15 +7,20 @@ We encourage distributors to design their own investment journeys for their user
 
 >[Auth API](https://fintechprimitives.com/api/#authentication)
 
-<p style="font-size:18px">KYC Check</p>
+## User Acquisition
+-------------------------
 
-> [Get KYC Status](https://fintechprimitives.com/api/#authentication)<br>
-> [Check updated KYC status](https://fintechprimitives.com/api/#put-refetch-kyc-status)<br>
+<p style="font-size:18px">KYC</p>
+
+> [Details](/pages/workflows/what-is-kyc)<br>
 
 <p style="font-size:18px">Investor creation / Onboarding</p>
 
 > [Create investor](https://fintechprimitives.com/api/#post-create-investor)<br>
 [Create investment account](https://fintechprimitives.com/api/#post-create-investment-account)
+
+## User Conversion
+-------------------------
 
 <p style="font-size:18px">Orders</p>
 
@@ -24,19 +29,16 @@ We encourage distributors to design their own investment journeys for their user
 Or<br>
 [Fetch single scheme details](https://fintechprimitives.com/api/#get-single-fund-schemes-detail)
 
-<!--
-Test Data<br>
-
-| Sample bank code | ICIC and FDRL |
-|--------------|------------------|
--->
 **Lumpsum Orders**<br>
-> [Create lumpsum order with Netbanking](https://fintechprimitives.com/api/#post-create-lumpsum-order-netbanking)<br>
+> [Create lumpsum order with Netbanking/debit card/UPI](https://fintechprimitives.com/api/#post-create-lumpsum-order-netbanking)<br>
 [Create a payment](https://fintechprimitives.com/api/#post-net-banking)
+<br>OR<br>
+> [Create mandate](https://fintechprimitives.com/api/#post-create-mandate)<br>
+[Create lumpsum order with NACH](https://fintechprimitives.com/api/#post-create-lumpsum-order-nach)<br>
 
 **SIP Orders**<br>
-> [Create mandate](https://fintechprimitives.com/api/#post-create-mandate)
-[Create SIP order](https://fintechprimitives.com/api/#post-create-sip-order)
+> [Create mandate](https://fintechprimitives.com/api/#post-create-mandate)<br>
+[Create SIP order](/pages/workflows/create-sip-order)
 
 **Redemption Orders**<br>
 > [Redemption](https://fintechprimitives.com/api/#post-create-sell-order)
@@ -44,8 +46,9 @@ Test Data<br>
 **Instant Redemption Orders**<br>
 > [Details](https://docs.fintechprimitives.com/pages/workflows/instant-redemption-steps)
 
+## User Retention
+-------------------------
+
 <p style="font-size:18px">Reports</p>
 
-> [Holdings report](https://fintechprimitives.com/api/#get-investment-account-holdings)<br>
-[Capital Gains report]()
-
+> [Details](/pages/workflows/investor-reporting)<br>

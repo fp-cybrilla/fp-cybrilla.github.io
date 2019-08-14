@@ -5,7 +5,7 @@
 | ICICI | Yes |
 | Reliance | Yes |
 | Aditya Birla | Yes |
-| Axis | Under testing |
+| Axis | Yes |
 | Kotak | Under testing |
 | Edelweiss | In the roadmap |
 
@@ -15,18 +15,17 @@
 - Successful / Failed (will receive this state in production)
 
 #### Test data
-| Parameter | Details |
-|-----------|---------|
-| ISIN | INF109K01VF4 (for ICICI) |
-| ISIN | INF204K01UN9 (for Reliance) |
-| ISIN | INF209K01RU9 (for Aditya Birla) |
-| Folio Number | 427355 (for ICICI) |
-| Folio Number | EF71JK1XQYFTHZH4 (for Reliance)|
-| Folio Number | MRVYOW7BJ4UKENKE (for Aditya Birla) |
-| Investment Account | 97 (If tenant is Prueba) |
-| Folio Number | 427355 (for ICICI) |
-| Folio Number | EF71JK1XQYFTHZH4 (for Reliance)|
-| Investment Account | 97 |
-| Amount | Should be a multiple of 1. <br> Max can be 90% of the invested amount or 50,000 (whichever is lower) |
+
+| AMC | Parameter | Details |
+| --- |-----------|---------|
+| ICICI | ISIN | INF109K01VF4 |
+| | Folio Number | 427355 |
+| Reliance | ISIN | INF204K01UN9 |
+| | Folio Number | EF71JK1XQYFTHZH4 |
+| Aditya Birla | ISIN | INF209K01RU9 |
+| | Folio Number | MRVYOW7BJ4UKENKE |
+
+<p><b>Investment Account:</b> 97 (If tenant is Prueba)</p>
+<p><b>Amount:</b> Should be a multiple of 1. Max can be 90% of the invested amount or 50,000 (whichever is lower)</p>
 
 

@@ -2,7 +2,7 @@
 ## Registration and Sandbox
 -----------------------------
 -->
-#### How can I start using the platform?
+#### How can I start using the APIs?
 You can get started through the sandbox instantly. <br>
 Please email us at [fp@cybrilla.com](mailto:fp@cybrilla.com) or call our Fintech experts at [+91 9740 9117 46](tel:+919740911746).
 

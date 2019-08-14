@@ -46,3 +46,4 @@ UTR report - If an API is available from the payment gateway, then it is easier 
 
 #### How do we get operations related details?
 > Operations API’s will soon be available respectively.
+

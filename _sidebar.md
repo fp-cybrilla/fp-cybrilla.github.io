@@ -2,7 +2,7 @@
   - [Introduction](/)
   - <a style="display:inline;border-right-style:none;" href="/pages/registration-and-sandbox">Registration and Sandbox</a>
   - [Quickstart](/pages/quickstart)
-
+  - [Test data](/pages/test_data)
 - **Building blocks**
   - **Investor Onboarding**
     - **KYC**<sup style="color:red;"> Early Access</sup>
@@ -10,6 +10,11 @@
       - [Recommended Sequence](/pages/workflows/video-kyc-steps)
       - [FAQs](/pages/workflows/video-kyc-faq)
   - **Orders**
+    - **SIP**
+      - [Create SIP Order](/pages/workflows/create-sip-order)
+      - [Cancel SIP Order](/pages/workflows/cancel-sip-order)
+      - [Cancel SIP Order Installment](/pages/workflows/cancel-sip-order-installment)
+      - [FAQs](/pages/workflows/sip-faq)
     - **Instant Redemption**<sup style="color:red;"> Early Access</sup>
       - [Description](/pages/workflows/instant-redemption-description)
       - [Recommended Sequence](/pages/workflows/instant-redemption-steps)
