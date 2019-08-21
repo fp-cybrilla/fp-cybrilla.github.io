@@ -19,7 +19,7 @@
       - [Description](/pages/workflows/instant-redemption-description)
       - [Recommended Sequence](/pages/workflows/instant-redemption-steps)
       - [FAQs](/pages/workflows/instant-redemption-faq)
-  - **Reporting**
+  - **Investor Reporting**
     - [Overview](/pages/workflows/investor-reporting)
     - [Usage](/pages/workflows/investor-reporting-usage)
 

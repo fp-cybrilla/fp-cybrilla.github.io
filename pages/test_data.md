@@ -13,4 +13,6 @@
 | PANs | Status |
 | ---- | ------ |
 | AACPA0404A, AACPA0404C | Will return true | 
-| XXXPX3751X | Will return true | 
+| XXXPX3751X | Any pan number that matches XXXPX3751X will return status as true with the name as “Tony Soprano” (X can be any alphabet) |
+| XXXPX3752X |Any pan number that matches XXXPX3752X will return status as false with the name as “Junior Soprano” with investment_limit of 50000 (X can be any alphabet) | 
+| Any other PAN number | Will return false |
