@@ -1,8 +1,9 @@
-- **Getting started**
-  - [Introduction](/)
+- **About Us**
+  - [PaaS](/)
   - <a style="display:inline;border-right-style:none;" href="/pages/registration-and-sandbox">Registration and Sandbox</a>
+- **Getting started**
   - [Quickstart](/pages/quickstart)
-  - [Test data](/pages/test_data)
+  - [Test data](/pages/sandbox/test_data)
 - **Building blocks**
   - **Investor Onboarding**
     - **KYC**<sup style="color:red;"> Early Access</sup>
@@ -10,6 +11,8 @@
       - [Recommended Sequence](/pages/workflows/video-kyc-steps)
       - [FAQs](/pages/workflows/video-kyc-faq)
   - **Orders**
+    - [General FAQs](/pages/workflows/orders-faq)
+    - [Order States](/pages/workflows/order-status)
     - **SIP**
       - [Create SIP Order](/pages/workflows/create-sip-order)
       - [Cancel SIP Order](/pages/workflows/cancel-sip-order)
@@ -19,9 +22,8 @@
       - [Description](/pages/workflows/instant-redemption-description)
       - [Recommended Sequence](/pages/workflows/instant-redemption-steps)
       - [FAQs](/pages/workflows/instant-redemption-faq)
-    - [Statuses](/pages/workflows/order-status)
   - **Payments**
-    - [Statuses](/pages/workflows/payment-status)    
+    - [Payment States](/pages/workflows/payment-status)
   - **Investor Reporting**
     - [Overview](/pages/workflows/investor-reporting)
     - [Usage](/pages/workflows/investor-reporting-usage)

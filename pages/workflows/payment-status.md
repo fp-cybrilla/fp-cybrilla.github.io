@@ -1,4 +1,4 @@
-## Statuses
+## Payment States
 |Status|Applicability|Comments|
 |---|---|---|
 |PENDING|All|Payment is pending.|

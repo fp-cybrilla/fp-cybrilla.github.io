@@ -7,7 +7,7 @@ We encourage distributors to design their own investment journeys for their user
 
 >[Auth API](https://fintechprimitives.com/api/#authentication)
 
-## User Acquisition
+## User Acquisition (KYC + Onboarding)
 -------------------------
 
 <p style="font-size:18px">KYC</p>
@@ -19,7 +19,7 @@ We encourage distributors to design their own investment journeys for their user
 > [Create investor](https://fintechprimitives.com/api/#post-create-investor)<br>
 [Create investment account](https://fintechprimitives.com/api/#post-create-investment-account)
 
-## User Conversion
+## User Conversion (Transactions)
 -------------------------
 
 <p style="font-size:18px">Orders</p>
@@ -46,7 +46,7 @@ Or<br>
 **Instant Redemption Orders**<br>
 > [Details](https://docs.fintechprimitives.com/pages/workflows/instant-redemption-steps)
 
-## User Retention
+## User Retention (Reporting)
 -------------------------
 
 <p style="font-size:18px">Reports</p>
