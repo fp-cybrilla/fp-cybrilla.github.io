@@ -27,16 +27,16 @@ The investor has to upload the following documents (mandatory by regulation) -
   5. Signature (on a white background)
 
 **Step 4 - Create Video KYC request**<br>
-[Create Video KYC request](https://fintechprimitives.com/api/#post-create-video-kyc-request)
+[Create Video KYC request](https://fintechprimitives.com/api/#post-create-kyc-request)
 
-**Step 5 - Fetch status**<br>
+**Step 5 - Create investment order**<br>
 Create a minimum investment of &#8377;100 in any scheme of the partner AMC.
 
 **Step 6 - Fetch status**<br>
-[Check Video KYC status](https://fintechprimitives.com/api/#get-get-video-kyc-request)
+[Check Video KYC status](https://fintechprimitives.com/api/#get-get-kyc-request)
 
 **Step 7 - Update Video KYC request (if it has been rejected)**<br>
-[Update Video KYC request](https://fintechprimitives.com/api/#put-update-video-kyc-request)
+[Update Video KYC request](https://fintechprimitives.com/api/#post-patch-update-kyc-request)
 
 <!--
     - The investor has to say his name, then spell his name and then say his PAN number

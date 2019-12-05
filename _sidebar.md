@@ -18,7 +18,7 @@
       - [Cancel SIP Order](/pages/workflows/cancel-sip-order)
       - [Cancel SIP Order Installment](/pages/workflows/cancel-sip-order-installment)
       - [FAQs](/pages/workflows/sip-faq)
-    - **Instant Redemption**<sup style="color:red;"> Early Access</sup>
+    - **Instant Redemption**
       - [Description](/pages/workflows/instant-redemption-description)
       - [Recommended Sequence](/pages/workflows/instant-redemption-steps)
       - [FAQs](/pages/workflows/instant-redemption-faq)
