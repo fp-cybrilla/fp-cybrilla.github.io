@@ -37,4 +37,4 @@ For the purpose of KYC Norms -
 
 
 #### Workflow for Video KYC
-<img src=../../distributor_kyc.png height="400" width="800">
+<img src=../../images/distributor_kyc.png height="400" width="800">

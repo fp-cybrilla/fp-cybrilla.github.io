@@ -2,8 +2,8 @@
   - [PaaS](/)
   - <a style="display:inline;border-right-style:none;" href="/pages/registration-and-sandbox">Registration and Sandbox</a>
 - **Getting started**
-  - [Quickstart](/pages/quickstart)
-  - [Test data](/pages/sandbox/test_data)
+  - [Quick start](/pages/quickstart)
+  - [Test data](/pages/test_data)
 - **Building blocks**
   - **Investor Onboarding**
     - **KYC**<sup style="color:red;"> Early Access</sup>
