@@ -10,4 +10,4 @@ The instant redemption facility is provided for investors to be able to withdraw
 - Distributors have the felixibility of choosing the AMC they want to enable for their end users
 
 #### Workflow
-<img src=../../ir.png height="500" width="500">
+<img src=../../images/ir.png height="500" width="500">

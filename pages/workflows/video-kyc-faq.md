@@ -1,3 +1,13 @@
+#### Q - What are the most frequent reasons for video KYC being rejected?
+The most frequent reasons are - 
+- Unclear images (POI / PAN)
+- Voice of the investor not clearly audible as part of the video
+- Face of the investor not clearly visible as part of the video
+- Address submitted as part of the onboarding form does not match to the address on the submitted document
+
+#### Q - What legal / business agreements are required to be able to offer video KYC?
+The distributor needs to sign a channel partner agreement with the AMC
+
 #### Q - Is it mandatory for the user to place an investment order along with completing the video KYC? 
 Yes. An investment order shall have to be placed with the partner AMC for completing the KYC.
 
@@ -21,9 +31,9 @@ The distributor can use the [check KYC status](https://fintechprimitives.com/api
 
 #### Sample video
 <video width="320" height="240" controls id="sample_video">
-  <!--<source src="../../sample_video_kyc.mov" type="video/mp4">-->
-  <source src="../../signzy_sample_2.mov" type="video/mp4">
+  <source src="../../videos/sample_video_kyc.mov" type="video/mp4">
+  <!--<source src="../../images/signzy_sample_2.mov" type="video/mp4">-->
 </video>
-<br><i>*The identity proof needs to be held and displayed clearly in front of the camera. The video is for representational purposes only.</i>
+<br><i>*The data in this video has been created for demo purpose only. It does not belong to any living individual.</i>
 
-<!--The data in this video has been created for demo purpose only. It does not belong to any living individual.<br>-->
+<!--The identity proof needs to be held and displayed clearly in front of the camera. The video is for representational purposes only.<br>-->

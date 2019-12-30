@@ -7,7 +7,7 @@
 | Aditya Birla | Yes |
 | Axis | Yes |
 | Kotak | Under testing |
-| Edelweiss | In the roadmap |
+| DSP | On the roadmap |
 
 #### Order states in happy flow
 - Pending (initial state)
