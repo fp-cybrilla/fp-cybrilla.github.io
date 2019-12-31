@@ -11,7 +11,7 @@ Please ensure the following have been completed for production access -
 
 **Step 2 -**<br>
   [Check KYC status API](https://fintechprimitives.com/api/#post-create-kyc-check)<br>
-  The test PANs are available [here](https://docs.fintechprimitives.com/pages/sandbox/test_data)<br> 
+  The test PANs are available [here](https://docs.fintechprimitives.com/pages/test_data)<br> 
   A background check for KYC status through PAN using CVL API is performed.<br>
   If the user in not KYC compliant, proceed to the next steps.<br>
   <i>Note</i> - The KRA allows access to this API for ARN holders only.
