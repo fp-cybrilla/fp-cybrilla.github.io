@@ -29,11 +29,11 @@ For tenant login we will issue  new private_api_key and  tenant_secret  for HMAC
 There are two options to call the tenant login
 * Option 1 (New and Recommended)<br>
 Base URL: https://s.finprim.com<br>
-Pass x-tenant-id as ‘freecharge’ as a http header in the tenant login api (api/auth/tenant/login)
+Pass x-tenant-id(domain name of the new staging instance) as a http header in the tenant login api (api/auth/tenant/login)
 And all other API calls can be made without having the subdomain in the URL
 
 * Option 2 (Old and will be deprecated in the future)<br>
-Base URL: https://freecharge.s.finprim.com<br>
+Base URL: https://&lt;sub domain name&gt;.s.finprim.com<br>
 The current way of calling the tenant login api without any extra http headers will succeed.
 
 
