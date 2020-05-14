@@ -1,12 +1,12 @@
-# Kyc Request
+# Submit a video kyc application
 Use this guide to perform a video kyc for your investor.
+FP uses `KYC Request` object to represent the kyc application of an investor. You should create a `KYC Request` as the first step to initiate the kyc application process for the investor.
 
 #### KYC Request lifecycle
 1. The KYC Request will be in `pending` state when created.
-2. It moves to `submitted` state when all the required information is provided.
+2. Once all the required information is provided, the application is sent to the AMC and the request is moved to `submitted` state.
 3. The AMC verifies the data provided and accepts the request if the verification is successful. The KYC Request moves to `successful` state.
 4. If the verification fails, the KYC Request moves to `rejected` state.
-
 
 #### 1. Create a KYC Request
 You need to capture the investor's video and few data points to submit a request successfully.
@@ -27,7 +27,7 @@ Send the following json(the minimum required information) to create a kyc reques
 	}
 }
 ```
-Look for `requirements[fields_needed]` in the response object to get a list of all the required information about the investor. You should not hard code this list in your applications as it might keep changing as the regulations change. Always rely on the list from the response object.
+A KYC Request in `pending` state will be created. Look for `requirements[fields_needed]` in the response object to get a list of all the required information about the investor. You should not hard code this list in your applications as it might keep changing as the regulations change. Always rely on the list from the response object.
 
 #### 2. Update the KYC Request
 Collect the required information from the investor in one step or in multiple steps as per your workflow.  
@@ -64,7 +64,3 @@ The `verification[details_verbose]` hash contains the reasons for rejection, map
 }
 ```
 The `reason` can be used as it is to display to your investor.
-
-
-
-

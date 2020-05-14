@@ -1,9 +1,11 @@
 # KYC Check
+#### Check your investor's kyc status
 
-Use this api to check if your customer's identity detail exists in any of the KRAs (KYC Registration Agencies) database. If it exists, you'll get certain demographic information of the investor and the status of the KYC in the response object.
+
+Use this api to check if your investor's identity detail exists in any of the KRAs (KYC Registration Agencies) database. If it exists, you'll get certain demographic information of the investor and the status of the KYC in the response object.
 
 #### Check kyc status
-Call the KYC Check api with your customer's Income Tax Permanent Account Number (PAN)
+Call the KYC Check api with the investor's Income Tax Permanent Account Number (PAN)
 ```json
 {
 	"pan": "arrpp1115n"
