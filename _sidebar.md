@@ -4,6 +4,9 @@
 - **Getting started**
   - [Quick start](/pages/quickstart)
   - [Test data](/pages/test_data)
+- **Identity**
+  - [Overview](/identity/overview)
+  - [Check the kyc status](/identity/kyc_check)
 - **Building blocks**
   - **Investor Onboarding**
     - **KYC**<sup style="color:red;"> Early Access</sup>
