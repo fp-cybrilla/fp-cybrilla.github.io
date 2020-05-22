@@ -6,7 +6,8 @@
   - [Test data](/pages/test_data)
 - **Identity**
   - [Overview](/identity/overview)
-  - [Check the kyc status](/identity/kyc_check)
+  - [Check the kyc status](/identity/kyc-check)
+  - [Perform digital kyc](/identity/kyc-request)
 - **Building blocks**
   - **Investor Onboarding**
     - **KYC**<sup style="color:red;"> Early Access</sup>
