@@ -69,3 +69,6 @@ Use the `code` to programatically read the error on a given field. The `reason` 
 These are some of the `reason`s for your reference (not an exhaustive list): `DRIVING LICENSE VALIDITY PERIOD EXPIRED`, `PROOF OF IDENTITY NOT LEGIBLE`, `DOB MISMATCH BETWEEN PAN AND POA`, `SIGNATURE UNCLEAR`, `VIDEO VOICE NOT AUDIBLE`
 
 After fixing the errors, you have to resubmit the application by creating a new `/kyc_request` object (Follow the sequence of steps listed above).
+
+### Testing
+You can use the [simulation api](https://fintechprimitives.com/api/#simulate-a-kyc-request) to simulate a `successful` and `rejected` kyc request. A rejection in the simulation mode returns a fixed set of errors.
