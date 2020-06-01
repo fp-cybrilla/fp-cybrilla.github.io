@@ -1,5 +1,6 @@
 # Perform digital kyc
-Use this guide to submit a digital kyc application for your investor.
+*Use this guide to submit a digital kyc application for your investor.*
+
 FP uses `KYC Request` object to represent the kyc application of an investor. You should create a `KYC Request` as the first step to initiate the kyc application process for the investor.
 
 ### KYC Request lifecycle
@@ -9,9 +10,9 @@ FP uses `KYC Request` object to represent the kyc application of an investor. Yo
 4. If the verification fails, the KYC Request moves to `rejected` state.
 
 ### 1. Create a KYC Request
-You need to capture the investor's video and few data points to submit a request successfully.
+You need to capture the investor's verification video and few data points to submit a request successfully.
 
-KYC Request object is a holding object for all the investor data. You can collect all the information at one go from the investor or you can collect it in different steps. The KYC Request will not be processed until all the required information is provided. The `requirements[fields_needed]` in the object will tell you if there are any pending data points that are required for processing the KYC Request.
+KYC Request object is a holding object for all the investor data. You can collect all the information at one go from the investor or you can collect it in different steps. The KYC Request will not be processed until all the required information is provided. The `requirements.fields_needed` in the object will tell you if there are any pending data points that are required for processing the KYC Request.
 
 Call the [create kyc request api](https://fintechprimitives.com/api/#create-a-kyc-request) with the following json (the minimum required information)
 
@@ -27,7 +28,7 @@ Call the [create kyc request api](https://fintechprimitives.com/api/#create-a-ky
 	}
 }
 ```
-A KYC Request in `pending` state will be created. Look for `requirements[fields_needed]` in the response object to get a list of all the required information about the investor. You should not hard code this list in your applications as it might keep changing as the regulations change. Always rely on the list from the response object.
+A KYC Request in `pending` state will be created. Look for `requirements.fields_needed` in the response object to get a list of all the required information about the investor. You should not hard code this list in your applications as it might keep changing as the regulations change. Always rely on the list from the response object.
 
 ### 2. Update the KYC Request
 Collect the required information from the investor in one step or in multiple steps as per your workflow.  
@@ -40,7 +41,7 @@ Send the information collected by using the KYC Request update API. Example json
 	"mother_name": "Haseena"
 }
 ```
-You should check the `requirements[fields_needed]` list in the response object and repeat step 2 until the list becomes empty.
+You should check the `requirements.fields_needed` list in the response object and repeat step 2 until the list becomes empty.
 
 When all the required information is available, FP automatically sends the KYC Request for processing and the object state becomes `submitted`.
 
@@ -49,11 +50,11 @@ Fetch the KYC Request object by calling the GET API and check `status` to see th
 
 If the `status` is `successful`, it means the KYC Request verification is successful. At this point, you can go ahead and start accepting orders from the investor.
 
-If the `status` is `rejected`, it means the KYC Request verification is unsuccessful. The details about the rejections are available at `verification[details_verbose]` in the object json.
+If the `status` is `rejected`, it means the KYC Request verification is unsuccessful. The details about the rejections are available at `verification.details_verbose` in the object json.
 
 
 ### 4. Handling rejections
-The `verification[details_verbose]` hash contains the reasons for rejection, mapped with each field separately. For example:
+The `verification.details_verbose` hash contains the reasons for rejection, mapped with each field separately. For example:
 
 ```json
 "details_verbose": {
@@ -63,8 +64,6 @@ The `verification[details_verbose]` hash contains the reasons for rejection, map
 	}
 }
 ```
-The `reason` can be used as it is to display to your investor.
+Use the `code` to programatically read the error on a given field. The `reason` is a textual representation of the error which you can safely use to display to your investor on their dashboard and in the email communication to them. Do not hard code the `reason` values in your code as they might change as we keep fine tuning our error messages.
 
-
-
-
+These are some of the `reason`s for your reference (not an exhaustive list): `DRIVING LICENSE VALIDITY PERIOD EXPIRED`, `PROOF OF IDENTITY NOT LEGIBLE`, `DOB MISMATCH BETWEEN PAN AND POA`, `SIGNATURE UNCLEAR`, `VIDEO VOICE NOT AUDIBLE`
