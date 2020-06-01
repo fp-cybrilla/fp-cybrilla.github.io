@@ -67,3 +67,5 @@ The `verification.details_verbose` hash contains the reasons for rejection, mapp
 Use the `code` to programatically read the error on a given field. The `reason` is a textual representation of the error which you can safely use to display to your investor on their dashboard and in the email communication to them. Do not hard code the `reason` values in your code as they might change as we keep fine tuning our error messages.
 
 These are some of the `reason`s for your reference (not an exhaustive list): `DRIVING LICENSE VALIDITY PERIOD EXPIRED`, `PROOF OF IDENTITY NOT LEGIBLE`, `DOB MISMATCH BETWEEN PAN AND POA`, `SIGNATURE UNCLEAR`, `VIDEO VOICE NOT AUDIBLE`
+
+After fixing the errors, you have to resubmit the application by creating a new `/kyc_request` object (Follow the sequence of steps listed above).
