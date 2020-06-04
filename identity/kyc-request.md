@@ -1,7 +1,8 @@
 # Perform digital kyc
 *Use this guide to submit a digital kyc application for your investor.*
 
-FP uses `KYC Request` object to represent the kyc application of an investor. You should create a `KYC Request` as the first step to initiate the kyc application process for the investor.
+FP uses `KYC Request` object to represent the kyc application of an investor. You should create a `KYC Request` as the first step to initiate the kyc application process for the investor.  
+> The digital kyc requests are processed by our partner AMC, ICICI Prudential. To use this service, you need to facilitate a minimum of ₹100 investment from your investor in any of the schemes offered by the AMC.
 
 ### KYC Request lifecycle
 1. The KYC Request will be in `pending` state when created.
