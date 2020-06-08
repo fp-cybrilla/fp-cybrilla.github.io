@@ -8,6 +8,9 @@
   - [Overview](/identity/overview)
   - [Check the kyc status](/identity/kyc-check)
   - [Perform digital kyc](/identity/kyc-request)
+- **MF Transactions**
+  - [Overview](/mf-transactions/overview)
+  - [One time purchases](/mf-transactions/one-time-purchases)
 - **Building blocks**
   - **Investor Onboarding**
     - **KYC**<sup style="color:red;"> Early Access</sup>
