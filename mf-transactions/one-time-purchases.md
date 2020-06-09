@@ -6,8 +6,8 @@
 > 2. You have an [investment account created](/mf-transactions/overview) for your investor
 
 Once you have the investor and investment account created, follow the below steps to place a purchase order.  
-1. Create order
-2. Create payment
+1. Create a purchase order
+2. Make payment
 3. Check the order status
 
 ### 1. Create a purchase order
@@ -44,7 +44,7 @@ A purchase order gets created for which you need to make a payment. Keep a note 
 }
 ```
 
-### 2. Create payment
+### 2. Make payment
 
 To make a payment using internet banking or upi, make a request to [create payment api](https://fintechprimitives.com/api/#post-net-banking) with the following json. Use the order id from the previous api response.
 
