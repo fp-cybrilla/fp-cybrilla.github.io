@@ -11,6 +11,7 @@
 - **MF Transactions**
   - [Overview](/mf-transactions/overview)
   - [One time purchases](/mf-transactions/one-time-purchases)
+  - [Sell a mutual fund](/mf-transactions/sell-a-mutual-fund)
 - **Building blocks**
   - **Investor Onboarding**
     - **KYC**<sup style="color:red;"> Early Access</sup>
