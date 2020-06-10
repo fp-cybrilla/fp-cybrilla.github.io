@@ -15,6 +15,9 @@
 - **Payments**
   - [Overview](/payments/overview)
   - [Setup recurring payments](/payments/nach)
+- **Investor Reporting**
+  - [Overview](/pages/workflows/investor-reporting)
+  - [Usage](/pages/workflows/investor-reporting-usage)
 - **Building blocks**
   - **Investor Onboarding**
     - **KYC**<sup style="color:red;"> Early Access</sup>
@@ -35,9 +38,6 @@
       - [FAQs](/pages/workflows/instant-redemption-faq)
   - **Payments**
     - [Payment States](/pages/workflows/payment-status)
-  - **Investor Reporting**
-    - [Overview](/pages/workflows/investor-reporting)
-    - [Usage](/pages/workflows/investor-reporting-usage)
   -[<div style="color:#fff;font-size:xx-small;visibility:hidden;">.</div>](/pages/deprecation-staging-instance)
 
 
