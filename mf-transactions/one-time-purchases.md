@@ -56,7 +56,7 @@ To make a payment using internet banking or upi, make a request to [create payme
 ```
 
 Look for `token_url` in the response and redirect your investor to it to complete his payment. After your investor finishes the payment, FP redirects him to the postback URL configured on your account or to the `payment_postback_url` provided in the request. You'll receive `success` or `failure` in the `status` param. As a good security practice, do not completely rely on the `status` received in the postback call. Instead check the status of the payment from your server before giving a final confirmation to your investor.  
-[Learn more about payment sates](/pages/workflows/payment-status).
+[Learn more about payment states](/pages/workflows/payment-status).
 
 ### 3. Check the order status
 
