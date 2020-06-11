@@ -10,6 +10,12 @@ FP Payment APIs integrates with third party payment gateways to facilitate colle
 
 We need the following details about your Razorpay live account to enable payments in your FP account.
 
-- Razorpay account id, Razorpay api access key
+- Razorpay Merchant ID, API Key (key id and key secret)
 
 Email us at [fpsupport@cybrilla.com](mailto:fpsupport@cybrilla.com) when you are ready.
+
+
+
+
+
+
