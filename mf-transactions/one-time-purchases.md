@@ -13,6 +13,9 @@ Once you have the investor and investment account created, follow the below step
 ### 1. Create a purchase order
 Some funds are not allowed for purchases and some might temporarily stop accepting purchase orders. Make sure you check the `purchase_allowed` field is `true` for the fund scheme(s) you are placing the order for, using the [Get fund scheme api](https://fintechprimitives.com/api/#get-single-fund-schemes-detail).
 
+The order creation varies slightly depending on how will the payment be made for that.  
+
+*For payment modes: Internet Banking, UPI*  
 Call the [Create order api](https://fintechprimitives.com/api/#post-create-lumpsum-order-netbanking) with the following json. Use the id of the bank account from which the investor will make the payment for this purchase. You would have got the `bank_account_id` from the create investor api call earlier.
 
 ```json
@@ -26,6 +29,22 @@ Call the [Create order api](https://fintechprimitives.com/api/#post-create-lumps
   ]
 }
 ```
+
+*For payment modes: NACH auto debit*  
+Call the [Create order api](https://fintechprimitives.com/api/#post-create-lumpsum-order-nach) with the following json. Use the id of the mandate authorised by the investor using which the payment for this purchase will be pulled. [Learn how to setup nach mandates](/payments/nach).
+
+```json
+{
+  "mandate_id": 1,
+  "orders": [
+    {
+      "isin": "INF109K01VQ1",
+      "amount": 500
+    }
+  ]
+}
+```
+
 
 A purchase order gets created for which you need to make a payment. Keep a note of the order id; that is an identifier to use for making payments and checking the status of the order later on.
 
