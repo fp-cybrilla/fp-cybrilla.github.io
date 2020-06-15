@@ -36,7 +36,7 @@ Currently we don't offer apis for email and mobile verification. FP KYC Request 
 4. If the verification fails, the KYC Request moves to `rejected` state.
 
 ### 1. Create a KYC Request
-You need to capture the investor's verification video and few data points to submit a request successfully.
+You need to capture the investor's verification video and [few data points](/identity/required-information) to submit a request successfully.
 
 KYC Request object is a holding object for all the investor data. You can collect all the information at one go from the investor or you can collect it in different steps. The KYC Request will not be processed until all the required information is provided. The `requirements.fields_needed` in the object will tell you if there are any pending data points that are required for processing the KYC Request.
 
