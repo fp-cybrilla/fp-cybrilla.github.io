@@ -16,15 +16,15 @@ The following information about the investor needs to be collected for a success
 10. Marital status (`marital_status`)
 11. Residential status (currently we only support indian resident individual) (`residential_status`)
 12. Occupation (`occupation_type`)
-13. Address with proof (TBD)
+13. Address with proof (`address`)
 14. PAN card copy (`identity_proof`)
 15. Signature scan (`signature`)
 16. Photo (`photo`)
 17. Verification video (`ipv_video`)
-18. Bank account details with a signed cancelled cheque copy (TBD)
-19. Geo location (TBD)
+18. Bank account details with a signed cancelled cheque copy (`bank_account`)
+19. Geo location (`geolocation`)
 20. Fatca/CRS self declaration (TBD)
-21. Electronic signature on the application form (TBD)
+21. Electronic signature on the application form
 
 \*TBD: We will provide the field names when the APIs are released
 
