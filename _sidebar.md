@@ -11,6 +11,7 @@
     - [Required information](/identity/required-information)
 - **MF Transactions**
   - [Overview](/mf-transactions/overview)
+  - [Create an investment account](/mf-transactions/investment-account)
   - [One time purchases](/mf-transactions/one-time-purchases)
   - [Sell a mutual fund](/mf-transactions/sell-a-mutual-fund)
 - **Payments**
