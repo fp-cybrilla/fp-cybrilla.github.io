@@ -30,16 +30,27 @@ To activate order processing in your production account, we need the following d
 - [ ] User code
 - [ ] Online broker code
 - [ ] STP credentials
+  - [ ] STP username
+  - [ ] STP password
 
 *Karvy*
 - [ ] User code
 - [ ] Broker code
 - [ ] STP credentials
+  - [ ] STP username
+  - [ ] STP password
+  - [ ] STP bind address
+  - [ ] STP app identifier
+  - [ ] STP arn number
+  - [ ] STP branch code
 
 *Franklin*
 - [ ] User code
 - [ ] Broker code
 - [ ] STP credentials
+  - [ ] STP username
+  - [ ] STP password
+  - [ ] STP bind address
 
 **To route orders through BSE gateway** (*Time: min. 4 weeks*)
 - [ ] BSE user id
