@@ -61,7 +61,13 @@ We have made some sample videos for your referene:
 ### Esign on the application form
 
 Here is a sample video of how the esign experience is for your investor on production:  
-<video width="320" height="240" controls id="sample_esign_flow">
-  <source src="../videos/sample_esign_flow.mp4" type="video/mp4">
+
+*Desktop*  
+<video width="320" height="240" controls id="sample_esign_flow_desktop">
+  <source src="../videos/sample_esign_flow_desktop.mp4" type="video/mp4">
 </video>
 
+*Mobile*  
+<video width="320" height="240" controls id="sample_esign_flow_mobile">
+  <source src="../videos/sample_esign_flow_mobile.mp4" type="video/mp4">
+</video>
