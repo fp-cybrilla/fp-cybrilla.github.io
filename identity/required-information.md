@@ -49,13 +49,13 @@ The verification video
 We have made some sample videos for your referene:
 
 *Investor reading the 6 digit OTP loud*  
-<video width="320" height="240" controls id="kyc_ipv_sample_otp_display">
-  <source src="../videos/KYC_OTP_Display.mp4" type="video/mp4">
+<video width="320" height="240" controls id="kyc_ipv_sample_otp_read">
+  <source src="../videos/KYC_OTP_Spell_out.mp4" type="video/mp4">
   <!--<source src="../../images/signzy_sample_2.mov" type="video/mp4">-->
 </video>
 
 *Investor displaying the 6 digit OTP*  
-<video width="320" height="240" controls id="kyc_ipv_sample_otp_read">
-  <source src="../videos/KYC_OTP_Spell_out.mp4" type="video/mp4">
+<video width="320" height="240" controls id="kyc_ipv_sample_otp_display">
+  <source src="../videos/KYC_OTP_Display.mp4" type="video/mp4">
   <!--<source src="../../images/signzy_sample_2.mov" type="video/mp4">-->
 </video>
