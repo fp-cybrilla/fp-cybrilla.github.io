@@ -73,7 +73,7 @@ To activate payments in your production account, we need the following details:
 
 Ensure the following in both of your Razorpay accounts:
 - [ ] Payments and Route are enabled
-- [ ] Send out an email to Razorpay Support to add `fintechprimitives.com` domain to the whitelisted domains/urls for your accounts
+- [ ] Send out an email to Razorpay Support to add `fintechprimitives.com` domain to the whitelisted domains/urls for your accounts. This is to ensure that the payments can be initiated from this domain.
 
 **AMCs**
 
