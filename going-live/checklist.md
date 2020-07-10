@@ -59,7 +59,7 @@ To activate order processing in your production account, we need the following d
 
 To activate payments in your production account, we need the following details:
 
-**Payment gateway** (*Time: 4-6 weeks*)
+**Payment gateway (Razorpay)** (*Time: 4-6 weeks*)
 
 *Razorpay account 1 (with third party verification enabled)*
 - [ ] Merchant ID
@@ -70,6 +70,10 @@ To activate payments in your production account, we need the following details:
 - [ ] Merchant ID
 - [ ] Live account api key id
 - [ ] Live account api key secret
+
+Ensure the following in both of your Razorpay accounts:
+- [ ] Payments and Route are enabled
+- [ ] Send out an email to Razorpay Support to add `fintechprimitives.com` domain to the whitelisted domains/urls for your accounts
 
 **AMCs**
 
