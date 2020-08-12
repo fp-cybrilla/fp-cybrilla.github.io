@@ -40,6 +40,8 @@
       - [FAQs](/pages/workflows/instant-redemption-faq)
   - **Payments**
     - [Payment States](/pages/workflows/payment-status)
+  - **Communication**
+    - [Automated communications with investors](/pages/workflows/automated-communication.md)  
   -[<div style="color:#fff;font-size:xx-small;visibility:hidden;">.</div>](/pages/deprecation-staging-instance)
 
 
