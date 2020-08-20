@@ -21,7 +21,7 @@ The following information about the investor needs to be collected for a success
 15. Signature scan (`signature`)
 16. Photo (`photo`)
 17. Verification video (`ipv_video`)
-18. Bank account details with a signed cancelled cheque copy (`bank_account`)
+18. Bank account details with proof (`bank_account`)
 19. Geo location (`geolocation`)
 20. Fatca/CRS self declaration (TBD)
 21. Electronic signature on the application form
@@ -38,6 +38,16 @@ The following address proofs are accepted currently. We will include more in the
 |Passport|1. Passport number <br> 2. Front page and back page scan of the passport <br> 3. Passport issue date and expiry date|
 |Driving licence|1. Driving licence number <br> 2. Front scan of the licence <br> 3. Licence issue date and expiry date|
 |Voter's identity card|1. ID card number <br> 2. Front page and back page scan of the ID|
+
+
+### Accepted bank account proofs
+
+The following bank account proofs are accepted currently.
+
+|Bank account proof|Notes|
+|------------------|-----|
+|Cancelled cheque|Front scan of the cancelled cheque containing account number, name of the account holder and IFSC code|
+|Passbook statement|Front page scan of the passbook which contains name of the account holder and account number|
 
 
 ### In person verification video
