@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MFPro Docs</title>
   <title>Fintech Primitives Docs</title>
   <meta name="keywords" content="Fintech Primitives, mutual funds, mutual fund transaction APIs, fintech APIs, India fintech APIs, documentation, docs, fintech building blocks, kyc, lumpsum, sip">
   <meta name="description" content="End to end mutual fund modules and APIs">
@@ -12,22 +11,31 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
   <style type="text/css">
     .markdown-section code  { white-space: pre-line; }
+    .markdown-section  { max-width: 1170px; }
   </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-35402301-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-35402301-4');
+</script>
 </head>
 <body>
   <div id="app"></div>
 </body>
-
 <script type="text/javascript">
   window.$docsify = {
-    // name: '<img src="../../images/fp_full_logo.png" height="18px">',
+    //name: '<img src="../../images/fp_full_logo.png" height="18px">',
+    name: 'Fintech Primitives',
     nameLink: '/',
     maxLevel: 3,
     auto2top: true,
     loadSidebar: true,
     loadNavbar: true,
     autoHeader: false,
-    routerMode: 'history', // default: 'hash'
+    routerMode: (window.location.hostname === 'localhost') ? 'hash' : 'history',
     themeColor: '#ea9c44',
     search: {
       maxAge: 43200000,
@@ -42,17 +50,6 @@
     alias: {
       '/.*/_sidebar.md': '/_sidebar.md'
     }
-  }
-
-  // #abc -> ?id=abc
-  // %23abc -> ?id=abc
-  if (/(?:#|%23)([^\/]+)/.test(location.href)) {
-    location.href = location.href.replace(/(?:#|%23)([^\/]+)/, '?id=$1')
-  }
-
-  // /#/ -> /
-  if (/\/#\//.test(location.href)) {
-    location.href = location.href.replace('/#/', '/')
   }
 
   // if (typeof navigator.serviceWorker !== 'undefined') {
