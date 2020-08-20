@@ -35,7 +35,7 @@
     loadSidebar: true,
     loadNavbar: true,
     autoHeader: false,
-    routerMode: 'history', // default: 'hash'
+    routerMode: (window.location.hostname === 'localhost') ? 'hash' : 'history',
     themeColor: '#ea9c44',
     search: {
       maxAge: 43200000,
@@ -50,17 +50,6 @@
     alias: {
       '/.*/_sidebar.md': '/_sidebar.md'
     }
-  }
-
-  // #abc -> ?id=abc
-  // %23abc -> ?id=abc
-  if (/(?:#|%23)([^\/]+)/.test(location.href)) {
-    location.href = location.href.replace(/(?:#|%23)([^\/]+)/, '?id=$1')
-  }
-
-  // /#/ -> /
-  if (/\/#\//.test(location.href)) {
-    location.href = location.href.replace('/#/', '/')
   }
 
   // if (typeof navigator.serviceWorker !== 'undefined') {

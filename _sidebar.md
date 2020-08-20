@@ -1,6 +1,6 @@
 - **About Us**
   - [PaaS](/)
-  - <a style="display:inline;border-right-style:none;" href="/pages/registration-and-sandbox">Registration and Sandbox</a>
+  - [Registration and Sandbox](/pages/registration-and-sandbox)
 - **Getting started**
   - [Quick start](/pages/quickstart)
   - [Test data](/pages/test_data)
