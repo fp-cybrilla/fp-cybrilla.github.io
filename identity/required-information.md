@@ -36,7 +36,7 @@ The following address proofs are accepted currently. We will include more in the
 |Address proof|Data required|
 |-------------|-------------|
 |Passport|1. Passport number <br> 2. Front page and back page scan of the passport <br> 3. Passport issue date and expiry date|
-|Driving licence|1. Driving licence number <br> 2. Front scan of the licence <br> 3. Licence issue date and expiry date|
+|Driving licence|1. Driving licence number <br> 2. Front page and back page scan of the licence <br> 3. Licence issue date and expiry date|
 |Voter's identity card|1. ID card number <br> 2. Front page and back page scan of the ID|
 
 
