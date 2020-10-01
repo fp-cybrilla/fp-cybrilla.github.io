@@ -9,6 +9,7 @@
   - [Check the kyc status](/identity/kyc-check)
   - [Perform digital kyc](/identity/kyc-request)
     - [Required information](/identity/required-information)
+  - [FAQs](/identity/FAQs)  
 - **MF Transactions**
   - [Overview](/mf-transactions/overview)
   - [Create an investment account](/mf-transactions/investment-account)
