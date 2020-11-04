@@ -1,5 +1,8 @@
 # FAQs
 
+### Are KYC Applications without E-Sign accepted?
+No. 
+
 ### Can investors use a bank account other than the bank account provided in the KYC application to make payments for purchasing Mutual fund scheme units?
 Yes. They can use bank accounts other than the bank account provided in the KYC application for purchasing MF units. Compliance-wise, it is the distributor's responsibility to ensure that the bank account belongs to the investor, bank account details are valid and the payments made for purchase of MF Units are indeed coming from the bank account that belongs to the investor.
 
