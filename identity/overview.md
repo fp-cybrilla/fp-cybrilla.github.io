@@ -1,6 +1,4 @@
 # Identity
-> :warning: KYC Applications which are not E-Signed will not be accepted from November 1 2020. Please use KYC V2 APIs to ensure compliance.
-
 *Comply with KYC guidelines with FP Identity APIs*
 
 Establishing the identity of an investor is the key requirement to comply with the AML (Anti money laundering) and KYC (Know your customer) norms, some provided as guidelines and some as regulations.

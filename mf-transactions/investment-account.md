@@ -1,4 +1,4 @@
-# Create an investment account
+# Open an investment account
 *Learn how to onboard an investor and set him up for investing*
 
 Follow the below steps to create an investor and an investment account. Investment Account is the holding account for all your investor's mutual fund investments.
@@ -25,7 +25,7 @@ The following information about the investor is needed to be able to set him up 
 17. Other info (politically exposed person or related to someone who is politically exposed)
 18. Guardian information (incase the investor is a minor)
 
-Call the [create investor api](https://fintechprimitives.com/api/#post-create-investor) with all the required information to create an investor object. Make a note of the investor id, which you'll need in the later steps.
+Call the [create investor api](https://fintechprimitives.com/api/#create-an-investor) with all the required information to create an investor object. Make a note of the investor id, which you'll need in the later steps.
 
 *Note on data verification*
 - Email ID and mobile number  
@@ -36,7 +36,7 @@ Currently we don't offer APIs for email and mobile verification. FP APIs assume 
 As part of the regulatory requirement, you need to verify the account ownership of the bank account given by the investor. There are two ways you can do the verification at present:  
 a) Penny drop and match the bank a/c holder name that is returned, with the investor name  
 b) Accept a cancelled cheque copy from the investor and manually match the name on the cheque with the investor name  
-The names may not match 100% all the time. You have to be reasonably sure that the a/c belong to the investor. There are not set guidelines on what should be the match %.
+The names may not match 100% all the time. You have to be reasonably sure that the a/c belong to the investor. There are no set guidelines on what should be the match %.
 Currently we don't offer APIs to do these verifications. FP Investor APIs assume the bank a/c given is verified by you.
 
 
@@ -44,7 +44,7 @@ Currently we don't offer APIs to do these verifications. FP Investor APIs assume
 Depending on the investor's kyc status, you might need to collect additional information. Use the [kyc check guide](/identity/kyc-check) to learn how to check the kyc status.
 If the investor is kyc compliant, skip step 3 and jump to step 4 directly. If he is not kyc compliant, go to step 3.
 
-### 3. Perform digital kyc
+### 3. Perform digital kyc *conditional step*
 You need to collect the following additional details about the investor apart from the details collected in step 1:
 1. Mother name in full
 2. Last 4 digits of the Aadhaar number

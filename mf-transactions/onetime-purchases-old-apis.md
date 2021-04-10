@@ -1,4 +1,4 @@
-# One time purchases
+# One time purchases w/ Old APIs
 *Facilitate lumpsum investments for your investor*
 
 > *Ensure the following before placing a purchase order*

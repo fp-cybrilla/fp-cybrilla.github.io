@@ -1,26 +1,41 @@
-- **About Us**
-  - [PaaS](/)
-  - [Registration and Sandbox](/pages/registration-and-sandbox)
-- **Getting started**
-  - [Quick start](/pages/quickstart)
-  - [Test data](/pages/test_data)
+- [Introduction](/)
+- [Registration and Sandbox](/pages/registration-and-sandbox)
+<!-- - [Quick start](/pages/quickstart) -->
 - **Identity**
   - [Overview](/identity/overview)
   - [Check the kyc status](/identity/kyc-check)
   - [Perform digital kyc](/identity/kyc-request)
     - [Required information](/identity/required-information)
   - [FAQs](/identity/FAQs)  
-- **MF Transactions**
+- **MF Orders**
   - [Overview](/mf-transactions/overview)
-  - [Create an investment account](/mf-transactions/investment-account)
-  - [One time purchases](/mf-transactions/one-time-purchases)
-  - [Sell a mutual fund](/mf-transactions/sell-a-mutual-fund)
+  - [Open an investment account](/mf-transactions/investment-account)
+  - ***Purchase Orders***
+    - [One time purchases](/mf-transactions/onetime-purchases)
+    - [Recurring purchases](/mf-transactions/recurring-purchases)
+  - ***Sell Orders***
+    - [Sell a mutual fund](/mf-transactions/onetime-redemptions)
+    - [Schedule a recurring withdrawal](/mf-transactions/recurring-redemptions)
+  - ***Switch Orders***
+    - [Switch from one scheme to another](/mf-transactions/onetime-switches)
+    - [Schedule a recurring switch](/mf-transactions/recurring-switches)
+  - ***Appendix***
+    - [Order States](/mf-transactions/order-states)
+  - ***Archives***
+    - [One time purchases w/ Old APIs](/mf-transactions/onetime-purchases-old-apis)
+    - [Sell a mutual fund w/ Old APIs](/mf-transactions/onetime-redemptions-old-apis)
 - **Payments**
   - [Overview](/payments/overview)
   - [Setup recurring payments](/payments/nach)
+  - ***Appendix***
+    - [Payment States](/payments/payment-states)  
 - **Investor Reporting**
   - [Overview](/pages/workflows/investor-reporting)
   - [Usage](/pages/workflows/investor-reporting-usage)
+- **General topics**
+  - [Automated communications with investors](/pages/workflows/automated-communication.md)  
+
+<!--
 - **Building blocks**
   - **Investor Onboarding**
     - **KYC**<sup style="color:red;"> Early Access</sup>
@@ -39,12 +54,10 @@
       - [Description](/pages/workflows/instant-redemption-description)
       - [Recommended Sequence](/pages/workflows/instant-redemption-steps)
       - [FAQs](/pages/workflows/instant-redemption-faq)
-  - **Payments**
-    - [Payment States](/pages/workflows/payment-status)
   - **Communication**
     - [Automated communications with investors](/pages/workflows/automated-communication.md)  
   -[<div style="color:#fff;font-size:xx-small;visibility:hidden;">.</div>](/pages/deprecation-staging-instance)
-
+-->
 
 
 <!--
