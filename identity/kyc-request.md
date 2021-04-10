@@ -4,9 +4,9 @@
 FP uses `KYC Request` object to represent the kyc application of an investor. You should create a `KYC Request` as the first step to initiate the kyc application process for the investor.  
 > The digital kyc requests are processed by our partner AMC, ICICI Prudential. To use this service, you need to facilitate a minimum of ₹100 investment from your investor in any of the schemes offered by the AMC.
 
-### Summary of changes to the previous version
+### Key points
 
-Note: To comply with the [new guidelines by SEBI on digital kyc](https://www.sebi.gov.in/legal/circulars/apr-2020/clarification-on-know-your-client-kyc-process-and-use-of-technology-for-kyc_46565.html), we are upgrading our KYC Request apis. Please make a note of the changes below that will impact the onboarding workflow in your applications:
+Our API complies with the [guidelines by SEBI on digital kyc](https://www.sebi.gov.in/legal/circulars/apr-2020/clarification-on-know-your-client-kyc-process-and-use-of-technology-for-kyc_46565.html). Make a note of the key highlights below that will impact the design of your investor onboarding process.
 
 1. OTP  
 When you generate the KYC Request object, a 6 digit number is generated and be part of the object structure. You should display that number to your investor and let him speak that number out loud in the video. This is used to verify that the video is not a pre-recorded one.
