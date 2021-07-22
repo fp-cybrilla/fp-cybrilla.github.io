@@ -1,5 +1,9 @@
 - [Introduction](/)
 - [Registration and Sandbox](/pages/registration-and-sandbox)
+- **Going Live**
+  - [Overview](/going-live/checklist)
+  - [Distributors w/ BSE](/going-live/distributors-with-bse)
+  - [Distributors w/ RTA](/going-live/distributors-with-rtas)
 <!-- - [Quick start](/pages/quickstart) -->
 - **Identity**
   - [Overview](/identity/overview)
