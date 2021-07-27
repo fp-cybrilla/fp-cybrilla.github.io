@@ -43,11 +43,12 @@ A MF Purchase gets created for which you need to make a payment. Keep a note of 
 You can use FP Payment APIs or work with payment providers directly to faciliate a payment for the order.
 
 **Option 1:** *You are using FP payment APIs*  
-To make a payment using internet banking or upi, make a request to [create payment api](https://fintechprimitives.com/api/#create-a-payment) with the following json. Use the order's `old_id` from the previous step.
+To make a payment using internet banking or upi, make a request to [create payment api](https://fintechprimitives.com/api/#create-a-payment) with the following json. Use the order's `old_id` from the previous step. Use the `id` of the bank account belonging to the investor, with which you want him to make the payment.
 
 ```json
 {
-  "amc_order_ids": [9123]
+  "amc_order_ids": [9123],
+  "bank_account_id": 23
 }
 ```
 
