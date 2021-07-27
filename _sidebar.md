@@ -14,15 +14,12 @@
 - **MF Orders**
   - [Overview](/mf-transactions/overview)
   - [Open an investment account](/mf-transactions/investment-account)
-  - ***Purchase Orders***
-    - [One time purchases](/mf-transactions/onetime-purchases)
-    - [Recurring purchases](/mf-transactions/recurring-purchases)
-  - ***Sell Orders***
-    - [Sell a mutual fund](/mf-transactions/onetime-redemptions)
-    - [Schedule a recurring withdrawal](/mf-transactions/recurring-redemptions)
-  - ***Switch Orders***
-    - [Switch from one scheme to another](/mf-transactions/onetime-switches)
-    - [Schedule a recurring switch](/mf-transactions/recurring-switches)
+  - [Create a onetime purchase](/mf-transactions/onetime-purchases)
+  - [Create a recurring purchase](/mf-transactions/recurring-purchases)
+  - [Sell a mutual fund](/mf-transactions/onetime-redemptions)
+  - [Schedule a recurring withdrawal](/mf-transactions/recurring-redemptions)
+  - [Switch from one scheme to another](/mf-transactions/onetime-switches)
+  - [Schedule a recurring switch](/mf-transactions/recurring-switches)
   - ***Appendix***
     - [Order States](/mf-transactions/order-states)
   - ***Archives***
