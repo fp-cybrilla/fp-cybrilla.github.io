@@ -60,12 +60,15 @@ You need to collect the following additional details about the investor apart fr
 [Learn about using the kyc request](/identity/kyc-request) to perform digital kyc
 
 ### 4. Create an investment account
-To avoid any rejection of orders, make sure the investor is kyc compliant before creating an investment a/c. Use the investor id received in step 1 to create an investment account.
+To avoid any rejection of orders, make sure the investor is kyc compliant before creating an investment a/c.
+
+Call the [create investment account api](https://fintechprimitives.com/docs/api/#create-a-mf-investment-account) with the following json. Use the investor id received in step 1 to create an investment account.
+
 
 Request
 ```json
 {
-  "primary_investor_id": "124234"
+  "primary_investor_old_id": "124234"
 }
 ```
 
