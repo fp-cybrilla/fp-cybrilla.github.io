@@ -84,14 +84,22 @@ After the money is settled into the scheme's bank account, call the [create mf s
 Call the [fetch mf purchase api](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to check the `state` of the order.  
 When the payment is successful, the order state becomes `confirmed`. [Learn more about the order states](/mf-transactions/order-states)
 
-Orders in `confirmed` state will be sent for processing and the object state will move to `submitted`. After the order is processed successfuly and units are allotted, the object state will move to `successful`; the allotted units and the price is available in `allotted_units` and `purchased_price` attributes of the mf purchase object.
+
+### Order Processing
+
+Orders in `confirmed` state will be sent for processing and the object state will move to `submitted`. After the order is processed successfully (typically takes one day) - units are allotted and the object state will move to `successful`.  
+For a successful order, review the following key attributes of the `mf_purchase` object:  
+`allotted_units`: the number of units issued for the purchase amount  
+`purchased_price`: the price per unit at which the units are issued  
+`folio_number`: the folio (aka mutual fund account) in which the units are issued. You'll need this to place additional purchases and redemption orders
 
 ### Testing
 
-Use the [simulation api](https://fintechprimitives.com/api/#post-order-simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
+In sandbox, use the [simulation api](https://fintechprimitives.com/api/#post-order-simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
 
 ```json
 {
   "status": "SUCCESSFUL"
 }
 ```
+A testing folio number is issued during simulation, which you can use to place additional purchase orders or redemption orders.
