@@ -1,0 +1,3 @@
+## To run the website in local
+bundle install
+bundle exec nanoc live

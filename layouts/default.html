@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A Brand New Nanoc Site - <%= @item[:title] %></title>
+    <link rel="stylesheet" href="/stylesheet.css">
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
+  </head>
+  <body>
+    <div id="main">
+      <%= yield %>
+    </div>
+    <div id="sidebar">
+      <h2>Going Live</h2>
+      <ul>
+        <li><a href="/going-live/checklist">Overview</a></li>
+        <li><a href="/going-live/distributors-with-bse">Distributors w/ BSE</a></li>
+        <li><a href="/going-live/distributors-with-rtas">Distributors w/ RTA</a></li>
+      </ul>
+      <h2>MF Transactions</h2>
+      <ul>
+        <li><a href="/mf-transactions/onetime-purchases">Onetime Purchases</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
