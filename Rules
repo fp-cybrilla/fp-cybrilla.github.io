@@ -11,7 +11,21 @@ compile '/**/*.html' do
 end
 
 compile '/**/*.md' do
- filter :redcarpet, options: { fenced_code_blocks: true }, renderer: Redcarpet::Render::CustomHTML, renderer_options: { prettify: true }
+ filter :redcarpet,
+  options: {
+    fenced_code_blocks: true,
+    tables: true,
+    autolink: true,
+    disable_indented_code_blocks: true,
+    strikethrough: true,
+    lax_spacing: true,
+    space_after_headers: true,
+    superscript: true
+  },
+  renderer: Redcarpet::Render::CustomHTML,
+  renderer_options: {
+    prettify: true
+  }
 
  layout '/default.*'
 
