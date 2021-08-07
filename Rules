@@ -24,7 +24,8 @@ compile '/**/*.md' do
   },
   renderer: Redcarpet::Render::CustomHTML,
   renderer_options: {
-    prettify: true
+    prettify: true,
+    with_toc_data: true
   }
 
  layout '/default.*'
