@@ -35,6 +35,7 @@
   - [Usage](/pages/workflows/investor-reporting-usage)
 - **General topics**
   - [Automated communications with investors](/pages/workflows/automated-communication.md)  
+  - [Product Roadmap](/future/roadmap)
 
 <!--
 - **Building blocks**
