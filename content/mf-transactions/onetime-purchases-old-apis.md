@@ -1,7 +1,7 @@
 ## One time purchases w/ Old APIs
 #### Facilitate lumpsum investments for your investor
 
-> *Ensure the following before placing a purchase order*
+> ### Ensure the following before placing a purchase order
 > 1. Your investor is [kyc compliant](/identity/overview)
 > 2. You have an [investment account created](/mf-transactions/overview) for your investor
 

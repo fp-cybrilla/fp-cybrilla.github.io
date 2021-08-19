@@ -29,4 +29,14 @@ class Redcarpet::Render::CustomHTML < Redcarpet::Render::HTML
       "<blockquote>#{quote}</blockquote>" \
     '</div>'
   end
+
+  def list(content, list_type)
+    case list_type
+    when :ordered
+      "<ol class='list-decimal pl-4'>#{content}</ol>"
+    when :unordered
+      "<ul class='list-disc pl-4'>#{content}</ul>"
+    end
+  end
+
 end

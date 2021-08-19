@@ -8,23 +8,23 @@ FP uses `KYC Request` object to represent the kyc application of an investor. Yo
 
 Our API complies with the [guidelines by SEBI on digital kyc](https://www.sebi.gov.in/legal/circulars/apr-2020/clarification-on-know-your-client-kyc-process-and-use-of-technology-for-kyc_46565.html). Make a note of the key highlights below that will impact the design of your investor onboarding process.
 
-1. #### OTP  
+1. OTP  
 When you generate the KYC Request object, a 6 digit number is generated and be part of the object structure. You should display that number to your investor and let him speak that number out loud in the video. This is used to verify that the video is not a pre-recorded one.
 
-2. #### Bank a/c details  
+2. Bank a/c details  
 You need to provide your investor's bank account details: account number, ifsc code and cancelled signed cheque scanned copy to submit a KYC Request. As part of the verification process:  
 a) the details provided are matched against the cancelled cheque copy and  
 b) a random amount is deposited in that bank account to verify the validity and the owner of the account  
 You can collect a single bank account from your investor as part of your onboarding process and use it for both the KYC Request and investor apis.
 
-3. #### Geo location  
+3. Geo location  
 You need to provide the latitude and longitude of the location of your investor from where he is performing his kyc
 
-4. #### Esign the kyc form  
+4. Esign the kyc form  
 A kyc application form would be generated which needs to be signed electronically by your investor. FP APIs currently support the following electronic signature (esign) mechanisms:  
 a) Aadhaar based eSign
 
-5. #### Mobile & Email verification  
+5. Mobile & Email verification  
 As part of the regulatory guidelines, the email id and mobile number provided in the KYC Request has to be verified for its validity. You can use any method of your choice to do the verification. Sending an OTP or a link is the most common method.  
 Currently we don't offer apis for email and mobile verification. FP KYC Request apis assume that the verification is done at your end.
 
