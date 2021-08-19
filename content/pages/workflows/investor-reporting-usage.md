@@ -1,5 +1,5 @@
 
-# How do I get started?
+## How do I get started?
 
 **Step 1 : Upload reverse feed** 
 Before accessing the transactions, reverse feeds obtained from the RTAs must be uploaded to populate transactions via Files API. The reporting engine supports the following different reverse feeds. 
@@ -20,7 +20,7 @@ Use the FileOperation API check the status and ensure that transaction processin
 **Step 4 : Get the list of transactions**  
 Use [transactions API](https://fintechprimitives.com/api/#transactions) to get the list of transactions associated with a folio.
 
-# How do I get the data points?
+## How do I get the data points?
 Note 1: This section explains ways to get different data points. All the data points mentioned in this section are obtained/generated from the transactions response from the [transactions API](https://fintechprimitives.com/api/#transactions) . Please make yourself familiar with the object structure of the transactions as these fields are used extensively to generate the required data points.
 
 Note 2:  Transaction object has `isin` field to indicate the scheme associated with the transaction. However, calculation of some data points requires more scheme related info. In such cases, the idea is to use the `isin` associated with transaction to fetch the scheme details using [Fund schemes API](https://fintechprimitives.com/api/#get-fund-schemes) to facilitate calculation of data points.

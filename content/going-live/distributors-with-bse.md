@@ -1,4 +1,4 @@
-# Go live checklist for distributors w/ BSE
+## Go live checklist for distributors w/ BSE
 
 ### Prerequisites
 

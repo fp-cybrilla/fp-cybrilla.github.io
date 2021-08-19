@@ -1,4 +1,4 @@
-#### Automated communications with investors
+## Automated communications with investors
 
 |Entity|Remarks|
 |---|---|

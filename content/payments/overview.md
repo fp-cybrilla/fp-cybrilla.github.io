@@ -1,5 +1,5 @@
-# Payments
-*Collect payments from your investor for the mutual fund orders*
+## Payments
+#### Collect payments from your investor for the mutual fund orders
 
 FP Payment APIs integrates with third party payment gateways to facilitate collection of payments from your investors via internet banking, upi and nach payment modes. Learn how to
 

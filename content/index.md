@@ -1,5 +1,4 @@
 ## Fintech Primitives (FP) Product Suite
-----------------------------------------
 
 Learn about the FP Services and how to facilitate mutual fund investments for your investors.
 
@@ -11,7 +10,7 @@ Learn about the FP Services and how to facilitate mutual fund investments for yo
 You can access all the FP services via APIs ([documentation](https://fintechprimitives.com/api))
 
 
-><p style="font-size:18px">Platform as a Service</p>
+### Platform as a Service
 
 <br><img src="../../images/fp_diagram_updated.png" height="500px" width="900px" alt="Fintech Primitives PaaS">
 
@@ -21,7 +20,7 @@ You can access all the FP services via APIs ([documentation](https://fintechprim
 Refer the [Investment workflow](/pages/quickstart) guide to get started.
 -->
 
-><p style="font-size:18px">We're hiring!</p>
+### We're hiring!
 
 Join the Fintech Primitives team in building a unique PaaS (Plaform as a Service) for India.<br>
 This is a rare opportunity to not just code on any backend project or just design industry leading APIs to help simplify technology for the Indian wealth management space.<br>

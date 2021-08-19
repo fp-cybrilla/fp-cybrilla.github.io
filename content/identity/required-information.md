@@ -1,5 +1,5 @@
-# Required information about the investor
-*All the data points needed for a kyc application*
+## Required information about the investor
+#### All the data points needed for a kyc application
 
 ### Data points
 
@@ -59,7 +59,7 @@ The verification video
 We have made some sample videos for your referene:
 
 *Investor reading the 6 digit OTP loud*  
-<video width="320" height="240" controls id="kyc_ipv_sample_otp_read">
+<video width="500" height="800" controls id="kyc_ipv_sample_otp_read">
   <source src="../videos/KYC_OTP_Spell_out.mp4" type="video/mp4">
 </video>
 

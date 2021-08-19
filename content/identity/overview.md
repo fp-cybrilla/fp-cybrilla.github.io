@@ -1,5 +1,5 @@
-# Identity
-*Comply with KYC guidelines with FP Identity APIs*
+## Identity
+#### Comply with KYC guidelines with FP Identity APIs*
 
 Establishing the identity of an investor is the key requirement to comply with the AML (Anti money laundering) and KYC (Know your customer) norms, some provided as guidelines and some as regulations.
 

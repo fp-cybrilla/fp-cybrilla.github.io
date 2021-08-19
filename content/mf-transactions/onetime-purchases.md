@@ -1,7 +1,7 @@
-# One time purchases
-*Facilitate lumpsum investments for your investor*
+## One time purchases
+#### Facilitate lumpsum investments for your investor
 
-> *Ensure the following before placing a purchase order*
+> ### Ensure the following before placing a purchase order*
 > 1. Your investor is [kyc compliant](/identity/overview)
 > 2. You have an [investment account created](/mf-transactions/overview) for your investor
 
@@ -10,7 +10,7 @@ Once you have the investor and investment account created, follow the below step
 2. Make payment
 3. Check the order state
 
-### 1. Create a purchase order
+#### 1. Create a purchase order
 Some funds are not allowed for purchases and some might temporarily stop accepting purchase orders. Make sure you check the `purchase_allowed` field is `true` for the fund scheme(s) you are placing the order for, using the [Get fund scheme api](https://fintechprimitives.com/api/#get-single-fund-schemes-detail).
 
 FP uses `MF Purchase` object to represent all the mutual fund purchase orders. You need to create a `MF Purchase` as a first step for placing a one time purchase order.
@@ -38,7 +38,7 @@ A MF Purchase gets created for which you need to make a payment. Keep a note of 
 }
 ```
 
-### 2. Make payment
+#### 2. Make payment
 
 You can use FP Payment APIs or work with payment providers directly to faciliate a payment for the order.
 
@@ -79,7 +79,7 @@ After the money is settled into the scheme's bank account, call the [create mf s
 }
 ```
 
-### 3. Track the order
+#### 3. Track the order
 
 Call the [fetch mf purchase api](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to check the `state` of the order.  
 When the payment is successful, the order state becomes `confirmed`. [Learn more about the order states](/mf-transactions/order-states)

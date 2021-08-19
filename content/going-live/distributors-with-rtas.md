@@ -1,4 +1,4 @@
-# Go live checklist for distributors w/ RTAs
+## Go live checklist for distributors w/ RTAs
 
 ### Prerequisites
 

@@ -1,5 +1,5 @@
-# Perform digital kyc
-*Use this guide to submit a digital kyc application for your investor.*
+## Perform digital kyc
+#### Use this guide to submit a digital kyc application for your investor.
 
 FP uses `KYC Request` object to represent the kyc application of an investor. You should create a `KYC Request` as the first step to initiate the kyc application process for the investor.  
 > The digital kyc requests are processed by our partner AMC, ICICI Prudential. To use this service, you need to facilitate a minimum of ₹100 investment from your investor in any of the schemes offered by the AMC.
@@ -8,23 +8,23 @@ FP uses `KYC Request` object to represent the kyc application of an investor. Yo
 
 Our API complies with the [guidelines by SEBI on digital kyc](https://www.sebi.gov.in/legal/circulars/apr-2020/clarification-on-know-your-client-kyc-process-and-use-of-technology-for-kyc_46565.html). Make a note of the key highlights below that will impact the design of your investor onboarding process.
 
-1. OTP  
+1. #### OTP  
 When you generate the KYC Request object, a 6 digit number is generated and be part of the object structure. You should display that number to your investor and let him speak that number out loud in the video. This is used to verify that the video is not a pre-recorded one.
 
-2. Bank a/c details  
+2. #### Bank a/c details  
 You need to provide your investor's bank account details: account number, ifsc code and cancelled signed cheque scanned copy to submit a KYC Request. As part of the verification process:  
 a) the details provided are matched against the cancelled cheque copy and  
 b) a random amount is deposited in that bank account to verify the validity and the owner of the account  
 You can collect a single bank account from your investor as part of your onboarding process and use it for both the KYC Request and investor apis.
 
-3. Geo location  
+3. #### Geo location  
 You need to provide the latitude and longitude of the location of your investor from where he is performing his kyc
 
-4. Esign the kyc form  
+4. #### Esign the kyc form  
 A kyc application form would be generated which needs to be signed electronically by your investor. FP APIs currently support the following electronic signature (esign) mechanisms:  
 a) Aadhaar based eSign
 
-5. Mobile & Email verification  
+5. #### Mobile & Email verification  
 As part of the regulatory guidelines, the email id and mobile number provided in the KYC Request has to be verified for its validity. You can use any method of your choice to do the verification. Sending an OTP or a link is the most common method.  
 Currently we don't offer apis for email and mobile verification. FP KYC Request apis assume that the verification is done at your end.
 
@@ -35,7 +35,7 @@ Currently we don't offer apis for email and mobile verification. FP KYC Request 
 3. The AMC verifies the data provided and accepts the request if the verification is successful. The KYC Request moves to `successful` state.
 4. If the verification fails, the KYC Request moves to `rejected` state.
 
-### 1. Create a KYC Request
+#### 1. Create a KYC Request
 You need to capture the investor's verification video and [few data points](/identity/required-information) to submit a request successfully.
 
 KYC Request object is a holding object for all the investor data. You can collect all the information at one go from the investor or you can collect it in different steps. The KYC Request will not be processed until all the required information is provided. The `requirements.fields_needed` in the object will tell you if there are any pending data points that are required for processing the KYC Request.
@@ -56,7 +56,7 @@ Call the create KYC Request api with the following json (the minimum required in
 ```
 A KYC Request in `pending` state will be created. Look for `requirements.fields_needed` in the response object to get a list of all the required information about the investor. You should not hard code this list in your applications as it might keep changing as the regulations change. Always rely on the list from the response object.
 
-### 2. Update the KYC Request
+#### 2. Update the KYC Request
 Collect the required information from the investor in one step or in multiple steps as per your workflow.  
 Send the information collected by using the KYC Request update API. Example json
 
@@ -79,7 +79,7 @@ The application will be rejected if the number is not read out clearly or not vi
 
 - The video has to be atleast 10 seconds long to be able to clearly detect the face of the person.
 
-### 3. E-Sign the application form
+#### 3. E-Sign the application form
 
 Create an esign by calling the `/esigns` api with the following json:
 
@@ -92,14 +92,14 @@ Create an esign by calling the `/esigns` api with the following json:
 
 Redirect the investor to the url returned in the response `esign` object. He will be guided through the signing process using his aadhaar number. Once the investor signs the document, he will be redirected to the `postback_url` given in the request body and the status of the `esign` object becomes `successful`. The KYC Request is sent for processing and the object state becomes `submitted`.
 
-### 4. Check the status of the KYC Request
+#### 4. Check the status of the KYC Request
 Fetch the KYC Request object by calling the GET API and check `status` to see the status of the request.
 
 If the `status` is `successful`, it means the KYC Request verification is successful. At this point, you can go ahead and start accepting orders from the investor.
 
 If the `status` is `rejected`, it means the KYC Request verification is unsuccessful. The details about the rejections are available at `verification.details_verbose` in the object json.
 
-### 5. Handling rejections
+#### 5. Handling rejections
 The `verification.details_verbose` hash contains the reasons for rejection, mapped with each field separately. For example:
 
 ```json

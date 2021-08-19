@@ -1,5 +1,5 @@
-# MF Orders
-*Buy and sell mutual funds for your investors with FP Order APIs*
+## MF Orders
+#### Buy and sell mutual funds for your investors with FP Order APIs
 
 Order APIs give you the ability to place purchase and sell orders on behalf of your investor. You can  
 1. place a [one time investment order](/mf-transactions/onetime-purchases)
