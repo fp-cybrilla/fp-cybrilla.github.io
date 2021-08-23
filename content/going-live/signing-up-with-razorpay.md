@@ -1,5 +1,8 @@
-# Signing up with Razorpay
-*Learn how to signup and configure your Razorpay account to process payments for mf investments*
+---
+title: Signing up with Razorpay
+---
+## Signing up with Razorpay
+#### Learn how to signup and configure your Razorpay account to process payments for mf investments
 
 **Action items**
 - You need to create two separate razorpay accounts and sign up for Razorpay Payments (to collect money from investors) and Razorpay Route (to transfer money to the AMCs) in each of those accounts

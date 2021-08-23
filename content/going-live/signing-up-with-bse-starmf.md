@@ -1,5 +1,8 @@
-# Signing up with BSE StarMF
-*Learn how to signup with BSE as a mutual fund distributor (MFD) and configure your account*
+---
+title: Signing up with BSE StarMF
+---
+## Signing up with BSE StarMF
+#### Learn how to signup with BSE as a mutual fund distributor (MFD) and configure your account
 
 **Action items**
 - [ ] Become a member with BSE and obtain BSE credentials.
