@@ -21,7 +21,8 @@ OR
 #### 2. BSE Star MF A/c details
 - [ ] BSE Member id
 - [ ] BSE User id
-- [ ] BSE User account password  
+- [ ] BSE User account password
+
 *User ID and User Account Password, you'll receive on your email after submitting the application access request form to BSE*
 
 #### 3. CVL KRA A/c details

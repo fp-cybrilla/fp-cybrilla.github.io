@@ -35,7 +35,23 @@ class Redcarpet::Render::CustomHTML < Redcarpet::Render::HTML
     when :ordered
       "<ol class='list-decimal pl-4'>#{content}</ol>"
     when :unordered
-      "<ul class='list-disc pl-4'>#{content}</ul>"
+      if(content[''])
+        "<ul class='task-list pl-5 mt-4'>#{content}</ul>"
+      else
+        "<ul class='list-disc pl-4'>#{content}</ul>"  
+      end  
+    end
+  end
+
+  def list_item(text, list_type)
+    if list_type === :unordered && text.start_with?("[x]", "[X]")
+      text[0..2] = ''
+      %(<li class='list-none'>#{text}</li>)
+    elsif list_type === :unordered && text.start_with?("[ ]")
+      text[0..2] = ''
+      %(<li class='list-none'>#{text}</li>)
+    else
+      %(<li>#{text}</li>)
     end
   end
 
