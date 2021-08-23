@@ -11,6 +11,15 @@
     <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
 
     <style>
+      .site-header {
+        border-bottom: 1px solid #F0F1F4;
+      }
+
+      .site-header nav ul li {
+        font-size: 1.125rem;
+        line-height: 2rem;
+      }
+
       .sidebar {
         border-right: 1px solid rgba(0,0,0,.07);
         background-color: #fff;
@@ -27,7 +36,7 @@
         z-index: 20;
       }
 
-      .content {
+      #main {
         position: relative;
         top: 0;
         right: 0;
@@ -83,8 +92,11 @@
       <aside id="sidebar" class="sidebar">
         <%= render '/partials/sidebar.*' %>
       </aside>
-      <div id="main" class="content p-8">
-        <%= yield %>
+      <div id="main">
+        <%= render '/partials/header.*' %>
+        <div class="content p-8">
+          <%= yield %>  
+        </div>
       </div>
     </div>
 
