@@ -31,7 +31,7 @@ The distributor can use the [check KYC status](https://fintechprimitives.com/api
 
 #### Sample video
 <video width="320" height="240" controls id="sample_video">
-  <source src="../../videos/sample_video_kyc.mov" type="video/mp4">
+  <source src="/videos/sample_video_kyc.mov" type="video/mp4">
   <!--<source src="../../images/signzy_sample_2.mov" type="video/mp4">-->
 </video>
 <br><i>*The data in this video has been created for demo purpose only. It does not belong to any living individual.</i>

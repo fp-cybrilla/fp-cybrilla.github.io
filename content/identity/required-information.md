@@ -63,12 +63,12 @@ We have made some sample videos for your referene:
 
 *Investor reading the 6 digit OTP loud*  
 <video width="500" height="800" controls id="kyc_ipv_sample_otp_read">
-  <source src="../videos/KYC_OTP_Spell_out.mp4" type="video/mp4">
+  <source src="/videos/KYC_OTP_Spell_out.mp4" type="video/mp4">
 </video>
 
 *Investor displaying the 6 digit OTP*  
 <video width="320" height="240" controls id="kyc_ipv_sample_otp_display">
-  <source src="../videos/KYC_OTP_Display.mp4" type="video/mp4">
+  <source src="/videos/KYC_OTP_Display.mp4" type="video/mp4">
 </video>
 
 ### Esign on the application form
@@ -77,10 +77,10 @@ Here is a sample video of how the esign experience is for your investor on produ
 
 *Desktop*  
 <video width="320" height="240" controls id="sample_esign_flow_desktop">
-  <source src="../videos/sample_esign_flow_desktop.mp4" type="video/mp4">
+  <source src="/videos/sample_esign_flow_desktop.mp4" type="video/mp4">
 </video>
 
 *Mobile*  
 <video width="320" height="240" controls id="sample_esign_flow_mobile">
-  <source src="../videos/sample_esign_flow_mobile.mp4" type="video/mp4">
+  <source src="/videos/sample_esign_flow_mobile.mp4" type="video/mp4">
 </video>
