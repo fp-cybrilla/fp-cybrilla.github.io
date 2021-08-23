@@ -1,3 +1,6 @@
+---
+title: Create a recurring purchase
+---
 ## Recurring purchases
 #### Facilitate SIP investments for your investor
 

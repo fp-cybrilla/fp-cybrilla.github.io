@@ -1,3 +1,6 @@
+---
+title: Distributors w/ RTA
+---
 ## Go live checklist for distributors w/ RTAs
 
 ### Prerequisites

@@ -1,3 +1,6 @@
+---
+title: Schedule a recurring withdrawal
+---
 ## Schedule a recurring withdrawal
 #### Facilitate systematic withdrawal plans (SWPs) for your investor
 

@@ -1,3 +1,6 @@
+---
+title: Open an investment account
+---
 ## Open an investment account
 #### Learn how to onboard an investor and set him up for investing
 

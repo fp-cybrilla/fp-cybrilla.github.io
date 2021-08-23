@@ -1,3 +1,6 @@
+---
+title: Required information
+---
 ## Required information about the investor
 #### All the data points needed for a kyc application
 

@@ -1,3 +1,6 @@
+---
+title: One time purchases
+---
 ## One time purchases
 #### Facilitate lumpsum investments for your investor
 

@@ -1,3 +1,6 @@
+---
+title: Distributors w/ BSE
+---
 ## Go live checklist for distributors w/ BSE
 
 ### Prerequisites

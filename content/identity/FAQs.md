@@ -1,3 +1,6 @@
+---
+title: FAQs
+---
 ## FAQs
 
 #### Are KYC Applications without E-Sign accepted?

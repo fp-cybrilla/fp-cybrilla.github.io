@@ -1,3 +1,6 @@
+---
+title: One time purchases w/ Old APIs
+---
 ## One time purchases w/ Old APIs
 #### Facilitate lumpsum investments for your investor
 

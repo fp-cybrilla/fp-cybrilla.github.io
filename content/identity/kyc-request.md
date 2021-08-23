@@ -1,3 +1,6 @@
+---
+title: Perform digital kyc
+---
 ## Perform digital kyc
 #### Use this guide to submit a digital kyc application for your investor.
 

@@ -1,7 +1,6 @@
-<!--
-## Registration and Sandbox
------------------------------
--->
+---
+title: Registration and Sandbox
+---
 #### How can I start using the platform?
 You can get started through the sandbox access instantly. <br>
 Please email us at [fp@cybrilla.com](mailto:fp@cybrilla.com).

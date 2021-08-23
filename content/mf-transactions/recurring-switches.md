@@ -1,3 +1,6 @@
+---
+title: Schedule a recurring switch
+---
 ## Schedule a recurring switch
 #### Facilitate systematic transfer plans (STPs) for your investor
 

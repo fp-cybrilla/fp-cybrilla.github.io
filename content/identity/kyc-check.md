@@ -1,3 +1,6 @@
+---
+title: Check the kyc status
+---
 ## KYC Check
 #### Check your investor's kyc status
 

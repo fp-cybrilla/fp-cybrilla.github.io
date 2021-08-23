@@ -1,3 +1,6 @@
+---
+title: Sell a mutual fund
+---
 ## Sell a mutual fund
 #### Facilitate redemptions for your investor
 

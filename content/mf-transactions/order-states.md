@@ -1,3 +1,6 @@
+---
+title: Order States
+---
 ## Order States
 
 - The platform supports different types of orders (lumpsum purchases, additional lumpsum purchases, SIPs, redemptions, instant redemptions, etc.). 

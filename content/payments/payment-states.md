@@ -1,3 +1,6 @@
+---
+title: Payment States
+---
 ## Payment States
 |Status|Applicability|Comments|
 |---|---|---|

@@ -1,3 +1,6 @@
+---
+title: Setup recurring payments
+---
 ## NACH
 #### Automatically debit money from your investor's bank account
 
