@@ -1,0 +1,16 @@
+image: ruby:2.7
+
+deploy:
+  script:
+    - bundle install -j4
+    - bundle exec nanoc
+    - bundle exec nanoc check --deploy
+    - apt install unzip
+    - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    - unzip awscliv2.zip
+    - ./aws/install
+    - aws s3 cp output s3://qa-product-docs --recursive
+  only:
+    - moving-to-nanoc
+  tags:
+    - product-docs
