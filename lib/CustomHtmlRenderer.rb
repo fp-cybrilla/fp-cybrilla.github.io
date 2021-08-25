@@ -7,7 +7,7 @@ class Redcarpet::Render::CustomHTML < Redcarpet::Render::HTML
 
   def table(header, body)
     "<table class='table-default table-auto'>" \
-      "<thead>#{header}</thead>" \
+      "<thead class='sticky top-0'>#{header}</thead>" \
       "<tbody>#{body}</tbody>" \
     "</table>"
   end
