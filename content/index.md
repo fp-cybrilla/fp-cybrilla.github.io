@@ -10,7 +10,7 @@ Learn about the FP Services and how to facilitate mutual fund investments for yo
 3. [Payments](/payments/overview)
 4. [Investor Reporting](/pages/workflows/investor-reporting)
 
-You can access all the FP services via APIs ([documentation](https://fintechprimitives.com/api))
+You can access all the FP services via APIs ([FPDocs, documentation](https://fintechprimitives.com/api))
 
 
 ### Platform as a Service

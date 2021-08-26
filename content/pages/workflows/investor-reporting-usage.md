@@ -20,12 +20,12 @@ Use FileOperation API Create a `transaction_processing` file operation with file
 Use the FileOperation API check the status and ensure that transaction processing is successful.
 
 **Step 4 : Get the list of transactions**  
-Use [transactions API](https://fintechprimitives.com/api/#transactions) to get the list of transactions associated with a folio.
+Use [FPDocs, transactions API](https://fintechprimitives.com/api/#transactions) to get the list of transactions associated with a folio.
 
 ## How do I get the data points?
-Note 1: This section explains ways to get different data points. All the data points mentioned in this section are obtained/generated from the transactions response from the [transactions API](https://fintechprimitives.com/api/#transactions) . Please make yourself familiar with the object structure of the transactions as these fields are used extensively to generate the required data points.
+Note 1: This section explains ways to get different data points. All the data points mentioned in this section are obtained/generated from the transactions response from the [FPDocs, transactions API](https://fintechprimitives.com/api/#transactions) . Please make yourself familiar with the object structure of the transactions as these fields are used extensively to generate the required data points.
 
-Note 2:  Transaction object has `isin` field to indicate the scheme associated with the transaction. However, calculation of some data points requires more scheme related info. In such cases, the idea is to use the `isin` associated with transaction to fetch the scheme details using [Fund schemes API](https://fintechprimitives.com/api/#get-fund-schemes) to facilitate calculation of data points.
+Note 2:  Transaction object has `isin` field to indicate the scheme associated with the transaction. However, calculation of some data points requires more scheme related info. In such cases, the idea is to use the `isin` associated with transaction to fetch the scheme details using [FPDocs, Fund schemes API](https://fintechprimitives.com/api/#get-fund-schemes) to facilitate calculation of data points.
 
 Note 3 : When a transaction results in the decrease in number of units because of an action initiated by the investor,  we need to figure out the units that need to be considered for decreasing. To aid this process, we use FIFO logic.  For example, if an investor purchases 100 units on **1st Jan 2019** and another 100 units on **2nd Jan 2019** and redeems 150 units on **3rd Jan 2019**, then we have to decrease 150 units from the 200 purchased units. Using FIFO logic, we reduce 100 units purchased on **1st Jan 2019** and 50 units purchased on **2nd Jan 2019**.  So we can say that the redemption of 150 units were **"sourced"** from transactions that happened on **1st Jan 2019** and **2nd Jan 2019** respectively. In such cases,  the `sources` attribute contain information about transactions from which this particular transaction in question is **sourced** from.
 

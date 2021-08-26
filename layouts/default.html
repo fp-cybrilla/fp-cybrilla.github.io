@@ -25,7 +25,7 @@
         border-right: 1px solid rgba(0,0,0,.07);
         background-color: #fff;
         overflow-y: auto;
-        padding: 20px 15px 0 0;
+        padding: 0px 15px 0 0;
         position: fixed;
         top: 0;
         bottom: 0;
@@ -67,6 +67,7 @@
 
       h4 {
         margin-top: 2rem;
+        margin-bottom: 1rem;
         color: #061738;
         font-weight: 600;
       }
@@ -81,6 +82,18 @@
 
       blockquote>:last-child {
         margin-bottom: 0;
+      }
+
+      .content ul.task-list li > ul {
+        margin-top: 0;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      p {
+        margin: 0.5rem 0;
       }
     </style>
   </head>
@@ -102,7 +115,17 @@
       window.addEventListener('DOMContentLoaded', () => {
         const collapse = new Collapse();
       });
-      
     </script>
+
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:2572536,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
   </body>
 </html>

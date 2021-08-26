@@ -6,6 +6,8 @@ title: Order States
 - The platform supports different types of orders (lumpsum purchases, additional lumpsum purchases, SIPs, redemptions, instant redemptions, etc.). 
 - Each order has its own workflow and depending on the stage of the workflow and other conditions, the state of the order changes.
 
+<br/>
+
 |Status|Comments|
 |---|---|
 |pending|The order is created and waiting for confirmation for further processing|

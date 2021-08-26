@@ -8,7 +8,7 @@ You need to take an authorization from your investor before you can debit money 
 
 #### 1. Create a mandate
 
-Call the [create mandate api](https://fintechprimitives.com/api/#create-an-e-mandate) with the following json.
+Call the [FPDocs, create mandate api](https://fintechprimitives.com/api/#create-an-e-mandate) with the following json.
 
 ```json
 {
@@ -21,7 +21,7 @@ Make a note of the mandate ID returned in the response. You'll need to use that 
 
 #### 2. Authorize the mandate
 
-Call the [authorize mandate api]() with the mandate ID from the previous step.
+Call the [FPDocs, authorize mandate api]() with the mandate ID from the previous step.
 
 ```json
 {
@@ -33,11 +33,11 @@ Look for `token_url` in the response and redirect your investor to it to complet
 
 #### 3. Check the mandate status
 
-Use the [get mandate api](https://fintechprimitives.com/api/#fetch-a-mandate) to fetch the details about the mandate. `mandate_status` field represent the status of the mandate. Mandates in `APPROVED` status can be used to debit money.  
+Use the [FPDocs, get mandate api](https://fintechprimitives.com/api/#fetch-a-mandate) to fetch the details about the mandate. `mandate_status` field represent the status of the mandate. Mandates in `APPROVED` status can be used to debit money.  
 
 ### Testing
 
-You can use the [simulation api](https://fintechprimitives.com/api/#post-mandate-simulation) to move the mandate into different states to help you during the integration process. For example, use the following json to simulate the mandate to `APPROVED` state.
+You can use the [FPDocs, simulation api](https://fintechprimitives.com/api/#post-mandate-simulation) to move the mandate into different states to help you during the integration process. For example, use the following json to simulate the mandate to `APPROVED` state.
 
 ```json
 {

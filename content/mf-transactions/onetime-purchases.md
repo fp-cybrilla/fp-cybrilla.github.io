@@ -14,11 +14,11 @@ Once you have the investor and investment account created, follow the below step
 3. Check the order state
 
 #### 1. Create a purchase order
-Some funds are not allowed for purchases and some might temporarily stop accepting purchase orders. Make sure you check the `purchase_allowed` field is `true` for the fund scheme(s) you are placing the order for, using the [Get fund scheme api](https://fintechprimitives.com/api/#get-single-fund-schemes-detail).
+Some funds are not allowed for purchases and some might temporarily stop accepting purchase orders. Make sure you check the `purchase_allowed` field is `true` for the fund scheme(s) you are placing the order for, using the [FPDocs, Get fund scheme api](https://fintechprimitives.com/api/#get-single-fund-schemes-detail).
 
 FP uses `MF Purchase` object to represent all the mutual fund purchase orders. You need to create a `MF Purchase` as a first step for placing a one time purchase order.
 
-Call the [Create mf purchase api](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) with the following json. Use the investment account of the investor for whom you are placing the order for.
+Call the [FPDocs, Create mf purchase api](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) with the following json. Use the investment account of the investor for whom you are placing the order for.
 
 ```json
 {
@@ -46,7 +46,7 @@ A MF Purchase gets created for which you need to make a payment. Keep a note of 
 You can use FP Payment APIs or work with payment providers directly to faciliate a payment for the order.
 
 **Option 1:** *You are using FP payment APIs*  
-To make a payment using internet banking or upi, make a request to [create payment api](https://fintechprimitives.com/api/#create-a-payment) with the following json. Use the order's `old_id` from the previous step. Use the `id` of the bank account belonging to the investor, with which you want him to make the payment.
+To make a payment using internet banking or upi, make a request to [FPDocs, create payment api](https://fintechprimitives.com/api/#create-a-payment) with the following json. Use the order's `old_id` from the previous step. Use the `id` of the bank account belonging to the investor, with which you want him to make the payment.
 
 ```json
 {
@@ -58,8 +58,8 @@ To make a payment using internet banking or upi, make a request to [create payme
 Look for `token_url` in the response and redirect your investor to it to complete his payment. After your investor finishes the payment, FP redirects him to the postback URL configured on your account or to the `payment_postback_url` provided in the request. You'll receive `success` or `failure` in the `status` param. As a good security practice, do not completely rely on the `status` received in the postback call. Instead check the status of the payment from your server before giving a final confirmation to your investor.  
 [Learn more about payment states](/pages/workflows/payment-status).
 
-**Option 2:** *You are using external payment providers directly*  
-After you have collected the money from your investor, confirm the purchase order by calling the [update mf purchase api](https://fintechprimitives.com/docs/api/#update-a-mf-purchase) with the following json:
+**Option 2:** *You are using FPDocs payment providers directly*  
+After you have collected the money from your investor, confirm the purchase order by calling the [FPDocs, update mf purchase api](https://fintechprimitives.com/docs/api/#update-a-mf-purchase) with the following json:
 
 ```json
 {
@@ -68,7 +68,7 @@ After you have collected the money from your investor, confirm the purchase orde
 }
 ```
 
-After the money is settled into the scheme's bank account, call the [create mf settlement detail api](https://fintechprimitives.com/docs/api/#create-a-mf-settlement-detail) to give us the settlement details so we can reconcile the order with the money received. You need to send the following details about the settlement:
+After the money is settled into the scheme's bank account, call the [FPDocs, create mf settlement detail api](https://fintechprimitives.com/docs/api/#create-a-mf-settlement-detail) to give us the settlement details so we can reconcile the order with the money received. You need to send the following details about the settlement:
 
 ```json
 {
@@ -84,7 +84,7 @@ After the money is settled into the scheme's bank account, call the [create mf s
 
 #### 3. Track the order
 
-Call the [fetch mf purchase api](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to check the `state` of the order.  
+Call the [FPDocs, fetch mf purchase api](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to check the `state` of the order.  
 When the payment is successful, the order state becomes `confirmed`. [Learn more about the order states](/mf-transactions/order-states)
 
 
@@ -98,7 +98,7 @@ For a successful order, review the following key attributes of the `mf_purchase`
 
 ### Testing
 
-In sandbox, use the [simulation api](https://fintechprimitives.com/api/#post-order-simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
+In sandbox, use the [FPDocs, simulation api](https://fintechprimitives.com/api/#post-order-simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
 
 ```json
 {
