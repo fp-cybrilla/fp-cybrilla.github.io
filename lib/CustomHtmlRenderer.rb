@@ -64,7 +64,7 @@ class Redcarpet::Render::CustomHTML < Redcarpet::Render::HTML
         target='_blank'
       >
         #{content}
-        <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' class='inline ml-1'>
+        <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' class='inline ml-2'>
           <g transform='translate(16.215 -0.215) rotate(90)'>
             <g transform='translate(0.35 0.35)'>
               <rect fill='none' width='16' height='16' transform='translate(-0.135 -0.135)' />

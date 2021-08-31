@@ -95,6 +95,24 @@
       p {
         margin: 0.5rem 0;
       }
+
+      .collapse-icon {
+        width: 16px;
+        height: 16px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg transform='translate(0 16) rotate(-90)'%3E%3Cg transform='translate(1.41 4.022)'%3E%3Crect class='a' fill='%230f2c5e' width='1.667' height='9.575' rx='0.833' transform='translate(0 1.179) rotate(-45)'/%3E%3Crect class='a' fill='%236F809E' width='1.667' height='9.575' rx='0.833' transform='translate(6.761 7.949) rotate(-135)'/%3E%3C/g%3E%3Crect class='b' fill='none' width='16' height='16' transform='translate(0 0)'/%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      .collapse-icon svg {
+        display: none;
+      }
+
+      .chevron-down {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg transform='translate(0 0)'%3E%3Cg transform='translate(1.41 4.022)'%3E%3Crect class='a' fill='%230f2c5e' width='1.667' height='9.575' rx='0.833' transform='translate(0 1.179) rotate(-45)'/%3E%3Crect class='a' fill='%236F809E' width='1.667' height='9.575' rx='0.833' transform='translate(6.761 7.949) rotate(-135)'/%3E%3C/g%3E%3Crect class='b' fill='none' width='16' height='16' transform='translate(0 0)'/%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      table {
+        margin-top: 10px;
+      }
     </style>
   </head>
   <body class="font-roboto text-size-base text-base-color">
@@ -126,6 +144,50 @@
           r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
           a.appendChild(r);
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <script>
+    function reset(item) {
+      // remove currentTab item from local storage
+      window.localStorage.removeItem("currentTab");
+        
+      if(item.querySelector(".collapse-body")?.classList.contains("block")) {
+        item.querySelector(".collapse-body")?.classList.remove("hidden");
+      }
+    }
+
+    document.querySelector(".logo").addEventListener("click", () => {
+      document.querySelectorAll("aside nav > ul > li").forEach((item, key)=> {
+        reset(item);
+      });
+    });
+
+    document.querySelectorAll(".site-header > nav > ul > li").forEach((item, key) => {
+      item.addEventListener("click", () => {
+         reset(item);
+      });
+    });
+
+    document.querySelectorAll("aside nav > ul > li").forEach((item, key)=> {
+      item.addEventListener("click", (event) => {
+        if(!item.querySelector(".collapse-body")) {
+          reset(item);
+        }
+      });
+
+      item.querySelector(".collapse-title")?.addEventListener("click", (event) => {
+        window.localStorage.setItem("currentTab", key);
+        item.querySelector(".collapse-icon").classList.toggle("chevron-down");
+      });
+
+      if(window.localStorage.getItem("currentTab") == key) {
+        if(item.querySelector(".collapse-body")?.classList.contains("hidden")) {
+          item.querySelector(".collapse-body")?.classList.remove("hidden");
+          item.querySelector(".collapse-body")?.classList.add("block");
+          item.querySelector(".collapse-icon").classList.add("chevron-down");
+        }
+      }
+    });
   </script>
   </body>
 </html>
