@@ -61,26 +61,102 @@ The verification video
 
 We have made some sample videos for your referene:
 
-*Investor reading the 6 digit OTP loud*  
+<!-- *Investor reading the 6 digit OTP loud*  
 <video width="500" height="800" controls id="kyc_ipv_sample_otp_read">
   <source src="/videos/KYC_OTP_Spell_out.mp4" type="video/mp4">
-</video>
+</video> -->
 
-*Investor displaying the 6 digit OTP*  
+<div class="video-player">
+  <div class="video-player__title">
+    Investor reading the 6 digit OTP loud
+  </div>
+  <div class="video-player__content">
+    <div class="video-player__play-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="105" height="105" viewBox="0 0 105 105">
+        <g transform="translate(-479 -513)">
+          <circle fill="#3e74ff" cx="52.5" cy="52.5" r="52.5" transform="translate(479 513)" opacity="0.75" />
+          <path fill="#fff" d="M18.391,4.6a3,3,0,0,1,5.218,0L39.457,32.519A3,3,0,0,1,36.848,37H5.152a3,3,0,0,1-2.609-4.481Z" transform="translate(553 545) rotate(90)" />
+        </g>
+      </svg>
+    </div>
+    <video>
+      <source src="/videos/KYC_OTP_Spell_out.mp4" type="video/mp4" />
+    </video>
+  </div>
+</div>
+
+<!-- *Investor displaying the 6 digit OTP*  
 <video width="320" height="240" controls id="kyc_ipv_sample_otp_display">
   <source src="/videos/KYC_OTP_Display.mp4" type="video/mp4">
-</video>
+</video> -->
+
+<div class="video-player">
+  <div class="video-player__title">
+    Investor displaying the 6 digit OTP
+  </div>
+  <div class="video-player__content">
+    <div class="video-player__play-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="105" height="105" viewBox="0 0 105 105">
+        <g transform="translate(-479 -513)">
+          <circle fill="#3e74ff" cx="52.5" cy="52.5" r="52.5" transform="translate(479 513)" opacity="0.75" />
+          <path fill="#fff" d="M18.391,4.6a3,3,0,0,1,5.218,0L39.457,32.519A3,3,0,0,1,36.848,37H5.152a3,3,0,0,1-2.609-4.481Z" transform="translate(553 545) rotate(90)" />
+        </g>
+      </svg>
+    </div>
+    <video>
+      <source src="/videos/KYC_OTP_Display.mp4" type="video/mp4" />
+    </video>
+  </div>
+</div>
 
 ### Esign on the application form
 
 Here is a sample video of how the esign experience is for your investor on production:  
 
-*Desktop*  
+<!-- *Desktop*  
 <video width="320" height="240" controls id="sample_esign_flow_desktop">
   <source src="/videos/sample_esign_flow_desktop.mp4" type="video/mp4">
-</video>
+</video> -->
 
-*Mobile*  
+<div class="video-player">
+  <div class="video-player__title">
+    Desktop
+  </div>
+  <div class="video-player__content">
+    <div class="video-player__play-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="105" height="105" viewBox="0 0 105 105">
+        <g transform="translate(-479 -513)">
+          <circle fill="#3e74ff" cx="52.5" cy="52.5" r="52.5" transform="translate(479 513)" opacity="0.75" />
+          <path fill="#fff" d="M18.391,4.6a3,3,0,0,1,5.218,0L39.457,32.519A3,3,0,0,1,36.848,37H5.152a3,3,0,0,1-2.609-4.481Z" transform="translate(553 545) rotate(90)" />
+        </g>
+      </svg>
+    </div>
+    <video>
+      <source src="/videos/sample_esign_flow_desktop.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<!-- *Mobile*  
 <video width="320" height="240" controls id="sample_esign_flow_mobile">
   <source src="/videos/sample_esign_flow_mobile.mp4" type="video/mp4">
-</video>
+</video> -->
+
+<div class="video-player">
+  <div class="video-player__title">
+    Mobile
+  </div>
+  <div class="video-player__content">
+    <div class="video-player__play-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="105" height="105" viewBox="0 0 105 105">
+        <g transform="translate(-479 -513)">
+          <circle fill="#3e74ff" cx="52.5" cy="52.5" r="52.5" transform="translate(479 513)" opacity="0.75" />
+          <path fill="#fff" d="M18.391,4.6a3,3,0,0,1,5.218,0L39.457,32.519A3,3,0,0,1,36.848,37H5.152a3,3,0,0,1-2.609-4.481Z" transform="translate(553 545) rotate(90)" />
+        </g>
+      </svg>
+    </div>
+    <video>
+      <source src="/videos/sample_esign_flow_mobile.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
