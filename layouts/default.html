@@ -120,6 +120,19 @@
         max-width: 100%;
         margin: 1rem 0;
       }
+
+      h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+
+      .copy-link {
+        margin-top: 5px;
+      }
+
+      .copy:hover .copy-link {
+        display: flex;
+      }
     </style>
   </head>
   <body class="font-roboto text-size-base text-base-color">
@@ -188,6 +201,39 @@
           item.querySelector(".collapse-icon").classList.add("chevron-down");
         }
       }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 300,
+      speedAsDuration: true,
+    });
+
+    document.querySelectorAll(".copy-link").forEach((item, index) => {
+      let url = '';
+      let href = '';
+      let uri = '';
+
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const parentElement = item.parentElement;
+        
+        href = parentElement.querySelector("a.anchor").getAttribute("href");
+        url = window.location.href.split('#')[0];
+        uri = url += href;
+
+        navigator.clipboard.writeText(uri).then(function() {
+          item.querySelector("span").innerHTML = "Copied";
+        }, function(error) {
+          console.log(error);
+        });
+      });
+
+      item.addEventListener("mouseout", () => {
+        item.querySelector("span").innerHTML = "Copy link";
+      });
     });
   </script>
   </body>
