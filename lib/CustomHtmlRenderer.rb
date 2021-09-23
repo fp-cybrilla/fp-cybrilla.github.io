@@ -60,18 +60,10 @@ class Redcarpet::Render::CustomHTML < Redcarpet::Render::HTML
   def link(link, title, content)
     if content.split(",")[0] == "FPDocs"
       content[0..6] = ''
-      "<a href='#{link}' title='#{title}' class='inline-flex items-center bg-primary-N05 hover:bg-primary-N10 hover:text-primary-B100 px-2 rounded-5'
+      "<a href='#{link}' title='#{title}' class='api-link inline-flex items-center bg-primary-N05 hover:bg-primary-N10 hover:text-primary-B100 px-2 rounded-5'
         target='_blank'
       >
         #{content}
-        <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' class='inline ml-2'>
-          <g transform='translate(16.215 -0.215) rotate(90)'>
-            <g transform='translate(0.35 0.35)'>
-              <rect fill='none' width='16' height='16' transform='translate(-0.135 -0.135)' />
-            </g>
-            <path fill='#3e74ff' d='M4.85,13.5a.5.5,0,0,1-.056-.062L.2,9.1a.629.629,0,0,1,0-.927.72.72,0,0,1,.98,0l4.162,3.935L9.507,8.175a.72.72,0,0,1,.98,0,.629.629,0,0,1,0,.927L5.9,13.44a.522.522,0,0,1-.06.062.7.7,0,0,1-.492.189H5.331A.7.7,0,0,1,4.85,13.5ZM9.507,5.519,5.346,1.583,1.184,5.519a.72.72,0,0,1-.98,0,.63.63,0,0,1,0-.928L4.791.254A.409.409,0,0,1,4.85.191.716.716,0,0,1,5.342,0h0a.7.7,0,0,1,.5.191A.386.386,0,0,1,5.9.254l4.59,4.337a.63.63,0,0,1,0,.928A.713.713,0,0,1,10,5.711.7.7,0,0,1,9.507,5.519Z' transform='translate(2.869 1.493)' />
-          </g>
-        </svg>
       </a>"
     else
       "<a href='#{link}' title='#{title}'>#{content}</a>"

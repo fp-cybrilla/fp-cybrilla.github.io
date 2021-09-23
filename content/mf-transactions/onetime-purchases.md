@@ -45,6 +45,124 @@ A MF Purchase gets created for which you need to make a payment. Keep a note of 
 
 You can use FP Payment APIs or work with payment providers directly to faciliate a payment for the order.
 
+<div class="tabs">
+	<div class="tabs-bar">
+		<div class="tabs-item active">Option 1</div>
+		<div class="tabs-item">Option 2</div>
+	</div>
+	<div class="tabs-content">
+		<div class="tab-pane">
+			<h5>You are using FP payment APIs</h5>
+			<p>
+				To make a payment using internet banking or upi, make a request to
+				<a
+					href="https://fintechprimitives.com/api/#create-a-payment"
+					title=""
+					class="api-link
+						inline-flex
+						items-center
+						bg-primary-N05
+						hover:bg-primary-N10 hover:text-primary-B100
+						px-2
+						rounded-5
+					"
+					target="_blank"
+				>
+					create payment api
+				</a>
+				with the following json. Use the order's <code class="prettyprint">old_id</code> from the
+				previous step. Use the <code class="prettyprint">id</code> of the bank account belonging to
+				the investor, with which you want him to make the payment.
+			</p>
+			<div class="highlight">
+				<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"amc_order_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">9123</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"bank_account_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+			</div>
+			<p>
+				Look for <code class="prettyprint">token_url</code> in the response and redirect your
+				investor to it to complete his payment. After your investor finishes the payment, FP
+				redirects him to the postback URL configured on your account or to the
+				<code class="prettyprint">payment_postback_url</code> provided in the request. You'll
+				receive <code class="prettyprint">success</code> or
+				<code class="prettyprint">failure</code> in the
+				<code class="prettyprint">status</code> param. As a good security practice, do not
+				completely rely on the <code class="prettyprint">status</code> received in the postback
+				call. Instead check the status of the payment from your server before giving a final
+				confirmation to your investor.<br />
+				<a href="/pages/workflows/payment-status" title="">Learn more about payment states</a>.
+			</p>
+		</div>
+
+		<div class="tab-pane">
+			<h5>You are using FPDocs payment providers directly</h5>
+			<p>
+				After you have collected the money from your investor, confirm the purchase order by calling
+				the
+				<a
+					href="https://fintechprimitives.com/docs/api/#update-a-mf-purchase"
+					title=""
+					class="api-link
+						inline-flex
+						items-center
+						bg-primary-N05
+						hover:bg-primary-N10 hover:text-primary-B100
+						px-2
+						rounded-5
+					"
+					target="_blank"
+				>
+					update mf purchase api
+					
+				</a>
+				with the following json:
+			</p>
+			<div class="highlight">
+				<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mfp_177177219f634373b01072986d2eea7d"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"confirmed"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+			</div>
+			<p>
+				After the money is settled into the scheme's bank account, call the
+				<a
+					href="https://fintechprimitives.com/docs/api/#create-a-mf-settlement-detail"
+					title=""
+					class="api-link
+						inline-flex
+						items-center
+						bg-primary-N05
+						hover:bg-primary-N10 hover:text-primary-B100
+						px-2
+						rounded-5
+					"
+					target="_blank"
+				>
+					create mf settlement detail api
+				</a>
+				to give us the settlement details so we can reconcile the order with the money received. You
+				need to send the following details about the settlement:
+			</p>
+			<div class="highlight">
+				<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"mf_purchase"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mfp_177177219f634373b01072986d2eea7d"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"payment_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"netbanking"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"utr_no"</span><span class="p">:</span><span class="w"> </span><span class="s2">"889121212"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bank_account_no"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18603051137433"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"beneficiary_account_no"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1143005051340"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"beneficiary_account_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AMC Mutual Fund Pool AC"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"settlement_processed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-09T12:00:09"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 
 **Option 1:** *You are using FP payment APIs*  
 To make a payment using internet banking or upi, make a request to [FPDocs, create payment api](https://fintechprimitives.com/api/#create-a-payment) with the following json. Use the order's `old_id` from the previous step. Use the `id` of the bank account belonging to the investor, with which you want him to make the payment.
 
@@ -80,7 +198,7 @@ After the money is settled into the scheme's bank account, call the [FPDocs, cre
   "beneficiary_account_title": "AMC Mutual Fund Pool AC",
   "settlement_processed_at": "2020-04-09T12:00:09"
 }
-```
+``` -->
 
 #### 3. Track the order
 

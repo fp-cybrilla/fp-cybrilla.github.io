@@ -14,10 +14,12 @@
     <style>
       .site-header {
         border-bottom: 1px solid #F0F1F4;
+        font-family: "Open Sans", sans-serif;
       }
 
       .site-header nav ul li {
         font-size: 1.125rem;
+        font-weight: 600;
         line-height: 2rem;
       }
 
@@ -55,7 +57,7 @@
         margin-top: 4rem;
         margin-bottom: 0.5rem;
         color: #0F2C5E;
-        font-weight: 600;
+        font-weight: 700;
       }
 
       h3 {
@@ -69,13 +71,19 @@
         margin-top: 2rem;
         margin-bottom: 1rem;
         color: #061738;
-        font-weight: 600;
+        font-weight: 400;
+      }
+
+      h5 {
+        color: #102968;
+        font-weight: 700;
       }
 
       h2 + h4 {
         margin-top: 0;
+        font-weight: 600;
       }
-
+      
       blockquote>:first-child {
         margin-top: 0;
       }
@@ -118,6 +126,18 @@
 
       .copy:hover .copy-link {
         display: flex;
+      }
+
+      .api-link {
+        position: relative;
+      }
+
+      .api-link::after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        margin-left: 0.5rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' class='inline ml-2'%3E%3Cg transform='translate(16.215 -0.215) rotate(90)'%3E%3Cg transform='translate(0.35 0.35)'%3E%3Crect fill='none' width='16' height='16' transform='translate(-0.135 -0.135)'%3E%3C/rect%3E%3C/g%3E%3Cpath fill='%233e74ff' d='M4.85,13.5a.5.5,0,0,1-.056-.062L.2,9.1a.629.629,0,0,1,0-.927.72.72,0,0,1,.98,0l4.162,3.935L9.507,8.175a.72.72,0,0,1,.98,0,.629.629,0,0,1,0,.927L5.9,13.44a.522.522,0,0,1-.06.062.7.7,0,0,1-.492.189H5.331A.7.7,0,0,1,4.85,13.5ZM9.507,5.519,5.346,1.583,1.184,5.519a.72.72,0,0,1-.98,0,.63.63,0,0,1,0-.928L4.791.254A.409.409,0,0,1,4.85.191.716.716,0,0,1,5.342,0h0a.7.7,0,0,1,.5.191A.386.386,0,0,1,5.9.254l4.59,4.337a.63.63,0,0,1,0,.928A.713.713,0,0,1,10,5.711.7.7,0,0,1,9.507,5.519Z' transform='translate(2.869 1.493)'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
       }
     </style>
   </head>
@@ -163,7 +183,7 @@
     });
 
     document.querySelectorAll(".site-header > nav > ul > li").forEach((item, key) => {
-      item.addEventListener("click", () => {
+      item.addEventListener("click", (event) => {
          reset(item);
       });
     });
@@ -175,8 +195,18 @@
         }
       });
 
-      item.querySelector(".collapse-title")?.addEventListener("click", (event) => {
-        window.localStorage.setItem("currentTab", key);
+      // item.querySelector(".collapse-title")?.addEventListener("click", (event) => {
+      //   window.localStorage.setItem("currentTab", key);
+      // });
+
+      item.querySelectorAll(".collapse-body").forEach(ele => {
+        ele.querySelectorAll("ul > li > a").forEach(link => {
+          link.addEventListener("click", event => {
+            // event.preventDefault();
+            window.localStorage.setItem("currentTab", key);
+            // console.log(event.currentTarget);
+          });
+        });
       });
 
       if(window.localStorage.getItem("currentTab") == key) {
@@ -190,7 +220,7 @@
   </script>
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
   <script>
-    var scroll = new SmoothScroll('a[href*="#"]', {
+    var scroll = new SmoothScroll('.content a[href*="#"]', {
       speed: 300,
       speedAsDuration: true,
     });
