@@ -12,7 +12,7 @@ title: Signing up with Razorpay
   - `fintechprimitives.com` domain is whitelisted
     - Create a letter in your company's letterhead and request Razorpay to whitelist the domain `fintechprimitives.com`. Get this letter signed by the authorized signatory(ex: Your company's CEO) and include your company's official seal as well. Send the scanned copy of this image via email to Razorpay to whitelist the said domain. This is required to ensure that the payments can be initiated from this domain. Please refer this [sample form](/going-live/Razorpay_Domain_Whitelisting_Request_Form.pdf ':ignore') for more details
 
-> :warning: Note: We've seen delays/rejections in your Razorpay Account Activation if your corporate website isn't reflecting your mutual business properly. At the minimum, make sure your website talks about the mutual fund business, pricing, your company address, terms and conditions and privacy policies. Your Razorpay RM can help with more specific details and fast track your account activation.
+> We've seen delays/rejections in your Razorpay Account Activation if your corporate website isn't reflecting your mutual business properly. At the minimum, make sure your website talks about the mutual fund business, pricing, your company address, terms and conditions and privacy policies. Your Razorpay RM can help with more specific details and fast track your account activation.
 
 #### Razorpay FAQs
 *Why do we require two accounts?*<br>
