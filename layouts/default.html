@@ -230,6 +230,17 @@
       let href = '';
       let uri = '';
 
+      item.querySelector("span.copy-icon").innerHTML = `<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
+        <g id='Group_6421' data-name='Group 6421' transform='translate(-815 -366)'>
+          <circle id='Ellipse_665' data-name='Ellipse 665' cx='12' cy='12' r='12' transform='translate(815 366)' fill='#f0f7ff'/>
+          <g id='link' transform='translate(819.273 370.276)'>
+            <rect id='Rectangle_4846' data-name='Rectangle 4846' width='16' height='16' transform='translate(-0.273 -0.276)' fill='none'/>
+            <path id='Path_20020' data-name='Path 20020' d='M114.873,40.242l.711-.711a2.684,2.684,0,1,1,3.8,3.8l-1.726,1.726a2.684,2.684,0,0,1-3.8,0' transform='translate(-106.911 -36.549)' fill='none' stroke='#3e74ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/>
+            <path id='Path_20021' data-name='Path 20021' d='M44.038,106.568l-.711.711a2.684,2.684,0,0,1-3.8-3.8l1.726-1.726a2.684,2.684,0,0,1,3.8,0' transform='translate(-36.381 -94.978)' fill='none' stroke='#3e74ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/>
+          </g>
+        </g>
+        </svg>`;
+
       item.addEventListener("click", (e) => {
         e.preventDefault();
 
@@ -240,14 +251,23 @@
         uri = url += href;
 
         navigator.clipboard.writeText(uri).then(function() {
-          item.querySelector("span").innerHTML = "Copied";
+          item.querySelector("span.copy-icon").innerHTML = `<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><g transform='translate(-718.711 -135.711)'><rect fill='#f0f7ff' width='24' height='24' rx='12' transform='translate(718.711 135.711)'/><g transform='translate(722.018 139.018)'><path fill='#3e74ff' d='M4.154,9.45a1,1,0,0,1-.742-.32L.3,5.822a1.143,1.143,0,0,1,0-1.546.986.986,0,0,1,1.454,0l2.4,2.551L10.273.32a.986.986,0,0,1,1.454,0,1.143,1.143,0,0,1,0,1.546L4.9,9.13a1,1,0,0,1-.727.32Z' transform='translate(2.679 3.969)'/><rect fill='none' width='16' height='16' transform='translate(0.693 0.693)'/></g></g></svg>`;
         }, function(error) {
           console.log(error);
         });
       });
 
       item.addEventListener("mouseout", () => {
-        item.querySelector("span").innerHTML = "Copy link";
+        item.querySelector("span.copy-icon").innerHTML = `<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
+        <g id='Group_6421' data-name='Group 6421' transform='translate(-815 -366)'>
+          <circle id='Ellipse_665' data-name='Ellipse 665' cx='12' cy='12' r='12' transform='translate(815 366)' fill='#f0f7ff'/>
+          <g id='link' transform='translate(819.273 370.276)'>
+            <rect id='Rectangle_4846' data-name='Rectangle 4846' width='16' height='16' transform='translate(-0.273 -0.276)' fill='none'/>
+            <path id='Path_20020' data-name='Path 20020' d='M114.873,40.242l.711-.711a2.684,2.684,0,1,1,3.8,3.8l-1.726,1.726a2.684,2.684,0,0,1-3.8,0' transform='translate(-106.911 -36.549)' fill='none' stroke='#3e74ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/>
+            <path id='Path_20021' data-name='Path 20021' d='M44.038,106.568l-.711.711a2.684,2.684,0,0,1-3.8-3.8l1.726-1.726a2.684,2.684,0,0,1,3.8,0' transform='translate(-36.381 -94.978)' fill='none' stroke='#3e74ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/>
+          </g>
+        </g>
+        </svg>`;
       });
     });
   </script>

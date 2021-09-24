@@ -80,12 +80,8 @@ class Redcarpet::Render::CustomHTML < Redcarpet::Render::HTML
 
       "<h#{level} id='#{anchor.value}' class='flex items-center copy'>
         <a href='##{anchor.value}' class='anchor'>#{text}</a>
-        <span class='copy-link flex items-center hidden cursor-pointer text-size-12 ml-2 py-0.5 px-2 bg-primary-B10 text-primary-B100 rounded-xl'>
-        <svg xmlns='http://www.w3.org/2000/svg' width=18 height=18 viewBox='0 0 18 18'>
-          <path fill='none' d='M0,0H18V18H0Z' />
-          <path fill='#3e74ff' d='M5.429,17.7a2.316,2.316,0,0,1,2.331-2.3h3.007V14H7.759a3.7,3.7,0,1,0,0,7.407h3.007V20H7.759A2.316,2.316,0,0,1,5.429,17.7Zm3.083.741h6.015V16.963H8.511ZM15.278,14H12.27v1.407h3.007a2.3,2.3,0,1,1,0,4.592H12.27v1.407h3.007a3.7,3.7,0,1,0,0-7.407Z' transform='translate(-2.519 -9.007)' />
-        </svg>
-        <span class='ml-1'>Copy link</span>
+        <span class='copy-link flex items-center hidden cursor-pointer ml-4'>
+          <span class='copy-icon'></span>
         </span>
       </h#{level}>"
     else
