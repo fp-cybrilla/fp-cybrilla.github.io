@@ -1,7 +1,7 @@
 <div class="site-header py-5 mx-8">
   <nav>
-    <ul class="flex items-center space-x-16">
-      <li>
+    <ul class="flex items-center">
+      <li class="hidden lg:block">
         <div class="search">
           <div class="input-wrapper relative flex items-center">
             <input 
@@ -15,11 +15,11 @@
           </div>
         </div>
       </li>
-      <li>
+      <li class="lg:ml-16">
         <%= active_link('APIs', 'https://fintechprimitives.com/api/') %>
       </li>
 
-      <li>
+      <li class="ml-16">
         <div class="dropdown">
           <a href="#" class="dropdown-toggle">About us</a>
           <ul class="dropdown-menu">
