@@ -1,10 +1,30 @@
-<div class="logo pt-5 mb-5">
-  <a href="/">
-  <img src="/images/logo.svg" style="width: 175px" />
-  </a>
+<div class="sidebar-header">
+  <div class="pt-5 mb-5 hidden sm:block">
+    <a href="/" class="logo">
+      <img src="/images/logo.svg" class="mx-6" />
+    </a>
+
+    <a href="/" class="logo-alt hidden">
+      <img src="/images/logo-collapsed.svg" class="m-auto" />
+    </a>
+  </div>
+
+  <div class="pt-5 mb-5 sm:hidden flex items-center">
+    <div class="hamburger-close">
+      <svg id="menu_black_24dp" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path id="Path_20070" data-name="Path 20070" d="M0,0H24V24H0Z" fill="none"/>
+        <path id="Path_20071" data-name="Path 20071" d="M3,6V8H21V6Z" transform="translate(-1.364 14.607) rotate(-45)"/>
+        <path id="Path_20076" data-name="Path 20076" d="M3,6V8H21V6Z" transform="translate(8.536 -2.365) rotate(45)"/>
+      </svg>
+    </div>
+    
+    <a href="/">
+      <img src="/images/logo.svg" class="mx-4" />
+    </a>
+  </div>
 </div>
 <hr />
-<div class="search lg:hidden mt-6">
+<!-- <div class="search lg:hidden mt-6">
   <div class="input-wrapper relative flex items-center">
     <input 
       type="text"
@@ -15,178 +35,183 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><defs><style>.a{fill:#0f2c5e;}</style></defs><path class="a" d="M21.054,19.855l-4.436-4.425a6.4,6.4,0,1,0-.938.938L20.1,20.8a.671.671,0,1,0,.949-.949ZM6.583,11.4a5.065,5.065,0,1,1,5.065,5.065A5.065,5.065,0,0,1,6.583,11.4Z" transform="translate(-5.25 -5)"/></svg>
     </span>
   </div>
-</div>
-<nav class="mt-8">
-  <ul>
-    <li class="mt-2 px-6"> 
-      <%= active_link('Introduction', '/') %>
-    </li>
-    <li class="mt-2 px-6"> 
-      <%= active_link('Registration and Sandbox', '/pages/registration-and-sandbox/') %>
-    </li>
-    <li class="mt-2">
-      <div class="collapse mb-2">
-        <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
-          
-          Going Live
+</div> -->
+<div class="sidebar-body">
+  <nav class="mt-8">
+    <ul>
+      <li class="mt-2 px-6"> 
+        <%= active_link('Introduction', '/') %>
+      </li>
+      <li class="mt-2 px-6"> 
+        <%= active_link('Registration and Sandbox', '/pages/registration-and-sandbox/') %>
+      </li>
+      <li class="mt-2">
+        <div class="collapse mb-2">
+          <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
+            
+            Going Live
+          </div>
+          <div class="collapse-body hidden">
+            <ul class="px-6">
+              <li class="mt-2">
+                <%= active_link('Overview', '/going-live/checklist/') %>
+              </li>
+              <li class="mt-2">
+                <%= active_link('Distributors w/ BSE', '/going-live/distributors-with-bse/') %>
+              </li>
+              <li class="mt-2">
+                <%= active_link('Distributors w/ RTA', '/going-live/distributors-with-rtas/') %>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="collapse-body hidden">
-          <ul class="px-6">
-            <li class="mt-2">
-              <%= active_link('Overview', '/going-live/checklist/') %>
-            </li>
-            <li class="mt-2">
-              <%= active_link('Distributors w/ BSE', '/going-live/distributors-with-bse/') %>
-            </li>
-            <li class="mt-2">
-              <%= active_link('Distributors w/ RTA', '/going-live/distributors-with-rtas/') %>
-            </li>
-          </ul>
+      </li>
+      <li class="mt-2">
+        <div class="collapse">
+          <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
+            
+            Identity
+          </div>
+          <div class="collapse-body hidden">
+            <ul class="px-6">
+              <li class="mt-2">
+                <%= active_link('Overview', '/identity/overview/') %>
+              </li>
+              <li class="mt-2">
+                <%= active_link('Check the kyc status', '/identity/kyc-check/') %>
+              </li>
+              <li class="mt-2">
+                <%= active_link('Perform digital kyc', '/identity/kyc-request/') %>
+                <ul class="px-6">
+                  <li class="mt-2">
+                    <%= active_link('Required information', '/identity/required-information/') %>
+                  </li>
+                </ul>
+              </li>
+              <li class="mt-2">
+                <%= active_link('FAQs', '/identity/FAQs/') %>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </li>
-    <li class="mt-2">
-      <div class="collapse">
-        <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
-          
-          Identity
+      </li>
+      <li class="mt-2">
+        <div class="collapse">
+          <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
+            
+            MF Orders
+          </div>
+          <div class="collapse-body hidden">
+            <ul class="px-6">
+              <li class="mt-2">
+                <%= active_link('Overview', '/mf-transactions/overview/') %>
+              </li>
+              <li class="mt-2">
+                <%= active_link('Open an investment account', '/mf-transactions/investment-account/') %>
+              </li>
+              <li class="mt-2">
+                <%= active_link('Create a onetime purchase', '/mf-transactions/onetime-purchases/') %>
+              </li>
+              <li class="mt-2">
+                <%= active_link('Create a recurring purchase', '/mf-transactions/recurring-purchases/') %>
+              </li>
+              <li class="mt-2">
+                <%= active_link('Sell a mutual fund', '/mf-transactions/onetime-redemptions/') %>
+              </li>
+              <li class="mt-2">
+                <%= active_link('Schedule a recurring withdrawal', '/mf-transactions/recurring-redemptions/') %>
+              </li>
+              <li class="mt-2">
+                <%= active_link('Switch from one scheme to another', '/mf-transactions/onetime-switches/') %>
+              </li>
+              <li class="mt-2">
+                <%= active_link('Schedule a recurring switch', '/mf-transactions/recurring-switches/') %>
+              </li>
+              <li class="mt-2">
+                <strong>Appendix</strong>
+                <ul class="px-6">
+                  <li class="mt-2">
+                    <%= active_link('Order States', '/mf-transactions/order-states/') %>
+                  </li>
+                </ul>
+              </li>
+              <li class="mt-2">
+                <strong>Archives</strong>
+                <ul class="px-6">
+                  <li class="mt-2">
+                    <%= active_link('One time purchases w/ Old APIs', '/mf-transactions/onetime-purchases-old-apis/') %>
+                  </li>
+                  <li class="mt-2">
+                    <%= active_link('Sell a mutual fund w/ Old APIs', '/mf-transactions/onetime-redemptions-old-apis/') %>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="collapse-body hidden">
-          <ul class="px-6">
-            <li class="mt-2">
-              <%= active_link('Overview', '/identity/overview/') %>
-            </li>
-            <li class="mt-2">
-              <%= active_link('Check the kyc status', '/identity/kyc-check/') %>
-            </li>
-            <li class="mt-2">
-              <%= active_link('Perform digital kyc', '/identity/kyc-request/') %>
-              <ul class="px-6">
-                <li class="mt-2">
-                  <%= active_link('Required information', '/identity/required-information/') %>
-                </li>
-              </ul>
-            </li>
-            <li class="mt-2">
-              <%= active_link('FAQs', '/identity/FAQs/') %>
-            </li>
-          </ul>
+      </li>
+      <li class="mt-2">
+        <div class="collapse mb-2">
+          <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
+            
+            Payments
+          </div>
+          <div class="collapse-body hidden">
+            <ul class="px-6">
+              <li class="mt-2">
+                <%= active_link('Overview', '/payments/overview/') %>
+              </li>
+              <li class="mt-2">
+                <%= active_link('Setup recurring payments', '/payments/nach/') %>
+              </li>
+              <li class="mt-2">
+                <strong>Appendix</strong>
+                <ul class="px-6">
+                  <li class="mt-2">
+                    <%= active_link('Payment States', '/payments/payment-states/') %>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </li>
-    <li class="mt-2">
-      <div class="collapse">
-        <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
-          
-          MF Orders
+      </li>
+      <li class="mt-2">
+        <div class="collapse mb-2">
+          <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
+            
+            Investor Reporting
+          </div>
+          <div class="collapse-body hidden">
+            <ul class="px-6">
+              <li class="mt-2">
+                <%= active_link('Overview', '/pages/workflows/investor-reporting/') %>
+              </li>
+              <li class="mt-2">
+                <%= active_link('Usage', '/pages/workflows/investor-reporting-usage/') %>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="collapse-body hidden">
-          <ul class="px-6">
-            <li class="mt-2">
-              <%= active_link('Overview', '/mf-transactions/overview/') %>
-            </li>
-            <li class="mt-2">
-              <%= active_link('Open an investment account', '/mf-transactions/investment-account/') %>
-            </li>
-            <li class="mt-2">
-              <%= active_link('Create a onetime purchase', '/mf-transactions/onetime-purchases/') %>
-            </li>
-            <li class="mt-2">
-              <%= active_link('Create a recurring purchase', '/mf-transactions/recurring-purchases/') %>
-            </li>
-            <li class="mt-2">
-              <%= active_link('Sell a mutual fund', '/mf-transactions/onetime-redemptions/') %>
-            </li>
-            <li class="mt-2">
-              <%= active_link('Schedule a recurring withdrawal', '/mf-transactions/recurring-redemptions/') %>
-            </li>
-            <li class="mt-2">
-              <%= active_link('Switch from one scheme to another', '/mf-transactions/onetime-switches/') %>
-            </li>
-            <li class="mt-2">
-              <%= active_link('Schedule a recurring switch', '/mf-transactions/recurring-switches/') %>
-            </li>
-            <li class="mt-2">
-              <strong>Appendix</strong>
-              <ul class="px-6">
-                <li class="mt-2">
-                  <%= active_link('Order States', '/mf-transactions/order-states/') %>
-                </li>
-              </ul>
-            </li>
-            <li class="mt-2">
-              <strong>Archives</strong>
-              <ul class="px-6">
-                <li class="mt-2">
-                  <%= active_link('One time purchases w/ Old APIs', '/mf-transactions/onetime-purchases-old-apis/') %>
-                </li>
-                <li class="mt-2">
-                  <%= active_link('Sell a mutual fund w/ Old APIs', '/mf-transactions/onetime-redemptions-old-apis/') %>
-                </li>
-              </ul>
-            </li>
-          </ul>
+      </li>
+      <li class="mt-2">
+        <div class="collapse mb-2">
+          <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
+            
+            General topics
+          </div>
+          <div class="collapse-body hidden">
+            <ul class="px-6">
+              <li class="mt-2">
+                <%= active_link('Automated communications with investors', '/pages/workflows/automated-communication/') %>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </li>
-    <li class="mt-2">
-      <div class="collapse mb-2">
-        <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
-          
-          Payments
-        </div>
-        <div class="collapse-body hidden">
-          <ul class="px-6">
-            <li class="mt-2">
-              <%= active_link('Overview', '/payments/overview/') %>
-            </li>
-            <li class="mt-2">
-              <%= active_link('Setup recurring payments', '/payments/nach/') %>
-            </li>
-            <li class="mt-2">
-              <strong>Appendix</strong>
-              <ul class="px-6">
-                <li class="mt-2">
-                  <%= active_link('Payment States', '/payments/payment-states/') %>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </li>
-    <li class="mt-2">
-      <div class="collapse mb-2">
-        <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
-          
-          Investor Reporting
-        </div>
-        <div class="collapse-body hidden">
-          <ul class="px-6">
-            <li class="mt-2">
-              <%= active_link('Overview', '/pages/workflows/investor-reporting/') %>
-            </li>
-            <li class="mt-2">
-              <%= active_link('Usage', '/pages/workflows/investor-reporting-usage/') %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </li>
-    <li class="mt-2">
-      <div class="collapse mb-2">
-        <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
-          
-          General topics
-        </div>
-        <div class="collapse-body hidden">
-          <ul class="px-6">
-            <li class="mt-2">
-              <%= active_link('Automated communications with investors', '/pages/workflows/automated-communication/') %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </li>
-  </ul>
+      </li>
+    </ul>
 </nav>
+</div>
+<div class="sidebar-footer hidden sm:block">
+  <div class="sidebar-toggle" aria-label="Menu"></div>
+</div>
