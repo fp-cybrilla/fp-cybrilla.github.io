@@ -41,10 +41,10 @@ The `entity_details` in the response object will contain the investor's demograp
 # Displaying only a part of the object for brevity
 
 "entity_details": {
-        "name": "Suresh Narang",
+        "name": "Tony Soprano",
         "gender": "male",
         "date_of_birth": "1955-10-25",
-        "father_name": "Murli Dhar Narang",
+        "father_name": "James Soprano",
         "marital_status": "married",
         "nationality": "indian",
         "residential_status": "resident_individual",
@@ -58,8 +58,8 @@ The `entity_details` in the response object will contain the investor's demograp
 		    "country": "India"
         },
 		"permanent_address": null,
-        "email": "suresh.nrg@gmail.com",
-        "mobile": "9021365784"
+        "email": "tony.soprano@gmail.com",
+        "mobile": "9123498765"
 }
 ```
 
