@@ -60,15 +60,13 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 					title=""
 					class="api-link
 						inline-flex
-						items-center
-						bg-primary-N05
-						hover:bg-primary-N10 hover:text-primary-B100
+						items-center hover:text-primary-B110
 						px-2
 						rounded-5
 					"
 					target="_blank"
 				>
-					create payment api
+					Create payment API
 				</a>
 				with the following json. Use the order's <code class="prettyprint">old_id</code> from the
 				previous step. Use the <code class="prettyprint">id</code> of the bank account belonging to
@@ -106,15 +104,13 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 					title=""
 					class="api-link
 						inline-flex
-						items-center
-						bg-primary-N05
-						hover:bg-primary-N10 hover:text-primary-B100
+						items-center hover:text-primary-B110
 						px-2
 						rounded-5
 					"
 					target="_blank"
 				>
-					update mf purchase api
+					Update mf purchase API
 					
 				</a>
 				with the following json:
@@ -134,14 +130,13 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 					class="api-link
 						inline-flex
 						items-center
-						bg-primary-N05
-						hover:bg-primary-N10 hover:text-primary-B100
+						hover:text-primary-B110
 						px-2
 						rounded-5
 					"
 					target="_blank"
 				>
-					create mf settlement detail api
+					Create mf settlement detail API
 				</a>
 				to give us the settlement details so we can reconcile the order with the money received. You
 				need to send the following details about the settlement:
