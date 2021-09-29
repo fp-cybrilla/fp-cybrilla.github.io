@@ -4,11 +4,11 @@ title: Sell a mutual fund w/ Old APIs
 ## Sell a mutual fund w/ Old APIs
 #### Facilitate redemptions for your investor
 
-Mutual fund units are associated with folios. You can treat folios as sub-accounts under the investment account. You can fetch the list of folios for an investment a/c from the [FPDocs, holdings report api](https://fintechprimitives.com/api/#get-holding-report). `redeemable_units` shows the number of units that are available for selling. You can use the FP APIs to sell the units partially or in total.
+Mutual fund units are associated with folios. You can treat folios as sub-accounts under the investment account. You can fetch the list of folios for an investment a/c from the [FPDocs, holdings report API](https://fintechprimitives.com/api/#get-holding-report). `redeemable_units` shows the number of units that are available for selling. You can use the FP APIs to sell the units partially or in total.
 
 #### 1. Create a sell order
 
-Call the [FPDocs, Create sell order api](https://fintechprimitives.com/api/#post-create-sell-order) with the following json. Pass the `folio_number` and `isin` according to the account from which you wish to sell the units from.
+Call the [FPDocs, Create sell order API](https://fintechprimitives.com/api/#post-create-sell-order) with the following json. Pass the `folio_number` and `isin` according to the account from which you wish to sell the units from.
 
 ```json
 {
@@ -27,12 +27,12 @@ An order gets created with `PENDING` status. Keep a note of the order id for tra
 
 #### 2. Check the order status
 
-Call the [FPDocs, get order api](https://fintechprimitives.com/api/#get-fetch-single-order) to check the `status` of the order.  
+Call the [FPDocs, get order API](https://fintechprimitives.com/api/#get-fetch-single-order) to check the `status` of the order.  
 When the order is successfully submitted to the AMC, the order status becomes `SUBMITTED`. [Learn more about the order states](/pages/workflows/order-status)
 
 ### Testing
 
-In sandbox environment, you can use the [FPDocs, simulation api](https://fintechprimitives.com/api/#post-order-simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
+In sandbox environment, you can use the [FPDocs, simulation API](https://fintechprimitives.com/api/#post-order-simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
 
 ```json
 {

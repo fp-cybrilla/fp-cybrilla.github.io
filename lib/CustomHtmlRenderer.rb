@@ -50,7 +50,7 @@ class Redcarpet::Render::CustomHTML < Redcarpet::Render::HTML
   def link(link, title, content)
     if content.split(",")[0] == "FPDocs"
       content[0..6] = ''
-      "<a href='#{link}' title='#{title}' class='api-link inline-flex items-center bg-primary-N05 hover:bg-primary-N10 hover:text-primary-B100 px-2 rounded-5'
+      "<a href='#{link}' title='#{title}' class='api-link inline-flex items-center hover:text-primary-B110'
         target='_blank'
       >
         #{content}

@@ -1,5 +1,5 @@
 
-If you want to debit the money from your investor's bank account using NACH to fund this purchase, call the [create order to pay via nach api](https://fintechprimitives.com/api/#post-create-lumpsum-order-nach) with the following json. Use the id of the mandate associated with the investor's bank account from which you want to debit the money from.
+If you want to debit the money from your investor's bank account using NACH to fund this purchase, call the [create order to pay via nach API](https://fintechprimitives.com/api/#post-create-lumpsum-order-nach) with the following json. Use the id of the mandate associated with the investor's bank account from which you want to debit the money from.
 [Learn how to create mandates and take authorization from your investor to auto debit money](aa).
 
 ```json
