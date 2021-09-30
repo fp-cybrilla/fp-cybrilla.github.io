@@ -270,7 +270,7 @@
         align-items: stretch;
       }
 
-      @media(min-width: 768px) {
+      @media(min-width: 640px) {
         body.close #main {
           left: 80px;
           width: calc(100% - 80px);
@@ -306,7 +306,7 @@
         }
       }
 
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 639px) {
         .sidebar {
           left: -300px;
           transition: left .25s ease-out;
@@ -336,8 +336,8 @@
         <%= render '/partials/header.*' %>
         <div class="content p-4 lg:p-8">
           <%= yield %>  
+          <%= render '/partials/footer.*' %>
         </div>
-        <div class="overlay lg:hidden"></div>
       </div>
     </div>
 
@@ -456,11 +456,6 @@
       document.querySelector("body").classList.toggle("close");
     });
 
-    document.querySelector(".overlay").addEventListener("click", event => {
-      event.preventDefault();
-      document.querySelector("body").classList.toggle("close");
-    });
-
     // hamburger click
     document.querySelector(".hamburger").addEventListener("click", (event) => {
       event.preventDefault();
@@ -483,6 +478,10 @@
     function closeSearch() {
       document.querySelector(".mobile-search").classList.remove("show");
     }
+  </script>
+
+  <script>
+    document.querySelector(".current-year").innerHTML = new Date().getFullYear().toString().substr(2,2);
   </script>
   </body>
 </html>
