@@ -14,12 +14,12 @@ Once you have the investor and investment account created, follow the below step
 3. Check the order status
 
 #### 1. Create a purchase order
-Some funds are not allowed for purchases and some might temporarily stop accepting purchase orders. Make sure you check the `purchase_allowed` field is `true` for the fund scheme(s) you are placing the order for, using the [FPDocs, Get fund scheme API](https://fintechprimitives.com/api/#get-single-fund-schemes-detail).
+Some funds are not allowed for purchases and some might temporarily stop accepting purchase orders. Make sure you check the `purchase_allowed` field is `true` for the fund scheme(s) you are placing the order for, using the [FPDocs, Get fund scheme](https://fintechprimitives.com/api/#get-single-fund-schemes-detail).
 
 The order creation varies slightly depending on how will the payment be made for that.  
 
 *For payment modes: Internet Banking, UPI*  
-Call the [FPDocs, Create order API](https://fintechprimitives.com/api/#post-create-lumpsum-order-netbanking) with the following json. Use the id of the bank account from which the investor will make the payment for this purchase. You would have got the `bank_account_id` from the create investor api call earlier.
+Call the [FPDocs, Create order](https://fintechprimitives.com/api/#post-create-lumpsum-order-netbanking) with the following json. Use the id of the bank account from which the investor will make the payment for this purchase. You would have got the `bank_account_id` from the create investor api call earlier.
 
 ```json
 {
@@ -34,7 +34,7 @@ Call the [FPDocs, Create order API](https://fintechprimitives.com/api/#post-crea
 ```
 
 *For payment modes: NACH auto debit*  
-Call the [FPDocs, Create order API](https://fintechprimitives.com/api/#post-create-lumpsum-order-nach) with the following json. Use the id of the mandate authorised by the investor using which the payment for this purchase will be pulled. [Learn how to setup nach mandates](/payments/nach).
+Call the [FPDocs, Create order](https://fintechprimitives.com/api/#post-create-lumpsum-order-nach) with the following json. Use the id of the mandate authorised by the investor using which the payment for this purchase will be pulled. [Learn how to setup nach mandates](/payments/nach).
 
 ```json
 {
@@ -68,7 +68,7 @@ A purchase order gets created for which you need to make a payment. Keep a note 
 
 #### 2. Make payment
 
-To make a payment using internet banking or upi, make a request to [FPDocs, create payment API](https://fintechprimitives.com/api/#post-net-banking) with the following json. Use the order id from the previous api response.
+To make a payment using internet banking or upi, make a request to [FPDocs, create payment](https://fintechprimitives.com/api/#post-net-banking) with the following json. Use the order id from the previous api response.
 
 
 ```json
@@ -82,7 +82,7 @@ Look for `token_url` in the response and redirect your investor to it to complet
 
 #### 3. Check the order status
 
-Call the [FPDocs, get order API](https://fintechprimitives.com/api/#get-fetch-single-order) to check the `status` of the order.  
+Call the [FPDocs, get order](https://fintechprimitives.com/api/#get-fetch-single-order) to check the `status` of the order.  
 When the payment is successful, the order status becomes `PAYMENT_CONFIRMED`. [Learn more about the order states](/pages/workflows/order-status)
 
 In live environment, orders in "PAYMENT_CONFIRMED" state will be submitted to AMCs eventually and will be marked as "SUBMITTED". In staging environment, you can use the simulation APIs to mark a "PAYMENT_CONFIRMED" order as "SUBMITTED". Distributors will get mailback reports from RTAs for the orders placed. When these transaction feeds(aka reverse feeds) are uploaded, orders will get marked as SUCCESSFUL or FAILED depending upon the transaction status present in transaction feed files. For more details please refer [Transactions doc](/pages/workflows/investor-reporting-usage). However, in staging environments you can mimic this behavior using simulation apis as shown below.
@@ -90,7 +90,7 @@ In live environment, orders in "PAYMENT_CONFIRMED" state will be submitted to AM
 
 ### Testing
 
-You can use the [FPDocs, simulation API](https://fintechprimitives.com/api/#post-order-simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
+You can use the [FPDocs, simulation](https://fintechprimitives.com/api/#post-order-simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
 
 ```json
 {

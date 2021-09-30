@@ -8,3 +8,5 @@ group :nanoc do
   gem 'guard-nanoc'
   gem 'adsf'
 end
+
+gem "webrick", "~> 1.7"

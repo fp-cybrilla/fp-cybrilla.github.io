@@ -14,11 +14,11 @@ Once you have the investor and investment account created, follow the below step
 3. Check the order state
 
 #### 1. Create a purchase order
-Some funds are not allowed for purchases and some might temporarily stop accepting purchase orders. Make sure you check the `purchase_allowed` field is `true` for the fund scheme(s) you are placing the order for, using the [FPDocs, Get fund scheme API](https://fintechprimitives.com/api/#get-single-fund-schemes-detail).
+Some funds are not allowed for purchases and some might temporarily stop accepting purchase orders. Make sure you check the `purchase_allowed` field is `true` for the fund scheme(s) you are placing the order for, using the [FPDocs, Get fund scheme](https://fintechprimitives.com/api/#get-single-fund-schemes-detail).
 
 FP uses `MF Purchase` object to represent all the mutual fund purchase orders. You need to create a `MF Purchase` as a first step for placing a one time purchase order.
 
-Call the [FPDocs, Create mf purchase API](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) with the following json. Use the investment account of the investor for whom you are placing the order for.
+Call the [FPDocs, Create mf purchase](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) with the following json. Use the investment account of the investor for whom you are placing the order for.
 
 ```json
 {
@@ -197,7 +197,7 @@ After the money is settled into the scheme's bank account, call the [FPDocs, cre
 
 #### 3. Track the order
 
-Call the [FPDocs, fetch mf purchase API](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to check the `state` of the order.  
+Call the [FPDocs, fetch mf purchase](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to check the `state` of the order.  
 When the payment is successful, the order state becomes `confirmed`. [Learn more about the order states](/mf-transactions/order-states)
 
 
@@ -211,7 +211,7 @@ For a successful order, review the following key attributes of the `mf_purchase`
 
 ### Testing
 
-In sandbox, use the [FPDocs, simulation API](https://fintechprimitives.com/api/#post-order-simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
+In sandbox, use the [FPDocs, simulation](https://fintechprimitives.com/api/#post-order-simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
 
 ```json
 {

@@ -28,7 +28,7 @@ The following information about the investor is needed to be able to set him up 
 17. Other info (politically exposed person or related to someone who is politically exposed)
 18. Guardian information (incase the investor is a minor)
 
-Call the [FPDocs, create investor API](https://fintechprimitives.com/api/#create-an-investor) with all the required information to create an investor object. Make a note of the investor id, which you'll need in the later steps.
+Call the [FPDocs, create investor](https://fintechprimitives.com/api/#create-an-investor) with all the required information to create an investor object. Make a note of the investor id, which you'll need in the later steps.
 
 ### Note on data verification
 #### Email ID and mobile number  

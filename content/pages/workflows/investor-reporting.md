@@ -28,7 +28,7 @@ At present, the reporting engine supports the following types of transactions.
 \* Capital gains will not be calculated for transactions resulting from corporate actions.
 
 #### What are the data points that the reporting APIs provide?
-The table below explains the different data points which can be generated from the transaction list obtained via [FPDocs, transactions API.](https://fintechprimitives.com/api/#transactions) To view the detailed explanation on how to calculate the values of these data points from transactions, please see the [Usage](/pages/workflows/investor-reporting-usage) section.
+The table below explains the different data points which can be generated from the transaction list obtained via [FPDocs, transactions](https://fintechprimitives.com/api/#transactions). To view the detailed explanation on how to calculate the values of these data points from transactions, please see the [Usage](/pages/workflows/investor-reporting-usage) section.
 
 | Data points | Description |
 | ---------- | ------------ |

@@ -6,7 +6,7 @@ title: Check the kyc status
 
 Use this api to check if your investor's identity detail exists in any of the KRAs (KYC Registration Agencies) database. If it exists, you'll get certain demographic information of the investor and the status of the KYC in the response object.
 ### Check kyc status
-Call the [FPDocs, KYC Check API](https://fintechprimitives.com/api/#create-a-kyc-check) with the investor's Income Tax Permanent Account Number (PAN)
+Call the [FPDocs, KYC Check](https://fintechprimitives.com/api/#create-a-kyc-check) with the investor's Income Tax Permanent Account Number (PAN)
 ```json
 {
 	"pan": "arrpp1115n"
