@@ -159,7 +159,7 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 
 <!-- 
 **Option 1:** *You are using FP payment APIs*  
-To make a payment using internet banking or upi, make a request to [FPDocs, create payment API](https://fintechprimitives.com/api/#create-a-payment) with the following json. Use the order's `old_id` from the previous step. Use the `id` of the bank account belonging to the investor, with which you want him to make the payment.
+To make a payment using internet banking or upi, make a request to [FPDocs, create payment](https://fintechprimitives.com/api/#create-a-payment) with the following json. Use the order's `old_id` from the previous step. Use the `id` of the bank account belonging to the investor, with which you want him to make the payment.
 
 ```json
 {
@@ -172,7 +172,7 @@ Look for `token_url` in the response and redirect your investor to it to complet
 [Learn more about payment states](/pages/workflows/payment-status).
 
 **Option 2:** *You are using FPDocs payment providers directly*  
-After you have collected the money from your investor, confirm the purchase order by calling the [FPDocs, update mf purchase API](https://fintechprimitives.com/docs/api/#update-a-mf-purchase) with the following json:
+After you have collected the money from your investor, confirm the purchase order by calling the [FPDocs, update mf purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase) with the following json:
 
 ```json
 {
@@ -181,7 +181,7 @@ After you have collected the money from your investor, confirm the purchase orde
 }
 ```
 
-After the money is settled into the scheme's bank account, call the [FPDocs, create mf settlement detail API](https://fintechprimitives.com/docs/api/#create-a-mf-settlement-detail) to give us the settlement details so we can reconcile the order with the money received. You need to send the following details about the settlement:
+After the money is settled into the scheme's bank account, call the [FPDocs, create mf settlement detail](https://fintechprimitives.com/docs/api/#create-a-mf-settlement-detail) to give us the settlement details so we can reconcile the order with the money received. You need to send the following details about the settlement:
 
 ```json
 {
