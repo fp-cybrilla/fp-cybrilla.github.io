@@ -9,7 +9,7 @@ FP uses `KYC Request` object to represent the kyc application of an investor. Yo
 
 ### Key points
 
-Our API complies with the [guidelines by SEBI on digital kyc](https://www.sebi.gov.in/legal/circulars/apr-2020/clarification-on-know-your-client-kyc-process-and-use-of-technology-for-kyc_46565.html). Make a note of the key highlights below that will impact the design of your investor onboarding process.
+Our API complies with the [newwindow,guidelines by SEBI on digital kyc](https://www.sebi.gov.in/legal/circulars/apr-2020/clarification-on-know-your-client-kyc-process-and-use-of-technology-for-kyc_46565.html). Make a note of the key highlights below that will impact the design of your investor onboarding process.
 
 1. OTP  
 When you generate the KYC Request object, a 6 digit number is generated and be part of the object structure. You should display that number to your investor and let him speak that number out loud in the video. This is used to verify that the video is not a pre-recorded one.

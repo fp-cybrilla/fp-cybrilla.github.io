@@ -7,8 +7,8 @@ Reporting API platform is a unified API platform which provides a single interfa
 #### What kinds of reports can I get?
 | Report | Description |
 | ---------- | ------------ |
-| [Transactions](https://fintechprimitives.com/api/#transactions) | A list of transactions per folio per scheme(isin). Most of the data points including holdings related data points can be generated from a list of the trasactions. Some of them are the part of transaction response while some other data points can be generated easily from the transaction data.  |
-| [Holdings report](https://fintechprimitives.com/api/#get-holding-report) | Get details about current holdings of a folio|
+| [newwindow,Transactions](https://fintechprimitives.com/api/#transactions) | A list of transactions per folio per scheme(isin). Most of the data points including holdings related data points can be generated from a list of the trasactions. Some of them are the part of transaction response while some other data points can be generated easily from the transaction data.  |
+| [newwindow,Holdings report](https://fintechprimitives.com/api/#get-holding-report) | Get details about current holdings of a folio|
 
 #### What kinds of transactions are supported?
 At present, the reporting engine supports the following types of transactions.
