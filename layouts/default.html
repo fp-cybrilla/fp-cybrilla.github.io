@@ -121,7 +121,7 @@
       h2 {
         margin-top: 4rem;
         margin-bottom: 0.5rem;
-        color: #0F2C5E;
+        color: #061738;
         font-weight: 700;
       }
 
@@ -179,6 +179,10 @@
       h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
         color: inherit !important;
         text-decoration: none !important;
+      }
+
+      h2:hover a {
+        color: #3E74FF !important;
       }
 
       .copy-link {
@@ -434,9 +438,10 @@
     var scroll = new SmoothScroll('.content a[href*="#"]', {
       speed: 300,
       speedAsDuration: true,
+      offset: 22
     });
 
-    document.querySelectorAll(".copy-link").forEach((item, index) => {
+    document.querySelectorAll(".copy").forEach((item, index) => {
       let url = '';
       let href = '';
       let uri = '';
@@ -452,16 +457,22 @@
         </g>
         </svg>`;
 
+      item.querySelector("span.copy-link").classList.remove("flex");
+      item.querySelector("span.copy-link").classList.add("hidden");
+
       item.addEventListener("click", (e) => {
         e.preventDefault();
 
-        const parentElement = item.parentElement;
+        const parentElement = item.nextSibling;
         
-        href = parentElement.querySelector("a.anchor").getAttribute("href");
+        href = item.querySelector("a.anchor").getAttribute("href");
         url = window.location.href.split('#')[0];
         uri = url += href;
 
         navigator.clipboard.writeText(uri).then(function() {
+          item.querySelector("span.copy-link").classList.remove("hidden");
+          item.querySelector("span.copy-link").classList.add("flex");
+
           item.querySelector("span.copy-icon").innerHTML = `<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><g transform='translate(-718.711 -135.711)'><rect fill='#f0f7ff' width='24' height='24' rx='12' transform='translate(718.711 135.711)'/><g transform='translate(722.018 139.018)'><path fill='#3e74ff' d='M4.154,9.45a1,1,0,0,1-.742-.32L.3,5.822a1.143,1.143,0,0,1,0-1.546.986.986,0,0,1,1.454,0l2.4,2.551L10.273.32a.986.986,0,0,1,1.454,0,1.143,1.143,0,0,1,0,1.546L4.9,9.13a1,1,0,0,1-.727.32Z' transform='translate(2.679 3.969)'/><rect fill='none' width='16' height='16' transform='translate(0.693 0.693)'/></g></g></svg>`;
           
           setTimeout(function(){
@@ -475,7 +486,9 @@
                 </g>
               </g>
               </svg>`;
-            }, 1500);
+              item.querySelector("span.copy-link").classList.remove("flex");
+              item.querySelector("span.copy-link").classList.add("hidden");
+            }, 2000);
         }, function(error) {
           console.log(error);
         });
