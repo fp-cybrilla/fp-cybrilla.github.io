@@ -2,7 +2,8 @@
 title: FAQs
 ---
 ## FAQs
-If you have any other questions, feel free to [Contact us](https://fintechprimitives.com/sales.html)
+If you have any other questions, feel free to [newwindow,Contact us](https://fintechprimitives.com/sales.html)
+<hr/>
 
 #### Are KYC Applications without E-Sign accepted?
 No.

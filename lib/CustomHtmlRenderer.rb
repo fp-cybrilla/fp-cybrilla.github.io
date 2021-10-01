@@ -55,6 +55,9 @@ class Redcarpet::Render::CustomHTML < Redcarpet::Render::HTML
       >
         #{content}
       </a>"
+    elsif content.split(",")[0] == "newwindow"
+        content[0..9] = ''
+        "<a href='#{link}' title='#{title}' target='_blank'>#{content}</a>"
     else
       "<a href='#{link}' title='#{title}'>#{content}</a>"
     end
