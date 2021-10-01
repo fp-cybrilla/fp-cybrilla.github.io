@@ -81,7 +81,7 @@ class Redcarpet::Render::CustomHTML < Redcarpet::Render::HTML
 
       @anchors << anchor
 
-      "<h#{level} id='#{anchor.value}' class='inline-flex items-center copy'>
+      "<h#{level} id='#{anchor.value}' class='flex items-center copy'>
         <a href='##{anchor.value}' class='anchor'>#{text}</a>
         <span class='copy-link items-center cursor-pointer ml-4'>
           <span class='copy-icon'></span>
