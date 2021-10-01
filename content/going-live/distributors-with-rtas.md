@@ -37,8 +37,8 @@ OR
 - [ ] User code
 - [ ] Online broker code
 - [ ] STP credentials
-  - [ ] STP username
-  - [ ] STP password
+  - STP username
+  - STP password
 - [ ] Answers to CAMS Fundsnet security questions
 
 #### 4. Karvy
@@ -46,11 +46,11 @@ OR
 - [ ] User code
 - [ ] Broker code
 - [ ] STP credentials
-  - [ ] STP username
-  - [ ] STP password
-  - [ ] STP app identifier
-  - [ ] STP arn number
-  - [ ] STP branch code
+  - STP username
+  - STP password
+  - STP app identifier
+  - STP arn number
+  - STP branch code
 
 #### 5. CVL KRA A/c details
 - [ ] CVL Username
