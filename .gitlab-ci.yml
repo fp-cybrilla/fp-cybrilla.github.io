@@ -1,6 +1,11 @@
 image: ruby:2.7
 
-deploy:
+qa_deploy:
+  when: manual
+  variables:
+    AWS_DEFAULT_REGION: $QA_AWS_DEFAULT_REGION
+    AWS_SECRET_ACCESS_KEY: $QA_AWS_SECRET_ACCESS_KEY
+    AWS_ACCESS_KEY_ID: $QA_AWS_ACCESS_KEY_ID
   script:
     - bundle install -j4
     - bundle exec nanoc
@@ -10,6 +15,27 @@ deploy:
     - unzip awscliv2.zip
     - ./aws/install
     - aws s3 cp output s3://qa-product-docs --recursive
+  only:
+    - moving-to-nanoc
+  tags:
+    - product-docs
+
+prod_deploy:
+  when: manual
+  variables:
+    AWS_DEFAULT_REGION: $PROD_AWS_DEFAULT_REGION
+    AWS_SECRET_ACCESS_KEY: $PROD_AWS_SECRET_ACCESS_KEY
+    AWS_ACCESS_KEY_ID: $PROD_AWS_ACCESS_KEY_ID
+  script:
+    - bundle install -j4
+    - bundle exec nanoc
+    - bundle exec nanoc check --deploy
+    - apt install unzip
+    - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    - unzip awscliv2.zip
+    - ./aws/install
+    - echo "$AWS_DEFAULT_REGION"
+    - aws s3 cp output s3://prod-product-docs --recursive
   only:
     - moving-to-nanoc
   tags:
