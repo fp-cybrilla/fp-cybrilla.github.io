@@ -61,7 +61,6 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 					class="api-link
 						inline-flex
 						items-center hover:text-primary-B110
-						px-2
 						rounded-5
 					"
 					target="_blank"
@@ -105,7 +104,6 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 					class="api-link
 						inline-flex
 						items-center hover:text-primary-B110
-						px-2
 						rounded-5
 					"
 					target="_blank"
@@ -131,7 +129,6 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 						inline-flex
 						items-center
 						hover:text-primary-B110
-						px-2
 						rounded-5
 					"
 					target="_blank"
