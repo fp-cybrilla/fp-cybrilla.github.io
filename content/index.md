@@ -6,7 +6,7 @@ title: Introduction
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:auto-rows-fr gap-4 my-8">
   <div class="card border border-primary-N20 rounded-5">
-    <a href="https://pdocs.qa.finprim.com/identity/overview" class="block h-full text-current p-4 no-underline hover:no-underline hover:text-current">
+    <a href="/identity/overview" class="block h-full text-current p-4 no-underline hover:no-underline hover:text-current">
       <div class="card-title text-primary-B100 text-size-20 font-semibold font-opensans">
         Identity
       </div>
@@ -17,7 +17,7 @@ title: Introduction
   </div>
 
   <div class="card border border-primary-N20 rounded-5">
-    <a href="https://pdocs.qa.finprim.com/mf-transactions/overview" class="block h-full text-current p-4 no-underline hover:no-underline hover:text-current">
+    <a href="/mf-transactions/overview" class="block h-full text-current p-4 no-underline hover:no-underline hover:text-current">
       <div class="card-title text-primary-B100 text-size-20 font-semibold font-opensans">
         MF Orders
       </div>
@@ -28,7 +28,7 @@ title: Introduction
   </div>
 
   <div class="card border border-primary-N20 rounded-5">
-    <a href="https://pdocs.qa.finprim.com/payments/overview" class="block h-full text-current p-4 no-underline hover:no-underline hover:text-current">
+    <a href="/payments/overview" class="block h-full text-current p-4 no-underline hover:no-underline hover:text-current">
       <div class="card-title text-primary-B100 text-size-20 font-semibold font-opensans">
         Payments
       </div>
@@ -39,7 +39,7 @@ title: Introduction
   </div>
 
   <div class="card border border-primary-N20 rounded-5">
-    <a href="https://pdocs.qa.finprim.com/pages/workflows/investor-reporting" class="block h-full text-current p-4 no-underline hover:no-underline hover:text-current">
+    <a href="/pages/workflows/investor-reporting" class="block h-full text-current p-4 no-underline hover:no-underline hover:text-current">
       <div class="card-title text-primary-B100 text-size-20 font-semibold font-opensans">
         Investor Reporting
       </div>
