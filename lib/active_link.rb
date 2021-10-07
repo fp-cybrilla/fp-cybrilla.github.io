@@ -4,7 +4,7 @@ module ActiveLink
       # Find path
       path = target.is_a?(String) ? target : target.path
 
-      if @item_rep&.path == path
+      if (@item_rep&.path == path || @item_rep&.path == path+"/")
         # Create message
         "<span class=\"text-primary-B100 font-bold\">#{text}</span>"
       else
