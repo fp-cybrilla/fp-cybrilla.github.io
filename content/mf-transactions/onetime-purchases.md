@@ -47,13 +47,12 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 
 <div class="tabs">
 	<div class="tabs-bar">
-		<div class="tabs-item active">Option 1</div>
-		<div class="tabs-item">Option 2</div>
+		<div class="tabs-item active">You are using FP payment APIs</div>
+		<div class="tabs-item">You are using FPDocs payment providers directly</div>
 	</div>
 	<div class="tabs-content">
 		<div class="tab-pane">
-			<h5>You are using FP payment APIs</h5>
-			<p>
+		<p>
 				To make a payment using internet banking or upi, make a request to
 				<a
 					href="https://fintechprimitives.com/api/#create-a-payment"
@@ -94,7 +93,6 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 		</div>
 
 		<div class="tab-pane">
-			<h5>You are using FPDocs payment providers directly</h5>
 			<p>
 				After you have collected the money from your investor, confirm the purchase order by calling
 				the
