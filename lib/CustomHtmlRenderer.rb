@@ -6,7 +6,7 @@ class Redcarpet::Render::CustomHTML < Redcarpet::Render::HTML
   include Rouge::Plugins::Redcarpet
 
   def table(header, body)
-    "<div class='table-responsive'><table class='table-default table-auto'>" \
+    "<div class='table-responsive'><table class='table-default table-striped table-auto'>" \
       "<thead class='sticky top-0'>#{header}</thead>" \
       "<tbody>#{body}</tbody>" \
     "</table></div>"
