@@ -285,8 +285,10 @@
       }
 
       .table-responsive {
-        max-width: 100%;
-        overflow-x: auto;
+        @media(max-width: 767px) {
+          max-width: 100%;
+          overflow-x: auto;
+        }
       }
 
       @media(min-width: 640px) {
