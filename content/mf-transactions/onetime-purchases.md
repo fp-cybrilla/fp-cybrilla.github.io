@@ -47,8 +47,8 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 
 <div class="tabs">
 	<div class="tabs-bar">
-		<div class="tabs-item active">You are using FP payment APIs</div>
-		<div class="tabs-item">You are using FPDocs payment providers directly</div>
+		<div class="tabs-item active"><span class="inline md:hidden">1.</span> You are using FP payment APIs</div>
+		<div class="tabs-item"><span class="inline md:hidden">2.</span> You are using FPDocs payment providers directly</div>
 	</div>
 	<div class="tabs-content">
 		<div class="tab-pane">
