@@ -47,11 +47,18 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 
 <div class="tabs">
 	<div class="tabs-bar">
-		<div class="tabs-item active"><span class="inline md:hidden">1.</span> You are using FP payment APIs</div>
-		<div class="tabs-item"><span class="inline md:hidden">2.</span> You are using FPDocs payment providers directly</div>
+		<div class="tabs-item active">
+			<span class="inline md:hidden">Option 1</span> 
+			<span class="hidden md:block">You are using FP payment APIs</span>
+		</div>
+		<div class="tabs-item">
+			<span class="inline md:hidden">Option 2</span> 
+			<span class="hidden md:block">You are using FPDocs payment providers directly</span>
+		</div>
 	</div>
 	<div class="tabs-content">
 		<div class="tab-pane">
+		<h4 class="block md:hidden mt-0">You are using FP payment APIs</h4> 
 		<p>
 				To make a payment using internet banking or upi, make a request to
 				<a
@@ -93,6 +100,7 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 		</div>
 
 		<div class="tab-pane">
+		<h4 class="block md:hidden mt-0">You are using FPDocs payment providers directly</h4> 
 			<p>
 				After you have collected the money from your investor, confirm the purchase order by calling
 				the
