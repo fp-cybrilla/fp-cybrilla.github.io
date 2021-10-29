@@ -6,7 +6,7 @@ module ActiveLink
 
       if (@item_rep&.path == path || @item_rep&.path == path+"/")
         # Create message
-        "<span class=\"text-primary-B100 font-bold\">#{text}</span>"
+        "<span class=\"text-primary-B100 font-bold\" data-href=#{path}>#{text}</span>"
       else
         link_to(text, target, attributes)
       end

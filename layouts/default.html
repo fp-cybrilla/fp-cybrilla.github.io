@@ -397,53 +397,14 @@
     <script src="/pixel.js"></script>
 
   <script>
-    function reset(item) {
-      // remove currentTab item from local storage
-      window.localStorage.removeItem("currentTab");
-        
-      if(item.querySelector(".collapse-body")?.classList.contains("block")) {
-        item.querySelector(".collapse-body")?.classList.remove("hidden");
-      }
-    }
+    document.querySelectorAll("aside .collapse .collapse-body > ul li span").forEach((item, key)=> {
+      const parent = item?.closest("div.collapse");
 
-    document.querySelector(".logo").addEventListener("click", () => {
-      document.querySelectorAll("aside nav > ul > li").forEach((item, key)=> {
-        reset(item);
-      });
-    });
-
-    document.querySelectorAll(".site-header > nav > ul > li").forEach((item, key) => {
-      item.addEventListener("click", (event) => {
-         reset(item);
-      });
-    });
-
-    document.querySelectorAll("aside nav > ul > li").forEach((item, key)=> {
-      item.addEventListener("click", (event) => {
-        if(!item.querySelector(".collapse-body")) {
-          reset(item);
-        }
-      });
-
-      // item.querySelector(".collapse-title")?.addEventListener("click", (event) => {
-      //   window.localStorage.setItem("currentTab", key);
-      // });
-
-      item.querySelectorAll(".collapse-body").forEach(ele => {
-        ele.querySelectorAll("ul > li > a").forEach(link => {
-          link.addEventListener("click", event => {
-            // event.preventDefault();
-            window.localStorage.setItem("currentTab", key);
-            // console.log(event.currentTarget);
-          });
-        });
-      });
-
-      if(window.localStorage.getItem("currentTab") == key) {
-        if(item.querySelector(".collapse-body")?.classList.contains("hidden")) {
-          item.querySelector(".collapse-title")?.classList.add("collapsed");
-          item.querySelector(".collapse-body")?.classList.remove("hidden");
-          item.querySelector(".collapse-body")?.classList.add("block");
+      if(parent) {
+        if(window.location.pathname === item.getAttribute("data-href")) {
+          parent.querySelector(".collapse-title")?.classList.add("collapsed");
+          parent.querySelector(".collapse-body")?.classList.remove("hidden");
+          parent.querySelector(".collapse-body")?.classList.add("block");
         }
       }
     });
