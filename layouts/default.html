@@ -401,7 +401,7 @@
       const parent = item?.closest("div.collapse");
 
       if(parent) {
-        if(window.location.pathname === item.getAttribute("data-href")) {
+        if( (window.location.pathname === item.getAttribute("data-href")) || (window.location.pathname+"/" === item.getAttribute("data-href")) ) {
           parent.querySelector(".collapse-title")?.classList.add("collapsed");
           parent.querySelector(".collapse-body")?.classList.remove("hidden");
           parent.querySelector(".collapse-body")?.classList.add("block");
