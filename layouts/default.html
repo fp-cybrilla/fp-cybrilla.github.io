@@ -477,16 +477,17 @@
 
 
   <script>
-    //document.onload = maybeDisplaySidebar();
-    document.addEventListener("DOMContentLoaded", maybeDisplaySidebar );
-      function maybeDisplaySidebar() {
+    //document.onload = DisplaySidebar();
+      document.addEventListener("DOMContentLoaded", DisplaySidebar );
+      
+      function DisplaySidebar() {
         hideSidebar = sessionStorage.getItem("hideSidebar");
         if (!hideSidebar) {
           document.querySelector("body").classList.remove("close");
-          console.log("gaya: show");
+          //console.log("show");
         } else {
           document.querySelector("body").classList.add("close");
-          console.log("gaya: hide");
+          //console.log("hide");
         }
       }
       
@@ -498,7 +499,7 @@
         } else {
           sessionStorage.setItem("hideSidebar", true);
         }
-        maybeDisplaySidebar();
+       DisplaySidebar();
       });
       </script>
     <script>
