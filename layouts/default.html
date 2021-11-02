@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheet.css">
-
     <!-- you don't need to keep this, but it's cool for stats! -->
     <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
 
@@ -375,6 +374,10 @@
         }
       }
     </style>
+
+
+
+
   </head>
   <body class="font-roboto text-base-color h-full">
     <div class="md:container m-auto h-full">
@@ -472,13 +475,34 @@
     });
   </script>
 
+
   <script>
-    document.querySelector(".sidebar-toggle").addEventListener("click", (event) => {
-      event.preventDefault();
-
-      document.querySelector("body").classList.toggle("close");
-    });
-
+    //document.onload = DisplaySidebar();
+      document.addEventListener("DOMContentLoaded", DisplaySidebar );
+      
+      function DisplaySidebar() {
+        hideSidebar = sessionStorage.getItem("hideSidebar");
+        if (!hideSidebar) {
+          document.querySelector("body").classList.remove("close");
+          //console.log("show");
+        } else {
+          document.querySelector("body").classList.add("close");
+          //console.log("hide");
+        }
+      }
+      
+      document.querySelector(".sidebar-toggle").addEventListener("click", (event) => {
+        event.preventDefault();
+        hideSidebar = sessionStorage.getItem("hideSidebar");
+        if (hideSidebar) {
+          sessionStorage.removeItem( "hideSidebar")
+        } else {
+          sessionStorage.setItem("hideSidebar", true);
+        }
+       DisplaySidebar();
+      });
+      </script>
+    <script>
     // hamburger click
     document.querySelector(".hamburger").addEventListener("click", (event) => {
       event.preventDefault();
