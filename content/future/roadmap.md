@@ -1,4 +1,4 @@
-## Quarterly Roadmap - Jul, Aug, Sep 2021
+## Quarterly Roadmap - Oct, Nov, Dec 2021
 
 We prioritize the features in our roadmap based on the feedback customers like you give us. The idea to publish this list out in the public is to give you an indication of where we are heading.  
 In the current quarter, these are some of the key things you can expect to be available in FP Platform, among many other improvements.
