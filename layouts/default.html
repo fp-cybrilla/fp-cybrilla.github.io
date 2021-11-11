@@ -373,15 +373,69 @@
           border: 0;
         }
       }
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+.theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+.theme-switch {
+  display: inline-block;
+  height: 40px;
+  position: relative;
+  width: 40px;
+}
+.theme-switch input {
+  display: none;
+}
+.slider {
+  background-color: #ffffff;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+  border: 1px solid #000000;
+  border-radius: 34px;
+}
+
+input:checked + .slider {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.slider svg {
+  color: #222;
+  position: absolute;
+  pointer-events: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.feather-moon {
+  opacity: 1;
+}
+.feather-sun {
+  opacity: 0;
+}
+input:checked + .slider .feather-moon {
+  opacity: 0;
+}
+input:checked + .slider .feather-sun {
+  opacity: 1;
+}
     </style>
 
 
 
 
   </head>
-  <body class="font-roboto text-base-color h-full">
+  <body class="font-roboto text-base-color h-full dark:bg-primary-DN0 dark:text-primary-DN60">
     <div class="md:container m-auto h-full">
-      <aside id="sidebar" class="sidebar">
+      <aside id="sidebar" class="sidebar dark:bg-primary-DN0">
         <%= render '/partials/sidebar.*' %>
       </aside>
       <div id="main" class="flex flex-col h-full">
@@ -396,9 +450,45 @@
         </div>
       </div>
     </div>
-
     <script src="/pixel.js"></script>
+    <script>
 
+      // Get the theme toggle input
+        const themeToggle = document.querySelector(
+          '.theme-switch input[type="checkbox"]'
+        );
+    
+        // Get the current theme from local storage
+        const currentTheme = localStorage.getItem("theme");
+          console.log(currentTheme);
+          
+        // If the current local storage item can be found
+        if(currentTheme) {    
+          // If the current theme is dark, check the theme toggle
+          if (currentTheme === "dark") {
+            themeToggle.checked = true;
+            document.documentElement.classList.add('dark');
+          }
+          else {
+            document.documentElement.classList.remove('dark');
+          }
+        }
+    
+        // Function that will switch the theme based on the if the theme toggle is checked or not
+        function switchTheme(e) {
+          if (e.target.checked) {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem("theme", "dark");
+          } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem("theme", "light");
+          }
+        }
+    
+        // Add an event listener to the theme toggle, which will switch the theme
+        themeToggle.addEventListener("change", switchTheme, false);
+  
+  </script>
   <script>
     document.querySelectorAll("aside .collapse .collapse-body > ul li span").forEach((item, key)=> {
       const parent = item?.closest("div.collapse");
@@ -501,7 +591,14 @@
         }
        DisplaySidebar();
       });
-      </script>
+    </script>
+
+
+    <script>
+
+
+
+    </script>
     <script>
     // hamburger click
     document.querySelector(".hamburger").addEventListener("click", (event) => {
