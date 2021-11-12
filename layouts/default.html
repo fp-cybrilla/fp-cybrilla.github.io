@@ -474,9 +474,7 @@ input:checked + .slider .feather-sun {
         );
     
         // Get the current theme from local storage
-        const currentTheme = localStorage.getItem("theme");
-          console.log(currentTheme);
-          
+        const currentTheme = localStorage.getItem("theme"); 
         // If the current local storage item can be found
         if(currentTheme) {    
           // If the current theme is dark, check the theme toggle
@@ -488,7 +486,7 @@ input:checked + .slider .feather-sun {
             document.documentElement.classList.remove('dark');
           }
         }
-    
+        
         // Function that will switch the theme based on the if the theme toggle is checked or not
         function switchTheme(e) {
           if (e.target.checked) {
