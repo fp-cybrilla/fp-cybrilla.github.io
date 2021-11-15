@@ -1,6 +1,6 @@
 module ActiveLink
 
-  def active_link(text, target, attributes = { class: 'text-primary-N100 dark:text-primary-DN80' })
+  def active_link(text, target, attributes = { class: 'text-primary-N100 dark:text-primary-N05' })
       # Find path
       path = target.is_a?(String) ? target : target.path
 
