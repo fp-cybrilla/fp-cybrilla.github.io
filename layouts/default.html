@@ -25,6 +25,9 @@
         font-family: "Open Sans", sans-serif;
         border-bottom: 1px solid #F0F1F4;
       }
+      .dark .site-header {
+        border-bottom: 1px solid #2E3139;
+      }
 
       .site-header .search {
         width: 150px;
@@ -33,6 +36,9 @@
 
       body.close .site-header .search {
         width: auto;
+      }
+      .dark .hamburger-close svg {
+        fill: #ffffff;
       }
 
       @media(min-width: 768px) {
@@ -75,6 +81,9 @@
         width: 250px;
         z-index: 20;
       }
+      .dark .sidebar {
+        border-right: 1px solid #2E3139;
+      }
 
       .sidebar nav ul li a,
       .sidebar nav ul li span {
@@ -98,6 +107,9 @@
 
       .sidebar-footer {
         border-top: 1px solid #F0F1F4;
+      }
+      .dark .sidebar-footer {
+        border-top: 1px solid #2E3139;
       }
 
       #main {
@@ -145,6 +157,9 @@
       h5 {
         color: #102968;
         font-weight: 700;
+      }
+      .dark h5 {
+        color: #D2D2D4;
       }
 
       h2 + h4 {
@@ -209,6 +224,9 @@
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18.002' height='10' viewBox='0 0 18.002 10'%3E%3Cg id='Layer_x0020_1' transform='translate(-8068.89 -11830.99)'%3E%3Cg id='_2101526395424' transform='translate(8068.89 11830.99)'%3E%3Cpath id='Rectangle_4533' data-name='Rectangle 4533' d='M8070.891,11830.99h14a2,2,0,0,1,2,2v6a2,2,0,0,1-2,2h-14a2,2,0,0,1-2-2v-6a2,2,0,0,1,2-2Z' transform='translate(-8068.891 -11830.99)' fill='%23f0f7ff'/%3E%3Cpath id='Path_20079' data-name='Path 20079' d='M8125.2,11893.69h-1.9l-.272,1.2h-1.1l1.336-5.6h1.983l1.336,5.6h-1.1Zm-1.679-1.009h1.447l-.647-2.863h-.144Zm4.809.1v2.111h-1.057v-5.6h2.193a1.865,1.865,0,0,1,.75.141,1.539,1.539,0,0,1,.533.369,1.523,1.523,0,0,1,.32.521,1.712,1.712,0,0,1,.107.6v.19a1.809,1.809,0,0,1-.107.612,1.609,1.609,0,0,1-.32.536,1.565,1.565,0,0,1-.533.381,1.831,1.831,0,0,1-.75.145Zm0-1.01h1.032a.769.769,0,0,0,.555-.191.646.646,0,0,0,.205-.5v-.1a.652.652,0,0,0-.205-.5.778.778,0,0,0-.555-.191h-1.032Zm3.841-2.48h3.743v1.009h-1.343v3.585h1.343v1.008h-3.743v-1.008h1.344v-3.585h-1.344Z' transform='translate(-8119.916 -11887.085)' fill='%236f809e'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
         background-size: cover;
+      }
+      .dark .api-link::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18.002' height='10' viewBox='0 0 18.002 10'%3E %3Cg id='Layer_x0020_1' transform='translate(-8068.89 -11830.99)'%3E %3Cg id='_2101526395424' transform='translate(8068.89 11830.99)'%3E %3Cpath id='Rectangle_4533' data-name='Rectangle 4533' d='M8070.891,11830.99h14a2,2,0,0,1,2,2v6a2,2,0,0,1-2,2h-14a2,2,0,0,1-2-2v-6a2,2,0,0,1,2-2Z' transform='translate(-8068.891 -11830.99)' fill='%234b4e54'/%3E %3Cpath id='Path_20079' data-name='Path 20079' d='M8125.2,11893.69h-1.9l-.272,1.2h-1.1l1.336-5.6h1.983l1.336,5.6h-1.1Zm-1.679-1.009h1.447l-.647-2.863h-.144Zm4.809.1v2.111h-1.057v-5.6h2.193a1.865,1.865,0,0,1,.75.141,1.539,1.539,0,0,1,.533.369,1.523,1.523,0,0,1,.32.521,1.712,1.712,0,0,1,.107.6v.19a1.809,1.809,0,0,1-.107.612,1.609,1.609,0,0,1-.32.536,1.565,1.565,0,0,1-.533.381,1.831,1.831,0,0,1-.75.145Zm0-1.01h1.032a.769.769,0,0,0,.555-.191.646.646,0,0,0,.205-.5v-.1a.652.652,0,0,0-.205-.5.778.778,0,0,0-.555-.191h-1.032Zm3.841-2.48h3.743v1.009h-1.343v3.585h1.343v1.008h-3.743v-1.008h1.344v-3.585h-1.344Z' transform='translate(-8119.916 -11887.085)' fill='%23d2d2d4'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E ");
       }
 
       pre {
@@ -349,7 +367,9 @@
       .content-bottom {
         border-top: 1px solid #F0F1F4;
       }
-
+      .dark .content-bottom {
+        border-top: 1px solid #2E3139;
+      }
       .footer-links ul li {
         line-height: normal;
       }
@@ -373,15 +393,67 @@
           border: 0;
         }
       }
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+.theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+.theme-switch {
+  display: inline-block;
+  height: 40px;
+  position: relative;
+  width: 40px;
+}
+.theme-switch input {
+  display: none;
+}
+.slider {
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+.slider svg {
+  color: #222;
+  position: absolute;
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.feather-moon {
+  opacity: 1;
+}
+.feather-sun {
+  opacity: 0;
+}
+input:checked + .slider .feather-moon {
+  opacity: 0;
+}
+input:checked + .slider .feather-sun {
+  opacity: 1;
+}
+
+.dark hr {
+  border-top: 1px solid #2E3139;
+}
     </style>
 
 
 
 
   </head>
-  <body class="font-roboto text-base-color h-full">
+  <body class="font-roboto text-base-color h-full dark:bg-primary-DN0 dark:text-primary-DN60">
     <div class="md:container m-auto h-full">
-      <aside id="sidebar" class="sidebar">
+      <aside id="sidebar" class="sidebar dark:bg-primary-DN0">
         <%= render '/partials/sidebar.*' %>
       </aside>
       <div id="main" class="flex flex-col h-full">
@@ -396,9 +468,43 @@
         </div>
       </div>
     </div>
-
     <script src="/pixel.js"></script>
+    <script>
 
+      // Get the theme toggle input
+        const themeToggle = document.querySelector(
+          '.theme-switch input[type="checkbox"]'
+        );
+    
+        // Get the current theme from local storage
+        const currentTheme = localStorage.getItem("theme"); 
+        // If the current local storage item can be found
+        if(currentTheme) {    
+          // If the current theme is dark, check the theme toggle
+          if (currentTheme === "dark") {
+            themeToggle.checked = true;
+            document.documentElement.classList.add('dark');
+          }
+          else {
+            document.documentElement.classList.remove('dark');
+          }
+        }
+        
+        // Function that will switch the theme based on the if the theme toggle is checked or not
+        function switchTheme(e) {
+          if (e.target.checked) {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem("theme", "dark");
+          } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem("theme", "light");
+          }
+        }
+    
+        // Add an event listener to the theme toggle, which will switch the theme
+        themeToggle.addEventListener("change", switchTheme, false);
+  
+  </script>
   <script>
     document.querySelectorAll("aside .collapse .collapse-body > ul li span").forEach((item, key)=> {
       const parent = item?.closest("div.collapse");
@@ -501,7 +607,14 @@
         }
        DisplaySidebar();
       });
-      </script>
+    </script>
+
+
+    <script>
+
+
+
+    </script>
     <script>
     // hamburger click
     document.querySelector(".hamburger").addEventListener("click", (event) => {
