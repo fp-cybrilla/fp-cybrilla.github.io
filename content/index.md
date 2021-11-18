@@ -5,45 +5,45 @@ title: Introduction
 #### Learn about the FP Services and how to facilitate mutual fund investments for your investors.
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:auto-rows-fr gap-4 my-8">
-  <div class="card border border-primary-N20 rounded-5">
+  <div class="card border border-primary-N20 rounded-5 dark:bg-primary-DN05 dark:border-primary-DN10">
     <a href="/identity/overview" class="block h-full text-current p-4 no-underline hover:no-underline hover:text-current">
       <div class="card-title text-primary-B100 text-size-20 font-semibold font-opensans">
         Identity
       </div>
-      <div class="card-body text-size-14">
+      <div class="card-body text-size-14 dark:text-primary-DN110">
         Comply with KYC guidelines with FP Identity APIs
       </div>
       </a>
   </div>
 
-  <div class="card border border-primary-N20 rounded-5">
+  <div class="card border border-primary-N20 rounded-5 dark:bg-primary-DN05 dark:border-primary-DN10">
     <a href="/mf-transactions/overview" class="block h-full text-current p-4 no-underline hover:no-underline hover:text-current">
       <div class="card-title text-primary-B100 text-size-20 font-semibold font-opensans">
         MF Orders
       </div>
-      <div class="card-body text-size-14">
+      <div class="card-body text-size-14 dark:text-primary-DN110">
         Buy and sell mutual funds for your investors with FP Order APIs
       </div>
     </a>
   </div>
 
-  <div class="card border border-primary-N20 rounded-5">
+  <div class="card border border-primary-N20 rounded-5 dark:bg-primary-DN05 dark:border-primary-DN10">
     <a href="/payments/overview" class="block h-full text-current p-4 no-underline hover:no-underline hover:text-current">
       <div class="card-title text-primary-B100 text-size-20 font-semibold font-opensans">
         Payments
       </div>
-      <div class="card-body text-size-14">
+      <div class="card-body text-size-14 dark:text-primary-DN110">
         Collect payments from your investor for the mutual fund orders
       </div>
     </a>
   </div>
 
-  <div class="card border border-primary-N20 rounded-5">
+  <div class="card border border-primary-N20 rounded-5 dark:bg-primary-DN05 dark:border-primary-DN10">
     <a href="/pages/workflows/investor-reporting" class="block h-full text-current p-4 no-underline hover:no-underline hover:text-current">
       <div class="card-title text-primary-B100 text-size-20 font-semibold font-opensans">
         Investor Reporting
       </div>
-      <div class="card-body text-size-14">
+      <div class="card-body text-size-14 dark:text-primary-DN110">
         Unified API platform which provides a single interface to access different reports from different RTAs
       </div>
     </a>
