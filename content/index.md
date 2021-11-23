@@ -54,8 +54,11 @@ You can access all the FP services via APIs ([FPDocs, documentation](https://fin
 
 
 ### Platform as a Service
-
-<br><img src="../../images/fp_diagram_updated.png" height="500px" width="900px" alt="Fintech Primitives PaaS">
+<br>
+<div>
+  <img src="../../images/fp_diagram_updated.png" height="500px" width="900px" alt="Fintech Primitives PaaS" class="block dark:hidden">
+  <img src="../../images/fp_diagram_dark.png" height="500px" width="900px" alt="Fintech Primitives PaaS" class="hidden dark:block">
+</div>
 
 <!--
 ><p style="font-size:18px">Quick start</p>
