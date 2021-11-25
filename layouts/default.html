@@ -310,13 +310,6 @@
         display: flex;
         align-items: stretch;
       }
-
-      .table-responsive {
-        @media(max-width: 767px) {
-          max-width: 100%;
-          overflow-x: auto;
-        }
-      }
       body.close .sidebar-toggle::after {
         transform: rotate(180deg);
       }
@@ -504,7 +497,11 @@
         .close .sidebar-footer {
           justify-content: flex-start;
         }
-      }
+        .table-responsive {
+          max-width: 100%;
+          overflow-x: auto;
+        }
+  }
 
 @media(min-width: 1280px) {
     .footer-copyright, .dark .footer-copyright {
