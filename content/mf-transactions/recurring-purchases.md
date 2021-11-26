@@ -29,7 +29,7 @@ On every installment, FP does the following automatically:
 2. Debits the money from the investor's bank account
 3. Submits the purchase order for processing
 
-> NOTE: Currently the payments for the SIP investments have to be processed using FP Payment APIs (via nach only). Ability to use your own FPDocs payment providers is under implementation and will be available soon*
+> NOTE: Currently the payments for the SIP investments have to be processed using FP Payment APIs (via nach only). Ability to use your own FPDocs payment providers is under implementation and will be available soon.
 
 #### 2. Fetch the installments
 Fetch the installments of the SIP plan using the [FPDocs, fetch installments](https://fintechprimitives.com/api/#fetch-installments-of-a-sip).
