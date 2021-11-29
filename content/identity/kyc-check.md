@@ -16,7 +16,7 @@ Call the [FPDocs, KYC Check](https://fintechprimitives.com/api/#create-a-kyc-che
 }
 ```
 
-> `date_of_birth` is needed only to fetch the KYC data. This is an additional request body parameter along with the PAN number in-order to fetch the data from KRA databases. If you are using this API to check the KYC status alone, then the request body should only contain the PAN number.*
+> `date_of_birth` is needed only to fetch the KYC data. This is an additional request body parameter along with the PAN number in-order to fetch the data from KRA databases. If you are using this API to check the KYC status alone, then the request body should only contain the PAN number.
 
 #### Status  
 If the `status` in the response object is `true`, it means the investor details exists in one of the KRA's databases and his KYC is under process or completed successfully. You can go ahead and onboard the investor and place purchase and redemption orders.
