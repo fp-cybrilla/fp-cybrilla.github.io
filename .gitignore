@@ -4,3 +4,5 @@ output/
 tmp/nanoc
 
 crash.log
+
+.ruby-version
