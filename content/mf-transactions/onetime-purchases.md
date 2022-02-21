@@ -53,7 +53,7 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 		</div>
 		<div class="tabs-item">
 			<span class="inline md:hidden">Option 2</span> 
-			<span class="hidden md:block">You are using FPDocs payment providers directly</span>
+			<span class="hidden md:block">You are using payment providers directly</span>
 		</div>
 	</div>
 	<div class="tabs-content">
@@ -100,7 +100,7 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 		</div>
 
 		<div class="tab-pane">
-		<h4 class="block md:hidden mt-0">You are using FPDocs payment providers directly</h4> 
+		<h4 class="block md:hidden mt-0">You are using payment providers directly</h4> 
 			<p>
 				After you have collected the money from your investor, confirm the purchase order by calling
 				the
