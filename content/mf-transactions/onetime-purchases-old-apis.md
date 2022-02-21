@@ -78,12 +78,12 @@ To make a payment using internet banking or upi, make a request to [FPDocs, crea
 ```
 
 Look for `token_url` in the response and redirect your investor to it to complete his payment. After your investor finishes the payment, FP redirects him to the postback URL configured on your account or to the `payment_postback_url` provided in the request. You'll receive `success` or `failure` in the `status` param. As a good security practice, do not completely rely on the `status` received in the postback call. Instead check the status of the payment from your server before giving a final confirmation to your investor.  
-[Learn more about payment states](/pages/workflows/payment-status).
+
 
 #### 3. Check the order status
 
 Call the [FPDocs, get order](https://fintechprimitives.com/api/#get-fetch-single-order) to check the `status` of the order.  
-When the payment is successful, the order status becomes `PAYMENT_CONFIRMED`. [Learn more about the order states](/pages/workflows/order-status)
+When the payment is successful, the order status becomes `PAYMENT_CONFIRMED`. 
 
 In live environment, orders in "PAYMENT_CONFIRMED" state will be submitted to AMCs eventually and will be marked as "SUBMITTED". In staging environment, you can use the simulation APIs to mark a "PAYMENT_CONFIRMED" order as "SUBMITTED". Distributors will get mailback reports from RTAs for the orders placed. When these transaction feeds(aka reverse feeds) are uploaded, orders will get marked as SUCCESSFUL or FAILED depending upon the transaction status present in transaction feed files. For more details please refer [Transactions doc](/pages/workflows/investor-reporting-usage). However, in staging environments you can mimic this behavior using simulation apis as shown below.
 

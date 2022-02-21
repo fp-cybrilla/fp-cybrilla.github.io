@@ -28,8 +28,7 @@ An order gets created with `PENDING` status. Keep a note of the order id for tra
 #### 2. Check the order status
 
 Call the [FPDocs, get order](https://fintechprimitives.com/api/#get-fetch-single-order) to check the `status` of the order.  
-When the order is successfully submitted to the AMC, the order status becomes `SUBMITTED`. [Learn more about the order states](/pages/workflows/order-status)
-
+When the order is successfully submitted to the AMC, the order status becomes `SUBMITTED`.
 ### Testing
 
 In sandbox environment, you can use the [FPDocs, simulation](https://fintechprimitives.com/api/#post-order-simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
