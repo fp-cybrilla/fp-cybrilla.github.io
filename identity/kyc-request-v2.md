@@ -50,7 +50,7 @@ When all the required information is available, FP automatically sends the KYC R
 ### 3. Check the status of the KYC Request
 Fetch the KYC Request object by calling the GET API and check `status` to see the status of the request.
 
-If the `status` is `successful`, it means the KYC Request verification is successful. At this point, you can go ahead and start accepting orders from the investor.
+If the `status` is `successful`, it means the KYC Request verification by the partner AMC is successful and KYC application has been submitted to KRA successfuly i.e. KYC application is at KRA and it is under process. At this point, you can go ahead and start accepting orders from the investor.
 
 If the `status` is `rejected`, it means the KYC Request verification is unsuccessful. The details about the rejections are available at `verification.details_verbose` in the object json.
 
