@@ -10,6 +10,7 @@
   - [Check the kyc status](/identity/kyc-check)
   - [Perform digital kyc](/identity/kyc-request)
     - [Required information](/identity/required-information)
+  - [Bank account verification workflow example](/identity/Bank_Account_Verification_Workflow_Example)  
   - [FAQs](/identity/FAQs)  
 - **MF Orders**
   - [Overview](/mf-transactions/overview)
