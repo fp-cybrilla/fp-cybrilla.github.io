@@ -1,1 +1,8 @@
 .DS_Store
+output/
+
+tmp/nanoc
+
+crash.log
+
+.ruby-version

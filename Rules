@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+
+compile '/**/*.html' do
+  layout '/default.*'
+
+  if item.identifier =~ '**/index.*'
+    write item.identifier.to_s
+  else
+    write item.identifier.without_ext + '/index.html'
+  end
+end
+
+compile '/**/*.md' do
+ filter :redcarpet,
+  options: {
+    fenced_code_blocks: true,
+    tables: true,
+    autolink: true,
+    disable_indented_code_blocks: true,
+    strikethrough: true,
+    lax_spacing: true,
+    space_after_headers: true,
+    superscript: true
+  },
+  renderer: Redcarpet::Render::CustomHTML,
+  renderer_options: {
+    prettify: true,
+    with_toc_data: true
+  }
+
+ layout '/default.*'
+
+ if item.identifier =~ '**/index.md'
+   write item.identifier.without_ext + '.html'
+ else
+   write item.identifier.without_ext + '/index.html'
+ end
+end
+
+compile '/**/*' do
+  write item.identifier.to_s
+end
+
+layout '/**/*', :erb
