@@ -16,7 +16,7 @@ qa_deploy:
     - ./aws/install
     - aws s3 cp output s3://qa-product-docs --recursive
   only:
-    - moving-to-nanoc
+    - master
   tags:
     - product-docs
 
@@ -37,6 +37,6 @@ prod_deploy:
     - echo "$AWS_DEFAULT_REGION"
     - aws s3 cp output s3://prod-product-docs --recursive
   only:
-    - moving-to-nanoc
+    - master
   tags:
     - product-docs
