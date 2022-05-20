@@ -30,19 +30,38 @@ A MF Redemption gets created in `pending` state. Keep a note of the object id fo
   "mf_investment_account": "mfia_189111b00566431db0dace5332db519c",
 }
 ```
+#### 2. Obtain investor's consent for the redemption order by sending an OTP to email or mobile or both
+As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/mar-2022/discontinuation-of-usage-of-pool-accounts-for-transactions-in-the-units-of-mutual-funds-clarifications-with-respect-to-circulars-dated-october-4-2021_56887.html), investor consent must be obtained by sending a One-Time Password to the investor at his/her email/phone number registered with the AMC before redemptions can be sent to rtas. Call the [FPDocs, List folios](https://fintechprimitives.com/docs/api/#list-folios) API and fetch email addresses and mobile numbers against the folio.
+```json
+# Displaying only a part of the folio object for brevity
+{
+  "email_addresses": [
+    "kannav.mahajan@iiml.org"
+  ],
+  "mobile_numbers": [
+    "+919871112309"
+  ]
+}
+```
+Send OTP to any one of the email addresses/mobile numbers. Once the OTP has been sent and investor has entered the correct OTP, confirm the order.
 
-#### 2. Confirm the order
+#### 3. Confirm the order
 
 Call the [FPDocs, update mf redemption](https://fintechprimitives.com/docs/api/#update-a-mf-redemption) to confirm the order. FP sends it for processing only after confirmation. Use the following json:
 
 ```json
 {
   "id": "mfr_15f8d86bae614801bab5accaed131abc",
-  "state": "confirmed"
+  "state": "confirmed",
+  "consent": {
+    "email": "mfp@cybrilla.com",
+    "isd_code": "91",
+    "mobile": "9999999999"
+  }
 }
 ```
 
-#### 2. Track the order
+#### 4. Track the order
 
 Call the [FPDocs, fetch mf redemption](https://fintechprimitives.com/docs/api/#fetch-a-mf-redemption) to check the `state` of the sell order.  
 When the order is successfully submitted to the AMC, the order status becomes `SUBMITTED`. [Learn more about the order states](/mf-transactions/order-states)
