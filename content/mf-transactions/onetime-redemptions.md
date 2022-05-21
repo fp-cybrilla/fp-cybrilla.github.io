@@ -31,15 +31,15 @@ A MF Redemption gets created in `pending` state. Keep a note of the object id fo
 }
 ```
 #### 2. Obtain investor's consent for the redemption order by sending an OTP to email or mobile or both
-As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/mar-2022/discontinuation-of-usage-of-pool-accounts-for-transactions-in-the-units-of-mutual-funds-clarifications-with-respect-to-circulars-dated-october-4-2021_56887.html), investor consent must be obtained by sending a One-Time Password to the investor at his/her email/phone number registered with the AMC before redemptions can be sent to rtas. Call the [FPDocs, List folios](https://fintechprimitives.com/docs/api/#list-folios) API and fetch email addresses and mobile numbers against the folio.
+As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/mar-2022/discontinuation-of-usage-of-pool-accounts-for-transactions-in-the-units-of-mutual-funds-clarifications-with-respect-to-circulars-dated-october-4-2021_56887.html), investor consent must be obtained by sending a One-Time Password to the investor at his/her email/phone number registered against the folio before redemptions can be sent to rtas. Call the [FPDocs, List folios](https://fintechprimitives.com/docs/api/#list-folios) API and fetch email addresses and mobile numbers against the folio.
 ```json
 # Displaying only a part of the folio object for brevity
 {
   "email_addresses": [
-    "kannav.mahajan@iiml.org"
+    "mfp@cybrilla.com"
   ],
   "mobile_numbers": [
-    "+919871112309"
+    "+919999999999"
   ]
 }
 ```
