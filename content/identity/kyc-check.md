@@ -19,11 +19,42 @@ Call the [FPDocs, KYC Check](https://fintechprimitives.com/api/#create-a-kyc-che
 > `date_of_birth` is needed only to fetch the KYC data. This is an additional request body parameter along with the PAN number in-order to fetch the data from KRA databases. If you are using this API to check the KYC status alone, then the request body should only contain the PAN number.
 
 #### Status  
-If the `status` in the response object is `true`, it means the investor details exists in one of the KRA's databases and his KYC is under process or completed successfully. You can go ahead and onboard the investor and place purchase and redemption orders.
+```json
+# Displaying only a part of the object for brevity
+{
+  "id": "5620fd1f-eb14-442e-b0ee-da96a6c305c0",
+  "pan": "BNBPP9384M",
+  "status": false,
+  "reason":"unavailable",
+  "action":"create"
+}
+```
 
-  
+If the `status` in the response object is `true`, it means that the investor is either KYC compliant or his KYC application is successfully accepted for review and is under process. You can go ahead and onboard the investor and place purchase and redemption orders if `status` is `true`.
 
-If the `status` is `false`, it means the investor either does not exist in any of the KRA's databases or his KYC is unsuccessful. We recommend that you do not accept any orders from the investor at this stage, as they will get rejected during the processing at the RTA.
+If the value of the `status` attribute in the response object is `false`, the investor is not kyc compliant and you cannot accept investments from the investor. In such cases, the value of the attribute `reason` tells us the reason why the investor is non-compliant and the value of the attribute `action` tells us what action you can take to help investor become kyc compliant.
+
+Note: If `status` is `true`, the values of `reason` and `action` will always be null.
+
+##### Non compliance reasons
+|Non compliance reason|Remarks|
+|---|---|
+|`unavailable`|The investor has never submitted his kyc application before.|
+|`onhold`|The investor has submitted the KYC application before, but that application is on hold because of some data issues.|
+|`rejected`|The previous KYC application submitted by investor has been rejected.|
+|`deactivated`|This means that you cannot accept investments from this particular investor. You cannot submit new KYC application also. The reasons for deactivation could be fraud detection or death of an investor.|
+|`legacy`|This means that the investors were KYC compliant according to earlier KYC regulations. However, the investors are not KYC compliant according to the current KYC regulations.|
+|`unknown`|In certain scenarios, we will only be able to determine that the investor is KYC non-compliant without knowing the exact reason for non-compliance.In such cases the `reason` will be `unknown`. However, you can refer to `action` to understand what actions can be taken.|
+
+##### Action required for compliance
+|Action|Remarks|
+|---|---|
+|`modify`|Raise a modification request to fix the existing KYC application.|
+|`create`|Submit a new KYC application to KRA. You can use FP APIs to [perform digital KYC]()|
+|`disallowed`|This means that you can't take any actions to ensure that the investor becomes KYC compliant. You will get this value when the `reason` is `deactivated`|
+|`unknown`|In certain cases if we cannot unambiguously determine the non-compliance reason(i.e.if `reason`=`unknown`), we might also not be able to unambiguously detect the action required to ensure compliance. If that is the case, the value of `action` will be `unknown`.|
+
+
 #### Investor Details
 The `entity_details` in the response object will contain the investor's demographic information. If you are checking for the KYC status, you'll get the `name` of the investor. If you are fetching the KYC details of an investor, then the `entity_details` list in the response object will contain Identity, Address and Contact information of the investor as shown below:
 ```json
@@ -54,6 +85,8 @@ The `entity_details` in the response object will contain the investor's demograp
 
 > **NOTE**: To fetch an investor's demographic information from the KRA databases, you need to be a SEBI registered entity with RIA, AMC or other licences. Currently, AMFI regulated ARN holders cannot avail this feature.
 
+> **NOTE**: If the investor is not KYC compliant yet(Ex: KYC On hold), the investor demographic information will be empty.
+
 ### Testing
 
 To test the various scenarios in your application during the development process, use the following formats of PAN number and date of birth in the sandbox environment.
@@ -62,7 +95,12 @@ To test the various scenarios in your application during the development process
 | -------------------------------------------------------------------------- | ---------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | *Status Check* - KYC compliant investor                                      | XXXPX3751X | -NOT APPLICABLE-            | PAN numbers that match XXXPX3751X (replace X with any alphabet) are considered full KYC compliant and the response object will contain `status` as true, with no constraints                                                                                                                                                                                                       |
 | *Status Check* - KYC compliant investor with investment constraints          | XXXPX3752X | -NOT APPLICABLE-            | PAN numbers that match XXXPX3752X (replace X with any alphabet) are considered KYC compliant with restrictions on the investment limit. The response object will contain `status` as true and `constraints` will be populated                                                                                                                                                        |
-| *Status Check* - KYC non-compliant investor (KYC not done / in process, etc) | Anything   | -NOT APPLICABLE-            | Any other format will mean that the investor has not done his/her KYC and so the response object will contain `status` as false                                                                                                                                                                                                                                                                           |
+| Status Check - KYC non-compliant investor (KYC not available)     | XXXPX3753X | \-            | KYC applications with PAN numbers that match XXXPX3753X (replace X with any alphabet) are not available in any of the KRAs. You can use FP's KYC APIs to [perform digital KYC](https://docs.fintechprimitives.com/identity/kyc-request/)                                                                                                                                       |
+| Status Check - KYC non-compliant investor (KYC on hold)           | XXXPX3754X | \-            | KYC applications with PAN numbers that match XXXPX3754X (replace X with any alphabet) are on hold in the KRA due to some data issues. Investments against such PANs should not be allowed. You need to raise a modification request with the concerned KRA to have the `onhold` application processed                                                                   |
+| Status Check - KYC non-compliant investor (KYC rejected)          | XXXPX3755X | \-            | KYC applications with PAN numbers that match XXXPX3755X (replace X with any alphabet) are rejected by the KRA. You can use FP's KYC APIs to [perform digital KYC](https://docs.fintechprimitives.com/identity/kyc-request/) again before accepting any investments from such PANs                                                                                              |
+| Status Check - KYC non-compliant investor (KYC deactivated)       | XXXPX3756X | \-            | KYC applications with PAN numbers that match XXXPX3756X (replace X with any alphabet) are deactivated by the KRA. You can neither accept any investments against such PANs nor perform a digital KYC as well                                                                                                                                                                          |
+| Status Check - KYC non-compliant investor (Legacy KYC)            | XXXPX3757X | \-            | KYC applications with PAN numbers that match XXXPX3757X (replace X with any alphabet) are the ones which were compliant with earlier KYC regulations but no longer comply with the current one. You need to raise a modification request with the concerned KRA to have these kind of applications processed                                                                     |
+| Status Check - KYC non-compliant investor (Reason unknown)        | Anything   | \-            | Any other format will mean that the investor's KYC status could not be clearly deciphered. For these scenarios, the `action` attribute in the response object would also be null                                                                                                                                                                    |
 | *Fetch KYC data* - KYC compliant investor's full KYC data                    | XXXPX3751X | YYYY-MM-DD    | PAN numbers that match XXXPX3751X (replace X with any alphabet) and a valid date of birth combination are considered full KYC compliant and the response object will contain `status` as true, with no constraints. The `entity_details` list will contain all the data as received on the response from KRA                                                          |
 | *Fetch KYC data* - KYC compliant investor but some data are null             | XXXPX3752X | YYYY-MM-DD    | PAN numbers that match XXXPX3752X (replace X with any alphabet) and a valid date of birth combination are considered KYC compliant with restrictions on the investment limit. The response object will contain `status` as true and `constraints` will be populated. The `entity_details` list will have some or all data as null depending on the response from KRA |
 | *Fetch KYC data* - KYC non-compliant investor                                | Anything   | YYYY-MM-DD    | Any other format will mean that the investor has not done his/her KYC and so the response object will contain `status` as false 
