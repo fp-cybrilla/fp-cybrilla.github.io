@@ -63,24 +63,7 @@ preview:
   tags:
     - product-docs
 
-qa_deploy:
-  stage: deploy
-  variables:
-    AWS_DEFAULT_REGION: $QA_AWS_DEFAULT_REGION
-    AWS_SECRET_ACCESS_KEY: $QA_AWS_SECRET_ACCESS_KEY
-    AWS_ACCESS_KEY_ID: $QA_AWS_ACCESS_KEY_ID
-  script:
-    - apt install unzip
-    - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-    - unzip awscliv2.zip
-    - ./aws/install
-    - aws s3 sync --delete output s3://qa-product-docs
-  only:
-    - master
-  tags:
-    - product-docs
-
-prod_deploy:
+deploy:
   stage: deploy
   variables:
     AWS_DEFAULT_REGION: $PROD_AWS_DEFAULT_REGION
