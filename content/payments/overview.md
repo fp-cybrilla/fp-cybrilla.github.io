@@ -2,18 +2,22 @@
 title: Overview
 ---
 ## Payments
-#### Collect payments from your investor for the mutual fund orders
+FP Payment APIs integrate with third party payment gateways to facilitate collection of payments from your investors via internet banking, upi and nach payment modes. At present, we support payment collection via following modes
 
-FP Payment APIs integrates with third party payment gateways to facilitate collection of payments from your investors via internet banking, upi and nach payment modes. Learn how to
+|Payment gateway|Netbanking|UPI|e-Mandates|
+|---|---|---|---|
+|Razorpay|Supported|Supported|Supported|
+|Billdesk|Supported|Supported|Not supported|
+|BSE|Supported|Supported|Supported(SIPs only)|
 
-1. [Setup recurring payments via NACH](/payments/nach)
+
+### Collect payments from your investor for the mutual fund orders via FP
+1. [Collect payments via e-mandates](/payments/collect-payment-via-mandates/)
 
 
 ### Going live
-
-We need the following details about your Razorpay live account to enable payments in your FP account.
-
-- Razorpay Merchant ID, API Key (key id and key secret)
+1. [Going Live with Razorpay](/going-live/signing-up-with-razorpay/)
+2. [Going Live with BSE](/going-live/signing-up-with-bse-starmf/)
 
 Email us at [fpsupport@cybrilla.com](mailto:fpsupport@cybrilla.com) when you are ready.
 

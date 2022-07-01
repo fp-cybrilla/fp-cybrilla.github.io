@@ -174,15 +174,23 @@
             <ul class="px-6">
               <li class="mt-2">
                 <%= active_link('Overview', '/payments/overview/') %>
+                <ul class="px-6">
+                  <li class="mt-2">
+                    <%= active_link('Managing e-mandates', '/payments/managing-e-mandates/') %>
+                  </li>
+                </ul>
               </li>
               <li class="mt-2">
-                <%= active_link('Setup recurring payments', '/payments/nach/') %>
+                <%= active_link('Collect payments via e-mandates', '/payments/collect-payment-via-mandates/') %>
               </li>
               <li class="mt-2">
                 <strong>Appendix</strong>
                 <ul class="px-6">
                   <li class="mt-2">
                     <%= active_link('Payment States', '/payments/payment-states/') %>
+                  </li>
+                  <li class="mt-2">
+                    <%= active_link('Mandate States', '/payments/mandate-states/') %>
                   </li>
                 </ul>
               </li>
