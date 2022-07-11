@@ -41,22 +41,17 @@ Use the [FPDocs, get mandate](https://fintechprimitives.com/api/#fetch-a-mandate
 Call the [FPDocs, Cancel mandate](https://fintechprimitives.com/docs/api/#cancel-mandate).
 
 `POST /api/pg/mandates/:id/cancel`
-```json
-{
-	"cancellation_reason":"investor"
-}
-```
-You will get the mandate details in the respose
+
+You will get the mandate details in the response
 ```json
 #Displaying only a part of response for brevity
 {
   "id": 1,
   "mandate_status": "CANCELLED",
-  "cancelled_at": "2022-10-23T04:30:21+05:30",
-  "cancellation_reason":"investor"
+  "cancelled_at": "2022-10-23T04:30:21+05:30"
 }
 ```
-Note: At present, e-mandate cancellation feature is allowed only for Razorpay e-mandates. If Razorpay e-mandates are deleted outside of FP, the mandates will be marked as `CANCELLED` with the `cancellation_reason` as `payment_gateway`.
+Note: At present, e-mandate cancellation feature is allowed only for Razorpay e-mandates. If Razorpay e-mandates are deleted outside of FP, the mandates will be marked as `CANCELLED`.
 
 ### Testing
 
