@@ -1,5 +1,38 @@
 # Release notes
 
+## July 2022
+#### 8th July 2022
+* Fixed an issue which was causing BSE redemption orders to fail due to bank account validation issues while placing redemption orders.  
+`redemption`,`bse`
+
+#### 7th July 2022
+* [Search investors by guardian PAN](https://fintechprimitives.com/docs/api/#search-investors)  
+`investor`,`guardian`
+
+#### 6th July 2022
+* Investor consent information is now mandatory for redemption/switch orders processed via BSE order gateway.  
+`redemption`, `switch`
+
+
+## June 2022
+#### 30th June 2022
+* FP now automatically reports the primary bank account as the redemption bank account while placing redemption orders via BSE.  
+`redemption`,`bse`
+* You can now report investor consent information while confirming a BSE redemption order.  
+`redemption`,`bse`
+
+#### 15th June 2022
+* Add checks to avoid duplicate Razorpay NACH payment creation in cases where Razorpay payment creation response is inconclusive.  
+`payments`,`nach`
+
+
+#### 4th June 2022
+* [V2 Bank account APIs](https://fintechprimitives.com/docs/api/#bank-accounts-early-access)
+
+#### 1st June 2022
+* Investor consent information is now mandatory for redemption/switch orders processed via RTA order gateway.  
+`redemption`, `switch`
+
 ## May 2022
 #### 31st May 2022
 * While authorizing Razorpay e-mandates, we now send bank account details to ensure that the mandate can be only authorized via investor's bank account.  
