@@ -1,8 +1,14 @@
 # Release notes
 
 ## July 2022
+#### 14th July 2022
+* You can now see the non-compliance reason and action required to ensure compliance when you check KYC status. For more info, please read the [documentation](/identity/kyc-check/)  
+`kyc`
+* Fixed a bug due to which the second installments of RTA SIPs were being incorrectly reported to RTAs in cases of SIPs that were created with flag `generate_first_installment_now`:`true`  
+`sip`
+
 #### 8th July 2022
-* Fixed an issue which was causing BSE redemption orders to fail due to bank account validation issues while placing redemption orders.  
+* Fixed an issue which was causing BSE redemption orders to fail due to bank account validation issues.  
 `redemption`,`bse`
 
 #### 7th July 2022
