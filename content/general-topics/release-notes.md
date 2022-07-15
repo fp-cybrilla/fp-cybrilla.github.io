@@ -6,6 +6,10 @@
 `kyc`
 * Fixed a bug due to which the second installments of RTA SIPs were being incorrectly reported to RTAs in cases of SIPs that were created with flag `generate_first_installment_now`:`true`  
 `sip`
+* Updated order reconciliation logic to support order reconciliation for CAMS serviced AMC customers.  
+`cams`,`amc`,`orders`
+* You can now cancel Razorpay e-mandates. For more information please read this [documentation](https://fintechprimitives.com/docs/api/#cancel-a-mandate)
+
 
 #### 8th July 2022
 * Fixed an issue which was causing BSE redemption orders to fail due to bank account validation issues.  
