@@ -1,4 +1,4 @@
-### Installation
+### Installation `closed-beta`
 `npm install --save @cybrilla/fpapi`
 
 or
