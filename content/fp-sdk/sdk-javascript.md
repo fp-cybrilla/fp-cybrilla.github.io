@@ -1,4 +1,7 @@
-### Installation `closed-beta`
+### `closed-beta` Installation
+
+> The sdk is still in `closed-beta` version, not yet published onto `npm`.
+
 `npm install --save @cybrilla/fpapi`
 
 or
