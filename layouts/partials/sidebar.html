@@ -120,28 +120,63 @@
           <div class="collapse-body hidden">
             <ul class="px-6">
               <li class="mt-2">
-                <%= active_link('Overview', '/mf-transactions/overview/') %>
+                <%= active_link('Overview', '/mf-transactions/overview/') %>                
               </li>
               <li class="mt-2">
                 <%= active_link('Open an investment account', '/mf-transactions/investment-account/') %>
               </li>
+                        
               <li class="mt-2">
-                <%= active_link('Create a onetime purchase', '/mf-transactions/onetime-purchases/') %>
+                <strong>One time orders</strong>
+                <ul class="px-6">
+                  <li class="mt-2">
+                     <%= active_link('Create a onetime purchase', '/mf-transactions/onetime-purchases/') %>
+                  </li>
+                  <li class="mt-2">
+                    <%= active_link('Sell a mutual fund', '/mf-transactions/onetime-redemptions/') %>
+                  </li>
+                  <li class="mt-2">
+                    <%= active_link('Switch from one scheme to another', '/mf-transactions/onetime-switches/') %>
+                  </li>
+                </ul>
               </li>
               <li class="mt-2">
-                <%= active_link('Create a recurring purchase', '/mf-transactions/recurring-purchases/') %>
+                <strong>Recurring purchases<sup>Alpha Release</sup></strong>
+                  <ul class="px-6">
+                  <li class="mt-2">
+                    <%= active_link('Migrating from V1 SIP APIs to Purchase plans', '/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration/') %>
+                  </li>
+                </ul>
+                <ul class="px-6">
+                  <li class="mt-2">
+                    <%= active_link('Create a new SIP', '/mf-transactions/purchase-plans/create-monthly-sip/') %>
+                  </li>
+                  <li class="mt-2">
+                    <%= active_link('Top up amount for an SIP', '/mf-transactions/purchase-plans/topup-sip/') %>
+                  </li>
+                  <li class="mt-2">
+                    <%= active_link('Pause installments of an existing SIP', '/mf-transactions/purchase-plans/pause-sip/') %>
+                  </li>
+                  <li class="mt-2">
+                    <%= active_link('Renew the tenure of an SIP', '/mf-transactions/purchase-plans/renew-sip/') %>
+                  </li>
+                </ul>
               </li>
               <li class="mt-2">
-                <%= active_link('Sell a mutual fund', '/mf-transactions/onetime-redemptions/') %>
+                <strong>Recurring Redemptions<sup>Alpha Release</sup></strong>
+                <ul class="px-6">
+                  <li class="mt-2">
+                     <%= active_link('Schedule a recurring withdrawal', '/mf-transactions/recurring-redemptions/') %>
+                  </li>
+                </ul>
               </li>
               <li class="mt-2">
-                <%= active_link('Schedule a recurring withdrawal', '/mf-transactions/recurring-redemptions/') %>
-              </li>
-              <li class="mt-2">
-                <%= active_link('Switch from one scheme to another', '/mf-transactions/onetime-switches/') %>
-              </li>
-              <li class="mt-2">
-                <%= active_link('Schedule a recurring switch', '/mf-transactions/recurring-switches/') %>
+                <strong>Recurring Switches<sup>Alpha Release</sup></strong>
+                <ul class="px-6">
+                  <li class="mt-2">
+                     <%= active_link('Schedule a recurring switch', '/mf-transactions/recurring-switches/') %>
+                   </li>
+                </ul>
               </li>
               <li class="mt-2">
                 <strong>Appendix</strong>
@@ -160,6 +195,9 @@
                   <li class="mt-2">
                     <%= active_link('Sell a mutual fund w/ Old APIs', '/mf-transactions/onetime-redemptions-old-apis/') %>
                   </li>
+                  <li class="mt-2">
+                    <%= active_link('Create a recurring purchase w/ Old APIs', '/mf-transactions/recurring-purchases/') %>
+                  </li>              
                 </ul>
               </li>
             </ul>
