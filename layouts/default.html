@@ -452,6 +452,30 @@
     }
     /* Link copy svg for dark-light modes ends */
 
+    .code {
+      height:auto;
+      max-height:500px;
+      position: relative; 
+      height: auto;
+    }
+
+    pre.code button {
+      color: #f1f2f3 !important;
+      box-sizing: border-box;
+      transition: 0.2s ease-out;
+      cursor: pointer;
+      user-select: none;
+      background: rgba(0, 0, 0, 0.15);
+      background-color: #000;
+      border: 1px solid rgba(0, 0, 0, 0);
+      padding: 5px 10px;
+      font-size: 0.8em;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 0 0.15rem;
+    }
+
 
     .fp-diagram {
       width: 1100px;
@@ -696,6 +720,56 @@
 
   <script>
     document.querySelector(".current-year").innerHTML = new Date().getFullYear().toString().substr(2,2);
+  </script>
+
+
+  <script>
+    // get the list of all highlight code blocks
+    const highlights = document.querySelectorAll("pre.code");
+
+    highlights.forEach((pre) => {
+      // create the copy button
+      const copy = document.createElement("button");
+      copy.innerHTML = "Copy";
+      // add the event listener to each click
+      copy.addEventListener("click", handleCopyClick);
+      // append the copy button to each code block
+      pre.append(copy);
+    });
+
+    const copyToClipboard = (str) => {
+      const el = document.createElement("textarea");
+      el.value = str;
+      el.setAttribute("readonly", "");
+      el.style.position = "absolute";
+      el.style.left = "-9999px";
+      document.body.appendChild(el);
+      const selected =
+        document.getSelection().rangeCount > 0
+          ? document.getSelection().getRangeAt(0)
+          : false;
+      el.select();
+      document.execCommand("copy"); // Copy command
+      document.body.removeChild(el);
+      if (selected) {
+        // If a selection existed before copying
+        document.getSelection().removeAllRanges(); // Unselect everything on the HTML document
+        document.getSelection().addRange(selected); // Restore the original selection
+      }
+    };
+
+    function handleCopyClick(evt) {
+      // get the children of the parent element
+      const { children } = evt.target.parentElement;
+      const { innerText } = Array.from(children)[0];
+      // copy all of the code to the clipboard
+      copyToClipboard(innerText);
+      // Notification post copy
+      evt.target.textContent = "Copied!";
+      window.setTimeout(function () {
+        evt.target.textContent = "Copy";
+      }, 2000);
+    }
   </script>
   </body>
 </html>
