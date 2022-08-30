@@ -120,4 +120,4 @@ fpClient.kyc_checks().create({
 });
 ```
 
-[FPDocs, Create investor reference](https://fintechprimitives.com/docs/api/#create-a-kyc-check)
+[FPDocs, Create kyc check reference](https://fintechprimitives.com/docs/api/#create-a-kyc-check)
