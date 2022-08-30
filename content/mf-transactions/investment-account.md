@@ -1,25 +1,28 @@
 ---
 title: Open an investment account
 ---
+
 ## Open an investment account
+
 #### Learn how to onboard an investor and set him up for investing
 
 Follow the below steps to create an investor and an investment account. Investment Account is the holding account for all your investor's mutual fund investments.
 
 #### 1. Create an investor
+
 The following information about the investor is needed to be able to set him up for investments
 
 1. Full name of the investor
 2. PAN number of the investor
 3. Email ID and mobile number of the investor
 4. Date of birth
-5. Father name or spouse name in full 
+5. Father name or spouse name in full
 6. Gender
 7. Country of birth
 8. Marital status
 9. Residential status
 10. Occupation
-11. Address 
+11. Address
 12. Signature scan (only in case of BSE)
 13. Fatca/CRS self declaration
 14. Bank account details (also a cancelled cheque copy in case of BSE)
@@ -31,24 +34,29 @@ The following information about the investor is needed to be able to set him up 
 Call the [FPDocs, create investor](https://fintechprimitives.com/api/#create-an-investor) with all the required information to create an investor object. Make a note of the investor id, which you'll need in the later steps.
 
 ### Note on data verification
-#### Email ID and mobile number  
+
+#### Email ID and mobile number
+
 As part of the regulatory guidelines, the email id and mobile number of the investor has to be verified for its validity. You can use any method of your choice to do the verification. Sending an OTP or a link is the most common method.  
 Currently we don't offer APIs for email and mobile verification. FP APIs assume that the verification is done at your end.
 
-#### Bank Account  
+#### Bank Account
+
 As part of the regulatory requirement, you need to verify the account ownership of the bank account given by the investor. There are two ways you can do the verification at present:  
 a) Penny drop and match the bank a/c holder name that is returned, with the investor name  
 b) Accept a cancelled cheque copy from the investor and manually match the name on the cheque with the investor name  
 The names may not match 100% all the time. You have to be reasonably sure that the a/c belong to the investor. There are no set guidelines on what should be the match %.
 Currently we don't offer APIs to do these verifications. FP Investor APIs assume the bank a/c given is verified by you.
 
-
 #### 2. Check the investor's kyc status
+
 Depending on the investor's kyc status, you might need to collect additional information. Use the [kyc check guide](/identity/kyc-check) to learn how to check the kyc status.
 If the investor is kyc compliant, skip step 3 and jump to step 4 directly. If he is not kyc compliant, go to step 3.
 
-#### 3. Perform digital kyc *conditional step*
+#### 3. Perform digital kyc _conditional step_
+
 You need to collect the following additional details about the investor apart from the details collected in step 1:
+
 1. Mother name in full
 2. Last 4 digits of the Aadhaar number
 3. PAN card copy
@@ -63,12 +71,13 @@ You need to collect the following additional details about the investor apart fr
 [Learn about using the kyc request](/identity/kyc-request) to perform digital kyc
 
 #### 4. Create an investment account
+
 To avoid any rejection of orders, make sure the investor is kyc compliant before creating an investment a/c.
 
 Call the [FPDocs, create investment account](https://fintechprimitives.com/docs/api/#create-a-mf-investment-account) with the following json. Use the investor id received in step 1 to create an investment account.
 
-
 Request
+
 ```json
 {
   "primary_investor_old_id": "124234"
@@ -76,3 +85,92 @@ Request
 ```
 
 Store the `investment_account_id` received in the response object in your database. You will need this as a reference to place the purchase and sell orders.
+
+### Try APIs with javascript SDK
+
+#### Create an investor
+
+```javascript
+
+/**
+ * @param InvestorCreateRequest object
+ **/
+fpClient.investors().create({
+  display_name: "Tony",
+  perm_addr_is_corres_addr: true,
+  nomination: {
+    skip_nomination: true,
+    nominee1: null,
+    nominee2: null,
+    nominee3: null,
+  },
+  contact_detail: {
+    email: "tony@gmail.com",
+    isd_code: 91,
+    mobile: "9738876341",
+    office_telephone_no: null,
+    residence_telephone_no: null,
+  },
+  fatca_detail: {
+    country_of_birth_ansi_code: "IN",
+    source_of_wealth: "BUSINESS",
+    first_trc_ansi_code: "IN",
+    first_trc_taxid_type: "TIN",
+    first_trc_taxid_number: "123456",
+    gross_annual_income: 100000,
+    no_other_tax_residences: false,
+    address_type: "RESIDENTIAL",
+  },
+  kyc_identity_detail: {
+    name: "Tony",
+    father_or_spouse_name: "Soprano",
+    mothers_name: "Julia",
+    kyc_relation: "FATHER",
+    date_of_birth: "1980-10-10",
+    marital_status: "SINGLE",
+    pan_number: "AREPD1040N",
+    gender: "MALE",
+    occupation: "BUSINESS",
+    residential_status: "RESIDENT_INDIVIDUAL",
+    country_of_citizenship_ansi_code: "IN",
+    pan_exempt: false,
+    pep_exposed: false,
+    pep_related: false,
+    guardian_relationship: "OTHERS",
+    guardian_name: null,
+  },
+  bank_accounts: [
+    {
+      account_holder_name: "Tony",
+      type: "SAVINGS",
+      primary_account: true,
+      number: "05411000068533",
+      ifsc_code: "HDFC0000541",
+    },
+  ],
+  correspondence_address: {
+    line1: "#108, Harlur",
+    pincode: "560102",
+    city: "Bengaluru",
+    state: "KARNATAKA",
+    country_ansi_code: "IN",
+  },
+});
+```
+
+[FPDocs, Create investor reference](https://fintechprimitives.com/docs/api/#create-an-investor)
+
+#### Create a MF Investment Account
+
+```javascript
+
+/**
+ * @param primary_investor_old_id ( V1 investor id), holding_pattern
+ **/
+fpClient.mf_investment_accounts().create({
+  primary_investor_old_id: "672",
+  holding_pattern: "single",
+});
+```
+
+[FPDocs, Create a MF Investment Account reference](https://fintechprimitives.com/docs/api/#create-a-mf-investment-account)
