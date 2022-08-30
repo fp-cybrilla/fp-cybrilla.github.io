@@ -104,3 +104,20 @@ To test the various scenarios in your application during the development process
 | *Fetch KYC data* - KYC compliant investor's full KYC data                    | XXXPX3751X | YYYY-MM-DD    | PAN numbers that match XXXPX3751X (replace X with any alphabet) and a valid date of birth combination are considered full KYC compliant and the response object will contain `status` as true, with no constraints. The `entity_details` list will contain all the data as received on the response from KRA                                                          |
 | *Fetch KYC data* - KYC compliant investor but some data are null             | XXXPX3752X | YYYY-MM-DD    | PAN numbers that match XXXPX3752X (replace X with any alphabet) and a valid date of birth combination are considered KYC compliant with restrictions on the investment limit. The response object will contain `status` as true and `constraints` will be populated. The `entity_details` list will have some or all data as null depending on the response from KRA |
 | *Fetch KYC data* - KYC non-compliant investor                                | Anything   | YYYY-MM-DD    | Any other format will mean that the investor has not done his/her KYC and so the response object will contain `status` as false 
+
+### Try APIs with javascript SDK
+
+#### Check kyc status
+
+```javascript
+
+/**
+ * @param KycCheckCreateRequest object
+ **/
+fpClient.kyc_checks().create({
+  "pan": "ARRPP1115N",
+  "date_of_birth": "1955-10-25"
+});
+```
+
+[FPDocs, Create kyc check reference](https://fintechprimitives.com/docs/api/#create-a-kyc-check)
