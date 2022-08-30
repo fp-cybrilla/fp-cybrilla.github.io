@@ -225,151 +225,106 @@ A testing folio number is issued during simulation, which you can use to place a
 
 ### Try APIs with javascript SDK
 
-#### 1. Create a purchase order 
+#### 1. Create a purchase order
 
 #### Fund Scheme
 
-<div>
-<pre class="code">
-<code>
-async function getSchemes() {
-    const fpc = new fp(options);
-    try {
-        const data = await fpc.master_data().fetchScheme('INF173K01FE6');
-        console.log(data);
-    } catch (e) {
-        console.log('error', e);
-    }
-}
-</code>
-</pre>
-</div>
-[FPDocs, Fund Scheme reference](https://fintechprimitives.com/docs/api/#fund-scheme)
+```javascript
 
+/**
+ * @param string isin
+ **/
+fpClient.master_data().fetchScheme("INF173K01FE6")
+```
+
+[FPDocs, Fund Scheme reference](https://fintechprimitives.com/docs/api/#fund-scheme)
 
 #### Create a MF Purchase
 
-<div>
-<pre class="code">
-<code>
-async function mFpurchaseCreate() {
-    const FpClient = new fp(options);
-    try {
-        let req = {
-            "mf_investment_account": "mfia_367a75826694614a539c0f82b196027",
-            "scheme": "INF173K01FE6",
-            "amount": 10000
-        };
-        const data = await FpClient.mf_purchases().create(req);
-        console.log(data)
-    } catch (e) {
-        console.log('error', e.error);
-    }
-}
-</code>
-</pre>
-</div>
+```javascript
+
+/**
+ * @param MfPurchaseCreateRequest object
+ */
+fpClient.mf_purchases().create({
+    mf_investment_account: "mfia_367a75826694614a539c0f82b196027",
+    scheme: "INF173K01FE6",
+    amount: 10000,
+})
+```
+
 [FPDocs, Create a MF Purchase reference](https://fintechprimitives.com/docs/api/#create-a-mf-purchase)
 
-#### 2. Make payment 
+#### 2. Make payment
 
 #### 2.1. You are using FP payment APIs
 
-
 #### Create a payment
 
-<div>
-<pre class="code">
-<code>
-async function createNetBankingPayment() {
-    const FpClient = new fp(options);
-    try {
-        const data = await FpClient.payments().createNetbankingPayment({
+```javascript
+
+  /**
+   * @param PaymentCreateRequest object
+   */
+fpClient.payments().createNetbankingPayment({
             "amc_order_ids": [9123],
             "bank_account_id": 23
             method: 'NETBANKING',
             payment_postback_url: "https://example.com/"
         })
-        console.log(data);
-    } catch (e) {
-        console.log('error', e);
-    }
-}
-</code>
-</pre>
-</div>
+```
+
 [FPDocs, Create a payment reference](https://fintechprimitives.com/docs/api/#create-a-payment)
 
 #### 2.2. Your using payment providers directly
 
 #### Update a MF Purchase
 
-<div>
-<pre class="code">
-<code>
-async function updateMfPurchase() {
-    const FpClient = new fp(options);
-    try {
-        const data = await FpClient.mf_purchases().update({
-            "id": "mfp_177177219f634373b01072986d2eea7d",
-            "state": "confirmed"
-        })
-        console.log(data);
-    } catch (e) {
-        console.log('error', e);
-    }
-}
-</code>
-</pre>
-</div>
+```javascript
+
+/**
+ * @param MfPurchasePatchRequest object
+ */
+fpClient.mf_purchases().update({
+    id: "mfp_177177219f634373b01072986d2eea7d",
+    state: "confirmed",
+})
+```
+
 [FPDocs, Update a MF Purchase reference](https://fintechprimitives.com/docs/api/#update-a-mf-purchase)
 
 #### Create a MF Settlement Detail
 
-<div>
-<pre class="code">
-<code>
-async function createMfSettlementDetail() {
-    const fpc = new fp(options);
-    try {
-        const data = await fpc.mf_settlement_details().create({
-            "mf_purchase": "mfp_177177219f634373b01072986d2eea7d",
-            "payment_type": "netbanking",
-            "utr_number": "UTB123312",
-            "bank_account_number": "999900002222",
-            "bank_ifsc": "UTIB0003098",
-            "beneficiary_account_number": "1233453",
-            "beneficiary_account_title": "AMC Mutual Fund Pool AC",
-            "beneficiary_bank_name": "Amc Bank Name",
-            "settlement_processed_at": "2022-03-17T06:30:09+05:30"
-        });
-        console.log(data);
-    } catch (e) {
-        console.log('error', e.error);
-    }
-}
-</code>
-</pre>
-</div>
+```javascript
+
+/**
+ * @param MfSettlementDetailCreateRequest object
+ */
+fpClient.mf_settlement_details().create({
+    mf_purchase: "mfp_177177219f634373b01072986d2eea7d",
+    payment_type: "netbanking",
+    utr_number: "UTB123312",
+    bank_account_number: "999900002222",
+    bank_ifsc: "UTIB0003098",
+    beneficiary_account_number: "1233453",
+    beneficiary_account_title: "AMC Mutual Fund Pool AC",
+    beneficiary_bank_name: "Amc Bank Name",
+    settlement_processed_at: "2022-03-17T06:30:09+05:30",
+})
+```
+
 [FPDocs, Create a MF Settlement Detail reference](https://fintechprimitives.com/docs/api/#create-a-mf-settlement-detail)
 
 #### 3. Track the order
 
 #### Fetch a MF Purchase
 
-<div>
-<pre class="code">
-<code>
-async function fetchMfPurchase() {
-    const FpClient = new fp(options);
-    try {
-        const data = await FpClient.mf_purchases().fetch('mfp_177177219f634373b01072986d2eea7d')
-        console.log(data);
-    } catch (e) {
-        console.log('error', e);
-    }
-}
-</code>
-</pre>
-</div>
+```javascript
+
+/**
+ * @param id V2 or V1 id of the purchase order.
+ */
+fpClient.mf_purchases().fetch("mfp_177177219f634373b01072986d2eea7d")
+```
+
 [FPDocs, Fetch a MF Purchase reference](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase)

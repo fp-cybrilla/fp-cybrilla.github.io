@@ -1,12 +1,10 @@
 ### `closed-beta` Installation
 
-> The sdk is still in `closed-beta` version, not yet published onto `npm`.
-
-`npm install --save @cybrilla/fpapi`
+`npm install --save @fintechprimitives/fpapi`
 
 or
 
-`yarn add @cybrilla/fpapi`
+`yarn add @fintechprimitives/fpapi`
 
 ----------------------------------------
 
