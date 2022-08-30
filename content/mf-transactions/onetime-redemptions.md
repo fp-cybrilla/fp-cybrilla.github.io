@@ -1,7 +1,9 @@
 ---
 title: Sell a mutual fund
 ---
+
 ## Sell a mutual fund
+
 #### Facilitate redemptions for your investor
 
 Mutual fund units are associated with folios. You can treat folios as sub-accounts under the investment account. You can fetch the list of folios for an investment a/c from the [FPDocs, holdings report](https://fintechprimitives.com/api/#get-holding-report). `redeemable_units` shows the number of units that are available for selling. You can use the FP APIs to sell the units partially or in total.
@@ -12,10 +14,10 @@ Call the [FPDocs, create mf redemption](https://fintechprimitives.com/docs/api/#
 
 ```json
 {
-  "mf_investment_account": "mfia_189111b00566431db0dace5332db519c",
-  "folio_number": "15075102",
-  "amount": 10000,
-  "scheme": "INF173K01FQ0"
+    "mf_investment_account": "mfia_189111b00566431db0dace5332db519c",
+    "folio_number": "15075102",
+    "amount": 10000,
+    "scheme": "INF173K01FQ0"
 }
 ```
 
@@ -30,8 +32,11 @@ A MF Redemption gets created in `pending` state. Keep a note of the object id fo
   "mf_investment_account": "mfia_189111b00566431db0dace5332db519c",
 }
 ```
+
 #### 2. Obtain investor's consent for the redemption order by sending an OTP to email or mobile or both
+
 As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/mar-2022/discontinuation-of-usage-of-pool-accounts-for-transactions-in-the-units-of-mutual-funds-clarifications-with-respect-to-circulars-dated-october-4-2021_56887.html), investor consent must be obtained by sending a One-Time Password to the investor at his/her email/phone number registered against the folio before redemptions can be sent to rtas. Call the [FPDocs, List folios](https://fintechprimitives.com/docs/api/#list-folios) API and fetch email addresses and mobile numbers against the folio.
+
 ```json
 # Displaying only a part of the folio object for brevity
 {
@@ -43,6 +48,7 @@ As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/mar-2022/disco
   ]
 }
 ```
+
 Send OTP to any one of the email addresses/mobile numbers. Once the OTP has been sent and investor has entered the correct OTP, confirm the order.
 
 #### 3. Confirm the order
@@ -51,13 +57,13 @@ Call the [FPDocs, update mf redemption](https://fintechprimitives.com/docs/api/#
 
 ```json
 {
-  "id": "mfr_15f8d86bae614801bab5accaed131abc",
-  "state": "confirmed",
-  "consent": {
-    "email": "mfp@cybrilla.com",
-    "isd_code": "91",
-    "mobile": "9999999999"
-  }
+    "id": "mfr_15f8d86bae614801bab5accaed131abc",
+    "state": "confirmed",
+    "consent": {
+        "email": "mfp@cybrilla.com",
+        "isd_code": "91",
+        "mobile": "9999999999"
+    }
 }
 ```
 
@@ -74,6 +80,91 @@ In sandbox environment, you can use the [FPDocs, simulation](https://fintechprim
 
 ```json
 {
-  "status": "SUCCESSFUL"
+    "status": "SUCCESSFUL"
 }
 ```
+
+### Try APIs with javascript SDK
+
+#### Generate holdings report
+
+```javascript
+
+/**
+ * @param InvestorReportHoldingsFetchRequest object
+ **/
+fpClient.investor_reports().fetchHoldings({
+    investment_account_id: 467,
+})
+```
+
+[FPDocs, Generate holdings report reference](https://fintechprimitives.com/docs/api/#generate-holdings-report)
+
+#### 1. Create a sell order
+
+#### Create a MF Redemption
+
+```javascript
+
+/**
+ * @param MfRedemptionCreateRequest object
+ **/
+fpClient.mf_redemptions().create({
+    mf_investment_account: "mfia_189111b00566431db0dace5332db519c",
+    folio_number: "15075102",
+    amount: 10000,
+    scheme: "INF173K01FQ0",
+})
+```
+
+[FPDocs, Create a MF Redemption reference](https://fintechprimitives.com/docs/api/#create-a-mf-redemption)
+
+#### 2. Obtain investor's consent for the redemption order by sending an OTP to email or mobile or both
+
+```javascript
+
+/**
+ * @param string folio_number
+ **/
+fpClient.mf_folios().fetchAll({ folio_number: "15075102" })
+```
+
+[FPDocs, Fetch all folios reference](https://fintechprimitives.com/docs/api/#fetch-all-folios)
+
+[FPDocs, Sandbox testing reference](https://fintechprimitives.com/docs/api/#testing-fetch-all-folios-api-in-sandbox)
+
+#### 3. Confirm the order
+
+#### Update a MF Redemption
+
+```javascript
+
+/**
+ * @param MfRedemptionUpdateRequest object
+ **/
+fpClient.mf_redemptions().update({
+    id: "mfr_15f8d86bae614801bab5accaed131abc",
+    state: "confirmed",
+    consent: {
+        email: "mfp@cybrilla.com",
+        isd_code: "91",
+        mobile: "9876543212",
+    },
+})
+```
+
+[FPDocs, Update a MF Redemption reference](https://fintechprimitives.com/docs/api/#update-a-mf-redemption)
+
+#### 4. Track the order
+
+#### Fetch a MF Redemption
+
+```javascript
+
+/**
+ * @param identifier V2 or V1 ID of the redemption order
+ **/
+fpClient.mf_redemptions().fetch("mfr_15f8d86bae614801bab5accaed131abc")
+```
+
+[FPDocs, Fetch a MF Redemption reference](https://fintechprimitives.com/docs/api/#fetch-a-mf-redemption)

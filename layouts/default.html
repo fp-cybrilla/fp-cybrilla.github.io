@@ -258,15 +258,15 @@
       }
 
       pre.json::after {
-        content: "json";
-        color: #CFD4DF;
+        content: "";
+        /* color: #CFD4DF;
         font-size: 14px;
         font-family: "Roboto", sans-serif;
-        padding: 0px 10px;
+        padding: 0px 10px; */
         position: absolute;
-        right: 0;
+        /* right: 0;
         text-align: right;
-        top: 0;
+        top: 0; */
       }
 
       .sidebar-toggle {
@@ -452,6 +452,30 @@
     }
     /* Link copy svg for dark-light modes ends */
 
+    .code {
+      height:auto;
+      max-height:500px;
+      position: relative; 
+      height: auto;
+    }
+
+    pre.code button {
+      color: #f1f2f3 !important;
+      box-sizing: border-box;
+      transition: 0.2s ease-out;
+      cursor: pointer;
+      user-select: none;
+      background: rgba(0, 0, 0, 0.15);
+      background-color: #000;
+      border: 1px solid rgba(0, 0, 0, 0);
+      padding: 5px 10px;
+      font-size: 0.8em;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 0 0.15rem;
+    }
+
 
     .fp-diagram {
       width: 1100px;
@@ -518,6 +542,10 @@
     .footer-copyright, .dark .footer-copyright {
       border: 0;
     }
+}
+
+.highlight {
+  position: relative;
 }
 </style>
   </head>
@@ -696,6 +724,65 @@
 
   <script>
     document.querySelector(".current-year").innerHTML = new Date().getFullYear().toString().substr(2,2);
+  </script>
+
+
+  <script>
+    // get the list of all highlight code blocks
+    const highlights = document.querySelectorAll("pre.code");
+
+    highlights.forEach((pre) => {
+      // create the copy button
+      const copy = document.createElement("button");
+      copy.innerHTML = "Copy";
+      // add the event listener to each click
+      copy.addEventListener("click", handleCopyClick);
+      // append the copy button to each code block
+      pre.append(copy);
+    });
+
+    const copyToClipboard = (str) => {
+      const el = document.createElement("textarea");
+      el.value = str;
+      el.setAttribute("readonly", "");
+      el.style.position = "absolute";
+      el.style.left = "-9999px";
+      document.body.appendChild(el);
+      const selected =
+        document.getSelection().rangeCount > 0
+          ? document.getSelection().getRangeAt(0)
+          : false;
+      el.select();
+      document.execCommand("copy"); // Copy command
+      document.body.removeChild(el);
+      if (selected) {
+        // If a selection existed before copying
+        document.getSelection().removeAllRanges(); // Unselect everything on the HTML document
+        document.getSelection().addRange(selected); // Restore the original selection
+      }
+    };
+
+    function handleCopyClick(item, evt) {
+      // get the children of the parent element
+      const { children } = evt.currentTarget.parentElement;
+      const { innerText } = Array.from(children)[0];
+      // copy all of the code to the clipboard
+      copyToClipboard(innerText);
+      // Notification post copy
+      item.innerHTML = "Copied";
+      
+      window.setTimeout(function () {
+        item.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><g fill="#3f567e"><path d="M10 19h8V8h-8v11zM8 7.992C8 6.892 8.902 6 10.009 6h7.982C19.101 6 20 6.893 20 7.992v11.016c0 1.1-.902 1.992-2.009 1.992H10.01A2.001 2.001 0 018 19.008V7.992z"></path><path d="M5 16V4.992C5 3.892 5.902 3 7.009 3H15v13H5zm2 0h8V5H7v11z"></path></g></svg>';
+      }, 2000);
+    }
+
+    document.querySelectorAll("pre.highlight").forEach(item => {
+      item.insertAdjacentHTML("afterend", '<div class="copy-code absolute top-1 right-1 cursor-pointer"><svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><g fill="#3f567e"><path d="M10 19h8V8h-8v11zM8 7.992C8 6.892 8.902 6 10.009 6h7.982C19.101 6 20 6.893 20 7.992v11.016c0 1.1-.902 1.992-2.009 1.992H10.01A2.001 2.001 0 018 19.008V7.992z"></path><path d="M5 16V4.992C5 3.892 5.902 3 7.009 3H15v13H5zm2 0h8V5H7v11z"></path></g></svg></div>');
+    });
+
+    document.querySelectorAll(".copy-code").forEach(item => {
+      item.addEventListener("click", (evt) => handleCopyClick(item, evt));
+    });
   </script>
   </body>
 </html>

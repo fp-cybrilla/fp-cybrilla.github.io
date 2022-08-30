@@ -1,12 +1,12 @@
 ### `closed-beta` Installation
 
-> The sdk is still in `closed-beta` version, not yet published onto `npm`.
+> The sdk is still in `closed-beta` version.
 
-`npm install --save @cybrilla/fpapi`
+`npm install --save @fintechprimitives/fpapi`
 
 or
 
-`yarn add @cybrilla/fpapi`
+`yarn add @fintechprimitives/fpapi`
 
 ----------------------------------------
 
@@ -25,8 +25,8 @@ Each object will have a standard function names such as `create`, `fetch`, `fetc
 Objects supports additional functions as applicable.
 
 
-```javascript
-import { fp } from '@cybrilla/fpapi';
+```
+import { fp } from '@fintechprimitives/fpapi';
 
   //Create options required to initialize the `fp` instance.
   let options = {
@@ -56,7 +56,7 @@ import { fp } from '@cybrilla/fpapi';
 
 
 
-### Object Supported:
+### Objects Supported:
 The `fp` instance created supports the following objects
 
 - `investors`
@@ -66,6 +66,9 @@ The `fp` instance created supports the following objects
 - `mf_purchases`
 - `payments`
 - `bank_account_verifications`
+- `mf_redemptions`
+- `sips`
+- `mandates`
 
 ----------------------------
 #### `investors`
@@ -181,16 +184,54 @@ Detail on the `mf_purchases` object [documentation](https://fintechprimitives.co
 
 ------------------------
 
+#### `mf_redemptions`
+Detail on the `mf_redemptions` object [documentation](https://fintechprimitives.com/docs/api/#mf-redemptions)
+
+| Method | Description |
+| -------- | -------- |
+| `create`   | Create an `mf_redemptions` object  |
+| `update`   | Create an `mf_redemptions` object by ID  |
+| `fetch`    | Fetch `mf_redemptions` object by ID   |
+| `fetchAll` | Search `mf_redemptions` objects   |
+
+------------------------
+
+#### `sips`
+Detail on the `sips` object [documentation](https://fintechprimitives.com/docs/api/#sips)
+
+| Method | Description |
+| -------- | -------- |
+| `create`   | Create an `sips` object  |
+| `update`   | Create an `sips` object by ID  |
+| `fetch`    | Fetch `sips` object by ID   |
+| `fetchAll` | Search `sips` objects   |
+| `fetchInstallmentsSip` | Retrieve all the installments of a particular SIP   |
+
+------------------------
+
+#### `mandates`
+Detail on the `mandates` object [documentation](https://fintechprimitives.com/docs/api/#mandates)
+
+| Method | Description |
+| -------- | -------- |
+| `create`   | Create an `mandates` object  |
+| `fetch`    | Fetch `mandates` object by ID   |
+| `fetchAll` | Search `mandates` objects   |
+| `authorize` | Authorize the `mandate` order   |
+| `cancel` | Cancel `mandate`   |
+
+------------------------
+
 ### Utils
-Apart from objects, SDK provides utility functions that can be used ceratin datapoints.
+Apart from objects, SDK provides utility functions that can be used certain datapoints.
 This functions can be called without initiaing the `fp` instance.
 
 Each function will return a `boolean`.
 #### Usage
 
-```javascript
+```
 
-  import { ValidatorUtil } from "@cybrilla/fpapi";
+  import { ValidatorUtil } from "@fintechprimitives/fpapi";
 
   console.log(ValidatorUtil.phoneNumber("9994000090"));
   console.log(ValidatorUtil.ifsc('SBIN00077395'))
