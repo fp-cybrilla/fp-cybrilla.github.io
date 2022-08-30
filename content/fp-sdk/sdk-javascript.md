@@ -1,5 +1,7 @@
 ### `closed-beta` Installation
 
+> The sdk is still in `closed-beta` version.
+
 `npm install --save @fintechprimitives/fpapi`
 
 or
@@ -24,7 +26,7 @@ Objects supports additional functions as applicable.
 
 
 ```
-import { fp } from '@cybrilla/fpapi';
+import { fp } from '@fintechprimitives/fpapi';
 
   //Create options required to initialize the `fp` instance.
   let options = {
@@ -229,7 +231,7 @@ Each function will return a `boolean`.
 
 ```
 
-  import { ValidatorUtil } from "@cybrilla/fpapi";
+  import { ValidatorUtil } from "@fintechprimitives/fpapi";
 
   console.log(ValidatorUtil.phoneNumber("9994000090"));
   console.log(ValidatorUtil.ifsc('SBIN00077395'))
