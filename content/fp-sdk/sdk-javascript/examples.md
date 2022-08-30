@@ -312,6 +312,25 @@ async function getIfscCodes() {
 </div>
 [FPDocs, IFSC reference](https://fintechprimitives.com/docs/api/#ifsc)
 
+#### Fund Scheme
+
+<div>
+<pre class="code">
+<code>
+async function getSchemes() {
+    const fpc = new fp(options);
+    try {
+        const data = await fpc.master_data().fetchScheme('INF760K01DF2');
+        console.log(data);
+    } catch (e) {
+        console.log('error', e);
+    }
+}
+</code>
+</pre>
+</div>
+[FPDocs, Fund Scheme reference](https://fintechprimitives.com/docs/api/#fund-scheme)
+
 #### AMCs
 
 <div>
@@ -1330,6 +1349,102 @@ async function fetcAllMfSettlementDetail() {
 </pre>
 </div>
 [FPDocs, List all MF Settlement Details reference](https://fintechprimitives.com/docs/api/#list-all-mf-settlement-details)
+
+### MF Redemptions
+
+#### Create a MF Redemption
+
+<div>
+<pre class="code">
+<code>
+async function createMfRedemptions() {
+    const fpc = new fp(options);
+    try {
+        const data = await fpc.mf_redemptions().create({
+            "mf_investment_account": "mfia_71abd0d0802e48b2a7253eec92956a73",
+            "folio_number": "A6O4H0BLSXYRM",
+            "amount": 10,
+            "scheme": "INF204K01UP4",
+            "units": null,
+            "user_ip": "10.0.128.12",
+            "server_ip": "126.1.10.1",
+            "source_ref_id": "fad6ca01-a002-46ab-8e5c-ea6fe195a5de",
+            "euin": null
+        });
+        console.log(data);
+    } catch (e) {
+        console.log('error', e.error);
+    }
+}
+</code>
+</pre>
+</div>
+[FPDocs, Create a MF Redemption reference](https://fintechprimitives.com/docs/api/#create-a-mf-redemption)
+
+#### Update a MF Redemption
+
+<div>
+<pre class="code">
+<code>
+async function updateMfRedemptions() {
+    const fpc = new fp(options);
+    try {
+        const data = await fpc.mf_redemptions().update({
+            id: '44',
+            state: 'confirmed',
+            consent: {
+                mobile: '9876543212'
+            }
+        });
+        console.log(data);
+    } catch (e) {
+        console.log('error', e.error);
+    }
+}
+</code>
+</pre>
+</div>
+[FPDocs, Update a MF Redemption reference](https://fintechprimitives.com/docs/api/#update-a-mf-redemption)
+
+#### Fetch a MF Redemption
+
+<div>
+<pre class="code">
+<code>
+async function fetchMfRedemptions() {
+    const fpc = new fp(options);
+    try {
+        const data = await fpc.mf_redemptions().fetch('44');
+        console.log(data);
+    } catch (e) {
+        console.log('error', e.error);
+    }
+}
+</code>
+</pre>
+</div>
+[FPDocs, Fetch a MF Redemption reference](https://fintechprimitives.com/docs/api/#fetch-a-mf-redemption)
+
+#### List all MF Redemptions
+
+<div>
+<pre class="code">
+<code>
+async function fetcAllMfRedemptions() {
+    const fpc = new fp(options);
+    try {
+        const data = await fpc.mf_redemptions().fetchAll({});
+        console.log(data);
+    } catch (e) {
+        console.log('error', e.error);
+    }
+}
+</code>
+</pre>
+</div>
+[FPDocs, List all MF Redemptions reference](https://fintechprimitives.com/docs/api/#list-all-mf-redemptions)
+
+
 
 ### MF Redemption Plans
 

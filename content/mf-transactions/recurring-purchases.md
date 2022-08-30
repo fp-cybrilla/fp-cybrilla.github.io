@@ -43,3 +43,96 @@ Check the status of an installment using the [FPDocs, fetch a mf purchase](https
 ### Testing
 
 In the sandbox, use the [FPDocs, sip simulation](https://fintechprimitives.com/api/#post-sip-simulation) to trigger generation of future sip installments. After generating the installments, use the [FPDocs, order simulation](https://fintechprimitives.com/api/#post-order-simulation) to test various success and failure scenarios of the installments.
+
+### Try APIs with javascript SDK
+
+#### Fund Scheme
+
+<div>
+<pre class="code">
+<code>
+async function getSchemes() {
+    const fpc = new fp(options);
+    try {
+        const data = await fpc.master_data().fetchScheme('INF760K01DF2');
+        console.log(data);
+    } catch (e) {
+        console.log('error', e);
+    }
+}
+</code>
+</pre>
+</div>
+[FPDocs, Fund Scheme reference](https://fintechprimitives.com/docs/api/#fund-scheme)
+
+#### 1. Create a SIP plan
+
+<div>
+<pre class="code">
+<code>
+async function createSip() {
+    const fpc = new fp(options);
+    const orders = {
+        "orders": [{
+            "isin": "INF204KA1B64",
+            "amount": 10000,
+            "start_day": "2",
+            "frequency": "MONTHLY",
+            "installments": 20,
+            "mandate_id": 23
+        }]
+    };
+
+    try {
+        const data = await fpc.sips().create(orders, 123);
+        console.log(data);
+    } catch (e) {
+        console.log('error', e.error);
+    }
+}
+</code>
+
+</pre>
+</div>
+[FPDocs, Create investor reference](https://fintechprimitives.com/docs/api/#create-a-sip)
+
+#### 2. Fetch the installments
+
+<div>
+<pre class="code">
+<code>
+async function fetchInstallmentsSip() {
+    const fpc = new fp(options);
+    try {
+        // fetchInstallmentsSip(investment_account_id: number, sip_id: number)
+        const data = await fpc.sips().fetchInstallmentsSip(123, 456);
+        console.log(data);
+    } catch (e) {
+        console.log('error', e.error);
+    }
+}
+</code>
+</pre>
+</div>
+[FPDocs, Fetch installments of a SIP reference](https://fintechprimitives.com/docs/api/#fetch-installments-of-a-sip)
+
+#### 3. Track the SIP installment 
+
+#### Fetch a MF Purchase
+
+<div>
+<pre class="code">
+<code>
+async function fetchMfPurchase() {
+    const FpClient = new fp(options);
+    try {
+        const data = await FpClient.mf_purchases().fetch('mfp_b6874a51adf64109bb6e19129e5e7556')
+        console.log(data);
+    } catch (e) {
+        console.log('error', e);
+    }
+}
+</code>
+</pre>
+</div>
+[FPDocs, Fetch a MF Purchase reference](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase)

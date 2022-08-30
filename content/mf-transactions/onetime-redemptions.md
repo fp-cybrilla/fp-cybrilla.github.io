@@ -77,3 +77,123 @@ In sandbox environment, you can use the [FPDocs, simulation](https://fintechprim
   "status": "SUCCESSFUL"
 }
 ```
+
+### Try APIs with javascript SDK
+
+#### Generate holdings report
+
+<div>
+<pre class="code">
+<code>
+async function fetchHoldingsInvestorReport() {
+    const fpc = new fp(options);
+    try {
+        const data = await fpc.investor_reports().fetchHoldings({
+            investment_account_id: 467
+        });
+        console.log(data);
+    } catch (e) {
+        console.log('error', e.error);
+    }
+}
+</code>
+</pre>
+</div>
+[FPDocs, Generate holdings report reference](https://fintechprimitives.com/docs/api/#generate-holdings-report)
+
+#### 1. Create a sell order 
+
+#### Create a MF Redemption
+
+<div>
+<pre class="code">
+<code>
+async function createMfRedemptions() {
+    const fpc = new fp(options);
+    try {
+        const data = await fpc.mf_redemptions().create({
+            "mf_investment_account": "mfia_189111b00566431db0dace5332db519c",
+            "folio_number": "15075102",
+            "amount": 10000,
+            "scheme": "INF173K01FQ0"
+        });
+        console.log(data);
+    } catch (e) {
+        console.log('error', e.error);
+    }
+}
+</code>
+</pre>
+</div>
+[FPDocs, Create a MF Redemption reference](https://fintechprimitives.com/docs/api/#create-a-mf-redemption)
+
+#### 2. Obtain investor's consent for the redemption order by sending an OTP to email or mobile or both
+
+<div>
+<pre class="code">
+<code>
+async function getMfFolios() {
+    const fpc = new fp(options);
+    try {
+        const data = await fpc.mf_folios().fetchAll({folio_number: "15075102"});
+        console.log(data);
+    } catch (e) {
+        console.log('error', e);
+    }
+}
+</code>
+</pre>
+</div>
+[FPDocs, Fetch all folios reference](https://fintechprimitives.com/docs/api/#fetch-all-folios)
+
+[FPDocs, Sandbox testing reference](https://fintechprimitives.com/docs/api/#testing-fetch-all-folios-api-in-sandbox)
+
+#### 3. Confirm the order 
+
+#### Update a MF Redemption
+
+<div>
+<pre class="code">
+<code>
+async function updateMfRedemptions() {
+    const fpc = new fp(options);
+    try {
+        const data = await fpc.mf_redemptions().update({
+            id: 'mfr_15f8d86bae614801bab5accaed131abc',
+            state: 'confirmed',
+            consent: {
+                email: "mfp@cybrilla.com",
+                isd_code: "91",
+                mobile: '9876543212'
+            }
+        });
+        console.log(data);
+    } catch (e) {
+        console.log('error', e.error);
+    }
+}
+</code>
+</pre>
+</div>
+[FPDocs, Update a MF Redemption reference](https://fintechprimitives.com/docs/api/#update-a-mf-redemption)
+
+#### 4. Track the order
+
+#### Fetch a MF Redemption
+
+<div>
+<pre class="code">
+<code>
+async function fetchMfRedemptions() {
+    const fpc = new fp(options);
+    try {
+        const data = await fpc.mf_redemptions().fetch('mfr_15f8d86bae614801bab5accaed131abc');
+        console.log(data);
+    } catch (e) {
+        console.log('error', e.error);
+    }
+}
+</code>
+</pre>
+</div>
+[FPDocs, Fetch a MF Redemption reference](https://fintechprimitives.com/docs/api/#fetch-a-mf-redemption)
