@@ -8,17 +8,17 @@ title: One time purchases
 > 1. Your investor is [kyc compliant](/identity/overview)
 > 2. You have an [investment account created](/mf-transactions/overview) for your investor
 
-Once you have the investor and investment account created, follow the below steps to place a purchase order.  
-1. Create a purchase order
-2. Make payment
-3. Check the order state
+#### 1. Get fund scheme details and check purchase eligibility 
+Once you have decided to place a purchase order against a particular scheme, fetch the scheme details using the [FPDocs, Get fund scheme](https://fintechprimitives.com/api/#get-single-fund-schemes-detail), and ensure that the scheme is eligible for purchase. Here are the checks that you must do.
 
-#### 1. Create a purchase order
-Some funds are not allowed for purchases and some might temporarily stop accepting purchase orders. Make sure you check the `purchase_allowed` field is `true` for the fund scheme(s) you are placing the order for, using the [FPDocs, Get fund scheme](https://fintechprimitives.com/api/#get-single-fund-schemes-detail).
+1. The scheme must be active (i.e. `active`=`true`) 
+2. Lumpsum purchases must be allowed (i.e. `purchase_allowed`=`true`)
+3. If a fresh purchase is being made, i.e. a purchase without providing a folio number, ensure that purchase amount is within the range of `min_initial_investment` and `max_initial_investment` and the denomination of the amount must be according to `initial_investment_multiples` of a scheme.
+4. If an additional purchase is being made, i.e. a purchase in an existing folio, ensure that purchase amount is within the range of `min_additional_investment` and `max_additional_investment` and the denomination of the amount must be according to `additional_investment_multiples` of a scheme.
 
-FP uses `MF Purchase` object to represent all the mutual fund purchase orders. You need to create a `MF Purchase` as a first step for placing a one time purchase order.
 
-Call the [FPDocs, Create mf purchase](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) with the following json. Use the investment account of the investor for whom you are placing the order for.
+#### 2. Create a purchase order
+FP uses `MF Purchase` object to represent all the mutual fund purchase orders. You need to create a `MF Purchase` as a first step for placing a one time purchase order.Call the [FPDocs, Create mf purchase](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) with the following json. Use the investment account of the investor for whom you are placing the order for.
 
 ```json
 {
@@ -31,7 +31,7 @@ Call the [FPDocs, Create mf purchase](https://fintechprimitives.com/docs/api/#cr
 A MF Purchase gets created for which you need to make a payment. Keep a note of the object `id` and `old_id`; you'll need these for making payments and checking the status of the order later on.
 
 ```json
-# Displaying only a part of the object for brevity
+# Displaying only a part of the object(response) for brevity
 {
   "object": "mf_purchase",
   "id": "mfp_177177219f634373b01072986d2eea7d",
@@ -40,25 +40,53 @@ A MF Purchase gets created for which you need to make a payment. Keep a note of 
   "amount": 10000
 }
 ```
+**Note:** 
+1. If you are placing a purchase order against an existing folio, you can also provide `folio_number` while creating a purchase order.
+2. If the order gateway is `BSE`, after you have created the purchase order, you must confirm the order using [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase) and ensure that orders are in `submitted` state before you can accept payments. 
 
-#### 2. Make payment
+```json
+{
+  "id": "mfp_177177219f634373b01072986d2eea7d",
+  "state": "confirmed"
+}
+```
+Response:
 
-You can use FP Payment APIs or work with payment providers directly to faciliate a payment for the order.
+```json
+# Displaying only a part of the object(response) for brevity
+{
+  "object": "mf_purchase",
+  "id": "mfp_177177219f634373b01072986d2eea7d",
+  "mf_investment_account": "mfia_367a75826694614a539c0f82b196027",
+  "amount": 10000,
+  "state":"confirmed"
+}
+```
+
+After you have confirmed the order, FP will try to submit the order to BSE asynchronously in the background. Once the order submission is successful, the purchase order state changes from `confirmed` to `submitted`. You can use [FPDocs, Fetch a MF Purchase
+](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to ensure that order has moved from `confirmed` to `submitted` state. Once a BSE purchase order is in `submitted` state, you can accept payments.
+
+
+#### 3. Collect payments against purchase orders
 
 <div class="tabs">
 	<div class="tabs-bar">
 		<div class="tabs-item active">
 			<span class="inline md:hidden">Option 1</span> 
-			<span class="hidden md:block">You are using FP payment APIs</span>
+			<span class="hidden md:block">Collect amount via Netbanking/UPI</span>
 		</div>
 		<div class="tabs-item">
 			<span class="inline md:hidden">Option 2</span> 
-			<span class="hidden md:block">You are using payment providers directly</span>
+			<span class="hidden md:block">Collect amount via e-mandates</span>
+		</div>
+		<div class="tabs-item">
+			<span class="inline md:hidden">Option 3</span> 
+			<span class="hidden md:block">Collect payments without FP</span>
 		</div>
 	</div>
 	<div class="tabs-content">
 		<div class="tab-pane">
-		<h4 class="block md:hidden mt-0">You are using FP payment APIs</h4> 
+		<h4 class="block md:hidden mt-0">Collect amount via Netbanking/UPI</h4> 
 		<p>
 				To make a payment using internet banking or upi, make a request to
 				<a
@@ -75,7 +103,7 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 				</a>
 				with the following json. Use the order's <code class="prettyprint">old_id</code> from the
 				previous step. Use the <code class="prettyprint">id</code> of the bank account belonging to
-				the investor, with which you want him to make the payment.
+				the investor, with which you want him to make the payment. You can provide multiple order ids of `pending` purchase orders created against the same investment account and create a single payment.
 			</p>
 			<div class="highlight">
 				<pre class="highlight json"><code><span class="p">{</span><span class="w">
@@ -96,13 +124,77 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 				call. Instead check the status of the payment from your server before giving a final
 				confirmation to your investor.<br />
 				<a href="/pages/workflows/payment-status" title="">Learn more about payment states</a>.
+				<br>
+				Upon successful payment collection, the orders willl be marked as <code class="prettyprint">confirmed</code> if the gateway is <code class="prettyprint">rta</code> and orders will be submitted to order gateway eventually for further processing.
 			</p>
 		</div>
 
 		<div class="tab-pane">
-		<h4 class="block md:hidden mt-0">You are using payment providers directly</h4> 
+		<h4 class="block md:hidden mt-0">Collect amount via e-mandates</h4> 
+		<p>
+				To make a payment against one-time RTA purchase orders using e-mandates, make a request to
+				<a
+					href="https://fintechprimitives.com/docs/api/#create-a-nach-payment"
+					title=""
+					class="api-link
+						inline-flex
+						items-center hover:text-primary-B110
+						rounded-5
+					"
+					target="_blank"
+				>
+					Create a NACH payment
+				</a>
+				with the following json. Use the order's <code class="prettyprint">old_id</code> from the
+				previous step. Use the <code class="prettyprint">id</code> of the mandate belonging to
+				the investor, with which you want the investor to make the payment.
+			</p>
+			<div class="highlight">
+				<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"mandate_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="w">
+  </span><span class="nl">"amc_order_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">9123</span><span class="p">],</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+			</div>
 			<p>
-				After you have collected the money from your investor, confirm the purchase order by calling
+				For more details, please check this <a href="/payments/collect-payment-via-mandates" title="">link</a>.Upon successful payment collection, the orders willl be marked as <code class="prettyprint">confirmed</code> if the gateway is <code class="prettyprint">rta</code> and orders will be submitted to order gateway eventually for further processing.
+			</p>
+		</div>
+
+		<div class="tab-pane">
+		<h4 class="block md:hidden mt-0">Collect payments on your own.</h4> 
+			<p>
+				After you have collected the money from your investor and initiated a transfer of that amount to AMC's bank account, provide the transfer details using the
+				<a
+					href="https://fintechprimitives.com/docs/api/#create-a-mf-settlement-detail"
+					title=""
+					class="api-link
+						inline-flex
+						items-center hover:text-primary-B110
+						rounded-5
+					"
+					target="_blank"
+				>
+					Create a MF Settlement Detail
+					
+				</a>
+				with the following json:
+			</p>
+			<div class="highlight">
+				<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"mf_purchase"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mfp_177177219f634373b01072986d2eea7d"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"payment_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"netbanking"</span><span class="w"><span class="p">,</span><span class="w">
+  </span><span class="nl">"bank_account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"999900002222"</span><span class="w"><span class="p">,</span><span class="w">
+</span><span class="nl">"bank_ifsc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTIB0003098"</span><span class="w"><span class="p">,</span><span class="w">
+</span><span class="nl">"beneficiary_account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1233453"</span><span class="w"><span class="p">,</span><span class="w">
+</span><span class="nl">"beneficiary_account_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MF Collection A/c"</span><span class="w"><span class="p">,</span><span class="w">
+</span><span class="nl">"beneficiary_bank_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Amc Bank Name"</span><span class="w"> 
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+			</div>
+			<h4 class="block md:hidden mt-0">Collect payments on your own</h4> 
+			<p>
+				Once you provided the transfer initiation details, confirm the purchase order by calling
 				the
 				<a
 					href="https://fintechprimitives.com/docs/api/#update-a-mf-purchase"
@@ -126,36 +218,7 @@ You can use FP Payment APIs or work with payment providers directly to faciliate
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 			</div>
-			<p>
-				After the money is settled into the scheme's bank account, call the
-				<a
-					href="https://fintechprimitives.com/docs/api/#create-a-mf-settlement-detail"
-					title=""
-					class="api-link
-						inline-flex
-						items-center
-						hover:text-primary-B110
-						rounded-5
-					"
-					target="_blank"
-				>
-					Create mf settlement detail
-				</a>
-				to give us the settlement details so we can reconcile the order with the money received. You
-				need to send the following details about the settlement:
-			</p>
-			<div class="highlight">
-				<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"mf_purchase"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mfp_177177219f634373b01072986d2eea7d"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"payment_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"netbanking"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"utr_no"</span><span class="p">:</span><span class="w"> </span><span class="s2">"889121212"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"bank_account_no"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18603051137433"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"beneficiary_account_no"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1143005051340"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"beneficiary_account_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AMC Mutual Fund Pool AC"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"settlement_processed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-09T12:00:09"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-			</div>
+
 		</div>
 	</div>
 </div>
@@ -198,15 +261,9 @@ After the money is settled into the scheme's bank account, call the [FPDocs, cre
 }
 ``` -->
 
-#### 3. Track the order
+#### 4. Track the order
+Once the payment collection is successful, you don't have to take further actions. After the order is processed successfully (typically takes one day) - units are allotted and the object state will move to `successful`.  You can track a single purchase order using [FPDocs, fetch mf purchase](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to check the `state` of the order or you can check the status of multiple orders at once using [FPDocs, MF Purchase List](https://fintechprimitives.com/docs/api/#mf-purchase-list-report) API. 
 
-Call the [FPDocs, fetch mf purchase](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to check the `state` of the order.  
-When the payment is successful, the order state becomes `confirmed`. [Learn more about the order states](/mf-transactions/order-states)
-
-
-### Order Processing
-
-Orders in `confirmed` state will be sent for processing and the object state will move to `submitted`. After the order is processed successfully (typically takes one day) - units are allotted and the object state will move to `successful`.  
 For a successful order, review the following key attributes of the `mf_purchase` object:  
 `allotted_units`: the number of units issued for the purchase amount  
 `purchased_price`: the price per unit at which the units are issued  
