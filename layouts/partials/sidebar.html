@@ -42,263 +42,48 @@
 <div class="sidebar-body">
   <nav class="mt-8">
     <ul>
-      <li class="mt-2 px-6">
-        <%= active_link('Introduction', '/') %>
-      </li>
-      <li class="mt-2">
-      
-        <div class="collapse mb-2">
-          <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
-
-            Going Live
+      <% @config[:sidebar].each do |item| %>
+        <% if (item[:dropdown_menu_items]) %>
+          <div class="collapse mb-2">
+            <div class="collapse-title flex items-center font-opensans font-semibold text-primary-N110 cursor-pointer">
+              <%= item[:dropdown_menu_title] %>
+            </div>
+            <div class="collapse-body hidden">
+              <ul class="px-3">
+                <% item[:dropdown_menu_items].each do |menu| %>
+                  <% if menu[:subsection] %>
+                    <li class="mt-1 font-opensans text-sm">
+                      <ul class="mb-5">
+                        <% menu[:subsection].each do |subsectionItem| %>
+                          <% if subsectionItem[:heading] %>
+                            <div class="font-opensans mt-5 font-bold text-primary-N80 dark:text-primary-DN60 text-sm px-3">
+                              <%= subsectionItem[:heading] %>
+                            </div>
+                          <% else %>
+                            <li class="mt-1 font-opensans text-sm">
+                              <%= active_link(subsectionItem[:title], subsectionItem[:link]) %>
+                            </li>
+                          <% end %>
+                        <% end %>
+                      </ul>
+                    </li>
+                  <% else %>
+                    <li class="mt-1 font-opensans text-sm">
+                      <%= active_link(menu[:title], menu[:link]) %>
+                    </li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </div>
           </div>
-          <div class="collapse-body hidden">
-            <ul class="px-6">
-              <li class="mt-2">
-                <%= active_link('Overview', '/going-live/checklist/') %>
-              </li>
-
-              <li class="mt-2">
-                <%= active_link('Distributors w/ BSE', '/going-live/distributors-with-bse/') %>
-                <ul class="px-6">
-                  <li class="mt-2">
-                    <%= active_link('BSE sign up', '/going-live/signing-up-with-bse-starmf/') %>
-                  </li>
-                </ul>
-              </li>
-              <li class="mt-2">
-                <%= active_link('Distributors w/ RTA', '/going-live/distributors-with-rtas/') %>
-                <ul class="px-6">
-                  <li class="mt-2">
-                    <%= active_link('Razorpay sign up', '/going-live/signing-up-with-razorpay/') %>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li class="mt-2">
-        <div class="collapse">
-          <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
-
-            Identity
-          </div>
-          <div class="collapse-body hidden">
-            <ul class="px-6">
-              <li class="mt-2">
-                <%= active_link('Overview', '/identity/overview/') %>
-              </li>
-              <li class="mt-2">
-                <%= active_link('Check the kyc status', '/identity/kyc-check/') %>
-              </li>
-              <li class="mt-2">
-                <%= active_link('Perform digital kyc', '/identity/kyc-request/') %>
-                <ul class="px-6">
-                  <li class="mt-2">
-                    <%= active_link('Required information', '/identity/required-information/') %>
-                  </li>
-                </ul>
-              </li>
-              <li class="mt-2">
-                <%= active_link('Perform Bank Account Verification', '/identity/verification/perform-bank-account-verification/') %>
-
-              </li>
-              <li class="mt-2">
-                <%= active_link('FAQs', '/identity/FAQs/') %>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li class="mt-2">
-        <div class="collapse">
-          <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
-
-            MF Orders
-          </div>
-          <div class="collapse-body hidden">
-            <ul class="px-6">
-              <li class="mt-2">
-                <%= active_link('Overview', '/mf-transactions/overview/') %>                
-              </li>
-              <li class="mt-2">
-                <%= active_link('Open an investment account', '/mf-transactions/investment-account/') %>
-              </li>
-                        
-              <li class="mt-2">
-                <strong>One time orders</strong>
-                <ul class="px-6">
-                  <li class="mt-2">
-                     <%= active_link('Create a onetime purchase', '/mf-transactions/onetime-purchases/') %>
-                  </li>
-                  <li class="mt-2">
-                    <%= active_link('Sell a mutual fund', '/mf-transactions/onetime-redemptions/') %>
-                  </li>
-                  <li class="mt-2">
-                    <%= active_link('Switch from one scheme to another', '/mf-transactions/onetime-switches/') %>
-                  </li>
-                </ul>
-              </li>
-              <li class="mt-2">
-                <strong>Recurring purchases<sup>Alpha Release</sup></strong>
-                  <ul class="px-6">
-                  <li class="mt-2">
-                    <%= active_link('Migrating from V1 SIP APIs to Purchase plans', '/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration/') %>
-                  </li>
-                </ul>
-                <ul class="px-6">
-                  <li class="mt-2">
-                    <%= active_link('Create a new SIP', '/mf-transactions/purchase-plans/create-monthly-sip/') %>
-                  </li>
-                  <li class="mt-2">
-                    <%= active_link('Top up amount for an SIP', '/mf-transactions/purchase-plans/topup-sip/') %>
-                  </li>
-                  <li class="mt-2">
-                    <%= active_link('Pause installments of an existing SIP', '/mf-transactions/purchase-plans/pause-sip/') %>
-                  </li>
-                  <li class="mt-2">
-                    <%= active_link('Renew the tenure of an SIP', '/mf-transactions/purchase-plans/renew-sip/') %>
-                  </li>
-                </ul>
-              </li>
-              <li class="mt-2">
-                <strong>Recurring Redemptions<sup>Alpha Release</sup></strong>
-                <ul class="px-6">
-                  <li class="mt-2">
-                     <%= active_link('Schedule a recurring withdrawal', '/mf-transactions/recurring-redemptions/') %>
-                  </li>
-                </ul>
-              </li>
-              <li class="mt-2">
-                <strong>Recurring Switches<sup>Alpha Release</sup></strong>
-                <ul class="px-6">
-                  <li class="mt-2">
-                     <%= active_link('Schedule a recurring switch', '/mf-transactions/recurring-switches/') %>
-                   </li>
-                </ul>
-              </li>
-              <li class="mt-2">
-                <strong>Appendix</strong>
-                <ul class="px-6">
-                  <li class="mt-2">
-                    <%= active_link('Order States', '/mf-transactions/order-states/') %>
-                  </li>
-                </ul>
-              </li>
-              <li class="mt-2">
-                <strong>Archives</strong>
-                <ul class="px-6">
-                  <li class="mt-2">
-                    <%= active_link('One time purchases w/ Old APIs', '/mf-transactions/onetime-purchases-old-apis/') %>
-                  </li>
-                  <li class="mt-2">
-                    <%= active_link('Sell a mutual fund w/ Old APIs', '/mf-transactions/onetime-redemptions-old-apis/') %>
-                  </li>
-                  <li class="mt-2">
-                    <%= active_link('Create a recurring purchase w/ Old APIs', '/mf-transactions/recurring-purchases/') %>
-                  </li>              
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li class="mt-2">
-        <div class="collapse mb-2">
-          <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
-
-            Payments
-          </div>
-          <div class="collapse-body hidden">
-            <ul class="px-6">
-              <li class="mt-2">
-                <%= active_link('Overview', '/payments/overview/') %>
-                <ul class="px-6">
-                  <li class="mt-2">
-                    <%= active_link('Managing e-mandates', '/payments/managing-e-mandates/') %>
-                  </li>
-                </ul>
-              </li>
-              <li class="mt-2">
-                <%= active_link('Collect payments via e-mandates', '/payments/collect-payment-via-mandates/') %>
-              </li>
-              <li class="mt-2">
-                <strong>Appendix</strong>
-                <ul class="px-6">
-                  <li class="mt-2">
-                    <%= active_link('Payment States', '/payments/payment-states/') %>
-                  </li>
-                  <li class="mt-2">
-                    <%= active_link('Mandate States', '/payments/mandate-states/') %>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li class="mt-2">
-        <div class="collapse mb-2">
-          <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
-
-            Investor Reporting
-          </div>
-          <div class="collapse-body hidden">
-            <ul class="px-6">
-              <li class="mt-2">
-                <%= active_link('Overview', '/pages/workflows/investor-reporting/') %>
-              </li>
-              <li class="mt-2">
-                <%= active_link('Usage', '/pages/workflows/investor-reporting-usage/') %>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li class="mt-2">
-        <div class="collapse mb-2">
-          <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
-            General topics
-          </div>
-          <div class="collapse-body hidden">
-            <ul class="px-6">
-              <li class="mt-2">
-                <%= active_link('Automated communications with investors', '/pages/workflows/automated-communication/') %>
-              </li>
-              <li class="mt-2">
-                <%= active_link('Product Roadmap', '/future/roadmap/') %>
-              </li>
-              <li class="mt-2">
-                <%= active_link('Release notes', '/general-topics/release-notes/') %>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      
-      <li class="mt-2">
-        <div class="collapse mb-2">
-          <div class="collapse-title flex items-center font-opensans font-bold text-primary-N100 cursor-pointer">
-            SDKs
-          </div>
-          <div class="collapse-body hidden">
-            <ul class="px-6">
-              <li class="mt-2">
-                <%= active_link('FP SDK for Javascript', '/fp-sdk/sdk-javascript/') %>
-                <ul class="px-6">
-                  <li class="mt-2">
-                    <%= active_link('Examples', '/fp-sdk/sdk-javascript/examples/') %>
-                  </li>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-
-
+        <% else %>
+          <li class="mt-2 mb-2 px-3 font-opensans text-sm">
+            <%= active_link(item[:title], item[:link]) %>
+          </li>
+        <% end %>
+      <% end %>
     </ul>
-</nav>
+  </nav>
 </div>
 <div class="sidebar-footer">
   <div class="theme-switch-wrapper">

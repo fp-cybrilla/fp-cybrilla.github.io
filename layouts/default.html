@@ -91,9 +91,13 @@
         line-height: normal;
       }
 
+      .sidebar nav ul li a:hover {
+        text-decoration: none;
+      }
+
       @media(min-width: 1024px) {
         .sidebar {
-          width: 300px;
+          width: 316px;
         }
       } 
 
@@ -142,8 +146,8 @@
       }
       @media(min-width: 1024px) {
         #main {
-          left: 300px;
-          width: calc(100% - 300px);
+          left: 316px;
+          width: calc(100% - 316px);
         }
       }
 
@@ -547,6 +551,38 @@
 .highlight {
   position: relative;
 }
+
+span.active {
+  position: relative;
+}
+
+span.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -4px;
+  width: 2px;
+  background-color: #3E74FF;
+}
+
+.collapse-title.collapsed {
+  font-weight: 700;
+}
+
+.collapse-body.block {
+  position: relative;
+}
+
+.collapse-body.block::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  background-color: #E7EDF9;
+  width: 1px;
+}
 </style>
   </head>
   <body class="font-roboto text-base-color h-full dark:bg-primary-DN0 dark:text-primary-DN60">
@@ -608,7 +644,7 @@
       const parent = item?.closest("div.collapse");
 
       if(parent) {
-        if( (window.location.pathname === item.getAttribute("data-href")) || (window.location.pathname+"/" === item.getAttribute("data-href")) ) {
+        if( (window.location.pathname === item.getAttribute("data-href")) || (window.location.pathname === item.getAttribute("data-href"))+"/" ) {
           parent.querySelector(".collapse-title")?.classList.add("collapsed");
           parent.querySelector(".collapse-body")?.classList.remove("hidden");
           parent.querySelector(".collapse-body")?.classList.add("block");
@@ -784,5 +820,7 @@
       item.addEventListener("click", (evt) => handleCopyClick(item, evt));
     });
   </script>
+
+  
   </body>
 </html>

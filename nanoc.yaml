@@ -10,3 +10,140 @@ prune:
 data_sources:
   - type: filesystem
     encoding: utf-8
+
+
+sidebar:
+  - title: Introduction
+    link: "/"
+  - dropdown_menu_title: Going live
+    dropdown_menu_items: 
+      - title: Overview
+        link: "/going-live/checklist/"
+      # Subsection starts here with heading and list of links
+      - subsection:
+        - heading: Distributors w/ BSE
+        - title: Overview
+          link: "/going-live/distributors-with-bse/"
+        - title: BSE sign up
+          link: "/going-live/signing-up-with-bse-starmf/"
+      # Subsection ends here
+      # Subsection starts here with heading and list of links
+      - subsection:
+        - heading: Distributors w/ RTA
+        - title: Overview
+          link: "/going-live/distributors-with-rtas/"
+        - title: Razorpay sign up
+          link: "/going-live/signing-up-with-razorpay/"
+      # Subsection ends here
+  - dropdown_menu_title: Identity
+    dropdown_menu_items: 
+      - title: Overview
+        link: "/identity/overview/"
+      - title: Check the kyc status
+        link: "/identity/kyc-check/"
+      # Subsection starts here with heading and list of links
+      - subsection: 
+        - heading: Perform digital kyc
+        - title: Overview
+          link: "/identity/kyc-request/"
+        - title: Required information
+          link: "/identity/required-information/"
+      # Subsection ends here
+      - title: Perform Bank Account Verification
+        link: "/identity/verification/perform-bank-account-verification/"
+      - title: FAQs
+        link: "/identity/FAQs/"
+  - dropdown_menu_title: MF Orders
+    dropdown_menu_items: 
+      - title: Overview
+        link: "/mf-transactions/overview/"
+      - title: Open an investment
+        link: "/mf-transactions/investment-account/"
+      # Subsection starts here with heading and list of links
+      - subsection:
+        - heading: "One time orders"
+        - title: Create a onetime purchase
+          link: "/mf-transactions/onetime-purchases/"
+        - title: Sell a mutual fund
+          link: "/mf-transactions/onetime-redemptions/"
+        - title: Switch from one scheme to another
+          link: "/mf-transactions/onetime-switches/"
+      # Subsection ends here
+      # Subsection starts here with heading and list of links
+      - subsection:  
+        - heading: "Recurring purchases"
+        - title: Migrating from V1 SIP APIs to Purchase plans
+          link: "/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration/"
+        - title: Create a new SIP
+          link: "/mf-transactions/purchase-plans/create-monthly-sip/"
+        - title: Top up amount for an SIP
+          link: "/mf-transactions/purchase-plans/topup-sip/"
+        - title: Pause installments of an existing SIP
+          link: "/mf-transactions/purchase-plans/pause-sip/"
+        - title: Renew the tenure of an SIP
+          link: "/mf-transactions/purchase-plans/renew-sip/"
+      # Subsection ends here
+      # Subsection starts here with heading and list of links
+      - subsection:  
+        - heading: "Recurring Redemptions"
+        - title: Schedule a recurring withdrawal
+          link: "/mf-transactions/recurring-redemptions/"
+      # Subsection ends here
+      # Subsection starts here with heading and list of links
+      - subsection:  
+        - heading: "Recurring Switches"
+        - title: Schedule a recurring withdrawal
+          link: "/mf-transactions/recurring-redemptions/"
+      # Subsection starts here with heading and list of links
+      - subsection:  
+        - heading: "Appendix"
+        - title: Order States
+          link: "/mf-transactions/order-states/"
+      # Subsection ends here
+      # Subsection starts here with heading and list of links
+      - subsection:  
+        - heading: "Archives"
+        - title: One time purchases w/ Old APIs
+          link: "/mf-transactions/onetime-purchases-old-apis/"
+        - title: Sell a mutual fund w/ Old APIs
+          link: "/mf-transactions/onetime-redemptions-old-apis/"
+        - title: Create a recurring purchase w/ Old APIs
+          link: "/mf-transactions/recurring-purchases/"
+      # Subsection ends here
+  - dropdown_menu_title: Payments
+    dropdown_menu_items: 
+      - title: Overview
+        link: "/payments/overview/"
+      - title: Managing e-mandates
+        link: "/payments/managing-e-mandates/"
+      - title: Collect payments via e-mandates
+        link: "/payments/collect-payment-via-mandates/"
+      # Subsection starts here with heading and list of links
+      - subsection:
+        - heading: "Appendix"
+        - title: Payment States
+          link: "/payments/payment-states/"
+        - title: Mandate States
+          link: "/payments/mandate-states/"
+      # Subsection ends here
+  - dropdown_menu_title: Investor Reporting
+    dropdown_menu_items: 
+      - title: Overview
+        link: "/pages/workflows/investor-reporting/"
+      - title: Usage
+        link: "/pages/workflows/investor-reporting-usage/"
+  - dropdown_menu_title: General topics
+    dropdown_menu_items: 
+      - title: Automated communications with investors
+        link: "/pages/workflows/automated-communication/"
+      - title: Product Roadmap
+        link: "/future/roadmap/"
+      - title: Release notes
+        link: "/general-topics/release-notes/"
+  - dropdown_menu_title: SDKs
+    dropdown_menu_items: 
+      - title: FP SDK for Javascript
+        link: "/fp-sdk/sdk-javascript/"
+      - title: Examples
+        link: "/fp-sdk/sdk-javascript/examples/"
+
