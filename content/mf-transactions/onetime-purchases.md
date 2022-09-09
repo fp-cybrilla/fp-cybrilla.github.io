@@ -9,7 +9,7 @@ title: One time purchases
 > 2. You have an [investment account created](/mf-transactions/overview) for your investor
 
 #### 1. Get fund scheme details and check purchase eligibility 
-Once you have decided to place a purchase order against a particular scheme, fetch the scheme details using the [FPDocs, Get fund scheme](https://fintechprimitives.com/api/#get-single-fund-schemes-detail), and ensure that the scheme is eligible for purchase. Here are the checks that you must do.
+Once you have decided to place a purchase order against a particular scheme, fetch the scheme details using the [FPDocs, Get fund scheme](https://fintechprimitives.com/docs/api/#fund-scheme), and ensure that the scheme is eligible for purchase. Here are the checks that you must do.
 
 1. The scheme must be active (i.e. `active`=`true`) 
 2. Lumpsum purchases must be allowed (i.e. `purchase_allowed`=`true`)
