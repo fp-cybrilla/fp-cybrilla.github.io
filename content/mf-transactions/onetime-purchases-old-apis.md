@@ -66,7 +66,7 @@ A purchase order gets created for which you need to make a payment. Keep a note 
   ]
 }
 ```
-#### 2.Send OTP to mobile/email and obtain consent for nomination details before creating payment for new folio creation
+#### 2. Send OTP to mobile/email and obtain consent for nomination details before creating payment for new folio creation
 
 **This step is applicable only for new folio creation. i.e. if it is a new investment under a new folio**
 

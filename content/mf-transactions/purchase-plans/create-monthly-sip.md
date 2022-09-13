@@ -4,8 +4,6 @@ title: Create a new SIP
 ## Create a new SIP
 > The use case explained here is implemented via APIs which are in Alpha Stage. The API specs might change.
 
-A consent via OTP for nomination details needs to be obtained from all the holders as described below
-
 #### 1. Send OTP to mobile/email and obtain consent for nomination details before SIP order
 
 **This step is applicable only for new folio creation. i.e. if it is a new investment under a new folio**
