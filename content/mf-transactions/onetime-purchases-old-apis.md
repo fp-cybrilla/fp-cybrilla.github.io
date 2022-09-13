@@ -10,8 +10,9 @@ title: One time purchases w/ Old APIs
 
 Once you have the investor and investment account created, follow the below steps to place a purchase order.  
 1. Create a purchase order
-2. Make payment
-3. Check the order status
+2. Send OTP to mobile/email and obtain consent for nomination details before creating payment for new folio creation
+3. Make payment
+4. Check the order status
 
 #### 1. Create a purchase order
 Some funds are not allowed for purchases and some might temporarily stop accepting purchase orders. Make sure you check the `purchase_allowed` field is `true` for the fund scheme(s) you are placing the order for, using the [FPDocs, Get fund scheme](https://fintechprimitives.com/api/#get-single-fund-schemes-detail).
@@ -65,8 +66,37 @@ A purchase order gets created for which you need to make a payment. Keep a note 
   ]
 }
 ```
+#### 2.Send OTP to mobile/email and obtain consent for nomination details before creating payment for new folio creation
 
-#### 2. Make payment
+**This step is applicable only for new folio creation. i.e. if it is a new investment under a new folio**
+
+**For what purpose must the consent be taken?**
+
+The investor has two options to manage nominations while creating a new folio.
+
+1. Either provide nominee details (upto 3) OR
+2. Opt out of nomination
+
+Irrespective of the option chosen, obtaining consent from the investor for the nomination option is mandatory.
+
+**How should consent be taken?**
+
+If nominee details are provided, ensure that all the holders know of their nomination preferences so that they can give consent.
+1. Nominee Name
+2. Nominee DOB (Mandatory & Applicable in case the Nominee is a Minor)
+3. Allocation Percentage
+4. Nominee Relationship
+5. Name of the Guardian (Mandatory & Applicable in case the Nominee is a Minor) 
+6. Guardian’s Relationship with Nominee (Mandatory & Applicable in case the Nominee is a Minor) 
+7. Nominee Pan (Optional)
+
+On the other hand, if nominee details are not provided, ensure that all holders know that they are opting out of the nomination facility.
+
+- Send OTP to both Mobile number/Email address. This must be the mobile number/email address stored against the primary investor linked to the investment account associated with the purchase order. If there are multiple holders, send OTP to Mobile number/Email addresses of all holders.
+- Accept OTP from all the holders and verify the OTP and ensure that the correct OTP is entered.
+- Store all the consent-related information for audit purposes.
+
+#### 3. Make payment
 
 To make a payment using internet banking or upi, make a request to [FPDocs, create payment](https://fintechprimitives.com/api/#post-net-banking) with the following json. Use the order id from the previous api response.
 
@@ -80,7 +110,7 @@ To make a payment using internet banking or upi, make a request to [FPDocs, crea
 Look for `token_url` in the response and redirect your investor to it to complete his payment. After your investor finishes the payment, FP redirects him to the postback URL configured on your account or to the `payment_postback_url` provided in the request. You'll receive `success` or `failure` in the `status` param. As a good security practice, do not completely rely on the `status` received in the postback call. Instead check the status of the payment from your server before giving a final confirmation to your investor.  
 
 
-#### 3. Check the order status
+#### 4. Check the order status
 
 Call the [FPDocs, get order](https://fintechprimitives.com/api/#get-fetch-single-order) to check the `status` of the order.  
 When the payment is successful, the order status becomes `PAYMENT_CONFIRMED`. 
