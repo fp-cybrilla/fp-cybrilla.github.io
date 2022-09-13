@@ -65,11 +65,11 @@ On every installment, FP does the following automatically:
 
 > NOTE: Currently the payments for the SIP investments have to be processed using FP Payment APIs (via nach only). Ability to use your own FPDocs payment providers is under implementation and will be available soon.
 
-#### 2. Fetch the installments
+#### 3. Fetch the installments
 
 Fetch the installments of the SIP plan using the [FPDocs, fetch installments](https://fintechprimitives.com/api/#fetch-installments-of-a-sip).
 
-#### 3. Track the SIP installment
+#### 4. Track the SIP installment
 
 FP uses `MF Purchase` object to represent the sip installment.
 

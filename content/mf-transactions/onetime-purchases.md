@@ -8,11 +8,8 @@ title: One time purchases
 > 1. Your investor is [kyc compliant](/identity/overview)
 > 2. You have an [investment account created](/mf-transactions/overview) for your investor
 
-Once you have the investor and investment account created, follow the below steps to place a purchase order.  
-1. Create a purchase order
-2. Send OTP to mobile/email and obtain consent for nomination details before creating payment for new folio creation
-3. Make payment
-4. Check the order state
+#### 1. Get fund scheme details and check purchase eligibility 
+Once you have decided to place a purchase order against a particular scheme, fetch the scheme details using the [FPDocs, Get fund scheme](https://fintechprimitives.com/docs/api/#fund-scheme), and ensure that the scheme is eligible for purchase. Here are the checks that you must do.
 
 1. The scheme must be active (i.e. `active`=`true`) 
 2. Lumpsum purchases must be allowed (i.e. `purchase_allowed`=`true`)
@@ -43,7 +40,10 @@ A MF Purchase gets created for which you need to make a payment. Keep a note of 
   "amount": 10000
 }
 ```
-#### 2.Send OTP to mobile/email and obtain consent for nomination details before creating payment for new folio creation
+**Note:** 
+If you are placing a purchase order against an existing folio, you can also provide `folio_number` while creating a purchase order.
+
+#### 3. Send OTP to mobile/email and obtain consent for nomination details before creating payment for new folio creation
 
 **This step is applicable only for new folio creation. i.e. if it is a new investment under a new folio**
 
@@ -73,7 +73,7 @@ On the other hand, if nominee details are not provided, ensure that all holders 
 - Accept OTP from all the holders and verify the OTP and ensure that the correct OTP is entered.
 - Store all the consent-related information for audit purposes.
 
-#### 3. Collect payments against purchase orders
+#### 4. Collect payments against purchase orders
 
 <div class="tabs">
 	<div class="tabs-bar">
@@ -266,8 +266,29 @@ After the money is settled into the scheme's bank account, call the [FPDocs, cre
   "settlement_processed_at": "2020-04-09T12:00:09"
 }
 ``` -->
+**Note**
+If the order gateway is `BSE`, after you have created the purchase order and obtained consent for nomination(applicable if it is a fresh purchase), you must confirm the order using [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase) and ensure that orders are in `submitted` state before you can accept payments. 
 
-#### 4. Track the order
+```json
+{
+  "id": "mfp_177177219f634373b01072986d2eea7d",
+  "state": "confirmed"
+}
+```
+```json
+# Displaying only a part of the object(response) for brevity
+{
+  "object": "mf_purchase",
+  "id": "mfp_177177219f634373b01072986d2eea7d",
+  "mf_investment_account": "mfia_367a75826694614a539c0f82b196027",
+  "amount": 10000,
+  "state":"confirmed"
+}
+```
+After you have confirmed the order, FP will try to submit the order to BSE asynchronously in the background. Once the order submission is successful, the purchase order state changes from `confirmed` to `submitted`. You can use [FPDocs, Fetch a MF Purchase](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to ensure that order has moved from `confirmed` to `submitted` state. Once a BSE purchase order is in `submitted` state, you can accept payments.
+
+
+#### 5. Track the order
 Once the payment collection is successful, you don't have to take further actions. After the order is processed successfully (typically takes one day) - units are allotted and the object state will move to `successful`.  You can track a single purchase order using [FPDocs, fetch mf purchase](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to check the `state` of the order or you can check the status of multiple orders at once using [FPDocs, MF Purchase List](https://fintechprimitives.com/docs/api/#mf-purchase-list-report) API. 
 
 For a successful order, review the following key attributes of the `mf_purchase` object:  
