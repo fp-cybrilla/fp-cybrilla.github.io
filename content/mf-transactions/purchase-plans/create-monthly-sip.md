@@ -27,6 +27,7 @@ If nominee details are provided, ensure that all the holders know of their nomin
 5. Name of the Guardian (Mandatory & Applicable in case the Nominee is a Minor) 
 6. Guardian’s Relationship with Nominee (Mandatory & Applicable in case the Nominee is a Minor) 
 7. Nominee Pan (Optional)
+8. Guardian Pan (Optional. Can provide this value if nominee is a minor)
 
 On the other hand, if nominee details are not provided, ensure that all holders know that they are opting out of the nomination facility.
 
