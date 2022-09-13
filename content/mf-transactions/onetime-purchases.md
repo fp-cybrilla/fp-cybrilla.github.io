@@ -8,8 +8,11 @@ title: One time purchases
 > 1. Your investor is [kyc compliant](/identity/overview)
 > 2. You have an [investment account created](/mf-transactions/overview) for your investor
 
-#### 1. Get fund scheme details and check purchase eligibility 
-Once you have decided to place a purchase order against a particular scheme, fetch the scheme details using the [FPDocs, Get fund scheme](https://fintechprimitives.com/docs/api/#fund-scheme), and ensure that the scheme is eligible for purchase. Here are the checks that you must do.
+Once you have the investor and investment account created, follow the below steps to place a purchase order.  
+1. Create a purchase order
+2. Send OTP to mobile/email and obtain consent for nomination details before creating payment for new folio creation
+3. Make payment
+4. Check the order state
 
 1. The scheme must be active (i.e. `active`=`true`) 
 2. Lumpsum purchases must be allowed (i.e. `purchase_allowed`=`true`)
@@ -40,32 +43,35 @@ A MF Purchase gets created for which you need to make a payment. Keep a note of 
   "amount": 10000
 }
 ```
-**Note:** 
-1. If you are placing a purchase order against an existing folio, you can also provide `folio_number` while creating a purchase order.
-2. If the order gateway is `BSE`, after you have created the purchase order, you must confirm the order using [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase) and ensure that orders are in `submitted` state before you can accept payments. 
+#### 2.Send OTP to mobile/email and obtain consent for nomination details before creating payment for new folio creation
 
-```json
-{
-  "id": "mfp_177177219f634373b01072986d2eea7d",
-  "state": "confirmed"
-}
-```
-Response:
+**This step is applicable only for new folio creation. i.e. if it is a new investment under a new folio**
 
-```json
-# Displaying only a part of the object(response) for brevity
-{
-  "object": "mf_purchase",
-  "id": "mfp_177177219f634373b01072986d2eea7d",
-  "mf_investment_account": "mfia_367a75826694614a539c0f82b196027",
-  "amount": 10000,
-  "state":"confirmed"
-}
-```
+**For what purpose must the consent be taken?**
 
-After you have confirmed the order, FP will try to submit the order to BSE asynchronously in the background. Once the order submission is successful, the purchase order state changes from `confirmed` to `submitted`. You can use [FPDocs, Fetch a MF Purchase
-](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to ensure that order has moved from `confirmed` to `submitted` state. Once a BSE purchase order is in `submitted` state, you can accept payments.
+The investor has two options to manage nominations while creating a new folio.
 
+1. Either provide nominee details (upto 3) OR
+2. Opt out of nomination
+
+Irrespective of the option chosen, obtaining consent from the investor for the nomination option is mandatory.
+
+**How should consent be taken?**
+
+If nominee details are provided, ensure that all the holders know of their nomination preferences so that they can give consent.
+1. Nominee Name
+2. Nominee DOB (Mandatory & Applicable in case the Nominee is a Minor)
+3. Allocation Percentage
+4. Nominee Relationship
+5. Name of the Guardian (Mandatory & Applicable in case the Nominee is a Minor) 
+6. Guardian’s Relationship with Nominee (Mandatory & Applicable in case the Nominee is a Minor) 
+7. Nominee Pan (Optional)
+
+On the other hand, if nominee details are not provided, ensure that all holders know that they are opting out of the nomination facility.
+
+- Send OTP to both Mobile number/Email address. This must be the mobile number/email address stored against the primary investor linked to the investment account associated with the purchase order. If there are multiple holders, send OTP to Mobile number/Email addresses of all holders.
+- Accept OTP from all the holders and verify the OTP and ensure that the correct OTP is entered.
+- Store all the consent-related information for audit purposes.
 
 #### 3. Collect payments against purchase orders
 
@@ -317,6 +323,8 @@ fpClient.mf_purchases().create({
 #### 2.1. You are using FP payment APIs
 
 #### Create a payment
+
+**Before the payment is made, the channel partner need to make sure that the consent is obtained from the investors.**
 
 ```javascript
 
