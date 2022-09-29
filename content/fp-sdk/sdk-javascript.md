@@ -25,7 +25,7 @@ Each object will have a standard function names such as `create`, `fetch`, `fetc
 Objects supports additional functions as applicable.
 
 
-```
+```javascript
 import { fp } from '@fintechprimitives/fpapi';
 
   //Create options required to initialize the `fp` instance.
@@ -136,7 +136,7 @@ Detail on the `payment` object [documentation](https://fintechprimitives.com/doc
 `PostBackVerification Usage`
 
 
-```
+```javascript
 const fpc = new fp(options);
   try{
     const data = await fpc.payments().postBackVerification({
@@ -155,22 +155,21 @@ const fpc = new fp(options);
 Response
 
 success:
+```json
+{
+  payment_id: "123",
+  status: "success"
+}
 ```
-  {
-      payment_id: '123',
-      status: 'success'
-   }
- ```
 
-  error:
-  ```
-    error {
-            status: 400,
-            message: 'The hash do not match, data has been tampered!!!'
-          }
-  ```
+error:
+```json
+{
+  status: 400,
+  message: "The hash do not match, data has been tampered!!!"
+}
+```
 
-------------------------
 
 
 #### `bank_account_verifications`
@@ -229,8 +228,7 @@ This functions can be called without initiaing the `fp` instance.
 Each function will return a `boolean`.
 #### Usage
 
-```
-
+```javascript
   import { ValidatorUtil } from "@fintechprimitives/fpapi";
 
   console.log(ValidatorUtil.phoneNumber("9994000090"));
