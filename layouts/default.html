@@ -7,6 +7,7 @@
     <link rel="icon" href="/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheet.css">
     <!-- you don't need to keep this, but it's cool for stats! -->
     <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
@@ -254,6 +255,11 @@
       pre {
         position: relative;
         overflow: auto;
+      }
+
+      code {
+        font-family: 'Noto Sans Mono', monospace;
+        padding: 0.14rem;
       }
 
       pre.json code {
@@ -584,6 +590,123 @@ span.active::before {
   width: 1px;
 }
 
+/* code snippet syntax highlight */
+code.hljs {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.hljs {
+    color: #061738;
+    background: #f3f6fb;
+}
+.hljs-subst {
+    color: #2f3337;
+}
+
+.hljs-punctuation {
+    color: #061738;
+}
+.hljs-title.function_ {
+    color: #1592e6;
+}
+
+.hljs-comment {
+    color: #9faabe;
+}
+.hljs-attr,
+.hljs-doctag,
+.hljs-meta.hljs-keyword,
+.hljs-section,
+.hljs-selector-tag {
+    color: #3f567e;
+}
+
+.hljs-keyword,
+.hljs-literal {
+  color: #9254DE;
+}
+
+.hljs-attribute {
+    color: #3f567e;
+}
+.hljs-name,
+.hljs-number,
+.hljs-quote,
+.hljs-selector-id,
+.hljs-template-tag,
+.hljs-type {
+    color: #1592e6;
+}
+.hljs-selector-class {
+    color: #015692;
+}
+.hljs-link,
+.hljs-regexp,
+.hljs-selector-attr,
+.hljs-string,
+.hljs-symbol,
+.hljs-template-variable,
+.hljs-variable {
+    color: #009666;
+}
+.hljs-meta,
+.hljs-selector-pseudo {
+    color: #015692;
+}
+.hljs-built_in,
+.hljs-title {
+    color: #b75501;
+}
+.hljs-bullet,
+.hljs-code {
+    color: #535a60;
+}
+.hljs-meta.hljs-string {
+    color: #54790d;
+}
+.hljs-deletion {
+    color: #c02d2e;
+}
+.hljs-addition {
+    color: #2f6f44;
+}
+.hljs-emphasis {
+    font-style: italic;
+}
+.hljs-strong {
+    font-weight: 700;
+}
+.hljs-title.class_ {
+  color: #FFA940;
+}
+
+/* Dark mode: code snippet syntax highlight */
+.dark .hljs-punctuation {
+    color: #FBFCFE;
+}
+.dark .hljs-title.function_ {
+  color: #5081FF;
+}
+.dark .hljs-attr {
+    color: #A5A6A9;
+}
+.dark .hljs-keyword, .dark .hljs-literal {
+  color: #D3ADF7;
+}
+.dark .hljs-number {
+  color: #5081FF;
+}
+.dark .hljs-comment {
+  color: #6F809E;
+}
+.dark .hljs-title.class_ {
+  color: #FFD591;
+}
+.dark .hljs-doctag {
+  color: #B6BFCE;
+}  
 .dark .collapse-body.block::before { 
   background-color: #6F809E;
 }
@@ -607,6 +730,7 @@ span.active::before {
       </div>
     </div>
     <script src="/pixel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
     <script>
 
       // Get the theme toggle input
@@ -768,6 +892,12 @@ span.active::before {
 
 
   <script>
+    // highlight.js
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
     // get the list of all highlight code blocks
     const highlights = document.querySelectorAll("pre.code");
 
@@ -812,19 +942,17 @@ span.active::before {
       item.innerHTML = "Copied";
       
       window.setTimeout(function () {
-        item.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><g fill="#3f567e"><path d="M10 19h8V8h-8v11zM8 7.992C8 6.892 8.902 6 10.009 6h7.982C19.101 6 20 6.893 20 7.992v11.016c0 1.1-.902 1.992-2.009 1.992H10.01A2.001 2.001 0 018 19.008V7.992z"></path><path d="M5 16V4.992C5 3.892 5.902 3 7.009 3H15v13H5zm2 0h8V5H7v11z"></path></g></svg>';
+        item.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><g fill="#9faabe"><path d="M10 19h8V8h-8v11zM8 7.992C8 6.892 8.902 6 10.009 6h7.982C19.101 6 20 6.893 20 7.992v11.016c0 1.1-.902 1.992-2.009 1.992H10.01A2.001 2.001 0 018 19.008V7.992z"></path><path d="M5 16V4.992C5 3.892 5.902 3 7.009 3H15v13H5zm2 0h8V5H7v11z"></path></g></svg>';
       }, 2000);
     }
 
     document.querySelectorAll("pre.highlight").forEach(item => {
-      item.insertAdjacentHTML("afterend", '<div class="copy-code absolute top-1 right-1 cursor-pointer"><svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><g fill="#3f567e"><path d="M10 19h8V8h-8v11zM8 7.992C8 6.892 8.902 6 10.009 6h7.982C19.101 6 20 6.893 20 7.992v11.016c0 1.1-.902 1.992-2.009 1.992H10.01A2.001 2.001 0 018 19.008V7.992z"></path><path d="M5 16V4.992C5 3.892 5.902 3 7.009 3H15v13H5zm2 0h8V5H7v11z"></path></g></svg></div>');
+      item.insertAdjacentHTML("afterend", '<div class="copy-code absolute top-2 right-2 cursor-pointer"><svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><g fill="#9faabe"><path d="M10 19h8V8h-8v11zM8 7.992C8 6.892 8.902 6 10.009 6h7.982C19.101 6 20 6.893 20 7.992v11.016c0 1.1-.902 1.992-2.009 1.992H10.01A2.001 2.001 0 018 19.008V7.992z"></path><path d="M5 16V4.992C5 3.892 5.902 3 7.009 3H15v13H5zm2 0h8V5H7v11z"></path></g></svg></div>');
     });
 
     document.querySelectorAll(".copy-code").forEach(item => {
       item.addEventListener("click", (evt) => handleCopyClick(item, evt));
     });
   </script>
-
-  
   </body>
 </html>

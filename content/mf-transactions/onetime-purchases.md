@@ -275,6 +275,8 @@ If the order gateway is `BSE`, after you have created the purchase order and obt
   "state": "confirmed"
 }
 ```
+<br />
+
 ```json
 # Displaying only a part of the object(response) for brevity
 {
