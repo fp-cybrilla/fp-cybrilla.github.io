@@ -7,3 +7,12 @@ bundle exec nanoc live
 2. The release details must be sorted in descending order with latest release always appearing on top.
 3. Don't use <br> tag for line breaks. Use more spaces or blackslash for line breaks instead of <br> tag. Reference : https://docs.gitlab.com/ee/user/markdown.html#newlines
 4. If you want a line-break in bulleted list, please use two trailing space followed by newline. See existing release notes for examples.
+
+<br/>
+
+## To add diagrams using mermaid
+```
+<div class="mermaid">
+  // your mermaid code goes here...
+</div>
+```
