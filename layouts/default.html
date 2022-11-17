@@ -754,6 +754,8 @@ code.hljs {
         
         // Function that will switch the theme based on the if the theme toggle is checked or not
         function switchTheme(e) {
+          window.top.location.reload();
+
           if (e.target.checked) {
             document.documentElement.classList.add('dark');
             localStorage.setItem("theme", "dark");
@@ -952,6 +954,17 @@ code.hljs {
 
     document.querySelectorAll(".copy-code").forEach(item => {
       item.addEventListener("click", (evt) => handleCopyClick(item, evt));
+    });
+  </script>
+
+  <script src="https://unpkg.com/mermaid@9/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ 
+      startOnLoad: true,
+      theme: localStorage.getItem("theme") === 'dark' ? 'dark' : 'defualt',
+      themeVariables: {
+        fontFamily: '"Open Sans", sans-serif'
+      }
     });
   </script>
   </body>
