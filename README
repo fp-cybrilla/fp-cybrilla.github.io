@@ -11,8 +11,10 @@ bundle exec nanoc live
 <br/>
 
 ## To add diagrams using mermaid
+~~~
+```mermaid
+ // your mermaid code goes here...
 ```
-<div class="mermaid">
-  // your mermaid code goes here...
-</div>
-```
+~~~
+
+

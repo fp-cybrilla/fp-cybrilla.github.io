@@ -93,4 +93,12 @@ class Redcarpet::Render::CustomHTML < Redcarpet::Render::HTML
       </h#{level}>"
     end
   end
+
+  def block_code(code, language)
+    if(language == 'mermaid')
+      "<div class='mermaid'>#{code}</div>"
+    else
+      super;
+    end
+  end
 end
