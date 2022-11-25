@@ -140,6 +140,8 @@ sidebar:
         link: "/future/roadmap/"
       - title: Release notes
         link: "/general-topics/release-notes/"
+      - title: Best Practices Guide
+        link: "/general-topics/best-practices-guide/"
   - dropdown_menu_title: SDKs
     dropdown_menu_items: 
       - title: FP SDK for Javascript
