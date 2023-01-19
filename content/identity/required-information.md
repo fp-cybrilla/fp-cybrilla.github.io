@@ -12,7 +12,7 @@ The following information about the investor needs to be collected for a success
 3. Email ID and mobile number of the investor ( `email`, `mobile` )
 4. Date of birth ( `date_of_birth` )
 5. Last 4 digits of the Aadhaar number ( `aadhaar_number` )
-6. Father name or spouse name in full ( `father_name`, `spouse_name` )
+6. Father name in full ( `father_name` )
 7. Mother name in full ( `mother_name` )
 8. Gender ( `gender` )
 9. Country of birth ( `country_of_birth` )
@@ -26,10 +26,8 @@ The following information about the investor needs to be collected for a success
 17. Verification video ( `ipv_video` )
 18. Bank account details with proof ( `bank_account` )
 19. Geo location ( `geolocation` )
-20. Fatca/CRS self declaration (TBD)
+20. Fatca/CRS self declaration
 21. Electronic signature on the application form
-
-\*TBD: We will provide the field names when the APIs are released
 
 
 ### Accepted address proofs
