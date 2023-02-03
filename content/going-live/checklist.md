@@ -11,4 +11,4 @@ Email us at fpsupport@cybrilla.com when you are ready with the details or if you
 
 1. [Distributors routing orders via BSE](/going-live/distributors-with-bse)
 2. [Distributors routing orders via RTAs](/going-live/distributors-with-rtas)
-3. AMCs (coming soon)
+3. [AMCs](/going-live/amc)
