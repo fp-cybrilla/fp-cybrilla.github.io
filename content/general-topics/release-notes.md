@@ -3,6 +3,7 @@
 ## Upcoming Releases
 #### Available in Sandbox
 * We have now provided the ability for the investor to invest in schemes which require transactions on a daily, weekly or a fortnightly basis. For more info, please check the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
+* You can now update the installment day and installment amount for a non-systematic plan. Please refer the [documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan) for more info.
 
 ## February 2023
 #### 2nd February 2023
