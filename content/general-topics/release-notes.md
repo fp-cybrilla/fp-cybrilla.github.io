@@ -8,7 +8,7 @@
 
 
 
-## Past Releases (Live)
+## Previous Releases (Live)
 
 ## February 2023
 #### 2nd February 2023
