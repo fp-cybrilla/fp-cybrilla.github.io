@@ -1,5 +1,19 @@
 # Release notes
 
+## Upcoming Releases
+#### Available in Sandbox
+* We have now provided the ability for the investor to invest in schemes which require transactions on a daily, weekly or a fortnightly basis. For more info, please check the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
+
+* You can now update the no. of installments, installment day and  amount for a non-systematic plan. Frequencies supported are`daily`, `twice_a_month`, `day_in_a_fortnight`,`four_times_a_month`,`day_in_a_week`,`monthly`,`quarterly`, `half_yearly`,`yearly`. Please refer the [documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan) for more info.
+
+
+
+## Previous Releases (Live)
+
+## February 2023
+#### 2nd February 2023
+* You can now update the installment amount for a systematic/non-systematic plan. For more info, please read the [documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan)
+
 ## July 2022
 #### 14th July 2022
 * You can now see the non-compliance reason and action required to ensure compliance when you check KYC status. For more info, please read the [documentation](/identity/kyc-check/)  
