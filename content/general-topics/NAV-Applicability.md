@@ -74,7 +74,7 @@ Net banking | ICICI Bank - Retail Net Banking |2:30 PM| T |T|
 
 ---
 
-## Why does unit allotment take T+1 Days for all other banks in Net Banking ?**
+## Why does unit allotment take T+1 Days for all other banks in Net Banking ?
 
 Generally net banking in BSE is categorised into two types:
 
