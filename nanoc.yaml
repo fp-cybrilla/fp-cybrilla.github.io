@@ -142,6 +142,8 @@ sidebar:
         link: "/general-topics/release-notes/"
       - title: Best Practices Guide
         link: "/general-topics/best-practices-guide/"
+      - title: NAV Applicability
+        link: "/general-topics/NAV-Applicability/"
   - dropdown_menu_title: SDKs
     dropdown_menu_items: 
       - title: FP SDK for Javascript
