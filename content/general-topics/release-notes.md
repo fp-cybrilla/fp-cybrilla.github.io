@@ -2,6 +2,8 @@
 
 ## Upcoming Releases
 #### Available in Sandbox
+* You can now place a SWP order in BSE gateway. For more information please check the [documentation](https://fintechprimitives.com/docs/api/#create-a-redemption-plan)
+
 * We have introduced a new and a better facility to store the demographic information belonging to an investor - Investor Profiles. Investor profiles can also support partial onboarding usecases for investors. For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#investor-profiles-early-access)
 
 * Ability to create and update MF Investment accounts using Investor Profile ID. You will also be able to set default preferences for some of the attributes that are present in the Investor Profile, like, phone number, email address, etc. These would be used for new folio creation. For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#mf-investment-accounts)
@@ -11,6 +13,8 @@
 * We now support recurring transaction plans in additional frequencies supported by the schemes like daily, weekly or a fortnightly basis. For more info, please check the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
 
 * You can now update the no. of installments and installment day for a non-systematic plan. Frequencies supported are `daily`, `twice_a_month`, `day_in_a_fortnight`, `four_times_a_month`, `day_in_a_week`, `monthly`, `quarterly`, `half_yearly` and `yearly`. Please refer the [documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan) for more info.
+
+* You can now create a systematic/ non-systematic plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
 
 
 
