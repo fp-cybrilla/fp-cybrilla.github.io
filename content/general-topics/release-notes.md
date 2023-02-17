@@ -2,7 +2,7 @@
 
 ## Upcoming Releases
 #### Available in Sandbox
-* You can now place a SWP order in BSE gateway. For more information please check the [documentation](https://fintechprimitives.com/docs/api/#create-a-redemption-plan)
+* FP supports SWP transactions that can be routed via BSE gateway. For more information please check the [documentation](https://fintechprimitives.com/docs/api/#create-a-redemption-plan)
 
 * We have introduced a new and a better facility to store the demographic information belonging to an investor - Investor Profiles. Investor profiles can also support partial onboarding usecases for investors. For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#investor-profiles-early-access)
 
