@@ -2,7 +2,6 @@
 
 ## Upcoming Releases
 #### Available in Sandbox
-* FP supports SWP transactions that can be routed via BSE gateway. For more information please check the [documentation](https://fintechprimitives.com/docs/api/#create-a-redemption-plan)
 
 * We have introduced a new and a better facility to store the demographic information belonging to an investor - Investor Profiles. Investor profiles can also support partial onboarding usecases for investors. For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#investor-profiles-early-access)
 
@@ -10,23 +9,29 @@
 
 * File service now has support for `webm` videos along with existing `mp4` format
 
-* We now support recurring transaction plans in additional frequencies supported by the schemes like daily, weekly or a fortnightly basis. For more info, please check the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
+* We now support recurring transaction plans in additional frequencies supported by the schemes like daily, weekly or a fortnightly basis in RTA. For more info, please check the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
 
-* You can now update the no. of installments and installment day for a non-systematic plan. Frequencies supported are `daily`, `twice_a_month`, `day_in_a_fortnight`, `four_times_a_month`, `day_in_a_week`, `monthly`, `quarterly`, `half_yearly` and `yearly`. Please refer the [documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan) for more info.
+* You can now update the no. of installments and installment day for a non-systematic plan. Frequencies supported are `daily`, `twice_a_month`, `day_in_a_fortnight`, `four_times_a_month`, `day_in_a_week`, `monthly`, `quarterly`, `half_yearly` and `yearly` in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan) for more info.
 
-* You can now create a systematic/ non-systematic plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
+* You can now create a systematic plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
 
 
 
 ## Previous Releases (Live)
 
 ## February 2023
+#### 23rd February 2023
+* FP supports SWP transactions that can be routed via BSE gateway. For more information please check the [documentation](https://fintechprimitives.com/docs/api/#create-a-redemption-plan)
+
 #### 2nd February 2023
 * You can now update the installment amount for a systematic/non-systematic plan in RTA. Frequencies supported are `monthly`, `quarterly`, `half_yearly` and `yearly`. For more info, please read the [documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan)
 
 ## January 2023
 #### 25th January 2023
 * We now support digital verification of bank accounts. You can use this service to verify the [bank accounts](https://fintechprimitives.com/docs/api/#bank-accounts-early-access) present against your investor profile.  For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#bank-account-verification)
+
+#### 24th January 2023
+* You can now create a purchase order and schedule it for submission in the future. Please check [documentation](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) for more information.
 
 #### 20th January 2023
 * FP now supports submission of nomination details to BSE as part of UCC creation. You can skip the manual updations on the BSE portal. 
