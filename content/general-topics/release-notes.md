@@ -30,6 +30,9 @@
 #### 25th January 2023
 * We now support digital verification of bank accounts. You can use this service to verify the [bank accounts](https://fintechprimitives.com/docs/api/#bank-accounts-early-access) present against your investor profile.  For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#bank-account-verification)
 
+#### 24th January 2023
+* You can now create a purchase order and schedule it for submission in the future. Please check [documentation](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) for more information.
+
 #### 20th January 2023
 * FP now supports submission of nomination details to BSE as part of UCC creation. You can skip the manual updations on the BSE portal. 
 
