@@ -20,7 +20,7 @@
 ## Previous Releases (Live)
 
 ## February 2023
-### 23rd February 2023
+#### 23rd February 2023
 * FP supports SWP transactions that can be routed via BSE gateway. For more information please check the [documentation](https://fintechprimitives.com/docs/api/#create-a-redemption-plan)
 
 #### 2nd February 2023
