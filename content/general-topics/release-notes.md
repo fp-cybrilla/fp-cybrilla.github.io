@@ -2,7 +2,6 @@
 
 ## Upcoming Releases
 #### Available in Sandbox
-* FP supports SWP transactions that can be routed via BSE gateway. For more information please check the [documentation](https://fintechprimitives.com/docs/api/#create-a-redemption-plan)
 
 * We have introduced a new and a better facility to store the demographic information belonging to an investor - Investor Profiles. Investor profiles can also support partial onboarding usecases for investors. For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#investor-profiles-early-access)
 
@@ -21,6 +20,9 @@
 ## Previous Releases (Live)
 
 ## February 2023
+### 23rd February 2023
+* FP supports SWP transactions that can be routed via BSE gateway. For more information please check the [documentation](https://fintechprimitives.com/docs/api/#create-a-redemption-plan)
+
 #### 2nd February 2023
 * You can now update the installment amount for a systematic/non-systematic plan in RTA. Frequencies supported are `monthly`, `quarterly`, `half_yearly` and `yearly`. For more info, please read the [documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan)
 
