@@ -76,7 +76,7 @@ On the other hand, if nominee details are not provided, ensure that all holders 
 #### 4. Obtain investor's consent for the purchase order by sending an OTP to email or mobile or both
 As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/sep-2022/two-factor-authentication-for-transactions-in-units-of-mutual-funds_63557.html), investor consent must be obtained by - 
 1. Sending a One-Time Password to the investor at his/her email/phone number registered against the folio if a purchase order has been placed against a folio. Call the [Fetch folios](https://fintechprimitives.com/docs/api/#fetch-all-folios) API and fetch the email address and mobile number against the folio.
-2. Sending a One-Time Password to the investor at his/her email/phone number available in the V1 investor object or V2 investor profile.
+2. Sending a One-Time Password to the investor at his/her email/phone number available in the [Investor Object](https://fintechprimitives.com/docs/api/#investors) or the [Investor Profile](https://fintechprimitives.com/docs/api/#investor-profiles-early-access).
 
 Once the consent has been collected, the email and mobile used used to collected that consent need to be added to the purchase object by using [FPDocs, Update a Purchase Order](https://fintechprimitives.com/docs/api/#update-a-mf-purchase).
 
