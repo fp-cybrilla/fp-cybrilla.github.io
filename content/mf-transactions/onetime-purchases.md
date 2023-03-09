@@ -78,7 +78,7 @@ As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/sep-2022/two-f
 1. Sending a One-Time Password to the investor at his/her email/phone number registered against the folio if a purchase order has been placed against a folio. Call the [Fetch folios](https://fintechprimitives.com/docs/api/#fetch-all-folios) API and fetch the email address and mobile number against the folio.
 2. Sending a One-Time Password to the investor at his/her email/phone number available in the [Investor Object](https://fintechprimitives.com/docs/api/#investors) or the [Investor Profile](https://fintechprimitives.com/docs/api/#investor-profiles-early-access).
 
-Once the consent has been collected, the email and mobile used used to collected that consent need to be added to the purchase object by using [FPDocs, Update a Purchase Order](https://fintechprimitives.com/docs/api/#update-a-mf-purchase).
+Once the consent has been collected, the email and mobile used to collect that consent needs to be added to the purchase object by using [FPDocs, Update a Purchase Order](https://fintechprimitives.com/docs/api/#update-a-mf-purchase).
 
 
 #### 5. Collect payments against purchase orders
@@ -349,7 +349,7 @@ fpClient.mf_purchases().create({
 
 [FPDocs, Create a MF Purchase reference](https://fintechprimitives.com/docs/api/#create-a-mf-purchase)
 
-#### 2. Fetch investor contact details from the folio which is to be used to collect investor consent for the purchase order
+#### 2. Fetch investor contact details (to be used to collect consent for purchase order) from the folio
 
 **This step is applicable only for purchase order placed against an existing folio.**
 
@@ -366,7 +366,7 @@ fpClient.mf_folios().fetchAll({ folio_number: "15075102" })
 [FPDocs, Sandbox testing reference](https://fintechprimitives.com/docs/api/#testing-fetch-all-folios-api-in-sandbox)
 
 
-#### 3. Update a MF Purchase with the investor consent details
+#### 3. Update the MF Purchase with the investor consent details
 
 ```javascript
 
@@ -407,7 +407,7 @@ fpClient.payments().createNetbankingPayment({
 
 [FPDocs, Create a payment reference](https://fintechprimitives.com/docs/api/#create-a-payment)
 
-#### 4.2. Your using payment providers directly
+#### 4.2. You are using payment providers directly
 
 #### Update a MF Purchase
 
@@ -422,7 +422,7 @@ fpClient.mf_purchases().update({
 })
 ```
 
-[FPDocs, Update a MF Purchase reference](https://fintechprimitives.com/docs/api/#update-a-mf-purchase)
+Please refer [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase)
 
 #### Create a MF Settlement Detail
 
