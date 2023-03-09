@@ -23,4 +23,4 @@ As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/sep-2022/two-f
 Since a non-systematic plan comprises of a series of lumpsum purchase orders, investor consent must be collected for each installment of a non-systematic plan before payment is initiated.
 
 #### 4. Track the plan installments
-FP uses [`MF Purchase`](https://fintechprimitives.com/docs/api/#mf-purchase-object) object to represent the sip installment. You can track the state of the [`MF Purchase`](https://fintechprimitives.com/docs/api/#mf-purchase-object) representation of the installment to know the status of your installment.
+FP uses [`MF Purchase`](https://fintechprimitives.com/docs/api/#mf-purchase-object) object to represent the installment. You can track the state of the [`MF Purchase`](https://fintechprimitives.com/docs/api/#mf-purchase-object) representation of the installment to know the status of your installment.
