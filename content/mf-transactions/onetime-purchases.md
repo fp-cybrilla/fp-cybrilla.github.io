@@ -77,7 +77,8 @@ On the other hand, if nominee details are not provided, ensure that all holders 
 As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/sep-2022/two-factor-authentication-for-transactions-in-units-of-mutual-funds_63557.html), investor consent must be obtained by - 
 1. Sending a One-Time Password to the investor at his/her email/phone number registered against the folio if a purchase order has been made against a folio. Call the [Fetch folios](https://fintechprimitives.com/docs/api/#fetch-all-folios) API and fetch the email address and mobile number against the folio.
 2. Sending a One-Time Password to the investor at his/her email/phone number available in the V1 investor object or V2 investor profile.
-Once the consent has been collected, the email and mobile used used to collected that consent need to be added to the purchase object by using [FPDocs, Update a Purchase Order](https://fintechprimitives.com/docs/api/#update-a-mf-purchase) API.
+
+Once the consent has been collected, the email and mobile used used to collected that consent need to be added to the purchase object by using [FPDocs, Update a Purchase Order](https://fintechprimitives.com/docs/api/#update-a-mf-purchase).
 
 
 #### 5. Collect payments against purchase orders
@@ -348,9 +349,42 @@ fpClient.mf_purchases().create({
 
 [FPDocs, Create a MF Purchase reference](https://fintechprimitives.com/docs/api/#create-a-mf-purchase)
 
-#### 2. Make payment
+#### 2. If the purchase is made against a folio, fetch investor contact details from the folio and obtain investor consent for the purchase order by sending an OTP to the email or mobile or both
 
-#### 2.1. You are using FP payment APIs
+```javascript
+
+/**
+ * @param string folio_number
+ **/
+fpClient.mf_folios().fetchAll({ folio_number: "15075102" })
+```
+
+[FPDocs, Fetch all folios reference](https://fintechprimitives.com/docs/api/#fetch-all-folios)
+
+[FPDocs, Sandbox testing reference](https://fintechprimitives.com/docs/api/#testing-fetch-all-folios-api-in-sandbox)
+
+
+#### 3. Update a MF Purchase with the investor consent details
+
+```javascript
+
+/**
+ * @param MfPurchasePatchRequest object
+ */
+fpClient.mf_purchases().update({
+    id: "mfp_177177219f634373b01072986d2eea7d",
+    "consent": {
+    "email": "mfp@cybrilla.com",
+    "isd_code": "91",
+    "mobile": "9008580644"
+  }
+})
+```
+
+
+#### 4. Make payment
+
+#### 4.1. You are using FP payment APIs
 
 #### Create a payment
 
@@ -371,7 +405,7 @@ fpClient.payments().createNetbankingPayment({
 
 [FPDocs, Create a payment reference](https://fintechprimitives.com/docs/api/#create-a-payment)
 
-#### 2.2. Your using payment providers directly
+#### 4.2. Your using payment providers directly
 
 #### Update a MF Purchase
 
@@ -410,7 +444,7 @@ fpClient.mf_settlement_details().create({
 
 [FPDocs, Create a MF Settlement Detail reference](https://fintechprimitives.com/docs/api/#create-a-mf-settlement-detail)
 
-#### 3. Track the order
+#### 5. Track the order
 
 #### Fetch a MF Purchase
 
