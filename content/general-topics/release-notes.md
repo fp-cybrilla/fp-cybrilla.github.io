@@ -5,12 +5,6 @@
 
 * We have introduce a new feature which allows tenants configured with the BSE gateway to route their purchase/ redemption/ switch orders via RTA as well. Please refer the [documentation](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) for more information.
 
-* We have introduced a new and a better facility to store the demographic information belonging to an investor - Investor Profiles. Investor profiles can also support partial onboarding usecases for investors. For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#investor-profiles-early-access)
-
-* Ability to create and update MF Investment accounts using Investor Profile ID. You will also be able to set default preferences for some of the attributes that are present in the Investor Profile, like, phone number, email address, etc. These would be used for new folio creation. For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#mf-investment-accounts)
-
-* File service now has support for `webm` videos along with existing `mp4` format
-
 * We now support recurring transaction plans in additional frequencies supported by the schemes like daily, weekly or a fortnightly basis in RTA. For more info, please check the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
 
 * You can now update the no. of installments and installment day for a non-systematic plan. Frequencies supported are `daily`, `twice_a_month`, `day_in_a_fortnight`, `four_times_a_month`, `day_in_a_week`, `monthly`, `quarterly`, `half_yearly` and `yearly` in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan) for more info.
@@ -21,9 +15,23 @@
 
 ## Previous Releases (Live)
 
+## March 2023
+#### 7th March 2023
+* We now support ability to authenticate a user via SMS / Email / SMS or Email. For more info, please check the [documentation](https://fintechprimitives.com/docs/api/#authenticating-a-user-via-oauth-2-0-pkce-flow-from-browser-based-clients)
+
+#### 1st March 2023
+* Investor Profile go-live
+  * We have introduced a new and a better facility to store the demographic information belonging to an investor - Investor Profiles. Investor profiles can also support partial onboarding usecases for investors. Currently this is only supported on the RTA route. For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#investor-profiles-early-access)
+  * Ability to create and update MF Investment accounts using Investor Profile ID. You will also be able to set default preferences for some of the attributes that are present in the Investor Profile, like, phone number, email address, etc. These would be used for new folio creation. For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#mf-investment-accounts)
+  * We now support an ability to create orders created against MF Investment Accounts that are created by using Investor Profiles with `resident_individual` tax status
+  * Ability to make payments for orders that are created against MF Investment Accounts that are linked to Investor Profiles with `resident_individual` tax status
+
 ## February 2023
 #### 23rd February 2023
 * FP supports SWP transactions that can be routed via BSE gateway. For more information please check the [documentation](https://fintechprimitives.com/docs/api/#create-a-redemption-plan)
+
+#### 16th February 2023
+* File service now has support for `webm` videos along with existing `mp4` format. For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#create-a-file)
 
 #### 2nd February 2023
 * You can now update the installment amount for a systematic/non-systematic plan in RTA. Frequencies supported are `monthly`, `quarterly`, `half_yearly` and `yearly`. For more info, please read the [documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan)
