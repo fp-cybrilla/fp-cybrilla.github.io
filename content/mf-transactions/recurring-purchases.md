@@ -40,7 +40,7 @@ On the other hand, if nominee details are not provided, ensure that all holders 
 
 #### 2. Create a SIP
 
-Call the [FPDocs, create sip](https://fintechprimitives.com/api/#create-a-sip) with the following json. Use the `id` of the payment mandate through which the money will be debited from the investor's bank account on every installment.
+Call the [FPDocs, Create Sip](https://fintechprimitives.com/api/#create-a-sip) with the following json. Use the `id` of the payment mandate through which the money will be debited from the investor's bank account on every installment.
 
 ```json
 {
