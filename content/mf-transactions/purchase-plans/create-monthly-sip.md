@@ -35,7 +35,8 @@ On the other hand, if nominee details are not provided, ensure that all holders 
 - Store all the consent-related information for audit purposes.
 
 #### 2. Create a MF Purchase plan
-[Create a MF Purchase plan](https://fintechprimitives.com/docs/api/#create-a-purchase-plan) with `frequency`=`monthly` and `systematic`=`true`
+
+[FPDocs, Create a MF Purchase plan](https://fintechprimitives.com/docs/api/#create-a-purchase-plan) with `frequency`=`monthly` and `systematic`=`true`
 `POST /v2/mf_purchase_plans`
 ```json
 {
@@ -47,12 +48,18 @@ On the other hand, if nominee details are not provided, ensure that all holders 
   "number_of_installments": 20,
   "payment_method": "mandate",
   "payment_source": "24",
-  "systematic": true
+  "systematic": true,
+  "consent":
+  {
+    "email": "mfp@cybrilla.com",
+    "isd_code": "91",
+    "mobile": "9008580644"
+  }
 }
 ```
 Note: 
 1. This is the minimal data required to create a monthly SIP. You can also provide different follio number, EUIN, purpose of SIP etc. Please refer to [Create MF Purchase Plan API](https://fintechprimitives.com/docs/api/#create-a-purchase-plan) for full details.
-2. Once you have create a monthly SIP, an installment will be generated and processed according to the schedule and the installment details will be available from the day of the installment. 
+2. Once you have created a monthly SIP, an installment will be generated and processed according to the schedule and the installment details will be available from the day of the installment. 
 3. If you delegate the responsibility of payment collection against these installments to FP via mandates, FP also debits the money from the investor's bank account against the installment and once the debit is successful, FP submits the order to the order gateway.
 
 
