@@ -21,7 +21,13 @@ title: Migrating from V1 SIPs to Purchase plans
       "generate_first_installment_now":"false",
       "source_ref_id": "0876789",
       "user_ip": "192.168.2.92",
-      "server_ip": "192.168.2.95"
+      "server_ip": "192.168.2.95",
+      "consent": 
+      {
+        "email": "mfp@cybrilla.com",
+        "isd_code": "91",
+        "mobile": "9008580644"
+      }
     }
   ]
 }
@@ -47,7 +53,13 @@ title: Migrating from V1 SIPs to Purchase plans
   "purpose": "children_education",
   "euin": "E1234",
   "initiated_by": "investor",
-  "initiated_via": "mobile_app"
+  "initiated_via": "mobile_app",
+  "consent": 
+  {
+        "email": "mfp@cybrilla.com",
+        "isd_code": "91",
+        "mobile": "9008580644"
+      }
 }
 ```
 
