@@ -73,13 +73,14 @@ On the other hand, if nominee details are not provided, ensure that all holders 
 - Accept OTP from all the holders and verify the OTP and ensure that the correct OTP is entered.
 - Store all the consent-related information for audit purposes.
 
-#### 4. Obtain investor's consent for the purchase order by sending an OTP to email or mobile or both
+#### 4. Update the purchase order with investor consent
 As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/sep-2022/two-factor-authentication-for-transactions-in-units-of-mutual-funds_63557.html), investor consent must be obtained by - 
 1. Sending a One-Time Password to the investor at his/her email/phone number registered against the folio if a purchase order has been placed against a folio. Call the [Fetch folios](https://fintechprimitives.com/docs/api/#fetch-all-folios) API and fetch the email address and mobile number against the folio.
 2. Sending a One-Time Password to the investor at his/her email/phone number available in the [Investor Object](https://fintechprimitives.com/docs/api/#investors) or the [Investor Profile](https://fintechprimitives.com/docs/api/#investor-profiles-early-access).
 
 Once the consent has been collected, the email and mobile used to collect that consent needs to be added to the purchase object by using [FPDocs, Update a Purchase Order](https://fintechprimitives.com/docs/api/#update-a-mf-purchase).
 
+> If the order gateway is `BSE`, after you update the purchase order with the consent details using [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase) the order changes to `confirmed` state. Once the order is `confirmed`, FP will try to submit the order to BSE asynchronously in the background. Once the order submission is successful, the purchase order state changes from `confirmed` to `submitted`. Please ensure that orders are in `submitted` state before you can accept payments. <br>
 
 #### 5. Collect payments against purchase orders
 
@@ -274,29 +275,6 @@ After the money is settled into the scheme's bank account, call the [FPDocs, cre
   "settlement_processed_at": "2020-04-09T12:00:09"
 }
 ``` -->
-**Note**
-If the order gateway is `BSE`, after you have created the purchase order and obtained consent for nomination(applicable if it is a fresh purchase), you must confirm the order using [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase) and ensure that orders are in `submitted` state before you can accept payments. 
-
-```json
-{
-  "id": "mfp_177177219f634373b01072986d2eea7d",
-  "state": "confirmed"
-}
-```
-<br />
-
-```json
-# Displaying only a part of the object(response) for brevity
-{
-  "object": "mf_purchase",
-  "id": "mfp_177177219f634373b01072986d2eea7d",
-  "mf_investment_account": "mfia_367a75826694614a539c0f82b196027",
-  "amount": 10000,
-  "state":"confirmed"
-}
-```
-After you have confirmed the order, FP will try to submit the order to BSE asynchronously in the background. Once the order submission is successful, the purchase order state changes from `confirmed` to `submitted`. You can use [FPDocs, Fetch a MF Purchase](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to ensure that order has moved from `confirmed` to `submitted` state. Once a BSE purchase order is in `submitted` state, you can accept payments.
-
 
 #### 5. Track the order
 Once the payment collection is successful, you don't have to take further actions. After the order is processed successfully (typically takes one day) - units are allotted and the object state will move to `successful`.  You can track a single purchase order using [FPDocs, fetch mf purchase](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to check the `state` of the order or you can check the status of multiple orders at once using [FPDocs, MF Purchase List](https://fintechprimitives.com/docs/api/#mf-purchase-list-report) API. 
