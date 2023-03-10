@@ -409,21 +409,6 @@ fpClient.payments().createNetbankingPayment({
 
 #### 4.2. You are using payment providers directly
 
-#### Update a MF Purchase
-
-```javascript
-
-/**
- * @param MfPurchasePatchRequest object
- */
-fpClient.mf_purchases().update({
-    id: "mfp_177177219f634373b01072986d2eea7d",
-    state: "confirmed",
-})
-```
-
-Please refer [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase)
-
 #### Create a MF Settlement Detail
 
 ```javascript
@@ -445,6 +430,21 @@ fpClient.mf_settlement_details().create({
 ```
 
 [FPDocs, Create a MF Settlement Detail reference](https://fintechprimitives.com/docs/api/#create-a-mf-settlement-detail)
+
+#### Update a MF Purchase
+
+```javascript
+
+/**
+ * @param MfPurchasePatchRequest object
+ */
+fpClient.mf_purchases().update({
+    id: "mfp_177177219f634373b01072986d2eea7d",
+    state: "confirmed",
+})
+```
+
+Please refer [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase)
 
 #### 5. Track the order
 
