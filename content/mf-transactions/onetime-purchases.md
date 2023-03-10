@@ -80,7 +80,7 @@ As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/sep-2022/two-f
 
 Once the consent has been collected, the email and mobile used to collect that consent needs to be added to the purchase object by using [FPDocs, Update a Purchase Order](https://fintechprimitives.com/docs/api/#update-a-mf-purchase).
 
-> If the order gateway is `BSE`, after you update the purchase order with the consent details using [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase) the order changes to `confirmed` state. Once the order is `confirmed`, FP will try to submit the order to BSE asynchronously in the background. Once the order submission is successful, the purchase order state changes from `confirmed` to `submitted`. Please ensure that orders are in `submitted` state before you can accept payments. <br>
+> If the order gateway is `BSE`, you need to change the order state to `confirmed` along with the consent details using [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase). Once the order is `confirmed`, FP will try to submit the order to BSE asynchronously in the background. Once the order submission is successful, the purchase order state changes from `confirmed` to `submitted`. Please ensure that orders are in `submitted` state before you can accept payments. <br>
 
 #### 5. Collect payments against purchase orders
 
@@ -346,13 +346,29 @@ fpClient.mf_folios().fetchAll({ folio_number: "15075102" })
 
 #### 3. Update the MF Purchase with the investor consent details
 
+If the order gateway is RTA, you only need to add the consent details while updating the order.
 ```javascript
-
 /**
  * @param MfPurchasePatchRequest object
  */
 fpClient.mf_purchases().update({
     id: "mfp_177177219f634373b01072986d2eea7d",
+    "consent": {
+    "email": "mfp@cybrilla.com",
+    "isd_code": "91",
+    "mobile": "9008580644"
+  }
+})
+```
+
+If the order gateway is `BSE`, you need to change the order state to `confirmed` along with the consent details.
+```javascript
+/**
+ * @param MfPurchasePatchRequest object
+ */
+fpClient.mf_purchases().update({
+    id: "mfp_177177219f634373b01072986d2eea7d",
+	state: "confirmed"
     "consent": {
     "email": "mfp@cybrilla.com",
     "isd_code": "91",
