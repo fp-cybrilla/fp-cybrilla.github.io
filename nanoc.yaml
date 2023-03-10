@@ -76,8 +76,6 @@ sidebar:
           link: "/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration/"
         - title: Create a new SIP
           link: "/mf-transactions/purchase-plans/create-monthly-sip/"
-        - title: Create a non-systematic purchase plan
-          link: "/mf-transactions/purchase-plans/non-systematic-purchase-plans"
        # - title: Top up amount for an SIP
        #   link: "/mf-transactions/purchase-plans/topup-sip/"
         - title: Pause installments of an existing SIP
