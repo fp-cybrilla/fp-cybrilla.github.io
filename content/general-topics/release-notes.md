@@ -17,7 +17,7 @@
 
 ## March 2023
 #### 12th March 2023
-* You can now update the no. of installments and installment day for a non-systematic plan. Frequencies supported are `daily`, `twice_a_month`, `day_in_a_fortnight`, `four_times_a_month`, `day_in_a_week`, `monthly`, `quarterly`, `half_yearly` and `yearly` in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan) for more info.
+* You can now update the no. of installments and installment day for a non-systematic plan in RTA. Frequencies supported are `daily`, `twice_a_month`, `day_in_a_fortnight`, `four_times_a_month`, `day_in_a_week`, `monthly`, `quarterly`, `half_yearly` and `yearly` in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan) for more info.
 
 * You can now create a transaction plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
 
