@@ -5,9 +5,6 @@
 
 * We have introduce a new feature which allows tenants configured with the BSE gateway to route their purchase/ redemption/ switch orders via RTA as well. Please refer the [documentation](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) for more information.
 
-* We now support recurring transaction plans in additional frequencies supported by the schemes like daily, weekly or a fortnightly basis in RTA. For more info, please check the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
-
-
 * As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/sep-2022/two-factor-authentication-for-transactions-in-units-of-mutual-funds_63557.html), 2-Factor Authentication shall be applicable for purchases and SIPs with effect from April 1, 2023. Please refer the purchase [documentation](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) and the purchase plan [documentation](https://fintechprimitives.com/docs/api/#create-a-purchase-plan) for more information. <br> Please note the following - 
    1. Consent object is currently kept as an optional attribute for placing a purchase/ SIP request and will be made mandatory on 31st March 2023.
    2. Any order scheduled for submission on or after 1st April without consent will be marked as failed by RTA.
