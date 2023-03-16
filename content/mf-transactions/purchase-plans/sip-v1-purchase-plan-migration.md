@@ -121,6 +121,7 @@ title: Migrating from V1 SIPs to Purchase plans
 #### 6. Fetch installments of a SIP
 **Earlier**
 `GET /api/oms/investment_accounts/1/orders/sips/1/installments`
+
 **Now**
 `GET /v2/mf_purchases?plan=mfpp_dbabb25ba34c48329dbfbeff70c846f0`
 

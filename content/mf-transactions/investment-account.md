@@ -4,7 +4,7 @@ title: Open an investment account
 
 ## Open an investment account
 
-#### Learn how to onboard an investor and set him up for investing
+#### Use this guide to create an investment account for your investor
 
 Follow the below steps to create an investor and an investment account. Investment Account is the holding account for all your investor's mutual fund investments.
 
@@ -173,4 +173,4 @@ fpClient.mf_investment_accounts().create({
 });
 ```
 
-[FPDocs, Create a MF Investment Account reference](https://fintechprimitives.com/docs/api/#create-a-mf-investment-account)
+[FPDocs, Create a MF Investment Account reference](https://fintechprimitives.com/docs/api/#create-an-mf-investment-account)

@@ -6,7 +6,7 @@ title: One time purchases
 
 > ##### Ensure the following before placing a purchase order
 > 1. Your investor is [kyc compliant](/identity/overview)
-> 2. You have an [investment account created](/mf-transactions/overview) for your investor
+> 2. You have an [investment account created](/investment-account/overview) for your investor
 
 #### 1. Get fund scheme details and check purchase eligibility 
 Once you have decided to place a purchase order against a particular scheme, fetch the scheme details using the [FPDocs, Get fund scheme](https://fintechprimitives.com/docs/api/#fund-scheme), and ensure that the scheme is eligible for purchase. Here are the checks that you must do.
@@ -58,7 +58,7 @@ Irrespective of the option chosen, obtaining consent from the investor for the n
 
 **How should consent be taken?**
 
-If nominee details are provided, ensure that all the holders know of their nomination preferences so that they can give consent.
+If nominee details are provided, ensure that all the holders know their nomination preferences so that they can give consent.
 1. Nominee Name
 2. Nominee DOB (Mandatory & Applicable in case the Nominee is a Minor)
 3. Allocation Percentage
@@ -138,7 +138,7 @@ Once the consent has been collected, the email and mobile used to collect that c
 				completely rely on the <code class="prettyprint">status</code> received in the postback
 				call. Instead check the status of the payment from your server before giving a final
 				confirmation to your investor.<br />
-				<a href="/pages/workflows/payment-status" title="">Learn more about payment states</a>.
+				<a href="/payments/payment-states" title="">Learn more about payment states</a>.
 				<br>
 				Upon successful payment collection, the orders willl be marked as <code class="prettyprint">confirmed</code> if the gateway is <code class="prettyprint">rta</code> and orders will be submitted to order gateway eventually for further processing.
 			</p>
@@ -286,7 +286,7 @@ For a successful order, review the following key attributes of the `mf_purchase`
 
 ### Testing
 
-In sandbox, use the [FPDocs, simulation](https://fintechprimitives.com/api/#post-order-simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
+In sandbox, use the [FPDocs, simulation](https://fintechprimitives.com/docs/api/#simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
 
 ```json
 {
