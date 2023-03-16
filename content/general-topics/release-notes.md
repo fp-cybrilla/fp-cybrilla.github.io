@@ -9,6 +9,7 @@
    1. Consent object is currently kept as an optional attribute for placing a purchase/ SIP request and will be made mandatory on 31st March 2023.
    2. Any order scheduled for submission on or after 1st April without consent will be marked as failed by RTA.
 
+* * You can now create a systematic plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
 
 ## Previous Releases (Live)
 
@@ -16,7 +17,7 @@
 #### 12th March 2023
 * You can now update the no. of installments and installment day for a non-systematic plan in RTA. Frequencies supported are `daily`, `twice_a_month`, `day_in_a_fortnight`, `four_times_a_month`, `day_in_a_week`, `monthly`, `quarterly`, `half_yearly` and `yearly` in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan) for more info.
 
-* You can now create a transaction plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
+* You can now create a non-systematic plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
 
 #### 7th March 2023
 * We now support ability to authenticate a user via SMS / Email / SMS or Email. For more info, please check the [documentation](https://fintechprimitives.com/docs/api/#authenticating-a-user-via-oauth-2-0-pkce-flow-from-browser-based-clients)
