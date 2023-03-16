@@ -9,7 +9,7 @@
    1. Consent object is currently kept as an optional attribute for placing a purchase/ SIP request and will be made mandatory on 31st March 2023.
    2. Any order scheduled for submission on or after 1st April without consent will be marked as failed by RTA.
 
-* * You can now create a systematic plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
+* You can now create a systematic plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
 
 ## Previous Releases (Live)
 
