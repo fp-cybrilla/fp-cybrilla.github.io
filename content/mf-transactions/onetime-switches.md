@@ -14,22 +14,22 @@ You can use MF switch order APIs to :
 
 If you are switching in to the scheme use [Get fund scheme](https://fintechprimitives.com/api/#get-single-fund-schemes-detail) and ensure that you have the following scheme attributes
 
- - `switch_in_` allowed,
- - `min_switch_in_` amount,
- - `switch_in_amount_` multiples
+ - `switch_in_allowed`,
+ - `min_switch_in_amount`,
+ - `switch_in_amount_multiples`
 
 If you are switching out from the scheme, ensure that you have the following scheme attributes
 
- - `switch_out_` allowed,
- - `min_switch_out_` amount,
- - `min_switch_out_` units,
- - `switch_out_amount_` multiples,
- - `switch_out_unit_` multiples,
+ - `switch_out_allowed`,
+ - `min_switch_out_amount`,
+ - `min_switch_out_units`,
+ - `switch_out_amount_multiples`,
+ - `switch_out_unit_multiples`
 
 
 #### 2. Check eligibility for switch_in and switch_out orders
 
-To switch_in to the new scheme, you should make sure that
+To switch in to the new scheme, you should make sure that
  
  - `switch_in_allowed` attribute should be true
  - The `switch_in` order amount should be >=`min_switch_in_amount`
@@ -94,7 +94,7 @@ Once you have created a switch order, you have to obtain consent from the invest
 
 #### 4. Obtain investor's consent for the switch order by sending an OTP to email or mobile or both
 
-As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/mar-2022/discontinuation-of-usage-of-pool-accounts-for-transactions-in-the-units-of-mutual-funds-clarifications-with-respect-to-circulars-dated-october-4-2021_56887.html), investor consent must be obtained by sending a One-Time Password to the investor at his/her email/phone number registered against the folio before redemptions can be sent to rtas. Call the [List folios](https://fintechprimitives.com/docs/api/#fetch-all-folios) API and fetch email addresses and mobile numbers against the folio.
+As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/mar-2022/discontinuation-of-usage-of-pool-accounts-for-transactions-in-the-units-of-mutual-funds-clarifications-with-respect-to-circulars-dated-october-4-2021_56887.html), investor consent must be obtained by sending a One -Time Password to the investor at his/her email/phone number registered against the folio before redemptions can be sent to rtas. Call the [List folios](https://fintechprimitives.com/docs/api/#fetch-all-folios) API and fetch email addresses and mobile numbers against the folio.
 
 ```json
 # Displaying only a part of the folio object for brevity
@@ -124,14 +124,15 @@ You can use the  [update mf switch](https://fintechprimitives.com/docs/api/#upda
       }
     }
 ```
-**6. Track the order**
+
+#### 6. Track the order**
 
 You can check the state of the switch order by calling [fetch mf switch](https://fintechprimitives.com/docs/api/#fetch-a-mf-switch) api.When the order is successfully submitted to the AMC, the order status becomes  `submitted`.  You can learn more about the order states [here](https://docs.fintechprimitives.com/mf-transactions/order-states).
 
-For a successful switch_in order,
+For a successful switch in order,
  `switched_in_units` , `switched_in_amount`, `switched_in_price` attributes should be reviewed in the `mf_switch` object.
 
-For a successful switch_out order,
+For a successful switch out order,
  `switched_out_units` , `switched_out_amount`, `switched_out_price` attributes should be reviewed in the `mf_switch` object.
 
 **Testing**

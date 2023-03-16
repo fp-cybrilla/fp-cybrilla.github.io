@@ -86,14 +86,18 @@ sidebar:
       # Subsection starts here with heading and list of links
       - subsection:  
         - heading: "Recurring Redemptions"
-        - title: Schedule a recurring withdrawal
+        - title: Create a new SWP
           link: "/mf-transactions/recurring-redemptions/"
+        -title: Pause installments for existing SWP
+        link : "/mf-transactions/purchase-plans/pause-sip"
       # Subsection ends here
       # Subsection starts here with heading and list of links
       - subsection:  
         - heading: "Recurring Switches"
-        - title: Schedule a recurring withdrawal
-          link: "/mf-transactions/recurring-redemptions/"
+        - title: Create a new STP
+          link: "/mf-transactions/recurring-switch/"
+        -title: Pause installments for existing STP
+        link: "mf-transactions/purchase-plans/pause-stp"
       # Subsection starts here with heading and list of links
       - subsection:  
         - heading: "Appendix"
