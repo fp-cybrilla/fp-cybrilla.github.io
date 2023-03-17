@@ -71,5 +71,5 @@ After the plan is registered, the installments will be generated according to th
 
 Example: `GET /v2/mf_redemptions?plan=mfr_15f8d86bae614801bab5accaed131abc`
 
-#### 4. Track the SIP installment
+#### 4. Track SWP installment
 FP uses [`MF Redemption`](https://fintechprimitives.com/docs/api/#mf-redemption-object) object to represent the SWP installment. You can track the state of the [`MF Redemption`](https://fintechprimitives.com/docs/api/#mf-redemption-object) representation of the installment to know the status of your installment.

@@ -70,5 +70,5 @@ After the plan is registered, the installments will be generated according to th
 
 Example: `GET /v2/mf_switches?plan=mfs_b1aba06d52184619151d3b82efa65de6`
 
-#### 4. Track the STP installment
+#### 4. Track STP installment
 FP uses [`MF Switch`](https://fintechprimitives.com/docs/api/#mf-switch-object) object to represent the STP installment. You can track the state of the [`MF Switch`](https://fintechprimitives.com/docs/api/#mf-switch-object) representation of the installment to know the status of your installment.
