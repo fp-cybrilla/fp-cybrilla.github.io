@@ -8,17 +8,17 @@ You can use MF switch order APIs to :
 
  - Switch from one scheme to another scheme in the same AMC.
  - Switch units from one scheme to another partially or completely.
- - Track the switch orders placed.
+ - Track the status of switch orders placed.
 
 #### 1. Fetch fund scheme details
 
-If you are switching in to the scheme use [Get fund scheme](https://fintechprimitives.com/api/#get-single-fund-schemes-detail) and ensure that you have the following scheme attributes
+If you are switching in to the scheme, Use [Get fund scheme](https://fintechprimitives.com/api/#get-single-fund-schemes-detail) and ensure that you have the following scheme attributes
 
  - `switch_in_allowed`,
  - `min_switch_in_amount`,
  - `switch_in_amount_multiples`
 
-If you are switching out from the scheme, ensure that you have the following scheme attributes
+If you are switching out from the scheme, Use [Get fund scheme](https://fintechprimitives.com/api/#get-single-fund-schemes-detail) and  ensure that you have the following scheme attributes
 
  - `switch_out_allowed`,
  - `min_switch_out_amount`,
@@ -27,25 +27,25 @@ If you are switching out from the scheme, ensure that you have the following sch
  - `switch_out_unit_multiples`
 
 
-#### 2. Check eligibility for switch_in and switch_out orders
+#### 2. Check eligibility for switch in and switch out orders
 
 To switch in to the new scheme, you should make sure that
  
- - `switch_in_allowed` attribute should be true
- - The `switch_in` order amount should be >=`min_switch_in_amount`
- - The `switch_in` order amount should be in the denomination of `switch_in_amount_multiples`
+ - `switch_in_allowed` attribute must be true
+ - The `switch_in` order amount must be >=`min_switch_in_amount`
+ - The `switch_in` order amount must be in the denomination of `switch_in_amount_multiples`
 
 If you are switching out from the scheme, you should ensure that
 
- - `switch_out_allowed` attribute should be true
- - The `switch_out` order amount should be >= `min_switch_out_amount`
- - The units you are switching out from the scheme should be >=`min_switch_out_units`
- - The `switch_out` order amount should be in the denomination of `switch_out_amount_multiples`
- - The `switch_out` order units should be in the denomination of `switch_out_unit_multiples`
+ - `switch_out_allowed` attribute must be true
+ - The `switch_out` order amount must be >= `min_switch_out_amount`
+ - The units you are switching out from the scheme must be >=`min_switch_out_units`
+ - The `switch_out` order amount must be in the denomination of `switch_out_amount_multiples`
+ - The `switch_out` order units must be in the denomination of `switch_out_unit_multiples`
 
 #### 3. Create a switch order
 
- You can create a switch order by calling [create mf switch](https://fintechprimitives.com/docs/api/#create-a-mf-switch) api. You should provide the isin of the source scheme in `switch_in_scheme`  and isin of the destination scheme in  `switch_out_scheme` along with the investment account and `folio_number` for which the order should be placed.
+ You can create a switch order by calling [create mf switch](https://fintechprimitives.com/docs/api/#create-a-mf-switch) api. You should provide the isin of the source scheme in `switch_in_scheme` attribute and isin of the destination scheme in  `switch_out_scheme` attribute along with the investment account and `folio_number` for which the order should be placed.
 
 **Switch order by amount**
 ```json
@@ -68,7 +68,7 @@ If you are switching out from the scheme, you should ensure that
   "switch_in_scheme": "INF171K07FQ0"
   }
 ```
-**For full switch_in or full switch_out**
+**For full switch in or full switch out orders**
  ```json
 {
   "mf_investment_account": "mfia_189111b00566431db0dace5332db519c",
@@ -125,7 +125,7 @@ You can use the  [update mf switch](https://fintechprimitives.com/docs/api/#upda
     }
 ```
 
-#### 6. Track the order**
+#### 6. Track the order
 
 You can check the state of the switch order by calling [fetch mf switch](https://fintechprimitives.com/docs/api/#fetch-a-mf-switch) api.When the order is successfully submitted to the AMC, the order status becomes  `submitted`.  You can learn more about the order states [here](https://docs.fintechprimitives.com/mf-transactions/order-states).
 

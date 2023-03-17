@@ -31,7 +31,7 @@ The following information about the investor is needed to be able to set him up 
 17. Other info (politically exposed person or related to someone who is politically exposed)
 18. Guardian information (incase the investor is a minor)
 
-Call the [FPDocs, create investor](https://fintechprimitives.com/api/#create-an-investor) with all the required information to create an investor object. Make a note of the investor id, which you'll need in the later steps.
+Call the [FPDocs, create investor](https://fintechprimitives.com/api/#create-an-investor) with all the required information to create an investor object. Make a note of investor id, which you will need in later steps.
 
 ### Note on data verification
 
@@ -44,9 +44,10 @@ Currently we don't offer APIs for email and mobile verification. FP APIs assume 
 
 As part of the regulatory requirement, you need to verify the account ownership of the bank account given by the investor. There are two ways you can do the verification at present:  
 a) Penny drop and match the bank a/c holder name that is returned, with the investor name  
-b) Accept a cancelled cheque copy from the investor and manually match the name on the cheque with the investor name  
+b) Accept a cancelled cheque copy from the investor and manually match the name on the cheque with the investor name 
+
 The names may not match 100% all the time. You have to be reasonably sure that the a/c belong to the investor. There are no set guidelines on what should be the match %.
-Currently we don't offer APIs to do these verifications. FP Investor APIs assume the bank a/c given is verified by you.
+Currently we don't offer APIs to do these verifications. FP Investor APIs assume that the bank a/c given is verified by you.
 
 #### 2. Check the investor's kyc status
 
@@ -68,13 +69,13 @@ You need to collect the following additional details about the investor apart fr
 9. Fatca/CRS self declaration
 10. Electronic signature on the application form
 
-[Learn about using the kyc request](/identity/kyc-request) to perform digital kyc
+[Learn about using the kyc request](/identity/kyc-request) to perform digital kyc.
 
 #### 4. Create an investment account
 
 To avoid any rejection of orders, make sure the investor is kyc compliant before creating an investment a/c.
 
-Call the [FPDocs, create investment account](https://fintechprimitives.com/docs/api/#create-a-mf-investment-account) with the following json. Use the investor id received in step 1 to create an investment account.
+Call the [FPDocs, create investment account](https://fintechprimitives.com/docs/api/#create-an-mf-investment-account) with the following json. Use the investor id received in step 1 to create an investment account.
 
 Request
 

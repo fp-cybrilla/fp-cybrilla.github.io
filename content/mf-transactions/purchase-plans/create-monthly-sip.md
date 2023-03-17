@@ -19,7 +19,7 @@ Irrespective of the option chosen, obtaining consent from the investor for the n
 
 **How should consent be taken?**
 
-If nominee details are provided, ensure that all the holders know of their nomination preferences so that they can give consent.
+If nominee details are provided, ensure that all the holders know their nomination preferences so that they can give consent.
 1. Nominee Name
 2. Nominee DOB (Mandatory & Applicable in case the Nominee is a Minor)
 3. Allocation Percentage
@@ -28,7 +28,7 @@ If nominee details are provided, ensure that all the holders know of their nomin
 6. Guardian’s Relationship with Nominee (Mandatory & Applicable in case the Nominee is a Minor) 
 7. Nominee Pan (Optional)
 
-On the other hand, if nominee details are not provided, ensure that all holders know that they are opting out of the nomination facility.
+On the other hand, if nominee details are not provided, ensure that all holders know that they are opting out from the nomination facility.
 
 - Send OTP to both Mobile number/Email address. This must be the mobile number/email address stored against the primary investor linked to the investment account associated with the purchase order. If there are multiple holders, send OTP to Mobile number/Email addresses of all holders.
 - Accept OTP from all the holders and verify the OTP and ensure that the correct OTP is entered.
@@ -65,11 +65,11 @@ Note:
 
 
 #### 3. Fetch installments of an SIP
-Once you have registered a plan, the installments will be generated according to the plan's schedule.You can access the installments on or after the installment date with the help of FP APIs. For more details on when the installments are generated, please refer to this [API doc](https://fintechprimitives.com/docs/api/#installment-generation). If you want to let your investors track the installments of an SIP, you can fetch the installments of the SIP plan using the [FPDocs, fetch installments](https://fintechprimitives.com/docs/api/#list-all-mf-purchases). 
+Once you have registered a plan, the installments will be generated according to the plan's schedule.You can access the installments on or after the installment date using FP APIs. For more details on when the installments are generated, please refer to this [API doc](https://fintechprimitives.com/docs/api/#installment-generation). If you want to let your investors track the installments of an SIP, you can fetch the installments of the SIP plan using the [FPDocs, fetch installments](https://fintechprimitives.com/docs/api/#list-all-mf-purchases). 
 
 Example: `GET /v2/mf_purchases?plan=mfpp_dbabb25ba34c48329dbfbeff70c846f0`
 
-**Note:**Installments will be only available after day of installment. For example, if the second installment of an SIP is on 25th August, you will be able to access this installment only on or after 25th August.
+**Note:** Installments will be only available after day of installment. For example, if the second installment of an SIP is on 25th August, you will be able to access this installment only on or after 25th August.
 
 #### 4. Track the SIP installment
 FP uses [MF Purchase](https://fintechprimitives.com/docs/api/#mf-purchase-object) object to represent the sip installment. You can track the state of the [MF Purchase](https://fintechprimitives.com/docs/api/#mf-purchase-object) representation of the installment to know the status of your installment.

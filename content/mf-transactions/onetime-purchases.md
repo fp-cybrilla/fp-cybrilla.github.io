@@ -28,7 +28,7 @@ FP uses `MF Purchase` object to represent all the mutual fund purchase orders. Y
 }
 ```
 
-A MF Purchase gets created for which you need to make a payment. Keep a note of the object `id` and `old_id`; you'll need these for making payments and checking the status of the order later on.
+A MF Purchase gets created for which you need to make a payment. Keep a note of the object `id` and `old_id`; you will need these for making payments and checking the status of the order later on.
 
 ```json
 # Displaying only a part of the object(response) for brevity
