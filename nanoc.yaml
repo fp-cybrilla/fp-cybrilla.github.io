@@ -97,7 +97,7 @@ sidebar:
         - title: Create a new STP
           link: "/mf-transactions/recurring-switches/"
         -title: Pause installments of an existing STP
-        link: "mf-transactions/purchase-plans/pause-stp/"
+        link: "/mf-transactions/purchase-plans/pause-stp/"
       # Subsection starts here with heading and list of links
       - subsection:  
         - heading: "Appendix"
