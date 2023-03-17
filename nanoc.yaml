@@ -88,7 +88,7 @@ sidebar:
         - heading: "Recurring Redemptions"
         - title: Create a new SWP
           link: "/mf-transactions/recurring-redemptions/"
-        -title: Pause installments for existing SWP
+        -title: Pause installments of an existing SWP
         link : "/mf-transactions/purchase-plans/pause-swp/"
       # Subsection ends here
       # Subsection starts here with heading and list of links
@@ -96,8 +96,8 @@ sidebar:
         - heading: "Recurring Switches"
         - title: Create a new STP
           link: "/mf-transactions/recurring-switches/"
-        -title: Pause installments for existing STP
-        link: "mf-transactions/purchase-plans/pause-stp/"
+        -title: Pause installments of an existing STP
+         link: "mf-transactions/purchase-plans/pause-stp/"
       # Subsection starts here with heading and list of links
       - subsection:  
         - heading: "Appendix"
