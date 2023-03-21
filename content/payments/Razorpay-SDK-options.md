@@ -13,15 +13,18 @@ Note: Please refer to the [Razorpay standard checkout integration](https://razor
 
 Razorpay Integration consists of six steps as given in their [documentation](https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/):
 
-![image.png](./image.png)
+![image.png](image.png)
 
 In the above flow, we will focus on the following steps:
-1. You create an order on your server:
+
+a. You create an order on your server:
   - For each mutual fund schemes that the Investor wants to purchase, an order must be created in your database(If you are maintaining a DB) and must also create the MF purchase order in FP by using the [MF purchase API](https://fintechprimitives.com/docs/api/#create-a-mf-purchase).
-2. Pass order_id to Checkout
+
+b. Pass order_id to Checkout
   - Instead of directly creating an order in Razorpay, Payment must be created in FP for one or more MF purchase orders created in step 1 by using [Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment).
   - FP internally passes on these FP purchase order IDs to Razorpay and generates the Razorpay 'order_id' in the response. Please refer to the request and response of [Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment).
-  Payment creation API Request:
+  
+  **Payment creation API Request:**
 
   ```
   curl -X POST "{{base_url}}/api/pg/payments/netbanking"
@@ -37,7 +40,7 @@ In the above flow, we will focus on the following steps:
   }
 
   ```
-  Payment creation API Response:
+  **Payment creation API Response:**
 
   ```json
 
@@ -62,9 +65,9 @@ In the above flow, we will focus on the following steps:
   }
 
   ```
-3. Now the parameters received in the above response as 'sdk_options' -> 'razorpay' must be passed on while integrating Razorpay SDK in any of the platforms such as web, Andoid or IOS.
+c. Now the parameters received in the above response as 'sdk_options' -> 'razorpay' must be passed on while integrating Razorpay SDK in any of the platforms such as web, Andoid or IOS.
   - For example, while integrating with web app as detailed in [Razorpay documentation](https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/build-integration#code-to-add-pay-button), SDK parameters must be passed from the response received from the [FP Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment) as detailed in the comments in the code below(Code for Pay button copied here for clarity)
-> Note: Example below for authorisation with callback URL is for reference only. Similarly authorisation with handler functions can also be done.
+> Note: Example below for netbanking checkout with callback URL is for reference. Similarly netbanking checkout with handler functions can also be implemented as given in Razorpay documentation.
   ```javascript
 
   <button id="rzp-button1">Pay</button>
@@ -103,16 +106,18 @@ In the above flow, we will focus on the following steps:
   </script>
   ```
 > Note: Please pass the 'retry' parameter as 'false' to avoid any payment related errors as FP does not support checkout retry mechanism at the moment. We are working on providing this functionality soon.
-4. FP uses [Third Party Verification(TPV)](https://razorpay.com/docs/payments/third-party-validation/) feature to restrict the Investor to only use the registered bank account for making purchases. 
+
+d. FP uses [Third Party Verification(TPV)](https://razorpay.com/docs/payments/third-party-validation/) feature to restrict the Investor to only use the registered bank account for making purchases. 
 FP passes these details to Razorpay when the [payment is created in FP](https://fintechprimitives.com/docs/api/#create-a-payment).So when the Razorpay order ID is passed to the SDK, bank selection and mode of payment (Netbanking/UPI) are restricted to the Investor by default.
 
 #### Mandate SDK options:
 
 Similar steps must be followed as outlined for payment above for Mandate authorisation page customisation using Razorpay SDK. Please refer to [Razorpay documentation for E-Mandate authorisation] (https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction)
 
-1. In order to create the authorisation transaction, first create a mandate in FP by using [Create mandate API](https://fintechprimitives.com/docs/api/#create-a-mandate-enach)
-2. Once the mandate is created for an investor, create the authorisation transaction for the mandate generated in step 1 using [Authorise Mandate API](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach) by passing the mandate ID. Please see the request/response below:
-  Mandate auth Request:
+a. In order to create the authorisation transaction, first create a mandate in FP by using [Create mandate API](https://fintechprimitives.com/docs/api/#create-a-mandate-enach)
+b. Once the mandate is created for an investor, create the authorisation transaction for the mandate generated in step 1 using [Authorise Mandate API](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach) by passing the mandate ID. Please see the request/response below:
+
+  **Mandate auth Request:**
   ```
 
   curl "{{base_url}}/api/pg/payments/emandate/auth"
@@ -125,7 +130,7 @@ Similar steps must be followed as outlined for payment above for Mandate authori
   }
 
   ```
-  Mandate auth Response:
+  **Mandate auth Response:**
   ```json
 
   {
@@ -152,36 +157,38 @@ Similar steps must be followed as outlined for payment above for Mandate authori
   }
 
   ```
-3. Create authorisation payment checkout page using Razorpay SDK as detailed here: https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction#113-create-an-authorization-payment 
-> Note: Example below for authorisation with handler function is for reference only. Similarly authorisation with callback URL can also be done.
+
+c. Create authorisation payment checkout page using Razorpay SDK as detailed here: https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction#113-create-an-authorization-payment 
 
   ```javascript
 
-  <button id = "rzp-button1"> Pay </button>
-    <script src = "https://checkout.razorpay.com/v1/checkout.js"> </script>
-    <script>
-      var options = {
-        "key": "FP_MandateAuth_response.sdk_options.key",           
-        "order_id": "FP_MandateAuth_response.sdk_options.order_id",
-        "customer_id": "FP_MandateAuth_response.sdk_options.customer_id",
-        "recurring": "1",
-        "handler": function (response) {
-          alert(response.razorpay_payment_id);
-          alert(response.razorpay_order_id);
-          alert(response.razorpay_signature);
-        },
-        "notes": {
-          "note_key 1": "Beam me up Scotty",
-          "note_key 2": "Tea. Earl Gray. Hot."
-        },
-        "theme": {
-          "color": "#F37254"
+    <button id = "rzp-button1"> Pay </button>
+      <script src = "https://checkout.razorpay.com/v1/checkout.js"> </script>
+      <script>
+        var options = {
+          "key": "FP_MandateAuth_response.sdk_options.key",           
+          "order_id": "FP_MandateAuth_response.sdk_options.order_id",
+          "customer_id": "FP_MandateAuth_response.sdk_options.customer_id",
+          "recurring": "1",
+          "handler": function (response) {
+            alert(response.razorpay_payment_id);
+            alert(response.razorpay_order_id);
+            alert(response.razorpay_signature);
+          },
+          "notes": {
+            "note_key 1": "Beam me up Scotty",
+            "note_key 2": "Tea. Earl Gray. Hot."
+          },
+          "theme": {
+            "color": "#F37254"
+          }
+        };
+        var rzp1 = new Razorpay(options);
+        document.getElementById('rzp-button1').onclick = function (e) {
+          rzp1.open();
+          e.preventDefault();
         }
-      };
-      var rzp1 = new Razorpay(options);
-      document.getElementById('rzp-button1').onclick = function (e) {
-        rzp1.open();
-        e.preventDefault();
-      }
-    </script>
-    ```
+      </script>
+  ```
+
+> Note: Similarly authorisation checkout page with callback URL can also be created as detailed in Razorpay documentation.
