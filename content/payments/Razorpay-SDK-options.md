@@ -133,9 +133,7 @@ curl "{{base_url}}/api/pg/payments/emandate/auth"
 
 ```
 
-
 Mandate auth Response:
-
 
 ```json
 
