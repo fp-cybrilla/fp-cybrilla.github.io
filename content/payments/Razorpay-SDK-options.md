@@ -23,7 +23,7 @@ In the above flow, we will focus on the following steps:
   - FP internally passes on these FP purchase order IDs to Razorpay and generates the Razorpay 'order_id' in the response. Please refer to the request and response of [Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment).
 
 
-Create Payment API Request 
+Payment creation API Request:
 
 ```
 curl -X POST "{{base_url}}/api/pg/payments/netbanking"
@@ -41,7 +41,7 @@ curl -X POST "{{base_url}}/api/pg/payments/netbanking"
 
 ```
 
-Create Payment API Response
+Payment creation API Response:
 
 ```json
 
@@ -69,7 +69,9 @@ Create Payment API Response
 3. Now the parameters received in the above response as 'sdk_options' -> 'razorpay' must be passed on while integrating Razorpay SDK in any of the platforms such as web, Andoid or IOS.
   - For example, while integrating with web app as detailed in [Razorpay documentation](https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/build-integration#code-to-add-pay-button), SDK parameters must be passed from the response received from the [FP Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment) as detailed in the comments in the code below(Code for Pay button copied here for clarity)
 > Note: Example below for authorisation with callback URL is for reference only. Similarly authorisation with handler functions can also be done.
+
 ```javascript
+
 <button id="rzp-button1">Pay</button>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
@@ -106,16 +108,18 @@ document.getElementById('rzp-button1').onclick = function(e){
 </script>
 ```
 > Note: Please pass the 'retry' parameter as 'false' to avoid any payment related errors as FP does not support checkout retry mechanism at the moment. We are working on providing this functionality soon.
+
 4. FP uses [Third Party Verification(TPV)](https://razorpay.com/docs/payments/third-party-validation/) feature to restrict the Investor to only use the registered bank account for making purchases. 
 FP passes these details to Razorpay when the [payment is created in FP](https://fintechprimitives.com/docs/api/#create-a-payment). So when the Razorpay order ID is passed to the SDK, bank selection and mode of payment (Netbanking/UPI) are restricted to the Investor by default.
 
-**Mandate SDK options**
+**Mandate SDK options:**
+
 Similar steps must be followed as outlined for payment above for Mandate authorisation page customisation using Razorpay SDK. Please refer to [Razorpay documentation for E-Mandate authorisation] (https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction)
 
 1. In order to create the authorisation transaction, first create a mandate in FP by using [Create mandate API](https://fintechprimitives.com/docs/api/#create-a-mandate-enach)
 2. Once the mandate is created for an investor, create the authorisation transaction for the mandate generated in step 1 using [Authorise Mandate API](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach) by passing the mandate ID. Please see the request/response below:
 
-Request
+Mandate auth Request:
 ```
 
 curl "{{base_url}}/api/pg/payments/emandate/auth"
@@ -130,7 +134,7 @@ curl "{{base_url}}/api/pg/payments/emandate/auth"
 ```
 
 
-Response
+Mandate auth Response:
 
 
 ```json
@@ -163,6 +167,7 @@ Response
 > Note: Example below for authorisation with handler function is for reference only. Similarly authorisation with callback URL can also be done.
 
 ```javascript
+
 <button id = "rzp-button1"> Pay </button>
   <script src = "https://checkout.razorpay.com/v1/checkout.js"> </script>
   <script>
