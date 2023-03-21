@@ -17,13 +17,13 @@ Razorpay Integration consists of six steps as given in their [documentation](htt
 
 In the above flow, we will focus on the following steps:
 1. You create an order on your server:
-- For each mutual fund schemes that the Investor wants to purchase, an order must be created in your database(If you are maintaining a DB) and must also create the MF purchase order in FP by using the [MF purchase API](https://fintechprimitives.com/docs/api/#create-a-mf-purchase).
+  - For each mutual fund schemes that the Investor wants to purchase, an order must be created in your database(If you are maintaining a DB) and must also create the MF purchase order in FP by using the [MF purchase API](https://fintechprimitives.com/docs/api/#create-a-mf-purchase).
 2. Pass order_id to Checkout
-- Instead of directly creating an order in Razorpay, Payment must be created in FP for one or more MF purchase orders created in step 1 by using [Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment).
-- FP internally passes on these FP purchase order IDs to Razorpay and generates the Razorpay 'order_id' in the response. Please refer to the request and response of [Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment).
+  - Instead of directly creating an order in Razorpay, Payment must be created in FP for one or more MF purchase orders created in step 1 by using [Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment).
+  - FP internally passes on these FP purchase order IDs to Razorpay and generates the Razorpay 'order_id' in the response. Please refer to the request and response of [Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment).
 
 
-Request 
+Create Payment API Request 
 
 ```
 curl -X POST "{{base_url}}/api/pg/payments/netbanking"
@@ -41,7 +41,7 @@ curl -X POST "{{base_url}}/api/pg/payments/netbanking"
 
 ```
 
-Response
+Create Payment API Response
 
 ```json
 
@@ -67,9 +67,9 @@ Response
 
 ```
 3. Now the parameters received in the above response as 'sdk_options' -> 'razorpay' must be passed on while integrating Razorpay SDK in any of the platforms such as web, Andoid or IOS.
-- For example, while integrating with web app as detailed in [Razorpay documentation](https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/build-integration#code-to-add-pay-button), SDK parameters must be passed from the response received from the [FP Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment) as detailed in the comments in the code below(Code for Pay button copied here for clarity)
+  - For example, while integrating with web app as detailed in [Razorpay documentation](https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/build-integration#code-to-add-pay-button), SDK parameters must be passed from the response received from the [FP Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment) as detailed in the comments in the code below(Code for Pay button copied here for clarity)
 > Note: Example below for authorisation with callback URL is for reference only. Similarly authorisation with handler functions can also be done.
-```
+```javascript
 <button id="rzp-button1">Pay</button>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
@@ -162,7 +162,8 @@ Response
 3. Create authorisation payment checkout page using Razorpay SDK as detailed here: https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction#113-create-an-authorization-payment 
 > Note: Example below for authorisation with handler function is for reference only. Similarly authorisation with callback URL can also be done.
 
-```<button id = "rzp-button1"> Pay </button>
+```javascript
+<button id = "rzp-button1"> Pay </button>
   <script src = "https://checkout.razorpay.com/v1/checkout.js"> </script>
   <script>
     var options = {
