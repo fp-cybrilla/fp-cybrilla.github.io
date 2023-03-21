@@ -118,6 +118,8 @@ sidebar:
         link: "/payments/managing-e-mandates/"
       - title: Collect payments via e-mandates
         link: "/payments/collect-payment-via-mandates/"
+      - title: Using Razorpay SDK options
+        link: "/payments/Razorpay-SDK-options/"
       # Subsection starts here with heading and list of links
       - subsection:
         - heading: "Appendix"
