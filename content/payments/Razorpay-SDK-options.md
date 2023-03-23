@@ -13,7 +13,7 @@ Note: Please refer to the [Razorpay standard checkout integration](https://razor
 
 Razorpay Integration consists of six steps as given in their [documentation](https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/):
 
-![image.png](image.png)
+![image.png](/image.png)
 
 In the above flow, we will focus on the following steps:
 
@@ -65,9 +65,11 @@ b. Pass order_id to Checkout
   }
 
   ```
+
 c. Now the parameters received in the above response as 'sdk_options' -> 'razorpay' must be passed on while integrating Razorpay SDK in any of the platforms such as web, Andoid or IOS.
   - For example, while integrating with web app as detailed in [Razorpay documentation](https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/build-integration#code-to-add-pay-button), SDK parameters must be passed from the response received from the [FP Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment) as detailed in the comments in the code below(Code for Pay button copied here for clarity)
 > Note: Example below for netbanking checkout with callback URL is for reference. Similarly netbanking checkout with handler functions can also be implemented as given in Razorpay documentation.
+
   ```javascript
 
   <button id="rzp-button1">Pay</button>
@@ -118,6 +120,7 @@ a. In order to create the authorisation transaction, first create a mandate in F
 b. Once the mandate is created for an investor, create the authorisation transaction for the mandate generated in step 1 using [Authorise Mandate API](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach) by passing the mandate ID. Please see the request/response below:
 
   **Mandate auth Request:**
+
   ```
 
   curl "{{base_url}}/api/pg/payments/emandate/auth"
@@ -130,7 +133,9 @@ b. Once the mandate is created for an investor, create the authorisation transac
   }
 
   ```
+
   **Mandate auth Response:**
+
   ```json
 
   {
