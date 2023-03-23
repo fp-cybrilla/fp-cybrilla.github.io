@@ -13,9 +13,7 @@ Note: Please refer to the [Razorpay standard checkout integration](https://razor
 
 Razorpay Integration consists of six steps as given in their [documentation](https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/):
 
-<div>
-  <img src="/images.png" alt="Razorpay Integration flow" class="fp-diagram block dark:hidden">
-</div>
+![image.png](/payments/image.png)
 
 In the above flow, we will focus on the following steps:
 
