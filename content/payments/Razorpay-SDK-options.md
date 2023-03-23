@@ -163,7 +163,7 @@ b. Once the mandate is created for an investor, create the authorisation transac
 
   ```
 
-c. Create authorisation payment checkout page using Razorpay SDK as detailed here: https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction#113-create-an-authorization-payment 
+c. Create authorisation payment checkout page using Razorpay SDK as detailed in [Razorpay documentation](https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction#113-create-an-authorization-payment).
 
   ```javascript
 
@@ -171,9 +171,9 @@ c. Create authorisation payment checkout page using Razorpay SDK as detailed her
       <script src = "https://checkout.razorpay.com/v1/checkout.js"> </script>
       <script>
         var options = {
-          "key": "FP_MandateAuth_response.sdk_options.key",           
-          "order_id": "FP_MandateAuth_response.sdk_options.order_id",
-          "customer_id": "FP_MandateAuth_response.sdk_options.customer_id",
+          "key": "FP_MandateAuth_response.sdk_options.razorpay.key",           
+          "order_id": "FP_MandateAuth_response.sdk_options.razorpay.order_id",   //Use the order ID received from FP payment response -> SDK_options -> razorpay -> order_id.
+          "customer_id": "FP_MandateAuth_response.sdk_options.razorpay.customer_id",    //Use the customer ID received from FP payment response -> SDK_options -> razorpay -> customer_id.
           "recurring": "1",
           "handler": function (response) {
             alert(response.razorpay_payment_id);
