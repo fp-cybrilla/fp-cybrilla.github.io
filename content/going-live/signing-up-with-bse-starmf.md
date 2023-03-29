@@ -22,4 +22,8 @@ title: Signing up with BSE StarMF
   - Please disable UCC creation authentication
   - PLEASE EXCLUDE AUTHENTICATION FOR MANDATE_REG, MF_ORDER, RED_ORDER, XSIP_CAN_AUTH, XSIP_CANCEL, XSIP_REG, XSIP_REG_AUTH (We have already raised request for the same. Ticket/Complaint number: *insert the ticket number from the previous step* )
 - [ ] Share the credentials (MemberId, UserId and Password) with Cybrilla for configuration purposes.
-- [ ] Ensure that AMCs whose schemes you wish to sell/advise are activated from BSE portal.(Admin->Member Masters->Member AMC mapping)
+  - If you are a RIA, share above crendentilas of BSE UAT environment with Cybrilla 
+- [ ] Ensure that AMCs whose schemes you wish to sell/advise are activated on BSE portal.(Admin->Member Masters->Member AMC mapping)
+  - If you are a RIA, you have to enable AMCs in BSE UAT environment also
+
+
