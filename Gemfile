@@ -7,6 +7,7 @@ gem 'rouge'
 group :nanoc do
   gem 'guard-nanoc'
   gem 'adsf'
+  gem 'nokogiri'
 end
 
 gem "webrick", "~> 1.7"

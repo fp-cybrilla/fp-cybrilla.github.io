@@ -710,6 +710,46 @@ code.hljs {
 .dark .collapse-body.block::before { 
   background-color: #6F809E;
 }
+
+/* release-notes */
+.release-notes {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.release-date {
+  font-weight: 500;
+}
+
+.release-title > div {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.release-title > div code {
+  position: relative;
+  top: -3px;
+  font-size: 11px;
+  margin-left: 5px;
+}
+
+.release-notes:not(:last-child) {
+  border-bottom: 1px solid #F0F1F4;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+/* action badge */
+.action-badge {
+  display: inline-block;
+  line-height: normal;
+  padding: 0.25em;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #981c06;
+  background-color: #fee9e8;
+}
 </style>
   </head>
   <body class="font-roboto text-base-color h-full dark:bg-primary-DN0 dark:text-primary-DN60">
