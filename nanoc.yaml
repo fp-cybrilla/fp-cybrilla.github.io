@@ -62,7 +62,7 @@ sidebar:
       # Subsection starts here with heading and list of links
       - subsection:
         - heading: "One time orders"
-        - title: Create a onetime purchase
+        - title: Create a one-time purchase
           link: "/mf-transactions/onetime-purchases/"
         - title: Sell a mutual fund
           link: "/mf-transactions/onetime-redemptions/"
@@ -76,12 +76,12 @@ sidebar:
           link: "/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration/"
         - title: Create a new SIP
           link: "/mf-transactions/purchase-plans/create-monthly-sip/"
-        - title: Top up amount for an SIP
-          link: "/mf-transactions/purchase-plans/topup-sip/"
+       # - title: Top up amount for an SIP
+       #   link: "/mf-transactions/purchase-plans/topup-sip/"
         - title: Pause installments of an existing SIP
           link: "/mf-transactions/purchase-plans/pause-sip/"
-        - title: Renew the tenure of an SIP
-          link: "/mf-transactions/purchase-plans/renew-sip/"
+      #  - title: Renew the tenure of an SIP
+      #    link: "/mf-transactions/purchase-plans/renew-sip/"
       # Subsection ends here
       # Subsection starts here with heading and list of links
       - subsection:  

@@ -73,7 +73,16 @@ On the other hand, if nominee details are not provided, ensure that all holders 
 - Accept OTP from all the holders and verify the OTP and ensure that the correct OTP is entered.
 - Store all the consent-related information for audit purposes.
 
-#### 4. Collect payments against purchase orders
+#### 4. Update the purchase order with investor consent
+As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/sep-2022/two-factor-authentication-for-transactions-in-units-of-mutual-funds_63557.html), investor consent must be obtained by - 
+1. Sending a One-Time Password to the investor at his/her email/phone number registered against the folio if a purchase order has been placed against a folio. Call the [Fetch folios](https://fintechprimitives.com/docs/api/#fetch-all-folios) API and fetch the email address and mobile number against the folio.
+2. Sending a One-Time Password to the investor at his/her email/phone number available in the [Investor Object](https://fintechprimitives.com/docs/api/#investors) or the [Investor Profile](https://fintechprimitives.com/docs/api/#investor-profiles-early-access).
+
+Once the consent has been collected, the email and mobile used to collect that consent needs to be added to the purchase object by using [FPDocs, Update a Purchase Order](https://fintechprimitives.com/docs/api/#update-a-mf-purchase).
+
+> If the order gateway is `BSE`, you need to change the order state to `confirmed` along with the consent details using [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase). Once the order is `confirmed`, FP will try to submit the order to BSE asynchronously in the background. Once the order submission is successful, the purchase order state changes from `confirmed` to `submitted`. Please ensure that orders are in `submitted` state before you can accept payments. <br>
+
+#### 5. Collect payments against purchase orders
 
 <div class="tabs">
 	<div class="tabs-bar">
@@ -266,29 +275,6 @@ After the money is settled into the scheme's bank account, call the [FPDocs, cre
   "settlement_processed_at": "2020-04-09T12:00:09"
 }
 ``` -->
-**Note**
-If the order gateway is `BSE`, after you have created the purchase order and obtained consent for nomination(applicable if it is a fresh purchase), you must confirm the order using [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase) and ensure that orders are in `submitted` state before you can accept payments. 
-
-```json
-{
-  "id": "mfp_177177219f634373b01072986d2eea7d",
-  "state": "confirmed"
-}
-```
-<br />
-
-```json
-# Displaying only a part of the object(response) for brevity
-{
-  "object": "mf_purchase",
-  "id": "mfp_177177219f634373b01072986d2eea7d",
-  "mf_investment_account": "mfia_367a75826694614a539c0f82b196027",
-  "amount": 10000,
-  "state":"confirmed"
-}
-```
-After you have confirmed the order, FP will try to submit the order to BSE asynchronously in the background. Once the order submission is successful, the purchase order state changes from `confirmed` to `submitted`. You can use [FPDocs, Fetch a MF Purchase](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to ensure that order has moved from `confirmed` to `submitted` state. Once a BSE purchase order is in `submitted` state, you can accept payments.
-
 
 #### 5. Track the order
 Once the payment collection is successful, you don't have to take further actions. After the order is processed successfully (typically takes one day) - units are allotted and the object state will move to `successful`.  You can track a single purchase order using [FPDocs, fetch mf purchase](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to check the `state` of the order or you can check the status of multiple orders at once using [FPDocs, MF Purchase List](https://fintechprimitives.com/docs/api/#mf-purchase-list-report) API. 
@@ -341,9 +327,60 @@ fpClient.mf_purchases().create({
 
 [FPDocs, Create a MF Purchase reference](https://fintechprimitives.com/docs/api/#create-a-mf-purchase)
 
-#### 2. Make payment
+#### 2. Fetch investor contact details (to be used to collect consent for purchase order) from the folio
 
-#### 2.1. You are using FP payment APIs
+**This step is applicable only for purchase order placed against an existing folio.**
+
+```javascript
+
+/**
+ * @param string folio_number
+ **/
+fpClient.mf_folios().fetchAll({ folio_number: "15075102" })
+```
+
+[FPDocs, Fetch all folios reference](https://fintechprimitives.com/docs/api/#fetch-all-folios)
+
+[FPDocs, Sandbox testing reference](https://fintechprimitives.com/docs/api/#testing-fetch-all-folios-api-in-sandbox)
+
+
+#### 3. Update the MF Purchase with the investor consent details
+
+If the order gateway is RTA, you only need to add the consent details while updating the order.
+```javascript
+/**
+ * @param MfPurchasePatchRequest object
+ */
+fpClient.mf_purchases().update({
+    id: "mfp_177177219f634373b01072986d2eea7d",
+    "consent": {
+    "email": "mfp@cybrilla.com",
+    "isd_code": "91",
+    "mobile": "9008580644"
+  }
+})
+```
+
+If the order gateway is `BSE`, you need to change the order state to `confirmed` along with the consent details.
+```javascript
+/**
+ * @param MfPurchasePatchRequest object
+ */
+fpClient.mf_purchases().update({
+    id: "mfp_177177219f634373b01072986d2eea7d",
+	state: "confirmed"
+    "consent": {
+    "email": "mfp@cybrilla.com",
+    "isd_code": "91",
+    "mobile": "9008580644"
+  }
+})
+```
+
+
+#### 4. Make payment
+
+#### 4.1. You are using FP payment APIs
 
 #### Create a payment
 
@@ -364,22 +401,7 @@ fpClient.payments().createNetbankingPayment({
 
 [FPDocs, Create a payment reference](https://fintechprimitives.com/docs/api/#create-a-payment)
 
-#### 2.2. Your using payment providers directly
-
-#### Update a MF Purchase
-
-```javascript
-
-/**
- * @param MfPurchasePatchRequest object
- */
-fpClient.mf_purchases().update({
-    id: "mfp_177177219f634373b01072986d2eea7d",
-    state: "confirmed",
-})
-```
-
-[FPDocs, Update a MF Purchase reference](https://fintechprimitives.com/docs/api/#update-a-mf-purchase)
+#### 4.2. You are using payment providers directly
 
 #### Create a MF Settlement Detail
 
@@ -403,7 +425,22 @@ fpClient.mf_settlement_details().create({
 
 [FPDocs, Create a MF Settlement Detail reference](https://fintechprimitives.com/docs/api/#create-a-mf-settlement-detail)
 
-#### 3. Track the order
+#### Update a MF Purchase
+
+```javascript
+
+/**
+ * @param MfPurchasePatchRequest object
+ */
+fpClient.mf_purchases().update({
+    id: "mfp_177177219f634373b01072986d2eea7d",
+    state: "confirmed",
+})
+```
+
+Please refer [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase)
+
+#### 5. Track the order
 
 #### Fetch a MF Purchase
 

@@ -28,7 +28,13 @@ Call the [FPDocs, Create order](https://fintechprimitives.com/api/#post-create-l
   "orders": [
     {
       "isin": "INF109K01VQ1",
-      "amount": 500
+      "amount": 500,
+      "consent": 
+      {
+        "email": "mfp@cybrilla.com",
+        "isd_code": "91",
+        "mobile": "9008580644"
+      }
     }
   ]
 }
@@ -43,7 +49,13 @@ Call the [FPDocs, Create order](https://fintechprimitives.com/api/#post-create-l
   "orders": [
     {
       "isin": "INF109K01VQ1",
-      "amount": 500
+      "amount": 500,
+      "consent": 
+      {
+        "email": "mfp@cybrilla.com",
+        "isd_code": "91",
+        "mobile": "9008580644"
+      }      
     }
   ]
 }

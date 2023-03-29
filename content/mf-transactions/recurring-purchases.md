@@ -38,9 +38,9 @@ On the other hand, if nominee details are not provided, ensure that all holders 
 - Accept OTP from all the holders and verify the OTP and ensure that the correct OTP is entered.
 - Store all the consent-related information for audit purposes.
 
-#### 2. Create a SIP plan
+#### 2. Create a SIP
 
-Call the [FPDocs, create sip](https://fintechprimitives.com/api/#create-a-sip) with the following json. Use the `id` of the payment mandate through which the money will be debited from the investor's bank account on every installment.
+Call the [FPDocs, Create Sip](https://fintechprimitives.com/api/#create-a-sip) with the following json. Use the `id` of the payment mandate through which the money will be debited from the investor's bank account on every installment.
 
 ```json
 {
@@ -52,6 +52,12 @@ Call the [FPDocs, create sip](https://fintechprimitives.com/api/#create-a-sip) w
             "frequency": "MONTHLY",
             "installments": 20,
             "mandate_id": 23
+            "consent": 
+            {
+                "email": "mfp@cybrilla.com",
+                "isd_code": "91",
+                "mobile": "9008580644"
+            }
         }
     ]
 }
@@ -93,7 +99,7 @@ fpClient.master_data().fetchScheme("INF760K01DF2")
 
 [FPDocs, Fund Scheme reference](https://fintechprimitives.com/docs/api/#fund-scheme)
 
-#### 1. Create a SIP plan
+#### 1. Create a SIP
 
 ```javascript
 
@@ -111,6 +117,12 @@ fpClient.sips().create(
                 frequency: "MONTHLY",
                 installments: 20,
                 mandate_id: 23,
+                "consent": 
+                {
+                    "email": "mfp@cybrilla.com",
+                    "isd_code": "91",
+                    "mobile": "9008580644"
+                }
             },
         ],
     },
