@@ -7,8 +7,6 @@ Follow the below steps to customise the payment checkout page for netbanking, UP
 
 #### Netbanking/UPI Payment gateway:
 
-Note: Please refer to the [Razorpay standard checkout integration](https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/) for detailed documentation.
-
 1. Ensure that Payment SDK options are enabled in your tenant settings.
 2. For each mutual fund schemes that the Investor wants to purchase, create the MF purchase order in FP by using the [MF purchase API](https://fintechprimitives.com/docs/api/#create-a-mf-purchase).
 3. Create payment for one or more MF purchase orders created in step 1 by using [Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment).
@@ -155,36 +153,36 @@ Similar steps must be followed for Mandate authorisation page customisation usin
 
 3. Parameters received in the above response as 'sdk_options' -> 'razorpay' must be passed on while creating authorisation payment checkout page using Razorpay SDK as detailed in [Razorpay documentation](https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction#113-create-an-authorization-payment).
 
-> Note: Below example for checkout with handler functions is for reference. Similarly authorisation checkout page with callback URL can also be created as detailed in Razorpay documentation.
+  > Note: Below example for checkout with handler functions is for reference. Similarly authorisation checkout page with callback URL can also be created as detailed in Razorpay documentation.
 
-  ```javascript
-
-    <button id = "rzp-button1"> Pay </button>
-      <script src = "https://checkout.razorpay.com/v1/checkout.js"> </script>
-      <script>
-        var options = {
-          "key": "FP_MandateAuth_response.sdk_options.razorpay.key",           
-          "order_id": "FP_MandateAuth_response.sdk_options.razorpay.order_id",   //Use the order ID received from FP payment response -> SDK_options -> razorpay -> order_id.
-          "customer_id": "FP_MandateAuth_response.sdk_options.razorpay.customer_id",    //Use the customer ID received from FP payment response -> SDK_options -> razorpay -> customer_id.
-          "recurring": "1",
-          "handler": function (response) {
-            alert(response.razorpay_payment_id);
-            alert(response.razorpay_order_id);
-            alert(response.razorpay_signature);
-          },
-          "notes": {
-            "note_key 1": "Beam me up Scotty",
-            "note_key 2": "Tea. Earl Gray. Hot."
-          },
-          "theme": {
-            "color": "#F37254"
+  
+    ```javascript
+      <button id = "rzp-button1"> Pay </button>
+        <script src = "https://checkout.razorpay.com/v1/checkout.js"> </script>
+        <script>
+          var options = {
+            "key": "FP_MandateAuth_response.sdk_options.razorpay.key",           
+            "order_id": "FP_MandateAuth_response.sdk_options.razorpay.order_id",   //Use the order ID received from FP payment response -> SDK_options -> razorpay -> order_id.
+            "customer_id": "FP_MandateAuth_response.sdk_options.razorpay.customer_id",    //Use the customer ID received from FP payment response -> SDK_options -> razorpay -> customer_id.
+            "recurring": "1",
+            "handler": function (response) {
+              alert(response.razorpay_payment_id);
+              alert(response.razorpay_order_id);
+              alert(response.razorpay_signature);
+            },
+            "notes": {
+              "note_key 1": "Beam me up Scotty",
+              "note_key 2": "Tea. Earl Gray. Hot."
+            },
+            "theme": {
+              "color": "#F37254"
+            }
+          };
+          var rzp1 = new Razorpay(options);
+          document.getElementById('rzp-button1').onclick = function (e) {
+            rzp1.open();
+            e.preventDefault();
           }
-        };
-        var rzp1 = new Razorpay(options);
-        document.getElementById('rzp-button1').onclick = function (e) {
-          rzp1.open();
-          e.preventDefault();
-        }
-      </script>
-  ```
+        </script>
+    ```
 
