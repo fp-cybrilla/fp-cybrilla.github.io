@@ -74,7 +74,7 @@ You need to collect the following additional details about the investor apart fr
 
 To avoid any rejection of orders, make sure the investor is kyc compliant before creating an investment a/c.
 
-Call the [FPDocs, create investment account](https://fintechprimitives.com/docs/api/#create-a-mf-investment-account) with the following json. Use the investor id received in step 1 to create an investment account.
+Call the [FPDocs, create investment account](https://fintechprimitives.com/docs/api/#mf-investment-accounts) with the following json. Use the investor id received in step 1 to create an investment account.
 
 Request
 
