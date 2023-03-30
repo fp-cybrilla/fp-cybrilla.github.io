@@ -10,3 +10,4 @@ group :nanoc do
 end
 
 gem "webrick", "~> 1.7"
+gem 'nokogiri'
