@@ -3,11 +3,11 @@ title: Customise payment checkout page via Razorpay SDK
 ---
 ## Customise payment checkout page via Razorpay SDK
 
-Follow the below steps to customise the payment checkout page for netbanking, UPI and mandate authorisation
+Follow the below steps to customise the payment checkout page for Netbanking, UPI and E-Mandate authorisation.
 
 #### Netbanking/UPI Payment gateway:
 
-1. Ensure that Payment SDK options are enabled. Please contact FP support for enabling of Payment SDK options. 
+1. Ensure that Payment SDK options are enabled in your FP tenant. Please contact FP support for enabling of Payment SDK options. 
 2. For each mutual fund schemes that the Investor wants to purchase, create the MF purchase order in FP by using the [MF purchase API](https://fintechprimitives.com/docs/api/#create-a-mf-purchase).
 3. Create payment for one or more MF purchase orders created in step 1 by using [Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment).
   
@@ -99,9 +99,9 @@ Follow the below steps to customise the payment checkout page for netbanking, UP
 
     > Note: Please pass the 'retry' parameter as 'false' to avoid any payment related errors.
 
-#### Mandate SDK options:
+#### E-Mandate Authorisation SDK options:
 
-Similar steps must be followed for Mandate authorisation page customisation using Razorpay SDK. Please refer to [Razorpay documentation for E-Mandate authorisation] (https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction)
+Similar steps must be followed for E-Mandate authorisation page customisation using Razorpay SDK. Please refer to [Razorpay documentation for E-Mandate authorisation] (https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction)
 
 1. Create a mandate in FP by using [Create mandate API](https://fintechprimitives.com/docs/api/#create-a-mandate-enach).
 2. Create the authorisation transaction for the mandate generated in step 1 using [Authorise Mandate API](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach) by passing the mandate ID.
