@@ -57,54 +57,53 @@ Follow the below steps to customise the payment checkout page for netbanking, UP
 
     For example, while integrating with web app as detailed in [Razorpay documentation](https://razorpay.com/docs/payments/   payment-gateway/web-integration/standard/build-integration#code-to-add-pay-button), SDK parameters must be passed from the response received from the [FP Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment) as detailed in the comments in the code below
 
-> Note: Example below for netbanking checkout with callback URL is for reference. Netbanking checkout with handler functions can also be implemented as given in Razorpay documentation.
+    > Note: Example below for netbanking checkout with callback URL is for reference. Netbanking checkout with handler functions can also be implemented as given in Razorpay documentation.
 
-  ```javascript
+    ```javascript
 
-    <button id="rzp-button1">Pay</button>
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    <script>
-    var options = {
-        "key": "FP_Payment_response.sdk_options.razorpay.key", // Enter the Key ID generated from the Dashboard
-        "amount": "FP_Payment_response.sdk_options.razorpay.amount", //Use the amount received from FP payment response -> SDK_options -> razorpay -> amount.
-    // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-        "currency": "INR",
-        "name": "Acme Corp", //your business name
-        "description": "Test Transaction",  
-        "image": "https://example.com/your_logo",  //Your Business logo
-        "order_id": "FP_Payment_response.sdk_options.razorpay.order_id", //Use the order ID received from FP payment response -> SDK_options -> razorpay -> order_id.
-        "callback_url": "FP_Payment_response.sdk_options.razorpay.callback_url", //Use the callback_URL received from FP payment response -> SDK_options -> razorpay -> callback_url.
-        "prefill": {
-            "name": "Gaurav Kumar", //your customer's name
-            "email": "gaurav.kumar@example.com",
-            "contact": "9000090000"
-        },
-        "retry": {
-            "enabled": false,          
-        },
-        "notes": {
-            "address": "Your Corporate Office"
-        },
-        "theme": {
-            "color": "#3399cc"        //Your Brand color
-        }
-    };
-    var rzp1 = new Razorpay(options);
-    document.getElementById('rzp-button1').onclick = function(e){
-        rzp1.open();
-        e.preventDefault();
-    }
-    </script>
-  ```
+      <button id="rzp-button1">Pay</button>
+      <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+      <script>
+      var options = {
+          "key": "FP_Payment_response.sdk_options.razorpay.key", // Enter the Key ID generated from the Dashboard
+          "amount": "FP_Payment_response.sdk_options.razorpay.amount", //Use the amount received from FP payment response -> SDK_options -> razorpay -> amount.
+      // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+          "currency": "INR",
+          "name": "Acme Corp", //your business name
+          "description": "Test Transaction",  
+          "image": "https://example.com/your_logo",  //Your Business logo
+          "order_id": "FP_Payment_response.sdk_options.razorpay.order_id", //Use the order ID received from FP payment response -> SDK_options -> razorpay -> order_id.
+          "callback_url": "FP_Payment_response.sdk_options.razorpay.callback_url", //Use the callback_URL received from FP payment response -> SDK_options -> razorpay -> callback_url.
+          "prefill": {
+              "name": "Gaurav Kumar", //your customer's name
+              "email": "gaurav.kumar@example.com",
+              "contact": "9000090000"
+          },
+          "retry": {
+              "enabled": false,          
+          },
+          "notes": {
+              "address": "Your Corporate Office"
+          },
+          "theme": {
+              "color": "#3399cc"        //Your Brand color
+          }
+      };
+      var rzp1 = new Razorpay(options);
+      document.getElementById('rzp-button1').onclick = function(e){
+          rzp1.open();
+          e.preventDefault();
+      }
+      </script>
+    ```
 
-
-> Note: Please pass the 'retry' parameter as 'false' to avoid any payment related errors.
+    > Note: Please pass the 'retry' parameter as 'false' to avoid any payment related errors.
 
 #### Mandate SDK options:
 
 Similar steps must be followed for Mandate authorisation page customisation using Razorpay SDK. Please refer to [Razorpay documentation for E-Mandate authorisation] (https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction)
 
-1. Create a mandate in FP by using [Create mandate API](https://fintechprimitives.com/docs/api/#create-a-mandate-enach)
+1. Create a mandate in FP by using [Create mandate API](https://fintechprimitives.com/docs/api/#create-a-mandate-enach).
 2. Create the authorisation transaction for the mandate generated in step 1 using [Authorise Mandate API](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach) by passing the mandate ID.
 
     *Mandate auth Request:*
@@ -153,7 +152,7 @@ Similar steps must be followed for Mandate authorisation page customisation usin
 
 3. Parameters received in the above response as 'sdk_options' -> 'razorpay' must be passed on while creating authorisation payment checkout page using Razorpay SDK as detailed in [Razorpay documentation](https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction#113-create-an-authorization-payment).
 
-  > Note: Below example for checkout with handler functions is for reference. Similarly authorisation checkout page with callback URL can also be created as detailed in Razorpay documentation.
+    > Note: Below example for checkout with handler functions is for reference. Similarly authorisation checkout page with callback URL can also be created as detailed in Razorpay documentation.
 
   
     ```javascript
