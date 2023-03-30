@@ -7,7 +7,7 @@ Follow the below steps to customise the payment checkout page for netbanking, UP
 
 #### Netbanking/UPI Payment gateway:
 
-1. Ensure that Payment SDK options are enabled in your tenant settings.
+1. Ensure that Payment SDK options are enabled. Please contact FP support for enabling of Payment SDK options. 
 2. For each mutual fund schemes that the Investor wants to purchase, create the MF purchase order in FP by using the [MF purchase API](https://fintechprimitives.com/docs/api/#create-a-mf-purchase).
 3. Create payment for one or more MF purchase orders created in step 1 by using [Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment).
   
