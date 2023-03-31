@@ -15,7 +15,7 @@
 
 * As per [SEBI regulations](https://www.sebi.gov.in/legal/circulars/sep-2022/two-factor-authentication-for-transactions-in-units-of-mutual-funds_63557.html), 2-Factor Authentication is applicable for purchases and SIPs with effect from April 1, 2023. Please refer the purchase [documentation](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) and the purchase plan [documentation](https://fintechprimitives.com/docs/api/#create-a-purchase-plan) for more information.
 
- 2FA is mandatory for below order types from 31st March 2023, 3.00 PM in FP
+ Consent(2FA) is mandatory for below order types from 31st March 2023, 3.00 PM in FP
 
  1. Lumpsum purchases 
  2. Systematic purchase plans - registration only 
