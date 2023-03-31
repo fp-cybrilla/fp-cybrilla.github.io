@@ -3,7 +3,7 @@
 ## Upcoming Releases
 #### Available in Sandbox
 
-* We have introduce a new feature which allows tenants configured with the BSE gateway to route their purchase/ redemption/ switch orders via RTA as well. Please refer the [documentation](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) for more information.
+* We have introduced a new feature which allows tenants configured with the BSE gateway to route their purchase/ redemption/ switch orders via RTA as well. Please refer the [documentation](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) for more information.
 
 * You can now create a systematic plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
 
