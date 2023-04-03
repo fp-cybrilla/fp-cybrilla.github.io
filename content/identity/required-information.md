@@ -48,7 +48,6 @@ The following bank account proofs are accepted currently.
 |Bank account proof|Notes|
 |------------------|-----|
 |Cancelled cheque|Front scan of the cancelled cheque containing account number, name of the account holder and IFSC code|
-|Passbook statement|Front page scan of the passbook which contains name of the account holder and account number|
 
 
 ### In person verification video
