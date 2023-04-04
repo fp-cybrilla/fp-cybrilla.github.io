@@ -21,6 +21,8 @@
  2. Systematic purchase plans - registration only 
  3. Non systematic purchase plans - registration & all its installments
 
+#### 22nd March 2023
+* You can now create a transaction plan in RTA and schedule it for activation in the future. For more info, please refer the [documentation](https://fintechprimitives.com/docs/api/#create-a-purchase-plan).
 
 #### 12th March 2023
 * You can now update the no. of installments and installment day for a non-systematic plan in RTA. Frequencies supported are `daily`, `twice_a_month`, `day_in_a_fortnight`, `four_times_a_month`, `day_in_a_week`, `monthly`, `quarterly`, `half_yearly` and `yearly` in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan) for more info.
@@ -56,6 +58,9 @@
 
 #### 20th January 2023
 * FP now supports submission of nomination details to BSE as part of UCC creation. You can skip the manual updations on the BSE portal. 
+
+#### 18th January 2023
+* You can now skip installments of an existing transaction plan in RTA by specifying the date range in which the installments are to be skipped. Please refer the [documentation](https://fintechprimitives.com/docs/api/#skip-installments-via-skip-instructions) for more information.
 
 ## July 2022
 #### 14th July 2022
