@@ -24,12 +24,12 @@ Use [FPDocs, Get fund scheme](https://fintechprimitives.com/api/#get-single-fund
 
 
 #### 2. Generate holdings report
-Mutual fund units are associated with folios. You can treat folios as sub-accounts under the investment account. You can fetch the list of folios for an investment a/c from the [FPDocs, holdings report](https://fintechprimitives.com/api/#get-holding-report)and note down `redeemable_units` to determine the units that are available for selling.
+Mutual fund units are associated with folios. You can treat folios as sub-accounts under the investment account. You can fetch the list of folios for an investment a/c from the [FPDocs, holdings report](https://fintechprimitives.com/docs/api/#investor-reports)and note down `redeemable_units` to determine the units that are available for selling.
 
 #### 3. Check redemption eligibility
 **Redeem by amount**
 1. `redemption_allowed` must be true.
-2. `redeemable_units` must be greater than zero.
+2. `redeemable_amount` must be greater than zero.
 3. Redemption amount(Sell order amount) must be >=`min_withdrawal_amount` and <=`max_withdrawal_amount`
 4. Redemption amount must be in the denominations of `withdrawal_multiples`
 
@@ -126,7 +126,7 @@ Orders in `confirmed` state will be sent for processing and the object state wil
 
 ### Testing
 
-In sandbox environment, you can use the [FPDocs, simulation](https://fintechprimitives.com/api/#post-order-simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
+In sandbox environment, you can use the [FPDocs, simulation](https://fintechprimitives.com/docs/api/#order-simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
 
 ```json
 {

@@ -7,7 +7,7 @@ title: Pause an SIP
 Using FP APIs, you can pause a SIP indefinitely or you can pause an SIP for a specific period of time.
 
 #### 1. Create a skip instruction
-Let us assume that you have existing active SIP with purchase plan id = `mfpp_dbabb25ba34c48329dbfbeff70c846f0`. This is hw yu can pause this SIP by creating a skip instruction.
+Let us assume that you have existing active SIP with purchase plan id = `mfpp_dbabb25ba34c48329dbfbeff70c846f0`. This is how you can pause this SIP by creating a [skip instruction] (https://fintechprimitives.com/docs/api/#skip-installments-via-skip-instructions).
 
 `POST /v2/mf_purchase_plans/mfpp_dbabb25ba34c48329dbfbeff70c846f0/skip_instructions`
 ```json

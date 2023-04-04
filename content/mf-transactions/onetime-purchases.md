@@ -6,7 +6,7 @@ title: One time purchases
 
 > ##### Ensure the following before placing a purchase order
 > 1. Your investor is [kyc compliant](/identity/overview)
-> 2. You have an [investment account created](/mf-transactions/overview) for your investor
+> 2. You have an [investment account created](/mf-transactions/investment-account) for your investor
 
 #### 1. Get fund scheme details and check purchase eligibility 
 Once you have decided to place a purchase order against a particular scheme, fetch the scheme details using the [FPDocs, Get fund scheme](https://fintechprimitives.com/docs/api/#fund-scheme), and ensure that the scheme is eligible for purchase. Here are the checks that you must do.
