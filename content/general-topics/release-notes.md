@@ -41,7 +41,7 @@
 
 ## February 2023
 #### 23rd February 2023
-* FP supports SWP transactions that can be routed via BSE gateway. For more information please check the [documentation](https://fintechprimitives.com/docs/api/#create-a-redemption-plan)
+* FP supports SWPs that can be routed via BSE gateway. For more information please check the [documentation](https://fintechprimitives.com/docs/api/#create-a-redemption-plan)
 
 #### 16th February 2023
 * File service now has support for `webm` videos along with existing `mp4` format. For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#create-a-file)
