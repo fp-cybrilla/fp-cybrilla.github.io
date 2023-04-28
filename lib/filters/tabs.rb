@@ -3,9 +3,9 @@ require "nokogiri";
 class TabsFilter < Nanoc::Filter
   identifier :tabs
 
-  TABS_PATTERN = %r{<p>:Tabs</p>(?<tabs_wrapper>.*?)<p>:EndTabs</p>}mx.freeze
+  TABS_PATTERN = %r{<p>:Tabs.*?</p>(?<tabs_wrapper>.*?)<p>:EndTabs.*?</p>}mx.freeze
   TAB_TITLE_PATTERN = %r{<p>::TabTitle\s(?<tab_title>.*?)</p>}mx.freeze
-  TAB_CONTENT_PATTERN = %r{<p>:::TabContent</p>(?<tab_content>.*?)<p>:::EndTabContent</p>}mx.freeze
+  TAB_CONTENT_PATTERN = %r{<p>:::TabContent.*?</p>(?<tab_content>.*?)<p>:::EndTabContent.*?</p>}mx.freeze
 
   def run(content, params = {})
     new_content = content.gsub(TABS_PATTERN) { generate_wrapper(Regexp.last_match[:tabs_wrapper]) }
