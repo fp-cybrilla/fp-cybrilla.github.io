@@ -76,11 +76,13 @@ To update the sidebar navigation please follow the below the approach and make t
 
 :::TabContent
 
-:::EndTabContent
+tab content one
+
+:::EndTabContent 
 
 ::TabTitle Tab two
 
-:::TabContent
+:::TabContent 
 
 tab content two
 
