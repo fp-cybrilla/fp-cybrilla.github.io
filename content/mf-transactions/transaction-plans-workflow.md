@@ -3,7 +3,7 @@ This flow can be used to create a transaction plan in RTA.
 ### Transaction Plan Lifecycle
 
 1. User creates a transaction. The plan immediately becomes `active` upon plan creation. 
-2. Once the plan becomes active, FP takes the responsibility of creating [installments](#Installment-Generation) as per the `installment_day` and `frequency` of the plan.
+2. Once the plan becomes active, FP takes the responsibility of creating [installments](#Installment-Generation-Lifecycle) as per the `installment_day` and `frequency` of the plan.
 3. Once all the installment of the plan have been generated, the plan state changes to `completed`.
 
 ### Transaction Plan Modifications
