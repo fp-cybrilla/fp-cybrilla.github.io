@@ -76,7 +76,7 @@ sidebar:
           link: "/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration/"
         - title: Create a new SIP
           link: "/mf-transactions/purchase-plans/create-monthly-sip/"
-        - title: Transaction Plans Workflow
+        - title: Transaction Plans Workflow in RTA
           link: "/mf-transactions/transaction-plans-workflow"
        # - title: Top up amount for an SIP
        #   link: "/mf-transactions/purchase-plans/topup-sip/"
