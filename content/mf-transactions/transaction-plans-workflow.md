@@ -1,4 +1,4 @@
-## Transaction Plan Workflow in RTA
+## Transaction Plans Workflow in RTA
 
 This flow can be used to create a transaction plan in RTA.
 
