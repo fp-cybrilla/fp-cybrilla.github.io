@@ -9,7 +9,7 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
 
 1. Ensure that Payment SDK options are enabled in your FP tenant. Please contact FP support for enabling of Payment SDK options. 
 2. For each mutual fund schemes that the Investor wants to purchase, create the MF purchase order in FP by using the [MF purchase API](https://fintechprimitives.com/docs/api/#create-a-mf-purchase).
-3. Create payment for one or more MF purchase orders created in step 1 by using [Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment).
+3. Create payment for one or more MF purchase orders created in step 2 by using [Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment).
   
     *Payment creation API Request:*
 
@@ -45,7 +45,7 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
                       "card": false,
                       "upi": false
                   },
-                  "order_id": "order_LD3UyrIMhixgTU", \\Razorpay 'order_id'
+                  "order_id": "order_LD3UyrIMhixgTU", //Razorpay 'order_id'
                   "key": "rzp_test_yOMeNF4w46S7lK"
               }
           }
@@ -55,7 +55,7 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
 
 4. Parameters received in the above response as 'sdk_options' -> 'razorpay' must be passed on while integrating Razorpay SDK in any of the platforms such as web, Andoid or IOS.
 
-    For example, while integrating with web app as detailed in [Razorpay documentation](https://razorpay.com/docs/payments/   payment-gateway/web-integration/standard/build-integration#code-to-add-pay-button), SDK parameters must be passed from the response received from the [FP Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment) as detailed in the comments in the code below
+    For example, while integrating with web app as detailed in [Razorpay documentation](https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/build-integration/#code-to-add-pay-button), SDK parameters must be passed from the response received from the [FP Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment) as detailed in the comments in the code below
 
     > Note: Example below for netbanking checkout with callback URL is for reference. Netbanking checkout with handler functions can also be implemented as given in Razorpay documentation.
 
@@ -70,20 +70,17 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
       // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
           "currency": "INR",
           "name": "Acme Corp", //your business name
-          "description": "Test Transaction",  
           "image": "https://example.com/your_logo",  //Your Business logo
           "order_id": "FP_Payment_response.sdk_options.razorpay.order_id", //Use the order ID received from FP payment response -> SDK_options -> razorpay -> order_id.
           "callback_url": "FP_Payment_response.sdk_options.razorpay.callback_url", //Use the callback_URL received from FP payment response -> SDK_options -> razorpay -> callback_url.
           "prefill": {
               "name": "Gaurav Kumar", //your customer's name
-              "email": "gaurav.kumar@example.com",
-              "contact": "9000090000"
+              "email": "gaurav.kumar@example.com",  //your customer's email
+              "contact": "9000090000"   //your customer's contact
           },
           "retry": {
-              "enabled": false,          
-          },
-          "notes": {
-              "address": "Your Corporate Office"
+              "enabled": false,      //Pass the 'retry' parameter as 'false' to avoid any payment related errors.
+    
           },
           "theme": {
               "color": "#3399cc"        //Your Brand color
@@ -152,7 +149,7 @@ Similar steps must be followed for E-Mandate authorisation page customisation us
 
 3. Parameters received in the above response as 'sdk_options' -> 'razorpay' must be passed on while creating authorisation payment checkout page using Razorpay SDK as detailed in [Razorpay documentation](https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction#113-create-an-authorization-payment).
 
-    > Note: Below example for checkout with handler functions is for reference. Similarly authorisation checkout page with callback URL can also be created as detailed in Razorpay documentation.
+    > Note: Below example for checkout with handler functions is for reference. Similarly authorisation checkout page with callback URL can also be created by passing an extra "callback_url" parameter as detailed in Razorpay documentation. 
 
   
     ```javascript
@@ -163,18 +160,21 @@ Similar steps must be followed for E-Mandate authorisation page customisation us
             "key": "FP_MandateAuth_response.sdk_options.razorpay.key",           
             "order_id": "FP_MandateAuth_response.sdk_options.razorpay.order_id",   //Use the order ID received from FP payment response -> SDK_options -> razorpay -> order_id.
             "customer_id": "FP_MandateAuth_response.sdk_options.razorpay.customer_id",    //Use the customer ID received from FP payment response -> SDK_options -> razorpay -> customer_id.
-            "recurring": "1",
+            "recurring": "1",    //Mandatory field and its value must be '1'.
+            "name": "Acme Corp", //your business name
+            "image": "https://example.com/your_logo",  //Your business logo
+            "prefill": {
+              "name": "Gaurav Kumar", //your customer's name
+              "email": "gaurav.kumar@example.com",  //your customer's email
+              "contact": "9000090000"   //your customer's contact
+            },
             "handler": function (response) {
               alert(response.razorpay_payment_id);
               alert(response.razorpay_order_id);
               alert(response.razorpay_signature);
             },
-            "notes": {
-              "note_key 1": "Beam me up Scotty",
-              "note_key 2": "Tea. Earl Gray. Hot."
-            },
             "theme": {
-              "color": "#F37254"
+              "color": "#F37254"    //Your brand color
             }
           };
           var rzp1 = new Razorpay(options);
