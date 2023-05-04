@@ -1,7 +1,9 @@
 This flow can be used to create a transaction plan in RTA.
 
 ### Workflow
-![image](/uploads/cb5e9f0cd1e8c88c09d1963257d7026a/image.png)
+<div>
+  <img src="../../images/transaction-plans-workflow.png">
+</div>
 
 
 ### Transaction Plan Lifecycle
