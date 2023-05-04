@@ -3,7 +3,7 @@ This flow can be used to create a transaction plan in RTA.
 ### Transaction Plan Lifecycle
 
 1. User creates a transaction. The plan immediately becomes `active` upon plan creation. 
-2. Once the plan becomes active, FP takes the responsibility of creating [installments](#installment-generation) as per the `installment_day` and `frequency` of the plan.
+2. Once the plan becomes active, FP takes the responsibility of creating [installments](#Installment-Generation) as per the `installment_day` and `frequency` of the plan.
 3. Once all the installment of the plan have been generated, the plan state changes to `completed`.
 
 ### Transaction Plan Modifications
@@ -24,13 +24,16 @@ This flow can be used to create a transaction plan in RTA.
   - [Create a Purchase Plan](#https://fintechprimitives.com/docs/api/#create-a-purchase-plan)
   - [Create a Redemption Plan](#https://fintechprimitives.com/docs/api/#create-a-redemption-plan)
   - [Create a Switch Plan](#https://fintechprimitives.com/docs/api/#create-a-switch-plan)
+
 2. Update a Transaction Plan
   - [Update a Purchase Plan](#https://fintechprimitives.com/docs/api/#update-a-purchase-plan)
   - [Update a Redemption Plan](#https://fintechprimitives.com/docs/api/#update-a-redemption-plan)
   - [Update a Switch Plan](#https://fintechprimitives.com/docs/api/#update-a-switch-plan)
+
 3. Cancel a Transaction Plan
   - [Cancel a Purchase Plan](#https://fintechprimitives.com/docs/api/#cancel-a-purchase-plan)
   - [Cancel a Redemption Plan](#https://fintechprimitives.com/docs/api/#cancel-a-redemption-plan)
   - [Cancel a Switch Plan](#https://fintechprimitives.com/docs/api/#cancel-a-switch-plan)
+
 4. Pause a Transaction Plan
   - [Skip Installments](#https://fintechprimitives.com/docs/api/#skip-installments-via-skip-instructions)
