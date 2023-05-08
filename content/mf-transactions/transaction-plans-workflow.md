@@ -39,7 +39,7 @@ A non-systematic plan has the same behaviour as that of a systematic plan, but i
 
 This can be achieved by updating the existing SIP using [Update a Purchase Plan](#https://fintechprimitives.com/docs/api/#update-a-purchase-plan) -
 
-Request
+##### Request
 ```json
 {
   "id": "mfpp_dbabb25ba34c48329dbfbeff70c846f0",
@@ -49,13 +49,13 @@ Request
 
 Upon updating the SIP with the new amount, all the remaining installments will be generated with amount as 10000.
 
-#### Tina wants to change the installment date for an existing SIP from 07th of every month to 15th of every month. How can this be implemented? 
+#### Tina wants to change the installment date for an existing SIP from 7th of every month to 15th of every month. How can this be implemented? 
 
 Changing the installment date of a SIP is not possible as RTA does not allow this as of now.
 But this use case can be served if the user creates a purchase plan with `systematic` = false.
 Then she can update the installment date of the plan using [Update a Purchase Plan](#https://fintechprimitives.com/docs/api/#update-a-purchase-plan) -
 
-Request
+##### Request
 ```json
 {
   "id": "mfpp_dbabb25ba34c48329dbfbeff70c846f0",
@@ -72,7 +72,7 @@ For the above example, let's say the user wants to generate her next installment
 Then this can be achieved using the following steps -
 1. Create a purchase order of amount 5,000 on 17th March 2023.
 
-Request
+##### Request
 ```json
 {
   "mf_investment_account": "mfia_367a75826694614a539c0f82b196027",
@@ -84,7 +84,7 @@ Request
 
 2. Create a purchase plan on the same day with activation date (`activate_after`) as 2023-05-01 and installment_day = 15
 
-Request
+##### Request
 ```json
 {
   "mf_investment_account": "mfia_367a75826694614a539c0f82b196027",
