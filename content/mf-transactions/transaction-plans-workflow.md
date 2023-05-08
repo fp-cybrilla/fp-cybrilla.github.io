@@ -1,6 +1,12 @@
 ## Transaction Plans Workflow in RTA
 
-This flow can be used to create a transaction plan in RTA.
+Transaction plans are used to generate orders on a recurring basis.
+The user can use the transaction plan APIs to create two types of plans - systematic plans (SIP/ SWP/ STP) or non-systematic plans.
+
+### What is a Non-Systematic Plan?
+
+A non-systematic plan has the same behaviour as that of a systematic plan, but is not registered as a systematic plan in RTA. Instead it is registered as a series of lumpsum orders generated at the frequency specified by the user during the non-systematic plan creation.
+
 
 ### Workflow
 <div>
@@ -100,20 +106,23 @@ Request
 ```
 
 ### API References
-1. Create a Transaction Plan
+1. Introduction to Transaction Plans
+  - [FP Transaction Plans](#https://fintechprimitives.com/docs/api/#fp-transaction-plans)
+
+2. Create a Transaction Plan
   - [Create a Purchase Plan](#https://fintechprimitives.com/docs/api/#create-a-purchase-plan)
   - [Create a Redemption Plan](#https://fintechprimitives.com/docs/api/#create-a-redemption-plan)
   - [Create a Switch Plan](#https://fintechprimitives.com/docs/api/#create-a-switch-plan)
 
-2. Update a Transaction Plan
+3. Update a Transaction Plan
   - [Update a Purchase Plan](#https://fintechprimitives.com/docs/api/#update-a-purchase-plan)
   - [Update a Redemption Plan](#https://fintechprimitives.com/docs/api/#update-a-redemption-plan)
   - [Update a Switch Plan](#https://fintechprimitives.com/docs/api/#update-a-switch-plan)
 
-3. Cancel a Transaction Plan
+4. Cancel a Transaction Plan
   - [Cancel a Purchase Plan](#https://fintechprimitives.com/docs/api/#cancel-a-purchase-plan)
   - [Cancel a Redemption Plan](#https://fintechprimitives.com/docs/api/#cancel-a-redemption-plan)
   - [Cancel a Switch Plan](#https://fintechprimitives.com/docs/api/#cancel-a-switch-plan)
 
-4. Pause a Transaction Plan
+5. Pause a Transaction Plan
   - [Skip Installments](#https://fintechprimitives.com/docs/api/#skip-installments-via-skip-instructions)
