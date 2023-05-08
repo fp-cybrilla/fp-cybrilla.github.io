@@ -63,7 +63,41 @@ For the above example, let's say the user wants to generate her next installment
 
 Then this can be achieved using the following steps -
 1. Create a purchase order of amount 5,000 on 17th March 2023.
-2. Create a purchase plan on the same day with `activate_after` = 2023-05-01 and installment_day = 15
+
+Request
+```json
+{
+  "mf_investment_account": "mfia_367a75826694614a539c0f82b196027",
+  "scheme": "INF173K01FE6",
+  "folio_number": "31171511",
+  "amount": 5000
+}
+```
+
+2. Create a purchase plan on the same day with activation date (`activate_after`) as 2023-05-01 and installment_day = 15
+
+Request
+```json
+{
+  "mf_investment_account": "mfia_367a75826694614a539c0f82b196027",
+  "scheme": "INF173K01FE6",
+  "frequency": "monthly",
+  "folio_number": "31171511",
+  "amount": 5000,
+  "installment_day": 15,
+  "number_of_installments": 7,
+  "systematic": true,
+  "purpose": "children_education",
+  "generate_first_installment_now": false,
+  "auto_generate_installments": true,
+  "activate_after": "2023-05-01",
+  "consent": {
+    "email": "mona@gmail.com",
+    "isd_code": "91",
+    "mobile": "9008580644"
+  }
+}
+```
 
 ### API References
 1. Create a Transaction Plan
