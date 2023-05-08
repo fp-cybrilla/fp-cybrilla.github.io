@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "0e9f147a-1147-4cdc-80fb-0e456c65e488",
+		"name": "KYC Submission Workflow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14473178"
+	},
+	"item": [
+		{
+			"name": "KYC Request APIs",
+			"item": [
+				{
+					"name": "Create a KYC Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Rani Gupta\",\n    \"email\": \"raj@example.com\",\n    \"pan\": \"K1PPG1998U\",\n    \"mobile\": {\n        \"isd\": \"+91\",\n        \"number\": \"8160597103\"\n    },\n    \"date_of_birth\": \"2002-09-18\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/kyc_requests",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"kyc_requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch a KYC Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v2/kyc_requests/kycr_123",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"kyc_requests",
+								"kycr_123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Simulate a KYC Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"status\": \"rejected\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/kyc_requests/33a54700-b2cd-481a-9c03-4ee2ef350c21/simulate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"kyc_requests",
+								"33a54700-b2cd-481a-9c03-4ee2ef350c21",
+								"simulate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all KYC Requests",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v2/kyc_requests",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"kyc_requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a KYC Request",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ipv_video\": \"adaff13e-8554-4445-bc34-463c8647f7d2\",\n    \"father_name\": \"Raj Gupta\",\n    \"aadhaar_number\": \"0145\",\n    \"mother_name\": \"Sailaja\",\n    \"signature\": \"236f328d-07fd-4adf-ac9d-5d718ba5720a\",\n    \"photo\": \"236f328d-07fd-4adf-ac9d-5d718ba5720a\",\n    \"gender\": \"male\",\n    \"marital_status\": \"unmarried\",\n    \"country_of_birth\": \"in\",\n    \"geolocation\": {\n    \t\"latitude\": 12.1123,\n    \t\"longitude\": 17.1111\n    },\n    \"bank_account\": {\n    \t\"account_number\": \"12323231232\",\n    \t\"ifsc_code\": \"ICIC0000047\",\n    \t\"account_holder_name\": \"Rani Gupta\",\n    \t\"proof\": \"236f328d-07fd-4adf-ac9d-5d718ba5720a\"\n    },\n    \"address\": {\n\t\t\"city\": \"Bangalore\",\n\t    \"proof\": \"236f328d-07fd-4adf-ac9d-5d718ba5720a\",\n\t    \"proof_back\": \"236f328d-07fd-4adf-ac9d-5d718ba5720a\",\n\t    \"line_1\": \"Isha Lake Front Apartment\",\n\t    \"line_2\": \"Somsundarpalya\",\n\t    \"country\": \"in\",\n\t    \"pincode\": \"560102\",\n\t    \"proof_type\": \"aadhaar\",\n\t    \"proof_number\": \"0145\"\n    },\n    \"residential_status\": \"resident_individual\",\n    \"occupation_type\": \"business\",\n    \"identity_proof\": \"236f328d-07fd-4adf-ac9d-5d718ba5720a\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/kyc_requests/kycr_123",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"kyc_requests",
+								"kycr_123"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Identity Document APIs",
+			"item": [
+				{
+					"name": "Create an Identity Document",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kyc_request\": \"kycr_123\",\n    \"proof_type\": \"aadhaar\",\n    \"postback_url\": \"fintechprimitives.com\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/identity_documents",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"identity_documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch an Identity Document",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/identity_documents/iddoc_123",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"identity_documents",
+								"iddoc_123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all Identity Document",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/identity_documents?kyc_request=kycr_123&status=successful",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"identity_documents"
+							],
+							"query": [
+								{
+									"key": "kyc_request",
+									"value": "kycr_123"
+								},
+								{
+									"key": "status",
+									"value": "successful"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
