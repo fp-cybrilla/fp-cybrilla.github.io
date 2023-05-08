@@ -1,5 +1,7 @@
 ## Transaction Plans Workflow in RTA
 
+### What are Transaction Plans?
+
 Transaction plans are used to generate orders on a recurring basis.
 The user can use the transaction plan APIs to create two types of plans - systematic plans (SIP/ SWP/ STP) or non-systematic plans.
 
