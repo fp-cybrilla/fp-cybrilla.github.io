@@ -136,8 +136,6 @@ sidebar:
     dropdown_menu_items: 
       - title: Automated communications with investors
         link: "/pages/workflows/automated-communication/"
-      - title: Product Roadmap
-        link: "/future/roadmap/"
       - title: Release notes
         link: "/general-topics/release-notes/"
       - title: Best Practices Guide
@@ -150,4 +148,13 @@ sidebar:
         link: "/fp-sdk/sdk-javascript/"
       - title: Examples
         link: "/fp-sdk/sdk-javascript/examples/"
+  - dropdown_menu_title: Upcoming
+    dropdown_menu_items: 
+      - title: Overview
+        link: "/upcoming/overview/"
+      # Subsection starts here with heading and list of links
+      - subsection:
+        - heading: "Beta programs"
+        - title: Using Aadhaar as POA in KYC submission workflows
+          link: "/upcoming/beta/aadhaar-as-poa/"
 
