@@ -70,7 +70,7 @@ Upon updating the purchase plan with the new installment date, all the remaining
 For the above example, let's say the user wants to generate her next installment on 15th May.
 
 Then this can be achieved using the following steps -
-1. Create a purchase order of amount 5,000 on 17th March 2023.
+Step 1 - Create a purchase order of amount 5,000 on 17th March 2023.
 
 ##### Request
 ```json
@@ -81,8 +81,8 @@ Then this can be achieved using the following steps -
   "amount": 5000
 }
 ```
-
-2. Create a purchase plan on the same day with activation date (`activate_after`) as 2023-05-01 and installment_day = 15
+<br>
+Step 2 - Create a purchase plan on the same day with activation date (`activate_after`) as 2023-05-01 and installment_day = 15
 
 ##### Request
 ```json
