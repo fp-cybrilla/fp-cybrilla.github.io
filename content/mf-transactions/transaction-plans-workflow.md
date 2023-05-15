@@ -20,17 +20,16 @@ A non-systematic plan has the same behaviour as that of a systematic plan, but i
 <br>
 1. User creates a transaction plan. The plan immediately becomes `active` upon plan creation. 
 2. Once the plan becomes active, FP takes the responsibility of creating installments as per the `installment_day` and `frequency` of the plan. Refer [Installment Generation Lifecycle](#installment-generation-lifecycle) section below to understand the flow of installments.
-3. The user can choose to cancel an active plan. If this is done, the plan state changes to `cancelled` immediately.
-3. Once all the installments of the plan have been generated, the plan state changes to `completed`.'
-4. The user can also choose to modify an active plan. Please refer [Transaction Plan Modifications](#transaction-plan-modifications) for more info.
+3. The user can choose to [cancel](#api-references) an active plan. If this is done, the plan state changes to `cancelled` immediately.
+  - Once a plan is `cancelled`, FP no longer generates installments for the plan.
+4. Once all the installments of the plan have been generated, the plan state changes to `completed`.'
+5. The user can also choose to modify an active plan. Please refer [Transaction Plan Modifications](#transaction-plan-modifications) for more info.
 
 ### Transaction Plan Modifications
-1. After the plan is active, the user has the option to modify the plan as per his requirement -
-   - If the plan is systematic (`systematic` = true), the user can update the plan amount.
-   - If the plan is non-systematic (`systematic` = false), the user can update the plan amount, installment day and number of installments.
-2. The user can opt for cancelling a plan. Upon plan cancellation, FP stops generating further installments of plan and the plan state changes to `cancelled`.
-   - Once a plan is `cancelled`, FP no longer generates installments for the plan.
-3. The user can also opt to pause a plan between a given timeframe. Upon pausing the plan, for all the installments that fall under the time frame, FP generates the installments and marks them as `cancelled`. 
+1. After the plan is active, the user has the option to [modify the plan](#api-references) as per his requirement -
+   - If the plan is systematic (`systematic` = true), the user can modify the plan amount.
+   - If the plan is non-systematic (`systematic` = false), the user can modify the plan amount, installment day and number of installments. 
+2. The user can also opt to [pause a plan](#api-references) between a given timeframe. Upon pausing the plan, for all the installments that fall under the time frame, FP generates the installments and marks them as `cancelled`. 
 
 ### Installment Generation Lifecycle
 
@@ -122,7 +121,7 @@ Then this can be achieved using the following steps - <br>
   - [Create a Redemption Plan](#https://fintechprimitives.com/docs/api/#create-a-redemption-plan)
   - [Create a Switch Plan](#https://fintechprimitives.com/docs/api/#create-a-switch-plan)
 
-3. Update a Transaction Plan
+3. Modify a Transaction Plan
   - [Update a Purchase Plan](#https://fintechprimitives.com/docs/api/#update-a-purchase-plan)
   - [Update a Redemption Plan](#https://fintechprimitives.com/docs/api/#update-a-redemption-plan)
   - [Update a Switch Plan](#https://fintechprimitives.com/docs/api/#update-a-switch-plan)
