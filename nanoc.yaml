@@ -72,12 +72,12 @@ sidebar:
       # Subsection starts here with heading and list of links
       - subsection:  
         - heading: "Recurring purchases"
+        - title: Transaction Plans in RTA
+          link: "/mf-transactions/transaction-plans-workflow"
         - title: Migrating from V1 SIP APIs to Purchase plans
           link: "/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration/"
         - title: Create a new SIP
           link: "/mf-transactions/purchase-plans/create-monthly-sip/"
-        - title: Transaction Plans Workflow in RTA
-          link: "/mf-transactions/transaction-plans-workflow"
        # - title: Top up amount for an SIP
        #   link: "/mf-transactions/purchase-plans/topup-sip/"
         - title: Pause installments of an existing SIP
