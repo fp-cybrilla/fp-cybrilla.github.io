@@ -32,10 +32,7 @@ A non-systematic plan has the same behaviour as that of a systematic plan, but i
 2. The user can also opt to [pause a plan](#api-references) between a given timeframe. Upon pausing the plan, for all the installments that fall under the time frame, FP generates the installments and marks them as `cancelled`. 
 
 ### Installment Generation Lifecycle
-
-1. On the day of the installment, FP generates the installment as a purchase order . The purchase order upon creation is in `pending` state. This order is `confirmed` for submission to RTA once the payment is done by the investor.
-2. Once the order is submitted to the RTA gateway, the order state changes to `submitted`.
-3. Once the order is successfully processed by the RTA and the reverse feed is generated and uploaded to FP, the order state changes to `successful`.
+For every installment of a plan, FP creates a MF order. 
 
 ### Example Use Cases
 
