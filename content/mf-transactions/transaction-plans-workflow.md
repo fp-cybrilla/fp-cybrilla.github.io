@@ -29,6 +29,8 @@ A non-systematic plan has the same behaviour as that of a systematic plan, but i
    - If the plan is non-systematic (`systematic` = false), the user can modify the plan amount, installment day and number of installments. 
 2. The user can also opt to [pause a plan](#api-references) between a given timeframe. Upon pausing the plan, for all the installments that fall under the time frame, FP generates the installments and marks them as `cancelled`. 
 
+> If a user wants to modify a plan right from the next installment, the plan must be modified at least 2 days before the next installment is scheduled.
+
 ### Installment Generation Lifecycle
 For every installment of a plan, FP creates a MF order. 
 To understand more about the installment lifecycle please refer [Orders Lifecycle](https://docs.fintechprimitives.com/mf-transactions/orders-lifecycle)
