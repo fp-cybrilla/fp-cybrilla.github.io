@@ -33,7 +33,7 @@ A non-systematic plan has the same behaviour as that of a systematic plan, but i
 
 ### Installment Generation Lifecycle
 For every installment of a plan, FP creates a MF order. 
-To understand more about the installment lifecycle please refer [Orders Lifecycle](orders-lifecycle)
+To understand more about the installment lifecycle please refer [Orders Lifecycle](https://docs.fintechprimitives.com/mf-transactions/orders-lifecycle)
 
 ### Example Use Cases
 
