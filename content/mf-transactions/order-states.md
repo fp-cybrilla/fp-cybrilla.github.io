@@ -1,6 +1,6 @@
 ## Order States
 
-While FP supports different types of orders - fresh purchase, additional purchase, redemption, switch, etc - which have different workflows, the states that each type of order goes through - from order creation to order processing - is the same. 
+While FP supports different types of orders - fresh purchase, additional purchase, redemption, switch, etc - which have different workflows, the states that each type of order goes through - from order created to order successfully processed by the gateway - is the same. 
 <br><br>
 The definition of each order state is mentioned below -
 <br><br>
