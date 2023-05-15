@@ -7,28 +7,31 @@ The user can use the transaction plan APIs to create two types of plans - system
 
 ### What is a Non-Systematic Plan?
 
+> A non-systematic plan can be created by creating a transaction plan with `systematic` = false.
+
 A non-systematic plan has the same behaviour as that of a systematic plan, but is not registered as a systematic plan in RTA. Instead it is registered as a series of lumpsum orders generated at the frequency specified by the user during the non-systematic plan creation.
 
 
-### Workflow of a Transaction Plan
+### Transaction Plan Lifecycle
 <div>
   <img src="../../images/transaction-plans-workflow.png">
 </div>
 
 
-### Transaction Plan Lifecycle
 1. User creates a transaction plan. The plan immediately becomes `active` upon plan creation. 
 2. Once the plan becomes active, FP takes the responsibility of creating installments as per the `installment_day` and `frequency` of the plan. Refer Installment Generation Lifecycle section below to understand the flow of installments.
-3. Once all the installments of the plan have been generated, the plan state changes to `completed`.
+3. Once all the installments of the plan have been generated, the plan state changes to `completed`.'
+4. The user can also choose to modify an active plan. 
 
 ### Transaction Plan Modifications
 1. After the plan is active, the user has the option to modify the plan as per his requirement -
    - If the plan is systematic (`systematic` = true), the user can update the plan amount.
    - If the plan is non-systematic (`systematic` = false), the user can update the plan amount, installment day and number of installments.
-2. The user can opt for cancelling a plan. Upon plan cancellation, FP stops generating further installments of plan.
+2. The user can opt for cancelling a plan. Upon plan cancellation, FP stops generating further installments of plan and the plan state changes to `cancelled`.
 3. The user can also opt to pause a plan between a given timeframe. Upon pausing the plan, for all the installments that fall under the time frame, FP generates the installments and marks them as `cancelled`. 
 
 ### Installment Generation Lifecycle
+
 1. On the day of the installment, FP generates the installment as a purchase order . The purchase order upon creation is in `pending` state. This order is `confirmed` for submission to RTA once the payment is done by the investor.
 2. Once the order is submitted to the RTA gateway, the order state changes to `submitted`.
 3. Once the order is successfully processed by the RTA and the reverse feed is generated and uploaded to FP, the order state changes to `successful`.
