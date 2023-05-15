@@ -1,4 +1,4 @@
-## Transaction Plans Workflow in RTA
+## Transaction Plans in RTA
 
 ### What are Transaction Plans?
 
