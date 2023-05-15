@@ -62,7 +62,7 @@ sidebar:
       # Subsection starts here with heading and list of links
       - subsection:
         - heading: "One time orders"
-        - title: Order Lifecycle
+        - title: Orders Lifecycle
           link: "/mf-transactions/orders-lifecycle/"
         - title: Create a one-time purchase
           link: "/mf-transactions/onetime-purchases/"
