@@ -29,6 +29,7 @@ A non-systematic plan has the same behaviour as that of a systematic plan, but i
    - If the plan is systematic (`systematic` = true), the user can update the plan amount.
    - If the plan is non-systematic (`systematic` = false), the user can update the plan amount, installment day and number of installments.
 2. The user can opt for cancelling a plan. Upon plan cancellation, FP stops generating further installments of plan and the plan state changes to `cancelled`.
+   - Once a plan is `cancelled`, FP no longer generates installments for the plan.
 3. The user can also opt to pause a plan between a given timeframe. Upon pausing the plan, for all the installments that fall under the time frame, FP generates the installments and marks them as `cancelled`. 
 
 ### Installment Generation Lifecycle
