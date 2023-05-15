@@ -6,10 +6,9 @@ Transaction plans are used to generate orders on a recurring basis.
 The user can use the transaction plan APIs to create two types of plans - systematic plans (SIP/ SWP/ STP) or non-systematic plans.
 
 ### What is a Non-Systematic Plan?
+A non-systematic plan has the same behaviour as that of a systematic plan, but is not registered as a systematic plan in RTA. Instead it is registered as a series of lumpsum orders generated at the frequency specified by the user during the non-systematic plan creation.
 
 > A non-systematic plan can be created by creating a transaction plan with `systematic` = false.
-
-A non-systematic plan has the same behaviour as that of a systematic plan, but is not registered as a systematic plan in RTA. Instead it is registered as a series of lumpsum orders generated at the frequency specified by the user during the non-systematic plan creation.
 
 
 ### Transaction Plan Lifecycle
