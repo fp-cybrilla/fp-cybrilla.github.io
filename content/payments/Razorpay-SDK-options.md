@@ -5,9 +5,9 @@ title: Customise payment checkout page via Razorpay SDK
 
 Follow the below steps to customise the payment checkout page for Netbanking, UPI and E-Mandate authorisation.
 
-#### Netbanking/UPI Payment gateway:
+#### Netbanking/UPI Payment:
 
-1. Ensure that Payment SDK options are enabled in your FP tenant. Please contact FP support for enabling of Payment SDK options. 
+1. Ensure that payment SDK options are enabled in your FP tenant. Please contact FP support for enabling of Payment SDK options. 
 2. For each mutual fund schemes that the Investor wants to purchase, create the MF purchase order in FP by using the [MF purchase API](https://fintechprimitives.com/docs/api/#create-a-mf-purchase).
 3. Create payment for one or more MF purchase orders created in step 2 by using [Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment).
   
@@ -53,7 +53,7 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
 
       ```
 
-4. Parameters received in the above response as 'sdk_options' -> 'razorpay' must be passed on while integrating Razorpay SDK in any of the platforms such as web, Andoid or IOS.
+4. Parameters received in the above response as `'sdk_options' -> 'razorpay'` must be passed on while integrating Razorpay SDK in any of the platforms such as web, Andoid or IOS.
 
     For example, while integrating with web app as detailed in [Razorpay documentation](https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/build-integration/#code-to-add-pay-button), SDK parameters must be passed from the response received from the [FP Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment) as detailed in the comments in the code below
 
@@ -79,7 +79,7 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
               "contact": "9000090000"   //your customer's contact
           },
           "retry": {
-              "enabled": false,      //Pass the 'retry' parameter as 'false' to avoid any payment related errors.
+              "enabled": false,      //Pass the 'retry' parameter as 'false'.
     
           },
           "theme": {
@@ -94,7 +94,7 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
       </script>
     ```
 
-    > Note: Please pass the 'retry' parameter as 'false' to avoid any payment related errors.
+    > Note: Please pass the 'retry' parameter as 'false'.
 
 #### E-Mandate Authorisation SDK options:
 
@@ -147,7 +147,7 @@ Similar steps must be followed for E-Mandate authorisation page customisation us
 
       ```
 
-3. Parameters received in the above response as 'sdk_options' -> 'razorpay' must be passed on while creating authorisation payment checkout page using Razorpay SDK as detailed in [Razorpay documentation](https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction#113-create-an-authorization-payment).
+3. Parameters received in the above response as `'sdk_options' -> 'razorpay'` must be passed on while creating authorisation payment checkout page using Razorpay SDK as detailed in [Razorpay documentation](https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction#113-create-an-authorization-payment).
 
     > Note: Below example for checkout with handler functions is for reference. Similarly authorisation checkout page with callback URL can also be created by passing an extra "callback_url" parameter as detailed in Razorpay documentation. 
 
