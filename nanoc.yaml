@@ -118,6 +118,7 @@ sidebar:
         link: "/payments/managing-e-mandates/"
       - title: Collect payments via e-mandates
         link: "/payments/collect-payment-via-mandates/"
+      
       # Subsection starts here with heading and list of links
       - subsection:
         - heading: "Appendix"
@@ -125,6 +126,8 @@ sidebar:
           link: "/payments/payment-states/"
         - title: Mandate States
           link: "/payments/mandate-states/"
+        - title: Customise payment checkout page via Razorpay SDK
+          link: "/payments/Razorpay-SDK-options/"
       # Subsection ends here
   - dropdown_menu_title: Investor Reporting
     dropdown_menu_items: 
