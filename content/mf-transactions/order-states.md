@@ -14,3 +14,10 @@ The definition of each order state is mentioned below -
 |`successful`|The order has been successfully processed by the order gateway|
 |`failed`|The order processing has failed|
 |`reversed`|A previously successful order has been reversed by the order gateway for some reason. Changes in units will be reversed in such cases|
+
+
+Orders Flow
+
+<div>
+  <img src="../../images/orders-flow.png">
+</div>

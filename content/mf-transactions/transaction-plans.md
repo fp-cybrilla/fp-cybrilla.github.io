@@ -20,6 +20,7 @@ A non-systematic plan has the same behaviour as that of a systematic plan, but i
 </div>
 
 <br>
+
 1. User creates a transaction plan. The plan immediately becomes `active` upon plan creation. 
 2. Once the plan becomes active, FP takes the responsibility of creating installments as per the `installment_day` and `frequency` of the plan. Refer [Installment Generation Lifecycle](#installment-generation-lifecycle) section below to understand the flow of installments.
 3. The user can choose to [cancel](#api-references) an active plan. If this is done, the plan state changes to `cancelled` immediately. <br> Once a plan is `cancelled`, FP no longer generates installments for the plan.
@@ -37,4 +38,4 @@ A non-systematic plan has the same behaviour as that of a systematic plan, but i
 ### Installment Generation Lifecycle
 For every installment of a plan, FP creates a MF order.
 So the lifecycle of a transaction plan installment is the same as that of a MF order.
-To understand more about the installment lifecycle refer [Orders Lifecycle](https://docs.fintechprimitives.com/mf-transactions/orders-lifecycle
+To understand more about the installment lifecycle refer [Order States]("/mf-transactions/order-states")
