@@ -1,7 +1,16 @@
 ## Introduction to Orders
 
-While FP supports different types of orders - fresh purchase, additional purchase, redemption, switch, etc - which have different workflows, the states that each type of order goes through - from order created to order successfully processed by the gateway - is the same. 
-<br><br>
+FP supports three types of orders -
+
+1. Purchase
+2. Redemption
+3. Switch
+
+While each order has different workflows, the states that each type of order goes through - from order created to order successfully processed by the gateway - is the same as shown below.
+
+
+### Order States
+
 The definition of each order state is mentioned below -
 <br><br>
 
@@ -21,3 +30,10 @@ The definition of each order state is mentioned below -
 <div>
   <img src="../../images/orders-flow.png">
 </div>
+
+### API References
+1. [Introduction to Orders](#https://fintechprimitives.com/docs/api/#introduction-to-mf-orders)
+2. [MF Purchases](#https://fintechprimitives.com/docs/api/#mf-purchases)
+3. [MF Redemptions](#https://fintechprimitives.com/docs/api/#mf-redemptions)
+4. [MF Switches](#https://fintechprimitives.com/docs/api/#mf-switches)
+
