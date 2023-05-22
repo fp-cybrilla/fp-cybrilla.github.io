@@ -39,3 +39,25 @@ A non-systematic plan has the same behaviour as that of a systematic plan, but i
 For every installment of a plan, FP creates a MF order.
 So the lifecycle of a transaction plan installment is the same as that of a MF order.
 To understand more about the installment lifecycle refer [Order States]("/mf-transactions/order-states")
+
+### API References
+1. Introduction to Transaction Plans
+  - [FP Transaction Plans](#https://fintechprimitives.com/docs/api/#fp-transaction-plans)
+
+2. Create a Transaction Plan
+  - [Create a Purchase Plan](#https://fintechprimitives.com/docs/api/#create-a-purchase-plan)
+  - [Create a Redemption Plan](#https://fintechprimitives.com/docs/api/#create-a-redemption-plan)
+  - [Create a Switch Plan](#https://fintechprimitives.com/docs/api/#create-a-switch-plan)
+
+3. Modify a Transaction Plan
+  - [Update a Purchase Plan](#https://fintechprimitives.com/docs/api/#update-a-purchase-plan)
+  - [Update a Redemption Plan](#https://fintechprimitives.com/docs/api/#update-a-redemption-plan)
+  - [Update a Switch Plan](#https://fintechprimitives.com/docs/api/#update-a-switch-plan)
+
+4. Cancel a Transaction Plan
+  - [Cancel a Purchase Plan](#https://fintechprimitives.com/docs/api/#cancel-a-purchase-plan)
+  - [Cancel a Redemption Plan](#https://fintechprimitives.com/docs/api/#cancel-a-redemption-plan)
+  - [Cancel a Switch Plan](#https://fintechprimitives.com/docs/api/#cancel-a-switch-plan)
+
+5. Pause a Transaction Plan
+  - [Skip Installments](#https://fintechprimitives.com/docs/api/#skip-installments-via-skip-instructions)

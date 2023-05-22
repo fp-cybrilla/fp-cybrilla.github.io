@@ -61,7 +61,10 @@ sidebar:
         link: "/mf-transactions/investment-account/"
       # Subsection starts here with heading and list of links
       - subsection:
-        - heading: "One time orders"
+        heading: "Introduction"
+        - title: Introduction to Orders
+          link: "/mf-transactions/orders-introduction/"
+        heading: "One-time orders"
         - title: Create a one-time purchase
           link: "/mf-transactions/onetime-purchases/"
         - title: Sell a mutual fund
@@ -96,11 +99,6 @@ sidebar:
         - heading: "Recurring Switches"
         - title: Schedule a recurring withdrawal
           link: "/mf-transactions/recurring-redemptions/"
-      # Subsection starts here with heading and list of links
-      - subsection:  
-        - heading: "Appendix"
-        - title: Order States
-          link: "/mf-transactions/order-states/"
       # Subsection ends here
       # Subsection starts here with heading and list of links
       - subsection:  
