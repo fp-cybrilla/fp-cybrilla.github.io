@@ -37,7 +37,7 @@ A non-systematic plan has the same behaviour as that of a systematic plan, but i
 ### Installment Generation Lifecycle
 For every installment of a plan, FP creates a MF order.
 So the lifecycle of a transaction plan installment is the same as that of a MF order.
-To understand more about the installment lifecycle refer "Orders Flow" under [Introduction to Orders](/mf-transactions/orders-introduction)
+To understand more about the installment lifecycle refer [Orders Flow](/mf-transactions/orders-introduction/#orders-flow)
 
 ### API References
 1. Introduction to Transaction Plans
