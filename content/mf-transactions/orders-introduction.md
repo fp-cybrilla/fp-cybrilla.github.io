@@ -32,8 +32,8 @@ The definition of each order state is mentioned below -
 </div>
 
 ### API References
-1. [Introduction to Orders](#https://fintechprimitives.com/docs/api/#introduction-to-mf-orders)
-2. [MF Purchases](#https://fintechprimitives.com/docs/api/#mf-purchases)
-3. [MF Redemptions](#https://fintechprimitives.com/docs/api/#mf-redemptions)
-4. [MF Switches](#https://fintechprimitives.com/docs/api/#mf-switches)
+1. [Introduction to Orders](https://fintechprimitives.com/docs/api/#introduction-to-mf-orders)
+2. [MF Purchases](https://fintechprimitives.com/docs/api/#mf-purchases)
+3. [MF Redemptions](https://fintechprimitives.com/docs/api/#mf-redemptions)
+4. [MF Switches](https://fintechprimitives.com/docs/api/#mf-switches)
 
