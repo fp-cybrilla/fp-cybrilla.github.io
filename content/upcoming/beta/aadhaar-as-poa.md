@@ -151,3 +151,7 @@ You can use the simulation api to simulate a `successful` and `rejected` KYC Req
 
 ### Resources
 To download a Postman collection to perform digital KYC through FP, click <a href="/resources/kyc_submission_workflow_postman_collection.json" download="" title="download">here</a>.
+
+<button class="btn btn-primary inline-block w-auto px-4" onclick="handleOpen('https://prueba.sandbox.fpapps.io/kyc/')">
+	Try KYC workflow
+</button>

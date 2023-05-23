@@ -751,6 +751,7 @@ code.hljs {
   background-color: #fee9e8;
 }
 </style>
+  <script src="https://fpappstest.io/embed/fpappsWrapper.js" defer></script>
   </head>
   <body class="font-roboto text-base-color h-full dark:bg-primary-DN0 dark:text-primary-DN60">
     <div class="md:container m-auto h-full">
@@ -1006,6 +1007,15 @@ code.hljs {
         fontFamily: '"Open Sans", sans-serif'
       }
     });
+  </script>
+  <script>
+    function handleOpen(src) {
+      Fpapps.openModal(src);
+    }
+
+    function handleClose() {
+      Fpapps.closeModal();
+    }
   </script>
   </body>
 </html>
