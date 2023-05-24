@@ -90,7 +90,7 @@ curl -X POST "api.fintechprimitives.com/v2/identity_documents" \
   -H "Authorization: Bearer ACCESS_TOKEN"
   -d '{
     "kyc_request": "kycr_057ca178104c45cf86d0d9c75b60d1d7",
-    "proof_type": "aadhaar",
+    "type": "aadhaar",
     "postback_url": "https://fintechprimitives.com"
 }'
 ```
