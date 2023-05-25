@@ -1,7 +1,4 @@
----
-title: One time purchases
----
-## One time purchases
+## Buy a mutual fund
 #### Facilitate lumpsum investments for your investor
 
 > ##### Ensure the following before placing a purchase order
