@@ -153,7 +153,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"kyc_request\": \"kycr_123\",\n    \"proof_type\": \"aadhaar\",\n    \"postback_url\": \"fintechprimitives.com\"\n}"
+							"raw": "{\n    \"kyc_request\": \"kycr_123\",\n    \"type\": \"aadhaar\",\n    \"postback_url\": \"fintechprimitives.com\"\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/v2/identity_documents",
