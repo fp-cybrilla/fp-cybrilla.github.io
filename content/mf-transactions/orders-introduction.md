@@ -2,7 +2,7 @@
 
 FP supports three types of orders -
 
-1. [MF Purchase](https://fintechprimitives.com/docs/api/#mf-purchases))
+1. [MF Purchase](https://fintechprimitives.com/docs/api/#mf-purchases)
 2. [MF Redemption](https://fintechprimitives.com/docs/api/#mf-redemptions)
 3. [MF Switch](https://fintechprimitives.com/docs/api/#mf-switches)
 
