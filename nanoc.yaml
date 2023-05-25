@@ -57,7 +57,7 @@ sidebar:
     dropdown_menu_items: 
       - title: Overview
         link: "/mf-transactions/overview/"
-      - title: Open an investment account
+      - title: Open an Investment Account
         link: "/mf-transactions/investment-account/"
       - title: Lump Sum Orders
         link: "/mf-transactions/orders-introduction/"
@@ -66,9 +66,9 @@ sidebar:
       # Subsection starts here with heading and list of links
       - subsection:
         - heading: "Lump Sum Orders"
-        - title: Buy a mutual fund
+        - title: Buy a Mutual Fund
           link: "/mf-transactions/onetime-purchases/"
-        - title: Sell a mutual fund
+        - title: Sell a Mutual Fund
           link: "/mf-transactions/onetime-redemptions/"
       # Subsection ends here
       # Subsection starts here with heading and list of links
@@ -84,11 +84,11 @@ sidebar:
       # Subsection starts here with heading and list of links
       - subsection:  
         - heading: "Archives"
-        - title: Buy a Mutual Fund using Old APIs
+        - title: Buy a Mutual Fund using V1 APIs
           link: "/mf-transactions/onetime-purchases-old-apis/"
-        - title: Sell a Mutual Fund using Old APIs
+        - title: Sell a Mutual Fund using V1 APIs
           link: "/mf-transactions/onetime-redemptions-old-apis/"
-        - title: Create a SIP using Old APIs
+        - title: Create a SIP using V1 APIs
           link: "/mf-transactions/recurring-purchases/"
       # Subsection ends here
   - dropdown_menu_title: Payments
