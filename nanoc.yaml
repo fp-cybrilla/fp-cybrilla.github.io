@@ -80,24 +80,8 @@ sidebar:
           link: "/mf-transactions/purchase-plans/create-monthly-sip/"
         - title: Migrating from V1 SIP APIs to Purchase plans
           link: "/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration/"
-       # - title: Top up amount for an SIP
-       #   link: "/mf-transactions/purchase-plans/topup-sip/"
         - title: Pause installments of an existing SIP
           link: "/mf-transactions/purchase-plans/pause-sip/"
-      #  - title: Renew the tenure of an SIP
-      #    link: "/mf-transactions/purchase-plans/renew-sip/"
-      # Subsection ends here
-      # Subsection starts here with heading and list of links
-      - subsection:  
-        - heading: "Recurring Redemptions"
-        - title: Schedule a recurring withdrawal
-          link: "/mf-transactions/recurring-redemptions/"
-      # Subsection ends here
-      # Subsection starts here with heading and list of links
-      - subsection:  
-        - heading: "Recurring Switches"
-        - title: Schedule a recurring withdrawal
-          link: "/mf-transactions/recurring-redemptions/"
       # Subsection ends here
       # Subsection starts here with heading and list of links
       - subsection:  
