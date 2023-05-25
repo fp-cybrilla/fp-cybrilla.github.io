@@ -16,8 +16,8 @@ Reporting API platform is a unified API platform which provides a single interfa
 | [newwindow,Fund scheme category wise AUM summary report](https://fintechprimitives.com/docs/api/#fund-scheme-category-wise-aum-summary-report) | Fund scheme category wise AUM summary report groups the transactions and provides the AUM for each fund category.|
 | [newwindow,Transaction list report](https://fintechprimitives.com/docs/api/#transaction-list-report) | Transaction list report generates the list of all transactions.You can filter the transaction list by folio number, pan number or primary investor name.|
 | [newwindow,Investor list report](https://fintechprimitives.com/docs/api/#investor-list-report) | Investor list report generates the list of all the investors.<br>**Note**: This report is available only to a select set of customers whose folio demographic information has been migrated.|
-| [newwindow,Mf Purchase list report](https://fintechprimitives.com/docs/api/#mf-purchase-list-report) | MF purchase list report lists all mf purchase transactions of the MF purchase id provided.|
-| [newwindow,Mf Redemption list report](https://fintechprimitives.com/docs/api/#mf-redemption-list-report) | MF redemption list report lists all mf redemption transactions of the MF redemption id provided.|
+| [newwindow,MF Purchase list report](https://fintechprimitives.com/docs/api/#mf-purchase-list-report) | MF purchase list report lists all mf purchase transactions of the MF purchase id provided.|
+| [newwindow,MF Redemption list report](https://fintechprimitives.com/docs/api/#mf-redemption-list-report) | MF redemption list report lists all mf redemption transactions of the MF redemption id provided.|
 
 
 
