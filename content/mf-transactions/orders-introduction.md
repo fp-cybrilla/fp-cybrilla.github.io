@@ -1,12 +1,12 @@
-## One-Time Orders
+## Lump Sum Orders
 
-FP supports three types of orders -
+FP supports three types of lump sum orders -
 
 1. [MF Purchase](https://fintechprimitives.com/docs/api/#mf-purchases)
 2. [MF Redemption](https://fintechprimitives.com/docs/api/#mf-redemptions)
 3. [MF Switch](https://fintechprimitives.com/docs/api/#mf-switches)
 
-While each type of order has a different workflow, the states that each type of order goes through - from order created to order successfully processed by the gateway - is the same as shown below.
+While each type of lump sum order has a different workflow, the states that each type goes through - from order created to order successfully processed by the gateway - is the same as shown below.
 
 
 ### Order States
