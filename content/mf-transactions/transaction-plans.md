@@ -1,4 +1,4 @@
-## Transaction Plans in RTA
+## Recurring Orders in RTA
 
 ### What are Transaction Plans?
 

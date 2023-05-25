@@ -12,7 +12,7 @@ Order APIs give you the ability to place purchase and sell orders on behalf of y
 3. [Sell a mutual fund](/mf-transactions/onetime-redemptions)
 4. [Switch from one scheme to another](/mf-transactions/onetime-switches)
 
-**Recurring Purchases**
+**Recurring Orders**
 1. [Transaction Plans](/mf-transactions/transaction-plans/)
 2. [Pause installments of an existing SIP](/mf-transactions/purchase-plans/pause-sip)
 
