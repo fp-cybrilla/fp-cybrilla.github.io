@@ -1,10 +1,4 @@
----
-title: Create a recurring purchase
----
-
-## Recurring purchases
-
-#### Facilitate SIP investments for your investor
+## Create a SIP using V1 APIs
 
 Not all schemes allow for SIP investments. Make sure you check the `sip_allowed` field is `true` for the scheme you are creating an sip plan for, using the [FPDocs, Get fund scheme](https://fintechprimitives.com/api/#get-single-fund-schemes-detail). Also, a consent via OTP for nomination details needs to be obtained from all the holders as described below
 
