@@ -60,7 +60,7 @@ sidebar:
       - title: Open an investment account
         link: "/mf-transactions/investment-account/"
       - title: One-Time Orders
-          link: "/mf-transactions/orders-introduction/"
+        link: "/mf-transactions/orders-introduction/"
       - title: Recurring Orders
         link: "/mf-transactions/transaction-plans/"
       # Subsection starts here with heading and list of links
