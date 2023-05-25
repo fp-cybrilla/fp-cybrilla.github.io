@@ -59,7 +59,7 @@ sidebar:
         link: "/mf-transactions/overview/"
       - title: Open an investment account
         link: "/mf-transactions/investment-account/"
-      - title: One-Time Orders
+      - title: Lump Sum Orders
         link: "/mf-transactions/orders-introduction/"
       - title: Recurring Orders
         link: "/mf-transactions/transaction-plans/"
