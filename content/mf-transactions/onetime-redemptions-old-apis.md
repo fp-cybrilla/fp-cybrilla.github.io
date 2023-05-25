@@ -1,4 +1,4 @@
-## Sell a Mutual Fund using Old APIs
+## Sell a Mutual Fund using V1 APIs
 #### Facilitate redemptions for your investor
 
 Mutual fund units are associated with folios. You can treat folios as sub-accounts under the investment account. You can fetch the list of folios for an investment a/c from the [FPDocs, holdings report](https://fintechprimitives.com/api/#get-holding-report). `redeemable_units` shows the number of units that are available for selling. You can use the FP APIs to sell the units partially or in total.
