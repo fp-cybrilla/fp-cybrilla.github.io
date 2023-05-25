@@ -1,7 +1,4 @@
----
-title: One time purchases w/ Old APIs
----
-## One time purchases w/ Old APIs
+## Buy a Mutual Fund using Old APIs
 #### Facilitate lumpsum investments for your investor
 
 > ##### Ensure the following before placing a purchase order
