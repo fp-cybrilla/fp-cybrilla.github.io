@@ -8,7 +8,19 @@ Reporting API platform is a unified API platform which provides a single interfa
 | Report | Description |
 | ---------- | ------------ |
 | [newwindow,Transactions](https://fintechprimitives.com/api/#transactions) | A list of transactions per folio per scheme(isin). Most of the data points including holdings related data points can be generated from a list of the trasactions. Some of them are the part of transaction response while some other data points can be generated easily from the transaction data.  |
-| [newwindow,Holdings report](https://fintechprimitives.com/docs/api/#generate-holdings-report) | Get details about current holdings of a folio|
+| [newwindow,Holdings report](https://fintechprimitives.com/docs/api/#generate-holdings-report) | Get details about current holdings of a folio.|
+| [newwindow,Capital gains report](https://fintechprimitives.com/docs/api/#capital-gains-report) | Generates capital gain report for a given investment account.You can generate capital gains for a specified interval or entire capital gains.|
+| [newwindow,Scheme wise returns report](https://fintechprimitives.com/docs/api/#scheme-wise-returns) | Scheme wise returns report generates the returns of the same schemes under a given investment account. Returns from the same scheme under different folios are consolidated and reported as a single element in the array.|
+| [newwindow,Investment account wise returns report](https://fintechprimitives.com/docs/api/#investment-account-wise-returns) | Investment account wise returns report generates the returns for an investment account.Returns from all schemes are consolidated under a single report for an investment account.|
+| [newwindow,Transaction type wise amount summary report](https://fintechprimitives.com/docs/api/#transaction-type-wise-amount-summary-report) | Transaction type wise amount summary report groups the transactions by their type and provides the consolidated amount against each transaction type. You can filter the transactions using ARN code or RIA code which appears against the transaction.|
+| [newwindow,Fund scheme category wise AUM summary report](https://fintechprimitives.com/docs/api/#fund-scheme-category-wise-aum-summary-report) | Fund scheme category wise AUM summary report groups the transactions and provides the AUM for each fund category.|
+| [newwindow,Transaction list report](https://fintechprimitives.com/docs/api/#transaction-list-report) | Transaction list report generates the list of all transactions.You can filter the transaction list by folio number, pan number or primary investor name.|
+| [newwindow,Investor list report](https://fintechprimitives.com/docs/api/#investor-list-report) | Investor list report generates the list of all the investors.<br>**Note**: This report is available only to a select set of customers whose folio demographic information has been migrated.|
+| [newwindow,Mf Purchase list report](https://fintechprimitives.com/docs/api/#mf-purchase-list-report) | MF purchase list report lists all mf purchase transactions of the MF purchase id provided.|
+| [newwindow,Mf Redemption list report](https://fintechprimitives.com/docs/api/#mf-redemption-list-report) | MF redemption list report lists all mf redemption transactions of the MF redemption id provided.|
+
+
+
 
 #### What kinds of transactions are supported?
 At present, the reporting engine supports the following types of transactions.
