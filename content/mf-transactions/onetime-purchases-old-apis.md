@@ -1,4 +1,4 @@
-## Buy a Mutual Fund using Old APIs
+## Buy a Mutual Fund using V1 APIs
 #### Facilitate lumpsum investments for your investor
 
 > ##### Ensure the following before placing a purchase order
