@@ -1,5 +1,4 @@
-## Buy a mutual fund
-#### Facilitate lumpsum investments for your investor
+## Create a Purchase Order
 
 > ##### Ensure the following before placing a purchase order
 > 1. Your investor is [kyc compliant](/identity/overview)
