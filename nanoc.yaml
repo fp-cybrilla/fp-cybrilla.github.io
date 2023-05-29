@@ -66,9 +66,9 @@ sidebar:
       # Subsection starts here with heading and list of links
       - subsection:
         - heading: "Lump Sum Orders"
-        - title: Buy a Mutual Fund
+        - title: Create a Purchase Order
           link: "/mf-transactions/onetime-purchases/"
-        - title: Sell a Mutual Fund
+        - title: Create a Redemption Order
           link: "/mf-transactions/onetime-redemptions/"
       # Subsection ends here
       # Subsection starts here with heading and list of links
@@ -84,9 +84,9 @@ sidebar:
       # Subsection starts here with heading and list of links
       - subsection:  
         - heading: "Archives"
-        - title: Buy a Mutual Fund using V1 APIs
+        - title: Create a Purchase Order using V1 APIs
           link: "/mf-transactions/onetime-purchases-old-apis/"
-        - title: Sell a Mutual Fund using V1 APIs
+        - title: Create a Redemption Order using V1 APIs
           link: "/mf-transactions/onetime-redemptions-old-apis/"
         - title: Create a SIP using V1 APIs
           link: "/mf-transactions/recurring-purchases/"
