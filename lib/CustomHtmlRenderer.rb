@@ -101,4 +101,45 @@ class Redcarpet::Render::CustomHTML < Redcarpet::Render::HTML
       super;
     end
   end
+
+
+  ACCORDION_PATTERN = %r{<p>:Accordion</p>(?<acc_wrapper>.*?)<p>:EndAccordion</p>}mx.freeze
+  ITEM_PATTERN = %r{<p>::AccordionItem</p>(?<item_wrapper>.*?)<p>::EndAccordionItem</p>}mx.freeze
+  CONTENT_PATTERN = %r{<p>::::AccordionContent</p>(?<content_wrapper>.*?)<p>::::EndAccordionContent</p>}mx.freeze
+  TITLE_PATTERN = %r{<p>:::AccordionTitle\s(?<tab_title>.*?)</p>}mx.freeze
+
+  def postprocess(content)
+    new_content = content.gsub(ACCORDION_PATTERN) { generate_wrapper(Regexp.last_match[:acc_wrapper]) }
+    abc = new_content.gsub(ITEM_PATTERN) { generate_item_wrapper(Regexp.last_match[:item_wrapper]) }
+    pqr = abc.gsub(CONTENT_PATTERN) { generate_content_wrapper(Regexp.last_match[:content_wrapper]) }
+    pqr.gsub(TITLE_PATTERN) { generate_titles(Regexp.last_match[:tab_title]) }
+  end
+
+  def generate_content_wrapper(content)
+    output = '';
+    output << '<div class="accordion-content hidden">'
+        output << content
+    output << '</div>'
+  end
+
+  def generate_titles(content)
+    output = '';
+    output << '<div class="accordion-title" aria-expanded="collapse">'
+        output << content
+    output << '</div>'
+  end
+
+  def generate_item_wrapper(content)
+    output = '';
+    output << '<div class="accordion-item">'
+      output << content
+    output << '</div>'
+  end
+
+  def generate_wrapper(content)
+    output = '';
+    output << '<div class="accordion">'
+      output << content
+    output << '</div>'
+  end
 end
