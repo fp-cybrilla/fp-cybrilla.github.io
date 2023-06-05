@@ -6,11 +6,11 @@ title: Overview
 
 Order APIs give you the ability to place purchase and sell orders on behalf of your investor. Using FP APIs, you can either create one-time orders or you can create recurring orders.
 
-**One-time Orders**
+**Lump Sum Orders**
 1. [Introduction](/mf-transactions/orders-introduction)
-2. [Create a one-time purchase](/mf-transactions/onetime-purchases)
-3. [Sell a mutual fund](/mf-transactions/onetime-redemptions)
-4. [Switch from one scheme to another](/mf-transactions/onetime-switches)
+2. [Create a lumpsum purchase order](/mf-transactions/onetime-purchases)
+3. [Create a lump sum redemption order](/mf-transactions/onetime-redemptions)
+4. [Create a lump sum switch order](/mf-transactions/onetime-switches)
 
 **Recurring Orders**
 1. [Transaction Plans](/mf-transactions/transaction-plans/)
