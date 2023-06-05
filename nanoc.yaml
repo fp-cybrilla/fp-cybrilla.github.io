@@ -70,6 +70,8 @@ sidebar:
           link: "/mf-transactions/onetime-purchases/"
         - title: Create a Redemption Order
           link: "/mf-transactions/onetime-redemptions/"
+        - title: Switch from one scheme to another
+          link: "/mf-transactions/onetime-switches/"
       # Subsection ends here
       # Subsection starts here with heading and list of links
       - subsection:  
