@@ -127,7 +127,7 @@ Execute the Fetch a KYC Request API to check the `status` of the KYC Request obj
 
 - If the `status` is `rejected`, it means the KYC Request verification is unsuccessful. The details about the rejections are available at `verification.details_verbose` in the object json.
 
-> Note: KYC Check, KYC Request and Investor Profile APIs are technically independant at FP platform level. These are designed to be used independently based on the business logic applicable at every client's end.
+> Note: KYC Check, KYC Request and Investor Profile APIs are technically independent at FP platform level. These are designed to be used independently based on the business logic applicable at every client's end.
 
 #### 5. Handling rejections
 The `verification.details_verbose` hash contains the reasons for rejection, mapped with each field separately. For example:
@@ -140,7 +140,7 @@ The `verification.details_verbose` hash contains the reasons for rejection, mapp
 	}
 }
 ```
-Use the `code` to programatically read the error on a given field. The `reason` is a textual representation of the error which would indicate why the rejection happened. You can use this to configure your investor facing messages accordingly. We suggest you to not hard code the `reason` values in your code as they might change as we keep fine tuning our error messages.
+Use the `code` to programmatically read the error on a given field. The `reason` is a textual representation of the error which would indicate why the rejection happened. You can use this to configure your investor facing messages accordingly. We suggest you to not hard code the `reason` values in your code as they might change as we keep fine tuning our error messages.
 
 These are some of the `reason`s for your reference (not an exhaustive list): `DRIVING LICENSE VALIDITY PERIOD EXPIRED`, `PROOF OF IDENTITY NOT LEGIBLE`, `DOB MISMATCH BETWEEN PAN AND POA`, `SIGNATURE UNCLEAR`, `VIDEO VOICE NOT AUDIBLE`
 
