@@ -12,7 +12,7 @@
 
 <br>
 <div>
-  <img src="../../../images/kyc-submission-workflow.png">
+  <img src="../../../images/KYC_work_flow_v2.png">
 </div>
 
 #### 1. Create a KYC Request
