@@ -143,7 +143,7 @@ Similar steps must be followed for E-Mandate authorisation page customisation us
                   "order_id": "order_LPLoYDzTOOKCUD",
                   "bank_account_ifsc": "ICIC0000801",
                   "key": "rzp_test_yOMeNF4w46S7lK",
-                  "email": "abc@cybrilla.com",
+                  "email": "abhin@cybrilla.com",
                   "contact": "9642991181"
               }
           }
@@ -170,7 +170,7 @@ Similar steps must be followed for E-Mandate authorisation page customisation us
             "prefill": {
               "name": "Gaurav Kumar", //your customer's name
               "email": "FP_MandateAuth_response.sdk_options.razorpay.email",  //your customer's email
-              "contact": "FP_MandateAuth_response.sdk_options.razorpay.mandate"   //your customer's contact
+              "contact": "FP_MandateAuth_response.sdk_options.razorpay.contact"   //your customer's contact
             },
             "handler": function (response) {
               alert(response.razorpay_payment_id);
