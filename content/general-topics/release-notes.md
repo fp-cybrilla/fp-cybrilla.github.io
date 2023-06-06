@@ -13,7 +13,7 @@
 
 #### 1st June 2023
 
-* You can now place an order or create a transaction plan via RTA by assigning a [Partner Object ID](https://fintechprimitives.com/docs/api/#partner-object) of the distributor/ advisor to the order/ plan.
+* You can now place an order or create a transaction plan via RTA by assigning a [Partner Object ID](https://fintechprimitives.com/docs/api/#partner-object), of the distributor/ advisor, as a part of the request attribute while creating an order or a transaction plan.
 
 ## May 2023
 
