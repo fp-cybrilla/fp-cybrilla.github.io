@@ -45,7 +45,7 @@
 
 #### 11th April 2023
 
-* * We now have events generated for purchase orders with states `created` and `confirmed`. You can use our[Event APIs](https://fintechprimitives.com/docs/api/#event-object) to fetch information on any events triggered for an order state change.
+* We now have events generated for purchase orders with states `created` and `confirmed`. You can use our[Event APIs](https://fintechprimitives.com/docs/api/#event-object) to fetch information on any events triggered for an order state change.
 
 
 ## March 2023
