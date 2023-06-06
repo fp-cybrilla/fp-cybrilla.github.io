@@ -46,7 +46,9 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
                       "upi": false
                   },
                   "order_id": "order_LD3UyrIMhixgTU", //Razorpay 'order_id'
-                  "key": "rzp_test_yOMeNF4w46S7lK"
+                  "key": "rzp_test_yOMeNF4w46S7lK",
+                  "email": "abc@cybrilla.com",
+                  "contact": "9642991181"
               }
           }
       }
@@ -75,8 +77,8 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
           "callback_url": "FP_Payment_response.sdk_options.razorpay.callback_url", //Use the callback_URL received from FP payment response -> SDK_options -> razorpay -> callback_url.
           "prefill": {
               "name": "Gaurav Kumar", //your customer's name
-              "email": "gaurav.kumar@example.com",  //your customer's email
-              "contact": "9000090000"   //your customer's contact
+              "email": "FP_Payment_response.sdk_options.razorpay.email",  //your customer's email
+              "contact": "FP_Payment_response.sdk_options.razorpay.contact"   //your customer's contact
           },
           "retry": {
               "enabled": false,      //Pass the 'retry' parameter as 'false'.
@@ -140,7 +142,9 @@ Similar steps must be followed for E-Mandate authorisation page customisation us
                   "customer_id": "cust_LN282jrS8faukL",
                   "order_id": "order_LPLoYDzTOOKCUD",
                   "bank_account_ifsc": "ICIC0000801",
-                  "key": "rzp_test_yOMeNF4w46S7lK"
+                  "key": "rzp_test_yOMeNF4w46S7lK",
+                  "email": "abc@cybrilla.com",
+                  "contact": "9642991181"
               }
           }
       }
@@ -165,8 +169,8 @@ Similar steps must be followed for E-Mandate authorisation page customisation us
             "image": "https://example.com/your_logo",  //Your business logo
             "prefill": {
               "name": "Gaurav Kumar", //your customer's name
-              "email": "gaurav.kumar@example.com",  //your customer's email
-              "contact": "9000090000"   //your customer's contact
+              "email": "FP_MandateAuth_response.sdk_options.razorpay.email",  //your customer's email
+              "contact": "FP_MandateAuth_response.sdk_options.razorpay.mandate"   //your customer's contact
             },
             "handler": function (response) {
               alert(response.razorpay_payment_id);
