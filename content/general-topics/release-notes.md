@@ -3,11 +3,44 @@
 ## Upcoming Releases
 #### Available in Sandbox
 
-* We have introduced a new feature which allows tenants configured with the BSE gateway to route their purchase/ redemption/ switch orders via RTA as well. Please refer the [documentation](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) for more information.
+* You can now onboard an investor with an existing DEMAT account on to FP and place a purchase order via DEMAT account in RTA.
 
-* You can now create a systematic plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
+* You can now cancel a V1 SIP using [Cancel a Purchase Plan](https://fintechprimitives.com/docs/api/#cancel-a-purchase-plan)
+
+* You can now create a systematic plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan).
 
 ## Previous Releases (Live)
+
+## June 2023
+
+#### 1st June 2023
+
+* You can now place an order or create a transaction plan via RTA by assigning a [Partner Object ID](https://fintechprimitives.com/docs/api/#partner-object) of the distributor/ advisor to the order/ plan.
+
+## May 2023
+
+#### 29th May 2023
+
+* You can now update the mandate associated with a purchase plan routed via RTA. Refer [API documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan) for more details.
+
+#### 24th May 2023
+
+* You can now use [Fetch a Purchase Plan](https://fintechprimitives.com/docs/api/#fetch-a-purchase-plan-by-its-id) to fetch a SIP created using V1 APIs
+
+* We now have events generated for redemption and switch orders. You can use our[Event APIs](https://fintechprimitives.com/docs/api/#event-object) to fetch information on any events triggered for an order.
+
+#### 17th May 2023
+
+* You can now fetch the Compound Annual Growth Rate (CAGR) for an investment account by using the [Investment Accounts Wise Returns Report](https://fintechprimitives.com/docs/api/#investment-account-wise-returns) 
+
+#### 15th May 2023
+
+* We now have events generated for purchase orders. You can use our[Event APIs](https://fintechprimitives.com/docs/api/#event-object) to fetch information on any events triggered for an order.
+
+#### 9th May 2023
+
+* We have introduced a new feature which allows tenants configured with the BSE gateway to route their purchase/ redemption/ switch orders via RTA as well. Please refer the [documentation](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) for more information.
+
 
 ## March 2023
 
