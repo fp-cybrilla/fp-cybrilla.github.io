@@ -27,7 +27,7 @@
 
 * You can now use [Fetch a Purchase Plan](https://fintechprimitives.com/docs/api/#fetch-a-purchase-plan-by-its-id) to fetch a SIP created using V1 APIs
 
-* We now have events generated for redemption and switch orders. You can use our[Event APIs](https://fintechprimitives.com/docs/api/#event-object) to fetch information on any events triggered for an order state change.
+* We now have events generated for redemption and switch orders. You can use our [Event APIs](https://fintechprimitives.com/docs/api/#event-object) to fetch information on any events triggered for an order state change.
 
 #### 17th May 2023
 
@@ -35,7 +35,7 @@
 
 #### 15th May 2023
 
-* We now have events generated for purchase orders with states `submitted`, `cancelled`, `failed`, `successful` and `reversed`. You can use our[Event APIs](https://fintechprimitives.com/docs/api/#event-object) to fetch information on any events triggered for an order state change.
+* We now have events generated for purchase orders with states `submitted`, `cancelled`, `failed`, `successful` and `reversed`. You can use our [Event APIs](https://fintechprimitives.com/docs/api/#event-object) to fetch information on any events triggered for an order state change.
 
 #### 9th May 2023
 
@@ -45,7 +45,7 @@
 
 #### 11th April 2023
 
-* We now have events generated for purchase orders with states `created` and `confirmed`. You can use our[Event APIs](https://fintechprimitives.com/docs/api/#event-object) to fetch information on any events triggered for an order state change.
+* We now have events generated for purchase orders with states `created` and `confirmed`. You can use our [Event APIs](https://fintechprimitives.com/docs/api/#event-object) to fetch information on any events triggered for an order state change.
 
 
 ## March 2023
