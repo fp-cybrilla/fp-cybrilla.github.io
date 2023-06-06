@@ -31,13 +31,13 @@ If nominee details are provided, ensure that all the holders know their nominati
 
 On the other hand, if nominee details are not provided, ensure that all holders know that they are opting out from the nomination facility.
 
--   Send OTP to both Mobile number/Email address. This must be the mobile number/email address stored against the primary investor linked to the investment account associated with the purchase order. If there are multiple holders, send OTP to Mobile number/Email addresses of all holders.
+-   Send OTP to both Mobile number/Email address. This must be the mobile number/email address stored against the primary investor linked to the investment account associated with the purchase order. If there are multiple holders, send OTP to mobile number/email addresses of all holders.
 -   Accept OTP from all the holders and verify the OTP and ensure that the correct OTP is entered.
 -   Store all the consent-related information for audit purposes.
 
 #### 2. Create a MF Redemption plan
 
-Create a mf redemption plan using [Create a redemption plan](https://fintechprimitives.com/docs/api/#create-a-redemption-plan) api with `frequency`=`monthly` and `systematic`=`true`.
+Create a mf redemption plan using [create a redemption plan](https://fintechprimitives.com/docs/api/#create-a-redemption-plan) api with `frequency`=`monthly` and `systematic`=`true`
 
 `POST /v2/mf_redemption_plans`
 
@@ -62,7 +62,7 @@ Create a mf redemption plan using [Create a redemption plan](https://fintechprim
 Note:
 
  1. Apart from the above data you can also provide folio number, EUIN etc. You can refer to [create a redemption plan](https://fintechprimitives.com/docs/api/#create-a-redemption-plan) api for more details.
- 2. The installment details will be available from the day of the installment, after the installment gets generated and processed according to the schedule.
+ 2. Once you have created a monthly SWP, an installment will be generated and processed according to the schedule and the installment details will be available from the day of the installment.
  3. If you delegate the responsibility of payment collection against these installments to FP via mandates, FP also debits the money from the investor's bank account against the installment and once the debit is successful, FP submits the order to the order gateway.
 
 #### 3. Fetch installments of an SWP
@@ -71,5 +71,3 @@ After the plan is registered, the installments will be generated according to th
 
 Example: `GET /v2/mf_redemptions?plan=mfr_15f8d86bae614801bab5accaed131abc`
 
-#### 4. Track SWP installment
-FP uses [`MF Redemption`](https://fintechprimitives.com/docs/api/#mf-redemption-object) object to represent the SWP installment. You can track the state of the [`MF Redemption`](https://fintechprimitives.com/docs/api/#mf-redemption-object) representation of the installment to know the status of your installment.

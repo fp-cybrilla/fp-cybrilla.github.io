@@ -37,7 +37,7 @@ On the other hand, if nominee details are not provided, ensure that all holders 
 
 #### 2. Create a MF Switch plan
 
-Create a mf switch plan using [Create a switch plan](https://fintechprimitives.com/docs/api/#create-a-mf-switch) api with `frequency`=`monthly` and `systematic`=`true`.
+Create a mf switch plan using [create a switch plan](https://fintechprimitives.com/docs/api/#create-a-mf-switch) api with `frequency`=`monthly` and `systematic`=`true`.
 
 `POST /v2/mf_switch_plans`
 
@@ -69,6 +69,3 @@ Note:
 After the plan is registered, the installments will be generated according to the plan's schedule. Each installment can be accessed on or after the date of installment using FP APIs. For more details on when the installments gets generated, please refer to this [API doc](https://fintechprimitives.com/docs/api/#installment-generation). If you want to let your investors track the installments of an STP, you can fetch the installments of the STP plan using the [fetch installments](https://fintechprimitives.com/docs/api/#list-all-mf-switches)
 
 Example: `GET /v2/mf_switches?plan=mfs_b1aba06d52184619151d3b82efa65de6`
-
-#### 4. Track STP installment
-FP uses [`MF Switch`](https://fintechprimitives.com/docs/api/#mf-switch-object) object to represent the STP installment. You can track the state of the [`MF Switch`](https://fintechprimitives.com/docs/api/#mf-switch-object) representation of the installment to know the status of your installment.

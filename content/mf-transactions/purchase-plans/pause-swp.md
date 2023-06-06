@@ -40,5 +40,7 @@ Note: Pause SWP feature is not supported for BSE SWPs.
 #### 2. List all MF Redemptions by skip instruction id
 You can list all mf redemptions with skip instruction id using FP APIs. Use `GET /v2/mf_redemptions?skip_instruction=psi_4bdbe7eed18842b8a704d79929cc6b44`  [API](https://fintechprimitives.com/docs/api/#list-all-mf-redemptions) to list all installments skipped due to a particular skip instruction.
 
-#### 3. Cancel Skip instruction
-You can also cancel the skip instructions created using FP APIs. Use `POST /v2/mf_redemption_plans/skip_instructions/psi_4bdbe7eed18842b8a704d79929cc6b44/cancel` to cancel the skip instruction and resume your SWP.
+#### 3. Cancel skip instruction
+If you want to resume an SWP and cancel the skip instruction,you can use
+
+`POST /v2/mf_redemption_plans/skip_instructions/psi_4bdbe7eed18842b8a704d79929cc6b44/cancel`

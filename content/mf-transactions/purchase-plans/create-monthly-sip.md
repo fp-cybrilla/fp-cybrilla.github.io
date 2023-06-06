@@ -28,7 +28,7 @@ If nominee details are provided, ensure that all the holders know their nominati
 6. Guardian’s Relationship with Nominee (Mandatory & Applicable in case the Nominee is a Minor) 
 7. Nominee Pan (Optional)
 
-On the other hand, if nominee details are not provided, ensure that all holders know that they are opting out from the nomination facility.
+On the other hand, if nominee details are not provided, ensure that all holders know that they are opting out of the nomination facility.
 
 - Send OTP to both Mobile number/Email address. This must be the mobile number/email address stored against the primary investor linked to the investment account associated with the purchase order. If there are multiple holders, send OTP to Mobile number/Email addresses of all holders.
 - Accept OTP from all the holders and verify the OTP and ensure that the correct OTP is entered.

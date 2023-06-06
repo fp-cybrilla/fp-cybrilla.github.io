@@ -39,4 +39,6 @@ Note: Pause STP feature is not supported for BSE STPs.
 You can list all mf switch orders with skip instruction id using FP APIs. Use `GET /v2/mf_switches?skip_instruction=skip_dbabb25ba34c48329dbfbeff70c846f0`  [API](https://fintechprimitives.com/docs/api/#list-all-mf-switches) to list all installments skipped due to a particular skip instruction.
 
 #### 3. Cancel Skip instruction
-You can also cancel the skip instructions created using FP APIs. Use `POST /v2/mf_switch_plans/skip_instructions/skip_dbabb25ba34c48329dbfbeff70c846f0/cancel` to cancel the skip instruction and resume your STP.
+If you want to resume an STP and cancel the skip instruction, you can use
+
+`POST /v2/mf_switch_plans/skip_instructions/skip_dbabb25ba34c48329dbfbeff70c846f0/cancel`
