@@ -3,8 +3,6 @@
 ## Upcoming Releases
 #### Available in Sandbox
 
-* You can now onboard an investor with an existing DEMAT account on to FP and place a purchase order via DEMAT account in RTA.
-
 * You can now cancel a V1 SIP using [Cancel a Purchase Plan](https://fintechprimitives.com/docs/api/#cancel-a-purchase-plan)
 
 * You can now create a systematic plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan).
