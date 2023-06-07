@@ -71,12 +71,12 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
           "amount": "FP_Payment_response.sdk_options.razorpay.amount", //Use the amount received from FP payment response -> SDK_options -> razorpay -> amount.
       // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
           "currency": "INR",
-          "name": "Acme Corp", //your business name
+          "name": "Your company name", //your business name
           "image": "https://example.com/your_logo",  //Your Business logo
           "order_id": "FP_Payment_response.sdk_options.razorpay.order_id", //Use the order ID received from FP payment response -> SDK_options -> razorpay -> order_id.
           "callback_url": "FP_Payment_response.sdk_options.razorpay.callback_url", //Use the callback_URL received from FP payment response -> SDK_options -> razorpay -> callback_url.
           "prefill": {
-              "name": "Gaurav Kumar", //your customer's name
+
               "email": "FP_Payment_response.sdk_options.razorpay.email",  //your customer's email
               "contact": "FP_Payment_response.sdk_options.razorpay.contact"   //your customer's contact
           },
@@ -165,10 +165,10 @@ Similar steps must be followed for E-Mandate authorisation page customisation us
             "order_id": "FP_MandateAuth_response.sdk_options.razorpay.order_id",   //Use the order ID received from FP payment response -> SDK_options -> razorpay -> order_id.
             "customer_id": "FP_MandateAuth_response.sdk_options.razorpay.customer_id",    //Use the customer ID received from FP payment response -> SDK_options -> razorpay -> customer_id.
             "recurring": "1",    //Mandatory field and its value must be '1'.
-            "name": "Acme Corp", //your business name
+            "name": "Your company name", //your business name
             "image": "https://example.com/your_logo",  //Your business logo
             "prefill": {
-              "name": "Gaurav Kumar", //your customer's name
+              "name": "FP_MandateAuth_response.sdk_options.razorpay.bank_account_holder_name", //your customer's name
               "email": "FP_MandateAuth_response.sdk_options.razorpay.email",  //your customer's email
               "contact": "FP_MandateAuth_response.sdk_options.razorpay.contact"   //your customer's contact
             },
