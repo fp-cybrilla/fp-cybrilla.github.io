@@ -2,6 +2,8 @@
 title: Overview
 ---
 ## Payments
+#### Collect payments from your investors
+
 FP Payment APIs integrate with third party payment gateways to facilitate collection of payments from your investors via internet banking, upi and nach payment modes. At present, we support payment collection via following modes
 
 |Payment gateway|Netbanking|UPI|e-Mandates|

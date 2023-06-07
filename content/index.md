@@ -11,7 +11,7 @@ title: Introduction
         Identity
       </div>
       <div class="card-body text-size-14 dark:text-primary-DN110">
-        Comply with KYC guidelines with FP Identity APIs
+        Check and perform digital kyc for your investors
       </div>
       </a>
   </div>
@@ -22,7 +22,7 @@ title: Introduction
         MF Orders
       </div>
       <div class="card-body text-size-14 dark:text-primary-DN110">
-        Buy and sell mutual funds for your investors with FP Order APIs
+        Enable lumpsum and sip investments for your investors
       </div>
     </a>
   </div>
@@ -33,7 +33,7 @@ title: Introduction
         Payments
       </div>
       <div class="card-body text-size-14 dark:text-primary-DN110">
-        Collect payments from your investor for the mutual fund orders
+        Collect payments through Netbanking, UPI, NACH from your investors
       </div>
     </a>
   </div>
@@ -44,7 +44,7 @@ title: Introduction
         Investor Reporting
       </div>
       <div class="card-body text-size-14 dark:text-primary-DN110">
-        Unified API platform which provides a single interface to access different reports from different RTAs
+        Generate portfolio summary, capital gain reports for your investors
       </div>
     </a>
   </div>
