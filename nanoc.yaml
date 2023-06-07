@@ -21,17 +21,7 @@ sidebar:
         link: "/going-live/checklist/"
       # Subsection starts here with heading and list of links
       - subsection:
-        - heading: Distributors w/ BSE
-        - title: Overview
-          link: "/going-live/distributors-with-bse/"
-        - title: BSE sign up
-          link: "/going-live/signing-up-with-bse-starmf/"
-      # Subsection ends here
-      # Subsection starts here with heading and list of links
-      - subsection:
-        - heading: Distributors w/ RTA
-        - title: Overview
-          link: "/going-live/distributors-with-rtas/"
+        - heading: Third party signups
         - title: Razorpay sign up
           link: "/going-live/signing-up-with-razorpay/"
       # Subsection ends here
