@@ -80,6 +80,19 @@ sidebar:
           link: "/mf-transactions/purchase-plans/create-monthly-sip/"
         - title: Pause Installments of an Existing Purchase Plan
           link: "/mf-transactions/purchase-plans/pause-sip/"
+      # Subsection starts here with heading and list of links
+      - subsection:  
+        - heading: "Recurring Redemptions"
+        - title: Schedule a recurring withdrawal
+          link: "/mf-transactions/recurring-redemptions/"
+      # Subsection ends here
+      # Subsection starts here with heading and list of links
+      - subsection:  
+        - heading: "Recurring Switches"
+        - title: Schedule a recurring withdrawal
+          link: "/mf-transactions/recurring-redemptions/"
+      # Subsection ends here
+      # Subsection starts here with heading and list of links
         - title: Migrating from V1 SIPs to Purchase Plans
           link: "/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration/"
       # Subsection ends here
