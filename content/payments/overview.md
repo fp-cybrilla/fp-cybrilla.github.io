@@ -16,15 +16,7 @@ FP Payment APIs integrate with third party payment gateways to facilitate collec
 ### Collect payments from your investor for the mutual fund orders via FP
 1. [Collect payments via e-mandates](/payments/collect-payment-via-mandates/)
 
-
 ### Going live
 1. [Going Live with Razorpay](/going-live/signing-up-with-razorpay/)
-2. [Going Live with BSE](/going-live/signing-up-with-bse-starmf/)
 
 Email us at [fpsupport@cybrilla.com](mailto:fpsupport@cybrilla.com) when you are ready.
-
-
-
-
-
-
