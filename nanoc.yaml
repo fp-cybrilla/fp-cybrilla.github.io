@@ -152,4 +152,6 @@ sidebar:
         - heading: "Beta programs"
         - title: Using Aadhaar as POA in KYC submission workflows
           link: "/upcoming/beta/aadhaar-as-poa/"
+        - title: Hosted workflows
+          link: "/upcoming/beta/hosted-workflows/"
 
