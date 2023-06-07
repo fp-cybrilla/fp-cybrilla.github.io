@@ -7,12 +7,12 @@ title: Embed hosted workflow
 Hosted workflows can be accessed directly via a URL or embedded into any website to run independently
 
 
-> Ensure you have completed signup with FP as per[go live checklist](/going-live/checklist)
+> Ensure you have completed signup with FP as per [go live checklist](/going-live/checklist)
 
 
 ### 1. Direct link
 
-If your application does not allow inserting a script, you can use the direct link of the app that you have subscribed on your FP account.
+If your application does not allow inserting a script, you can use the direct link of workflow
 
 ```
 
@@ -37,7 +37,7 @@ This script tag should be included in the HTML file where you want to use the li
 
 #### Opening hosted workflow in an iframe
 
-To open the workflow in an inframe, use the `Fpapps.open(src)` function, where `src` is the URL of the hosted workflow
+To open the workflow in an iframe, use the `Fpapps.open(src)` function, where `src` is the URL of the hosted workflow
 
 ```js
 Fpapps.open(src);
@@ -71,7 +71,7 @@ Here's an HTML page that shows how to use the embedded KYC workflow.
     </button>
     <script>
       function handleOpen(src) {
-        Fpapps.openModal(src);
+        Fpapps.open(src);
       }
     </script>
   </body>
