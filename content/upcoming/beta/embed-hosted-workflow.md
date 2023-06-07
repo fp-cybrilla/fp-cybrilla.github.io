@@ -16,7 +16,7 @@ If your application does not allow inserting a script, you can use the direct li
 
 ```
 
-https://tenant.sandbox.fpapps.io/<workflow_name>
+https://<tenant>.sandbox.fpapps.io/<workflow_name>
 
 ```
 
@@ -47,7 +47,7 @@ Fpapps.open(src);
 You can call this function from a button or a link's click event to display the workflow.
 
 ```html
-<button onclick="Fpapps.open('https://tenant.sandbox.fpapps.io/<workflow_name>')">
+<button onclick="Fpapps.open('https://<tenant>.sandbox.fpapps.io/<workflow_name>')">
   Open hosted workflow in an iframe
 </button>
 
@@ -66,7 +66,7 @@ Here's an HTML page that shows how to use the embedded KYC workflow.
     <script src="https://sandbox.fpapps.io/embed/fpappsWrapper.js"></script>
   </head>
   <body>
-    <button onclick="handleOpen('https://tenant.sandbox.fpapps.io/kyc/')">
+    <button onclick="handleOpen('https://<tenant>.sandbox.fpapps.io/kyc/')">
      Open hosted workflow in an iframe
     </button>
     <script>
