@@ -3,6 +3,7 @@ image: ruby:2.7
 stages:
   - preview
   - deploy
+  - notify
 
 cache:
   key: $CI_COMMIT_REF_SLUG
@@ -80,3 +81,18 @@ deploy:
     - master
   tags:
     - product-docs
+
+notify:
+  stage: notify
+  variables:
+    MATTERMOST_WEBHOOK: $MATTERMOST_WEBHOOK
+  script:
+    - export MERGE_REQUEST_ID=$(echo $CI_COMMIT_MESSAGE | sed -n 's/.*docs!//p' | sed 's/ .*//g')
+    - export DESCRIPTION=$(echo $CI_COMMIT_MESSAGE | sed -n "s/.*into 'master' //p" | sed -n "s/ See merge request.*//p")
+    - export AUTHOR=$(echo $CI_COMMIT_MESSAGE | sed -n 's/.*by:\ //p')
+    - if [ -z "$AUTHOR" ]; then export AUTHOR=$CI_COMMIT_AUTHOR; fi
+    - 'curl -i -X POST -H "Content-Type: application/json" -d "{\"text\":\"[Merge Request $MERGE_REQUEST_ID: $DESCRIPTION](https://crypt.cybrilla.io/fintechprimitives/docs/-/merge_requests/$MERGE_REQUEST_ID). Created by $AUTHOR has been published by $CI_COMMIT_AUTHOR.\"}" $MATTERMOST_WEBHOOK'
+  rules:
+    - if: '$CI_COMMIT_MESSAGE =~ /See merge request/ && $CI_COMMIT_BRANCH == "master"'
+  tags:
+    - notify
