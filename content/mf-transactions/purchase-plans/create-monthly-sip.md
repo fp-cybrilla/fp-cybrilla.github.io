@@ -2,7 +2,6 @@
 title: Create a new SIP
 ---
 ## Create a new SIP
-> The use case explained here is implemented via APIs which are in Alpha Stage. The API specs might change.
 
 #### 1. Send OTP to mobile/email and obtain consent for nomination details before SIP order
 

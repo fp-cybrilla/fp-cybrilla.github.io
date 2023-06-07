@@ -2,7 +2,6 @@
 title: Pause an STP
 ---
 ## Pause installments of an existing STP
-> The use case explained here is implemented via APIs which are in Alpha Stage. The API specs might change.
 
 Using FP APIs, you can pause a STP indefinitely or you can pause an STP for a specific period of time.
 

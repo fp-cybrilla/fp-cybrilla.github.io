@@ -2,7 +2,6 @@
 title: Pause an SIP
 ---
 ## Pause installments of an existing SIP
-> The use case explained here is implemented via APIs which are in Alpha Stage. The API specs might change.
 
 Using FP APIs, you can pause a SIP indefinitely or you can pause an SIP for a specific period of time.
 

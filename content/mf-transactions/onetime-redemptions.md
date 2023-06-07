@@ -126,7 +126,7 @@ Orders in `confirmed` state will be sent for processing and the object state wil
 
 ### Testing
 
-In sandbox environment, you can use the [FPDocs, simulation](https://fintechprimitives.com/docs/api/#simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
+In sandbox environment, you can use the [FPDocs, simulation](https://fintechprimitives.com/docs/api/#order-simulation) to simulate `successful` and `failed` orders to help you during the integration process. Use the following json to simulate the order to `successful` state.
 
 ```json
 {

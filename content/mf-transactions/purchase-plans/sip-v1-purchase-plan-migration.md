@@ -2,7 +2,7 @@
 title: Migrating from V1 SIPs to Purchase plans
 ---
 ## Migrating from V1 SIPs to Purchase plans
-> Purchase plan APIs are in Alpha Stage. The API specs might change.
+
 
 #### 1. SIP Creation
 **Earlier**

@@ -2,7 +2,6 @@
 title: Pause an SWP
 ---
 ## Pause installments of an existing SWP
-> The use case explained here is implemented via APIs which are in Alpha Stage. The API specs might change.
 
 You can pause a SWP indefinetly or for a specific period of time using FP APIs.
 
