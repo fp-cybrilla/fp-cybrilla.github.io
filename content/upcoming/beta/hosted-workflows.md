@@ -5,7 +5,7 @@ title: Hosted Workflows
 ## Hosted Workflows
 
 
-### Introduction
+#### Introduction
 
 Hosted workflows allow an investor to perform a specifc use case while buying or selling mutual funds. For example an investor needs to establish his\her identity as per KYC guidelines before an investment can be done. FP brings these activities as independent hosted workflows that can be plugged readily into any application. 
 
@@ -41,7 +41,7 @@ KYC hosted workflow allows submission of online KYC application
 5. E-sign the KYC application
 6. Your application will be submitted to KRA for verification
 
-
+<br>
 <div>
 <button class="btn btn-primary inline-block w-auto px-4" onclick="handleOpen('https://prueba.sandbox.fpapps.io/kyc?mtm_campaign=beta_live')">
 	Try KYC workflow
@@ -68,7 +68,7 @@ If the investor is visting for the first time, invest workflow will facilitate i
 2. Setup details necessary to setup investment account
    - Includes personal, financial, bank, KYC, communication and nomination information
 
-
+<br>
 <div>
 <button class="btn btn-primary inline-block w-auto px-4" onclick="handleOpen('https://prueba.sandbox.fpapps.io/checkout?mtm_campaign=beta_live')">
 	Try invest workflow
