@@ -75,7 +75,7 @@ NOTE:
 2. While redirecting to the `postback_url`, you will also receive the ID of the associated `identity_document` and the corresponding `fetch.status`
 3. You can consume the last 4 digits of the Aadhaar number that would be present in the `data` hash to populate the `kyc_request.aadhaar_number` attribute
 4. If `fetch.redirect_url` link is expired, then you would have to create a new `identity_document` object against the KYC Request
-5.`identity_document` mapped to a KYC Request object cannot be reused for any other other KYC Request object. 
+5. `identity_document` mapped to a KYC Request object cannot be reused for any other KYC Request object. 
 
 
 ---
