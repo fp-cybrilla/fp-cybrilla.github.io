@@ -88,8 +88,6 @@ sidebar:
       # Subsection starts here with heading and list of links
       - subsection:  
         - heading: "Appendix"
-        - title: Order States
-          link: "/mf-transactions/order-states/"
         - title: Transaction Plans Use Cases
           link: "/mf-transactions/transaction-plans-usecases"
       # Subsection ends here
