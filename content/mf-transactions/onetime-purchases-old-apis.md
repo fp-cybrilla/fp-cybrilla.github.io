@@ -1,8 +1,4 @@
----
-title: One time purchases w/ Old APIs
----
-## One time purchases w/ Old APIs
-#### Facilitate lumpsum investments for your investor
+## Create a Purchase Order using V1 APIs
 
 > ##### Ensure the following before placing a purchase order
 > 1. Your investor is [kyc compliant](/identity/overview)

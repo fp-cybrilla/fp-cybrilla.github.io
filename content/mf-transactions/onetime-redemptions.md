@@ -1,10 +1,5 @@
----
-title: Sell a mutual fund
----
+## Create a Redemption Order
 
-## Sell a mutual fund
-
-#### Facilitate redemptions for your investor
 You can use the FP APIs to 
 1. Determine whether an investor can sell his/her units.
 2. Determine the maximum number of units that the investor can sell

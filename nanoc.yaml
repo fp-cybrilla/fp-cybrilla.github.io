@@ -47,32 +47,29 @@ sidebar:
     dropdown_menu_items: 
       - title: Overview
         link: "/mf-transactions/overview/"
-      - title: Open an investment account
+      - title: Open an Investment Account
         link: "/mf-transactions/investment-account/"
+      - title: Lump Sum Orders
+        link: "/mf-transactions/orders-introduction/"
+      - title: Recurring Orders
+        link: "/mf-transactions/transaction-plans/"
       # Subsection starts here with heading and list of links
       - subsection:
-        - heading: "One time orders"
-        - title: Create a one-time purchase
+        - heading: "Lump Sum Orders"
+        - title: Create a Purchase Order
           link: "/mf-transactions/onetime-purchases/"
-        - title: Sell a mutual fund
+        - title: Create a Redemption Order
           link: "/mf-transactions/onetime-redemptions/"
         - title: Switch from one scheme to another
           link: "/mf-transactions/onetime-switches/"
       # Subsection ends here
       # Subsection starts here with heading and list of links
       - subsection:  
-        - heading: "Recurring Purchases"
-        - title: Migrating from V1 SIP APIs to Purchase plans
-          link: "/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration/"
-        - title: Create a new SIP
+        - heading: "Recurring Orders"
+        - title: Create a Purchase Plan
           link: "/mf-transactions/purchase-plans/create-monthly-sip/"
-       # - title: Top up amount for an SIP
-       #   link: "/mf-transactions/purchase-plans/topup-sip/"
-        - title: Pause installments of an existing SIP
+        - title: Pause Installments of an Existing Purchase Plan
           link: "/mf-transactions/purchase-plans/pause-sip/"
-      #  - title: Renew the tenure of an SIP
-      #    link: "/mf-transactions/purchase-plans/renew-sip/"
-      # Subsection ends here
       # Subsection starts here with heading and list of links
       - subsection:  
         - heading: "Recurring Redemptions"
@@ -91,19 +88,17 @@ sidebar:
       # Subsection starts here with heading and list of links
       - subsection:  
         - heading: "Appendix"
-        - title: Order States
-          link: "/mf-transactions/order-states/"
         - title: Transaction Plans Use Cases
           link: "/mf-transactions/transaction-plans-usecases"
       # Subsection ends here
       # Subsection starts here with heading and list of links
       - subsection:  
         - heading: "Archives"
-        - title: One time purchases w/ Old APIs
+        - title: Create a Purchase Order using V1 APIs
           link: "/mf-transactions/onetime-purchases-old-apis/"
-        - title: Sell a mutual fund w/ Old APIs
+        - title: Create a Redemption Order using V1 APIs
           link: "/mf-transactions/onetime-redemptions-old-apis/"
-        - title: Create a recurring purchase w/ Old APIs
+        - title: Create a SIP using V1 APIs
           link: "/mf-transactions/recurring-purchases/"
       # Subsection ends here
   - dropdown_menu_title: Payments
