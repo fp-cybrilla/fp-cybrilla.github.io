@@ -8,7 +8,7 @@ You can use the FP APIs to
 
 
 #### 1. Fetch fund scheme details
-Use [FPDocs, Get fund scheme](https://fintechprimitives.com/api/#get-single-fund-schemes-detail) and note down the values of following scheme attributes
+Use [FPDocs, Get fund scheme](https://fintechprimitives.com/docs/api/#fund-scheme) and note down the values of following scheme attributes
 1. `redemption_allowed`, 
 2. `min_withdrawal_amount`,
 3. `max_withdrawal_amount`,
@@ -19,7 +19,7 @@ Use [FPDocs, Get fund scheme](https://fintechprimitives.com/api/#get-single-fund
 
 
 #### 2. Generate holdings report
-Mutual fund units are associated with folios. You can treat folios as sub-accounts under the investment account. You can fetch the list of folios for an investment a/c from the [FPDocs, holdings report](https://fintechprimitives.com/docs/api/#investor-reports)and note down `redeemable_units` to determine the units that are available for selling.
+Mutual fund units are associated with folios. You can treat folios as sub-accounts under the investment account. You can fetch the list of folios for an investment a/c from the [FPDocs, holdings report](https://fintechprimitives.com/docs/api/#generate-holdings-report)and note down `redeemable_units` to determine the units that are available for selling.
 
 #### 3. Check redemption eligibility
 **Redeem by amount**
