@@ -11,7 +11,6 @@ Currently, we support payment collection via the following modes:
 |Payment gateway|Netbanking|UPI|e-Mandates|
 |---|---|---|---|
 |Razorpay|Supported|Supported|Supported|
-|Billdesk|Supported|Supported|Supported|
 |BSE|Supported|Supported|Supported(SIPs only)|
 
 FP payment APIs support one-time payments via Netbanking, UPI, and eNACH mandates, as well as recurring payments via eNACH mandates.

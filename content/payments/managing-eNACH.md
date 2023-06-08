@@ -59,12 +59,12 @@ eNACH mandate cancellation functionality is currently available for Razorpay man
 > To cancel BSE mandates, please reach out to us at [fpsupport@cybrilla.com](mailto:fpsupport@cybrilla.com). 
 
 
-### **eNACH Mandate Life Cycle**
+### **eNACH Mandate States**
 
 
 The mandate progresses through various statuses, each representing a specific stage in its life cycle. Understanding the behaviors associated with these statuses is essential for managing mandates effectively:
 
-  
+
 
 | Status | Behavior |
 |---|---|

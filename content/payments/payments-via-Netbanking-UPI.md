@@ -39,7 +39,7 @@ Once a payment is completed, FP provides notification of the payment status as f
 - FP will post the payment status to the `payment_postback_url` provided. This allows you to receive real-time updates on the payment status, so that the Investor can be notified accordingly.
 
 
-### **One-time Payment Life Cycle**
+### **Payment States**
 
 One-time payment progresses through various statuses, each representing a specific stage in its life cycle.
 
