@@ -4,7 +4,7 @@ title: Collect payment via eNACH
 ## Recurring and One-Time Payments with eNACH Mandate
 
 
-Once a mandate is set up for an investor, you can collect recurring payments for [FP Purchase Plans](https://fintechprimitives.com/docs/api/#mf-purchase-plans) without any intervention from the Investor by raising a payment debit request.
+Once a mandate is set up for an investor, you can collect recurring payments for [FP Purchase Plans](https://fintechprimitives.com/docs/api/#mf-purchase-plans) without any intervention from the Investor by raising a payment  request.
 
 eNACH mandate also provide a convenient option for collecting one-time payments from investors as it eliminates the need for investor intervention, allowing for seamless processing.
 
@@ -33,7 +33,7 @@ eNACH payment progresses through various statuses, each representing a specific 
 |Status|Behavior|
 |---|---|
 |PENDING|Payment is created but yet to be submitted to payment gateway.|
-|SUBMITTED| Debit request has been submitted to the payment gateway.
+|SUBMITTED| Payment request has been submitted to the payment gateway.
 |SUCCESS|Payment is successful. Amount has been successfully deducted from the investor's account but yet to be transferred to the AMC's account.|
 |FAILED|Payment failed for some reason.|
 |INITIATED|Transfer of money has been initiated from payment gateway to AMC.|
