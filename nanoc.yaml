@@ -74,8 +74,6 @@ sidebar:
       # Subsection starts here with heading and list of links
       - subsection:  
         - heading: "Recurring purchases"
-        - title: Transaction Plans in RTA
-          link: "/mf-transactions/transaction-plans-workflow"
         - title: Migrating from V1 SIP APIs to Purchase plans
           link: "/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration/"
         - title: Create a new SIP
@@ -103,6 +101,8 @@ sidebar:
         - heading: "Appendix"
         - title: Order States
           link: "/mf-transactions/order-states/"
+        - title: Transaction Plans Use Cases
+          link: "/mf-transactions/transaction-plans-usecases"
       # Subsection ends here
       # Subsection starts here with heading and list of links
       - subsection:  
