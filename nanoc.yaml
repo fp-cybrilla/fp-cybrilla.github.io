@@ -105,18 +105,18 @@ sidebar:
     dropdown_menu_items: 
       - title: Overview
         link: "/payments/overview/"
-      - title: Managing e-mandates
-        link: "/payments/managing-e-mandates/"
-      - title: Collect payments via e-mandates
-        link: "/payments/collect-payment-via-mandates/"
+      - title: Setting up eNACH mandate
+        link: "/payments/managing-eNACH/"
+      - title: Collect payments via Netbanking/UPI
+        link: "/payments/payments-via-Netbanking-UPI/"
+      - title: Collect payments via eNACH mandate
+        link: "/payments/payment-via-eNACH/"
       
       # Subsection starts here with heading and list of links
       - subsection:
         - heading: "Appendix"
-        - title: Payment States
-          link: "/payments/payment-states/"
-        - title: Mandate States
-          link: "/payments/mandate-states/"
+        - title: Payment error reasons
+          link: "/payments/payment-errors/"
         - title: Customise payment checkout page via Razorpay SDK
           link: "/payments/Razorpay-SDK-options/"
       # Subsection ends here

@@ -1,18 +1,8 @@
 ---
-title: Payment States
+title: Payment Error reasons
 ---
-## Payment States
-|Status|Applicability|Comments|
-|---|---|---|
-|PENDING|All|Payment is pending.|
-|SUCCESS|All|Payment is successful. Amount has been successfully deducted from the investor's account but yet to be transferred to the AMC's account.|
-|FAILED|All|Payment failed for some reason.|
-|SUBMITTED|Mandates only|Mandate has been submitted to the payment gateway.|
-|TIMEDOUT|All|Received timed out error from payment gateway.|
-|INITIATED|All|Transfer of money has been initiated from payment gateway to AMC.|
-|APPROVED|All|Transfer of money from payment gateway to AMC is successful.|
 
-### Error reasons
+### Payment error reasons
 |Error reason|Received from|Meaning|
 |---|---|---|
 |Payment was not completed on time|Payment Gateway|This usually happens when payment couldn't get completed within a stipulated time set by the banks and the session expires and we don't receive a callback from the bank. This may happen due to various reasons, for instance, the user does not receive an OTP or there is network fluctuation at the user's end.|
