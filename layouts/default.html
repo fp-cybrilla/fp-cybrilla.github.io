@@ -1,16 +1,25 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en" class="h-full">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= @item[:title] %></title>
-    <link rel="icon" href="/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheet.css">
+    <link rel="icon" href="/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheet.css" />
     <!-- you don't need to keep this, but it's cool for stats! -->
-    <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
+    <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>" />
 
     <style>
       body {
@@ -24,10 +33,10 @@
       .site-header {
         position: relative;
         font-family: "Open Sans", sans-serif;
-        border-bottom: 1px solid #F0F1F4;
+        border-bottom: 1px solid #f0f1f4;
       }
       .dark .site-header {
-        border-bottom: 1px solid #2E3139;
+        border-bottom: 1px solid #2e3139;
       }
 
       .site-header .search {
@@ -42,13 +51,13 @@
         fill: #ffffff;
       }
 
-      @media(min-width: 768px) {
+      @media (min-width: 768px) {
         .site-header .search {
           width: 250px;
         }
       }
-      
-      @media(min-width: 1024px) {
+
+      @media (min-width: 1024px) {
         .site-header .search {
           width: 300px;
         }
@@ -67,7 +76,7 @@
       .sidebar {
         display: flex;
         flex-direction: column;
-        border-right: 1px solid rgba(0,0,0,.07);
+        border-right: 1px solid rgba(0, 0, 0, 0.07);
         background-color: #fff;
         overflow-y: auto;
         padding: 0px 15px 0 15px;
@@ -83,7 +92,7 @@
         z-index: 20;
       }
       .dark .sidebar {
-        border-right: 1px solid #2E3139;
+        border-right: 1px solid #2e3139;
       }
 
       .sidebar nav ul li a,
@@ -96,11 +105,11 @@
         text-decoration: none;
       }
 
-      @media(min-width: 1024px) {
+      @media (min-width: 1024px) {
         .sidebar {
           width: 316px;
         }
-      } 
+      }
 
       .sidebar-body {
         flex: 1;
@@ -111,7 +120,7 @@
       }
 
       .sidebar-footer {
-        border-top: 1px solid #F0F1F4;
+        border-top: 1px solid #f0f1f4;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -119,12 +128,11 @@
         padding: 9px 0 10px;
       }
       .dark .sidebar-footer {
-        border-top: 1px solid #2E3139;
+        border-top: 1px solid #2e3139;
       }
       .close .sidebar-footer {
         justify-content: center;
         border-top: 0;
-
       }
 
       #main {
@@ -137,22 +145,22 @@
         /* transition: left .25s ease; */
       }
       .dark .site-header nav ul li a:hover {
-        color: #1592E6;
+        color: #1592e6;
       }
       .dark .dropdown:hover a.dropdown-toggle {
-        color: #1592E6;
+        color: #1592e6;
       }
       .dropdown:hover a.dropdown-toggle {
-        color: #2955D9;
+        color: #2955d9;
       }
-      @media(min-width: 1024px) {
+      @media (min-width: 1024px) {
         #main {
           left: 316px;
           width: calc(100% - 316px);
         }
       }
 
-      .content-top>:first-child {
+      .content-top > :first-child {
         margin-top: 0;
       }
 
@@ -166,7 +174,7 @@
       h3 {
         margin-top: 4rem;
         margin-bottom: 0.5rem;
-        color: #0F2C5E;
+        color: #0f2c5e;
         font-weight: 600;
       }
 
@@ -182,19 +190,19 @@
         font-weight: 700;
       }
       .dark h5 {
-        color: #D2D2D4;
+        color: #d2d2d4;
       }
 
       h2 + h4 {
         margin-top: 0;
         font-weight: 400;
       }
-      
-      blockquote>:first-child {
+
+      blockquote > :first-child {
         margin-top: 0;
       }
 
-      blockquote>:last-child {
+      blockquote > :last-child {
         margin-bottom: 0;
       }
 
@@ -205,7 +213,7 @@
       h4 {
         margin-bottom: 0;
       }
-      
+
       table {
         margin-top: 10px;
       }
@@ -217,13 +225,18 @@
         margin: 1rem 0;
       }
 
-      h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+      h1 a,
+      h2 a,
+      h3 a,
+      h4 a,
+      h5 a,
+      h6 a {
         color: inherit !important;
         text-decoration: none !important;
       }
 
       .copy:hover a {
-        color: #3E74FF !important;
+        color: #3e74ff !important;
       }
 
       .copy-link {
@@ -258,7 +271,7 @@
       }
 
       code {
-        font-family: 'Noto Sans Mono', monospace;
+        font-family: "Noto Sans Mono", monospace;
         padding: 0.14rem;
       }
 
@@ -340,17 +353,17 @@
         display: block;
       }
       .content-bottom {
-        border-top: 1px solid #F0F1F4;
+        border-top: 1px solid #f0f1f4;
       }
       .dark .content-bottom {
-        border-top: 1px solid #2E3139;
+        border-top: 1px solid #2e3139;
       }
 
       .card:hover {
         box-shadow: 0px 8px 8px rgba(207, 212, 223, 0.35);
       }
       .dark .card:hover {
-        box-shadow: 0px 8px 8px #191C23;
+        box-shadow: 0px 8px 8px #191c23;
       }
 
       /* Footer styles */
@@ -363,162 +376,158 @@
         line-height: inherit;
       }
       .footer-copyright {
-        border-top: 1px solid #F0F1F4;
+        border-top: 1px solid #f0f1f4;
       }
       .dark .footer-copyright {
-        border-top: 1px solid #2E3139;
+        border-top: 1px solid #2e3139;
       }
       /* Footer styles ends */
 
-
-
-    /* Darkmode icon starts */
-    .theme-switch-wrapper {
-      display: flex;
-      align-items: center;
-    }
-    .close .theme-switch-wrapper {
-      border-bottom: 1px solid #F0F1F4;
-      padding-bottom: 10px;
-      margin-bottom: 14px;
-    }
-    .dark .close .theme-switch-wrapper {
-      border-bottom: 1px solid #2E3139;
-    }
-    .theme-switch-wrapper em {
-      margin-left: 10px;
-      font-size: 1rem;
-    }
-    .theme-switch {
-      display: inline-block;
-      height: 40px;
-      position: relative;
-      width: 40px;
-    }
-    .theme-switch input {
-      display: none;
-    }
-    .slider {
-      bottom: 0;
-      cursor: pointer;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      transition: 0.4s;
-    }
-    .slider img {
-      color: #222;
-      position: absolute;
-      pointer-events: none;
-      width: 30px;
-      height: 30px;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%);
-    }
-    .feather-moon {
-      opacity: 1;
-    }
-    .feather-sun {
-      opacity: 0;
-    }
-    input:checked + .slider .feather-moon {
-      opacity: 0;
-    }
-    input:checked + .slider .feather-sun {
-      opacity: 1;
-    }
-    /* Darkmode icon ends */
-
-
-    .dark hr {
-      border-top: 1px solid #2E3139;
-    }
-
-    /* Link copy svg for dark-light modes starts */
-    .icon-link {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg id='Group_6421' data-name='Group 6421' transform='translate(-815 -366)'%3E %3Ccircle id='Ellipse_665' data-name='Ellipse 665' cx='12' cy='12' r='12' transform='translate(815 366)' fill='%23f0f7ff'/%3E %3Cg id='link' transform='translate(819.273 370.276)'%3E %3Crect id='Rectangle_4846' data-name='Rectangle 4846' width='16' height='16' transform='translate(-0.273 -0.276)' fill='none'/%3E %3Cpath id='Path_20020' data-name='Path 20020' d='M114.873,40.242l.711-.711a2.684,2.684,0,1,1,3.8,3.8l-1.726,1.726a2.684,2.684,0,0,1-3.8,0' transform='translate(-106.911 -36.549)' fill='none' stroke='%233e74ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E %3Cpath id='Path_20021' data-name='Path 20021' d='M44.038,106.568l-.711.711a2.684,2.684,0,0,1-3.8-3.8l1.726-1.726a2.684,2.684,0,0,1,3.8,0' transform='translate(-36.381 -94.978)' fill='none' stroke='%233e74ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
-      background-position: center center;
-      background-repeat: no-repeat;
-      height: 24px;
-      width: 24px;
-      display: block;
-    }
-    .dark .icon-link {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg id='Group_6735' data-name='Group 6735' transform='translate(-815 -366)'%3E %3Ccircle id='Ellipse_665' data-name='Ellipse 665' cx='12' cy='12' r='12' transform='translate(815 366)' fill='%2334373e'/%3E %3Cg id='link' transform='translate(819.273 370.276)'%3E %3Crect id='Rectangle_4846' data-name='Rectangle 4846' width='16' height='16' transform='translate(-0.273 -0.276)' fill='none'/%3E %3Cpath id='Path_20020' data-name='Path 20020' d='M114.873,40.242l.711-.711a2.684,2.684,0,1,1,3.8,3.8l-1.726,1.726a2.684,2.684,0,0,1-3.8,0' transform='translate(-106.911 -36.549)' fill='none' stroke='%235081ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E %3Cpath id='Path_20021' data-name='Path 20021' d='M44.038,106.568l-.711.711a2.684,2.684,0,0,1-3.8-3.8l1.726-1.726a2.684,2.684,0,0,1,3.8,0' transform='translate(-36.381 -94.978)' fill='none' stroke='%235081ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E ");
-    }
-
-    .icon-tick {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg transform='translate(-718.711 -135.711)'%3E%3Crect fill='%23f0f7ff' width='24' height='24' rx='12' transform='translate(718.711 135.711)'/%3E%3Cg transform='translate(722.018 139.018)'%3E%3Cpath fill='%233e74ff' d='M4.154,9.45a1,1,0,0,1-.742-.32L.3,5.822a1.143,1.143,0,0,1,0-1.546.986.986,0,0,1,1.454,0l2.4,2.551L10.273.32a.986.986,0,0,1,1.454,0,1.143,1.143,0,0,1,0,1.546L4.9,9.13a1,1,0,0,1-.727.32Z' transform='translate(2.679 3.969)'/%3E%3Crect fill='none' width='16' height='16' transform='translate(0.693 0.693)'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      background-position: center center;
-      background-repeat: no-repeat;
-      height: 24px;
-      width: 24px;
-      display: block;
-    }
-    .dark .icon-tick {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg id='Group_6351' data-name='Group 6351' transform='translate(-718.711 -135.711)'%3E %3Cpath id='Path_20094' data-name='Path 20094' d='M12,0A12,12,0,1,1,0,12,12,12,0,0,1,12,0Z' transform='translate(718.711 135.711)' fill='%2334373e'/%3E %3Cg id='Group_5978' data-name='Group 5978' transform='translate(722.018 139.018)'%3E %3Cpath id='Union_1' data-name='Union 1' d='M4.154,9.45a1,1,0,0,1-.742-.32L.3,5.822a1.143,1.143,0,0,1,0-1.546.986.986,0,0,1,1.454,0l2.4,2.551L10.273.32a.986.986,0,0,1,1.454,0,1.143,1.143,0,0,1,0,1.546L4.9,9.13a1,1,0,0,1-.727.32Z' transform='translate(2.679 3.969)' fill='%235081ff'/%3E %3Crect id='Rectangle_4422' data-name='Rectangle 4422' width='16' height='16' transform='translate(0.693 0.693)' fill='none'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E ");
-    }
-    /* Link copy svg for dark-light modes ends */
-
-    .code {
-      height:auto;
-      max-height:500px;
-      position: relative; 
-      height: auto;
-    }
-
-    pre.code button {
-      color: #f1f2f3 !important;
-      box-sizing: border-box;
-      transition: 0.2s ease-out;
-      cursor: pointer;
-      user-select: none;
-      background: rgba(0, 0, 0, 0.15);
-      background-color: #000;
-      border: 1px solid rgba(0, 0, 0, 0);
-      padding: 5px 10px;
-      font-size: 0.8em;
-      position: absolute;
-      top: 0;
-      right: 0;
-      border-radius: 0 0.15rem;
-    }
-
-
-    .fp-diagram {
-      width: 1100px;
-      max-width: 100%; 
-    }
-@media(min-width: 640px) {
-    body.close #main {
-      left: 80px;
-      width: calc(100% - 80px);
-    }
-
-    body.close .sidebar {
-      width: 80px;
-    }
-
-    body.close .sidebar-body {
-      visibility: hidden;
-      opacity: 0;
-      /* transition: visibility 0s ease 100ms, opacity 100ms; */
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-      .dropdown.about-us .dropdown-menu {
+      /* Darkmode icon starts */
+      .theme-switch-wrapper {
+        display: flex;
+        align-items: center;
+      }
+      .close .theme-switch-wrapper {
+        border-bottom: 1px solid #f0f1f4;
+        padding-bottom: 10px;
+        margin-bottom: 14px;
+      }
+      .dark .close .theme-switch-wrapper {
+        border-bottom: 1px solid #2e3139;
+      }
+      .theme-switch-wrapper em {
+        margin-left: 10px;
+        font-size: 1rem;
+      }
+      .theme-switch {
+        display: inline-block;
+        height: 40px;
+        position: relative;
+        width: 40px;
+      }
+      .theme-switch input {
+        display: none;
+      }
+      .slider {
+        bottom: 0;
+        cursor: pointer;
+        left: 0;
+        position: absolute;
         right: 0;
-        left: auto;
-    }
-  }
+        top: 0;
+        transition: 0.4s;
+      }
+      .slider img {
+        color: #222;
+        position: absolute;
+        pointer-events: none;
+        width: 30px;
+        height: 30px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .feather-moon {
+        opacity: 1;
+      }
+      .feather-sun {
+        opacity: 0;
+      }
+      input:checked + .slider .feather-moon {
+        opacity: 0;
+      }
+      input:checked + .slider .feather-sun {
+        opacity: 1;
+      }
+      /* Darkmode icon ends */
 
-@media screen and (max-width: 639px) {
+      .dark hr {
+        border-top: 1px solid #2e3139;
+      }
+
+      /* Link copy svg for dark-light modes starts */
+      .icon-link {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg id='Group_6421' data-name='Group 6421' transform='translate(-815 -366)'%3E %3Ccircle id='Ellipse_665' data-name='Ellipse 665' cx='12' cy='12' r='12' transform='translate(815 366)' fill='%23f0f7ff'/%3E %3Cg id='link' transform='translate(819.273 370.276)'%3E %3Crect id='Rectangle_4846' data-name='Rectangle 4846' width='16' height='16' transform='translate(-0.273 -0.276)' fill='none'/%3E %3Cpath id='Path_20020' data-name='Path 20020' d='M114.873,40.242l.711-.711a2.684,2.684,0,1,1,3.8,3.8l-1.726,1.726a2.684,2.684,0,0,1-3.8,0' transform='translate(-106.911 -36.549)' fill='none' stroke='%233e74ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E %3Cpath id='Path_20021' data-name='Path 20021' d='M44.038,106.568l-.711.711a2.684,2.684,0,0,1-3.8-3.8l1.726-1.726a2.684,2.684,0,0,1,3.8,0' transform='translate(-36.381 -94.978)' fill='none' stroke='%233e74ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 24px;
+        width: 24px;
+        display: block;
+      }
+      .dark .icon-link {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg id='Group_6735' data-name='Group 6735' transform='translate(-815 -366)'%3E %3Ccircle id='Ellipse_665' data-name='Ellipse 665' cx='12' cy='12' r='12' transform='translate(815 366)' fill='%2334373e'/%3E %3Cg id='link' transform='translate(819.273 370.276)'%3E %3Crect id='Rectangle_4846' data-name='Rectangle 4846' width='16' height='16' transform='translate(-0.273 -0.276)' fill='none'/%3E %3Cpath id='Path_20020' data-name='Path 20020' d='M114.873,40.242l.711-.711a2.684,2.684,0,1,1,3.8,3.8l-1.726,1.726a2.684,2.684,0,0,1-3.8,0' transform='translate(-106.911 -36.549)' fill='none' stroke='%235081ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E %3Cpath id='Path_20021' data-name='Path 20021' d='M44.038,106.568l-.711.711a2.684,2.684,0,0,1-3.8-3.8l1.726-1.726a2.684,2.684,0,0,1,3.8,0' transform='translate(-36.381 -94.978)' fill='none' stroke='%235081ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E ");
+      }
+
+      .icon-tick {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg transform='translate(-718.711 -135.711)'%3E%3Crect fill='%23f0f7ff' width='24' height='24' rx='12' transform='translate(718.711 135.711)'/%3E%3Cg transform='translate(722.018 139.018)'%3E%3Cpath fill='%233e74ff' d='M4.154,9.45a1,1,0,0,1-.742-.32L.3,5.822a1.143,1.143,0,0,1,0-1.546.986.986,0,0,1,1.454,0l2.4,2.551L10.273.32a.986.986,0,0,1,1.454,0,1.143,1.143,0,0,1,0,1.546L4.9,9.13a1,1,0,0,1-.727.32Z' transform='translate(2.679 3.969)'/%3E%3Crect fill='none' width='16' height='16' transform='translate(0.693 0.693)'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 24px;
+        width: 24px;
+        display: block;
+      }
+      .dark .icon-tick {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg id='Group_6351' data-name='Group 6351' transform='translate(-718.711 -135.711)'%3E %3Cpath id='Path_20094' data-name='Path 20094' d='M12,0A12,12,0,1,1,0,12,12,12,0,0,1,12,0Z' transform='translate(718.711 135.711)' fill='%2334373e'/%3E %3Cg id='Group_5978' data-name='Group 5978' transform='translate(722.018 139.018)'%3E %3Cpath id='Union_1' data-name='Union 1' d='M4.154,9.45a1,1,0,0,1-.742-.32L.3,5.822a1.143,1.143,0,0,1,0-1.546.986.986,0,0,1,1.454,0l2.4,2.551L10.273.32a.986.986,0,0,1,1.454,0,1.143,1.143,0,0,1,0,1.546L4.9,9.13a1,1,0,0,1-.727.32Z' transform='translate(2.679 3.969)' fill='%235081ff'/%3E %3Crect id='Rectangle_4422' data-name='Rectangle 4422' width='16' height='16' transform='translate(0.693 0.693)' fill='none'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E ");
+      }
+      /* Link copy svg for dark-light modes ends */
+
+      .code {
+        height: auto;
+        max-height: 500px;
+        position: relative;
+        height: auto;
+      }
+
+      pre.code button {
+        color: #f1f2f3 !important;
+        box-sizing: border-box;
+        transition: 0.2s ease-out;
+        cursor: pointer;
+        user-select: none;
+        background: rgba(0, 0, 0, 0.15);
+        background-color: #000;
+        border: 1px solid rgba(0, 0, 0, 0);
+        padding: 5px 10px;
+        font-size: 0.8em;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0 0.15rem;
+      }
+
+      .fp-diagram {
+        width: 1100px;
+        max-width: 100%;
+      }
+      @media (min-width: 640px) {
+        body.close #main {
+          left: 80px;
+          width: calc(100% - 80px);
+        }
+
+        body.close .sidebar {
+          width: 80px;
+        }
+
+        body.close .sidebar-body {
+          visibility: hidden;
+          opacity: 0;
+          /* transition: visibility 0s ease 100ms, opacity 100ms; */
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        .dropdown.about-us .dropdown-menu {
+          right: 0;
+          left: auto;
+        }
+      }
+
+      @media screen and (max-width: 639px) {
         .sidebar {
           left: -300px;
-          transition: left .25s ease-out;
+          transition: left 0.25s ease-out;
         }
 
         body.close .sidebar {
@@ -539,180 +548,281 @@
         .close .sidebar-footer {
           justify-content: flex-start;
         }
-  }
+      }
 
-@media(max-width: 1200px) {
-  .table-responsive {
+      @media (max-width: 1200px) {
+        .table-responsive {
           max-width: 100%;
           overflow-x: auto;
         }
-}
+      }
 
-@media(min-width: 1280px) {
-    .footer-copyright, .dark .footer-copyright {
-      border: 0;
-    }
-}
+      @media (min-width: 1280px) {
+        .footer-copyright,
+        .dark .footer-copyright {
+          border: 0;
+        }
+      }
 
-.highlight {
-  position: relative;
-}
+      .highlight {
+        position: relative;
+      }
 
-span.active {
-  position: relative;
-}
+      span.active {
+        position: relative;
+      }
 
-span.active::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -4px;
-  width: 2px;
-  background-color: #3E74FF;
-}
+      span.active::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -4px;
+        width: 2px;
+        background-color: #3e74ff;
+      }
 
-.collapse-title.collapsed {
-  font-weight: 700;
-}
+      .collapse-title.collapsed {
+        font-weight: 700;
+      }
 
-.collapse-body.block {
-  position: relative;
-}
+      .collapse-body.block {
+        position: relative;
+      }
 
-.collapse-body.block::before {
-  content: "";
-  position: absolute;
-  left: 8px;
-  top: 0;
-  bottom: 0;
-  background-color: #E7EDF9;
-  width: 1px;
-}
+      .collapse-body.block::before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: 0;
+        bottom: 0;
+        background-color: #e7edf9;
+        width: 1px;
+      }
 
-/* code snippet syntax highlight */
-code.hljs {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 24px;
-}
+      /* code snippet syntax highlight */
+      code.hljs {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 24px;
+      }
 
-.hljs {
-    color: #061738;
-    background: #f3f6fb;
-}
-.hljs-subst {
-    color: #2f3337;
-}
+      .hljs {
+        color: #061738;
+        background: #f3f6fb;
+      }
+      .hljs-subst {
+        color: #2f3337;
+      }
 
-.hljs-punctuation {
-    color: #061738;
-}
-.hljs-title.function_ {
-    color: #1592e6;
-}
+      .hljs-punctuation {
+        color: #061738;
+      }
+      .hljs-title.function_ {
+        color: #1592e6;
+      }
 
-.hljs-comment {
-    color: #9faabe;
-}
-.hljs-attr,
-.hljs-doctag,
-.hljs-meta.hljs-keyword,
-.hljs-section,
-.hljs-selector-tag {
-    color: #3f567e;
-}
+      .hljs-comment {
+        color: #9faabe;
+      }
+      .hljs-attr,
+      .hljs-doctag,
+      .hljs-meta.hljs-keyword,
+      .hljs-section,
+      .hljs-selector-tag {
+        color: #3f567e;
+      }
 
-.hljs-keyword,
-.hljs-literal {
-  color: #9254DE;
-}
+      .hljs-keyword,
+      .hljs-literal {
+        color: #9254de;
+      }
 
-.hljs-attribute {
-    color: #3f567e;
-}
-.hljs-name,
-.hljs-number,
-.hljs-quote,
-.hljs-selector-id,
-.hljs-template-tag,
-.hljs-type {
-    color: #1592e6;
-}
-.hljs-selector-class {
-    color: #015692;
-}
-.hljs-link,
-.hljs-regexp,
-.hljs-selector-attr,
-.hljs-string,
-.hljs-symbol,
-.hljs-template-variable,
-.hljs-variable {
-    color: #009666;
-}
-.hljs-meta,
-.hljs-selector-pseudo {
-    color: #015692;
-}
-.hljs-built_in,
-.hljs-title {
-    color: #b75501;
-}
-.hljs-bullet,
-.hljs-code {
-    color: #535a60;
-}
-.hljs-meta.hljs-string {
-    color: #54790d;
-}
-.hljs-deletion {
-    color: #c02d2e;
-}
-.hljs-addition {
-    color: #2f6f44;
-}
-.hljs-emphasis {
-    font-style: italic;
-}
-.hljs-strong {
-    font-weight: 700;
-}
-.hljs-title.class_ {
-  color: #FFA940;
-}
+      .hljs-attribute {
+        color: #3f567e;
+      }
+      .hljs-name,
+      .hljs-number,
+      .hljs-quote,
+      .hljs-selector-id,
+      .hljs-template-tag,
+      .hljs-type {
+        color: #1592e6;
+      }
+      .hljs-selector-class {
+        color: #015692;
+      }
+      .hljs-link,
+      .hljs-regexp,
+      .hljs-selector-attr,
+      .hljs-string,
+      .hljs-symbol,
+      .hljs-template-variable,
+      .hljs-variable {
+        color: #009666;
+      }
+      .hljs-meta,
+      .hljs-selector-pseudo {
+        color: #015692;
+      }
+      .hljs-built_in,
+      .hljs-title {
+        color: #b75501;
+      }
+      .hljs-bullet,
+      .hljs-code {
+        color: #535a60;
+      }
+      .hljs-meta.hljs-string {
+        color: #54790d;
+      }
+      .hljs-deletion {
+        color: #c02d2e;
+      }
+      .hljs-addition {
+        color: #2f6f44;
+      }
+      .hljs-emphasis {
+        font-style: italic;
+      }
+      .hljs-strong {
+        font-weight: 700;
+      }
+      .hljs-title.class_ {
+        color: #ffa940;
+      }
 
-/* Dark mode: code snippet syntax highlight */
-.dark .hljs-punctuation {
-    color: #FBFCFE;
-}
-.dark .hljs-title.function_ {
-  color: #5081FF;
-}
-.dark .hljs-attr {
-    color: #A5A6A9;
-}
-.dark .hljs-keyword, .dark .hljs-literal {
-  color: #D3ADF7;
-}
-.dark .hljs-number {
-  color: #5081FF;
-}
-.dark .hljs-comment {
-  color: #6F809E;
-}
-.dark .hljs-title.class_ {
-  color: #FFD591;
-}
-.dark .hljs-doctag {
-  color: #B6BFCE;
-}  
-.dark .collapse-body.block::before { 
-  background-color: #6F809E;
-}
-</style>
+      /* Dark mode: code snippet syntax highlight */
+      .dark .hljs-punctuation {
+        color: #fbfcfe;
+      }
+      .dark .hljs-title.function_ {
+        color: #5081ff;
+      }
+      .dark .hljs-attr {
+        color: #a5a6a9;
+      }
+      .dark .hljs-keyword,
+      .dark .hljs-literal {
+        color: #d3adf7;
+      }
+      .dark .hljs-number {
+        color: #5081ff;
+      }
+      .dark .hljs-comment {
+        color: #6f809e;
+      }
+      .dark .hljs-title.class_ {
+        color: #ffd591;
+      }
+      .dark .hljs-doctag {
+        color: #b6bfce;
+      }
+      .dark .collapse-body.block::before {
+        background-color: #6f809e;
+      }
+
+      /* release-notes */
+      .release-notes {
+        display: grid;
+        grid-template-columns: 30% 70%;
+      }
+
+      .release-date {
+        font-weight: 500;
+      }
+
+      .release-title > div {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      .release-title > div code {
+        position: relative;
+        top: -3px;
+        font-size: 11px;
+        margin-left: 5px;
+      }
+
+      .release-notes:not(:last-child) {
+        border-bottom: 1px solid #f0f1f4;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+      }
+
+      /* action badge */
+      .action-badge {
+        display: inline-block;
+        line-height: normal;
+        padding: 0.25em;
+        border-radius: 4px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: #981c06;
+        background-color: #fee9e8;
+      }
+
+      .accordion {
+        border: 1px solid rgba(229, 231, 235, 1);
+        border-radius: 5px;
+      }
+
+      .accordion-title {
+        position: relative;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        padding-left: 1.25rem;
+        padding-right: 2.25rem;
+        cursor: pointer;
+        background: #fbfcfe;
+        color: #061738;
+      }
+      .accordion-title.open {
+        color: #061738;
+        background: #edf2fa;
+      }
+
+      .accordion-item:not(:last-child) .accordion-title {
+        border-bottom: 1px solid rgba(229, 231, 235, 1);
+      }
+
+      .accordion-title:after {
+        content: "";
+        background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22 fill=%22%23212529%22%3E%3Cpath fill-rule=%22evenodd%22 d=%22M1.646 4.646a.5.5.0 01.708.0L8 10.293l5.646-5.647a.5.5.0 01.708.708l-6 6a.5.5.0 01-.708.0l-6-6a.5.5.0 010-.708z%22/%3E%3C/svg%3E");
+        position: absolute;
+        right: 15px;
+        width: 14px;
+        height: 14px;
+        top: 22px;
+        bottom: 0;
+        transition: transform 0.2s ease-in-out;
+        transform: rotate(-90deg);
+        background-repeat: no-repeat;
+      }
+
+      .accordion-title[aria-expanded~="collapsed"]::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22 fill=%22%232563eb%22%3E%3Cpath fill-rule=%22evenodd%22 d=%22M1.646 4.646a.5.5.0 01.708.0L8 10.293l5.646-5.647a.5.5.0 01.708.708l-6 6a.5.5.0 01-.708.0l-6-6a.5.5.0 010-.708z%22/%3E%3C/svg%3E");
+        transform: rotate(0deg);
+      }
+
+      .accordion-content {
+        /* padding-bottom: 1rem;
+  padding-top: 1rem; */
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        border-bottom: 1px solid rgba(229, 231, 235, 1);
+      }
+
+      .accordion-item:last-child .accordion-content {
+        border-top: 1px solid rgba(229, 231, 235, 1);
+        border-bottom: 0;
+      }
+    </style>
+    <script src="https://fpappstest.io/embed/fpappsWrapper.js" defer></script>
   </head>
-  <body class="font-roboto text-base-color h-full dark:bg-primary-DN0 dark:text-primary-DN60">
+  <body
+    class="font-roboto text-base-color h-full dark:bg-primary-DN0 dark:text-primary-DN60"
+  >
     <div class="md:container m-auto h-full">
       <aside id="sidebar" class="sidebar dark:bg-primary-DN0">
         <%= render '/partials/sidebar.*' %>
@@ -732,108 +842,117 @@ code.hljs {
     <script src="/pixel.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
     <script>
-
       // Get the theme toggle input
-        const themeToggle = document.querySelector(
-          '.theme-switch input[type="checkbox"]'
-        );
-    
-        // Get the current theme from local storage
-        const currentTheme = localStorage.getItem("theme"); 
-        // If the current local storage item can be found
-        if(currentTheme) {    
-          // If the current theme is dark, check the theme toggle
-          if (currentTheme === "dark") {
-            themeToggle.checked = true;
-            document.documentElement.classList.add('dark');
-          }
-          else {
-            document.documentElement.classList.remove('dark');
-          }
-        }
-        
-        // Function that will switch the theme based on the if the theme toggle is checked or not
-        function switchTheme(e) {
-          window.top.location.reload();
+      const themeToggle = document.querySelector(
+        '.theme-switch input[type="checkbox"]'
+      );
 
-          if (e.target.checked) {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem("theme", "dark");
-          } else {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem("theme", "light");
-          }
-        }
-    
-        // Add an event listener to the theme toggle, which will switch the theme
-        themeToggle.addEventListener("change", switchTheme, false);
-  
-  </script>
-  <script>
-    document.querySelectorAll("aside .collapse .collapse-body > ul li span").forEach((item, key)=> {
-      const parent = item?.closest("div.collapse");
-
-      if(parent) {
-        if( (window.location.pathname === item.getAttribute("data-href")) || (window.location.pathname === item.getAttribute("data-href"))+"/" ) {
-          parent.querySelector(".collapse-title")?.classList.add("collapsed");
-          parent.querySelector(".collapse-body")?.classList.remove("hidden");
-          parent.querySelector(".collapse-body")?.classList.add("block");
+      // Get the current theme from local storage
+      const currentTheme = localStorage.getItem("theme");
+      // If the current local storage item can be found
+      if (currentTheme) {
+        // If the current theme is dark, check the theme toggle
+        if (currentTheme === "dark") {
+          themeToggle.checked = true;
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
         }
       }
-    });
-  </script>
-  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-  <script>
-    var scroll = new SmoothScroll('.content a[href*="#"]', {
-      speed: 300,
-      speedAsDuration: true,
-      offset: 22
-    });
 
-    document.querySelectorAll(".copy").forEach((item, index) => {
-      let url = '';
-      let href = '';
-      let uri = '';
-      const IconLink = `<span class="icon-link"></span>`;
-      const IconTick = `<span class="icon-tick"></span>`;
+      // Function that will switch the theme based on the if the theme toggle is checked or not
+      function switchTheme(e) {
+        window.top.location.reload();
 
-      item.querySelector("span.copy-icon").innerHTML = IconLink;
+        if (e.target.checked) {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        }
+      }
 
-      item.querySelector("span.copy-link").classList.remove("flex");
-      item.querySelector("span.copy-link").classList.add("hidden");
+      // Add an event listener to the theme toggle, which will switch the theme
+      themeToggle.addEventListener("change", switchTheme, false);
+    </script>
+    <script>
+      document
+        .querySelectorAll("aside .collapse .collapse-body > ul li span")
+        .forEach((item, key) => {
+          const parent = item?.closest("div.collapse");
 
-      item.addEventListener("click", (e) => {
-        e.preventDefault();
+          if (parent) {
+            if (
+              window.location.pathname === item.getAttribute("data-href") ||
+              (window.location.pathname === item.getAttribute("data-href")) +
+                "/"
+            ) {
+              parent
+                .querySelector(".collapse-title")
+                ?.classList.add("collapsed");
+              parent
+                .querySelector(".collapse-body")
+                ?.classList.remove("hidden");
+              parent.querySelector(".collapse-body")?.classList.add("block");
+            }
+          }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      var scroll = new SmoothScroll('.content a[href*="#"]', {
+        speed: 300,
+        speedAsDuration: true,
+        offset: 22,
+      });
 
-        const parentElement = item.nextSibling;
-        
-        href = item.querySelector("a.anchor").getAttribute("href");
-        url = window.location.href.split('#')[0];
-        uri = url += href;
+      document.querySelectorAll(".copy").forEach((item, index) => {
+        let url = "";
+        let href = "";
+        let uri = "";
+        const IconLink = `<span class="icon-link"></span>`;
+        const IconTick = `<span class="icon-tick"></span>`;
 
-        navigator.clipboard.writeText(uri).then(function() {
-          item.querySelector("span.copy-link").classList.remove("hidden");
-          item.querySelector("span.copy-link").classList.add("flex");
+        item.querySelector("span.copy-icon").innerHTML = IconLink;
 
-          item.querySelector("span.copy-icon").innerHTML = IconTick;
-          
-          setTimeout(function(){
-            item.querySelector("span.copy-icon").innerHTML = IconLink;
-              item.querySelector("span.copy-link").classList.remove("flex");
-              item.querySelector("span.copy-link").classList.add("hidden");
-            }, 2000);
-        }, function(error) {
-          console.log(error);
+        item.querySelector("span.copy-link").classList.remove("flex");
+        item.querySelector("span.copy-link").classList.add("hidden");
+
+        item.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          const parentElement = item.nextSibling;
+
+          href = item.querySelector("a.anchor").getAttribute("href");
+          url = window.location.href.split("#")[0];
+          uri = url += href;
+
+          navigator.clipboard.writeText(uri).then(
+            function () {
+              item.querySelector("span.copy-link").classList.remove("hidden");
+              item.querySelector("span.copy-link").classList.add("flex");
+
+              item.querySelector("span.copy-icon").innerHTML = IconTick;
+
+              setTimeout(function () {
+                item.querySelector("span.copy-icon").innerHTML = IconLink;
+                item.querySelector("span.copy-link").classList.remove("flex");
+                item.querySelector("span.copy-link").classList.add("hidden");
+              }, 2000);
+            },
+            function (error) {
+              console.log(error);
+            }
+          );
         });
       });
-    });
-  </script>
+    </script>
 
+    <script>
+      //document.onload = DisplaySidebar();
+      document.addEventListener("DOMContentLoaded", DisplaySidebar);
 
-  <script>
-    //document.onload = DisplaySidebar();
-      document.addEventListener("DOMContentLoaded", DisplaySidebar );
-      
       function DisplaySidebar() {
         hideSidebar = sessionStorage.getItem("hideSidebar");
         if (!hideSidebar) {
@@ -844,128 +963,163 @@ code.hljs {
           //console.log("hide");
         }
       }
-      
-      document.querySelector(".sidebar-toggle").addEventListener("click", (event) => {
-        event.preventDefault();
-        hideSidebar = sessionStorage.getItem("hideSidebar");
-        if (hideSidebar) {
-          sessionStorage.removeItem( "hideSidebar")
-        } else {
-          sessionStorage.setItem("hideSidebar", true);
+
+      document
+        .querySelector(".sidebar-toggle")
+        .addEventListener("click", (event) => {
+          event.preventDefault();
+          hideSidebar = sessionStorage.getItem("hideSidebar");
+          if (hideSidebar) {
+            sessionStorage.removeItem("hideSidebar");
+          } else {
+            sessionStorage.setItem("hideSidebar", true);
+          }
+          DisplaySidebar();
+        });
+    </script>
+
+    <script></script>
+    <script>
+      // hamburger click
+      document
+        .querySelector(".hamburger")
+        .addEventListener("click", (event) => {
+          event.preventDefault();
+          document.querySelector("body").classList.toggle("close");
+          document.querySelector("body").classList.toggle("overflow-hidden");
+        });
+
+      document
+        .querySelector(".hamburger-close")
+        .addEventListener("click", (event) => {
+          event.preventDefault();
+          document.querySelector("body").classList.toggle("close");
+          document.querySelector("body").classList.toggle("overflow-hidden");
+        });
+
+      document
+        .querySelector(".toggle-search")
+        .addEventListener("click", (event) => {
+          event.preventDefault();
+
+          document.querySelector(".mobile-search").classList.add("show");
+        });
+
+      function closeSearch() {
+        document.querySelector(".mobile-search").classList.remove("show");
+      }
+    </script>
+
+    <script>
+      document.querySelector(
+        ".current-year"
+      ).innerHTML = new Date().getFullYear().toString().substr(2, 2);
+    </script>
+
+    <script>
+      // highlight.js
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll("pre code").forEach((el) => {
+          hljs.highlightElement(el);
+        });
+      });
+      // get the list of all highlight code blocks
+      const highlights = document.querySelectorAll("pre.code");
+
+      highlights.forEach((pre) => {
+        // create the copy button
+        const copy = document.createElement("button");
+        copy.innerHTML = "Copy";
+        // add the event listener to each click
+        copy.addEventListener("click", handleCopyClick);
+        // append the copy button to each code block
+        pre.append(copy);
+      });
+
+      const copyToClipboard = (str) => {
+        const el = document.createElement("textarea");
+        el.value = str;
+        el.setAttribute("readonly", "");
+        el.style.position = "absolute";
+        el.style.left = "-9999px";
+        document.body.appendChild(el);
+        const selected =
+          document.getSelection().rangeCount > 0
+            ? document.getSelection().getRangeAt(0)
+            : false;
+        el.select();
+        document.execCommand("copy"); // Copy command
+        document.body.removeChild(el);
+        if (selected) {
+          // If a selection existed before copying
+          document.getSelection().removeAllRanges(); // Unselect everything on the HTML document
+          document.getSelection().addRange(selected); // Restore the original selection
         }
-       DisplaySidebar();
+      };
+
+      function handleCopyClick(item, evt) {
+        // get the children of the parent element
+        const { children } = evt.currentTarget.parentElement;
+        const { innerText } = Array.from(children)[0];
+        // copy all of the code to the clipboard
+        copyToClipboard(innerText);
+        // Notification post copy
+        item.innerHTML = "Copied";
+
+        window.setTimeout(function () {
+          item.innerHTML =
+            '<svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><g fill="#9faabe"><path d="M10 19h8V8h-8v11zM8 7.992C8 6.892 8.902 6 10.009 6h7.982C19.101 6 20 6.893 20 7.992v11.016c0 1.1-.902 1.992-2.009 1.992H10.01A2.001 2.001 0 018 19.008V7.992z"></path><path d="M5 16V4.992C5 3.892 5.902 3 7.009 3H15v13H5zm2 0h8V5H7v11z"></path></g></svg>';
+        }, 2000);
+      }
+
+      document.querySelectorAll("pre.highlight").forEach((item) => {
+        item.insertAdjacentHTML(
+          "afterend",
+          '<div class="copy-code absolute top-2 right-2 cursor-pointer"><svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><g fill="#9faabe"><path d="M10 19h8V8h-8v11zM8 7.992C8 6.892 8.902 6 10.009 6h7.982C19.101 6 20 6.893 20 7.992v11.016c0 1.1-.902 1.992-2.009 1.992H10.01A2.001 2.001 0 018 19.008V7.992z"></path><path d="M5 16V4.992C5 3.892 5.902 3 7.009 3H15v13H5zm2 0h8V5H7v11z"></path></g></svg></div>'
+        );
+      });
+
+      document.querySelectorAll(".copy-code").forEach((item) => {
+        item.addEventListener("click", (evt) => handleCopyClick(item, evt));
       });
     </script>
 
-
+    <script src="https://unpkg.com/mermaid@9/dist/mermaid.min.js"></script>
     <script>
-
-
-
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: localStorage.getItem("theme") === "dark" ? "dark" : "defualt",
+        themeVariables: {
+          fontFamily: '"Open Sans", sans-serif',
+        },
+      });
     </script>
     <script>
-    // hamburger click
-    document.querySelector(".hamburger").addEventListener("click", (event) => {
-      event.preventDefault();
-      document.querySelector("body").classList.toggle("close");
-      document.querySelector("body").classList.toggle("overflow-hidden");
-    });
+      function handleOpen(src) {
+        Fpapps.open(src);
+      }
+    </script>
 
-    document.querySelector(".hamburger-close").addEventListener("click", (event) => {
-      event.preventDefault();
-      document.querySelector("body").classList.toggle("close");
-      document.querySelector("body").classList.toggle("overflow-hidden");
-    });
+    <script>
+      document.querySelectorAll(".accordion-title").forEach((accordion) => {
+        accordion.addEventListener("click", () => {
+          if (accordion.getAttribute("aria-expanded") === "collapse") {
+            accordion.setAttribute("aria-expanded", "collapsed");
+            accordion.classList.add("open");
+          } else {
+            accordion.setAttribute("aria-expanded", "collapse");
+            accordion.classList.remove("open");
+          }
 
-    document.querySelector(".toggle-search").addEventListener("click", event => {
-      event.preventDefault();
-
-      document.querySelector(".mobile-search").classList.add("show");
-    });
-
-    function closeSearch() {
-      document.querySelector(".mobile-search").classList.remove("show");
-    }
-  </script>
-
-  <script>
-    document.querySelector(".current-year").innerHTML = new Date().getFullYear().toString().substr(2,2);
-  </script>
-
-
-  <script>
-    // highlight.js
-    document.addEventListener('DOMContentLoaded', (event) => {
-      document.querySelectorAll('pre code').forEach((el) => {
-        hljs.highlightElement(el);
+          if (accordion.nextElementSibling.classList.contains("hidden")) {
+            accordion.nextElementSibling.classList.remove("hidden");
+            accordion.nextElementSibling.classList.add("block");
+          } else {
+            accordion.nextElementSibling.classList.remove("block");
+            accordion.nextElementSibling.classList.add("hidden");
+          }
+        });
       });
-    });
-    // get the list of all highlight code blocks
-    const highlights = document.querySelectorAll("pre.code");
-
-    highlights.forEach((pre) => {
-      // create the copy button
-      const copy = document.createElement("button");
-      copy.innerHTML = "Copy";
-      // add the event listener to each click
-      copy.addEventListener("click", handleCopyClick);
-      // append the copy button to each code block
-      pre.append(copy);
-    });
-
-    const copyToClipboard = (str) => {
-      const el = document.createElement("textarea");
-      el.value = str;
-      el.setAttribute("readonly", "");
-      el.style.position = "absolute";
-      el.style.left = "-9999px";
-      document.body.appendChild(el);
-      const selected =
-        document.getSelection().rangeCount > 0
-          ? document.getSelection().getRangeAt(0)
-          : false;
-      el.select();
-      document.execCommand("copy"); // Copy command
-      document.body.removeChild(el);
-      if (selected) {
-        // If a selection existed before copying
-        document.getSelection().removeAllRanges(); // Unselect everything on the HTML document
-        document.getSelection().addRange(selected); // Restore the original selection
-      }
-    };
-
-    function handleCopyClick(item, evt) {
-      // get the children of the parent element
-      const { children } = evt.currentTarget.parentElement;
-      const { innerText } = Array.from(children)[0];
-      // copy all of the code to the clipboard
-      copyToClipboard(innerText);
-      // Notification post copy
-      item.innerHTML = "Copied";
-      
-      window.setTimeout(function () {
-        item.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><g fill="#9faabe"><path d="M10 19h8V8h-8v11zM8 7.992C8 6.892 8.902 6 10.009 6h7.982C19.101 6 20 6.893 20 7.992v11.016c0 1.1-.902 1.992-2.009 1.992H10.01A2.001 2.001 0 018 19.008V7.992z"></path><path d="M5 16V4.992C5 3.892 5.902 3 7.009 3H15v13H5zm2 0h8V5H7v11z"></path></g></svg>';
-      }, 2000);
-    }
-
-    document.querySelectorAll("pre.highlight").forEach(item => {
-      item.insertAdjacentHTML("afterend", '<div class="copy-code absolute top-2 right-2 cursor-pointer"><svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><g fill="#9faabe"><path d="M10 19h8V8h-8v11zM8 7.992C8 6.892 8.902 6 10.009 6h7.982C19.101 6 20 6.893 20 7.992v11.016c0 1.1-.902 1.992-2.009 1.992H10.01A2.001 2.001 0 018 19.008V7.992z"></path><path d="M5 16V4.992C5 3.892 5.902 3 7.009 3H15v13H5zm2 0h8V5H7v11z"></path></g></svg></div>');
-    });
-
-    document.querySelectorAll(".copy-code").forEach(item => {
-      item.addEventListener("click", (evt) => handleCopyClick(item, evt));
-    });
-  </script>
-
-  <script src="https://unpkg.com/mermaid@9/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({ 
-      startOnLoad: true,
-      theme: localStorage.getItem("theme") === 'dark' ? 'dark' : 'defualt',
-      themeVariables: {
-        fontFamily: '"Open Sans", sans-serif'
-      }
-    });
-  </script>
+    </script>
   </body>
 </html>

@@ -21,17 +21,7 @@ sidebar:
         link: "/going-live/checklist/"
       # Subsection starts here with heading and list of links
       - subsection:
-        - heading: Distributors w/ BSE
-        - title: Overview
-          link: "/going-live/distributors-with-bse/"
-        - title: BSE sign up
-          link: "/going-live/signing-up-with-bse-starmf/"
-      # Subsection ends here
-      # Subsection starts here with heading and list of links
-      - subsection:
-        - heading: Distributors w/ RTA
-        - title: Overview
-          link: "/going-live/distributors-with-rtas/"
+        - heading: Third party signups
         - title: Razorpay sign up
           link: "/going-live/signing-up-with-razorpay/"
       # Subsection ends here
@@ -103,6 +93,8 @@ sidebar:
         - heading: "Appendix"
         - title: Order States
           link: "/mf-transactions/order-states/"
+        - title: Transaction Plans Use Cases
+          link: "/mf-transactions/transaction-plans-usecases"
       # Subsection ends here
       # Subsection starts here with heading and list of links
       - subsection:  
@@ -122,6 +114,7 @@ sidebar:
         link: "/payments/managing-e-mandates/"
       - title: Collect payments via e-mandates
         link: "/payments/collect-payment-via-mandates/"
+      
       # Subsection starts here with heading and list of links
       - subsection:
         - heading: "Appendix"
@@ -129,6 +122,8 @@ sidebar:
           link: "/payments/payment-states/"
         - title: Mandate States
           link: "/payments/mandate-states/"
+        - title: Customise payment checkout page via Razorpay SDK
+          link: "/payments/Razorpay-SDK-options/"
       # Subsection ends here
   - dropdown_menu_title: Investor Reporting
     dropdown_menu_items: 
@@ -140,8 +135,8 @@ sidebar:
     dropdown_menu_items: 
       - title: Automated communications with investors
         link: "/pages/workflows/automated-communication/"
-      - title: Product Roadmap
-        link: "/future/roadmap/"
+      - title: Roadmap
+        link: "/general-topics/roadmap/"
       - title: Release notes
         link: "/general-topics/release-notes/"
       - title: Best Practices Guide
@@ -154,4 +149,15 @@ sidebar:
         link: "/fp-sdk/sdk-javascript/"
       - title: Examples
         link: "/fp-sdk/sdk-javascript/examples/"
+  - dropdown_menu_title: Upcoming
+    dropdown_menu_items: 
+      - title: Overview
+        link: "/upcoming/overview/"
+      # Subsection starts here with heading and list of links
+      - subsection:
+        - heading: "Beta programs"
+        - title: Using Aadhaar as POA in KYC submission workflows
+          link: "/upcoming/beta/aadhaar-as-poa/"
+        - title: Hosted workflows
+          link: "/upcoming/beta/hosted-workflows/"
 

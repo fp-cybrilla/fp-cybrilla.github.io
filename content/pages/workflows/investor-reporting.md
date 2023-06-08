@@ -1,14 +1,16 @@
 ---
 title: Overview
 ---
-#### Why should I use Reporting APIs?
+## Investor Reporting
+#### Generate summarized and detailed reports for your investors
+
 Reporting API platform is a unified API platform which provides a single interface to access different reports from different RTAs. The platform manages all the report specific and RTA specific idiosyncrasies under the hood so that the API consumers can focus on what matters the most : Reports and data points.
 
 #### What kinds of reports can I get?
 | Report | Description |
 | ---------- | ------------ |
 | [newwindow,Transactions](https://fintechprimitives.com/api/#transactions) | A list of transactions per folio per scheme(isin). Most of the data points including holdings related data points can be generated from a list of the trasactions. Some of them are the part of transaction response while some other data points can be generated easily from the transaction data.  |
-| [newwindow,Holdings report](https://fintechprimitives.com/api/#get-holding-report) | Get details about current holdings of a folio|
+| [newwindow,Holdings report](https://fintechprimitives.com/docs/api/#generate-holdings-report) | Get details about current holdings of a folio|
 
 #### What kinds of transactions are supported?
 At present, the reporting engine supports the following types of transactions.

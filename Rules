@@ -30,6 +30,9 @@ compile '/**/*.md' do
 
  layout '/default.*'
 
+ filter :releaseNotes
+ filter :tabs
+
  if item.identifier =~ '**/index.md'
    write item.identifier.without_ext + '.html'
  else

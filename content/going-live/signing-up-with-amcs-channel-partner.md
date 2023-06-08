@@ -1,1 +1,0 @@
-Channel partner agreements

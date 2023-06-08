@@ -29,7 +29,7 @@ Mutual fund units are associated with folios. You can treat folios as sub-accoun
 #### 3. Check redemption eligibility
 **Redeem by amount**
 1. `redemption_allowed` must be true.
-2. `redeemable_units` must be greater than zero.
+2. `redeemable_amount` must be greater than zero.
 3. Redemption amount(Sell order amount) must be >=`min_withdrawal_amount` and <=`max_withdrawal_amount`
 4. Redemption amount must be in the denominations of `withdrawal_multiples`
 
