@@ -16,8 +16,6 @@ A non-systematic plan has the same behaviour as that of a systematic plan, but i
   <img src="../../images/transaction-plans-flow.png">
 </div>
 
->The user can also choose to cancel an `active` plan. If this is done, the plan state changes to `cancelled` immediately. <br> Once a plan is `cancelled`, FP no longer generates installments for the plan.
-
 <br>
 
 1. User creates a transaction plan. The plan immediately becomes `active` upon plan creation. 

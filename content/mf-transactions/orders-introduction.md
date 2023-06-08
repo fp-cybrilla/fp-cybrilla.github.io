@@ -31,4 +31,4 @@ The definition of each order state is mentioned below -
   <img src="../../images/orders-flow.png">
 </div>
 
-> The user can also choose to cancel a `pending` order. To do so, he can request FP to cancel the order. Upon cancelling the order, the order state changes to `cancelled`.
+> Please refer [NAV Applicability](/general-topics/NAV-Applicability.md) to learn more about the cut-off time for placing an order. 
