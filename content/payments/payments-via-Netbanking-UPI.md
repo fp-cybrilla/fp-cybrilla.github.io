@@ -45,7 +45,7 @@ One-time payment progresses through various statuses, each representing a specif
 
 |Status|Behavior|
 |---|---|
-|PENDING|Payment is created but yet to .|
+|PENDING|Payment is created and yet to be authorised by investor.|
 |SUCCESS|Payment is successful. Amount has been successfully deducted from the investor's account but yet to be transferred to the AMC's account.|
 |FAILED|Payment failed for some reason.|
 |INITIATED|Transfer of money has been initiated from payment gateway to AMC.|
