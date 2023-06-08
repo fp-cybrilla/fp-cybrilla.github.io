@@ -46,7 +46,9 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
                       "upi": false
                   },
                   "order_id": "order_LD3UyrIMhixgTU", //Razorpay 'order_id'
-                  "key": "rzp_test_yOMeNF4w46S7lK"
+                  "key": "rzp_test_yOMeNF4w46S7lK",
+                  "email": "abc@cybrilla.com",
+                  "contact": "9642991181"
               }
           }
       }
@@ -69,14 +71,14 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
           "amount": "FP_Payment_response.sdk_options.razorpay.amount", //Use the amount received from FP payment response -> SDK_options -> razorpay -> amount.
       // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
           "currency": "INR",
-          "name": "Acme Corp", //your business name
+          "name": "Your company name", //your business name
           "image": "https://example.com/your_logo",  //Your Business logo
           "order_id": "FP_Payment_response.sdk_options.razorpay.order_id", //Use the order ID received from FP payment response -> SDK_options -> razorpay -> order_id.
           "callback_url": "FP_Payment_response.sdk_options.razorpay.callback_url", //Use the callback_URL received from FP payment response -> SDK_options -> razorpay -> callback_url.
           "prefill": {
-              "name": "Gaurav Kumar", //your customer's name
-              "email": "gaurav.kumar@example.com",  //your customer's email
-              "contact": "9000090000"   //your customer's contact
+
+              "email": "FP_Payment_response.sdk_options.razorpay.email",  //your customer's email
+              "contact": "FP_Payment_response.sdk_options.razorpay.contact"   //your customer's contact
           },
           "retry": {
               "enabled": false,      //Pass the 'retry' parameter as 'false'.
@@ -140,7 +142,9 @@ Similar steps must be followed for E-Mandate authorisation page customisation us
                   "customer_id": "cust_LN282jrS8faukL",
                   "order_id": "order_LPLoYDzTOOKCUD",
                   "bank_account_ifsc": "ICIC0000801",
-                  "key": "rzp_test_yOMeNF4w46S7lK"
+                  "key": "rzp_test_yOMeNF4w46S7lK",
+                  "email": "abhin@cybrilla.com",
+                  "contact": "9642991181"
               }
           }
       }
@@ -161,12 +165,12 @@ Similar steps must be followed for E-Mandate authorisation page customisation us
             "order_id": "FP_MandateAuth_response.sdk_options.razorpay.order_id",   //Use the order ID received from FP payment response -> SDK_options -> razorpay -> order_id.
             "customer_id": "FP_MandateAuth_response.sdk_options.razorpay.customer_id",    //Use the customer ID received from FP payment response -> SDK_options -> razorpay -> customer_id.
             "recurring": "1",    //Mandatory field and its value must be '1'.
-            "name": "Acme Corp", //your business name
+            "name": "Your company name", //your business name
             "image": "https://example.com/your_logo",  //Your business logo
             "prefill": {
-              "name": "Gaurav Kumar", //your customer's name
-              "email": "gaurav.kumar@example.com",  //your customer's email
-              "contact": "9000090000"   //your customer's contact
+              "name": "FP_MandateAuth_response.sdk_options.razorpay.bank_account_holder_name", //your customer's name
+              "email": "FP_MandateAuth_response.sdk_options.razorpay.email",  //your customer's email
+              "contact": "FP_MandateAuth_response.sdk_options.razorpay.contact"   //your customer's contact
             },
             "handler": function (response) {
               alert(response.razorpay_payment_id);

@@ -1,1 +1,0 @@
-# Getting MF distribution license

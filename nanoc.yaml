@@ -21,17 +21,7 @@ sidebar:
         link: "/going-live/checklist/"
       # Subsection starts here with heading and list of links
       - subsection:
-        - heading: Distributors w/ BSE
-        - title: Overview
-          link: "/going-live/distributors-with-bse/"
-        - title: BSE sign up
-          link: "/going-live/signing-up-with-bse-starmf/"
-      # Subsection ends here
-      # Subsection starts here with heading and list of links
-      - subsection:
-        - heading: Distributors w/ RTA
-        - title: Overview
-          link: "/going-live/distributors-with-rtas/"
+        - heading: Third party signups
         - title: Razorpay sign up
           link: "/going-live/signing-up-with-razorpay/"
       # Subsection ends here
@@ -93,8 +83,12 @@ sidebar:
           link: "/mf-transactions/recurring-redemptions/"
       # Subsection ends here
       # Subsection starts here with heading and list of links
-        - title: Migrating from V1 SIPs to Purchase Plans
-          link: "/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration/"
+      - subsection:  
+        - heading: "Appendix"
+        - title: Order States
+          link: "/mf-transactions/order-states/"
+        - title: Transaction Plans Use Cases
+          link: "/mf-transactions/transaction-plans-usecases"
       # Subsection ends here
       # Subsection starts here with heading and list of links
       - subsection:  
@@ -135,6 +129,8 @@ sidebar:
     dropdown_menu_items: 
       - title: Automated communications with investors
         link: "/pages/workflows/automated-communication/"
+      - title: Roadmap
+        link: "/general-topics/roadmap/"
       - title: Release notes
         link: "/general-topics/release-notes/"
       - title: Best Practices Guide
@@ -156,4 +152,6 @@ sidebar:
         - heading: "Beta programs"
         - title: Using Aadhaar as POA in KYC submission workflows
           link: "/upcoming/beta/aadhaar-as-poa/"
+        - title: Hosted workflows
+          link: "/upcoming/beta/hosted-workflows/"
 
