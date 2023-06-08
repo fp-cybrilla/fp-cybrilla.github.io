@@ -25,7 +25,7 @@ The definition of each order state is mentioned below -
 |`reversed`|A previously successful order has been reversed by the order gateway for some reason. Changes in units will be reversed in such cases|
 
 
-### Orders Flow
+### Orders Lifecycle
 
 <div>
   <img src="../../images/orders-flow.png">
