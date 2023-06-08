@@ -71,7 +71,7 @@ sidebar:
       # Subsection ends here
       # Subsection starts here with heading and list of links
       - subsection:  
-        - heading: "Recurring purchases"
+        - heading: "Recurring Purchases"
         - title: Migrating from V1 SIP APIs to Purchase plans
           link: "/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration/"
         - title: Create a new SIP
