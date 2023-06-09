@@ -11,6 +11,9 @@
 
 ## June 2023
 
+#### 8th June 2023
+* Technical upgrades to FP Authentication service at 23:00 hours IST
+
 #### 6th June 2023
 * Simplified [Razorpay SDK integration](https://docs.fintechprimitives.com/payments/Razorpay-SDK-options/) by adding 'email ID' and 'contact' parameters to the eNACH mandate authorisation and payment creation API responses, eliminating the need to separately fetch Investor details.
 
