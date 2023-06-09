@@ -7,7 +7,7 @@
 
 * You can now create a systematic plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan).
 
-## Previous Releases (Live)
+## Previous Releases (Live) <br>
 
 ## June 2023
 
