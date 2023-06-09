@@ -40,7 +40,7 @@
 
 * We have introduced a new feature which allows tenants configured with the BSE gateway to route their purchase/ redemption/ switch orders via RTA as well. Please refer the [documentation](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) for more information.
 
-* You can now choose your payment provider while creating payments via BSE and non-BSE payment providers such as Razorpay.
+* You can now choose your payment provider while creating payments i.e either via BSE gateway or other provider such as Razorpay. Please ensure that the MF purchase order also adheres to same gateway. Eg: If you are making payment via Razorpay, then your MF purchase order gateway should be RTA.
 
 * You can now use Aadhaar as a POA while submitting new KYC Requests. This is a [Beta](https://docs.fintechprimitives.com/upcoming/overview/) release and only available on request. Please refer the [documentation](https://docs.fintechprimitives.com/upcoming/beta/aadhaar-as-poa/) for more information.
 
