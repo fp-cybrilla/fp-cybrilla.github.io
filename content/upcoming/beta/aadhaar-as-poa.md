@@ -5,8 +5,9 @@
 1. The KYC Request will be in `pending` state when created.
 2. Once all the required information is provided, an application form is generated and the status moves to `esign_required`
 3. After the application is electronically signed, it is sent to the AMC and the request is moved to `submitted` state.
-3. The AMC verifies the data provided and accepts the request if the verification is successful. The KYC Request moves to `successful` state.
-4. If the verification fails, the KYC Request moves to `rejected` state.
+4. The AMC verifies the data provided and accepts the request if the verification is successful. The KYC Request moves to `successful` state.
+5. If the verification fails, the KYC Request moves to `rejected` state.
+6. If the application has not moved to `esign_required` state but is still in a `pending` state for more than 5 days from the time of creation, the application will be expired and the corresponding state will be `expired`.
 
 ### KYC Workflow
 
@@ -35,6 +36,8 @@ Call the create KYC Request API with the following JSON (the minimum required in
 }
 ```
 A KYC Request in `pending` state will be created. Look for `requirements.fields_needed` in the response object which will indicate if there are any pending data points that are required for processing the KYC Request. You should not hard code this list in your applications as it might keep changing as the regulations change. Always rely on the list from the response object.
+
+You can refer to the `expires_at` attribute in the object which will give you the details on when this KYC Request object would get expired. You can make use of this information to collect the required details from the investor within the expiry time so that you can further process the KYC application. In cases where a KYC application is in `expired` state, then you have to create a new KYC Request object and submit it for processing.
 
 #### 2. Update the KYC Request
 Collect the required information from the investor in one step or in multiple steps as per your workflow. Use Update a KYC Request API to incrementally update the KYC information of an investor.
