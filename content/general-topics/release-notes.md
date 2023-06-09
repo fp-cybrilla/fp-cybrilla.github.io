@@ -48,6 +48,12 @@
 #### 8th May 2023
 * You can now choose your payment provider while creating payments via BSE and non-BSE payment providers such as Razorpay.
 
+#### 8th May 2023
+* You can now use Aadhaar as a POA while submitting new KYC Requests. This is a [Beta](https://docs.fintechprimitives.com/upcoming/overview/) release and only available on request. Please refer the [documentation](https://docs.fintechprimitives.com/upcoming/beta/aadhaar-as-poa/) for more information.
+
+#### 4th May 2023
+* New error codes have been introduced for KYC Status Check service. Please refer the [documentation](https://fintechprimitives.com/docs/api/#error-codes) for more information.
+
 ## April 2023
 
 #### 28th April 2023
