@@ -11,6 +11,12 @@
 
 ## June 2023
 
+#### 6th June 2023
+* Simplified [Razorpay SDK integration](https://docs.fintechprimitives.com/payments/Razorpay-SDK-options/) by adding 'email ID' and 'contact' parameters to the eNACH mandate authorisation and payment creation API responses, eliminating the need to separately fetch Investor details.
+
+#### 2nd June 2023
+* Introduced a user-friendly `provider_name` in the [fetch mandate](https://fintechprimitives.com/docs/api/#fetch-a-mandate) and [fetch payment](https://fintechprimitives.com/docs/api/#fetch-a-payment) API responses, enabling clients to easily identify the payment gateway associated with mandates and payments.
+
 #### 1st June 2023
 
 * You can now place an order or create a transaction plan via RTA by assigning a [Partner Object ID](https://fintechprimitives.com/docs/api/#partner-object), of the distributor/ advisor, as a part of the request attribute while creating an order or a transaction plan.
@@ -39,7 +45,13 @@
 
 * We have introduced a new feature which allows tenants configured with the BSE gateway to route their purchase/ redemption/ switch orders via RTA as well. Please refer the [documentation](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) for more information.
 
+#### 8th May 2023
+* You can now choose your payment provider while creating payments via BSE and non-BSE payment providers such as Razorpay.
+
 ## April 2023
+
+#### 28th April 2023
+* Now you can receive any payment related errors at occured at BSE via HTTP POST `payment_postback_url` parameter passed during [payment creation](https://fintechprimitives.com/docs/api/#create-a-payment).
 
 #### 11th April 2023
 
