@@ -19,6 +19,10 @@ bundle exec nanoc live
 
 <br/>
 
+## UX guidelines for diagrams
+Refer [this](../../images/guidelines-diagram.pdf) guideline
+
+
 ## Sidebar Navigation
 To update the sidebar navigation please follow the below the approach and make the changes accordingly in the `nanoc.yaml` file.
 

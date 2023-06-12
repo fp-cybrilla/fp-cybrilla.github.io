@@ -78,5 +78,11 @@ The mandate progresses through various statuses, each representing a specific st
 
 
 
-
+### **eNACH Mandate Lifecycle**
   
+<div>
+  <img src="../../images/mandate-lifecycle.png">
+</div>
+
+> 1. One time payments using the eNACH mandate will be allowed only if mandate is in `approved` state. 
+> 2. You can setup a recurring purchase plan with a mandate in `created` state. On the installment order day, if mandate is not `approved`, the installment payment will be not be attempted by FP. The installment order will be marked as failed in such case.

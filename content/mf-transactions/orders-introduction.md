@@ -28,7 +28,9 @@ The definition of each order state is mentioned below -
 ### Orders Lifecycle
 
 <div>
-  <img src="../../images/orders-flow.png">
+  <img src="../../images/orders-lifecycle.png">
 </div>
 
-> Please refer [NAV Applicability](/general-topics/NAV-Applicability.md) to learn more about the cut-off time for placing an order. 
+> 1. Please refer [NAV Applicability](https://docs.fintechprimitives.com/general-topics/NAV-Applicability/) to learn more about the cut-off time & day of unit allotment for an order. 
+> 2. An order will be marked complete automatically in FP once the payment is completed. Payment complete means that `amount transfer to AMC` has been initiated by FP. If you are managing payment collection by yourself, you need to mark the order as confirmed yourself. Refer the settlement procedure [here](https://fintechprimitives.com/docs/api/#mf-settlement-details).
+> 3. `T day` in the lifecycle indicates the case where order placement & payment completed on same day before cut off time. An investor may take upto 7 business days to complete payment for an order. Order will be processed on `T+1` business day from the time payment steps are completed.
