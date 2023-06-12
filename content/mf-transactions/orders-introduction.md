@@ -28,7 +28,7 @@ The definition of each order state is mentioned below -
 ### Orders Lifecycle
 
 <div>
-  <img src="../../images/orders-lifecycle.png">
+  <img src="../../images/order-lifecycle.png">
 </div>
 
 > 1. Please refer [NAV Applicability](https://docs.fintechprimitives.com/general-topics/NAV-Applicability/) to learn more about the cut-off time & day of unit allotment for an order. 
