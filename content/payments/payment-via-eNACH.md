@@ -26,7 +26,7 @@ This API requires the approved mandate ID of the investor and the AMC order IDs 
 ```
 
 
-### **eNACH Payment Life Cycle**
+### **eNACH Payment States**
 
 eNACH payment progresses through various statuses, each representing a specific stage in its life cycle. 
 
@@ -40,6 +40,12 @@ eNACH payment progresses through various statuses, each representing a specific 
 |APPROVED| Transfer of money from payment gateway to AMC is successful.|
 
 
+### **eNACH Payment Lifecycle**
 
+<div>
+  <img src="../../images/mandate-payment-lifecycle.png">
+</div>
 
-Note : To learn how to manage mandate lifecyle, please refer to this documentation on [Setting up eNACH mandates](/payments/managing-eNACH/)
+> 1. If `amount transfer to AMC` fails, FP Operations will coordinate with customer to resolve the issue. If the `amount transfer to AMC` does not succeed after all attempts then customer will initiate a refund to investor on the payment gateway. In this case, FP will mark the payment as `failed`
+> 2. If `UTR` is not recieved from payment gateway, FP Operations will coordinate with payment gateway and customer to resolve the issue.
+> 3. To learn how to manage mandate lifecyle, please refer [eNACH mandate setup](/payments/managing-eNACH/)
