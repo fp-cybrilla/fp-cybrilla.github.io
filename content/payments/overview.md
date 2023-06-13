@@ -8,10 +8,11 @@ FP payments APIs enable you to collect payments from your investors for their MF
 
 Currently, we support payment collection via the following modes:
 
-|Payment gateway|Netbanking|UPI|e-Mandates|
+|Payment gateway|Netbanking|UPI|eNACH Mandates|
 |---|---|---|---|
 |Razorpay|Supported|Supported|Supported|
 |BSE|Supported|Supported|Supported(SIPs only)|
+|BillDesk|Supported|Supported|Not Supported|
 
 FP payment APIs support one-time payments via Netbanking, UPI, and eNACH mandates, as well as recurring payments via eNACH mandates.
 
