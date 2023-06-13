@@ -74,8 +74,8 @@ OR
 
 6b. BillDesk
 * V1 and V2 credentials
-- [ ]Merchant ID 
-- [ ]Client ID 
+- [ ] Merchant ID 
+- [ ] Client ID 
 
 #### 7. Postback URLs
 - [ ] Default Netbanking payment postback URL
