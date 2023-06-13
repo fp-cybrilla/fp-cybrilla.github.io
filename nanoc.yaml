@@ -24,7 +24,7 @@ sidebar:
         - heading: Third party signups
         - title: Razorpay sign up
           link: "/going-live/signing-up-with-razorpay/"
-        - title: Razorpay sign up
+        - title: BillDesk sign up
           link: "/going-live/signing-up-with-billdesk/"
       # Subsection ends here
   - dropdown_menu_title: Identity
