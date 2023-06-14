@@ -60,6 +60,7 @@ OR
 
 #### 6. Payment gateway account details
 **6a. Razorpay**
+
 *Razorpay account 1 (with third party validation enabled)*
 - [ ] Merchant ID
 - [ ] Live account api key id
@@ -73,7 +74,8 @@ OR
 - [ ] ENach/E-mandate processing cut-off time (Contact your Razorpay Relationship Manager)
 
 **6b. BillDesk**
-* V1 and V2 credentials *
+
+*V1 and V2 credentials*
 - [ ] Merchant ID 
 - [ ] Client ID 
 
