@@ -87,12 +87,17 @@ notify:
   variables:
     MATTERMOST_WEBHOOK: $MATTERMOST_WEBHOOK
   script:
-    - export MERGE_REQUEST_ID=$(echo $CI_COMMIT_MESSAGE | sed -n 's/.*docs!//p' | sed 's/ .*//g')
-    - export DESCRIPTION=$(echo $CI_COMMIT_MESSAGE | sed -n "s/.*into 'master' //p" | sed -n "s/ See merge request.*//p")
-    - export AUTHOR=$(echo $CI_COMMIT_MESSAGE | sed -n 's/.*by:\ //p')
-    - if [ -z "$AUTHOR" ]; then export AUTHOR=$CI_COMMIT_AUTHOR; fi
-    - 'curl -i -X POST -H "Content-Type: application/json" -d "{\"text\":\"[Merge Request $MERGE_REQUEST_ID: $DESCRIPTION](https://crypt.cybrilla.io/fintechprimitives/docs/-/merge_requests/$MERGE_REQUEST_ID). Created by $AUTHOR has been published by $CI_COMMIT_AUTHOR.\"}" $MATTERMOST_WEBHOOK'
+    - apt update -y
+    - apt install -y jq
+    - 'curl --request GET
+        --header "PRIVATE-TOKEN: $GITLAB_API_TOKEN"
+        "https://crypt.cybrilla.io/api/v4/projects/$CI_PROJECT_ID/repository/commits/$CI_COMMIT_SHORT_SHA/merge_requests" > mr.json'
+    - export MERGE_REQUEST_ID=$(cat mr.json | jq -r '.[] | .iid')
+    - export DESCRIPTION=$(cat mr.json | jq -r '.[] | .title')
+    - export AUTHOR=$(cat mr.json | jq -r '.[] | .author | .name')
+    - export MERGER=$(cat mr.json | jq -r '.[] | .merged_by | .name')
+    - 'curl -i -X POST -H "Content-Type: application/json" -d "{\"text\":\"[Merge Request $MERGE_REQUEST_ID: $DESCRIPTION](https://crypt.cybrilla.io/fintechprimitives/docs/-/merge_requests/$MERGE_REQUEST_ID). Created by $AUTHOR has been published by $MERGER.\"}" $MATTERMOST_WEBHOOK'
   rules:
-    - if: '$CI_COMMIT_MESSAGE =~ /See merge request/ && $CI_COMMIT_BRANCH == "master"'
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH'
   tags:
     - notify
