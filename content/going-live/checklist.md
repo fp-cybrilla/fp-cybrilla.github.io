@@ -59,7 +59,7 @@ OR
 - [ ] CVL Password
 
 #### 6. Payment gateway account details
-6a. Razorpay
+**6a. Razorpay**
 *Razorpay account 1 (with third party validation enabled)*
 - [ ] Merchant ID
 - [ ] Live account api key id
@@ -72,8 +72,8 @@ OR
 - [ ] ENach/E-mandate processing terminal bank (Contact your Razorpay Relationship Manager)
 - [ ] ENach/E-mandate processing cut-off time (Contact your Razorpay Relationship Manager)
 
-6b. BillDesk
-* V1 and V2 credentials
+**6b. BillDesk**
+* V1 and V2 credentials *
 - [ ] Merchant ID 
 - [ ] Client ID 
 
