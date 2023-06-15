@@ -1,18 +1,18 @@
 ---
-title: Embed hosted workflow
+title: Embed pre-built UI
 ---
 
-## Embed hosted workflow
+## Embed pre-built UI
 
-Hosted workflows can be accessed directly via a URL or embedded into any website to run independently
+White labelled applications and hosted workflows can be accessed directly via a URL or embedded into any application to run independently
 
 
 > Ensure you have completed signup with FP as per [go live checklist](/going-live/checklist)
 
 
-### 1. Direct link
+### 1. Direct URL
 
-If your application does not allow inserting a script, you can use the direct link of workflow
+If your application does not allow inserting a script, you can use the direct URL
 
 ```
 
@@ -20,9 +20,9 @@ https://<tenant>.sandbox.fpapps.io/<workflow_name>
 
 ```
 
-### 2. Script to embed hosted workflows
+### 2. Script to embed pre-built UI
 
-You can open the hosted workflow inside your web application using embedded FP Apps javascript library.
+You can open the white labelled application or hosted workflow inside your web application using embedded FP Apps javascript library.
 
 #### Importing the Library
 
@@ -35,27 +35,27 @@ Import embedded FP Apps library in your web application using the following scri
 
 This script tag should be included in the HTML file where you want to use the library. The script tag would give access to `Fpapps` entity.
 
-#### Opening hosted workflow in an iframe
+#### Opening pre built UI in an iframe
 
-To open the workflow in an iframe, use the `Fpapps.open(src)` function, where `src` is the URL of the hosted workflow
+Use the `Fpapps.open(src)` function, where `src` is the URL of the white labelled application or hosted workflow
 
 ```js
 Fpapps.open(src);
 
 ```
 
-You can call this function from a button or a link's click event to display the workflow.
+You can call this function from a button or a link's click event.
 
 ```html
 <button onclick="Fpapps.open('https://<tenant>.sandbox.fpapps.io/<workflow_name>')">
-  Open hosted workflow in an iframe
+  Open a hosted workflow in an iframe
 </button>
 
 ```
 
 #### Example
 
-Here's an HTML page that shows how to use the embedded KYC workflow.
+Here's an HTML page that shows how to use the embedded KYC hosted workflow.
 
 ```html
 <!DOCTYPE html>

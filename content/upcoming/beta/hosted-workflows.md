@@ -12,7 +12,7 @@ Hosted workflows allow an investor to perform a specifc use case while buying or
 You can use these workflows directly via URLs, embed in any of your applications.
 
 > 1. Ensure you have all the prerequisites as per [go live checklist](/going-live/checklist/). 
-> 2. Refer [this script](/upcoming/beta/embed-hosted-workflow) to embed the hosted workflows.
+> 2. Refer [this script](/upcoming/beta/embed-pre-built-ui) to embed the hosted workflows.
 
 #### Branding guidelines for hosted workflows
 
