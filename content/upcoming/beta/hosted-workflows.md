@@ -86,7 +86,7 @@ Investor can setup a one time or a recurring withdrawal.
 
 <br>
 <div>
-<button class="btn btn-primary inline-block w-auto px-4" onclick="handleOpen('https://prueba.sandbox.fpapps.io/https://prueba.sandbox.fpapps.io/withdraw/?isin=INF204K01943&mtm_campaign=beta_live')">
+<button class="btn btn-primary inline-block w-auto px-4" onclick="handleOpen('https://prueba.sandbox.fpapps.io/withdraw/?isin=INF204K01943&mtm_campaign=beta_live')">
 	Try withdraw workflow
 </button>
 </div>

@@ -131,7 +131,7 @@ If you wish to apply your brand guidelines, email the below details to us at [fp
 
 After you have completed onboarding of employer at your end, provide us the following information to register an employer. A unique employer ID will be created for the employer under your FP account
 
-1. Employer business details
+**1. Employer business details**
 
 - [ ] Registered name of the company
 - [ ] PAN of the company
@@ -141,7 +141,7 @@ After you have completed onboarding of employer at your end, provide us the foll
 - [ ] Salary date (*Employer will make payment to AMC on behalf on employee on this date*)
 - [ ] Cut off date for accepting orders (*Orders placed by an employee between the cut off date and salary date will be processed in the next salary cycle*)
 
-2. Employer bank details
+**2. Employer bank details**
 
 *Corporate bank account through which employer will make payments to the AMC*
 - [ ] Bank name
