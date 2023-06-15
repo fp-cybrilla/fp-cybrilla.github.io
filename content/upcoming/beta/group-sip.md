@@ -46,7 +46,7 @@ Group SIP is a solution offered through corporate companies to help employees in
 1. A corporate company (employer) ties up with an AMC or distributor
 2. Employee places a purchase order in a mutual fund scheme
 3. Employee authorises his/her company to deduct the investment amount from salary 
-4. Employer deducts the investment amount from employee's salary and transfers amount to the AMC of selected scheme
+4. Employer deducts the investment amount from employee's salary and transfers amount to the AMC for the selected scheme
 5. AMC processes the investment order
 6. Employee receives the mutual fund units in a folio
 
@@ -95,7 +95,7 @@ Employer completes signup with AMC\Distributor. Team members like HR\Finance\Acc
 #### 3. AMC\Distributor
 
 
-Team members like operations\business etc.. of from AMC\distributor can be designated to view group SIP investments. Designated users will be provided access to
+Team members like operations\business etc.. of AMC\distributor can be designated to view group SIP investments. Designated users will be provided access to
 
 - View employees who have registered for group SIP
 - View investments of employees & payment settlement details from the employers

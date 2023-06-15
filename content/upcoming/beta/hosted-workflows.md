@@ -50,7 +50,7 @@ KYC hosted workflow allows submission of online KYC application
 
 #### Invest
 
-Investor can make a one time or a recurring purchase and also switch from one fund scheme to another.
+Investor can setup a one time or a recurring purchase and also switch from one fund scheme to another.
 
 1. Choose a fund scheme
 2. Select a folio to invest
@@ -72,6 +72,22 @@ If the investor is visting for the first time, invest workflow will facilitate i
 <div>
 <button class="btn btn-primary inline-block w-auto px-4" onclick="handleOpen('https://prueba.sandbox.fpapps.io/checkout?mtm_campaign=beta_live')">
 	Try invest workflow
+</button>
+</div>
+
+#### Withdraw
+
+Investor can setup a one time or a recurring withdrawal.
+
+1. Choose a fund scheme and folio
+2. Place an withdrawal order
+   - one time  or as a recurring withdrawal plan
+   - withdraw all or specific amount\unit
+
+<br>
+<div>
+<button class="btn btn-primary inline-block w-auto px-4" onclick="handleOpen('https://prueba.sandbox.fpapps.io/https://prueba.sandbox.fpapps.io/withdraw/?isin=INF204K01943&mtm_campaign=beta_live')">
+	Try withdraw workflow
 </button>
 </div>
 
