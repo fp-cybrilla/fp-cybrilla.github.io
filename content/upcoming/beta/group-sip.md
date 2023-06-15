@@ -17,7 +17,7 @@ Group SIP is a solution offered through corporate companies to help employees in
 :::TabContent
 
 <div>
-  <img src="/apps/images/gsip-employee-flow.png" alt="" class="max-w-md">
+  <img src="/images/gsip-employee-flow.png" alt="" class="max-w-md">
 </div>
 
 :::EndTabContent 
@@ -27,7 +27,7 @@ Group SIP is a solution offered through corporate companies to help employees in
 :::TabContent 
 
 <div>
-  <img src="/apps/images/gsip-employer-flow.png" alt="employer-flow" class="max-w-md">
+  <img src="/images/gsip-employer-flow.png" alt="employer-flow" class="max-w-md">
 </div>
 
 :::EndTabContent
@@ -37,7 +37,7 @@ Group SIP is a solution offered through corporate companies to help employees in
 :::TabContent 
 
 <div>
-  <img src="/apps/images/gsip-tenant-flow.png" class="max-w-md" alt="">
+  <img src="/images/gsip-tenant-flow.png" class="max-w-md" alt="">
 </div>
 
 :::EndTabContent
