@@ -3,7 +3,7 @@
 ## Upcoming Releases
 #### Available in Sandbox
 
-* You can now cancel a V1 SIP using [Cancel a Purchase Plan](https://fintechprimitives.com/docs/api/#cancel-a-purchase-plan)
+* You can now cancel a [V1 SIP](https://fintechprimitives.com/docs/api/#sips) using [Cancel a Purchase Plan](https://fintechprimitives.com/docs/api/#cancel-a-purchase-plan)
 
 ## Previous Releases (Live)
 
