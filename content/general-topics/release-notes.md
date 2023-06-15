@@ -5,8 +5,6 @@
 
 * You can now cancel a V1 SIP using [Cancel a Purchase Plan](https://fintechprimitives.com/docs/api/#cancel-a-purchase-plan)
 
-* You can now create a systematic plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan).
-
 ## Previous Releases (Live)
 
 <br>
@@ -42,7 +40,8 @@
 
 #### Week of 12th May 2023
 
-* We have introduced a new feature which allows tenants configured with the BSE gateway to route their purchase/ redemption/ switch orders via RTA as well. Please refer the [documentation](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) for more information.
+* We have introduced a new feature which allows tenants configured with the BSE gateway to route their orders via RTA as well. Please refer the `order_gateway` attribute under [Create a MF Purchase](https://fintechprimitives.com/docs/api/#create-a-mf-purchase), [Create a MF Redemption](https://fintechprimitives.com/docs/api/#create-a-mf-redemption), [Create a MF Switch](https://fintechprimitives.com/docs/api/#create-a-mf-switch), [Create a Purchase Plan](https://fintechprimitives.com/docs/api/#create-a-purchase-plan), [Create a Redemption Plan](https://fintechprimitives.com/docs/api/#create-a-redemption-plan) and [Create a Switch Plan](https://fintechprimitives.com/docs/api/#create-a-switch-plan) sections
+
 
 * You can now choose your payment provider while creating payments i.e either via BSE gateway or other provider such as Razorpay. Please ensure that the MF purchase order also adheres to same gateway. Eg: If you are making payment via Razorpay, then your MF purchase order gateway should be RTA.
 
@@ -79,7 +78,7 @@
 #### Week of 17th March 2023
 * You can now update the no. of installments and installment day for a non-systematic plan in RTA. Frequencies supported are `daily`, `twice_a_month`, `day_in_a_fortnight`, `four_times_a_month`, `day_in_a_week`, `monthly`, `quarterly`, `half_yearly` and `yearly` in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#update-a-purchase-plan) for more info.
 
-* You can now create a non-systematic plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
+* You can now create a transaction plan with daily, weekly and fortnightly frequencies in RTA. Please refer the [documentation](https://fintechprimitives.com/docs/api/#managing-recurrence-of-a-plan)
 
 #### Week of 10th March 2023
 * We now support ability to authenticate a user via SMS / Email / SMS or Email. For more info, please check the [documentation](https://fintechprimitives.com/docs/api/#authenticating-a-user-via-oauth-2-0-pkce-flow-from-browser-based-clients)
