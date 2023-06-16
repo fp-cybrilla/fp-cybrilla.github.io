@@ -40,7 +40,7 @@
 
 #### Week of 12th May 2023
 
-* We have introduced a new feature which allows tenants configured with the BSE gateway to route their orders via RTA as well. Please refer the `order_gateway` attribute under [Create a MF Purchase](https://fintechprimitives.com/docs/api/#create-a-mf-purchase), [Create a MF Redemption](https://fintechprimitives.com/docs/api/#create-a-mf-redemption), [Create a MF Switch](https://fintechprimitives.com/docs/api/#create-a-mf-switch), [Create a Purchase Plan](https://fintechprimitives.com/docs/api/#create-a-purchase-plan), [Create a Redemption Plan](https://fintechprimitives.com/docs/api/#create-a-redemption-plan) and [Create a Switch Plan](https://fintechprimitives.com/docs/api/#create-a-switch-plan) sections
+* We have introduced a new feature which allows tenants configured with the BSE gateway to route their orders via RTA as well. Please refer the `order_gateway` attribute under [Purchase](https://fintechprimitives.com/docs/api/#create-a-mf-purchase), [Redemption](https://fintechprimitives.com/docs/api/#create-a-mf-redemption), [Switch](https://fintechprimitives.com/docs/api/#create-a-mf-switch), [Purchase Plan](https://fintechprimitives.com/docs/api/#create-a-purchase-plan), [Redemption Plan](https://fintechprimitives.com/docs/api/#create-a-redemption-plan) and [Switch Plan](https://fintechprimitives.com/docs/api/#create-a-switch-plan) sections.
 
 
 * You can now choose your payment provider while creating payments i.e either via BSE gateway or other provider such as Razorpay. Please ensure that the MF purchase order also adheres to same gateway. Eg: If you are making payment via Razorpay, then your MF purchase order gateway should be RTA.
