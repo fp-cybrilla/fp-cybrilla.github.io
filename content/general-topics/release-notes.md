@@ -53,7 +53,7 @@
 ### April 2023
 
 #### Week of 28th April 2023
-* Now you can receive any payment related errors at occured at BSE via HTTP POST `payment_postback_url` parameter passed during [payment creation](https://fintechprimitives.com/docs/api/#create-a-payment).
+* Now you can receive UPI ID (VPA) validation errors  occured at BSE via HTTP POST `payment_postback_url` parameter passed during [payment creation](https://fintechprimitives.com/docs/api/#create-a-payment).
 
 #### Week of 14th April 2023
 
