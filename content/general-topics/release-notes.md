@@ -85,7 +85,7 @@
 
 #### Week of 3rd March 2023
 * Investor Profile go-live
-  * We have introduced a new and a better facility to store the demographic information belonging to an investor - Investor Profiles. Investor profiles can also support partial onboarding usecases for investors. Currently this is only supported on the RTA route. For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#investor-profiles-early-access)
+  * We have introduced a new and a better facility to store the demographic information belonging to an investor - Investor Profiles. Investor profiles can also support partial onboarding usecases for investors. Currently this is only supported on the RTA route. For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#investor-profiles)
   * Ability to create and update MF Investment accounts using Investor Profile ID. You will also be able to set default preferences for some of the attributes that are present in the Investor Profile, like, phone number, email address, etc. These would be used for new folio creation. For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#mf-investment-accounts)
   * We now support an ability to create orders created against MF Investment Accounts that are created by using Investor Profiles with `resident_individual` tax status
   * Ability to make payments for orders that are created against MF Investment Accounts that are linked to Investor Profiles with `resident_individual` tax status
@@ -102,7 +102,7 @@
 
 ### January 2023
 #### Week of 27th January 2023
-* We now support digital verification of bank accounts. You can use this service to verify the [bank accounts](https://fintechprimitives.com/docs/api/#bank-accounts-early-access) present against your investor profile.  For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#bank-account-verification)
+* We now support digital verification of bank accounts. You can use this service to verify the [bank accounts](https://fintechprimitives.com/docs/api/#bank-accounts) present against your investor profile.  For more information, refer to this [documentation](https://fintechprimitives.com/docs/api/#bank-account-verification)
 
 * You can now create a purchase order and schedule it for submission in the future. Please check [documentation](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) for more information.
 
@@ -146,7 +146,7 @@
 
 
 #### 3th June 2022
-* [V2 Bank account APIs](https://fintechprimitives.com/docs/api/#bank-accounts-early-access)
+* [V2 Bank account APIs](https://fintechprimitives.com/docs/api/#bank-accounts)
 
 * Investor consent information is now mandatory for redemption/switch orders processed via RTA order gateway.  
 `redemption`, `switch`
