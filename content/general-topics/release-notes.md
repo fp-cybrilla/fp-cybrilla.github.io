@@ -3,19 +3,22 @@
 ## Upcoming Releases
 #### Available in Sandbox
 
-* You can now cancel a [V1 SIP](https://fintechprimitives.com/docs/api/#sips) using [Cancel a Purchase Plan](https://fintechprimitives.com/docs/api/#cancel-a-purchase-plan)
-
 ## Previous Releases (Live)
 
 <br>
 
 ### June 2023
 
+#### Week of 23rd June 2023
+
+* You can update a [V1 SIP](https://fintechprimitives.com/docs/api/#sips) using [Update a Purchase Plan](https://fintechprimitives.com/docs/api/#update-a-purchase-plan)
 
 #### Week of 9th June 2023
 * Technical upgrades to FP Authentication complete on 8th June, 2023 at 23:00 hours IST
 
 * Simplified [Razorpay SDK integration](https://docs.fintechprimitives.com/payments/Razorpay-SDK-options/) by adding 'email ID' and 'contact' parameters to the eNACH mandate authorisation and payment creation API responses, eliminating the need to separately fetch Investor details.
+
+* You can now cancel a [V1 SIP](https://fintechprimitives.com/docs/api/#sips) using [Cancel a Purchase Plan](https://fintechprimitives.com/docs/api/#cancel-a-purchase-plan)
 
 #### Week of 2nd June 2023
 * Introduced a user-friendly `provider_name` in the [fetch mandate](https://fintechprimitives.com/docs/api/#fetch-a-mandate) and [fetch payment](https://fintechprimitives.com/docs/api/#fetch-a-payment) API responses, enabling clients to easily identify the payment gateway associated with mandates and payments.
