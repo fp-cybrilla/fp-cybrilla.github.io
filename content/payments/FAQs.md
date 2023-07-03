@@ -5,7 +5,6 @@ title: FAQs
 
 <br/>
 
-:Accordion
 
 ::AccordionItem
 
@@ -116,11 +115,11 @@ If the amount is deducted twice, which means that duplicate order IDs were creat
 
 ::AccordionItem
 
-:::AccordionTitle A payment is marked as ‘failed’ but money is debited from the investors account? What do I do?
+:::AccordionTitle A payment is marked as `failed` but money is debited from the investors account? What do I do?
 
 ::::AccordionContent
 
-If a payment is marked as failed and money is debited from investors account, it could be due to inactivity or delayed realisation. You can reach out to FP support team for assistance.
+If a payment is marked as `failed` and money is debited from investors account, it could be due to inactivity or delayed realisation. You can reach out to FP support team for assistance.
 
 ::::EndAccordionContent
 
