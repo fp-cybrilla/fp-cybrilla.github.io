@@ -119,6 +119,8 @@ sidebar:
           link: "/payments/payment-errors/"
         - title: Customise payment checkout page via Razorpay SDK
           link: "/payments/Razorpay-SDK-options/"
+        - title: FAQs
+          link: "/payments/FAQs"
       # Subsection ends here
   - dropdown_menu_title: Investor Reporting
     dropdown_menu_items: 
