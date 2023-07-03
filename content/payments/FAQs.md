@@ -105,6 +105,7 @@ If the amount doesn't get transferred to AMC's bank account, FP coordinates with
 ::AccordionItem
 
 :::AccordionTitle What to do if amount gets deducted twice from the investor’s account?
+
 ::::AccordionContent
 
 If the amount is deducted twice, which means that duplicate order IDs were created for the payment, and the amount has been transferred to the fund house. FP takes the necessary steps to coordinate with the fund house and get the amount refunded to the investor. In this case, you can reach out to FP support team for assistance.
@@ -115,7 +116,7 @@ If the amount is deducted twice, which means that duplicate order IDs were creat
 
 ::AccordionItem
 
-:::AccordionTitle A payment is marked as `failed` but money is debited from the investors account? What do I do?
+:::AccordionTitle A payment is marked as failed but money is debited from the investors account? What do I do?
 
 ::::AccordionContent
 
