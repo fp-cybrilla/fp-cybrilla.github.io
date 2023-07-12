@@ -8,47 +8,11 @@ title: FAQs
 
 ::AccordionItem
 
-:::AccordionTitle How to collect payments using e-mandate?
-
-::::AccordionContent
-
-For more detailed information on collecting payments using e-mandate, please check [here](https://docs.fintechprimitives.com/payments/payment-via-eNACH/).
-
-::::EndAccordionContent
-
-::EndAccordionItem
-
-::AccordionItem
-
-:::AccordionTitle Can investor make a payment for an eNACH-mandate using debit/credit card?
-
-::::AccordionContent
-
-No. According to SEBI regulations, payments for mutual funds cannot be made using credit/debit card and all investments must be made through Investor's verified bank account.
-
-::::EndAccordionContent
-
-::EndAccordionItem
-
-::AccordionItem
-
 :::AccordionTitle Can investor make a recurring payment using UPI ?
 
 ::::AccordionContent
 
-Currently, FP only allows UPI payments only for one-time purchases and does not support UPI for recurring purchases.
-
-::::EndAccordionContent
-
-::EndAccordionItem
-
-::AccordionItem
-
-:::AccordionTitle Are there any web hooks for payments?
-
-::::AccordionContent
-
-Currently No. However, we are actively working on developing them.
+Currently, FP allows UPI payments only for one-time purchases and does not support UPI for recurring purchases.
 
 ::::EndAccordionContent
 
@@ -60,7 +24,7 @@ Currently No. However, we are actively working on developing them.
 
 ::::AccordionContent
 
-No. Only one payment can be generated per one order ID.
+You can create multiple payments against an AMC order ID as long as the order is in `pending` state in RTA and `confirmed` state in BSE.
 
 ::::EndAccordionContent
 
@@ -84,7 +48,7 @@ You can use the [Retry API](#https://fintechprimitives.com/docs/api/#retry-mf-pu
 
 ::::AccordionContent
 
-T+1 working days.
+If the payment is successfully processed, payment state will move from `pending` to `successful` almost instantly. It may take an additional T+1 days for the payment to change from `successful` to `approved` state.
 
 ::::EndAccordionContent
 
@@ -104,18 +68,6 @@ If the amount doesn't get transferred to AMC's bank account, FP coordinates with
 
 ::AccordionItem
 
-:::AccordionTitle What to do if amount gets deducted twice from the investor’s account?
-
-::::AccordionContent
-
-If the amount is deducted twice, which means that duplicate order IDs were created for the payment, and the amount has been transferred to the fund house. FP takes the necessary steps to coordinate with the fund house and get the amount refunded to the investor. In this case, you can reach out to FP support team for assistance.
-
-::::EndAccordionContent
-
-::EndAccordionItem
-
-::AccordionItem
-
 :::AccordionTitle A payment is marked as failed but money is debited from the investors account? What do I do?
 
 ::::AccordionContent
@@ -128,11 +80,11 @@ If a payment is marked as `failed` and money is debited from investors account, 
 
 ::AccordionItem
 
-:::AccordionTitle Do I need to ask FP to setup SDK options in payment response?
+:::AccordionTitle How do i setup Razorpay SDK options in payment response?
 
 ::::AccordionContent
 
-Yes. Please reach out to FP support team for assistance.
+You can reach out to FP support team for setting up SDK options.
 
 ::::EndAccordionContent
 
@@ -144,7 +96,7 @@ Yes. Please reach out to FP support team for assistance.
 
 ::::AccordionContent
 
-No, It is not currently possible to change the theme of the web page. However if you are using razorpay, you can use the SDK options to customise the [checkout page](https://docs.fintechprimitives.com/payments/Razorpay-SDK-options/).
+Currently, FP only supports customization of checkout page for razorpay as a payment gateway by using [SDK options](https://docs.fintechprimitives.com/payments/Razorpay-SDK-options/).
 
 ::::EndAccordionContent
 
@@ -164,11 +116,11 @@ If the payment gets failed for an installment, SIP order will be marked as faile
 
 ::AccordionItem
 
-:::AccordionTitle Is there a web SDK for Bill Desk/BSE like razorpay?
+:::AccordionTitle When making a payment, can I use any one of my bank account or only the default bank account?
 
 ::::AccordionContent
 
-No. Currently we only support Razorpay.
+Any of the investor's verified bank accounts can be used for (creating a payment)[https://fintechprimitives.com/docs/api/#create-a-payment] by passing bank account id as a parameter.
 
 ::::EndAccordionContent
 
@@ -176,19 +128,7 @@ No. Currently we only support Razorpay.
 
 ::AccordionItem
 
-:::AccordionTitle When making a payment can I use any one of my bank account or only the default bank account?
-
-::::AccordionContent
-
-You can use any of the investor's verified bank accounts for making a payment.
-
-::::EndAccordionContent
-
-::EndAccordionItem
-
-::AccordionItem
-
-:::AccordionTitle In case the payment fails after the amount gets deducted from the investor’s bank account. Where will the reversal gets credited? Will it be the original payment source or the bank account mentioned in the folio?
+:::AccordionTitle In case the payment fails after the amount gets deducted from the investor’s bank account,where will the reversal gets credited? Will it be the original payment source or the bank account mentioned in the folio?
 
 ::::AccordionContent
 
