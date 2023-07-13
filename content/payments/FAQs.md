@@ -24,7 +24,7 @@ Currently, FP allows UPI payments only for one-time purchases and does not suppo
 
 ::::AccordionContent
 
-You can create multiple payments against an AMC order ID as long as the order is in `pending` state in RTA and `confirmed` state in BSE.
+You can create multiple payments against an AMC order ID as long as the order is in `pending` state in RTA gateway and `confirmed` state in BSE gateway.
 
 ::::EndAccordionContent
 
@@ -80,11 +80,11 @@ If a payment is marked as `failed` and money is debited from investors account, 
 
 ::AccordionItem
 
-:::AccordionTitle How do i setup Razorpay SDK options in payment response?
+:::AccordionTitle Can I change the theme of web page received in token url?
 
 ::::AccordionContent
 
-You can reach out to FP support team for setting up SDK options.
+Currently, FP only supports customization of checkout page for razorpay as a payment gateway by using [SDK options](https://docs.fintechprimitives.com/payments/Razorpay-SDK-options/).
 
 ::::EndAccordionContent
 
@@ -92,11 +92,11 @@ You can reach out to FP support team for setting up SDK options.
 
 ::AccordionItem
 
-:::AccordionTitle Can I change the theme of web page received in token url?
+:::AccordionTitle How do i setup Razorpay SDK options in payment response?
 
 ::::AccordionContent
 
-Currently, FP only supports customization of checkout page for razorpay as a payment gateway by using [SDK options](https://docs.fintechprimitives.com/payments/Razorpay-SDK-options/).
+You can reach out to FP support team for setting up SDK options.
 
 ::::EndAccordionContent
 
@@ -120,7 +120,7 @@ If the payment gets failed for an installment, SIP order will be marked as faile
 
 ::::AccordionContent
 
-Any of the investor's verified bank accounts can be used for (creating a payment)[https://fintechprimitives.com/docs/api/#create-a-payment] by passing bank account id as a parameter.
+Any of the investor's verified bank accounts can be used for [creating a payment](https://fintechprimitives.com/docs/api/#create-a-payment) by passing bank account id as a parameter.
 
 ::::EndAccordionContent
 
