@@ -23,7 +23,7 @@ Any of the bank accounts associated with the investor can be used for [creating 
 
 ::::AccordionContent
 
-Currently, FP only supports customization of checkout page for razorpay as a payment gateway by using [SDK options](https://docs.fintechprimitives.com/payments/Razorpay-SDK-options/).
+Currently, FP only supports customization of checkout page for Razorpay by using [SDK options](https://docs.fintechprimitives.com/payments/Razorpay-SDK-options/).
 
 ::::EndAccordionContent
 
@@ -31,7 +31,7 @@ Currently, FP only supports customization of checkout page for razorpay as a pay
 
 ::AccordionItem
 
-:::AccordionTitle What is the procedure to enable Razorpay SDK options in payment response?
+:::AccordionTitle What is the procedure to enable Razorpay SDK options for payments?
 
 ::::AccordionContent
 
@@ -44,7 +44,7 @@ You can reach out to fpsupport@cybrilla.com to enable Razorpay SDK for your FP a
 
 ::AccordionItem
 
-:::AccordionTitle After a successful payment, can I generate payment again for the same order ID?
+:::AccordionTitle After a successful payment, can I pay for the same order ID again?
 
 ::::AccordionContent
 
@@ -121,6 +121,7 @@ Purchase plans can be created using a pending eNACH mandate. The installments of
 ::::AccordionContent
 
 Currently, FP allows UPI payments only for one-time purchases. 
+
 ::::EndAccordionContent
 
 ::EndAccordionItem
