@@ -31,7 +31,7 @@ Currently, FP only supports customization of checkout page for razorpay as a pay
 
 ::AccordionItem
 
-:::AccordionTitle How do i enable Razorpay SDK options in payment response?
+:::AccordionTitle How do I enable Razorpay SDK options in payment response?
 
 ::::AccordionContent
 
