@@ -7,6 +7,11 @@
 
 <br>
 
+### July 2023
+
+#### Week of 17th July 2023
+* * We now have events generated for payments and mandates. You can use our [Event APIs](https://fintechprimitives.com/docs/api/#event-object) to fetch information on any events triggered for payments and mandates state change.
+
 ### June 2023
 
 #### Week of 23rd June 2023
