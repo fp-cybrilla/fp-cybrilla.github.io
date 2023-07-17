@@ -7,11 +7,11 @@ title: FAQs
 
 ::AccordionItem
 
-:::AccordionTitle When making a payment, can I use any one of my bank account or only the default bank account?
+:::AccordionTitle When making a payment, can investor use any one of the bank account or only the bank account set in folio defaults?
 
 ::::AccordionContent
 
-Any of the investor's verified bank accounts can be used for [creating a payment](https://fintechprimitives.com/docs/api/#create-a-payment) by passing bank account id as a parameter.
+Any of the bank accounts associated with the investor can be used for [creating a payment](https://fintechprimitives.com/docs/api/#create-a-payment). Please ensure you have verified that the bank account belongs to your investor before making any payments.
 
 ::::EndAccordionContent
 
@@ -19,7 +19,7 @@ Any of the investor's verified bank accounts can be used for [creating a payment
 
 ::AccordionItem
 
-:::AccordionTitle Can I change the theme of web page received in token url?
+:::AccordionTitle Is it possible to change the branding\theme of payment checkout page received in token url?
 
 ::::AccordionContent
 
@@ -31,11 +31,11 @@ Currently, FP only supports customization of checkout page for razorpay as a pay
 
 ::AccordionItem
 
-:::AccordionTitle How do I enable Razorpay SDK options in payment response?
+:::AccordionTitle What is the procedure to enable Razorpay SDK options in payment response?
 
 ::::AccordionContent
 
-You can reach out to FP support team for setting up SDK options.
+You can reach out to fpsupport@cybrilla.com to enable Razorpay SDK for your FP account.
 
 ::::EndAccordionContent
 
@@ -48,7 +48,7 @@ You can reach out to FP support team for setting up SDK options.
 
 ::::AccordionContent
 
-You can create multiple payments against an AMC order ID as long as the order is in `pending` state in RTA gateway and `confirmed` state in BSE gateway.
+No. You can create multiple payments against an AMC order ID as long as the order is in `pending` state in RTA gateway and `confirmed` state in BSE gateway.
 
 ::::EndAccordionContent
 
@@ -68,7 +68,7 @@ You can use the [Retry API](#https://fintechprimitives.com/docs/api/#retry-mf-pu
 
 ::AccordionItem
 
-:::AccordionTitle How long does it take generally for the payment to move from `pending` to `approved` state?
+:::AccordionTitle How long does it take for the payment to move from `pending` to `approved` state?
 
 ::::AccordionContent
 
@@ -80,11 +80,11 @@ If the payment is successfully processed, payment state will move from `pending`
 
 ::AccordionItem
 
-:::AccordionTitle What to do if in any case, the amount gets deducted from investor’s bank account but doesn’t get transferred to AMC’s bank account?
+:::AccordionTitle What will happen to a SIP installment if the payment gets failed?
 
 ::::AccordionContent
 
-If the amount doesn't get transferred to AMC's bank account, FP coordinates with the payment aggregator to get the transfer initiated. You can reach out to FP support team for assistance.
+If the payment gets failed for an installment, SIP installment will be marked as failed. SIP will continue to work as scheduled.
 
 ::::EndAccordionContent
 
@@ -92,38 +92,11 @@ If the amount doesn't get transferred to AMC's bank account, FP coordinates with
 
 ::AccordionItem
 
-:::AccordionTitle A payment is marked as failed but money is debited from the investors account? What do I do?
+:::AccordionTitle In case the payment fails after the amount gets deducted from the investor’s bank account,where will the reversal gets credited?
 
 ::::AccordionContent
 
-If a payment is marked as `failed` and money is debited from investors account, it could be due to inactivity or delayed realisation of payment. You can reach out to FP support team for assistance.
-
-::::EndAccordionContent
-
-::EndAccordionItem
-
-
-::AccordionItem
-
-:::AccordionTitle What will happen to my SIP order if the payment gets failed for the installment?
-
-::::AccordionContent
-
-If the payment gets failed for an installment, SIP order will be marked as failed.
-
-::::EndAccordionContent
-
-::EndAccordionItem
-
-
-
-::AccordionItem
-
-:::AccordionTitle In case the payment fails after the amount gets deducted from the investor’s bank account,where will the reversal gets credited? Will it be the original payment source or the bank account mentioned in the folio?
-
-::::AccordionContent
-
-The amount will be credited back to the original payment source through which payment is done.
+The amount will be credited back to the original payment source through which payment was done.
 
 ::::EndAccordionContent
 
@@ -131,11 +104,11 @@ The amount will be credited back to the original payment source through which pa
 
 ::AccordionItem
 
-:::AccordionTitle Can I place an order with a pending eNACH mandate?
+:::AccordionTitle Can investor place an order with a pending eNACH mandate?
 
 ::::AccordionContent
 
-Transaction plans can be created using a pending eNACH mandate. The installment will not be generated unless the mandate is moved to the approved state.
+Purchase plans can be created using a pending eNACH mandate. The installments of the plan will not be generated unless the mandate is moved to approved state.
 
 ::::EndAccordionContent
 
@@ -147,8 +120,7 @@ Transaction plans can be created using a pending eNACH mandate. The installment 
 
 ::::AccordionContent
 
-Currently, FP allows UPI payments only for one-time purchases and does not support UPI for recurring purchases. We are currently working on adding UPI Autopay functionality to FP.
-
+Currently, FP allows UPI payments only for one-time purchases. 
 ::::EndAccordionContent
 
 ::EndAccordionItem
