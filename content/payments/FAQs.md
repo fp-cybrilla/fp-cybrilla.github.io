@@ -5,14 +5,13 @@ title: FAQs
 
 <br/>
 
-
 ::AccordionItem
 
-:::AccordionTitle Can investor make a recurring payment using UPI ?
+:::AccordionTitle When making a payment, can I use any one of my bank account or only the default bank account?
 
 ::::AccordionContent
 
-Currently, FP allows UPI payments only for one-time purchases and does not support UPI for recurring purchases.
+Any of the investor's verified bank accounts can be used for [creating a payment](https://fintechprimitives.com/docs/api/#create-a-payment) by passing bank account id as a parameter.
 
 ::::EndAccordionContent
 
@@ -20,7 +19,32 @@ Currently, FP allows UPI payments only for one-time purchases and does not suppo
 
 ::AccordionItem
 
-:::AccordionTitle After a successful payment can I generate payment again for the same order ID?
+:::AccordionTitle Can I change the theme of web page received in token url?
+
+::::AccordionContent
+
+Currently, FP only supports customization of checkout page for razorpay as a payment gateway by using [SDK options](https://docs.fintechprimitives.com/payments/Razorpay-SDK-options/).
+
+::::EndAccordionContent
+
+::EndAccordionItem
+
+::AccordionItem
+
+:::AccordionTitle How do i enable Razorpay SDK options in payment response?
+
+::::AccordionContent
+
+You can reach out to FP support team for setting up SDK options.
+
+::::EndAccordionContent
+
+::EndAccordionItem
+
+
+::AccordionItem
+
+:::AccordionTitle After a successful payment, can I generate payment again for the same order ID?
 
 ::::AccordionContent
 
@@ -56,7 +80,7 @@ If the payment is successfully processed, payment state will move from `pending`
 
 ::AccordionItem
 
-:::AccordionTitle What to do if in any case the amount gets deducted from investor’s bank account but doesn’t get transferred to AMC’s bank account?
+:::AccordionTitle What to do if in any case, the amount gets deducted from investor’s bank account but doesn’t get transferred to AMC’s bank account?
 
 ::::AccordionContent
 
@@ -72,35 +96,12 @@ If the amount doesn't get transferred to AMC's bank account, FP coordinates with
 
 ::::AccordionContent
 
-If a payment is marked as `failed` and money is debited from investors account, it could be due to inactivity or delayed realisation. You can reach out to FP support team for assistance.
+If a payment is marked as `failed` and money is debited from investors account, it could be due to inactivity or delayed realisation of payment. You can reach out to FP support team for assistance.
 
 ::::EndAccordionContent
 
 ::EndAccordionItem
 
-::AccordionItem
-
-:::AccordionTitle Can I change the theme of web page received in token url?
-
-::::AccordionContent
-
-Currently, FP only supports customization of checkout page for razorpay as a payment gateway by using [SDK options](https://docs.fintechprimitives.com/payments/Razorpay-SDK-options/).
-
-::::EndAccordionContent
-
-::EndAccordionItem
-
-::AccordionItem
-
-:::AccordionTitle How do i setup Razorpay SDK options in payment response?
-
-::::AccordionContent
-
-You can reach out to FP support team for setting up SDK options.
-
-::::EndAccordionContent
-
-::EndAccordionItem
 
 ::AccordionItem
 
@@ -114,17 +115,7 @@ If the payment gets failed for an installment, SIP order will be marked as faile
 
 ::EndAccordionItem
 
-::AccordionItem
 
-:::AccordionTitle When making a payment, can I use any one of my bank account or only the default bank account?
-
-::::AccordionContent
-
-Any of the investor's verified bank accounts can be used for [creating a payment](https://fintechprimitives.com/docs/api/#create-a-payment) by passing bank account id as a parameter.
-
-::::EndAccordionContent
-
-::EndAccordionItem
 
 ::AccordionItem
 
@@ -145,6 +136,18 @@ The amount will be credited back to the original payment source through which pa
 ::::AccordionContent
 
 Transaction plans can be created using a pending eNACH mandate. The installment will not be generated unless the mandate is moved to the approved state.
+
+::::EndAccordionContent
+
+::EndAccordionItem
+
+::AccordionItem
+
+:::AccordionTitle Can investor make a recurring payment using UPI ?
+
+::::AccordionContent
+
+Currently, FP allows UPI payments only for one-time purchases and does not support UPI for recurring purchases. We are currently working on adding UPI Autopay functionality to FP.
 
 ::::EndAccordionContent
 
