@@ -8,7 +8,7 @@ To facilitate seamless payment collection from investors, we provide the [FPDocs
 
 #### Generating the Payment:
 
-To generate a payment, you need to use the [FPDocs, Create payment API](https://fintechprimitives.com/docs/api/#create-a-payment) and provide one or more purchase AMC order IDs created through the [FPDocs, Create MF Purchase](https://fintechprimitives.com/docs/api/#create-a-mf-purchase). Once the payment is generated for the specified purchase order IDs, the API response will return a `token_url`. This `token_url` redirects the investor to their respective bank's netbanking page to make the payment.
+To generate a payment, you need to use the [FPDocs, Create payment](https://fintechprimitives.com/docs/api/#create-a-payment) and provide one or more purchase AMC order IDs created through the [FPDocs, Create MF Purchase](https://fintechprimitives.com/docs/api/#create-a-mf-purchase). Once the payment is generated for the specified purchase order IDs, the API response will return a `token_url`. This `token_url` redirects the investor to their respective bank's netbanking page to make the payment.
 ```json
 // Request
 {
