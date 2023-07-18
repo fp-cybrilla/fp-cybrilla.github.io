@@ -96,7 +96,7 @@ notify:
     - export DESCRIPTION=$(cat mr.json | jq -r '.[] | .title')
     - export AUTHOR=$(cat mr.json | jq -r '.[] | .author | .name')
     - export MERGER=$(cat mr.json | jq -r '.[] | .merged_by | .name')
-    - 'curl -i -X POST -H "Content-Type: application/json" -d "{\"text\":\"[Merge Request $MERGE_REQUEST_ID: $DESCRIPTION](https://crypt.cybrilla.io/fintechprimitives/docs/-/merge_requests/$MERGE_REQUEST_ID). Created by $AUTHOR has been published by $MERGER.\"}" $MATTERMOST_WEBHOOK'
+    - 'curl -i -X POST -H "Content-Type: application/json" -d "{\"text\":\"[Merge Request: $DESCRIPTION](https://crypt.cybrilla.io/fintechprimitives/docs/-/merge_requests/$MERGE_REQUEST_ID). Created by $AUTHOR has been published by $MERGER.\"}" $MATTERMOST_WEBHOOK'
   rules:
     - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH'
   tags:
