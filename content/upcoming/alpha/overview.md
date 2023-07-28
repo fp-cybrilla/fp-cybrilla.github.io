@@ -1,0 +1,4 @@
+## Alpha program
+#### This is a list of all the features with limited availability for testing and feedback
+
+Alpha program is one of the launch stages of every FP product or feature. Our focus with alpha testing is to verify functionality and gather feedback from a limited set of customers. Alpha participation is by invitation most of the times. Alpha features are generally suitable for use in test environments as they may not be feature complete. There are no SLAs or technical support obligations in an alpha release unless otherwise specified in product terms or the terms of a particular alpha program.
