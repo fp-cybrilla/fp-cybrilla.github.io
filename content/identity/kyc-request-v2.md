@@ -50,7 +50,9 @@ When all the required information is available, FP automatically sends the KYC R
 ### 3. Check the status of the KYC Request
 Fetch the KYC Request object by calling the GET API and check `status` to see the status of the request.
 
-If the `status` is `successful`, it means the KYC Request verification by the partner AMC is successful and KYC application has been submitted to KRA successfuly i.e. KYC application is at KRA and it is under process. At this point, you can go ahead and start accepting orders from the investor.
+If the `status` is `successful`, it means the KYC Request verification by the partner AMC is successful and KYC application has been submitted to KRA successfuly i.e. KYC application is at KRA and it is under process.
+
+> The PAN status will be KYC compliant or non compliant only after KRA verification is complete and can be know by using KYC check API
 
 If the `status` is `rejected`, it means the KYC Request verification is unsuccessful. The details about the rejections are available at `verification.details_verbose` in the object json.
 
@@ -73,4 +75,6 @@ These are some of the `reason`s for your reference (not an exhaustive list): `DR
 After fixing the errors, you have to resubmit the application by creating a new `/kyc_request` object (Follow the sequence of steps listed above).
 
 ### Testing
-You can use the [simulation api](https://fintechprimitives.com/api/#simulate-a-kyc-request) to simulate a `successful` and `rejected` kyc request. A rejection in the simulation mode returns a fixed set of errors.
+You can use the [simulation api](https://fintechprimitives.com/api/#simulate-a-kyc-request) to simulate a `successful` and `rejected` kyc request in sandbox environment. A rejection in the simulation mode returns a fixed set of errors. 
+
+
