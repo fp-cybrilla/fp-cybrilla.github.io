@@ -27,7 +27,7 @@ The following information about the investor is needed to set up investment acco
 13. Bank account details
 14. Nominee details
 15. Country of citizenship
-16. Other info (political exposure of the investor, Country of tax residence)
+16. Other info (political exposure of the investor, Country of tax residence other than India)
 
 Refer API docs to create [investor profile](https://fintechprimitives.com/docs/api/#create-an-investor-profile), [phone numbers](https://fintechprimitives.com/docs/api/#create-a-phone-number), [bank accounts](https://fintechprimitives.com/docs/api/#create-a-bank-account), [email addresses](https://fintechprimitives.com/docs/api/#create-an-email-address), [nominees](https://fintechprimitives.com/docs/api/#create-a-related-party).
 
@@ -119,7 +119,7 @@ Sample Request
 
 #### 6. Set folio defaults in the investment account
 
-Update the business object id in the investment account's folio default hash. This will ensure that any new investment will be created for the sole proprietor. If the business object id is `null` in folio defaults, the investment will be processed for individual investor.
+Update the business object id in the investment account's folio default hash. This will ensure that any new investment that is created, will be created for the `sole proprietor`. If the business object id is `null` in folio defaults, the investment will be processed for `individual` investor.
 
 Refer API doc for [investment account updation](https://fintechprimitives.com/docs/api/#update-an-mf-investment-account) with following json. Use the investor id received in step 1 to create an investment account.
 
@@ -145,7 +145,7 @@ Once investment account is created, [one time](https://docs.fintechprimitives.co
 
 #### 2. View folio details
 
-Once the orders are processed, folios will be created. You will be able to view all the folios. Folio type will be marked as `sole proprietor` if you had passed the sole proprietor business details in investment account while placing orders.
+Once the orders are processed, folios will be created. You will be able to view all the folios. Folio's tax status will be marked as `sole proprietor` if you had passed the sole proprietor business details in investment account while placing orders.
 
 Refer API doc to [fetch a folio](https://fintechprimitives.com/docs/api/#fetch-all-folios)
 
