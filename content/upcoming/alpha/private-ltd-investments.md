@@ -10,22 +10,22 @@ title: Investment account for private limited firm
 
 Follow the below steps to create a profile for private limited firm, business details, beneficiaries, authorised persons and an investment account before placing orders.
 
-#### 1. Create an non individual profile
+#### 1. Create a non individual profile for privated limited
 
 The following information about the private limited firm is needed to set up investment account
 
-1. Type of entity as (private_limited)
+1. Type of entity (private limited)
 2. PAN number of the firm
-3. Email ID and mobile number of the firm
+3. Email ID and mobile number
 4. Residential status (basis the country from where more than 50% of firm's managmenet is carried out for the financial year)
-5. Address of the firm
-6. Bank account details of the firm
+5. Address 
+6. Bank account details
 7. Occupation
 8. Other info (political exposure of the firm)
 9. Tax identification details eg. GIIN and country of GIIN registration if applicable
 
 
-Refer API docs to create [investor profile](https://fintechprimitives.com/docs/api/#create-an-investor-profile), [phone numbers](https://fintechprimitives.com/docs/api/#create-a-phone-number), [bank accounts](https://fintechprimitives.com/docs/api/#create-a-bank-account), [email addresses](https://fintechprimitives.com/docs/api/#create-an-email-address).
+Refer API docs to create [non individual profile](https://fintechprimitives.com/docs/api/#create-an-investor-profile), [phone numbers](https://fintechprimitives.com/docs/api/#create-a-phone-number), [bank accounts](https://fintechprimitives.com/docs/api/#create-a-bank-account), and [email addresses](https://fintechprimitives.com/docs/api/#create-an-email-address).
 
 Sample Request
 
@@ -36,7 +36,7 @@ Sample Request
   "name": "name_of_business",
   "date_of_birth": "2002-09-18", //Date of incorporation of business
   "occupation": "business",
-  "pan": "DWEPS2837G", 
+  "pan": "DWECS2837G", 
   "country_of_birth": "IN",  //Country of incorporation of business
   "use_default_tax_residences": "false",
   "first_tax_residency": {
@@ -93,7 +93,7 @@ Sample Request
 
 ```json
 {
-  "profile": "invp_c55240e4b09d4617812bb9557b399a42",
+  "profile": "invp_9abd706565144b83947f4b498bc95e98",
   "services_provided": "others",
   "net_worth": "500000",
   "net_worth_as_on": "2023-07-18",
