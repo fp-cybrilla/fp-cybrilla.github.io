@@ -1,27 +1,27 @@
 ---
-title: Investment account for private limited firm
+title: Investment account for private limited company
 ---
 
 > Read about the [Alpha program](/upcoming/alpha/overview)
 
-## Open an investment account for a private limited firm
+## Open an investment account for a private limited company
 
-#### Use this guide to create an investment account for your private limited firm
+#### Use this guide to create an investment account for your private limited company
 
-Follow the below steps to create a profile for private limited firm, business details, beneficiaries, authorised persons and an investment account before placing orders.
+Follow the below steps to create a profile for private limited company, business details, beneficiaries, authorised persons and an investment account before placing orders.
 
-#### 1. Create a non individual profile for privated limited
+#### 1. Create a non individual profile for private limited company
 
-The following information about the private limited firm is needed to set up investment account
+The following information about the private limited company is needed to set up investment account
 
 1. Type of entity (private limited)
-2. PAN number of the firm
+2. PAN number of the company
 3. Email ID and mobile number
-4. Residential status (basis the country from where more than 50% of firm's managmenet is carried out for the financial year)
+4. Residential status (basis the country from where more than 50% of company's managmenet is carried out for the financial year)
 5. Address 
 6. Bank account details
 7. Occupation
-8. Other info (political exposure of the firm)
+8. Other info (political exposure of the company)
 9. Tax identification details eg. GIIN and country of GIIN registration if applicable
 
 
@@ -53,41 +53,40 @@ Sample Request
 
 #### Email ID and mobile number
 
-As part of the regulatory guidelines, the email id and mobile number of the private limited firm has to be verified for its validity. You can use any method of your choice to do the verification. Sending an OTP or a link is the most common method.  
+As part of the regulatory guidelines, the email id and mobile number of the private limited company has to be verified for its validity. You can use any method of your choice to do the verification. Sending an OTP or a link is the most common method.  
 Currently we don't offer APIs for email and mobile verification. FP APIs assume that the verification is done at your end.
 
 #### Bank Account
 
-As part of the regulatory requirement, you need to verify the account ownership of the bank account given by the private limited firm. There are three ways you can do the verification at present:  
-a) Conduct penny drop validation and match the bank a/c holder name that is returned, with the private limited firm
-b) Accept a cancelled cheque copy and manually match the name on the cheque with the private limited firm
+As part of the regulatory requirement, you need to verify the account ownership of the bank account given by the private limited company. There are three ways you can do the verification at present:  
+a) Conduct penny drop validation and match the bank a/c holder name that is returned, with the private limited company
+b) Accept a cancelled cheque copy and manually match the name on the cheque with the private limited company
 c) Use FP's bank account verification service 
 
 The names may not match 100% all the time. You have to be reasonably sure that the a/c belongs to the sole proprietor. There are no set guidelines on what should be the match %.
 
 Refer API doc for [FP's Bank verification service](https://fintechprimitives.com/docs/api/#create-bank-verification)
 
-#### 2. Check the private limited firm's kyc status
+#### 2. Check the private limited company's kyc status
 
-Depending on the private limited firm's kyc status, you might need to collect additional information. Use the [kyc check guide](/identity/kyc-check) to learn how to check the kyc status. The KYC will be peformed for PAN of the private limited firm in this case.
+Depending on the private limited company's kyc status, you might need to collect additional information. Use the [kyc check guide](/identity/kyc-check) to learn how to check the kyc status. The KYC will be peformed for PAN of the private limited company in this case.
 
-#### 3. Perform digital kyc _conditional step for the private limited firm_
+#### 3. Perform digital kyc _conditional step for the private limited company_
 
-As part of the regulatory guidelines, KYC of the private limited firm must be completed before making investments.
-Currently we don't offer APIs for private limited firm's KYC application. You can complete the KYC application processing at your end and use FP's [kyc check guide](/identity/kyc-check)  to determine the succfessful completion of KYC verification before proceeding with investments
+As part of the regulatory guidelines, KYC of the private limited company must be completed before making investments.
+Currently we don't offer APIs for private limited company's KYC application. You can complete the KYC application processing at your end and use FP's [kyc check guide](/identity/kyc-check)  to determine the succfessful completion of KYC verification before proceeding with investments
 
 
 #### 4. Create business details
 
-The following information about the private limited firm is needed to  set up investment account
+The following information about the private limited company is needed to  set up investment account
 
 
 1. Service provided by the business
 2. Net worth amount of the business
 3. Net worth as on date
-4. Exchange where company is listed if applicable
-5. Business category i.e active or passive non financial entity
-6. Business sub category i.e `Foreign financial institute(FFI)`, `Direct-report foreign financial entities(DRFE)`, `Direct reporting non financial foreign entities (DRNEFE)`
+4. Business category i.e active or passive non financial entity, related to listed company
+5. Business sub category if applicable i.e if passive NFE then `Foreign financial institute(FFI)`, `Direct-report foreign financial entities(DRFE)`, `Direct reporting non financial foreign entities (DRNEFE)`
 
 Sample Request
 
@@ -97,15 +96,14 @@ Sample Request
   "services_provided": "others",
   "net_worth": "500000",
   "net_worth_as_on": "2023-07-18",
-  "listed_exchange": null,
-  "business_category": `active_non_financial_entity`,
+  "business_category": `active_non_financial_foreign_entity`,
   "business_sub_category": null
 
 }
 ```
 #### 5. Create related parties
 
-Beneficiaries and authorised persons should be added as the related parties to a private limited firm's profile. You can create the related parties after the individual investor profile is setup each of beneficiary and authorised person as below.
+Beneficiaries and authorised persons should be added as the related parties to a private limited company's profile. You can create the related parties after the individual investor profile is setup each of beneficiary and authorised person as below.
 
 ##### 5.1 Check the individual's kyc status
 
@@ -136,9 +134,9 @@ You need to collect the following additional details about the investor apart fr
 
 Refer [API doc](/identity/kyc-request) to perform digital kyc verification.
 
-##### 5.4 Map beneficiaries and authorised person as related parties to the private limited firm
+##### 5.4 Map beneficiaries and authorised person as related parties to the private limited company
 
-Refer [related party API](https://fintechprimitives.com/docs/api/#create-a-related-party) to associate the beneficariay and authorised persons to the firm.
+Refer [related party API](https://fintechprimitives.com/docs/api/#create-a-related-party) to associate the beneficariay and authorised persons to the company.
 
 Sample Requests
 
@@ -158,7 +156,7 @@ Sample Requests
 
 #### 6. Create an investment account
 
-To avoid any rejection of orders, make sure the private limited firm and all related parties are KYC compliant before creating an investment a/c.
+To avoid any rejection of orders, make sure the private limited company and all related parties are KYC compliant before creating an investment a/c.
 
 Refer API doc for [investment account creation](https://fintechprimitives.com/docs/api/#create-an-mf-investment-account) with the following json. Use the investor id received in step 1 to create an investment account.
 
@@ -170,11 +168,11 @@ Sample Request
   "holding_pattern": "single"
 }
 ```
-> Only single holding pattern is allowed for a private limited firm
+> Only single holding pattern is allowed for a private limited company
 
 #### 7. Set folio defaults in the investment account
 
-Update beneficiaries and authorised persons in the investment account's folio default hash. This will ensure that the beneficiary details are added to the private limited firm's folios. Authorised persons will be allowed to place buy or sell orders on behalf of the private limited firm.
+Update beneficiaries and authorised persons in the investment account's folio default hash. This will ensure that the beneficiary details are added to the private limited company's folios. Authorised persons will be allowed to place buy or sell orders on behalf of the private limited company.
 
 Refer API doc for [investment account updation](https://fintechprimitives.com/docs/api/#update-an-mf-investment-account) with following json. Use the investor id received in step 1 to create an investment account.
 
@@ -199,7 +197,7 @@ Sample request
 
 #### 1. Purchase mutual funds
 
-Only authorised persons will be allowed to place orders. Authorised persons will need login using thier individual profile login and access the  `investment_account_id` of the private firm to place the purchase orders on behalf. This can be fetched by PAN at any time.
+Only authorised persons will be allowed to place orders. Authorised persons will need login using thier individual profile login and access the  `investment_account_id` of the private company to place the purchase orders on behalf. This can be fetched by PAN at any time.
 
 Once investment account is created, [one time](https://docs.fintechprimitives.com/mf-transactions/orders-introduction/) or [recurring orders](https://docs.fintechprimitives.com/mf-transactions/transaction-plans/) can be placed.
 
