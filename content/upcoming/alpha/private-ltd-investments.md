@@ -24,6 +24,8 @@ The following information about the private limited company is needed to set up 
 8. Other info (political exposure of the company)
 9. Tax identification details eg. GIIN and country of GIIN registration if applicable
 10. Tax exemption category if country of incorporation or country of tax residence  is US
+11. Beneficiaries
+12. Authorised persons
 
 
 Refer API docs to create [non individual profile](https://fintechprimitives.com/docs/api/#create-an-investor-profile), [phone numbers](https://fintechprimitives.com/docs/api/#create-a-phone-number), [bank accounts](https://fintechprimitives.com/docs/api/#create-a-bank-account), and [email addresses](https://fintechprimitives.com/docs/api/#create-an-email-address).
@@ -159,8 +161,25 @@ Sample Requests
   "relationship": "employee"
 }
 ```
+#### 6. Set the role of the related parties in the private limited company
 
-#### 6. Create an investment account
+Update beneficiaries and authorised persons in the private limited profile. Authorised persons will be allowed to place buy or sell orders on behalf of the private limited company. Use the investor id received in step 1 to update the profile.
+
+Sample request
+
+```json
+{
+  "id": "invp_9abd706565144b83947f4b498bc95e98",
+   "beneficiary1":"relp_r65d706565144b83947f4b498bc96776",
+   "beneficiary2":null,
+   "beneficiary3":null,
+   "authorised_person1":"relp_9abd706565144b83947f4b498bc95e98",
+   "authorised_person2":null,
+   "authorised_person3":null
+}
+```
+
+#### 7. Create an investment account
 
 To avoid any rejection of orders, make sure the private limited company and all related parties are KYC compliant before creating an investment a/c.
 
@@ -174,36 +193,12 @@ Sample Request
   "holding_pattern": "single"
 }
 ```
-> Only single holding pattern is allowed for a private limited company
-
-#### 7. Set folio defaults in the investment account
-
-Update beneficiaries and authorised persons in the investment account's folio default hash. This will ensure that the beneficiary details are added to the private limited company's folios. Authorised persons will be allowed to place buy or sell orders on behalf of the private limited company.
-
-Refer API doc for [investment account updation](https://fintechprimitives.com/docs/api/#update-an-mf-investment-account) with following json. Use the investor id received in step 1 to create an investment account.
-
-Sample request
-
-```json
-{
-  "id": "mfia_14bafabfbfbc423d9b54412dd577981b",
-  "folio_defaults": {
-      "beneficiary1":"relp_r65d706565144b83947f4b498bc96776",
-      "beneficiary2":null,
-      "beneficiary3":null,
-      "authorised_person1":"relp_9abd706565144b83947f4b498bc95e98",
-      "authorised_person2":null,
-      "authorised_person3":null
-
-  }
-}
-```
 
 ## Place mutual fund orders for  private limited company 
 
 #### 1. Purchase mutual funds
 
-Only authorised persons will be allowed to place orders. Authorised persons will need login using thier individual profile login and access the  `investment_account_id` of the private company to place the purchase orders on behalf. This can be fetched by PAN at any time.
+Only authorised persons will be allowed to place orders. You access the  `investment_account_id` of the private company to place the purchase orders on behalf. This can be fetched by PAN at any time.
 
 Once investment account is created, [one time](https://docs.fintechprimitives.com/mf-transactions/orders-introduction/) or [recurring orders](https://docs.fintechprimitives.com/mf-transactions/transaction-plans/) can be placed.
 
