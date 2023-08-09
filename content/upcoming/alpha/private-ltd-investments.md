@@ -23,6 +23,7 @@ The following information about the private limited company is needed to set up 
 7. Occupation
 8. Other info (political exposure of the company)
 9. Tax identification details eg. GIIN and country of GIIN registration if applicable
+10. Tax exemption category if country of incorporation or country of tax residence  is US
 
 
 Refer API docs to create [non individual profile](https://fintechprimitives.com/docs/api/#create-an-investor-profile), [phone numbers](https://fintechprimitives.com/docs/api/#create-a-phone-number), [bank accounts](https://fintechprimitives.com/docs/api/#create-a-bank-account), and [email addresses](https://fintechprimitives.com/docs/api/#create-an-email-address).
@@ -44,6 +45,7 @@ Sample Request
     "taxid_type": "giin",
     "taxid_number": "giin_number"
   },
+  tax_exemption_category:"not_applicable",
   "pep_details": "not_applicable",
   "ip_address": "192.92.12.39"
 }
@@ -81,23 +83,27 @@ Currently we don't offer APIs for private limited company's KYC application. You
 
 The following information about the private limited company is needed to  set up investment account
 
+1. Net worth amount
+2. Net worth as on date
+3. Category i.e  `Foreign financial institute(FFI)`, `Non financial foreign entity (NFFE)`, `Not applicable`
+4. Sub category applicable if business category is `NFFE` i.e active or passive NFFE, related to listed company
+5. Sub category reason applicable  if business sub category is active NFFE. Eg. `software`, `manufacturing`, etc
+6. Type applicable if sub category is active or passive NFFE.
+7. Service provided
 
-1. Service provided by the business
-2. Net worth amount of the business
-3. Net worth as on date
-4. Business category i.e active or passive non financial entity, related to listed company
-5. Business sub category if applicable i.e if passive NFE then `Foreign financial institute(FFI)`, `Direct-report foreign financial entities(DRFE)`, `Direct reporting non financial foreign entities (DRNEFE)`
 
 Sample Request
 
 ```json
 {
   "profile": "invp_9abd706565144b83947f4b498bc95e98",
-  "services_provided": "others",
   "net_worth": "500000",
   "net_worth_as_on": "2023-07-18",
-  "business_category": `active_non_financial_foreign_entity`,
-  "business_sub_category": null
+  "category": "not_applicable",
+  "sub_category": null,
+  "sub_category_reason": null,
+  "type": null,
+  "services_provided": "others",
 
 }
 ```
@@ -182,10 +188,10 @@ Sample request
 {
   "id": "mfia_14bafabfbfbc423d9b54412dd577981b",
   "folio_defaults": {
-      "beneficiary1":"invp_r65d706565144b83947f4b498bc96776",
+      "beneficiary1":"relp_r65d706565144b83947f4b498bc96776",
       "beneficiary2":null,
       "beneficiary3":null,
-      "authorised_person1":"invp_9abd706565144b83947f4b498bc95e98",
+      "authorised_person1":"relp_9abd706565144b83947f4b498bc95e98",
       "authorised_person2":null,
       "authorised_person3":null
 
@@ -193,7 +199,7 @@ Sample request
 }
 ```
 
-## Place mutual fund orders for sole proprietor
+## Place mutual fund orders for  private limited company 
 
 #### 1. Purchase mutual funds
 
@@ -203,7 +209,7 @@ Once investment account is created, [one time](https://docs.fintechprimitives.co
 
 #### 2. View folio details
 
-Once the orders are processed, folios will be created. Authorised persons & beneficiaries will be able to view all the folios. Folio's tax status will be marked as `Private limited`
+Once the orders are processed, folios will be created. Authorised persons will be able to view all the folios. Folio's tax status will be marked as `Private_limited`
 
 Refer API doc to [fetch a folio](https://fintechprimitives.com/docs/api/#fetch-all-folios)
 

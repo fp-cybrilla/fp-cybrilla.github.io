@@ -81,9 +81,9 @@ The following information about the sole proprietor business is needed to  set u
 
 1. Name (Provide if name of individual and business are different)
 2. Date of incorporation
-3. Service provided by the business
-4. Net worth amount of the business
-5. Net worth as on date
+3. Net worth amount of the business
+4. Net worth as on date
+5. Service provided by the business
 6. Bank account object id (Provide if name of individual and business are different). Create a bank account object in FP and add it to the business details. The name in the bank account should match the name of the sole proprietor business.
 
 Sample Request
@@ -93,9 +93,9 @@ Sample Request
   "profile": "invp_c55240e4b09d4617812bb9557b399a42",
   "name": "name_of_business",
   "date_of_incorporation": "2002-09-18",
-  "services_provided": "others",
   "net_worth": "500000",
   "net_worth_as_on": "2023-07-18",
+  "services_provided": "others",
   "bank_account": "bac_8c50b6930ebf4ec7a7ddd58c34bdf1d8"
 
 }
