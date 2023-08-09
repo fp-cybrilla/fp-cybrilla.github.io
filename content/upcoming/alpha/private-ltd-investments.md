@@ -45,7 +45,7 @@ Sample Request
     "taxid_type": "giin",
     "taxid_number": "giin_number"
   },
-  tax_exemption_category:"not_applicable",
+  "tax_exemption_category":"not_applicable",
   "pep_details": "not_applicable",
   "ip_address": "192.92.12.39"
 }
@@ -88,7 +88,7 @@ The following information about the private limited company is needed to  set up
 3. Category i.e  `Foreign financial institute(FFI)`, `Non financial foreign entity (NFFE)`, `Not applicable`
 4. Sub category applicable if business category is `NFFE` Possible values are active or passive NFFE, related to listed company
 5. Sub category reason applicable  if business sub category is active NFFE.  
-6. Type applicable if sub category is active or passive NFFE. Possible values are  `software`, `manufacturing`, etc
+6. Type applicable if sub category is active or passive NFFE. Possible values are `software`, `manufacturing`, etc
 7. Service provided
 
 
