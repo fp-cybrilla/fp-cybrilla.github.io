@@ -86,9 +86,9 @@ The following information about the private limited company is needed to  set up
 1. Net worth amount
 2. Net worth as on date
 3. Category i.e  `Foreign financial institute(FFI)`, `Non financial foreign entity (NFFE)`, `Not applicable`
-4. Sub category applicable if business category is `NFFE` i.e active or passive NFFE, related to listed company
-5. Sub category reason applicable  if business sub category is active NFFE. Eg. `software`, `manufacturing`, etc
-6. Type applicable if sub category is active or passive NFFE.
+4. Sub category applicable if business category is `NFFE` Possible values are active or passive NFFE, related to listed company
+5. Sub category reason applicable  if business sub category is active NFFE.  
+6. Type applicable if sub category is active or passive NFFE. Possible values are  `software`, `manufacturing`, etc
 7. Service provided
 
 
