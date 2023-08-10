@@ -41,8 +41,8 @@ Sample Request
   "occupation": "business",
   "pan": "DWECS2837G", 
   "country_of_birth": "IN",  //Country of incorporation of business
-  "use_default_tax_residences": "false",
-  "first_tax_residency": {
+  "use_default_tax_residences": "true",
+  "second_tax_residency": {
     "country": "US",
     "taxid_type": "giin",
     "taxid_number": "giin_number"
