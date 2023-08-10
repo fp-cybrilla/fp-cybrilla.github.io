@@ -8,7 +8,7 @@ title: Investment account for private limited company
 
 #### Use this guide to create an investment account for your private limited company
 
-Follow the below steps to create a profile for private limited company, business details, beneficiaries, authorised persons and an investment account before placing orders.
+Follow the below steps to create a profile for a private limited company, business details, beneficiaries, authorised persons and an investment account before placing orders.
 
 #### 1. Create a non individual profile for private limited company
 
@@ -17,7 +17,7 @@ The following information about the private limited company is needed to set up 
 1. Type of entity (private limited)
 2. PAN number of the company
 3. Email ID and mobile number
-4. Residential status (basis the country from where more than 50% of company's managmenet is carried out for the financial year)
+4. Residential status (basis the country from where more than 50% of company's management is carried out for the financial year)
 5. Address 
 6. Bank account details
 7. Occupation
@@ -42,11 +42,12 @@ Sample Request
   "pan": "DWECS2837G", 
   "country_of_birth": "IN",  //Country of incorporation of business
   "use_default_tax_residences": "true",
-  "second_tax_residency": {
-    "country": "US",
-    "taxid_type": "giin",
-    "taxid_number": "giin_number"
-  },
+  "second_tax_residency": 
+      {
+         "country": "US",
+         "taxid_type": "giin",
+         "taxid_number": "giin_number"
+      },
   "tax_exemption_category":"not_applicable",
   "pep_details": "not_applicable",
   "ip_address": "192.92.12.39"
@@ -73,12 +74,12 @@ Refer API doc for [FP's Bank verification service](https://fintechprimitives.com
 
 #### 2. Check the private limited company's kyc status
 
-Depending on the private limited company's kyc status, you might need to collect additional information. Use the [kyc check guide](/identity/kyc-check) to learn how to check the kyc status. The KYC will be peformed for PAN of the private limited company in this case.
+Depending on the private limited company's kyc status, you might need to collect additional information. Use the [kyc check guide](/identity/kyc-check) to learn how to check the kyc status. The KYC will be performed for PAN of the private limited company in this case.
 
 #### 3. Perform digital kyc _conditional step for the private limited company_
 
 As part of the regulatory guidelines, KYC of the private limited company must be completed before making investments.
-Currently we don't offer APIs for private limited company's KYC application. You can complete the KYC application processing at your end and use FP's [kyc check guide](/identity/kyc-check)  to determine the succfessful completion of KYC verification before proceeding with investments
+Currently we don't offer APIs for private limited company's KYC application. You can complete the KYC application processing at your end and use FP's [kyc check guide](/identity/kyc-check)  to determine the successful completion of KYC verification before proceeding with investments
 
 
 #### 4. Create business details
@@ -90,7 +91,7 @@ The following information about the private limited company is needed to  set up
 3. Category i.e  `Foreign financial institute(FFI)`, `Non financial foreign entity (NFFE)`, `Not applicable`
 4. Sub category applicable if business category is `NFFE` Possible values are active or passive NFFE, related to listed company
 5. Sub category reason applicable  if business sub category is active NFFE.  
-6. Type applicable if sub category is active or passive NFFE. Possible values are `software`, `manufacturing`, etc
+6. Type applicable if the sub category is active or passive NFFE. Possible values are `software`, `manufacturing`, etc
 7. Service provided
 
 
@@ -111,11 +112,11 @@ Sample Request
 ```
 #### 5. Create related parties
 
-Beneficiaries and authorised persons should be added as the related parties to a private limited company's profile. You can create the related parties after the individual investor profile is setup each of beneficiary and authorised person as below.
+Beneficiaries and authorised persons should be added as the related parties to a private limited company's profile. You can create the related parties after the individual investor profile is set up for each beneficiary and authorised person as below.
 
 ##### 5.1 Check the individual's kyc status
 
-Depending on the individual's kyc status, you might need to collect additional information. Use the [kyc check guide](/identity/kyc-check) to learn how to check the kyc status. The KYC will be peformed for the individual's PAN
+Depending on the individual's kyc status, you might need to collect additional information. Use the [kyc check guide](/identity/kyc-check) to learn how to check the kyc status. The KYC will be performed for the individual's PAN
 If the individual is kyc compliant, skip step 5.3 and jump to step 5.4 directly.
 
 ##### 5.2 Create an individual investor profile for a beneficiary or authorised person
@@ -135,7 +136,7 @@ You need to collect the following additional details about the investor apart fr
 7. Photo of signature on a white paper
 8. Photograph of individual
 9. In person verification video
-10. Personal bank account belonging to the individual. If the business name of the sole proprietor is different, then ensure that the bank account belongs to indvidual and not the sole proprietor business.
+10. Personal bank account belonging to the individual.
 11. A signed cancelled cheque copy of the  personal bank account
 12. Geo location
 13. Electronic signature on the application form
@@ -144,7 +145,7 @@ Refer [API doc](/identity/kyc-request) to perform digital kyc verification.
 
 ##### 5.4 Map beneficiaries and authorised person as related parties to the private limited company
 
-Refer [related party API](https://fintechprimitives.com/docs/api/#create-a-related-party) to associate the beneficariay and authorised persons to the company.
+Refer [related party API](https://fintechprimitives.com/docs/api/#create-a-related-party) to associate the beneficiary and authorised persons to the company.
 
 Sample Requests
 
@@ -198,7 +199,7 @@ Sample Request
 
 #### 1. Purchase mutual funds
 
-Only authorised persons will be allowed to place orders. You access the  `investment_account_id` of the private company to place the purchase orders on behalf. This can be fetched by PAN at any time.
+Only authorised persons will be allowed to place orders. You can access the  `investment_account_id` of the private company to place the purchase orders on behalf. This can be fetched by company PAN at any time.
 
 Once investment account is created, [one time](https://docs.fintechprimitives.com/mf-transactions/orders-introduction/) or [recurring orders](https://docs.fintechprimitives.com/mf-transactions/transaction-plans/) can be placed.
 
@@ -210,7 +211,7 @@ Refer API doc to [fetch a folio](https://fintechprimitives.com/docs/api/#fetch-a
 
 #### 3. Redeem mutual funds
 
-Authorised persons will need need `investment_account_id` and `folio_number` to place redemption orders.
+Authorised persons will need `investment_account_id` and `folio_number` to place redemption orders.
 
 Refer API doc to [place redemption orders](https://fintechprimitives.com/docs/api/#create-a-mf-redemption)
 
