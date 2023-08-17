@@ -75,7 +75,7 @@ OR
 
 **6b. BillDesk**
 
-*V1 and V2 credentials*
+*V2 API credentials*
 - [ ] Merchant ID 
 - [ ] Client ID 
 

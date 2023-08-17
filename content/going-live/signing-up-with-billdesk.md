@@ -5,7 +5,7 @@ title: Signing up with BillDesk
 
 **Action items**
 - Ensure the following:
-    - You have received `Merchant ID` and `Client ID` for both V1 APIs and V2 APIs.
+    - You have received `Merchant ID` and `Client ID` for V2 APIs.
     - FintectPrimitives IP addresses is whitelisted.
     - FintechPrimitives webhook URLs are whitelisted.
     - FintechPrimitives authentication certificates are shared with Billdesk.
