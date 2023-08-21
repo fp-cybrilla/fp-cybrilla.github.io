@@ -1,5 +1,6 @@
 ## Roadmap
 
+<!--
 |Use Case / workflow|Quarter|Month|
 |-------------------|-------|-----|
 |Acceptance of Aadhaar as the proof of address for MF KYC|Q1, FY 23-24| June|
@@ -24,3 +25,4 @@
 |Enable hierarchy based reporting for RMs|Q3, FY 23-24| Oct|
 |Enable reports on FP Backoffice for operations, business & technology teams|Q3, FY 23-24| Oct|
 |Brokerage calculation / reconcilliation|Q4, FY 23-24| NA|
+-->
