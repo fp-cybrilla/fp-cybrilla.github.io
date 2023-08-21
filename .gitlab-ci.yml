@@ -32,15 +32,6 @@ preview:
     - npm ci --cache .npm --prefer-offline
     - npx netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --dir output | tee netlify_output.txt
     - export DRAFT_URL=$(cat netlify_output.txt | grep 'Draft.*https' | sed -e 's/\x1b\[[0-9;]*m//g' | awk -F " " '{print $NF}')
-      #Delete previous netlifybot MR comments
-    - 'curl
-        --header "PRIVATE-TOKEN: $GITLAB_API_TOKEN"
-        "https://crypt.cybrilla.io/api/v4/projects/$CI_PROJECT_ID/merge_requests/$CI_MERGE_REQUEST_IID/notes" > mr_notes.json'
-    - export NOTE_ID=$(jq -r '.[] | "\(.id); \(.body)"' mr_notes.json | grep 'Deploy Preview ready' | cut -d ';' -f 1)
-    - echo $NOTE_ID
-    - 'for NOTE in $NOTE_ID; do curl --request DELETE
-        --header "PRIVATE-TOKEN: $GITLAB_API_TOKEN"
-        "https://crypt.cybrilla.io/api/v4/projects/$CI_PROJECT_ID/merge_requests/$CI_MERGE_REQUEST_IID/notes/$NOTE"; done'
       #Edit MR description with a link to latest preview
     - 'curl
         --header "PRIVATE-TOKEN: $GITLAB_API_TOKEN"
@@ -62,7 +53,7 @@ preview:
   rules:
     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
   tags:
-    - product-docs
+    - preview
 
 deploy:
   stage: deploy
@@ -92,11 +83,12 @@ notify:
     - 'curl --request GET
         --header "PRIVATE-TOKEN: $GITLAB_API_TOKEN"
         "https://crypt.cybrilla.io/api/v4/projects/$CI_PROJECT_ID/repository/commits/$CI_COMMIT_SHORT_SHA/merge_requests" > mr.json'
-    - export MERGE_REQUEST_ID=$(cat mr.json | jq -r '.[] | .iid')
-    - export DESCRIPTION=$(cat mr.json | jq -r '.[] | .title')
-    - export AUTHOR=$(cat mr.json | jq -r '.[] | .author | .name')
-    - export MERGER=$(cat mr.json | jq -r '.[] | .merged_by | .name')
-    - 'curl -i -X POST -H "Content-Type: application/json" -d "{\"text\":\"[Merge Request: $DESCRIPTION](https://crypt.cybrilla.io/fintechprimitives/docs/-/merge_requests/$MERGE_REQUEST_ID). Created by $AUTHOR has been published by $MERGER.\"}" $MATTERMOST_WEBHOOK'
+    - export MERGE_REQUEST_ID="$(cat mr.json | jq -r '.[] | .iid')"
+    - export TITLE="$(cat mr.json | jq -r '.[] | .title')"
+    - export DESCRIPTION="$(cat mr.json | jq -r '.[] | .description' | awk -F"😎" '{print $1}')"
+    - export AUTHOR="$(cat mr.json | jq -r '.[] | .author | .name')"
+    - export MERGER="$(cat mr.json | jq -r '.[] | .merged_by | .name')"
+    - 'curl -i -X POST -H "Content-Type: application/json" -d "{\"text\":\"[Merge Request: $TITLE](https://crypt.cybrilla.io/fintechprimitives/docs/-/merge_requests/$MERGE_REQUEST_ID). Created by $AUTHOR has been published by $MERGER.\n \`\`\`$DESCRIPTION\`\`\`\"}" $MATTERMOST_WEBHOOK'
   rules:
     - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH'
   tags:
