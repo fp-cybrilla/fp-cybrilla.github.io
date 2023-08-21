@@ -1,9 +1,3 @@
-## Roadmap
-
-
-<br><br>
-
-
 ### Identity
 
 - Enable partners (sub brokers / RMs) to invest
