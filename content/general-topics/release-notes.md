@@ -3,6 +3,9 @@
 ## Upcoming Releases
 #### Available in Sandbox
 
+* Deprecated `distributor_id` attribute for all type of orders and plans is removed from APIs. A new attribute `partner` is added to these objects to support sub broker via whom a plan/ order is created. Refer document for [purchase](https://fintechprimitives.com/docs/api/#mf-purchase-object), [redemption](https://fintechprimitives.com/docs/api/#mf-redemption-object), [switch](https://fintechprimitives.com/docs/api/#mf-switch-object) and [plans](https://fintechprimitives.com/docs/api/#other-common-plan-attributes). 
+
+
 ## Previous Releases (Live)
 
 <br>
