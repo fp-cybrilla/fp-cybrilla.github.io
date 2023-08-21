@@ -2,7 +2,7 @@
 
 
 
-### API Service - Identity
+### Identity
 
 - Enable partners (sub brokers / RMs) to invest
 - Enable onboarding of Sole proprietor
@@ -14,7 +14,7 @@
 - Enable hierarachy mgmt for partners
 - Capture risk profile of the investor with the flexibility to customize questions and answers
 
-### API Service - Orders
+### Orders
 
 - Enable investments by sole proprietor
 - Support AoS holding pattern for investments
@@ -27,13 +27,13 @@
 - Support for offline folio migration
 
 
-### API Service - Payments
+### Payments
 
 - Support paper NACH via Razorpay
 - Support PPI wallet via Razorpay
 - Support UPI Autopay via Razorpay
 
-### API Service - Data
+### Data
 
 - Enable reports on FP Backoffice for operations, business & technology teams
 - Brokerage calculation
