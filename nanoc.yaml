@@ -134,8 +134,8 @@ sidebar:
     dropdown_menu_items: 
       - title: Automated communications with investors
         link: "/pages/workflows/automated-communication/"
-#      - title: Roadmap
-#        link: "/general-topics/roadmap/"
+      - title: Roadmap
+        link: "/general-topics/roadmap/"
       - title: Release notes
         link: "/general-topics/release-notes/"
       - title: Best Practices Guide
