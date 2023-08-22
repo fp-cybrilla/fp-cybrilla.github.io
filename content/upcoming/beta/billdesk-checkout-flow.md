@@ -2,13 +2,13 @@
 ---
 title: Billdesk payment checkout flow
 ---
-## Billdesk payment checkout flow
+# Billdesk payment checkout flow
 
 This documentation will help you understand and utilize the functionalities of FP checkout page for Billdesk, enabling seamless payment experiences for investors.
 
-## 2. Supported Payment Methods
+## Supported Payment Methods
 
-FP checkout page supports different payment methods based on the investor's device:
+The FP checkout page offers diverse payment methods tailored to the investor's device:
 
 - **iOS:**
   - Netbanking
@@ -24,7 +24,7 @@ FP checkout page supports different payment methods based on the investor's devi
   - Netbanking
   - UPI Collect
 
-## 3. Creating a Payment
+## Creating a Payment
 
 To initiate a payment, follow these steps:
 
@@ -36,7 +36,7 @@ To initiate a payment, follow these steps:
 If payment `method` parameter is passed as `NETBANKING`, the token-URL is redirected to the Investor's bank netbanking page. Else the Investor is redirected to the checkout page.
 
 
-## 5. Payment Method Specifics
+## Payment Method Specifics
 
 Here's how to use each payment method:
 
