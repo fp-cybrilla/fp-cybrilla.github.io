@@ -9,7 +9,6 @@ title: Signing up with BillDesk
     - FintectPrimitives IP addresses is whitelisted.
     - FintechPrimitives webhook URLs are whitelisted.
     - FintechPrimitives authentication certificates are shared with Billdesk.
-    - Child merchant IDs are generated for all the AMCs for V1 APIs.
     - Auto-refund flag is enabled.
 
 
