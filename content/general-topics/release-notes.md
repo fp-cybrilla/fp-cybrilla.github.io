@@ -21,18 +21,20 @@
 
 ### August 2023
 
-#### Week of 25thth August 2023
+#### Week of 25th August 2023
 
 * You can now add sub broker partners using the [partner object](https://fintechprimitives.com/docs/api/#partner-object).
 
 * We support ability to add sub broker partners for all type of orders. Refer partner attribute in order documents - [purchase](https://fintechprimitives.com/docs/api/#mf-purchase-object), [redemption](https://fintechprimitives.com/docs/api/#mf-redemption-object), [switch](https://fintechprimitives.com/docs/api/#mf-switch-object) and [plans](https://fintechprimitives.com/docs/api/#other-common-plan-attributes). 
 
 *  We now show audit information for a [KYC Request object](https://fintechprimitives.com/docs/api/#kyc-request-object). We have newly added below 5 attributes to the object which would give more clarity on the state changes that could happen on the object. 
-- `updated_at`
-- `esign_required_at`
-- `submitted_at`
-- `successful_at`
-- `rejected_at`
+```
+    updated_at
+    esign_required_at
+    submitted_at
+    successful_at
+    rejected_at
+```
 
 ### July 2023
 
