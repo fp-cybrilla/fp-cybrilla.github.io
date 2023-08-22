@@ -38,7 +38,7 @@ If payment `method` parameter is passed as `NETBANKING`, the token-URL is redire
 
 ## Payment Method Specifics
 
-Here's how to use each payment method:
+This section outlines the steps for each payment method in checkout page:
 
 ### Netbanking
 
@@ -55,10 +55,10 @@ Here's how to use each payment method:
 ### UPI Intent
 
 - For iOS:
-  - Choose "UPI Intent" and select the desired UPI app (PhonePe, Paytm, Google Pay).
+  - Opt for "UPI Intent" and choose your preferred UPI app (PhonePe, Paytm, Google Pay).
   - You'll be directed to the selected app to complete the payment.
 - For Android:
-  - Choose "UPI Intent" and you'll be presented with options from all UPI apps on your device.
+  - Choose "UPI Intent" and you'll be presented with list of all UPI apps on your device.
 
 
 For any further assistance, reach out to our support team.
