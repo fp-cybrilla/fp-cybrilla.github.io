@@ -12,12 +12,12 @@ This documentation will help you understand and utilize the functionalities of F
 
 The FP checkout flow offers diverse payment methods tailored to the investor's device:
 
-- **iOS mobile device**
+- **iOS mobile phone**
   - Netbanking
   - UPI Collect
   - UPI Intent via PhonePe, Paytm, Google Pay
 
-- **Android mobile device**
+- **Android mobile phone**
   - Netbanking
   - UPI Collect
   - UPI Intent via all UPI apps installed on the investor's mobile phone
@@ -58,7 +58,7 @@ This section outlines the steps for each payment method in the payment checkout 
 - iOS mobile phone
   - Select "UPI Intent" and choose a UPI app which is installed on the device. Investor can choose from the available list of apps i.e `PhonePe`, `Paytm`, and `GooglePay`
   - Investor will be redirected to the selected app to complete the payment
-- Android mobile device
+- Android mobile phone
   - Select "UPI Intent" to see a list of all UPI apps on installed the device
   - Upon selecting any app, investor will be redirected  to complete the payment
 
