@@ -6,14 +6,15 @@ title: Signing up with BillDesk
 **Action items**
 - Ensure the following:
     - You have received `Merchant ID` and `Client ID` for V2 APIs.
-    - FintectPrimitives IP addresses is whitelisted.
-    - FintechPrimitives webhook URLs are whitelisted.
-    - FintechPrimitives authentication certificates are shared with Billdesk.
+    - FP IP addresses is whitelisted.
+    - FP webhook URLs are whitelisted.
+    - FP authentication certificates are shared with Billdesk.
     - Auto-refund flag is enabled.
 
 
 
 #### BillDesk FAQs
+
 *What is the difference between V1 APIs and V2 APIs?*<br>
 V1 APIs from BillDesk let you use a cart for payments using Netbanking and UPI. However, they do not include eNACH mandate functionality. In contrast, V2 APIs support UPI intent features but do not provide cart functionality.
 
