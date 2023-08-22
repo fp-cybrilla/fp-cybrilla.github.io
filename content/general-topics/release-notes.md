@@ -10,6 +10,16 @@
 
 <br>
 
+### August 2023
+
+#### 22nd August 2023
+*  We now show audit information for a [KYC Request object](https://fintechprimitives.com/docs/api/#kyc-request-object). We have newly added below 5 attributes to the object which would give more clarity on the state changes that could happen on the object. 
+- `updated_at`
+- `esign_required_at`
+- `submitted_at`
+- `successful_at`
+- `rejected_at`
+
 ### July 2023
 
 #### Week of 17th July 2023
