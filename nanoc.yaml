@@ -159,4 +159,6 @@ sidebar:
           link: "/upcoming/beta/aadhaar-as-poa/"
         - title: Hosted workflows
           link: "/upcoming/beta/hosted-workflows/"
+        - title: Billdesk checkout page flow
+          link: "/upcoming/beta/billdesk-checkout-flow/"
 
