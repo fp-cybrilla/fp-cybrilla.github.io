@@ -68,10 +68,13 @@ deploy:
     - ./aws/install
     - echo "$AWS_DEFAULT_REGION"
     - aws s3 sync --delete output s3://prod-product-docs
-  only:
-    - master
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH'
+      changes:
+        - content/**/*
+        - nanoc.yaml
   tags:
-    - product-docs
+    - deploy
 
 notify:
   stage: notify
@@ -88,8 +91,11 @@ notify:
     - export DESCRIPTION="$(cat mr.json | jq -r '.[] | .description' | awk -F"😎" '{print $1}')"
     - export AUTHOR="$(cat mr.json | jq -r '.[] | .author | .name')"
     - export MERGER="$(cat mr.json | jq -r '.[] | .merged_by | .name')"
-    - 'curl -i -X POST -H "Content-Type: application/json" -d "{\"text\":\"[Merge Request: $TITLE](https://crypt.cybrilla.io/fintechprimitives/docs/-/merge_requests/$MERGE_REQUEST_ID). Created by $AUTHOR has been published by $MERGER.\n \`\`\`$DESCRIPTION\`\`\`\"}" $MATTERMOST_WEBHOOK'
+    - 'curl -i -X POST -H "Content-Type: application/json" -d "{\"text\":\"[Product Docs: $TITLE](https://crypt.cybrilla.io/fintechprimitives/docs/-/merge_requests/$MERGE_REQUEST_ID) (created by $AUTHOR and published by $MERGER)\n \`\`\`$DESCRIPTION\`\`\`\"}" $MATTERMOST_WEBHOOK'
   rules:
     - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH'
+      changes:
+        - content/**/*
+        - nanoc.yaml
   tags:
     - notify
