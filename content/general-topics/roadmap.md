@@ -1,7 +1,6 @@
 ### Identity
 
-- Enable partners (sub brokers / RMs) to invest
-- Enable onboarding of Sole proprietor, Corporates (pvt ltd), HUF, Minor
+- Support onboarding of Sole proprietor, Corporates (pvt ltd), HUF, Minor, partners (sub brokers / RMs)
 - Non financial requests - Update email / mobile for MF folios
 
 ### Orders
