@@ -1,38 +1,24 @@
 ### Identity
 
 - Enable partners (sub brokers / RMs) to invest
-- Enable onboarding of Sole proprietor
-- Enable onboarding of corporates (pvt ltd)
-- Enable onboarding of HUF
-- Enable onboarding of Minor
-- KYC status fetch for a partner
-- Non financial requests - Update email / address / nomination / bank / for a folio
-- Enable hierarachy mgmt for partners
-- Capture risk profile of the investor with the flexibility to customize questions and answers
+- Enable onboarding of Sole proprietor, Corporates (pvt ltd), HUF, Minor
+- Non financial requests - Update email / nomination / bank / for a folio
 
 ### Orders
 
-- Enable investments by sole proprietor
-- Support AoS holding pattern for investments
-- Enable investments by Partner users
-- Enable investments by Corporate investors (pvt. ltd)
-- Enable investments by HUF investors
-- Enable investments by Minors
-- Support Joint holding pattern
-- Instant redemption for 1 AMC
 - Support for offline folio migration
+- Enable investments by NRI, Sole proprietor, Corporate investors (pvt. ltd), HUF investors, Minors, Partners
+- Support Joint & AoS holding pattern for investments
+- Instant redemption for 1 AMC
 
 
 ### Payments
 
-- Support paper NACH via Razorpay
-- Support PPI wallet via Razorpay
-- Support UPI Autopay via Razorpay
+- Support additional payment methods like paper NACH, UPI Intent and UPI Autopay
 
 ### Data
 
 - Enable reports on FP Backoffice for operations, business & technology teams
-- Brokerage calculation
 
 
 <!--
