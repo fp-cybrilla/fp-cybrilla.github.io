@@ -2,7 +2,7 @@
 
 - Enable partners (sub brokers / RMs) to invest
 - Enable onboarding of Sole proprietor, Corporates (pvt ltd), HUF, Minor
-- Non financial requests - Update email / nomination / bank / for a folio
+- Non financial requests - Update email / mobile for MF folios
 
 ### Orders
 
