@@ -8,7 +8,6 @@
 - Support for offline folio migration
 - Enable investments by NRI, Sole proprietor, Corporate investors (pvt. ltd), HUF investors, Minors, Partners
 - Support Joint & AoS holding pattern for investments
-- Instant redemption for 1 AMC
 
 
 ### Payments
