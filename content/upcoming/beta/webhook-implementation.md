@@ -162,7 +162,7 @@ In order to avoid issues because of out-of-orders events & duplicacy, we recomme
 1. Store the events as soon as you receive in the client application
 2. Return a 2XX code as quickly as possible
 3. Process the events asynchronously over real-time
-4. Use the attribute "time" in the event object and make sure the event delivered is later than the FP object you have created or updated. Ex: If there is an mf_purchase object, and you are maintaining the time when it's updated. In this case, you can compare if the "time" sent from event object is later than the mf_purchase `created` or `last updated` time to decide whether to use the event notification.
+4. Use the attribute "time" in the event object and make sure the event delivered is later than the FP object you have created or updated. Consider an example that there is a mf_purchase object, and you are maintaining the time when it's updated. In this case, you can compare if the "time" sent from event object is later than the mf_purchase `created` or `last updated` time to decide whether to use the event notification.
 
 Above steps not only would help you scale but also keep a log of changes to events. 
 
