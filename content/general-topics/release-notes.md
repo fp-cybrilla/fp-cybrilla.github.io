@@ -22,11 +22,13 @@
 
 ### August 2023
 
+
 #### Week of 31st August 2023
 
 * Updation of failure codes in all one time order APIs. Refer object structures for [purchase](https://fintechprimitives.com/docs/api/#mf-purchase-object), [redemption](https://fintechprimitives.com/docs/api/#mf-redemption-object), [switch](https://fintechprimitives.com/docs/api/#mf-switch-object)
 
 * You can now add the consent for all transaction plans (purchase, redemption, switch) during the plan creation Or update the consent later using the update API. The plan will remain in `created` state if consent is not provided while creating the plan and will be activated only after the consent is updated for the plan. The installments will generated only if a plan moves to `active` state.
+
 
 #### Week of 25th August 2023
 
