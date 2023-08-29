@@ -35,6 +35,7 @@
     successful_at
     rejected_at
 ```
+* Updation of failure codes in all one time order APIs. Refer object structures for [purchase](https://fintechprimitives.com/docs/api/#mf-purchase-object), [redemption](https://fintechprimitives.com/docs/api/#mf-redemption-object), [switch](https://fintechprimitives.com/docs/api/#mf-switch-object)
 
 ### July 2023
 
