@@ -88,10 +88,13 @@ notify:
         "https://crypt.cybrilla.io/api/v4/projects/$CI_PROJECT_ID/repository/commits/$CI_COMMIT_SHORT_SHA/merge_requests" > mr.json'
     - export MERGE_REQUEST_ID="$(cat mr.json | jq -r '.[] | .iid')"
     - export TITLE="$(cat mr.json | jq -r '.[] | .title')"
-    - export DESCRIPTION="$(cat mr.json | jq -r '.[] | .description' | awk -F"😎" '{print $1}')"
+    - export DESCRIPTION="$(cat mr.json | jq -r '.[] | .description' | awk -F"😎" '{print $1}' | awk -F" *\*\*Browse the Preview" '{print $1}' | awk -F"\*\*Browse the Preview" '{print $1}')"
+    - if [[ -z "$DESCRIPTION" ]]; then export DESCRIPTION="$(cat mr.json | jq -r '.[] | .description' | awk -F"netlify.app\*\* *" '{print $2}')"; fi
+    - if [[ ! -z "$DESCRIPTION" ]]; then export DESCRIPTION="\n \`\`\`\n$DESCRIPTION\n\`\`\`"; fi
+    - if [[ -z "$DESCRIPTION" ]]; then export DESCRIPTION=""; fi
     - export AUTHOR="$(cat mr.json | jq -r '.[] | .author | .name')"
     - export MERGER="$(cat mr.json | jq -r '.[] | .merged_by | .name')"
-    - 'curl -i -X POST -H "Content-Type: application/json" -d "{\"text\":\"[Product Docs: $TITLE](https://crypt.cybrilla.io/fintechprimitives/docs/-/merge_requests/$MERGE_REQUEST_ID) (created by $AUTHOR and published by $MERGER)\n \`\`\`$DESCRIPTION\`\`\`\"}" $MATTERMOST_WEBHOOK'
+    - 'curl -i -X POST -H "Content-Type: application/json" -d "{\"text\":\"[Product Docs: $TITLE](https://crypt.cybrilla.io/fintechprimitives/docs/-/merge_requests/$MERGE_REQUEST_ID) (created by $AUTHOR and published by $MERGER)$DESCRIPTION\"}" $MATTERMOST_WEBHOOK;'
   rules:
     - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH'
       changes:
