@@ -359,6 +359,18 @@ As long as it can be ensured that the bank account details are valid and belongs
 
 ::EndAccordionItem
 
+::AccordionItem
+
+:::AccordionTitle Can a KYC application get rejected without esign and other details?
+
+::::AccordionContent
+
+The ONLY reason why a KYC application can get rejected is due to mismatch in bank account details even before submitting the KYC application. Bank account verification happens in parallel as it is a asynchronous activity. This verification is carried out by signzy.
+
+::::EndAccordionContent
+
+::EndAccordionItem
+
 :EndAccordion
 
 <br>
