@@ -3,6 +3,12 @@
 ## Upcoming Releases
 #### Available in Sandbox
 
+## Previous Releases (Live)
+
+### September 2023
+
+#### Week of 8th September 2023
+
 * We have standardised format of date of birth fields in [mf_folio object](https://fintechprimitives.com/docs/api/#mf-folio-object) to `YYYY-MM-DD`
 
 ```
@@ -15,7 +21,6 @@
       nominee3.dob
 ```
 
-## Previous Releases (Live)
 ### August 2023
 
 #### Week of 31st August 2023
@@ -25,6 +30,7 @@
 * You can now add the consent for all transaction plans (purchase, redemption, switch) during the plan creation Or update the consent later using the update API. The plan will remain in `created` state if consent is not provided while creating the plan and will be activated only after the consent is updated for the plan. The installments will generated only if a plan moves to `active` state.
 
 * Deprecated `distributor_id` attribute for all type of orders and plans is removed from APIs. A new attribute `partner` is added to these objects to support sub broker via whom a plan/ order is created. Refer document for [purchase](https://fintechprimitives.com/docs/api/#mf-purchase-object), [redemption](https://fintechprimitives.com/docs/api/#mf-redemption-object), [switch](https://fintechprimitives.com/docs/api/#mf-switch-object) and [plans](https://fintechprimitives.com/docs/api/#other-common-plan-attributes). 
+
 
 #### Week of 25th August 2023
 
