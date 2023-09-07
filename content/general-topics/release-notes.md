@@ -9,6 +9,10 @@
 
 #### Week of 8th September 2023
 
+* We have built a internal API through which you can sync status between FP KYC request object and sinzy if it is not sync. 
+
+* We have fixed the bug where nominee with allocation percentage as zero were passed in order feed file. 
+
 * We have standardised format of date of birth fields in [mf_folio object](https://fintechprimitives.com/docs/api/#mf-folio-object) to `YYYY-MM-DD`
 
 ```
