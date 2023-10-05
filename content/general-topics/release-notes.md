@@ -11,6 +11,10 @@
 
 * We have validation in place now nominee PAN and nominee guardian PAN cannot be same as investor PAN.
 
+* As per the [NPCI circular dated August 18, 2023](https://www.npci.org.in/PDF/nach/circular/2023-24/Circular-No-008-Mandate-duration-and-mandatory-final-collection-date.pdf), when creating a mandate in FP, please note that the `valid_to` parameter must not exceed a 30-year duration from the `valid_from` date."
+
+* when creating a mandate, `valid_to` parameter is now supported for Razorpay as payment provider.
+
 #### Week of 8th September 2023
 
 * We have built a internal API through which we can sync status between FP KYC request object and sinzy if it is not synced . 
