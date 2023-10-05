@@ -11,9 +11,9 @@
 
 * We have validation in place now nominee PAN and nominee guardian PAN cannot be same as investor PAN.
 
-* As per the [NPCI circular dated August 18, 2023](https://www.npci.org.in/PDF/nach/circular/2023-24/Circular-No-008-Mandate-duration-and-mandatory-final-collection-date.pdf), when creating a mandate in FP, please note that the `valid_to` parameter must not exceed a 30-year duration from the `valid_from` date.
+* In accordance with the [NPCI circular dated August 18, 2023](https://www.npci.org.in/PDF/nach/circular/2023-24/Circular-No-008-Mandate-duration-and-mandatory-final-collection-date.pdf), when creating a mandate in FP for any payment provider, please ensure that the `valid_to` parameter does not exceed a 30-year duration from the `valid_from` date.
 
-* when creating a mandate, `valid_to` parameter is now supported for Razorpay as payment provider.
+* When creating a mandate, you can now use the `valid_to` parameter for Razorpay as the payment provider. This parameter is already supported for BSE and Billdesk as payment providers.
 
 #### Week of 8th September 2023
 
