@@ -41,6 +41,16 @@ sidebar:
         - title: Required information
           link: "/identity/required-information/"
       # Subsection ends here
+      - subsection:
+        - heading: Investor profiles
+        - title: Overview
+          link: "/identity/profiles/"
+        - title: Create an investor profile (non individual)
+          link: "/identity/profiles/non-individual-investor/"
+        - title: Capturing beneficial owners
+          link: "/identity/profiles/beneficial-owners/"
+        - title: Capturing tax residencies
+          link: "/identity/profiles/tax-residencies/"
       - title: Perform Bank Account Verification
         link: "/identity/verification/perform-bank-account-verification/"
       - title: FAQs

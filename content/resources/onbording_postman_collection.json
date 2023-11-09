@@ -1,0 +1,1899 @@
+{
+	"info": {
+		"_postman_id": "d3f33154-87f4-49ac-a419-2a58adbfdcfe",
+		"name": "Onbording",
+		"description": "To use this collection one has to create few environment variables as below:\n\n1. base_url\n2. tenant\n3. tenant_client_id\n4. tenant_client_secret",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30531575",
+		"_collection_link": "https://cybrilla.postman.co/workspace/95d4aaa4-6801-4acc-8a33-32bbb36b2b73/collection/30531575-d3f33154-87f4-49ac-a419-2a58adbfdcfe?action=share&source=collection_link&creator=30531575"
+	},
+	"item": [
+		{
+			"name": "investor_profile_non_individuals",
+			"item": [
+				{
+					"name": "Create an Non Individual Investor Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"entity_name\": \"Cybrilla\",\n  \"type\": \"private_limited\",\n  \"residential_status\": \"resident\",\n  \"pan\": \"DWECS2837G\",\n  \"incorporation\": {\n    \"date\": \"2012-08-12\",\n    \"place\": \"Ahmedabad\",\n    \"country\": \"IN\",\n    \"business_started_from\": \"2010-10-01\"\n  },\n  \"services_provided\": \"foreign_exchange_or_money_changer_services\",\n  \"income_slab\": null,\n  \"specified_us_person_exemption\": \"broker\",\n  \"entity_classification\": \"fi\",\n  \"fi\": {\n    \"giin\": \"0L1BZ6.00000.SL.000\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/investor_profile_non_individuals",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"investor_profile_non_individuals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify an Non Individual Investor Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"invpni_c0f58ebd25884dcea7546f2caf4a8e35\",\n    \"networth\": {\n        \"amount\": 13987.5,\n        \"as_on\": \"2023-10-15\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/investor_profile_non_individuals",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"investor_profile_non_individuals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch an Non Individual Investor Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/investor_profile_non_individuals/invpni_c0f58ebd25884dcea7546f2caf4a8e35",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"investor_profile_non_individuals",
+								"invpni_c0f58ebd25884dcea7546f2caf4a8e35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all Non Individual Investor Profiles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/investor_profile_non_individuals?type=private_limited",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"investor_profile_non_individuals"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "private_limited"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "investor_profiles",
+			"item": [
+				{
+					"name": "Create an Investor Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"type\": \"individual\",\n  \"tax_status\": \"resident_individual\",\n  \"name\": \"Tony Soprano\",\n  \"date_of_birth\": \"2002-09-18\",\n  \"gender\": \"male\",\n  \"occupation\": \"business\",\n  \"pan\": \"DWEPS2837G\",\n  \"country_of_birth\": \"IN\",\n  \"place_of_birth\": \"IN\",\n  \"use_default_tax_residences\": \"false\",\n  \"first_tax_residency\": {\n    \"country\": \"IN\",\n    \"taxid_type\": \"pan\",\n    \"taxid_number\": \"DWEPS2837G\"\n  },\n  \"source_of_wealth\": \"salary\",\n  \"income_slab\": \"upto_1lakh\",\n  \"pep_details\": \"not_applicable\",\n  \"ip_address\": \"192.92.12.39\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/investor_profiles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"investor_profiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify an Investor Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"invp_2b38b26b336a4d56b9b4190e6e8fdd3d\",\n  \"income_slab\": \"above_1lakh_upto_5lakh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/investor_profiles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"investor_profiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch an Investor Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/investor_profiles/invp_2b38b26b336a4d56b9b4190e6e8fdd3d",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"investor_profiles",
+								"invp_2b38b26b336a4d56b9b4190e6e8fdd3d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all Investor Profiles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/investor_profiles?type=individual",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"investor_profiles"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "individual"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tax_residencies",
+			"item": [
+				{
+					"name": "Create a Tax Residency",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"profile\": \"invpni_9f76c41bdac7433a821ebf328677d69a\",\n    \"country\": \"US\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/tax_residencies",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"tax_residencies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify a Tax Residency",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"tax_5c8b186385e44ab2b5c852b71cf5f1c6\",\n\n       \"taxid\": \"pan\",\n    \"taxid_type\": \"DWEPS2837G\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/tax_residencies",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"tax_residencies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch a Tax Residency",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/tax_residencies/tax_e371267859794ef5b618d0dc452cd098",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"tax_residencies",
+								"tax_e371267859794ef5b618d0dc452cd098"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all Tax Residency",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/tax_residencies?profile=invpni_c0f58ebd25884dcea7546f2caf4a8e35",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"tax_residencies"
+							],
+							"query": [
+								{
+									"key": "profile",
+									"value": "invpni_c0f58ebd25884dcea7546f2caf4a8e35"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bank_account",
+			"item": [
+				{
+					"name": "Create a Bank Account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"profile\": \"invpni_9f76c41bdac7433a821ebf328677d69a\",\n  \"primary_account_holder_name\": \"Tony Soprano\",\n  \"account_number\": \"98123459204\",\n  \"type\": \"savings\",\n  \"ifsc_code\": \"HDFC0001330\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/bank_account",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"bank_account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify a Bank Account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"bac_707197c203a4400ea3fdb28654c8f037\",\n  \"cancelled_cheque\": \"file_98367e8972b43867a9c68a7c4605a31d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/bank_accounts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"bank_accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch a Bank Account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/bank_accounts/bac_707197c203a4400ea3fdb28654c8f037",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"bank_accounts",
+								"bac_707197c203a4400ea3fdb28654c8f037"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all Bank Accounts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/bank_accounts?profile=invpni_c0f58ebd25884dcea7546f2caf4a8e35",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"bank_accounts"
+							],
+							"query": [
+								{
+									"key": "profile",
+									"value": "invpni_c0f58ebd25884dcea7546f2caf4a8e35"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "addresses",
+			"item": [
+				{
+					"name": "Create an Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"profile\": \"invpni_9f76c41bdac7433a821ebf328677d69a\",\n  \"line1\": \"342, 2nd main, 1st crosss\",\n  \"line2\": \"JP Nagar 2nd phase\",\n  \"country\": \"IN\",\n  \"postal_code\": \"560078\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/addresses",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify an Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"addr_396d26400e424f7aa15c3447988de7a8\",\n  \"line3\": \"RK Colony\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/addresses",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch an Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/addresses/addr_396d26400e424f7aa15c3447988de7a8",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"addresses",
+								"addr_396d26400e424f7aa15c3447988de7a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all Addresses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/addresses?profile=invpni_c0f58ebd25884dcea7546f2caf4a8e35",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"addresses"
+							],
+							"query": [
+								{
+									"key": "profile",
+									"value": "invpni_c0f58ebd25884dcea7546f2caf4a8e35"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "phone_numbers",
+			"item": [
+				{
+					"name": "Create a Phone Number",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"profile\": \"invpni_9f76c41bdac7433a821ebf328677d69a\",\n  \"isd\": \"91\",\n  \"number\": \"9012893478\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/phone_numbers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"phone_numbers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify a Phone Number",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"phone_b730dbc131b44815927a68da623a27f2\",\n  \"belongs_to\": \"self\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/phone_numbers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"phone_numbers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch a Phone Number",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/phone_numbers/phone_b730dbc131b44815927a68da623a27f2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"phone_numbers",
+								"phone_b730dbc131b44815927a68da623a27f2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all Phone Numbers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/phone_numbers?profile=invpni_9f76c41bdac7433a821ebf328677d69a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"phone_numbers"
+							],
+							"query": [
+								{
+									"key": "profile",
+									"value": "invpni_9f76c41bdac7433a821ebf328677d69a"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "email_addresses",
+			"item": [
+				{
+					"name": "Create an Email Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"profile\": \"invpni_9f76c41bdac7433a821ebf328677d69a\",\n  \"email\": \"tony.soprano@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/email_addresses",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"email_addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify an Email Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"email_ef176a21d96e4b459bad29c99be594d7\",\n  \"belongs_to\": \"self\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/email_addresses",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"email_addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch an Email Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/email_addresses/email_ef176a21d96e4b459bad29c99be594d7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"email_addresses",
+								"email_ef176a21d96e4b459bad29c99be594d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all Email Addresses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/email_addresses?profile=invpni_9f76c41bdac7433a821ebf328677d69a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"email_addresses"
+							],
+							"query": [
+								{
+									"key": "profile",
+									"value": "invpni_9f76c41bdac7433a821ebf328677d69a"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "beneficial_owners",
+			"item": [
+				{
+					"name": "Create a Beneficial Owner",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"profile\": \"invpni_c0f58ebd25884dcea7546f2caf4a8e35\",\n    \"beneficial_owner_profile\": \"invp_9abd706565144b83947f4b498bc95e98\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/beneficial_owners",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"beneficial_owners"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify a Beneficial Owner",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"bo_223546d04f7c414eac100368edbc716b\",\n    \"beneficial_interest_percentage\": 12.5000,\n    \"beneficial_interest_means\": \"ownership\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/beneficial_owners",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"beneficial_owners"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch a Beneficial Owner",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/beneficial_owners/bo_223546d04f7c414eac100368edbc716b",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"beneficial_owners",
+								"bo_223546d04f7c414eac100368edbc716b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all Beneficial Owner",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/beneficial_owners?profile=invpni_c0f58ebd25884dcea7546f2caf4a8e35",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"beneficial_owners"
+							],
+							"query": [
+								{
+									"key": "profile",
+									"value": "invpni_c0f58ebd25884dcea7546f2caf4a8e35"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sole_proprietorship",
+			"item": [
+				{
+					"name": "Create a Sole Proprietorship",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"profile\": \"invp_f7856c2963274edf86edab3642891e70\",\n  \"name\": \"Test PVT Ltd\",\n  \"services_provided\": \"other_services\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/sole_proprietorship",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"sole_proprietorship"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify a Sole Proprietorship",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"sopr_9ac4e7081ec34766ae46fd8e553eb347\",\n  \"networth\": {\n    \"amount\": 1234,\n    \"as_on\": \"2022-12-12\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/sole_proprietorship",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"sole_proprietorship"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch a Sole Proprietorship",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/sole_proprietorship/sopr_9ac4e7081ec34766ae46fd8e553eb347",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"sole_proprietorship",
+								"sopr_9ac4e7081ec34766ae46fd8e553eb347"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all Sole Proprietorship",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/sole_proprietorship?profile=invp_f7856c2963274edf86edab3642891e70",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"sole_proprietorship"
+							],
+							"query": [
+								{
+									"key": "profile",
+									"value": "invp_f7856c2963274edf86edab3642891e70"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "related_parties",
+			"item": [
+				{
+					"name": "Create a Related Party",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"profile\": \"invp_f7856c2963274edf86edab3642891e70\",\n  \"name\": \"James Soprano\",\n  \"date_of_birth\": \"1972-02-29\",\n  \"relationship\": \"father\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/related_parties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"related_parties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify a Related Party",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"relp_f1fc14a92c2b4fb88856ca65282b3dd7\",\n  \"pan\": \"ASFPJ2398R\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/related_parties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"related_parties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch a Related Party",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/related_parties/relp_f1fc14a92c2b4fb88856ca65282b3dd7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"related_parties",
+								"relp_f1fc14a92c2b4fb88856ca65282b3dd7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all Related Parties",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/related_parties?profile=invp_f7856c2963274edf86edab3642891e70",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"related_parties"
+							],
+							"query": [
+								{
+									"key": "profile",
+									"value": "invp_f7856c2963274edf86edab3642891e70"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "demat_accounts",
+			"item": [
+				{
+					"name": "Create a Demat Account Object",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"profile\": \"invpni_c0f58ebd25884dcea7546f2caf4a8e35\",\n  \"dp_id\": \"12081800\",\n  \"client_id\": \"04571343\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/demat_accounts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"demat_accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch a Demat Account Object",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v2/demat_accounts/dac_74ed8cb080b84fe4bddb094376edb2ff",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"demat_accounts",
+								"dac_74ed8cb080b84fe4bddb094376edb2ff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch a Demat Account Object by its Investor Profile ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tenant_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-tenant-id",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v2/demat_accounts?profile=invpni_c0f58ebd25884dcea7546f2caf4a8e35",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v2",
+								"demat_accounts"
+							],
+							"query": [
+								{
+									"key": "profile",
+									"value": "invpni_c0f58ebd25884dcea7546f2caf4a8e35"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Generate Tenant Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"tenant_token\", pm.response.json().access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "{{tenant_client_id}}",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "{{tenant_client_secret}}",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "default openid",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/v2/auth/{{tenant}}/token",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"v2",
+						"auth",
+						"{{tenant}}",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
