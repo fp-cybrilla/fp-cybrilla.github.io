@@ -29,7 +29,7 @@ The FP payment API provides the following capabilities:
 To sign up with the respective payment gateways, please refer to the following:
 
 1. [Going Live with Razorpay](/going-live/signing-up-with-razorpay/)
-2. [Going Live with Razorpay](/going-live/signing-up-with-billdesk/)
+2. [Going Live with Billdesk](/going-live/signing-up-with-billdesk/)
 
 For any further assistance or queries, please feel free to reach out to us at [fpsupport@cybrilla.com](mailto:fpsupport@cybrilla.com).
 
