@@ -8,7 +8,19 @@ title: FATCA & CRS
 Mutual Funds collect certain information from the investors to identify the folios held by foreign tax residents and report them to Income Tax Department (ITD). The ITD then shares this information to the investor's country of tax residence, so they can ascertain that the investors are declaring their income and paying the right amount of tax.
 
 #### `tax_residency`
-Capture details about where an entity is resident for tax purposes. Check [this guide for details](/identity/profiles/tax-residencies/)
+
+Capture information about countries / jurisdictions other than India, where the investor is liable to pay taxes.
+
+To add a tax residency, call [FPDocs, create tax residency api](https://fintechprimitives.com/docs/api/#create-a-tax-residency) with the following json
+```json
+{
+    "profile": "invpni_9abd706565144b839324df4b498bc95e98",
+    "country": "us",
+    "taxid": "abc123",
+    "taxid_type": "irs_number"
+}
+```
+In the same way, you can add as many tax residencies where the investor is liable to pay taxes
 
 ---
 

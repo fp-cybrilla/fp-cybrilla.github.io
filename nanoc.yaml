@@ -45,16 +45,24 @@ sidebar:
         - heading: Investor profiles
         - title: Overview
           link: "/identity/profiles/"
+        # - title: Create an investor profile (individual)
+        #   link: "/identity/profiles/investor-profile"
         - title: Create an investor profile (non individual)
           link: "/identity/profiles/non-individual-investor/"
+        - title: Capturing contact details
+          link: "/identity/profiles/contact-details/"
+        - title: Capturing bank accounts
+          link: "/identity/profiles/bank-accounts/"
+        - title: Capturing demat accounts
+          link: "/identity/profiles/demat-accounts/"
         - title: Capturing beneficial owners
           link: "/identity/profiles/beneficial-owners/"
-        - title: Capturing tax residencies
-          link: "/identity/profiles/tax-residencies/"
         - title: Capturing fatca, crs details
           link: "/identity/profiles/fatca-crs/"
-      - title: Perform Bank Account Verification
-        link: "/identity/verification/perform-bank-account-verification/"
+      - subsection:
+        - heading: Verifications
+        - title: Verify bank account
+          link: "/identity/verification/perform-bank-account-verification/"
       - title: FAQs
         link: "/identity/FAQs/"
   - dropdown_menu_title: MF Orders

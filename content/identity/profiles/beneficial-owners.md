@@ -4,6 +4,9 @@ title: Beneficial Owners
 ## Beneficial Owners
 #### Learn everything about beneficial owners
 
+>Works with
+- Non Individual Investor Profiles
+
 `beneficial_owner` object captures the information of ultimate beneficial owners of an entity.
 
 #### Means
