@@ -21,22 +21,15 @@ To create an eNACH mandate, use the [Create eNACH mandate API](https://fintechpr
 
 The maximum limit determines the highest amount that can be debited from the investor's bank account. This limit is typically set per transaction or per day, depending on the capabilities of the payment gateway:
 
-  
-
-| Payment Gateway | Maximum Limit | Remarks |
-|---|---|---|
-| Razorpay | 10,00,000 | Limit is per transaction |
-| BillDesk | 10,00,000 | Limit is per day |
-| BSE | NA | Limit is per day |
-
+| Payment Gateway | Maximum Limit | Remarks                    |
+|------------------|---------------|----------------------------|
+| Razorpay         |      Rs. 1 Cr | Limit is per transaction   |
+| BillDesk         |      Rs. 1 Cr | Limit is per day           |
+| BSE              |      Rs. 1 Cr | Limit is per day           |
   
 Setting an appropriate maximum limit for the mandate is crucial as it directly impacts the number of [FP Purchase plans](https://fintechprimitives.com/docs/api/#mf-purchase-plans) that can be processed in a given day and the maximum amount that can be debited for each instalment. 
 
-  
-
 #### Step 2: Authorize an eNACH Mandate:
-
-  
 
 Once the eNACH mandate is created with FP, you can proceed with authorizing the mandate to enable payment processing. To accomplish this, you need to use the [Authorize eNACH mandate API](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach), providing the Mandate ID received in the response from the [Create eNACH mandate API](https://fintechprimitives.com/docs/api/#create-a-mandate-enach) step. 
 
