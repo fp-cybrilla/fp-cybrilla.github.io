@@ -150,6 +150,10 @@ sidebar:
         link: "/pages/workflows/investor-reporting/"
       - title: Usage
         link: "/pages/workflows/investor-reporting-usage/"
+  - dropdown_menu_title: Data
+    dropdown_menu_items:
+      - title: Overview
+        link: "/data/overview/"
   - dropdown_menu_title: General topics
     dropdown_menu_items: 
       - title: Automated communications with investors
