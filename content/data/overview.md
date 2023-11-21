@@ -11,26 +11,6 @@ With FP, you can access all your transactional data in the following ways
 1. Query your data on FP Dashboard
 2. Get your data pushed into your data warehouse
 
-#### Dataset
-The following tables are available
-
-**Reference Data**  
-`amcs`, `fund_details`, `holdings`, `data_sync_info`  
-
-**Investor Related**  
-`addresses`,  `bank_accounts`, `investor_contact_details`, `investor_profile`, `kyc_request`  
-
-**Payments Related**  
-`mandate`  
-
-**Orders Related**  
-`mf_folio`, `mf_investment_account`, `mf_purchase`, `mf_redemption`, `mf_switch`, `mf_purchase_plan`, `mf_redemption_plan`  
-
-The table `data_sync_info` contains metadata about when the data was synced. You can use that information in your queries.
-
-#### Data Availability
-The data for a given day (all activity from 12am to 12midnight) is available to query, by 6am the following day.
-
 #### Querying
 
 Using the query editor,
@@ -53,3 +33,7 @@ and next_installment_date is not null
 and next_installment_date >= current_date
 and next_installment_date <= (current_date + interval '2' day)
 ```
+
+#### Get data in your data lake
+
+FP makes your data available in your data lake setup in Apache Iceberg format. You can connect and query from any query engine that support Iceberg format like Amazon Athena, Google BigQuery etc.

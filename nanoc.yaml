@@ -154,6 +154,8 @@ sidebar:
     dropdown_menu_items:
       - title: Overview
         link: "/data/overview/"
+      - title: Schema
+        link: "/data/data-schema/"
   - dropdown_menu_title: General topics
     dropdown_menu_items: 
       - title: Automated communications with investors
