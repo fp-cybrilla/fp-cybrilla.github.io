@@ -33,7 +33,7 @@ title: Introduction
         Payments
       </div>
       <div class="card-body text-size-14 dark:text-primary-DN110">
-        Collect payments through Netbanking, UPI, NACH from your investors
+        Collect payments through Netbanking, UPI, UPI Autopay, NACH from your investors
       </div>
     </a>
   </div>

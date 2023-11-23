@@ -120,7 +120,7 @@ Purchase plans can be created using a pending eNACH mandate. The installments of
 
 ::::AccordionContent
 
-Currently, FP allows UPI payments only for one-time purchases. 
+Currently, FP allows UPI Autopay for Razorpay as payment provider only.
 
 ::::EndAccordionContent
 

@@ -8,8 +8,8 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
 #### Netbanking/UPI Payment:
 
 1. Ensure that payment SDK options are enabled in your FP tenant. Please contact FP support for enabling of Payment SDK options. 
-2. For each mutual fund schemes that the Investor wants to purchase, create the MF purchase order in FP by using the [MF purchase API](https://fintechprimitives.com/docs/api/#create-a-mf-purchase).
-3. Create payment for one or more MF purchase orders created in step 2 by using [Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment).
+2. For each mutual fund schemes that the Investor wants to purchase, create the MF purchase order in FP by using the [FPDocs, MF purchase](https://fintechprimitives.com/docs/api/#create-a-mf-purchase).
+3. Create payment for one or more MF purchase orders created in step 2 by using [FPDocs, Create Payment](https://fintechprimitives.com/docs/api/#create-a-payment).
   
     *Payment creation API Request:*
 
@@ -57,7 +57,7 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
 
 4. Parameters received in the above response as `'sdk_options' -> 'razorpay'` must be passed on while integrating Razorpay SDK in any of the platforms such as web, Andoid or IOS.
 
-    For example, while integrating with web app as detailed in [Razorpay documentation](https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/build-integration/#code-to-add-pay-button), SDK parameters must be passed from the response received from the [FP Create Payment API](https://fintechprimitives.com/docs/api/#create-a-payment) as detailed in the comments in the code below
+    For example, while integrating with web app as detailed in [Razorpay documentation](https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/build-integration/#code-to-add-pay-button), SDK parameters must be passed from the response received from the [FPDocs, FP Create Payment](https://fintechprimitives.com/docs/api/#create-a-payment) as detailed in the comments in the code below
 
     > Note: Example below for netbanking checkout with callback URL is for reference. Netbanking checkout with handler functions can also be implemented as given in Razorpay documentation.
 
@@ -98,12 +98,12 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
 
     > Note: Please pass the 'retry' parameter as 'false'.
 
-#### E-Mandate Authorisation SDK options:
+#### E-Mandate/UPI Autopay Authorisation SDK options:
 
-Similar steps must be followed for E-Mandate authorisation page customisation using Razorpay SDK. Please refer to [Razorpay documentation for E-Mandate authorisation] (https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction)
+Similar steps must be followed for E-Mandate/UPI Autopay authorisation page customisation using Razorpay SDK. Please refer to [Razorpay documentation for E-Mandate authorisation] (https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction) and [Razorpay documentation for UPI Autopay authorisation](https://razorpay.com/docs/api/payments/recurring-payments/upi-tpv/create-authorization-transaction/#113-create-an-authorization-payment)
 
-1. Create a mandate in FP by using [Create mandate API](https://fintechprimitives.com/docs/api/#create-a-mandate-enach).
-2. Create the authorisation transaction for the mandate generated in step 1 using [Authorise Mandate API](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach) by passing the mandate ID.
+1. Create a mandate in FP by using [FPDocs, Create mandate](https://fintechprimitives.com/docs/api/#create-a-mandate-enach).
+2. Create the authorisation transaction for the mandate generated in step 1 using [FPDocs, Authorise Mandate](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach) by passing the mandate ID.
 
     *Mandate auth Request:*
 
@@ -167,7 +167,7 @@ Similar steps must be followed for E-Mandate authorisation page customisation us
             "recurring": "1",    //Mandatory field and its value must be '1'.
             "name": "Your company name", //your business name
             "image": "https://example.com/your_logo",  //Your business logo
-            "prefill": {
+            "prefill": {    //Prefill parameters are not required for UPI Autopay
               "name": "FP_MandateAuth_response.sdk_options.razorpay.bank_account_holder_name", //your customer's name
               "email": "FP_MandateAuth_response.sdk_options.razorpay.email",  //your customer's email
               "contact": "FP_MandateAuth_response.sdk_options.razorpay.contact"   //your customer's contact

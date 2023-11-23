@@ -127,11 +127,11 @@ sidebar:
     dropdown_menu_items: 
       - title: Overview
         link: "/payments/overview/"
-      - title: Setting up eNACH mandate
+      - title: Setting up eNACH/UPI-Autopay mandate
         link: "/payments/managing-eNACH/"
       - title: Collect payments via Netbanking/UPI
         link: "/payments/payments-via-Netbanking-UPI/"
-      - title: Collect payments via eNACH mandate
+      - title: Collect payments via eNACH/UPI-Autopay mandate
         link: "/payments/payment-via-eNACH/"
       
       # Subsection starts here with heading and list of links

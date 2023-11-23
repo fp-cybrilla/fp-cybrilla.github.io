@@ -1,19 +1,19 @@
 ---
 title: Collect payment via eNACH
 ---
-## Recurring and One-Time Payments with eNACH Mandate
+## Recurring and One-Time Payments with eNACH and UPI Autopay Mandates
 
 
-Once a mandate is set up for an investor, you can collect recurring payments for [FP Purchase Plans](https://fintechprimitives.com/docs/api/#mf-purchase-plans) without any intervention from the Investor by raising a payment  request.
+Once a mandate is set up for an investor, you can collect recurring payments for [FP Purchase Plans](https://fintechprimitives.com/docs/api/#mf-purchase-plans) without any intervention from the Investor by raising a payment request.
 
-eNACH mandate also provide a convenient option for collecting one-time payments from investors as it eliminates the need for investor intervention, allowing for seamless processing.
+Mandate also provide a convenient option for collecting one-time payments from investors as it eliminates the need for investor intervention, allowing for seamless processing.
 
-> If you are using FP payment processing, FP manages the payment debits via eNACH mandate for recurring purchases of [FP Purchase Plans](https://fintechprimitives.com/docs/api/#mf-purchase-plans).
+> If you are using FP payment processing, FP manages the payment debits via mandate for recurring purchases of [FP Purchase Plans](https://fintechprimitives.com/docs/api/#mf-purchase-plans).
 
 ### Create Payment Requests:
 
-To initiate a payment request against a mandate, utilize the [Create NACH payment API](https://fintechprimitives.com/docs/api/#create-a-nach-payment).
-This API requires the approved mandate ID of the investor and the AMC order IDs created using the [Create MF Purchase API](https://fintechprimitives.com/docs/api/#create-a-mf-purchase).
+To initiate a payment request against a mandate, utilize the [FPDocs, Create an eNACH or UPI Autopay payment](https://fintechprimitives.com/docs/api/#create-a-nach-payment).
+This API requires the approved mandate ID of the investor and the AMC order IDs created using the [FPDocs, Create MF Purchase](https://fintechprimitives.com/docs/api/#create-a-mf-purchase).
 
 ```json
 {
