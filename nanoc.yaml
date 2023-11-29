@@ -75,6 +75,12 @@ sidebar:
         link: "/mf-transactions/orders-introduction/"
       - title: Recurring Orders
         link: "/mf-transactions/transaction-plans/"
+
+      - subsection:
+        - heading: "Accounts"
+        - title: Required Information
+          link: "/mf-transactions/accounts/required-information/"
+      
       # Subsection starts here with heading and list of links
       - subsection:
         - heading: "Lump Sum Orders"
