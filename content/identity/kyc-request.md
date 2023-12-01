@@ -15,10 +15,8 @@ Our API complies with the [newwindow,guidelines by SEBI on digital kyc](https://
 When you generate the KYC Request object, a 6 digit number is generated and be part of the object structure. You should display that number to your investor and let him speak that number out loud in the video. This is used to verify that the video is not a pre-recorded one.
 
 2. Bank a/c details  
-You need to provide your investor's bank account details: account number, ifsc code and scanned copy of signed cancelled cheque to submit a KYC Request. As part of the verification process:  
-a) the details provided are matched against the cancelled cheque copy and  
-b) a random amount is deposited in that bank account to verify the validity and the owner of the account  
-You can collect a single bank account from your investor as part of your onboarding process and use it for both the KYC Request and investor apis.
+- You need to provide your investor's bank account details: account number, ifsc code and account holder's name to submit a KYC Request. As part of the verification process, a random amount is deposited in that bank account to verify the validity and the owner of the account. 
+- You can collect a single bank account from your investor as part of your onboarding process and use it for both the KYC Request and investor apis.
 
 3. Geo location  
 You need to provide the latitude and longitude of the location of your investor from where he is performing his kyc

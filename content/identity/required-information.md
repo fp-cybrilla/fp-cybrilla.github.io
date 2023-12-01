@@ -24,7 +24,7 @@ The following information about the investor needs to be collected for a success
 15. Signature scan ( `signature` )
 16. Photo ( `photo` )
 17. Verification video ( `ipv_video` )
-18. Bank account details with proof ( `bank_account` )
+18. Bank account details ( `bank_account` )
 19. Geo location ( `geolocation` )
 20. Fatca/CRS self declaration
 21. Electronic signature on the application form
@@ -43,7 +43,7 @@ The following address proofs are accepted currently. We will include more in the
 
 ### Accepted bank account proofs
 
-The following bank account proofs are accepted currently.
+The following bank account proofs are accepted currently. This is an optional field.
 
 |Bank account proof|Notes|
 |------------------|-----|
