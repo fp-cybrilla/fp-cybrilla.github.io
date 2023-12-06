@@ -37,3 +37,13 @@ and next_installment_date <= (current_date + interval '2' day)
 #### Get data in your data lake
 
 FP makes your data available in your data lake setup in Apache Iceberg format. You can connect and query from any query engine that support Iceberg format like Amazon Athena, Google BigQuery etc.
+
+
+##### GCP Stack
+
+FP needs access to the following to send data to your data lake
+
+1. Read & Write access to a GCP Cloud Storage bucket (FP will periodically push data into this bucket)
+2. Read & Write access to a GCP BigQuery dataset (FP will create BigLake tables in this dataset)
+
+You can query the data using GoogleSQL syntax. For more information, read https://cloud.google.com/bigquery/docs/query-iceberg-data
