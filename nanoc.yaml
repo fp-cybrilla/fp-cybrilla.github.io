@@ -187,8 +187,6 @@ sidebar:
       # Subsection starts here with heading and list of links
       - subsection:
         - heading: "Beta programs"
-        - title: Using Aadhaar as POA in KYC submission workflows
-          link: "/upcoming/beta/aadhaar-as-poa/"
         - title: Webhook implementation for FP events
           link: "/upcoming/beta/webhook-implementation/"
         - title: Hosted workflows
