@@ -193,4 +193,6 @@ sidebar:
           link: "/upcoming/beta/hosted-workflows/"
         - title: Payment checkout flow
           link: "/upcoming/beta/payment-checkout-flow/"
+        - title: Order failure codes
+          link: "/mf-transactions/failure-codes/"
 
