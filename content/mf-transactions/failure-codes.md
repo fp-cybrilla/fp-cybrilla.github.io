@@ -47,7 +47,8 @@ The following are the failure codes that might occur while processing an order a
 
 | Failure Code   | Failure reason   | Order type    |
 | --- | --- | --- |
-| `order_expiry`|  Order expired as payment not complete| purchase |
+| `order_expiry`|  Purchase order expired as payment not complete| Purchase |
+| `order_expiry`|  Order expired as it is not confirmed by investor| Redemption, Switch |
 | `payment_failure`|  Payment for the order in FP is either not created or failed | purchase |
 | `payment_not_recieved`|  Payment details for this order has not been recieved by AMC. Check refund status  with the payment provider if amount debited.| purchase |
 
