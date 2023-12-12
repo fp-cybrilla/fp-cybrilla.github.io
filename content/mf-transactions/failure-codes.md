@@ -48,7 +48,6 @@ The following are the failure codes that might occur while processing an order a
 | Failure Code   | Failure reason   | Order type    |
 | --- | --- | --- |
 | `order_expiry`|  Purchase order expired as payment not complete| Purchase |
-| `order_expiry`|  Order expired as it is not confirmed by investor| Redemption, Switch |
 | `payment_failure`|  Payment for the order in FP is either not created or failed | purchase |
 | `payment_not_recieved`|  Payment details for this order has not been recieved by AMC. Check refund status  with the payment provider if amount debited.| purchase |
 
@@ -71,4 +70,5 @@ The following are the failure codes that might occur while processing an order a
 | `license_code_invalid` |Your license code with the RTA is invalid. Also verify that the order's scheme `plan_type` is valid for your license code| All |
 | `rta_amc_inactive` |AMC under your RTA account is not activated. Activate AMC in your RTA account. Additionally check e-log status in CAMS RTA. | All |
 | `cancelled_by_investor` | Order was cancelled from processing upon a request from investor | All |
+| `order_expiry`|  Order expired as it is not confirmed by investor| Redemption, Switch |
 
