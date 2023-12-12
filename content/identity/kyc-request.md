@@ -89,7 +89,7 @@ Once the Identity document is successfully fetched, you need to use [Update a KY
 ...
 ```
 <br>
-To check the API specifications of the Identity Document service, click [here](https://fintechprimitives.com/api/#identity-documents).
+To check the API specifications of the Identity Document service, click [here](https://fintechprimitives.com/docs/api/#identity-documents).
 
 Once all the required fields are collected against a particular KYC Request object, the status of the same would change from `pending` to `esign_required`.
 
