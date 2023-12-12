@@ -2,13 +2,13 @@
 title: Order failure codes
 ---
 
-### Failure codes in processing orders
+### Order failure codes
 
 The following are the failure codes that might occur while processing an order after it is accepted in FP. These failure codes are also applicable to the installment orders of all type of plans. You can use the `failure code` to design investor communication as needed.
 
 > We might add more failure codes in future to maintain a granular list of the possible failures.
 
-#### Failure codes related to investor profile
+#### Order failure codes related to investor profile
 
 | Failure Code   | Failure reason   | Order type    |
 | --- | --- | --- |
@@ -23,7 +23,7 @@ The following are the failure codes that might occur while processing an order a
 | `nominee_name_invalid`  | Investor and nominee name cannot be same | New purchase |
 
 
-#### Failure codes related to investor KYC
+#### Order failure codes related to investor KYC
 
 | Failure Code   | Failure reason   | Order type    |
 | --- | --- | --- |
@@ -33,7 +33,7 @@ The following are the failure codes that might occur while processing an order a
 | `kyc_name_mismatch`| Name provided for folio creation does not match with the information submitted for KYC verification | New purchase |
  
 
-#### Failure codes related to fund schemes
+#### Order failure codes related to fund schemes
 
 | Failure Code   | Failure reason   | Order type    |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ The following are the failure codes that might occur while processing an order a
 | `country_not_allowed`|  Country of investor is not allowed for investments in the scheme| New purchase |
 
 
-#### Failure codes related to payments
+#### Order failure codes related to payments
 
 | Failure Code   | Failure reason   | Order type    |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ The following are the failure codes that might occur while processing an order a
 | `payment_not_recieved`|  Payment details for this order has not been recieved by AMC. Check refund status  with the payment provider if amount debited.| purchase |
 
 
-#### Failure codes related to order processing
+#### Other failure codes related to order processing
 
 | Failure Code   | Failure reason   | Order type    |
 | --- | --- | --- |
