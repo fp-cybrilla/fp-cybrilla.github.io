@@ -12,13 +12,13 @@ The following are the failure codes that might occur while processing an order a
 
 | Failure Code   | Failure reason   | Order type    |
 | --- | --- | --- |
-| `pan_invalid`  |  Unable to verify PAN of investor. Provide correct PAN. | All |
+| `pan_invalid`  |  Unable to verify PAN of investor. Provide correct PAN. | New purchase |
 | `pan_name_mismatch`  | Investor name provided for folio creation is not as per investor's PAN | New purchase |
 | `pan_adhaar_not_mapped`  | Aadhar not linked with the PAN of the investor | All |
 | `adhaar_contact_mismatch`  | Email or mobile provided for folio creation is not as per investor's aadhar. For aadhar based KYC investors provide email and phone as per aadhar during folio creation  | New purchase |
 | `bank_invalid`  |  Unable to verify bank account details of investor. Check investor name in bank account | Purchase |
-| `tax_status_bank_mismatch`  | Investor's tax status does not match with bank account type | New purchase |
-| `contact_verification_failed`  | Email or mobile number provided in the folio details could not be verified. Provide a valid email or mobile number. | New purchase |
+| `tax_status_bank_mismatch`  | Investor's tax status does not match with bank account type | Purchase |
+| `contact_verification_failed`  | Email or mobile number provided in the folio details could not be verified. Provide a valid email or mobile number. | Purchase |
 | `nominee_age_invalid`  | Age of the nominee should be less than 100 and more than 0 | New purchase |
 | `nominee_name_invalid`  | Investor and nominee name cannot be same | New purchase |
 
@@ -39,7 +39,6 @@ The following are the failure codes that might occur while processing an order a
 | --- | --- | --- |
 | `amount_invalid`| Order does not meet the min\max investment amount or multiples as per scheme master | All |
 | `scheme_invalid`| Order is not supported in the scheme. Check scheme master for order types supported.| All |
-| `no_of_installments_invalid`| Check the minimum installment number as per scheme master| All |
 | `minor_only_investment_allowed`| Only minor investor purchases are allowed in this scheme	| New purchase |
 | `country_not_allowed`|  Country of investor is not allowed for investments in the scheme| New purchase |
 
