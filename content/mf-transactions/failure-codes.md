@@ -4,7 +4,7 @@ title: Order failure codes
 
 ### Order failure codes
 
-The following are the failure codes that might occur while processing an order after it is accepted in FP. These failure codes are also applicable to the installment orders of all type of plans. You can use the `failure code` to design investor communication as needed.
+The following are the failure codes that might occur while processing an order with the AMC after it is accepted in FP. These failure codes are also applicable to the installment orders of all type of plans. You can use the `failure code` to design investor communication as needed.
 
 > We might add more failure codes in future to maintain a granular list of the possible failures.
 
@@ -68,7 +68,7 @@ The following are the failure codes that might occur while processing an order a
 | `folio_balance_marked_lien`| 	Balance cannot be redeemed as it is marked lien | Redemption, Switch  |
 | `folio_closed`| Orders in a consolidated folio are not allowed| Purchase |
 | `license_code_invalid` |Your license code with the RTA is invalid. Also verify that the order's scheme `plan_type` is valid for your license code| All |
-| `rta_amc_inactive` |AMC under your RTA account is not activated. Activate AMC in your RTA account. Additionally check e-log status in CAMS RTA. | All |
+| `rta_amc_inactive` |AMC under your RTA account is not activated. Activate AMC in your RTA account. Additionally check e-log status if order belongs on AMC via CAMS RTA. | All |
 | `cancelled_by_investor` | Order was cancelled from processing upon a request from investor | All |
 | `order_expiry`|  Order expired as it is not confirmed by investor| Redemption, Switch |
 
