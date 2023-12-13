@@ -46,7 +46,7 @@ The following are the failure codes that might occur while processing an order w
 
 #### Order failure codes related to payments
 
-| Failure Code   | Failure reason   | Order type    |
+| Failure Code   | Description   | Order type    |
 | --- | --- | --- |
 | `order_expiry`|  Purchase order expired as payment not complete| Purchase |
 | `payment_failure`|  Payment for the order in FP is either not created or failed | purchase |
