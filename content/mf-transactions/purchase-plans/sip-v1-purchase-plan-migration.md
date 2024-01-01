@@ -3,6 +3,24 @@ title: Migrate to MF purchase plans
 ---
 ## Migrate from V1 SIPs to V2 Purchase plans
 
+#### Plan attribute changes
+ Refer to [MF purchase plans](https://fintechprimitives.com/docs/api/#purchase-plan-object-structure) for all attributes
+
+|V1 Attribute|V2 Attribute|
+|-----|-----|
+|isin|scheme|
+|amount|amount|
+|start_day|installment_day|
+|frequency|frequency|
+|installments|number_of_installments|
+|folio_number|folio_number|
+|mandate_id|payment_method & payment_source|
+|source_ref_id|source_ref_id|
+|user_ip|user_ip|
+|server_ip|server_ip|
+|order_gateway|order_gateway|
+|consent hash|consent hash|
+
 #### Migration procedure
 
 1. Map a V1 SIP with respective V2 MF purchase plan ID
