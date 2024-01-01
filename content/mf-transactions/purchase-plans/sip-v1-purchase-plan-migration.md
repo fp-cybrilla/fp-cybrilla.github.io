@@ -3,22 +3,24 @@ title: Migrate to MF purchase plans
 ---
 ## Migrate from V1 SIPs to V2 Purchase plans
 
-#### Plan attribute changes
+
+#### MF purchase plan attribute mapping for V1 SIPs
+
  Refer to [MF purchase plans](https://fintechprimitives.com/docs/api/#purchase-plan-object-structure) for all attributes
 
-|V1 Attribute|V2 Attribute|
+|V1 SIP attribute|V2 MF purchase plan attribute|
 |-----|-----|
 |isin|scheme|
 |amount|amount|
-|start_day|installment_day|
+|start\_day|installment\_day|
 |frequency|frequency|
-|installments|number_of_installments|
-|folio_number|folio_number|
-|mandate_id|payment_method & payment_source|
-|source_ref_id|source_ref_id|
-|user_ip|user_ip|
+|installments|number\_of\_installments|
+|folio\_number|folio\_number|
+|mandate_id|payment\_method & payment\_source|
+|source\_ref\_id|source\_ref\_id|
+|user\_ip|user\_ip|
 |server_ip|server_ip|
-|order_gateway|order_gateway|
+|order\_gateway|order\_gateway|
 |consent hash|consent hash|
 
 #### Migration procedure
@@ -28,7 +30,7 @@ title: Migrate to MF purchase plans
       1. Use [Fetch a SIP](https://fintechprimitives.com/docs/api/#fetch-a-sip) and [List all SIPs](https://fintechprimitives.com/docs/api/#list-all-sips) of V1 SIP APIs to find V2 ID
       2. Update V2 ID for all SIPs in your application
    2. If you do not maintain SIP ID in your application
-      1. Use `List all mf puchase plans` by investment account of the investor
+      1. Use [List all mf purchase plans](https://fintechprimitives.com/docs/api/#list-all-purchase-plans) by investment account of the investor
 2. Start using the V2 MF purchase plan APIs
 
 

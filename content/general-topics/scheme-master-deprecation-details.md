@@ -3,45 +3,51 @@ title: Deprecated features of scheme master
 ---
 ## Deprecated features of scheme master
 
-### Deprecated attributes that will be removed
+
+### Deprecated scheme related attributes that will be removed
+
+Below attributes are now available in the [frequency specific data](https://fintechprimitives.com/docs/api/#frequency-specific-data) hash for each of the plan type (SIP\SWP\STP)
 
 | Deprecated Attributes |New Attribute |
 |--|--|
-|min_sip_amount <br><br>min_swp_amount<br><br>min_stp_in_amount|<br> min_installment_amount|
-|max_sip_amount<br><br>max_swp_amount<br><br>max_stp_in_amount|<br>max_installment_amount|
-|sip_multiples<br><br>swp_multiples<br><br>stp_in_amount_multiples|<br>amount_multiples|
-|min_sip_installments<br><br>min_swp_installments<br><br>min_stp_out_installments|<br>min_installments|
-|sip_frequency_data | [sip_frequency_specific_data](#frequency-specific-data)|
-|swp_frequency_data|[swp_frequency_specific_data](#frequency-specific-data)|
-|stp_frequency_data|[stp_frequency_specific_data](#frequency-specific-data)|
+|min\_sip\_amount <br><br>min\_swp\_amount<br><br>min\_stp\_in\_amount|<br> min\_installment\_amount|
+|max\_sip\_amount<br><br>max\_swp\_amount<br><br>max\_stp\_in\_amount|<br>max\_installment\_amount|
+|sip\_multiples<br><br>swp\_multiples<br><br>stp\_in\_amount\_multiples|<br>amount\_multiples|
+|min\_sip\_installments<br><br>min\_swp\_installments<br><br>min\_stp\_out\_installments|<br>min\_installments|
+|sip\_frequency\_data | [sip\_frequency\_specific\_data](https://fintechprimitives.com/docs/api/#frequency-specific-data)|
+|swp\_frequency\_data|[swp\_frequency\_specific\_data](https://fintechprimitives.com/docs/api/#frequency-specific-data)|
+|stp\_frequency\_data|[stp\_frequency\_specific\_data](https://fintechprimitives.com/docs/api/#frequency-specific-data)|
 
 ### Modification of data Types for amount/unit related attributes in Fund Scheme API
 
-All amount/unit related attributes currently are of integer data type. At times, AMCs maintain decimal values for amounts especially for the `amount multiples`. FP will change to decimal data type for below attributes to enhance the accuracy in order collection. 
+All amount/unit related attributes currently are of integer data type. At times, AMCs maintain decimal values for amounts especially for the `amount multiples`. FP will change to decimal data type for below attributes to enhance the accuracy in MF order collection. 
 
 #### List of decimal type attributes in scheme master
 
-* min_initial_investment
-* min_additional_investment
-* initial_investment_multiples
-* max_initial_investment
-* max_additional_investment
-* additional_investment_multiples
-* min_withdrawal_amount
-* min_withdrawal_units
-* max_withdrawal_amount
-* max_withdrawal_units
-* withdrawal_multiples
-* withdrawal_multiples_units
-* min_sip_amount
-* min_swp_amount
-* min_stp_in_amount
-* max_sip_amount
-* max_swp_amount
-* max_stp_in_amount
-* sip_multiples
-* swp_multiples
-* stp_in_amount_multiples
-* min_switch_in_amount
-* switch_in_amount_multiples
+* min\_initial\_investment
+* min\_additional\_investment
+* initial\_investment\_multiples
+* max\_initial\_investment
+* max\_additional\_investment
+* additional\_investment\_multiples
+* min\_withdrawal\_amount
+* min\_withdrawal\_units
+* max\_withdrawal\_amount
+* max\_withdrawal\_units
+* withdrawal\_multiples
+* withdrawal\_multiples\_units
+* min\_sip\_amount
+* min\_swp\_amount
+* min\_stp\_in\_amount
+* max\_sip\_amount
+* max\_swp\_amount
+* max\_stp\_in\_amount
+* sip\_multiples
+* swp\_multiples
+* stp\_in\_amount\_multiples
+* min\_switch\_in\_amount
+* switch\_in\_amount\_multiples
+* min\_switch\_out\_units
+* switch\_out\_unit\_multiples
+* switch\_out\_amount\_multiples
 
