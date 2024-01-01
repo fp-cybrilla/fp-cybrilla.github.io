@@ -118,6 +118,8 @@ sidebar:
         - heading: "Appendix"
         - title: Transaction Plans Use Cases
           link: "/mf-transactions/transaction-plans-usecases"
+        - title: Migrate from V1 SIPs to V2 Purchase plans
+          link: "/mf-transactions/purchase-pkans/sip-v1-purchase-plan-migration"
       # Subsection ends here
       # Subsection starts here with heading and list of links
       - subsection:  
