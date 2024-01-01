@@ -1,137 +1,32 @@
 ---
-title: Migrating from V1 SIPs to Purchase plans
+title: Migrate to MF purchase plans
 ---
-## Migrating from V1 SIPs to Purchase plans
+## Migrate from V1 SIPs to V2 Purchase plans
+
+#### Migration procedure
+
+1. Map a V1 SIP with respective V2 MF purchase plan ID
+   1. If you are maintain SIP ID against investor or investment accounts in your application then
+      1. Use [Fetch a SIP](https://fintechprimitives.com/docs/api/#fetch-a-sip) and [List all SIPs](https://fintechprimitives.com/docs/api/#list-all-sips) of V1 SIP APIs to find V2 ID
+      2. Update V2 ID for all SIPs in your application
+   2. If you do not maintain SIP ID in your application
+      1. Use `List all mf puchase plans` by investment account of the investor
+2. Start using the V2 MF purchase plan APIs
 
 
-#### 1. SIP Creation
-**Earlier**
-`POST /api/oms/investment_accounts/:investment_account_id/orders/sips`
-```json
-{
-  "orders": [
-    {
-      "isin": "INF204KA1B64",
-      "amount": 10000,
-      "start_day": "2",
-      "frequency": "MONTHLY",
-      "installments": 20,
-      "folio_number":"1234567890",
-      "mandate_id": 23,
-      "generate_first_installment_now":"false",
-      "source_ref_id": "0876789",
-      "user_ip": "192.168.2.92",
-      "server_ip": "192.168.2.95",
-      "consent": 
-      {
-        "email": "mfp@cybrilla.com",
-        "isd_code": "91",
-        "mobile": "9008580644"
-      }
-    }
-  ]
-}
-```
-**Now**
-`POST /v2/mf_purchase_plans`
-```json
-{
-  "mf_investment_account": "mfia_798fa03aba614840b983609e89ed16f2",
-  "scheme": "INF204KA1B64",
-  "amount": 1000.0,
-  "installment_day": 2,
-  "frequency": "monthly",
-  "number_of_installments": 20,
-  "folio_number": "1234567890",
-  "payment_method": "mandate",
-  "payment_source": "man_89111b00566431db0dace538hgc",
-  "generate_first_installment_now": false,
-  "source_ref_id": "0876789",
-  "user_ip": "192.168.2.92",
-  "server_ip": "192.168.2.95"
-  "systematic": true,
-  "purpose": "children_education",
-  "euin": "E1234",
-  "initiated_by": "investor",
-  "initiated_via": "mobile_app",
-  "consent": 
-  {
-        "email": "mfp@cybrilla.com",
-        "isd_code": "91",
-        "mobile": "9008580644"
-      }
-}
-```
+#### Learn V2 MF purchase API alternatives for all V1 SIP Actions
 
-#### 2. Change mandate of an SIP
-**Earlier**
-`PATCH /api/oms/investment_accounts/1/orders/sips/1`
-```json
-{
-  "operation": "update",
-  "data": {
-    "mandate_id": "DQ12"
-  }
-}
-```
-**Now**
-`PATCH /v2/mf_purchase_plans`
-```json
-{
-	"plan":"mfpp_dbabb25ba34c48329dbfbeff70c846f0",
-	"payment_source":"<new_mandate_id>"
-}
-```
-
-#### 3.Cancel SIP
-**Earlier**
-`PATCH /api/oms/investment_accounts/1/orders/sips/1`
-```json
-{
-  "operation": "deactivate",
-}
-```
-**Now**
-`POST /v2/mf_purchase_plans/mfpp_dbabb25ba34c48329dbfbeff70c846f0/cancel`
-
-#### 4. Cancel next installment 
-**Earlier**
-`PATCH /api/oms/investment_accounts/1/orders/sips/1`
-```json
-{
-  "operation": "deactivate",
-}
-```
-**Now**
-`POST /v2/mf_purchase_plans/mfpp_dbabb25ba34c48329dbfbeff70c846f0/skip_instructions`
-```json
-{
-	"from":"<date>",
-	"to":"<date>"//optional
-}
-```
-
-#### 5. Fetch SIP
-**Earlier**
-`GET /api/oms/investment_accounts/1/orders/sips/1`
-
-**Now**
-`GET /v2/mf_purchase_plans/mfpp_dbabb25ba34c48329dbfbeff70c846f0`
-
-#### 6. Fetch installments of a SIP
-**Earlier**
-`GET /api/oms/investment_accounts/1/orders/sips/1/installments`
-
-**Now**
-`GET /v2/mf_purchases?plan=mfpp_dbabb25ba34c48329dbfbeff70c846f0`
-
-#### 7. List all SIPs
-**Earlier**
-`GET /api/oms/investment_accounts/:investment_account_id/orders/sips`
-
-**Now**
-`GET /v2/mf_purchase_plans?mf_investment_account=mfia_14bafabfbfbc423d9b54412dd577981b`
-
+|Action|V1 SIP API|V2 MF purchase plan API|
+|-----|-----|-----|
+|SIP Creation|[create-a-sip](https://fintechprimitives.com/docs/api/#create-a-sip)|[create-a-purchase-plan](https://fintechprimitives.com/docs/api/#create-a-purchase-plan)|
+|Change mandate of an SIP|[modify-a-sip](https://fintechprimitives.com/docs/api/#modify-a-sip)|Use payment_source in [update-a-purchase-plan](https://fintechprimitives.com/docs/api/#update-a-purchase-plan)|
+|Cancel SIP|[modify-a-sip](https://fintechprimitives.com/docs/api/#modify-a-sip)|[cancel-a-purchase-plan](https://fintechprimitives.com/docs/api/#cancel-a-purchase-plan)|
+|Fetch SIP |[fetch-a-sip](https://fintechprimitives.com/docs/api/#fetch-a-sip)|[fetch-a-purchase-plan-by-its-id](https://fintechprimitives.com/docs/api/#fetch-a-purchase-plan-by-its-id)|
+|Fetch installments of a SIP |[fetch-installments-of-a-sip](https://fintechprimitives.com/docs/api/#fetch-installments-of-a-sip)|Use plan id in [list-all-mf-purchases](https://fintechprimitives.com/docs/api/#list-all-mf-purchases)|
+|List all SIPs|[list-all-sips](https://fintechprimitives.com/docs/api/#list-all-sips)|[list-all-purchase-plans](https://fintechprimitives.com/docs/api/#list-all-purchase-plans)|
+|Cancel next installment |[modify-a-sip](https://fintechprimitives.com/docs/api/#modify-a-sip)|[skip-installments-via-skip-instructions](https://fintechprimitives.com/docs/api/#skip-installments-via-skip-instructions)|
+|Cancel installments between a date range |Not available|[skip-installments-via-skip-instructions](https://fintechprimitives.com/docs/api/#skip-installments-via-skip-instructions)|
+|Update SIP amount|Not available|Use amount in [update-a-purchase-plan](https://fintechprimitives.com/docs/api/#update-a-purchase-plan)|
 
 
 
