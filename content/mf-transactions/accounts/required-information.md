@@ -53,3 +53,26 @@ For successful account creation and placing an order, make sure the following in
 6. Country of birth (`invp.country_of_birth`)
 7. Address (with nature)
 8. Tax residencies
+
+
+#### Individuals
+
+For successful account creation and placing an order, make sure the following information is collected from the investor
+
+**Details about the Investor**
+
+1. Name  (`invp.name`)
+2. PAN  (`invp.pan`)
+3. Residential Status in India (`invp.tax_status`)
+4. Gender (`invp.gender`)
+5. Place of birth (`invp.place_of_birth`)
+6. Country of birth (`invp.country_of_birth`)
+7. Tax residencies (`invp.first_tax_residency, invp.second_tax_residency etc`)
+8. Occupation (`invp.occupation`)
+9. Source of wealth (`invp.source_of_wealth`)
+10. Income slab (`invp.income_slab`)
+11. Investor politics exposure  (`invp.pep_details`)
+12. Payout Bank Account (`folio_defaults.payout_bank_account`)
+13. Address for communication (`folio_defaults.communication_address`)
+14. Email address for communication (`folio_defaults.communication_email_address`)
+15. Phone number for communication (`folio_defaults.communication_mobile_number`)
