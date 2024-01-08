@@ -57,7 +57,7 @@ For successful account creation and placing an order, make sure the following in
 
 #### Individuals
 
-For successful account creation and placing an order, make sure the following information is collected from the investor
+For successful investment account creation and placing an order, make sure the following information is collected from the investor
 
 **Details about the Investor**
 
