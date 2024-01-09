@@ -32,7 +32,7 @@ For successful investment account creation and placing an order, make sure the f
 1. Name  (`invp.name`)
 2. PAN  (`invp.pan`)
 3. Residential Status in India (`invp.tax_status`)
-4. Type of the entity (`innvpni.type`)
+4. Type of the entity (`invp.type`)
 4. Gender (`invp.gender`)
 5. Birth place details  (`invp.place_of_birth`, `invp.country_of_birth`)
 7. Fatca & Crs declaration  (`invp.pep_details`, Tax residency details using `use_default_tax_residences` or one of `invp.first_tax_residency`, `invp.second_tax_residency`, `third_tax_residency`, `fourth_tax_residency` )
