@@ -35,7 +35,7 @@ For successful investment account creation and placing an order, make sure the f
 4. Type of the entity (`invp.type`)
 4. Gender (`invp.gender`)
 5. Birth place details  (`invp.place_of_birth`, `invp.country_of_birth`)
-7. Fatca & Crs declaration  (`invp.pep_details`, Tax residency details using `use_default_tax_residences` or one of `invp.first_tax_residency`, `invp.second_tax_residency`, `third_tax_residency`, `fourth_tax_residency` )
+7. Fatca & Crs declaration  (`invp.pep_details`, Tax residency details using `invp.use_default_tax_residences` or one of `invp.first_tax_residency`, `invp.second_tax_residency`, `invp.third_tax_residency`, `invp.fourth_tax_residency` )
 8. Financial details (`invp.occupation`, `invp.source_of_wealth`, `invp.income_slab`)
 12. Payout bank account (`folio_defaults.payout_bank_account`)
 13. Address for communication (`folio_defaults.communication_address` or if NRI `folio_defaults.overseas_communication_address`)
@@ -57,13 +57,13 @@ If opting out of nomnination you can skip this. Otherwise provide atleast one no
 For successful account creation and placing an order, make sure the following information is collected from the investor
 
 **Details about the entity**  
-1. Name of the entity (`innvpni.entity_name`)
-2. Type of the entity (`innvpni.type`)
-3. Residential status (`innvpni.residential_status`)
-4. Entity's PAN (`innvpni.pan`)
-5. Incorporation details (`innvpni.incorporation`)
-6. Declaration of services provided (`innvpni.services_provided`)
-7. Entity's Networth (`innvpni.networth`)
+1. Name of the entity (`invpni.entity_name`)
+2. Type of the entity (`invpni.type`)
+3. Residential status (`invpni.residential_status`)
+4. Entity's PAN (`invpni.pan`)
+5. Incorporation details (`invpni.incorporation`)
+6. Declaration of services provided (`invpni.services_provided`)
+7. Entity's Networth (`invpni.networth`)
 8. Beneficial owner details (not required if the investor is a listed company)
 9. Fatca & Crs declaration (`tax_residencies`, `invpni.specified_us_person_exemption`, `invpni.entity_classification`)
 10. Payout Bank Account (`folio_defaults.payout_bank_account`)
@@ -80,7 +80,7 @@ For successful account creation and placing an order, make sure the following in
 5. Place of birth (`invp.place_of_birth`)
 6. Country of birth (`invp.country_of_birth`)
 7. Address (with nature)
-8. Tax residencies
+8. Tax residencies(`invp.use_default_tax_residences` or one of `invp.first_tax_residency`, `invp.second_tax_residency`, `invp.third_tax_residency`, `invp.fourth_tax_residency` )
 
 
 
