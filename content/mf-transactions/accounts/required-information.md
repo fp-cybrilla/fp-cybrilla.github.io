@@ -23,6 +23,34 @@ Call [FPDocs, create investment a/c]() with the following json
 FP uses the information in `folio_defaults` while creating a new folio
 
 --- -->
+#### Individuals
+
+For successful investment account creation and placing an order, make sure the following information is collected from the investor
+
+**Details about the Investor**
+
+1. Name  (`invp.name`)
+2. PAN  (`invp.pan`)
+3. Residential Status in India (`invp.tax_status`)
+4. Type of the entity (`innvpni.type`)
+4. Gender (`invp.gender`)
+5. Birth place details  (`invp.place_of_birth`, `invp.country_of_birth`)
+7. Fatca & Crs declaration  (`invp.pep_details`, Tax residency details using `use_default_tax_residences` or one of `invp.first_tax_residency`, `invp.second_tax_residency`, `third_tax_residency`, `fourth_tax_residency` )
+8. Financial details (`invp.occupation`, `invp.source_of_wealth`, `invp.income_slab`)
+12. Payout bank account (`folio_defaults.payout_bank_account`)
+13. Address for communication (`folio_defaults.communication_address` or if NRI `folio_defaults.overseas_communication_address`)
+14. Email address for communication (`folio_defaults.communication_email_address`)
+15. Phone number for communication (`folio_defaults.communication_mobile_number`)
+15. Demat details if opting for demat unit delivery (`folio_defaults.demat_account`)
+
+**Details about Nomination** 
+
+If opting out of nomnination you can skip this. Otherwise provide atleast one nominee details in `folio_defaults.nominee1` and declare the percentage allocation of funds for each nominee in `folio_defaults.nominee1_allocation_percentage`, `folio_defaults.nominee2_allocation_percentage`, `folio_defaults.nominee3_allocation_percentage`. You can add upto 3 nominees to a folio.
+
+1. Name (`related_party.name`)
+2. PAN (`related_party.relationship`)
+
+
 
 #### Non Individuals
 
@@ -55,24 +83,4 @@ For successful account creation and placing an order, make sure the following in
 8. Tax residencies
 
 
-#### Individuals
 
-For successful investment account creation and placing an order, make sure the following information is collected from the investor
-
-**Details about the Investor**
-
-1. Name  (`invp.name`)
-2. PAN  (`invp.pan`)
-3. Residential Status in India (`invp.tax_status`)
-4. Gender (`invp.gender`)
-5. Place of birth (`invp.place_of_birth`)
-6. Country of birth (`invp.country_of_birth`)
-7. Tax residencies (`invp.first_tax_residency, invp.second_tax_residency etc`)
-8. Occupation (`invp.occupation`)
-9. Source of wealth (`invp.source_of_wealth`)
-10. Income slab (`invp.income_slab`)
-11. Investor politics exposure  (`invp.pep_details`)
-12. Payout Bank Account (`folio_defaults.payout_bank_account`)
-13. Address for communication (`folio_defaults.communication_address`)
-14. Email address for communication (`folio_defaults.communication_email_address`)
-15. Phone number for communication (`folio_defaults.communication_mobile_number`)
