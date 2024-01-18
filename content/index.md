@@ -48,10 +48,24 @@ title: Introduction
       </div>
     </a>
   </div>
+
+
+  <div class="card border border-primary-N20 rounded-5 dark:bg-primary-DN05 dark:border-primary-DN10">
+    <a href="/data/overview" class="block h-full text-current p-4 no-underline hover:no-underline hover:text-current">
+      <div class="card-title text-primary-B100 text-size-20 font-semibold font-opensans">
+        Data
+      </div>
+      <div class="card-body text-size-14 dark:text-primary-DN110">
+        Access and get insights of your data - transactional, reporting and usage
+      </div>
+    </a>
+  </div>
 </div>
 
-You can access all the FP services via APIs ([FPDocs, documentation](https://fintechprimitives.com/api))
-
+### Resources
+You can access all the FP services via APIs.
+- Read through the specs at [FPDocs, API Documentation](https://fintechprimitives.com/api)
+- Try the APIs through our [newwindow, Postman Collection](https://www.postman.com/fintechprimitives/workspace/fp-apis/)
 
 ### Platform as a Service
 <br>
@@ -60,16 +74,3 @@ You can access all the FP services via APIs ([FPDocs, documentation](https://fin
   <img src="../../images/fp_diagram_dark.png" alt="Fintech Primitives PaaS" class="fp-diagram hidden dark:block">
 </div>
 
-<!--
-><p style="font-size:18px">Quick start</p>
-
-Refer the [Investment workflow](/pages/quickstart) guide to get started.
--->
-
-### We're hiring!
-
-Join the Fintech Primitives team in building a unique PaaS (Plaform as a Service) for India.<br>
-This is a rare opportunity to not just code on any backend project or just design industry leading APIs to help simplify technology for the Indian wealth management space.<br>
-It's an opportunity to simplify the lives of fellow developers by identifying abstractions that enable flexible, standardized, scalable integrations.<br><br>
-If you are an enthusiastic backend engineer / platform engineer / microservices engineer / API quality engineer with experience in Java, we are very interested in talking with you. <br>
-Reach us at [careers@cybrilla.com](mailto:careers@cybrilla.com).
