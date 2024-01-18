@@ -158,6 +158,16 @@ sidebar:
         link: "/pages/workflows/investor-reporting/"
       - title: Usage
         link: "/pages/workflows/investor-reporting-usage/"
+  - dropdown_menu_title: Investor Servicing
+    dropdown_menu_items: 
+      - title: Overview
+        link: "/investor-servicing/overview/"
+      # Subsection starts here with heading and list of links
+      - subsection:
+        - heading: Non-Commercial Transactions
+        - title: Phone number NCT
+          link: "/investor-servicing/phone-number-nct/"
+      # Subsection ends here
   - dropdown_menu_title: Data
     dropdown_menu_items:
       - title: Overview
