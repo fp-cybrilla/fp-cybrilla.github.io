@@ -18,7 +18,7 @@ Learn how to get MF units delivered to a demat account
       1. User name
       2. Password
       3. BPID
-   2. If your depository is CDSL, credenitals of your CDSL app (cdslweb.cdslindia.com)
+   2. If your depository is CDSL, credentials of your CDSL app (cdslweb.cdslindia.com)
       1. Login ID
       2. Password
       3. DPID
@@ -30,7 +30,7 @@ Learn how to get MF units delivered to a demat account
 
 1. Create an [V2 investor profile](https://docs.fintechprimitives.com/mf-transactions/accounts/required-information//)
 2. Add a [demat account](https://fintechprimitives.com/docs/api/#demat-accounts) to the investor profile
-   1. A demat account number is a 16 digit number obtained at the time of demat account creation with the depository. First 8 digit represent the DP's ID and last 8 digit represent the client ID of the investor with the depository
+   1. A demat account number is a 16 digit number obtained at the time of demat account creation with the depository. First 8 digits represent the DP's ID and last 8 digits represent the client ID of the investor with the depository
    2. Provide details of an active demat account
 
 Sample Request
@@ -80,12 +80,12 @@ FP currently supports below order types
 Note:
 
    1. You do not need to explicitly mention the delivery mode `Demat` or `Physical` while placing an order. This is automatically determined as below:
-   2. If you are placing a first purchase order in a new folio, and the MF investment account has demat object id set in the `folio_defaults`, then the MF units will be delivered in the demat account along with a folio. When the folio is created, it will contain the demat account details. 
-   3. If you are placing a purchase order in an existing folio, and the folio has demat id set, then the MF units will be delivered in the demat account along with a folio.   
+   2. If you are placing a first purchase order in a new folio, and the MF investment account has a demat object id set in the `folio_defaults`, then the MF units will be delivered in the demat account along with a folio. When the folio is created, it will contain the demat account details. 
+   3. If you are placing a purchase order in an existing folio, and the folio has a demat id set, then the MF units will be delivered in the demat account along with a folio.   
 
 **Consents for  orders**
-   1. You need to collect 2FA\consent for the orders on email or phone or both that is associated with the folio number. 
-   2. As per industry norms, consent can be collected via an OTP or esign. FP supports consent for orders via OTP currerntly.
+   1. You need to collect 2FA\consent for the orders on email or phone or both that are associated with the folio number. 
+   2. As per industry norms, consent can be collected via an OTP or esign. FP supports consent for orders via OTP currently.
    
 Note on consents for MF redemptions:
 
