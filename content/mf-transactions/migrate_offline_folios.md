@@ -42,6 +42,6 @@ If your investors have purchased mutual funds using your distribution code, but 
 1. View [folio](https://fintechprimitives.com/docs/api/#mf-folio-object) details
 2. View [holdings and returns](https://fintechprimitives.com/docs/api/#investor-reports) of investor
 
-> Note for any MF orders on migrated user, ensure investor onboarding is completed
+> Note for any MF orders on migrated folios, ensure investor onboarding is completed
    
 
