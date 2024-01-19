@@ -2,7 +2,7 @@
 title: Buy/sell MF in demat
 ---
 ## Buy/sell MF in demat
-Learn how to get MF units delivered to a demat account
+#### Learn how to get MF units delivered to a demat account
 
 > Note the below prerequisites for buying and selling MF in demat mode
 
@@ -22,7 +22,7 @@ Learn how to get MF units delivered to a demat account
       1. Login ID
       2. Password
       3. DPID
-3. The above DP credentials will be configured in your FP tenant to accept MF redemption orders
+3. The above DP credentials will be configured in your FP account to accept MF redemption orders
 
 ## Demat orders
  
