@@ -1,25 +1,36 @@
 ---
-title: Demat orders
+title: Buy/sell MF in demat
 ---
-## Demat Orders
+## Buy/sell MF in demat
+Learn how to get MF units delivered to a demat account
 
-#### Introduction
+> Note the below prerequisites for buying and selling MF in demat mode
 
-A Demat account helps investors hold their investments in an electronic format. These investments can be in securities as well as mutual funds. 
+**Buy MF in demat**
 
-## Open an investment account for an investor with Demat account and buy/sell mutual funds
+1. An investor should have an active demat account. FP does not support opening new demat accounts currently.
+2. FP will enable MF purchase processing via your AMC\RTA channel partner account
 
-### 1. Create an investor profile
+**Sell MF from demat**
+1. Per current industry norms, MF redemptions have to be submitted to depositories only for processing.
+2. Share your depository participant credentials as described below. FP will use the same to enable redemption processing from your investor's demat account.
+   1. If your depository is NSDL, credentials of your business partner module (https://121.240.225.109/dpm-web/)
+      1. User name
+      2. Password
+      3. BPID
+   2. If your depository is CDSL, credenitals of your CDSL app (cdslweb.cdslindia.com)
+      1. Login ID
+      2. Password
+      3. DPID
+3. The above DP credentials will be configured in your FP tenant to accept MF redemption orders
 
-Refer this guide to create an [investor profile](https://docs.fintechprimitives.com/mf-transactions/investment-account/)
+## Demat orders
+ 
+**Open an investment account with demat account details**
 
-### 2. Add a Demat account to the investor profile
-
-Demat accounts are overseen by depository participants (DPs), who act as intermediaries between investors and the central depository, ensuring seamless transactions and safekeeping of assets. FP APIs assume that the Demat account for the investor is created at your end.
-
-Refer API docs to add [ a demat account](https://fintechprimitives.com/docs/api/#demat-account-object) to your investor profile in FP.
-
-> A demat account number is a 16 digit number obtained at the time of Demat account creation with the depository. First 8 digit represent the DP's ID and last 8 digit represent the client ID of the investor with the depository
+1. Create an [investor profile](https://docs.fintechprimitives.com/mf-transactions/accounts/required-information//)
+2. Add a [demat account](https://fintechprimitives.com/docs/api/#demat-accounts) to the investor profile
+   1. A demat account number is a 16 digit number obtained at the time of demat account creation with the depository. First 8 digit represent the DP's ID and last 8 digit represent the client ID of the investor with the depository
 
 Sample Request
 
@@ -30,12 +41,9 @@ Sample Request
   "client_id": "04571343"
 }
 ```
+3. Set folio defaults in the investment account
 
-### 3. Set folio defaults in the investment account
-
-Update the demat object id in the investment account's folio default hash. This will ensure that any new investment that is made, will be will be processed in `Demat` mode and available under the folio as well as your demat account with the depository. If the demat object id is `null` in folio defaults, the investment will be processed in `Physical` mode and will be available only in the folio.
-
-Refer API doc for [investment account updation](https://fintechprimitives.com/docs/api/#update-an-mf-investment-account). Use the investor id received in step 1 to create an investment account.
+Update demat object id in `folio_defaults` of an investment account . This will ensure a new investment will be processed in `demat` mode. If the demat object id is `null` , the investment will be processed in `physical` mode and will be available only in the folio.
 
 Sample request
 
@@ -48,45 +56,45 @@ Sample request
   }
 }
 ```
+**Orders in demat mode**
 
-### 4. Buy mutual funds for Demat investors
-You can place mutual fund purchases and redemptions for investors with demat account using order APIs.
-
-#### Select fund Scheme
-Refer [Get fund scheme API](https://fintechprimitives.com/docs/api/#fund-scheme) , and ensure that the scheme is eligible for the demat delivery. 
+1. Select fund Scheme with demat delivery mode
+   1. Ensure that the [scheme](https://fintechprimitives.com/docs/api/#fund-scheme)  for purchase order is eligible for the demat delivery. Refer to `delivery_mode` attribute in scheme master.
 
 |delivery_mode|Description|
 |-----|------|
-|`DEMAT`|Purchases in the scheme will be delivered to the demat account associated with the folio|
-|`PHYSICAL`|Purchases in the scheme will be delivered to the folio only|
-|`DEMAT_PHYSICAL`|Purchases in the scheme will be delivered to the folio as well as the the demat account associated|
+|`DEMAT`|Units will be delivered to the demat account associated with the folio|
+|`PHYSICAL`|Units will be delivered to the folio only|
+|`DEMAT_PHYSICAL`|Units will be delivered to the folio and the demat account associated|
 
-#### Purchases
+2. Place an MF buy/sell order
+   1. Supported order types
+      1. [Lumpsum purchase](https://docs.fintechprimitives.com/mf-transactions/orders-introduction/)
+      2. [Recurring purchase](https://docs.fintechprimitives.com/mf-transactions/transaction-plans/)
+      3. [One time Redemption](https://fintechprimitives.com/docs/api/#mf-redemptions)
+   > Note: Switch, STP, SWP orders are not supported currently by the depositories. Let us know if your DP account has support for this, so we can enable these orders for you.
 
-1. Refer API docs to place [one time](https://fintechprimitives.com/docs/api/#mf-purchase-object) as well as [recurring purchase](https://fintechprimitives.com/docs/api/#purchase-plan-object-structure) orders. You do not need to explicitly mention the delivery mode Demat or Physical in while placing an order. This is automatically determined as below:
-   1. If you are placing a first purchase order in a new folio, and the investment account has demat object id set in the `folio_defaults`, then the MF units will be delivered in the demat account along with a folio. When the folio is created, it will contain the demat account details. 
-   1. If you are placing a purchase order in an existing folio, and the folio has demat id set, then the MF units will be delivered in the demat account along with a folio.   
+   1. You do not need to explicitly mention the delivery mode `Demat` or `Physical` while placing an order. This is automatically determined as below:
+   2. If you are placing a first purchase order in a new folio, and the MF investment account has demat object id set in the `folio_defaults`, then the MF units will be delivered in the demat account along with a folio. When the folio is created, it will contain the demat account details. 
+   3. If you are placing a purchase order in an existing folio, and the folio has demat id set, then the MF units will be delivered in the demat account along with a folio.   
 
-Note
-> 1. You need to collect 2FA for the purchase orders via OTP on the email or phone that is associated with the folio number. Update the FP orders once consent is collected at your end so that FP can process them further. Refer API Docs to update consent for [one time orders](https://fintechprimitives.com/docs/api/#update-a-mf-purchase) and [recurring purchase plans](https://fintechprimitives.com/docs/api/#update-a-purchase-plan)
-> 2. Only one folio will be created within each AMC if you are using demat account for MF purchases. Example: You already have a folio no. `61576584` with an AMC say `ICICI prudential` which is associated with your demat account `1208180004571343`. If you try to create a purchase in a new folio with FP for same AMC and same demat account in MF investment account, then you will recieve MF units in earlier created folio `61576584` only.
+3. Consents for purchase orders
+   1. You need to collect 2FA\consent for the orders on email or phone or both that is associated with the folio number. 
+   2. As per industry norms, consent can be collected via an OTP or esign. FP supports consent for orders via OTP currerntly.
+   
+> Note on MF redemptions:
+
+> 1. You need to collect consent for MF redemption orders even if the investor has submitted a DDPI\POA document to the DP. This is required as DDPI\POA are not currently supported out of exchange systems for online redemptions.
+> 2. You can only redeem by `units` from folios that are linked to demat account currently.
+> 3. If the DP ID of the demat account in the mf folio object does not match with the DP ID configured in your FP tenant, MF redemptions will be rejected. 
 
 
-#### Folios
+**Folios**
 
 1. Refer API docs for [folio details](https://fintechprimitives.com/docs/api/#mf-redemption-object)
-   1. If a demat account was associated with the first purchase when the folio was created, the folio object will contain the demat account details. 
+   1. If a demat account was associated at the time of folio creation, the folio object will contain the demat account details. 
+   2. As per current industry norms, only one folio will be created within each AMC if you are buying MF in demat. Example: You already have a folio no. `61576584` with an AMC say `ICICI prudential` which is associated with your demat account `1208180004571343`. If you try to create a purchase in a new folio for same AMC and same demat account in MF investment account, then you will recieve MF units in earlier created folio `61576584` only.
 
-### 5. Sell mutual funds for Demat investors
 
-You can only place a one time redemption order for folios which are linked to a demat account. Refer API docs to place a [one time](https://fintechprimitives.com/docs/api/#mf-redemption-object) redemption order
-
-Note:
-
-> 1. You need to collect 2FA for the redemption orders via OTP on the email or phone that is be associated with the folio number. Update the FP orders once consent is collected at your end so that FP can process them further. Refer API Docs to update consent for [one time redemption orders](https://fintechprimitives.com/docs/api/#update-a-mf-redemption)
-   > 1. You will need to collect 2FA for all redemption orders even if the investor may have submitted a DDPI\POA to the broker. This is required as DDPI\POA are not currently supported out of exchange systems.
-> 2. Recurring redemption, one time and recurring switches are not supported for folios linked to demat account
-> 3. You can only redeem by `units` from folios that are linked to demat account currently.
-> 4. If the DP ID of the demat account in the folio object does not match with the DP ID setup for your tenant, redemptions will be rejected for folios linked with demat account
 
 
