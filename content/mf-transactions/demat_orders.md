@@ -26,11 +26,12 @@ Learn how to get MF units delivered to a demat account
 
 ## Demat orders
  
-**Open an investment account with demat account details**
+**Create investor profile and add details of your demat account**
 
-1. Create an [investor profile](https://docs.fintechprimitives.com/mf-transactions/accounts/required-information//)
+1. Create an [V2 investor profile](https://docs.fintechprimitives.com/mf-transactions/accounts/required-information//)
 2. Add a [demat account](https://fintechprimitives.com/docs/api/#demat-accounts) to the investor profile
    1. A demat account number is a 16 digit number obtained at the time of demat account creation with the depository. First 8 digit represent the DP's ID and last 8 digit represent the client ID of the investor with the depository
+   2. Provide details of an active demat account
 
 Sample Request
 
@@ -41,9 +42,9 @@ Sample Request
   "client_id": "04571343"
 }
 ```
-3. Set folio defaults in the investment account
+**Update demat account object in the investment account**
 
-Update demat object id in `folio_defaults` of an investment account . This will ensure a new investment will be processed in `demat` mode. If the demat object id is `null` , the investment will be processed in `physical` mode and will be available only in the folio.
+Create [MF investment account](https://fintechprimitives.com/docs/api/#create-an-mf-investment-account) and update demat object id in `folio_defaults`. This will ensure a new purchase will be processed in `demat` mode. If the demat object id is `null` , then a new purchase will be processed in `physical` mode and will be available only in the folio.
 
 Sample request
 
@@ -56,10 +57,10 @@ Sample request
   }
 }
 ```
-**Orders in demat mode**
 
-1. Select fund Scheme with demat delivery mode
-   1. Ensure that the [scheme](https://fintechprimitives.com/docs/api/#fund-scheme)  for purchase order is eligible for the demat delivery. Refer to `delivery_mode` attribute in scheme master.
+**Fund scheme selection with demat delivery mode**
+
+Ensure that the [scheme](https://fintechprimitives.com/docs/api/#fund-scheme)  for purchase order is eligible for the demat delivery. Refer to `delivery_mode` attribute in scheme master.
 
 |delivery_mode|Description|
 |-----|------|
@@ -67,22 +68,26 @@ Sample request
 |`PHYSICAL`|Units will be delivered to the folio only|
 |`DEMAT_PHYSICAL`|Units will be delivered to the folio and the demat account associated|
 
-2. Place an MF buy/sell order
-   1. Supported order types
-      1. [Lumpsum purchase](https://docs.fintechprimitives.com/mf-transactions/orders-introduction/)
-      2. [Recurring purchase](https://docs.fintechprimitives.com/mf-transactions/transaction-plans/)
-      3. [One time Redemption](https://fintechprimitives.com/docs/api/#mf-redemptions)
-   > Note: Switch, STP, SWP orders are not supported currently by the depositories. Let us know if your DP account has support for this, so we can enable these orders for you.
+**Place an MF buy/sell order**
+
+FP currently supports below order types
+   1. [Lumpsum purchase](https://docs.fintechprimitives.com/mf-transactions/orders-introduction/)
+   2. [Recurring purchase](https://docs.fintechprimitives.com/mf-transactions/transaction-plans/)
+   3. [One time Redemption](https://fintechprimitives.com/docs/api/#mf-redemptions)
+   
+   > MF Switch, MF redemption plans(SWP), MF switch plans(STP) orders are not supported currently by the depositories. Let us know if your DP account has support for this, so we can enable these orders for you.
+
+Note:
 
    1. You do not need to explicitly mention the delivery mode `Demat` or `Physical` while placing an order. This is automatically determined as below:
    2. If you are placing a first purchase order in a new folio, and the MF investment account has demat object id set in the `folio_defaults`, then the MF units will be delivered in the demat account along with a folio. When the folio is created, it will contain the demat account details. 
    3. If you are placing a purchase order in an existing folio, and the folio has demat id set, then the MF units will be delivered in the demat account along with a folio.   
 
-3. Consents for purchase orders
+**Consents for  orders**
    1. You need to collect 2FA\consent for the orders on email or phone or both that is associated with the folio number. 
    2. As per industry norms, consent can be collected via an OTP or esign. FP supports consent for orders via OTP currerntly.
    
-> Note on MF redemptions:
+Note on consents for MF redemptions:
 
 > 1. You need to collect consent for MF redemption orders even if the investor has submitted a DDPI\POA document to the DP. This is required as DDPI\POA are not currently supported out of exchange systems for online redemptions.
 > 2. You can only redeem by `units` from folios that are linked to demat account currently.
