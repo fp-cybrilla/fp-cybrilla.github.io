@@ -96,7 +96,7 @@ Note on consents for MF redemptions:
 
 **Folios**
 
-1. Refer API docs for [folio details](https://fintechprimitives.com/docs/api/#mf-redemption-object)
+1. Refer API docs for [folio details](https://fintechprimitives.com/docs/api/#mf-folio-object)
    1. If a demat account was associated at the time of folio creation, the folio object will contain the demat account details. 
    2. As per current industry norms, only one folio will be created within each AMC if you are buying MF in demat. Example: You already have a folio no. `61576584` with an AMC say `ICICI prudential` which is associated with your demat account `1208180004571343`. If you try to create a purchase in a new folio for same AMC and same demat account in MF investment account, then you will recieve MF units in earlier created folio `61576584` only.
 
