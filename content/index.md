@@ -60,6 +60,18 @@ title: Introduction
       </div>
     </a>
   </div>
+
+
+  <div class="card border border-primary-N20 rounded-5 dark:bg-primary-DN05 dark:border-primary-DN10">
+    <a href="/advisory/overview" class="block h-full text-current p-4 no-underline hover:no-underline hover:text-current">
+      <div class="card-title text-primary-B100 text-size-20 font-semibold font-opensans">
+        Advisory
+      </div>
+      <div class="card-body text-size-14 dark:text-primary-DN110">
+        Fetch RTA CAS for your customers
+      </div>
+    </a>
+  </div>
 </div>
 
 ### Resources

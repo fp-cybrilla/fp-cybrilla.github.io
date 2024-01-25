@@ -178,6 +178,14 @@ sidebar:
         link: "/data/overview/"
       - title: Schema
         link: "/data/data-schema/"
+      # Subsection ends here
+  - dropdown_menu_title: Advisory
+    dropdown_menu_items:
+      - title: Overview
+        link: "/advisory/overview/"
+      - title: MF Investments Snapshots
+        link: "/advisory/fetch-rta-cas/"
+      # Subsection ends here
   - dropdown_menu_title: General topics
     dropdown_menu_items: 
       - title: Automated communications with investors
