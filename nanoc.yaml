@@ -26,6 +26,8 @@ sidebar:
           link: "/going-live/signing-up-with-razorpay/"
         - title: BillDesk sign up
           link: "/going-live/signing-up-with-billdesk/"
+        - title: MF Central sign up
+          link: "/going-live/signing-up-with-mfcentral/"
       # Subsection ends here
   - dropdown_menu_title: Identity
     dropdown_menu_items: 
@@ -183,7 +185,7 @@ sidebar:
     dropdown_menu_items:
       - title: Overview
         link: "/advisory/overview/"
-      - title: MF Investments Snapshots
+      - title: Fetch RTA CAS
         link: "/advisory/fetch-rta-cas/"
       # Subsection ends here
   - dropdown_menu_title: General topics

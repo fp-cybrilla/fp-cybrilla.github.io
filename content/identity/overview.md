@@ -18,5 +18,3 @@ You need to procure access to CVL KRA's pan status check APIs.
 We need the following details from CVL to enable KYC Check in your FP account.
 
 - Username, POS Code, Password
-
-Email us at [fpsupport@cybrilla.com](mailto:fpsupport@cybrilla.com) when you are ready.

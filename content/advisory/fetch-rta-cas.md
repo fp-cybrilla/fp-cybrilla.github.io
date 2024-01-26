@@ -19,7 +19,7 @@ FP offers a capability of fetch an investor's RTA CAS summary by providing the P
 4. If multiple objects for phone number / email address are tagged to an investor profile, FP will use the below logic to send out the OTP -
     - The latest created phone number / email address with `belongs_to = self` will be used to send the OTP
     - If `belongs_to = null` in all of them, FP use the latest created phone number / email address to send the OTP
-5. OTP is generally observed to be valid until 10 minutes since it was generated. Ensure the OTP consent is collected within this time range failing which will result the MF Holdings request to be marked as `expired` with `failure_code` = `otp_expired`
+5. OTP is generally observed to be valid until 10 minutes since it was generated. Ensure the OTP consent is collected within this time range failing which will result the MF Investments Snapshot request to be marked as `expired` with `failure_code` = `otp_expired`
 
 ### Testing
 

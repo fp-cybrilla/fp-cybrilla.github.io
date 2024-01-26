@@ -7,7 +7,7 @@ title: Investor servicing Overview
 Currently FP supports Non-financial / Non-commercial transactions which deal with any service requests pertaining to modification of certain information that are mapped to an account or a folio.
 
 With FP APIs, you can now perform the below listed non-commercial transactions (NCTs) -
-- [Phone number NCT](https://docs.fintechprimitives.com/investor-servicing/phone-number-nct/)
+- [Phone number NCT](/investor-servicing/phone-number-nct/)
 
 ### Decoding NCT statuses
 |Status|Description|
@@ -21,16 +21,4 @@ With FP APIs, you can now perform the below listed non-commercial transactions (
 
 ### Going live
 
-To go live with Phone number NCT, ensure that you take care of the below points -
-
-- You need to contact with `MF Central` and procure access to their NCT APIs
-  - We need the following details from MF Central to enable NCTs in your FP account -
-      - clientId
-      - clientSecret
-      - userName
-      - password
-      - encryptionDecryptionKey
-      - privateKey
-      - publicKey
-
-Email us at [fpsupport@cybrilla.com](mailto:fpsupport@cybrilla.com) when you are ready.
+To go live with Phone number NCT, ensure that you procure production access with MF Central. [Refer here](/going-live/signing-up-with-mfcentral/) to know more.
