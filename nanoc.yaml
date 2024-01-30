@@ -19,6 +19,8 @@ sidebar:
     dropdown_menu_items: 
       - title: Overview
         link: "/going-live/checklist/"
+      - title: Licenses
+        link: "/going-live/licenses/"
       # Subsection starts here with heading and list of links
       - subsection:
         - heading: Third party signups
