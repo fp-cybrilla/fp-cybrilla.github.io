@@ -1,9 +1,11 @@
 ---
-title: FATCA & CRS
+title: FATCA & CRS (Non Individuals)
 ---
-## FATCA & CRS Declaration
+## FATCA & CRS Declaration (Non Individuals)
 #### Learn everything about fatca and crs declarations to be collected from the investor
 
+>Works with
+- Non Individual Investor Profiles
 
 Mutual Funds collect certain information from the investors to identify the folios held by foreign tax residents and report them to Income Tax Department (ITD). The ITD then shares this information to the investor's country of tax residence, so they can ascertain that the investors are declaring their income and paying the right amount of tax.
 

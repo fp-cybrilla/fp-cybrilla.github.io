@@ -5,8 +5,8 @@ title: Contact Details
 #### Capture and store your investor's contact details
 
 >Works with
-- Individal Investor Profile
-- Non Individual Investor Profile
+- Individual Investor Profiles
+- Non Individual Investor Profiles
 
 #### Addresses
 
