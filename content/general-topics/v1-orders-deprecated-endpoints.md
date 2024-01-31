@@ -2,7 +2,7 @@
 title: Deprecated endpoints for v1 orders & SIPs
 ---
 ## Deprecated endpoints for v1 orders & SIPs
-Below endpoints are deprecated and will be removed as per timelines in deprecation notes
+Below endpoints are deprecated and will be removed as per timelines in [deprecation notes](https://docs.fintechprimitives.com/general-topics/deprecation-notes/)
 
 ### V1 MF investment account APIs that are deprecated
 
@@ -45,19 +45,19 @@ Below endpoints are deprecated and will be removed as per timelines in deprecati
 |Fetch all orders of an investment account|GET /api/oms/investment_accounts/:id/orders|GET /v2/mf_purchases|
 
 
-### V1 SIP PIs that are deprecated
+### V1 SIP APIs that are deprecated
 
 **Improved capabilities in V2 MF purchase plans**
 
 1. Additional frequencies like daily, weekly, etc.. as supported in the fund scheme
 2. Systematic and non systematic plans
-3. Extend plan modifcation capabilities like amount , instalment numbers & installment day for non systematic plans
+3. Additional plan modifcation capabilities like amount , instalment numbers & installment day for non systematic plans
 4. Delayed plan activation
 5. Skip installments for a duration
 6. Demat support
 7. UPI Autopay setup for payments
 
-Refer the [migration procedure](https://docs.fintechprimitives.com/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration) for SIP use cases
+Below are the deprecated end points of V1 SIPs.
 
 * POST /api/oms/investment_accounts/:id/orders/sips
 * PATCH /api/oms/investment_accounts/:id/orders/sips/:id
@@ -65,12 +65,13 @@ Refer the [migration procedure](https://docs.fintechprimitives.com/mf-transactio
 * GET /api/oms/investment_accounts/:id/orders/sips/:id/installments
 * GET /api/oms/investment_accounts/:id/orders/sips
 
-**Sandbox simulation for SIPs**
+**Sandbox simulation for V1 SIPs**
 
 |V1 API|V2 API|
 |----|----|
 |POST https://s.finprim.com/api/oms/simulate/sips/{sip_id}/generate_next_installment|https://fintechprimitives.com/docs/api/#create-a-mf-purchase-plan-installment|
 
+Refer the [migration procedure](https://docs.fintechprimitives.com/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration) for SIP use cases. 
 
 
 
