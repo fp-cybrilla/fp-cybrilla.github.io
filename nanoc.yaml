@@ -133,15 +133,6 @@ sidebar:
         - title: Migrate from V1 SIPs to V2 Purchase plans
           link: "/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration"
       # Subsection ends here
-      # Subsection starts here with heading and list of links
-      - subsection:  
-        - heading: "Archives"
-        - title: Create a Purchase Order using V1 APIs
-          link: "/mf-transactions/onetime-purchases-old-apis/"
-        - title: Create a Redemption Order using V1 APIs
-          link: "/mf-transactions/onetime-redemptions-old-apis/"
-        - title: Create a SIP using V1 APIs
-          link: "/mf-transactions/recurring-purchases/"
       # Subsection ends here
   - dropdown_menu_title: Payments
     dropdown_menu_items: 
@@ -221,8 +212,6 @@ sidebar:
         - heading: "Beta programs"
         - title: Webhook implementation for FP events
           link: "/upcoming/beta/webhook-implementation/"
-        - title: Hosted workflows
-          link: "/upcoming/beta/hosted-workflows/"
         - title: Payment checkout flow
           link: "/upcoming/beta/payment-checkout-flow/"
         - title: Order failure codes
