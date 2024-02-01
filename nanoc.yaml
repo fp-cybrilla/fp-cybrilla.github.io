@@ -193,6 +193,8 @@ sidebar:
         link: "/general-topics/roadmap/"
       - title: Release notes
         link: "/general-topics/release-notes/"
+      - title: Deprecated features 
+        link: "/general-topics/deprecation-notes/"
       - title: Best Practices Guide
         link: "/general-topics/best-practices-guide/"
       - title: NAV Applicability
