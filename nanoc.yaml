@@ -77,8 +77,6 @@ sidebar:
     dropdown_menu_items: 
       - title: Overview
         link: "/mf-transactions/overview/"
-      - title: Open an Investment Account
-        link: "/mf-transactions/investment-account/"
       - title: Lump Sum Orders
         link: "/mf-transactions/orders-introduction/"
       - title: Recurring Orders
@@ -86,6 +84,8 @@ sidebar:
 
       - subsection:
         - heading: "Accounts"
+        - title: Open an Investment Account
+          link: "/mf-transactions/investment-account/"
         - title: Required Information
           link: "/mf-transactions/accounts/required-information/"
       

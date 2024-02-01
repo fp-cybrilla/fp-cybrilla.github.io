@@ -4,25 +4,6 @@ title: Required Information (Accounts)
 ## Required Information (Accounts)
 #### All the data points needed for placing an order
 
-<!-- Investment account is the holding account for all your investor's mutual fund investments.
-
-Call [FPDocs, create investment a/c]() with the following json
-
-```json
-{
-  "primary_investor": "invpni_c55240e4b09d4617812bb9557b399a42",
-  "folio_defaults": {
-    "communication_email_address": "email_bf1026954d0545e190727de1537d9e66",
-    "communication_mobile_number": "phone_0f4a90134705474eb2e354d9b5ba5f56",
-    "communication_address": "addr_8c50b6930ebf4ec7a7ddd58c34bdf1d8",
-    "payout_bank_account": "bac_8c50b6930ebf4ec7a7ddd58c34bdf1d8"
-  }
-}
-```
-
-FP uses the information in `folio_defaults` while creating a new folio
-
---- -->
 #### Individuals
 
 For successful investment account creation and placing an order, make sure the following information is collected from the investor
@@ -50,7 +31,9 @@ If opting out of nomnination you can skip this. Otherwise provide atleast one no
 1. Name (`related_party.name`)
 2. PAN (`related_party.relationship`)
 
+[Follow this](/identity/profiles/individual-investor/) to create an individual investor profile
 
+---
 
 #### Non Individuals
 
@@ -82,5 +65,22 @@ For successful account creation and placing an order, make sure the following in
 7. Address (with nature)
 8. Tax residencies(`invp.use_default_tax_residences` or one of `invp.first_tax_residency`, `invp.second_tax_residency`, `invp.third_tax_residency`, `invp.fourth_tax_residency` )
 
+[Follow this](/identity/profiles/non-individual-investor/) to create a non individual investor profile
 
+---
 
+#### Note on data verification
+
+**Email ID and mobile number**  
+
+As part of the regulatory guidelines, the email id and mobile number of the investor has to be verified for its validity. You can use any method of your choice to do the verification. Sending an OTP or a link is the most common method.  
+Currently we don't offer APIs for email and mobile verification. FP APIs assume that the verification is done at your end.
+
+**Bank Account**  
+
+As part of the regulatory requirement, you need to verify the account ownership of the bank account given by the investor. There are two ways you can do the verification at present:  
+a) Penny drop and match the bank a/c holder name that is returned, with the investor name  
+b) Accept a cancelled cheque copy from the investor and manually match the name on the cheque with the investor name
+
+The names may not match 100% all the time. You have to be reasonably sure that the a/c belong to the investor. There are no set guidelines on what should be the match %.
+You can use FP's [bank a/c verification service](/identity/verification/perform-bank-account-verification/) or use your own mechanism to verify.
