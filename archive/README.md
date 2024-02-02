@@ -1,0 +1,1 @@
+Contains files which are kept as a reference for later. Moved it out of content folder so these won't get into the build process.

@@ -199,12 +199,6 @@ sidebar:
         link: "/general-topics/best-practices-guide/"
       - title: NAV Applicability
         link: "/general-topics/NAV-Applicability/"
-  - dropdown_menu_title: SDKs
-    dropdown_menu_items: 
-      - title: FP SDK for Javascript
-        link: "/fp-sdk/sdk-javascript/"
-      - title: Examples
-        link: "/fp-sdk/sdk-javascript/examples/"
   - dropdown_menu_title: Upcoming
     dropdown_menu_items: 
       - title: Overview
