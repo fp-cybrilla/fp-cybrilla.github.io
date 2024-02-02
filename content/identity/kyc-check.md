@@ -30,7 +30,7 @@ Call the [FPDocs, KYC Check](https://fintechprimitives.com/api/#create-a-kyc-che
 }
 ```
 
-If the `status` in the response object is `true`, it means that the investor is either KYC compliant or his KYC application is successfully accepted for review and is under process. You can go ahead and onboard the investor and place purchase and redemption orders if `status` is `true`.
+If the `status` in the response object is `true`, it means that the investor is either KYC compliant or his KYC application is successfully accepted for review and is under process (with proof of address as any document except Aadhaar). You can go ahead and onboard the investor and place purchase and redemption orders if `status` is `true`.
 
 If the value of the `status` attribute in the response object is `false`, the investor is not kyc compliant and you cannot accept investments from the investor. In such cases, the value of the attribute `reason` tells us the reason why the investor is non-compliant and the value of the attribute `action` tells us what action you can take to help investor become kyc compliant.
 
