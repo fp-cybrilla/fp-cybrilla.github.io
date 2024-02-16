@@ -7,21 +7,25 @@ The following are the failure codes and corresponding failure reasons that you m
 
 Please be aware that this list is not exhaustive, and we will continue to update it as more codes are added in the future.
 
-> As of now, failure codes are specifically populated for Billdesk as the payment provider.
 
 | Failure Code   | Failure reason   | Explanation    |
 | --- | --- | --- |
-| `fp_payment_expired`     | Payment is failed by system due to inactivity   | Payment is expired by FP because either investor did not complete the payment in the stipulated time or the payment was not utilised.   |
-| `pg_payment_expired`     | Payment failed due to investor's failure to complete within the allotted time.  | Payment was not completed by the investor in time stipulated by the investor's netbanking page or UPI app and the payment gateway has marked the payment as failed    |
-| `tpv_failed`    | Payment is made from different bank account to the one provided. Please retry using bank account provided. | investor has tried making the payment using a different bank account from the one passed a 'bank_account_id' while creating the payment and the payment is failed by the bank as MF purchases require that investor must make the payment which belongs the them and verified by the system. |
-| `pg_timeout`             | Payment is timed out. Please try again after sometime.       | This could be due to Timeout because of network traffic and Gateway or server busy and payment is not successful.    |
-| `invalid_vpa`  | UPI ID provided is invalid. Please retry payment by entering correct UPI ID    | UPI ID entered by the investor is an invalid UPI ID or an unregistered UPI ID   |
-| `bank_not_enabled`       | Given bank is not enabled. Please contact support | Bank through which the investor is trying to make the payment from, is not enabled by the payment gateway. Please verify that the payment gateway has enabled for the bank for your merchant account.  |
-| `investor_bank_declined` | Payment is declined by your bank. Please contact your bank. | The customer bank has declined the debit request. The reasons can be because of the account being blocked, insufficient balance, daily limit exceeded. Please ask the investor to check with their banks|
-| `investor_cancelled`  | Payment cancelled or not completed. Please retry the payment.   | investor has cancelled the payment or dropped off during the payment completion steps   |
-| `bank_downtime`   | Bank is not responding. Please retry after sometime  | There is an issue/downtime with the UPI app or there's an issue with the Bank is not available due to a downtime or a technical issue  |
-| `insufficient_funds`     | Insufficient funds for payment. Please ensure your account has enough funds and retry.  |     |
-| `upi_app_unavailable`    | UPI app is not available. Please retry using different app  | There is an issue/downtime with the UPI app investor has tried making payment with.         |
+|`fp_payment_expired`| Payment is failed by  system due to inactivity| Payment is expired by FP because either user did not complete the payment in the stipulated time  or the payment was not utilised.|
+|`pg_payment_expired`| Payment was not completed within the allotted time. Please retry the payment| Payment was not completed by the user in  time stipulated by the user's netbanking page or UPI app and the payment gateway has marked the payment as failed.|
+|`tpv_failed`| Payment is made from different bank account to the one provided. Please retry using bank account provided. |User has tried making the payment using a different bank account from the one passed a 'bank_account_id' while creating the payment and the payment is failed by the bank as MF purchases require that user must make the payment which belongs the them and verified by the system.|
+|`pg_timeout`| Your payment has been cancelled. Try again or complete the payment later.| This could be due to Timeout because of network traffic and Gateway or server busy and payment is not successful.|
+|`invalid_upi_id`| UPI ID provided is incorrect. Please retry payment by entering correct UPI ID| UPI ID entered by the user is an invalid or an unregistered UPI ID.|
+|`bank_not_enabled`| Your payment could not be completed as this bank is not enabled by the business. To complete the payment, use another bank account.| Bank through which the investor is trying to make the payment from, is not enabled by the payment gateway. Please verify that the payment gateway has enabled the bank for your merchant account.|
+|`investor_bank_declined`| Payment is declined by your bank. Please contact your bank or try again with another account.| The customer bank has declined the debit request. The reasons can be because of insufficient balance, daily limit exceeded. Please ask the investor to check with their banks.|
+|`user_cancelled`| Payment cancelled or not completed. Please retry the payment.| User has cancelled the payment or dropped off during the payment completion steps. |
+|`bank_downtime`| Payment processing failed due to error at bank or wallet gateway. Please retry after sometime. |There is an issue/downtime with the UPI app or there's an issue with the Bank is  not available due to a downtime or a technical issue.|
+|`insufficient_funds`| Insufficient funds for payment. Please ensure your account has enough funds and retry. | |
+|`upi_app_unavailable`| UPI app is  not available. Please retry using different app| There is an issue/downtime with the UPI app user has tried making payment with. |
+|`pg_server_error`| Payment failed due to error at payment gateway. Please retry after sometime.| There is an issue/downtime with the payment gateway due to a downtime or a technical issue. Please reach out  to FP or the payment gateway for resolution.|
+|`auth_in_progress`| Your mandate registration with same details is already in progress. Please retry after sometime.| Previous mandate authorisation is already in progress and the bank or the payment gateway has restricted duplicate authorisation request. Please wait for atleast 15 mins before retrying the mandate authorisation.|
+|`invalid_credentials`| Payment failed due to invalid credentials. Please retry using correct credentials.| User has entered wrong credentials. User can retry using the correct credentials. This can be wrong wrong netbanking username, password  or pin.|
+|`payment_failed`| Payment was unsuccessful due to a temporary issue. Please retry after sometime.| Payment processing or mandate registration failed due to error at bank or payment gateway. No specific error code received from gateway in this case.|
+|`invalid_bank_account`| Payment failed as your bank account is inoperative, blocked or closed. Try another account or contact your bank for details.| The customer bank has declined the debit request. The reasons can be because of the account being blocked, Please ask the investor to  check  with their banks|
 
 
 <!-- ### Payment API error codes and their meaning
