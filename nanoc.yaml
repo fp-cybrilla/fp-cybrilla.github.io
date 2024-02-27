@@ -150,6 +150,8 @@ sidebar:
         - heading: "Appendix"
         - title: Payment error reasons
           link: "/payments/payment-errors/"
+        - title: Enabling of Billdesk UPI Intent 
+          link: "/payments/Billdesk-Intent-flow/"
         - title: Customise payment checkout page via Razorpay SDK
           link: "/payments/Razorpay-SDK-options/"
         - title: FAQs
