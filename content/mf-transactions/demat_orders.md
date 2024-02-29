@@ -26,9 +26,12 @@ title: Buy/sell MF in demat
 
 ## Demat orders
  
-**Create investor profile and add details of your demat account**
+**Create investor profile, investment account and add details of your demat account**
 
-1. Create an [V2 investor profile](https://docs.fintechprimitives.com/mf-transactions/accounts/required-information//)
+1. Setup investor profile
+   1. Learn about [investor profile](https://docs.fintechprimitives.com/identity/profiles/individual-investor/)
+   2. Since the investor has a demat account, the information required to open an MF investment account with FP may be already available with you. You can setup the MF investment account for your investors as and when needed prior to investments.
+   3. 2. Learn about [MF investment account ](https://docs.fintechprimitives.com/mf-transactions/investment-account/) and the [required information](https://docs.fintechprimitives.com/mf-transactions/accounts/required-information/)
 2. Add a [demat account](https://fintechprimitives.com/docs/api/#demat-accounts) to the investor profile
    1. A demat account number is a 16 digit number obtained at the time of demat account creation with the depository. First 8 digits represent the DP's ID and last 8 digits represent the client ID of the investor with the depository
    2. Provide details of an active demat account
@@ -84,8 +87,10 @@ Note:
    3. If you are placing a purchase order in an existing folio, and the folio has a demat id set, then the MF units will be delivered in the demat account along with a folio.   
 
 **Consents for  orders**
-   1. You need to collect 2FA\consent for the orders on email or phone or both that are associated with the folio number. 
-   2. As per industry norms, consent can be collected via an OTP or esign. FP supports consent for orders via OTP currently.
+   1. As per SEBI, in case of demat orders, process of consent collection is followed as per the norms of depositories. Refer [16.5.1.4, SEBI circular for details](https://www.sebi.gov.in/legal/master-circulars/may-2023/master-circular-for-mutual-funds_71438.html)
+   2. As per current industry norms, consent can be collected via an OTP or esign. FP supports consent for orders via OTP currently.
+   3. You need to collect 2FA\consent for the orders on email or phone or both that are associated with the folio number. 
+
    
 Note on consents for MF redemptions:
 
@@ -98,7 +103,7 @@ Note on consents for MF redemptions:
 
 1. Refer API docs for [folio details](https://fintechprimitives.com/docs/api/#mf-folio-object)
    1. If a demat account was associated at the time of folio creation, the folio object will contain the demat account details. 
-   2. As per current industry norms, only one folio will be created within each AMC if you are buying MF in demat. Example: You already have a folio no. `61576584` with an AMC say `ICICI prudential` which is associated with your demat account `1208180004571343`. If you try to create a purchase in a new folio for same AMC and same demat account in MF investment account, then you will recieve MF units in earlier created folio `61576584` only.
+   2. As per current industry norms, only one folio may be created within each AMC if you are buying MF in demat. Example: You already have a folio no. `61576584` with an AMC say `ICICI prudential` which is associated with your demat account `1208180004571343`. If you try to create a purchase in a new folio for same AMC and same demat account in MF investment account, then you will recieve MF units in earlier created folio `61576584` only.
 
 
 
