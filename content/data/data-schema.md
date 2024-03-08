@@ -13,13 +13,13 @@ The following tables are available
 `amcs`, `fund_details`, `holdings`, `data_sync_info`  
 
 **Investor Related**  
-`addresses`,  `bank_accounts`, `investor_contact_details`, `investor_profile`, `kyc_request`  
+`addresses`,  `bank_accounts`, `investor_profiles`, `kyc_requests`, `demat_accounts`, `email_addresses`, `phone_numbers`, `related_parties`
 
 **Payments Related**  
-`mandate`  
+`mandates`
 
 **Orders Related**  
-`mf_folio`, `mf_investment_account`, `mf_purchase`, `mf_redemption`, `mf_switch`, `mf_purchase_plan`, `mf_redemption_plan`  
+`mf_folios`(`mf_folio_bank_accounts`, `mf_folio_addresses`), `mf_investment_accounts`, `mf_purchases`, `mf_redemptions`, `mf_switches`, `mf_switch_plans`, `mf_purchase_plans`, `mf_redemption_plans`, `transactions`
 
 The table `data_sync_info` contains metadata about when the data was synced. You can use that information in your queries.
 
