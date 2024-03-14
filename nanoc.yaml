@@ -191,6 +191,8 @@ sidebar:
         link: "/pages/workflows/automated-communication/"
       - title: Release notes
         link: "/general-topics/release-notes/"
+      - title: Circulars
+        link: "/general-topics/circulars/"
       - title: Deprecated features 
         link: "/general-topics/deprecation-notes/"
       - title: Best Practices Guide
