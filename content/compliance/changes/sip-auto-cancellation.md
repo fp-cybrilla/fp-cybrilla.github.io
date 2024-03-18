@@ -21,9 +21,9 @@ As per SEBI circular SEBI/HO/OW/IMD/IMD-SEC1/P/2024/270/1 dated 3rd January 20
 | `day_in_a_fortnight` | 3 | Currently, limit applicable for systematic plan only |
 | `twice_a_month` | 3 | Currently, limit applicable for systematic plan only |
 | `monthly` | 3 | Currently, limit applicable for systematic plan only |
-| `quarterly` | 3 | Currently, limit applicable for systematic plan only |
-| `half-yearly` | 3 | Currently, limit applicable for systematic plan only |
-| `yearly` | 3 | Currently, limit applicable for systematic plan only |
+| `quarterly` | 2 | Currently, limit applicable for systematic plan only |
+| `half-yearly` | 2 | Currently, limit applicable for systematic plan only |
+| `yearly` | 2 | Currently, limit applicable for systematic plan only |
 
 
 1. FP will mark a purchase plan as cancelled automatically if the plan is systematic and the number of consecutive failed\skipped instalments is more than the limit suggested by SEBI. Purchase plan will also have a `cancellation_code` to indicate the same i.e
