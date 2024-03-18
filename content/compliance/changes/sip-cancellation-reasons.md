@@ -9,6 +9,7 @@ Uniformity in Cancellation of SIPs across Mutual Funds
 ##### References
 1. [newwindow, SEBI Circular](https://)
 As per SEBI circular SEBI/HO/OW/IMD/IMD-SEC1/P/2024/270/1 dated 3rd January 2024, AMCs are required to ensure capturing proper reasons for cancellation of a purchase plan. This change is expected to be live by April 1st, 2024.
+
 ### Changes in FP
 
 FP has introduced a new attribute `cancellation_code` while cancelling a purchase plan.
@@ -57,7 +58,7 @@ New endpoint- POST `/v2/mf_purchase_plans/cancel`
 | id | yes| string | V2 plan ID |
 | canellation_code | yes | 
 
-### CANCEL SIP API
+#### CANCEL SIP API
 
 Endpoint - PATCH `/api/oms/investment_accounts/:id/orders/sips/:id`
 

@@ -24,10 +24,10 @@ As per SEBI circular SEBI/HO/OW/IMD/IMD-SEC1/P/2024/270/1 dated 3rd January 20
 | `half-yearly` | 3 | Currently, limit applicable for systematic plan only |
 | `yearly` | 3 | Currently, limit applicable for systematic plan only |
 
-1. FP will mark a purchase plan as cancelled automatically if the plan is systematic and the number of consecutive failed\skipped instalments is more than the limit suggested by SEBI. Purchase plan will also have a `cancellation_code` to indicate the same i.e 
 
+1. FP will mark a purchase plan as cancelled automatically if the plan is systematic and the number of consecutive failed\skipped instalments is more than the limit suggested by SEBI. Purchase plan will also have a `cancellation_code` to indicate the same i.e
 `cancellation_code - skipped_installment_limit_exceeded`
-      
+
 2. FP will take care of these changes, and you do not need to make any change at your end.
 
 3. We recommend you to make a note of these limits if you are skipping installments from your front end application.
