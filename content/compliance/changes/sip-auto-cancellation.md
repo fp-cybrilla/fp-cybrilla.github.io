@@ -7,7 +7,8 @@ title: Auto Cancellation of SIPs
 Uniform timeline for auto cancellation of plans due to failed installments
 
 ##### References
-1. [newwindow, SEBI Circular](https://)
+[newwindow, SEBI Circular](/compliance/changes/uniformity_in_cancellation_of_sips.pdf ':ignore')
+
 As per SEBI circular SEBI/HO/OW/IMD/IMD-SEC1/P/2024/270/1 dated 3rd January 2024, AMCs are required to follow common practice to allow "number of failed instalments" for a purchase plan. This change is expected to be live by April 1st, 2024.
 
 ### Changes in FP
