@@ -7,7 +7,7 @@ title: Capturing SIP cancellation reasons
 Uniformity in Cancellation of SIPs across Mutual Funds
 
 ##### References
-[newwindow, SEBI Circular](/changes/uniformity_in_cancellation_of_sips.pdf ':ignore')
+[newwindow, SEBI Circular](/general-topics/compliance/changes/uniformity_in_cancellation_of_sips.pdf ':ignore')
 
 As per SEBI circular SEBI/HO/OW/IMD/IMD-SEC1/P/2024/270/1 dated 3rd January 2024, AMCs are required to ensure capturing proper reasons for cancellation of a purchase plan. This change is expected to be live by April 1st, 2024.
 
