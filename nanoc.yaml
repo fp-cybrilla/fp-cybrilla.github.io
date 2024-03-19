@@ -154,6 +154,8 @@ sidebar:
           link: "/payments/Billdesk-Intent-flow/"
         - title: Customise payment checkout page via Razorpay SDK
           link: "/payments/Razorpay-SDK-options/"
+        - title: Late payment authorisations 
+          link: "/payments/late-authorised-payments/"
         - title: FAQs
           link: "/payments/FAQs"
       # Subsection ends here
