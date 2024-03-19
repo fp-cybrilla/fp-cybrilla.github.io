@@ -27,3 +27,11 @@ Below is an example of a truncated Fetch payment JSON response showing only the 
 ```
 - **Via Dashboard:** For late authorsied payments, in the dashboard, you will see "late authorised" flag as true and you will be able to see refund details as well. You can use these details to inform your investors about the refund status.
 
+Please note that for late authorised Mandate authorisation payments, refund parameters are not present as there is no money involved.
+
+#### Simulating late authorised payments in sandbox:
+To simulate payment as late authorised in sandbox, following the steps:
+1. Create payment using [FPDocs, Create payment](https://fintechprimitives.com/docs/api/#create-a-payment) and open the `token_url` received in the response in a browser and do not mark the payment as success yet.
+2. Mark the payment as `failed` using the [FPDocs, payment simulation](https://fintechprimitives.com/docs/api/#payment-simulation)
+3. Now mark the payment as `successful` in the `token_url` opened in step 1. This should mark the payment as late authorised payment. 
+
