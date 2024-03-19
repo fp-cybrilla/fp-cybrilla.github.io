@@ -10,7 +10,7 @@ To manage late authorizations, Razorpay waits for 10 minutes to receive status u
 
 #### Tracking Late Authorized Payments
 Late authorised payments can be tracked either via FP dashboard or via Fetch Payment API:
-- **Via APIs:** In the [FPDocs, Fetch Payment](https://fintechprimitives.com/docs/api/#fetch-a-payment), you will be able to see the following new parameters which will help you in providing the details to your investors.
+- **Via APIs(Sandbox only):** In the [FPDocs, Fetch Payment](https://fintechprimitives.com/docs/api/#fetch-a-payment), you will be able to see the following new parameters which will help you in providing the details to your investors.
 
 
 Below is an example of a truncated Fetch payment JSON response showing only the  late auth and refund parameters:
