@@ -65,7 +65,7 @@ The following are the failure codes that might occur while processing an order w
 | --- | --- | --- |
 | `multiple_tax_statuses`| Investor has different tax statuses across folios. Update latest tax status in all folios of the AMC.| Purchase |
 | `ekyc_investment_amount_limit_exceeded`| Order amount exceeded investment limit for Aadhaar\eKYC investors. Investor can place order upto Rs. 50,000 per annum per AMC only| Purchase |
-| `nomination_declartion_missing`  |Nomination opt in or out for the folio associated with the order is missing | All |
+| `nomination_declaration_missing`  |Nomination opt in or out for the folio associated with the order is missing | All |
 | `folio_contact_already_in_use`  |Email\mobile used for a folio creation is already linked to another PAN no. Investor needs to declare nominee relation details in the previously used PAN. | New purchase |
 | `consent_missing`  |2FA consent from investor is missing for the order | All |
 | `consent_contact_mismatch`  | Mobile number or email on which investor consent for the order was taken does not match with the folio contact details | All |
