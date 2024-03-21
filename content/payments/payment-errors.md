@@ -16,7 +16,7 @@ Please be aware that this list is not exhaustive, and we will continue to update
 |`pg_timeout`| Your payment has been cancelled. Try again or complete the payment later.| This could be due to Timeout because of network traffic and Gateway or server busy and payment is not successful.|
 |`invalid_upi_id`| UPI ID provided is incorrect. Please retry payment by entering correct UPI ID| UPI ID entered by the user is an invalid or an unregistered UPI ID.|
 |`bank_not_enabled`| Your payment could not be completed as this bank is not enabled by the business. To complete the payment, use another bank account.| Bank through which the investor is trying to make the payment from, is not enabled by the payment gateway. Please verify that the payment gateway has enabled the bank for your merchant account.|
-|`investor_bank_declined`| Payment is declined by your bank. Please contact your bank or try again with another account.| The customer bank has declined the debit request. The reasons can be because of insufficient balance, daily limit exceeded. Please ask the investor to check with their banks.|
+|`investor_bank_declined`| Payment is declined by your bank. Please contact your bank or try again with another account.| The investor bank has declined the debit request. The reasons can be because of insufficient balance, daily limit exceeded. Please ask the investor to check with their banks.|
 |`user_cancelled`| Payment cancelled or not completed. Please retry the payment.| User has cancelled the payment or dropped off during the payment completion steps. |
 |`bank_downtime`| Payment processing failed due to error at bank or wallet gateway. Please retry after sometime. |There is an issue/downtime with the UPI app or there's an issue with the Bank is  not available due to a downtime or a technical issue.|
 |`insufficient_funds`| Insufficient funds for payment. Please ensure your account has enough funds and retry. | |
@@ -25,7 +25,7 @@ Please be aware that this list is not exhaustive, and we will continue to update
 |`auth_in_progress`| Your mandate registration with same details is already in progress. Please retry after sometime.| Previous mandate authorisation is already in progress and the bank or the payment gateway has restricted duplicate authorisation request. Please wait for atleast 15 mins before retrying the mandate authorisation.|
 |`invalid_credentials`| Payment failed due to invalid credentials. Please retry using correct credentials.| User has entered wrong credentials. User can retry using the correct credentials. This can be wrong wrong netbanking username, password  or pin.|
 |`payment_failed`| Payment was unsuccessful due to a temporary issue. Please retry after sometime.| Payment processing or mandate registration failed due to error at bank or payment gateway. No specific error code received from gateway in this case.|
-|`invalid_bank_account`| Payment failed as your bank account is inoperative, blocked or closed. Try another account or contact your bank for details.| The customer bank has declined the debit request. The reasons can be because of the account being blocked, Please ask the investor to  check  with their banks|
+|`invalid_bank_account`| Payment failed as your bank account is inoperative, blocked or closed. Try another account or contact your bank for details.| The investor bank has declined the debit request. The reasons can be because of the account being blocked, Please ask the investor to  check  with their banks|
 
 
 <!-- ### Payment API error codes and their meaning
