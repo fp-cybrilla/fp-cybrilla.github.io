@@ -57,7 +57,7 @@ New endpoint- POST `/v2/mf_purchase_plans/cancel`
 |Name | Mandatory | Type | Comments |
 | -- | -- | -- | -- |
 | id | yes| string | V2 plan ID |
-| canellation_code | yes | 
+| cancellation_code | yes | 
 
 #### Cancel SIP API (<sup>Deprecated</sup>)
 
@@ -67,4 +67,4 @@ Endpoint - PATCH `/api/oms/investment_accounts/:id/orders/sips/:id`
 
 |Name | Mandatory | Type | Comments |
 | -- | -- | -- | -- |
-| canellation_code | yes| string | if operation=`deactivate` |
+| cancellation_code | yes| string | if operation=`deactivate` |
