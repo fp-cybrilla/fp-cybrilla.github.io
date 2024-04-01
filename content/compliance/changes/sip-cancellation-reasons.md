@@ -13,11 +13,13 @@ As per SEBI circular SEBI/HO/OW/IMD/IMD-SEC1/P/2024/270/1 dated 3rd January 20
 
 ### Changes in FP
 
+
+> Note the change in the cancel purchase plan API endpoint `/v2/mf_purchase_plans/:id/cancel` will be decommissioned on 1st April 2024 and new endpoint `/v2/mf_purchase_plans/cancel` will only be active
+
 FP has introduced a new attribute `cancellation_code` while cancelling a purchase plan.
 
-This attribute will be optional input for the cancel API until March 31st 2024, and will be made mandatory on April 1st 2024.
+This attribute will be optional input for the cancel API (`/v2/mf_purchase_plans/cancel`) until March 31st 2024, and will be made mandatory on April 1st 2024.
 
-Note the change in the cancel purchase plan API endpoint `/v2/mf_purchase_plans/:id/cancel` will be decommissioned on April first and new endpoint `/v2/mf_purchase_plans/cancel` will be active
 
 #### Affected API endpoints
 Purchase plan API endpoint - POST `/v2/mf_purchase_plans/:id/cancel`

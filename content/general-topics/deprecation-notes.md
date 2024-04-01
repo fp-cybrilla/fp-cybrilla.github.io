@@ -17,3 +17,6 @@ Deprecated features are regularly updated in this list and API documents. Please
 | Remove deprecated attributes in scheme master| [Scheme master changes](/general-topics/scheme-master-deprecation-details)|[Scheme master](https://fintechprimitives.com/docs/api/#fund-scheme)| 30th Mar, 2024| Deprecated|
 | [V1 lumpsum order](https://docs.fintechprimitives.com/general-topics/v1-orders-deprecated-endpoints/) | [V2 MF purchases](https://fintechprimitives.com/docs/api/#mf-purchases) | [purchase](https://fintechprimitives.com/docs/api/#mf-purchase-object)| 30th Mar, 2024| Deprecated|
 | [V1 SIP](https://docs.fintechprimitives.com/general-topics/v1-orders-deprecated-endpoints/) | [V2 MF purchase plans](https://fintechprimitives.com/docs/api/#mf-purchase-plans) | [SIP Migration procedure](/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration) | 30th Mar, 2024| Deprecated|
+| POST /v2/mf_purchase_plans/:id/cancel |POST /v2/mf_purchase_plans/cancel | [New cancel V2 MF purchase plans](https://fintechprimitives.com/docs/api/#cancel-a-purchase-plan)| 30th Mar, 2024| Removed|
+
+
