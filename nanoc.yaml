@@ -124,6 +124,8 @@ sidebar:
       # Subsection starts here with heading and list of links
       - subsection:  
         - heading: "Appendix"
+        - title: Auto cancellation of purchase plans
+          link: "/mf-transactions/purchase-plans/auto_cancellation"
         - title: Transaction Plans Use Cases
           link: "/mf-transactions/transaction-plans-usecases"
         - title: Demat orders
