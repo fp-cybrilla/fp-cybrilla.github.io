@@ -9,7 +9,7 @@ title: Auto cancellation of purchase plans
 
 1. FP will mark a purchase plan as cancelled automatically if the plan is systematic and the number of consecutive failed\skipped installments is more than the limit suggested by SEBI. Purchase plan will also have a `cancellation_code` attribute with value as `consecutive_failed_installment_limit_exceeded`.
 
-2.  The payment completion or [retry payment](https://fintechprimitives.com/docs/api/#retry-mf-purchase) for an installment must happen within the expiry window and installment order should move to `confirmed` state. Refer to the [systematic purchase plan frequency specific installment order expiry windows]((https://fintechprimitives.com/docs/api/#order-expiry)) 
+2.  The payment completion or [retry payment](https://fintechprimitives.com/docs/api/#retry-mf-purchase) for an installment must happen within the expiry window and installment order should move to `confirmed` state. Refer to the [systematic purchase plan frequency specific installment order expiry windows](https://fintechprimitives.com/docs/api/#order-expiry) 
     1. For example say investor has a monthly purchase plan as below
        1. 1st installment scheduled on 1st April 2024 and payment failed due to low balance. Investor did not retry payment till 7th April, 2024. This is failure of 1st installment.
        2. 2nd  installment scheduled on 1st May 2024 and payment failed due to low balance. Investor did not retry payment till 7th May, 2024. This is failure of 2nd installment.
