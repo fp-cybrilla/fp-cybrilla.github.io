@@ -199,6 +199,8 @@ sidebar:
         link: "/general-topics/release-notes/"
       - title: Deprecated features 
         link: "/general-topics/deprecation-notes/"
+      - title: BSE Validations
+        link: "/general-topics/bse_validations/"
       - title: Best Practices Guide
         link: "/general-topics/best-practices-guide/"
       - subsection:
