@@ -15,3 +15,4 @@ FP takes care of operational changes introduced due to any new sebi / amfi circu
 1. [Auto cancellation of sips](/compliance/changes/sip-auto-cancellation/) [Breaking change]
 2. [Capturing reasons for cancelling an SIP](/compliance/changes/sip-cancellation-reasons/) [Breaking change]
 3. [Online PAN validation](/compliance/changes/name-verification/) [Information]
+4. [Relevance of KYC Validation](/compliance/changes/kyc-validation-relevance) [Information]
