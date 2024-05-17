@@ -7,19 +7,19 @@ FP offers a capability of fetch an investor's RTA CAS summary by providing the P
 - Ensure the investor is onboarded and the `investor_profile` is present with either one `phone_number` or `email_address` tagged to it
 
 ### Workflow to fetch an RTA CAS
-1. Create an `mf_investments_snapshot` object by providing the `profile` as mentioned in the [Create MF Investments Snapshot]() API. The `status` would be `consent_required` at this stage
-2. The investor will receive an OTP on the phone number / email address mapped to the `profile` that was given in the previous step
-3. Use [Update MF Investments Snapshot]() API to provide the  OTP that the investor received. Now the `status` would be changed to `submitted` provided the OTP was successfully validated. If this OTP was not given in the valid time range, the `status` would be marked as `expired`
-5. Now the MF Investments Snapshot request would be submitted to the gateway. Use [Fetch MF Investments Snapshot]() API using the `mf_investments_snapshot` ID to get the updated status of this MF Investments Snapshot request. The final status can either be `successful` or `failed`
+1. Create an `mf_investments_snapshot` object by providing the `profile` along with either `phone_number` or `email_address` as mentioned in the [Create MF Investments Snapshot](https://fintechprimitives.com/docs/api/#create-mf-investments-snapshot) API. The `status` would be `consent_required` at this stage
+2. The investor will receive an OTP on the phone number / email address that was given in the previous step
+3. Use [Update MF Investments Snapshot](https://fintechprimitives.com/docs/api/#update-mf-investments-snapshot) API to provide the  OTP that the investor received. Now the `status` would be changed to `submitted` provided the OTP was successfully validated. If this OTP was not given in the valid time range, the `status` would be marked as `expired`
+5. Now the MF Investments Snapshot request would be submitted to the gateway. Use [Fetch MF Investments Snapshot](https://fintechprimitives.com/docs/api/#fetch-mf-investments-snapshot) API using the `mf_investments_snapshot` ID to get the updated status of this MF Investments Snapshot request. The final status can either be `successful` or `failed`
 
-### Notes on OTP consent for RTA CAS
-1. If both phone number and email address are tagged to an investor profile, FP will use the `phone_number` to send out the OTP
-2. If only email address is tagged to an investor profile, the same would be used by FP to send out the OTP
-3. If both phone number and email address are not tagged to an investor profile, FP will throw an error indicating either one should be present
-4. If multiple objects for phone number / email address are tagged to an investor profile, FP will use the below logic to send out the OTP -
-    - The latest created phone number / email address with `belongs_to = self` will be used to send the OTP
-    - If `belongs_to = null` in all of them, FP use the latest created phone number / email address to send the OTP
-5. OTP is generally observed to be valid until 10 minutes since it was generated. Ensure the OTP consent is collected within this time range failing which will result the MF Investments Snapshot request to be marked as `expired` with `failure_code` = `otp_expired`
+### How to work with `phone_number` and `email_address`?
+
+1. Ensure either `phone_number` or `email_address` is provided along with the `profile`. You cannot provide both `phone_number` and `email_address`
+2. Ensure that this `phone_number` or `email_address` is tagged to the `profile` and `belongs_to` is set to `self`
+3. The investor would get an OTP on either the phone number or email address that is mentioned. The same can be provided in the [Update MF Investments Snapshot](https://fintechprimitives.com/docs/api/#update-mf-investments-snapshot) API to complete the workflow
+4. OTP is generally observed to be valid until 10 minutes since it was generated. Ensure the OTP consent is collected within this time range failing which will result the MF Investments Snapshot request to be marked as `expired` with `failure_code` = `otp_expired`
+
+> **NOTE:** You can use the below APIs to ensure `phone_number` and `email_addess` belong to the `profile` <br><br> - [List all Phone Numbers](https://fintechprimitives.com/docs/api/#list-all-phone-numbers) API<br>- [List all Email Addresses](https://fintechprimitives.com/docs/api/#list-all-email-addresses) API
 
 ### Testing
 
