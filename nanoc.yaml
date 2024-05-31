@@ -124,6 +124,8 @@ sidebar:
       # Subsection starts here with heading and list of links
       - subsection:  
         - heading: "Appendix"
+        - title: Order failure codes
+          link: "/mf-transactions/failure-codes/"
         - title: Auto cancellation of purchase plans
           link: "/mf-transactions/purchase-plans/auto_cancellation"
         - title: Transaction Plans Use Cases
@@ -220,6 +222,5 @@ sidebar:
           link: "/upcoming/beta/webhook-implementation/"
         - title: Payment checkout flow
           link: "/upcoming/beta/payment-checkout-flow/"
-        - title: Order failure codes
-          link: "/mf-transactions/failure-codes/"
+
 
