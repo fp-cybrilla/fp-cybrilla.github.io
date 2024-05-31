@@ -21,9 +21,9 @@ The maximum limit determines the highest amount that can be debited from the inv
 
 | Payment Gateway  | eNACH Maximum Limit | UPI-Autopay Maximum Limit | Remarks                    |
 |------------------|---------------------|---------------------------|----------------------------|
-| Razorpay         |           Rs. 1 Cr  |                 Rs. 15000  | Limit is per transaction   |
-| BillDesk         |           Rs. 1 Cr  |                 Rs. 15000  | Limit is per day           |
-| BSE              |           Rs. 1 Cr  |                 NA        | Limit is per day           |
+| Razorpay         |           Rs. 1 Cr  |               Rs. 15000 | Limit is per transaction   |
+| BillDesk         |           Rs. 1 Cr  |               Rs. 15000 | Limit is per day           |
+| BSE              |           Rs. 1 Cr  |                NA         | Limit is per day           |
   
 Setting an appropriate maximum limit for the mandate is crucial as it directly impacts the number of [FP Purchase plans](https://fintechprimitives.com/docs/api/#mf-purchase-plans) that can be processed in a given day and the maximum amount that can be debited for each instalment. 
 
@@ -49,7 +49,7 @@ For UPI Autopay, Rs. 10 will be deducted from the investor bank account while au
 
 `Approved` mandates can be cancelled if there is a requirement from the investor, such as a bank change or any other valid reason. To cancel an `Approved` mandate, you can utilize the [FPDocs, Cancel eNACH mandate](https://fintechprimitives.com/docs/api/#cancel-a-mandate) by passing the mandate ID as the request parameter.
 
-eNACH mandate cancellation functionality is currently available for Razorpay and BSE mandates only. For Razorpay, When a mandate is cancelled using the [FPDocs, Cancel eNACH mandate](https://fintechprimitives.com/docs/api/#cancel-a-mandate), the mandate will be cancelled at Razorpay's end as well. Even if the Razorpay mandate is deleted outside of FP, FP will mark the mandate as `Cancelled` to maintain accurate mandate status within the system. But for BSE mandates, please cancel the mandate in BSE dashboard before cancelling the mandate in FP. 
+For Razorpay and Billdesk, when a mandate is cancelled using the [FPDocs, Cancel eNACH mandate](https://fintechprimitives.com/docs/api/#cancel-a-mandate), the mandate will be cancelled at payment provider's end as well. Even if the Razorpay mandate is deleted outside of FP, FP will mark the mandate as `Cancelled` to maintain accurate mandate status within the system. But for BSE mandates, please cancel the mandate in BSE dashboard before cancelling the mandate in FP. 
 
 
 ### **Mandate States**
