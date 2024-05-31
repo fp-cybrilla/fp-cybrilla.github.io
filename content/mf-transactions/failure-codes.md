@@ -44,7 +44,7 @@ The following are the failure codes that might occur while processing an order w
 | `plan_scheme_date_invalid`|  Installment date selected for the purchase plan is not allowed in the scheme |  Purchase plan |
 | `minor_only_investment_allowed`| Only minor investor purchases are allowed in this scheme	| New purchase |
 | `country_not_allowed`|  Country of investor is not allowed for investments in the scheme| New purchase |
-| `installment_count_invalid`|  No. of installments for the purchase plan as per the the scheme or frequency is not valid| Purchase plan |
+| `no_of_installments_invalid`|  No. of installments for the purchase plan as per the the scheme or frequency is not valid| Purchase plan |
 
 
 #### Order failure codes related to payments
@@ -64,6 +64,9 @@ The following are the failure codes that might occur while processing an order w
 | Failure Code   | Description   | Order type    |
 | --- | --- | --- |
 | `multiple_tax_statuses`| Investor has different tax statuses across folios. Update latest tax status in all folios of the AMC.| Purchase |
+| `folio_nominee_opt_in_missing`| Investor has not declared nomination for the folio. Either add nominees or opt out of nomination before submitting another order.| All |
+| `demat_folio_order_not_allowed`|Redemption or switch orders in demat folios are not allowed via RTA channel partner account. They should be placed via depository using the DP account| Redemption, Switch |
+| `fatca_missing`|Investor FATCA details are not available with AMC. Contact [FP operations](mailto:opscybrilla@cybrilla.com)| Purchase|
 | `ekyc_investment_amount_limit_exceeded`| Order amount exceeded investment limit for Aadhaar\eKYC investors. Investor can place order upto Rs. 50,000 per annum per AMC only| Purchase |
 | `nomination_declaration_missing`  |Nomination opt in or out for the folio associated with the order is missing | All |
 | `folio_contact_already_in_use`  |Email\mobile used for a folio creation is already linked to another PAN no. Investor needs to declare nominee relation details in the previously used PAN. | New purchase |
@@ -77,7 +80,9 @@ The following are the failure codes that might occur while processing an order w
 | `folio_balance_marked_lien`| 	Balance cannot be redeemed as it is marked lien | Redemption, Switch  |
 | `folio_closed`| Orders in a consolidated folio are not allowed| Purchase |
 | `license_code_invalid` |Your license code with the RTA is invalid. Also verify that the order's scheme `plan_type` (i.e regular\direct) is valid for your license code | All |
-| `rta_amc_inactive` |AMC under your RTA account is not activated. Activate AMC in your RTA account. Additionally check e-log status if order belongs to AMC via CAMS RTA. | All |
+| `amc_inactive` |AMC under your RTA account is not activated. Activate AMC in your RTA account. Additionally check e-log status if order gateway us RTA - CAMS. | All |
 | `cancelled_by_investor` | Order was cancelled from processing upon a request from investor | All |
 | `order_expiry`|  Order expired as it is not confirmed by investor| Redemption, Switch |
+| `order_gateway_failure`|  Order failed at the gateway due to unknown reasons| All |
+| `technical_failure_at_gateway`|  Order failed due to technical issues with the gateway system like RTA| All |
 
