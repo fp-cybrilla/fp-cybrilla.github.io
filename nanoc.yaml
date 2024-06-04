@@ -222,5 +222,6 @@ sidebar:
           link: "/upcoming/beta/webhook-implementation/"
         - title: Payment checkout flow
           link: "/upcoming/beta/payment-checkout-flow/"
-
+        - title: ONDC Gateway
+          link: "/upcoming/beta/ondc-gateway/"
 
