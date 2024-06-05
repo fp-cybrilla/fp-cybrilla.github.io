@@ -134,6 +134,8 @@ sidebar:
           link: "/mf-transactions/demat_orders"
         - title: Migrate offline folios
           link: "/mf-transactions/migrate_offline_folios"
+        - title: Partner tagging
+          link: "/mf-transactions/partner-tagging/"
         - title: Migrate from V1 SIPs to V2 Purchase plans
           link: "/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration"
       # Subsection ends here
