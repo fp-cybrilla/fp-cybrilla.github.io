@@ -21,8 +21,8 @@ The maximum limit determines the highest amount that can be debited from the inv
 
 | Payment Gateway  | eNACH Maximum Limit | UPI-Autopay Maximum Limit | Remarks                    |
 |------------------|---------------------|---------------------------|----------------------------|
-| Razorpay         |           Rs. 1 Cr  |               Rs. 15000 | Limit is per transaction   |
-| BillDesk         |           Rs. 1 Cr  |               Rs. 15000 | Limit is per day           |
+| Razorpay         |           Rs. 1 Cr  |               Rs. 1 Lakh | Limit is per transaction   |
+| BillDesk         |           Rs. 1 Cr  |               Rs. 1 Lakh | Limit is per day           |
 | BSE              |           Rs. 1 Cr  |                NA         | Limit is per day           |
   
 Setting an appropriate maximum limit for the mandate is crucial as it directly impacts the number of [FP Purchase plans](https://fintechprimitives.com/docs/api/#mf-purchase-plans) that can be processed in a given day and the maximum amount that can be debited for each instalment. 
@@ -40,7 +40,8 @@ Once the mandate is created with FP, you can proceed with authorizing the mandat
 ```
 
 Upon initiating the [FPDocs, Authorize eNACH/UPI-Autopay mandate](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach), you will receive a `token_url` in the response. This `token_url` redirects the investor to their respective bank's netbanking page or UPI app to authorize the mandate. The approval of the mandate is typically immediate, with the authorization transaction successfully confirming the investor's consent. In rare cases, the approval process may take up to T+1 days for completion.
-For UPI Autopay, Rs. 10 will be deducted from the investor bank account while authorising the mandate and will be refunded within 3-5 bank working days.
+
+For UPI Autopay, Razorpay deducts ₹10 and Billdesk deducts ₹1 from the investor's bank account during mandate authorization and will be refunded within 3-5 bank working days.
 
 > Note: BSE requires a gap of atleast one minute between Mandate creation and authorisation. 
 
