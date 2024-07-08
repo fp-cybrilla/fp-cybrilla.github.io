@@ -115,7 +115,7 @@ Call the [FPDocs, update mf redemption](https://fintechprimitives.com/docs/api/#
 #### 7. Track the order
 
 Call the [FPDocs, fetch mf redemption](https://fintechprimitives.com/docs/api/#fetch-a-mf-redemption) to check the `state` of the sell order.  
-When the order is successfully submitted to the AMC, the order status becomes `submitted`. [Learn more about the order states](/mf-transactions/order-states)
+When the order is successfully submitted to the AMC, the order status becomes `submitted`. [Learn more about the order states](/mf-transactions/orders-introduction/#order-states)
 
 Orders in `confirmed` state will be sent for processing and the object state will move to `submitted`. After the order is processed successfuly and units are repurchased by the AMC, the object state will move to `successful`; the redeemed units, amount and the price is available in `redeemed_units`, `redeemed_amount` and `redeemed_price` attributes of the mf redemption object.
 
