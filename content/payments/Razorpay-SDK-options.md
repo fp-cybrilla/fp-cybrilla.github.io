@@ -102,8 +102,8 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
 
 Similar steps must be followed for E-Mandate/UPI Autopay authorisation page customisation using Razorpay SDK. Please refer to [Razorpay documentation for E-Mandate authorisation] (https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction) and [Razorpay documentation for UPI Autopay authorisation](https://razorpay.com/docs/api/payments/recurring-payments/upi-tpv/create-authorization-transaction/#113-create-an-authorization-payment)
 
-1. Create a mandate in FP by using [FPDocs, Create mandate](https://fintechprimitives.com/docs/api/#create-a-mandate-enach).
-2. Create the authorisation transaction for the mandate generated in step 1 using [FPDocs, Authorise Mandate](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach) by passing the mandate ID.
+1. Create a mandate in FP by using [FPDocs, Create mandate](https://fintechprimitives.com/docs/api/#create-a-mandate-enach-amp-upi-autopay).
+2. Create the authorisation transaction for the mandate generated in step 1 using [FPDocs, Authorise Mandate](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach-and-upi-autopay) by passing the mandate ID.
 
     *Mandate auth Request:*
 

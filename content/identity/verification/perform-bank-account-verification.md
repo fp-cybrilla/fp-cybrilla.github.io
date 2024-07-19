@@ -9,7 +9,7 @@ Use FP APIs to verify bank accounts.
 
 ### 1. Create a bank account verification request
 
-Call the [Create Bank Account Verification API](https://fintechprimitives.com/docs/api/#create-bank-verification-transaction) by providing the ID of the `bank_account` object that you want to verify. 
+Call the [Create Bank Account Verification API](https://fintechprimitives.com/docs/api/#create-bank-verification) by providing the ID of the `bank_account` object that you want to verify. 
 
 ```json
 {
@@ -20,7 +20,7 @@ Call the [Create Bank Account Verification API](https://fintechprimitives.com/do
 A bank account verification object will be created with status=`pending`
 
 ### 2. Check the bank account verification status periodically to check the status of the verification
-Once the `bank_account_verification` object is created, we need to poll the [fetch bank account verification transaction by ID](https://fintechprimitives.com/docs/api/#fetch-bank-account-verification-transaction-by-id) API to check status periodically. If the `status` is `completed`, the verification is successful. At this point, we can consider the `confidence` value to decide on the confidence of the bank account verified.
+Once the `bank_account_verification` object is created, we need to poll the [fetch bank account verification transaction by ID](https://fintechprimitives.com/docs/api/#fetch-bank-account-verification-by-id) API to check status periodically. If the `status` is `completed`, the verification is successful. At this point, we can consider the `confidence` value to decide on the confidence of the bank account verified.
 
 If the `status` is `failed`, it means the bank account could not be verified. If `reason` for failure is `expiry`, you can retry bank account verification. If the status is `failed` and `reason` is `digital_verification_failure`, you can attempt verify some other bank account instead.
 
@@ -81,4 +81,4 @@ In sandbox, simulation facility can be used to test bank account verification. T
 
 ### How to start verifying bank accounts?
 
-If you want to make use of this bank account verification service, please write to [FP Support](mailto:fpsupport@cybrilla.com) and we will enable this service for your tenant. You can either choose a default verification option offered as a part of Fintech Primitives API collection or choose a CAMSPay integration. If you are going ahead with CAMSPay integration option, you would have to configure an input match threshold value, without which the bank account verifications cannot be performed. If you are going ahead with the default option, then you don't have to configure an input match threshold and the behaviour would be as indicated in the above simulation logics.
+If you want to make use of this bank account verification service, please write to [FP Support](mailto:customerservice@cybrilla.com) and we will enable this service for your tenant. You can either choose a default verification option offered as a part of Fintech Primitives API collection or choose a CAMSPay integration. If you are going ahead with CAMSPay integration option, you would have to configure an input match threshold value, without which the bank account verifications cannot be performed. If you are going ahead with the default option, then you don't have to configure an input match threshold and the behaviour would be as indicated in the above simulation logics.
