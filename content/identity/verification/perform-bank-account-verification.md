@@ -5,7 +5,7 @@ Use FP APIs to verify bank accounts.
 ### Prerequisite
  - [Create an Investor Profile](https://fintechprimitives.com/docs/api/#create-an-investor-profile) before performing the bank account verifications.
  - After creating the Investor Profile, you must attach one or more bank accounts for the investor using the [Create a Bank Account API](https://fintechprimitives.com/docs/api/#bank-accounts-early-access)
- - You can set an optional input match threshold based on which the bank account verification results can be optimised. By default, the input match threshold will not be set for a tenant. If you want to use this feature, please write to [FP Support](mailto:fpsupport@cybrilla.com) to get more information on this
+ - You can set an optional input match threshold based on which the bank account verification results can be optimised. By default, the input match threshold will not be set for a tenant. If you want to use this feature, please write to our [customer service](mailto:customerservice@cybrilla.com) to get more information on this
 
 ### 1. Create a bank account verification request
 
