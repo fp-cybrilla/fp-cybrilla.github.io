@@ -8,7 +8,7 @@ An eNACH/UPI-Autopay mandate represents an investor's one-time authorization thr
 
 ### Setting up a eNACH or UPI-Autopay mandate for an investor involves two steps:
 #### Step 1: Create an eNACH Mandate:
-To create an eNACH or UPI-Autopay mandate, use the [FPDocs, Create eNACH/UPI-Autopay mandate](https://fintechprimitives.com/docs/api/#create-a-mandate-enach). This API requires specifying the mandate type (`E_MANDATE` for eNACH or `UPI` for UPI-Autopay), the investor's bank account ID for which the mandate is intended, and setting the maximum debit limit for the mandate.
+To create an eNACH or UPI-Autopay mandate, use the [FPDocs, Create eNACH/UPI-Autopay mandate](https://fintechprimitives.com/docs/api/#create-a-mandate-enach-amp-upi-autopay). This API requires specifying the mandate type (`E_MANDATE` for eNACH or `UPI` for UPI-Autopay), the investor's bank account ID for which the mandate is intended, and setting the maximum debit limit for the mandate.
 ```json
 {
 	"mandate_type": "E_MANDATE",
@@ -31,7 +31,7 @@ Setting an appropriate maximum limit for the mandate is crucial as it directly i
 
 #### Step 2: Authorize the Mandate:
 
-Once the mandate is created with FP, you can proceed with authorizing the mandate to enable payment processing. To accomplish this, you need to use the [FPDocs, Authorize eNACH/UPI-Autopay mandate](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach), providing the Mandate ID received in the response from the [FPDocs, Create eNACH/UPI-Autopay mandate](https://fintechprimitives.com/docs/api/#create-a-mandate-enach) step. 
+Once the mandate is created with FP, you can proceed with authorizing the mandate to enable payment processing. To accomplish this, you need to use the [FPDocs, Authorize eNACH/UPI-Autopay mandate](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach-and-upi-autopay), providing the Mandate ID received in the response from the [FPDocs, Create eNACH/UPI-Autopay mandate](https://fintechprimitives.com/docs/api/#create-a-mandate-enach-amp-upi-autopay) step. 
 
 ```json
 {
@@ -39,7 +39,7 @@ Once the mandate is created with FP, you can proceed with authorizing the mandat
 }
 ```
 
-Upon initiating the [FPDocs, Authorize eNACH/UPI-Autopay mandate](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach), you will receive a `token_url` in the response. This `token_url` redirects the investor to their respective bank's netbanking page or UPI app to authorize the mandate. The approval of the mandate is typically immediate, with the authorization transaction successfully confirming the investor's consent. In rare cases, the approval process may take up to T+1 days for completion.
+Upon initiating the [FPDocs, Authorize eNACH/UPI-Autopay mandate](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach-and-upi-autopay), you will receive a `token_url` in the response. This `token_url` redirects the investor to their respective bank's netbanking page or UPI app to authorize the mandate. The approval of the mandate is typically immediate, with the authorization transaction successfully confirming the investor's consent. In rare cases, the approval process may take up to T+1 days for completion.
 
 For UPI Autopay, Razorpay deducts ₹10 and Billdesk deducts ₹1 from the investor's bank account during mandate authorization and will be refunded within 3-5 bank working days.
 

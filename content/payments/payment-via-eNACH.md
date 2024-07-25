@@ -12,7 +12,7 @@ Mandate also provide a convenient option for collecting one-time payments from i
 
 ### Create Payment Requests:
 
-To initiate a payment request against a mandate, utilize the [FPDocs, Create an eNACH or UPI Autopay payment](https://fintechprimitives.com/docs/api/#create-a-nach-payment).
+To initiate a payment request against a mandate, utilize the [FPDocs, Create an eNACH or UPI Autopay payment](https://fintechprimitives.com/docs/api/#create-an-enach-or-upi-autopay-payment).
 This API requires the approved mandate ID of the investor and the AMC order IDs created using the [FPDocs, Create MF Purchase](https://fintechprimitives.com/docs/api/#create-a-mf-purchase).
 
 ```json
