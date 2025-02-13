@@ -26,7 +26,7 @@ If the `status` is `failed`, it means the bank account could not be verified. If
 
 ### A note on working with input match threshold
 
-FP offers a provision to configure an input match threshold for every tenant, based on which the `confidence` level can be returned either as `very_high` or `zero`. If this input match threshold is not configured for a tenant then a default set of `confidence` levels would be returned based on the actual match percentage as indicated in the last 2 digits of the bank account number. This is a one-time configuration done before you go live.
+FP offers a provision to configure an input match threshold for every tenant, based on which the `confidence` level can be returned either as `very_high` or `zero`. If this input match threshold is not configured for a tenant then a default set of `confidence` levels would be returned based on the actual match percentage as indicated in the last 2 digits of the bank account number. This is a one-time configuration done before you go live. In case the `confidence` is `zero` it means that the bank account does not exist or there is a complete name mismatch; Either ways you should not proceed to work with this bank account.
 
 ## Testing
 
@@ -42,10 +42,12 @@ In sandbox, simulation facility can be used to test bank account verification. T
 
 | Last 4 digits of Bank account number | Status | Reason | `confidence` if input match threshold <br> is configured as `85` |
 |-|-|-|-|
-| 2193 | `completed` | `digital_verification` | `very_high` |
-| 2185 | `completed` | `digital_verification` | `very_high` |
-| 2184 | `completed` | `digital_verification` | `zero` |
-| 2157 | `completed` | - | - |
+| 2193 | `completed` | - | `very_high` |
+| 2185 | `completed` | - | `very_high` |
+| 2184 | `completed` | - | `zero` |
+| 2157 | `completed` | - | `zero` |
+| 2357 | `failed` | `expiry` | - |
+| 3157 | `failed` | `digital_verification_failure` | - |
 
 <br>
 
@@ -64,10 +66,12 @@ In sandbox, simulation facility can be used to test bank account verification. T
 
 | Last 4 digits of Bank account number | Status | Reason | `confidence` if input match threshold <br> is not configured |
 |-|-|-|-|
-| 1193 | `completed` | `digital_verification` | `very_high` |
-| 1285 | `completed` | `digital_verification` | `high` |
-| 1515 | `completed` | `digital_verification` | `very_low` |
-| 2157 | `failed` | `expiry` | - |
+| 1193 | `completed` | - | `very_high` |
+| 1285 | `completed` | - | `high` |
+| 1515 | `completed` | - | `very_low` |
+| 1600 | `completed` | - | `zero` |
+| 2357 | `failed` | `expiry` | - |
+| 3157 | `failed` | `digital_verification_failure` | - |
 
 
 <br>
