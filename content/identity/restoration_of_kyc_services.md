@@ -1,10 +1,8 @@
-# Customer communication
+#  Restoration of KYC services
 
-## Restoration of KYC services
-The KYC services which were earlier discontinued due to issues at partner AMC' side has no been restored and FP customers can perform fresh KYC of non compliant resident individual investors via our new partner i.e AXIS AMC.
+The KYC services which were earlier discontinued has now been restored and FP customers can perform fresh KYC of non compliant resident individual investors via our new partner i.e AXIS AMC.
 
-## What are the changes and what should I do to restore KYC at my end?
-### Highlights of changes
+#### Highlights of changes
 1. Aadhaar will be used as both identity proof and address proof going forward.
 2. Addition of 9 new attributes to KYC request object
   - FATCA fields which were optional earlier and are now mandatory has to be collected  (Income slab, Political Exposure)
@@ -13,12 +11,11 @@ The KYC services which were earlier discontinued due to issues at partner AMC' s
 3. Bank account details and IPV Video are no longer needed to perform KYC via AXIS AMC. If provided, the details will be ignored.
 4. Definitions of the states
 
-### Details of these changes
-#### 1. Aadhaar will be used as both identity proof and address proof going forward
+#### Details of these changes
+##### 1. Aadhaar will be used as both identity proof and address proof going forward
 Going ahead, only Aadhaar will be the supported proof type for both identity and address. All other types of proof like Passport, Voter Id etc will no longer be supported. 
 
-Why?
-This is due to the fact that fresh KYC will be successful only if the KRA is able to validate the investor's record with the corresponding Aadhaar.
+**Why?** This is due to the fact that fresh KYC will be successful only if the KRA is able to validate the investor's record with the corresponding Aadhaar.
 
 How do I use Aadhaar as identity proof and address proof?
 - You have to create an Identity Document with type = aadhaar
@@ -27,7 +24,7 @@ How do I use Aadhaar as identity proof and address proof?
 
 Note: We will use photo and address present in Aadhaar and you don't have to share these details explicitly.  
 
-#### 2: Addition of 9 new attributes to KYC request object -
+##### 2: Addition of 9 new attributes to KYC request object -
 We have modified the `kyc_request` object to explicitely collect some FATCA details of the investor based on recent regulatory changes. Previously some of these fields were non-mandatory and some of them were to be assumed based on the investor's tax status. The newly added attributes as per compliance requirements are as listed down -
 
 | Attribute | Type | Description |
@@ -42,7 +39,7 @@ We have modified the `kyc_request` object to explicitely collect some FATCA deta
 | non_indian_tax_residency_2 | hash | If investor is a tax payer in any country other than India, such details have to mentioned here. This is an optional input |
 | non_indian_tax_residency_3 | hash | If investor is a tax payer in any country other than India, such details have to mentioned here. This is an optional input |
 
-##### Non Indian Tax Residency hash details 
+###### Non Indian Tax Residency hash details 
 
 | Attribute | Type | Description |
 | - | - | - |
@@ -129,12 +126,12 @@ The kyc_request object with all these changes, would look like below -
 ```
 
 
-#### 3: Bank account details and IPV Video are no longer needed to perform KYC
+##### 3: Bank account details and IPV Video are no longer needed to perform KYC
 - Bank account details are collected for AMC compliance reasons and currently these are not required for KYC processing with Axis AMC. These details will be ignored if shared in the API.
 - Additionally, since liveliness of investor is verified via Aadhaar fetching from Digilocker, the IPV Video can also be skipped and will be ignored if shared in the API.
 
 
-#### 4: Definitions of states -
+##### 4: Definitions of states -
 The definition of all the states are as follows -
 
 | **State**  | **Definition**                    |
