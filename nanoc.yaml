@@ -199,8 +199,9 @@ sidebar:
     dropdown_menu_items: 
       - title: Automated communications with investors
         link: "/pages/workflows/automated-communication/"
-      - title: Release notes
-        link: "/general-topics/release-notes/"
+      # Hiding Release notes till things get streamlined.  
+      #- title: Release notes      
+       # link: "/general-topics/release-notes/"
       - title: Deprecated features 
         link: "/general-topics/deprecation-notes/"
       - title: BSE Validations
