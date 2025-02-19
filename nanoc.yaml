@@ -207,6 +207,8 @@ sidebar:
         link: "/general-topics/bse_validations/"
       - title: Best Practices Guide
         link: "/general-topics/best-practices-guide/"
+      - title: Security Assurance
+        link: "/general-topics/security_assurance/"  
       - subsection:
         - heading: Compliance
         - title: Overview
