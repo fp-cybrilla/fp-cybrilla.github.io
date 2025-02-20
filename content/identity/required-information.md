@@ -31,16 +31,16 @@ The following information about the investor needs to be collected for a success
 22. Electronic signature on the application form
 
 
-### Sample Esign on the application form
+<!-- ### Sample Esign on the application form -->
 
-Here is a sample video of how the esign experience is for your investor on production:  
+<!-- Here is a sample video of how the esign experience is for your investor on production:   -->
 
 <!-- *Desktop*  
 <video width="320" height="240" controls id="sample_esign_flow_desktop">
   <source src="/videos/sample_esign_flow_desktop.mp4" type="video/mp4">
 </video> -->
 
-<div class="video-player">
+<!-- <div class="video-player">
   <div class="video-player__title">
     Desktop
   </div>
@@ -57,14 +57,14 @@ Here is a sample video of how the esign experience is for your investor on produ
       <source src="/videos/sample_esign_flow_desktop.mp4" type="video/mp4">
     </video>
   </div>
-</div>
+</div> -->
 
 <!-- *Mobile*  
 <video width="320" height="240" controls id="sample_esign_flow_mobile">
   <source src="/videos/sample_esign_flow_mobile.mp4" type="video/mp4">
 </video> -->
 
-<div class="video-player">
+<!-- <div class="video-player">
   <div class="video-player__title">
     Mobile
   </div>
@@ -81,4 +81,4 @@ Here is a sample video of how the esign experience is for your investor on produ
       <source src="/videos/sample_esign_flow_mobile.mp4" type="video/mp4">
     </video>
   </div>
-</div>
+</div> -->

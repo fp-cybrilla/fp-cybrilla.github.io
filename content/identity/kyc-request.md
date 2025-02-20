@@ -1,4 +1,7 @@
-## KYC Submission workflow
+---
+title: KYC Requests
+---
+## KYC Request Submission workflow
 #### Use this guide to build your KYC workflows in the onboarding phase
 
 ### KYC Request lifecycle
@@ -48,9 +51,9 @@ Collect the required information from the investor in one step or in multiple st
 # Displaying only a part of the object for brevity
 
 {
-	"gender": "male",
-	"father_name": "Yash",
-	"occupation": "student"
+	"gender": "female",
+	"father_name": "Rajesh Gupta",
+	"occupation": "private_sector"
 	...
 }
 ```
@@ -84,10 +87,10 @@ Once the Identity document is successfully fetched, you need to use [Update a KY
 ```json
 # Displaying only a part of the object for brevity
 
-"identity_proof": "iddoc_20ecb2ee966a45b48ff2da70ec45ff01"
+"identity_proof": "iddoc_a6408e3bc7404706baef39aec303f51b"
 "address": {
     "proof_type": "aadhaar",
-    "proof": "iddoc_20ecb2ee966a45b48ff2da70ec45ff01"
+    "proof": "iddoc_a6408e3bc7404706baef39aec303f51b"
 }
 ```
 <br>
