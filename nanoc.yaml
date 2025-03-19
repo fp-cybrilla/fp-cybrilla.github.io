@@ -138,6 +138,8 @@ sidebar:
           link: "/mf-transactions/partner-tagging/"
         - title: Migrate from V1 SIPs to V2 Purchase plans
           link: "/mf-transactions/purchase-plans/sip-v1-purchase-plan-migration"
+        - title: SLAs & TAT
+          link: "/mf-transactions/slas_tat"
       # Subsection ends here
       # Subsection ends here
   - dropdown_menu_title: Payments
