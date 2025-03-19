@@ -46,7 +46,7 @@ Remediation:
 
 #### 4. Redemptions
 
-Be it Channel Partner `gateway` or ONDC `gateway`,  AMC is responsible for settling the redeption proceeds to the bank account of investors.  At present, the payment cycle by AMCs for redemptions submitted before cut-off time are
+Be it Channel Partner `gateway` or ONDC `gateway`,  AMC is responsible for settling the redemption proceeds to the bank account of investors.  At present, the payment cycle by AMCs for redemptions submitted before cut-off time are
  - T+1 for debt
  - T+2 for equity/hybrid
  - T+5 days for FoF Overseas. In some cases it could be T+6
@@ -61,5 +61,5 @@ If the amount is already settled to AMC’s account and the purchase order is re
 
 Late Authorization Cases : Amount collected from investor but we do not receive confirmation from banks via PGs in time. 
  
- - **FP - Channel Partner `gateway`s**: Razorpay and Billdesk : 3 to 5 working days TAT for refunds. Automatically initiated by FP, however, settlement of amount to investor’s account is the responsibility of PG. Note: If you are collecting money your own, you will have to manage refunds also by yourself in such cases. 
+ - **FP - Channel Partner `gateway`s**: Razorpay and Billdesk : 3 to 5 working days TAT for refunds. Automatically initiated by FP, however, settlement of amount to investor’s account is the responsibility of PG. Note: If you are collecting money on your own, you will have to manage refunds also by yourself in such cases. 
  - **FP - ONDC**: 3 to 5 working days TAT for refunds.  Managed entirely by SellerApp.
