@@ -16,6 +16,7 @@ The definition of each order state is mentioned below -
 
 |State|Description|
 |---|---|
+|`under_review`|When a purchase order is created using `ONDC` gateway, the order will be in `under_review` state. The gateway will asynchronously review the order details and if review passes, the order is marked as `pending` |
 |`pending`|The order is created, but not ready for submission|
 |`confirmed`|The order is ready for submission to the order gateway|
 |`submitted`|The order has been submitted to the order gateway|

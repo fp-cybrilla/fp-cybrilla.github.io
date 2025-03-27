@@ -41,7 +41,7 @@ Once the mandate is created with FP, you can proceed with authorizing the mandat
 
 Upon initiating the [FPDocs, Authorize eNACH/UPI-Autopay mandate](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach-and-upi-autopay), you will receive a `token_url` in the response. This `token_url` redirects the investor to their respective bank's netbanking page or UPI app to authorize the mandate. The approval of the mandate is typically immediate, with the authorization transaction successfully confirming the investor's consent. In rare cases, the approval process may take up to T+1 days for completion.
 
-For UPI Autopay, Razorpay deducts ₹10 and Billdesk deducts ₹1 from the investor's bank account during mandate authorization and will be refunded within 3-5 bank working days.
+For UPI Autopay, a minimum amount of ₹1 is deducted from the investor's bank account during the authorization process. This amount is typically refunded within 3-5 bank working days. For Razorpay, the default authorization amount is ₹10. However, this amount can vary depending on the chosen pricing model and can be configured accordingly.
 
 > Note: BSE requires a gap of atleast one minute between Mandate creation and authorisation. 
 
@@ -78,4 +78,4 @@ The mandate progresses through various statuses, each representing a specific st
 </div>
 
 > 1. One time payments using the eNACH mandate will be allowed only if mandate is in `approved` state. 
-> 2. You can setup a recurring purchase plan with a mandate in `created` state. On the installment order day, if mandate is not `approved`, the installment payment will be not be attempted by FP. The installment order will be marked as failed in such case.
+> 2. You can setup a recurring purchase plan with a mandate in `created` state. On the installment generation day, if mandate is not `approved`, the installment payment will be not be attempted by FP. The installment order will be marked as failed in such case. FP generates the installment on one day prior to the instalment date. 

@@ -15,8 +15,10 @@ To generate a payment, you need to use the [FPDocs, Create payment](https://fint
   "amc_order_ids": [
     70251
   ],
-  "payment_postback_url": "example.com",
-  "bank_account_id": 925
+  "payment_postback_url": "https://tenanturl.com/payment-response-page",
+  "method": "NETBANKING",
+  "bank_account_id": 925,
+  "provider_name": "ONDC"
 }
 ```
 
@@ -24,7 +26,7 @@ To generate a payment, you need to use the [FPDocs, Create payment](https://fint
 // Response:
 {
     "id": 1885,
-    "token_url": "https://cyberion.s.finprim.com/api/pg/payments/netbanking/razorpay?txnId=de9152d18d08b44&txnType=1"  
+    "token_url": "https://tenant.s.finprim.com/api/pg/payments/netbanking/razorpay?txnId=de9152d18d08b44&txnType=1"  
 }
 ```
 ####  Usage and Validity of Token URL:
@@ -32,12 +34,13 @@ To generate a payment, you need to use the [FPDocs, Create payment](https://fint
 Key considerations regarding the usage and validity of the `token_url` include:
   - Each `token_url` is designed for single-use only. If an attempt to complete the payment using a `token_url` fails, it is recommended to generate a new payment and obtain a fresh URL.
   - It's important to note that a `token_url` has a validity period of 15 minutes. After this timeframe, the URL will expire and will throw "Invalid token" error.
+  - For `ONDC` as provider, please ensure that the order is `confirmed` before the payment `token_url` is utilised. 
 
 ####  Notifying the Payment Status:
 
 Once a payment is completed, FP provides notification of the payment status as follows:
 - FP will post the payment status to the `payment_postback_url` provided. This allows you to receive real-time updates on the payment status, so that the Investor can be notified accordingly.
-- Payment status can be fetched either by using the [FPDocs, Events](https://fintechprimitives.com/docs/api/#events-early-access) or by subscribing to the [Webhook notifications](/#webhook-notifications-early-access)
+- Payment status can be fetched either by using the [FPDocs, Events](https://fintechprimitives.com/docs/api/#events) or by subscribing to the [Webhook notifications](/#webhook-notifications)
 
 ### **Payment States**
 

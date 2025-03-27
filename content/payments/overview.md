@@ -3,7 +3,7 @@ title: Overview
 ---
 ## Payments
 
-FP payments APIs enable you to collect payments from your investors for their MF purchases. FP internally integrates with BSE, Billdesk, and Razorpay, providing simple-to-use APIs for your payment collection needs.
+FP payments APIs enable you to collect payments from your investors for their MF purchases. FP internally integrates with Billdesk, Razorpay, ONDC and BSE providing simple-to-use APIs for your payment collection needs.
 
 
 Currently, we support payment collection via the following modes:
@@ -11,8 +11,10 @@ Currently, we support payment collection via the following modes:
 |Payment gateway|Netbanking|UPI|eNACH Mandates| UPI Autopay|
 |---|---|---|---|---|
 |Razorpay|Supported|Supported|Supported|Supported|
-|BSE|Supported|Supported|Supported(SIPs only)|Not Supported|
 |BillDesk|Supported|Supported|Supported| Supported|
+|ONDC|Supported|Supported|Not Supported|Not Supported|
+|BSE|Supported|Supported|Supported(SIPs only)|Not Supported|
+
 
 FP payment APIs support one-time payments via Netbanking, UPI, eNACH and UPI Autopay mandates, as well as recurring payments via eNACH and UPI Autopay mandates.
 

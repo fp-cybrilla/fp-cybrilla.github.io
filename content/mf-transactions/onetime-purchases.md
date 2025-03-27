@@ -79,6 +79,8 @@ Once the consent has been collected, the email and mobile used to collect that c
 
 > If the order gateway is `BSE`, you need to change the order state to `confirmed` along with the consent details using [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase). Once the order is `confirmed`, FP will try to submit the order to BSE asynchronously in the background. Once the order submission is successful, the purchase order state changes from `confirmed` to `submitted`. Please ensure that orders are in `submitted` state before you can accept payments. <br>
 
+> If the order gateway is `ONDC`, you need to update consent details using [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase), then create the payment and then change the order state to `confirmed` using [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase). Once the order is `confirmed`, FP will try to submit the order to ONDC gateway and upon successful submission, the purchase order state changes from `confirmed` to `submitted`. Please ensure that orders are in `submitted` state before the Investor attempts the payment. <br>
+
 #### 5. Collect payments against purchase orders
 
 <div class="tabs">
@@ -272,6 +274,7 @@ After the money is settled into the scheme's bank account, call the [FPDocs, cre
   "settlement_processed_at": "2020-04-09T12:00:09"
 }
 ``` -->
+
 
 #### 5. Track the order
 Once the payment collection is successful, you don't have to take further actions. After the order is processed successfully (typically takes one day) - units are allotted and the object state will move to `successful`.  You can track a single purchase order using [FPDocs, fetch mf purchase](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) to check the `state` of the order or you can check the status of multiple orders at once using [FPDocs, MF Purchase List](https://fintechprimitives.com/docs/api/#mf-purchase-list-report) API. 

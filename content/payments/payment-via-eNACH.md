@@ -34,7 +34,7 @@ eNACH payment progresses through various statuses, each representing a specific 
 |---|---|
 |PENDING|Payment is created but yet to be submitted to payment gateway.|
 |SUBMITTED| Payment request has been submitted to the payment gateway.
-|SUCCESS|Payment is successful. Amount has been successfully deducted from the investor's account but yet to be transferred to the AMC's account.|
+|SUCCESS|Payment is successful. Amount has been successfully deducted from the investor's account but yet to be transferred to the AMC's collection account.|
 |FAILED|Payment failed for some reason.|
 |INITIATED|Transfer of money has been initiated from payment gateway to AMC.|
 |APPROVED| Transfer of money from payment gateway to AMC is successful.|
@@ -48,5 +48,4 @@ eNACH payment progresses through various statuses, each representing a specific 
 
 > 1. If `amount transfer to AMC` fails, FP Operations will coordinate with customer to resolve the issue. If the `amount transfer to AMC` does not succeed after all attempts then customer will initiate a refund to investor on the payment gateway. In this case, FP will mark the payment as `failed`
 > 2. If `UTR` is not recieved from payment gateway, FP Operations will coordinate with payment gateway and customer to resolve the issue.
-> 3. FP will retry payment for 2 calendar days if the payment request was not accepted by payment gateway due to bank related reasons. Payment request will remain in `pending` state during this time. If the payment request is not accpeted after retry, it will be marked as `failed`.
-> 4. To learn how to manage mandate lifecyle, please refer [eNACH mandate setup](/payments/managing-eNACH/)
+> 3. To learn how to manage mandate lifecyle, please refer [eNACH mandate setup](/payments/managing-eNACH/)

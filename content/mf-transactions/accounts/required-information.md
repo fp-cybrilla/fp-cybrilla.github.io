@@ -24,12 +24,18 @@ For successful investment account creation and placing an order, make sure the f
 12. Phone number for communication (`folio_defaults.communication_mobile_number`)
 13. Demat details if opting for demat unit delivery (`folio_defaults.demat_account`)
 
+**Additional details required for ONDC**
+1. Nature of address (`address.nature`)
+
+> Note: For ONDC flow, `fourth_tax_residency` is not supported when `investor_profile.tax_status` = `resident_individual` and only `bank_account.type` = `savings` is supported
+
+
 **Details about Nomination** 
 
 If opting out of nomnination you can skip this. Otherwise provide atleast one nominee details in `folio_defaults.nominee1` and declare the percentage allocation of funds for each nominee in `folio_defaults.nominee1_allocation_percentage`, `folio_defaults.nominee2_allocation_percentage`, `folio_defaults.nominee3_allocation_percentage`. You can add upto 3 nominees to a folio.
 
 1. Name (`related_party.name`)
-2. PAN (`related_party.relationship`)
+2. Relationship (`related_party.relationship`)
 
 [Follow this](/identity/profiles/individual-investor/) to create an individual investor profile
 
