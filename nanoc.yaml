@@ -222,6 +222,8 @@ sidebar:
     dropdown_menu_items: 
       - title: Overview
         link: "/upcoming/overview/"
+      - title: Roadmap
+        link: "/upcoming/roadmap/"
       # Subsection starts here with heading and list of links
       - subsection:
         - heading: "Beta programs"
