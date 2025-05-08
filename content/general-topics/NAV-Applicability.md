@@ -94,3 +94,16 @@ Direct Banks in net Banking refers to transfers where Investor and the BSEStarMF
 
 All other banks other than those above are referred to as nodal banks.
 Funds transfer are faster for direct net banking transfers and can take upto 1 business day for nodal banks depending on the bank.
+
+
+## FP-ONDC Payment Cut-off time for same day unit allotment
+
+|Purchase Scenario|Payment Mode|Bank of the investor|Fund Collection Cut-Off time|Day of Debit to Investor's account	|Day of Unit Allotment|
+|---|---|---|---|---|---|
+| Single purchase orders(including SIP intallments) - Liquid schemes| UPI/Netbanking| Major investor Banks|1.20 PM*|T|T|
+| Single purchase orders(including SIP intallments) - Non Liquid schemes| UPI/Netbanking| Major Banks|2.50 PM*|T|T|
+| Single purchase orders| UPI Autopay/NACH| All investor banks|NA|T|T+1|
+| Multiple purchase orders but single payment collection|All methods|All investor banks| NA | T | T+1|
+
+
+*Once the payment collection happens the amount gets settled to AMC's collection account in near realtime. However, there might be few minutes of delay in some cases and hence the 10 minute buffer. Also, this facility of T day unit allotment is coming soon on FP-ONDC.
