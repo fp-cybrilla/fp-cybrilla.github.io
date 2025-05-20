@@ -6,23 +6,23 @@ In this quarter, we are aiming to bring down the cost of running the business fo
 
 | Feature/Initiative | Category | May Mid(~21st of May) | May End | Jun Mid | Jun End |
 | --- | --- | --- | --- | --- | --- |
-| Support for capturing nomination according to new SEBI guidelines | Account Opening |  | ✅ |  |  |
 | FP-ONDC: Support for creation of Business Day Daily SIPs (Single SIP registration at a time, No Payment collection on Day of registration) | Orders | ✅ |  |  |  |
 | FP-ONDC: Ability to register mandates independently without the context of Plans | Payments | ✅ |  |  |  |
+| FP-ONDC: Support for monthly SIP(Single SIP registration at a time, No Payment collection on Day of registration) | Orders | ✅ |  |  |  |
+| Support for capturing nomination according to new SEBI guidelines | Account Opening |  | ✅ |  |  |
 | FP-ONDC: Accept payment on day of registration of plans - Single SIPs | Orders |  | ✅ |  |  |
 | FP-ONDC: Support for UPI Autopay & URI Option for UPI/UPI Autopay for custom payment experience | Payments |  | ✅ |  |  |
 | FP-ONDC: SIP Cancellation | Orders |  | ✅ |  |  |
 | FP-ONDC: SIP Amount Modification | Orders |  | ✅ |  |  |
-| FP-ONDC: Calendar day Daily SIP | Orders |  |  | ✅ |  |
-| FP-ONDC: Weekly SIP | Orders |  |  | ✅ |  |
 | FP-ONDC: Support for basket Lumpsum Purchase orders(UPI Collect request & Netbanking) | Orders |  | ✅ |  |  |
 | FP-ONDC: Support for UPI Intent flow | Payments |  | ✅ |  |  |
-| FP-ONDC: Support for monthly SIP(Single SIP registration at a time, No Payment collection on Day of registration) | Orders | ✅ |  |  |  |
-| FP-ONDC: Support for payment collection of multiple first installments of SIPs created in batch on day of registration | Orders |  |  |  | ✅ |
+| FP-ONDC: Calendar day Daily SIP | Orders |  |  | ✅ |  |
+| FP-ONDC: Weekly SIP | Orders |  |  | ✅ |  |
 | FP-ONDC: Support for switch orders(Switch all, Switch by units, Switch by amount) | Orders |  |  | ✅ |  |
-| FP-ONDC: Support for NRI-NRE/NRI-NRO orders | Orders |  |  |  | ✅ |
 | FP-ONDC: Support for Sub-broker orders/plans | Orders |  |  | ✅ |  |
 | FP-ONDC: Support for orders against Direct schemes | Orders |  |  | ✅ |  |
+| FP-ONDC: Support for payment collection of multiple first installments of SIPs created in batch on day of registration | Orders |  |  |  | ✅ |
+| FP-ONDC: Support for NRI-NRE/NRI-NRO orders | Orders |  |  |  | ✅ |
 | FP-ONDC: Support for additional purchases against external folios | Orders |  |  |  | ✅ |
 | FP-ONDC: Support for redemption against regular schemes by ARNs against external folios | Orders |  |  |  | ✅ |
 | FP-ONDC: Support for redemption against direct schemes by RIAs against external folios | Orders |  |  |  | ✅ |
