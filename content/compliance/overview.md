@@ -15,7 +15,7 @@ FP takes care of operational changes introduced due to any new sebi / amfi circu
 1. [Enhancements to Fund Scheme API](../../general-topics/scheme-master-deprecation-details/)
 <br /><br />
 
-##### Feb 21, 2024
+##### Feb 21, 2025
 1. [Restoration of KYC services](../../customer-communications/restoration_of_kyc_services/)
 <br /><br />
 
