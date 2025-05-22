@@ -100,9 +100,9 @@ Funds transfer are faster for direct net banking transfers and can take upto 1 b
 
 |Purchase Scenario|Payment Mode|Bank of the investor|Fund Collection Cut-Off time|Day of Debit to Investor's account	|Day of Unit Allotment|
 |---|---|---|---|---|---|
-| Single purchase orders(including SIP intallments) - Liquid schemes| UPI/Netbanking/UPI Autopay| Major investor Banks|1.20 PM*|T|T|
-| Single purchase orders(including SIP intallments) - Non Liquid schemes| UPI/Netbanking/UPI Autopay| Major investor Banks|2.50 PM*|T|T|
-| Single purchase orders| NACH| All investor banks|NA|T|T+1|
+| Single purchase orders(including SIP intallments) - Liquid schemes| UPI/Netbanking| Major investor Banks|1.20 PM*|T|T|
+| Single purchase orders(including SIP intallments) - Non Liquid schemes| UPI/Netbanking| Major investor Banks|2.50 PM*|T|T|
+| Single purchase orders| NACH/UPI Autopay| All investor banks|NA|T|T+1|
 | Multiple purchase orders but single payment collection|All methods|All investor banks| NA | T | T+1|
 
 
