@@ -34,8 +34,18 @@ For successful investment account creation and placing an order, make sure the f
 
 If opting out of nomnination you can skip this. Otherwise provide atleast one nominee details in `folio_defaults.nominee1` and declare the percentage allocation of funds for each nominee in `folio_defaults.nominee1_allocation_percentage`, `folio_defaults.nominee2_allocation_percentage`, `folio_defaults.nominee3_allocation_percentage`. You can add upto 3 nominees to a folio.
 
-1. Name (`related_party.name`)
-2. Relationship (`related_party.relationship`)
+1. Name of the nominee (`related_party.name`)
+2. Relationship of the nominee with the profile (`related_party.relationship`)
+3. Date of birth of the nominee (`related_party.date_of_birth`)
+4. Identity proof of the nominee (if not a minor) (`related_party.pan` / `related_party.aadhaar_number` / `related_party.passport_number` / `related_party.driving_licence_number`)
+5. Email address of the nominee (if not a minor) (`related_party.email_address`)
+6. Phone number of the nominee (if not a minor) (`related_party.phone_number`)
+7. Communication address of the nominee (if not a minor) (`related_party.address`)
+8. Name of the Nominee's guardian (if nominee is a minor) (`related_party.guardian_name`)
+9. Identity proof of the Nominee's guardian (if nominee is a minor) (`related_party.guardian_pan` / `related_party.guardian_aadhaar_number` / `related_party.guardian_passport_number` / `related_party.guardian_driving_licence_number`)
+10. Email address of the Nominee's guardian (if nominee is a minor) (`related_party.guardian_email_address`)
+11. Phone number of the Nominee's guardian (if nominee is a minor) (`related_party.guardian_phone_number`)
+12. Communication address of the Nominee's guardian (if nominee is a minor) (`related_party.guardian_address`)
 
 [Follow this](/identity/profiles/individual-investor/) to create an individual investor profile
 
