@@ -167,6 +167,12 @@ sidebar:
         - title: FAQs
           link: "/payments/FAQs"
       # Subsection ends here
+  - dropdown_menu_title: FP-ONDC gateway
+    dropdown_menu_items: 
+      - title: Overview
+        link: "/fp-ondc-gateway/overview/"
+      - title: Sandbox Simulation
+        link: "/fp-ondc-gateway/sandbox-simulation"
   - dropdown_menu_title: Investor Reporting
     dropdown_menu_items: 
       - title: Overview
