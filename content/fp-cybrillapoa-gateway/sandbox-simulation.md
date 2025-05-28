@@ -1,6 +1,6 @@
 # Sandbox Simulation
 
-In the ONDC gateway, orders are processed by the SellerApp, which performs both KYC verification and Bank Account Validation (BAV) during new folio creation.
+In the `cybrillapoa` gateway, orders are processed by the SellerApp, which performs both KYC verification and Bank Account Validation (BAV) during new folio creation.
 
 To ensure an order is successfully simulated in the sandbox environment:
 1. Use a PAN that is simulated to be KYC verified.
@@ -16,5 +16,5 @@ To ensure an order is successfully simulated in the sandbox environment:
 For rules of Bank account verification simulation, Refer to [here](https://docs.fintechprimitives.com/identity/verification/perform-bank-account-verification/)
 
 ### Order Simulation
-* Orders with amounts ending in 0, once successfully submitted to the ONDC gateway, are automatically simulated as successful at the RTA.
-* Orders with amounts ending in 1, once successfully submitted to the ONDC gateway, are automatically simulated as failed at the RTA.
+* Orders with amounts ending in 0, once successfully submitted to the `cybrillapoa` gateway, are automatically simulated as successful at the RTA.
+* Orders with amounts ending in 1, once successfully submitted to the `cybrillapoa` gateway, are automatically simulated as failed at the RTA.
