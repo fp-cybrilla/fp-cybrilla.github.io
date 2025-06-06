@@ -27,15 +27,15 @@ Note: CVL KYC Status check is charged separately.
 #### 4. Systematic Transaction Types 
 |SIP Type|Status|
 |---|---|
-|SIP - Monthly|Available in Sandbox|
-|SIP - Daily|Available in Sandbox|
+|SIP - Monthly|Live|
+|SIP - Daily|Live|
 |SWP|Coming soon|
 |STP|Coming soon|
 		
 #### 5. SIP capabilities        
 |SIP Capability|Status|
 |---|---|
-|Accept payment on reg. date(First order today)|Coming Soon|
+|Accept payment on reg. date(First order today)|Live|
 |Update amount|Coming soon|
 |Batch SIP creation + Accept payment on reg. date for all first installments|Coming soon|
 		
@@ -58,10 +58,10 @@ Note: CVL KYC Status check is charged separately.
 #### 8. Payment method support
 |Payment method|Status|
 |----|----|
-|UPI|Live(Supported for Lumpsum purchase orders)|
-|Netbanking*|Live (Supported for Lumpsum purchase orders)|
-|UPI Autopay|Available in sandbox|
-|E-NACH|Available in sandbox|
+|UPI|Live|
+|Netbanking*|Live|
+|UPI Autopay|Live|
+|E-NACH|Live|
 
 #### 9. List of banks supported for Netbanking
 |Bank|
