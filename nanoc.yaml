@@ -230,10 +230,10 @@ sidebar:
           link: "/general-topics/NAV-Applicability/"
   - dropdown_menu_title: Upcoming
     dropdown_menu_items: 
-      - title: Overview
-        link: "/upcoming/overview/"
-      - title: Roadmap
-        link: "/upcoming/roadmap/"
+     # - title: Overview
+      #  link: "/upcoming/overview/"
+      #- title: Roadmap
+       # link: "/upcoming/roadmap/"
       # Subsection starts here with heading and list of links
       - subsection:
         - heading: "Beta programs"
