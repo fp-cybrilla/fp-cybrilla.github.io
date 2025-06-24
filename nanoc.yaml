@@ -171,6 +171,8 @@ sidebar:
     dropdown_menu_items: 
       - title: Overview
         link: "/fp-cybrillapoa-gateway/overview/"
+      - title: Custom Checkout
+        link: "/fp-cybrillapoa-gateway/custom-checkout"
       - title: Sandbox Simulation
         link: "/fp-cybrillapoa-gateway/sandbox-simulation"
       - title: Capabilities
