@@ -1,4 +1,4 @@
-## FP Product Roadmap
+## FP Product Roadmap (Archived. No longer applicable till further notice.)
 
 #### 📅 FY 2025-26 Q1 Product Roadmap
 In this quarter, we are aiming to bring down the cost of running the business for mutual fund intermediaries ( MFDs/RIAs) by providing them an ability to route the orders to Cybrilla OPAT via ONDC protocols from FP. Intermediaries chosing the ONDC route will not have to pay PG Costs, Signup with multiple AMCs or bear KYC application routing costs. In addition to this goal, we are also updating our APIs to support changes in nomination regulations. 
