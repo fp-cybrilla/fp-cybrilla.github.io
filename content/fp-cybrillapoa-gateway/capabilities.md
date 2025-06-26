@@ -1,5 +1,5 @@
 ## FP-Cybrilla POA Gateway(Beta) Capabilities
-To learn more about beta programs please read this [article](/upcoming/overview/)
+Note: Beta programs might come with certain limitations. To learn more about beta programs please read this [article](/upcoming/overview/)
 
 #### 1. Supported investor type		
 
@@ -38,7 +38,7 @@ Note: CVL KYC Status check is charged separately.
 |SIP Cancellation|Supported|
 |SIP Amount modification|Yet to be supported|
 
-Note: To understand more about current Daily SIP schedule, click [here](https://poa.cybrilla.com/docs/capabilities/daily-sip)
+Note: To understand more about current Daily SIP schedule, click <a href="https://poa.cybrilla.com/docs/capabilities/sip-daily" target="_blank" rel="noopener noreferrer">here.</a>
 
 **3.3 Redemption support**
 
@@ -76,6 +76,9 @@ Note: To understand more about current Daily SIP schedule, click [here](https://
 
 #### 6. List of banks supported for Netbanking
 ##### 6.1 Major banks
+
+*Note: HDFC, SBI, ICICI are yet to be supported for Netbanking*
+
 |Bank|
 |---|
 |Axis Bank|
