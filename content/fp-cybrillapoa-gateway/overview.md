@@ -1,4 +1,4 @@
-## FP-Cybrilla POA Gateway Overview
+## FP-Cybrilla POA Gateway Overview(Beta)
 
 The **FP-Cybrilla POA Gateway** enables you(BuyerApp) to process mutual fund orders via Cybrilla POA gateway(SellerApp) through ONDC protocols , using **Cybrilla** as the ONDC-verified BuyerApp TSP. This document highlights how the Cybrilla POA route differs from the traditional RTA route and outlines the key steps involved in onboarding and transaction flows.
 
