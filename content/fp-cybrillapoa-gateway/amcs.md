@@ -8,4 +8,4 @@
 7. Quant Mutual Fund
 8. UTI Mutual Fund
 9. Kotak Mutual Fund
-10. DSP (Coming Soon)
+10. DSP
