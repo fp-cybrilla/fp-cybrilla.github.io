@@ -77,10 +77,12 @@ Note: To understand more about current Daily SIP schedule, click <a href="https:
 #### 6. List of banks supported for Netbanking
 ##### 6.1 Major banks
 
-*Note: HDFC, SBI, ICICI are yet to be supported for Netbanking*
+*Note: SBI is yet to be supported for Netbanking*
 
 |Bank|
 |---|
+|HDFC Bank|
+|ICICI Bank|
 |Axis Bank|
 |Kotak Bank|
 |Bank of Baroda- Retail|
