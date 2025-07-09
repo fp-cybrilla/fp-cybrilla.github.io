@@ -13,7 +13,7 @@ During investor onboarding, you must collect the following details:
 * Email address
 * Mobile number
 
-While Cybrilla POA performs **KYC and BAV checks** at the time of order processing, you can choose to do these checks earlier as per your onboarding User experience design. You can utilise [FPdocs, Bank account verification](https://fintechprimitives.com/docs/api/#bank-account-verification-early-access) and [FPdocs, KYC Check](https://fintechprimitives.com/docs/api/#kyc-checks).
+While Cybrilla POA performs **KYC and BAV checks** at the time of order processing, you can choose to do these checks earlier as per your onboarding User experience design. You can utilise [FPDocs, Bank account verification](https://fintechprimitives.com/docs/api/#bank-account-verification-early-access) and [FPDocs, KYC Check](https://fintechprimitives.com/docs/api/#kyc-checks).
 
 * **KYC Check**: If you wish to perform [KYC Check](https://fintechprimitives.com/docs/api/#kyc-checks), you'll need to sign up with a KRA. Cybrilla currently supports CVL KYC (charges apply).
 * **Bank Account Verification (BAV)**: Supported via Razorpay (charges apply).

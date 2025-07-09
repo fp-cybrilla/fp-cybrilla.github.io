@@ -26,7 +26,7 @@ Note: CVL KYC Status check is charged separately.
 |Capability|Status|
 |---|---|
 |Single lumpsum purchase orders|Supported|
-|Batch lumpsum purchase orders|Yet to be supported|
+|Batch lumpsum purchase orders|Supported|
 
 **3.2 SIP support**
 
@@ -73,6 +73,7 @@ Note: To understand more about current Daily SIP schedule, click <a href="https:
 |E-NACH| Supported(For SIPs)|
 
 **Note:** Settlement Cycle: T+1 at present
+> Since all payments and mandates are issued in Cybrilla’s name, investors using your app will see “Cybrilla” in their UPI authorizations, mandate details and bank statements. Please ensure they understand that Cybrilla is the official partner facilitating and processing these mutual-fund transactions.
 
 #### 6. List of banks supported for Netbanking
 ##### 6.1 Major banks

@@ -2,6 +2,8 @@
 
 The **FP-Cybrilla POA Gateway** enables you(BuyerApp) to build custom checkout experience while the investor makes a UPI payment or authorise UPI mandate instead of relying on the `Token URL`. Following are the steps to build your own custom checkout experience:
 
+> Since all payments and mandates are issued in Cybrilla’s name, investors using your app will see “Cybrilla” in their UPI authorizations, mandate details and bank statements. Please ensure they understand that Cybrilla is the official partner facilitating and processing these mutual-fund transactions.
+
 ### UPI Payment creation flow:
 
 1. **Create Purchase Order:** When a purchase order is created using the [FPDocs, MF Purchase](https://fintechprimitives.com/docs/api/#create-a-mf-purchase) from FPDocs, the order enters the `under_review` state immediately after creation.
@@ -85,7 +87,9 @@ The **FP-Cybrilla POA Gateway** enables you(BuyerApp) to build custom checkout e
 6. **Payment Collection:** When the order is `submitted`, based on the user selection in step 4, following steps must be followed:
 
     **Payment via UPI Intent/QR:**
-    Fetch the payment using the ID generated in step 4 and you will receive the URI in the response as follows:
+    When the order is `submitted`, you will receive the `payment.updated` event is delivered with the URI. 
+    > Note: To receive `payment.updated` event, you will have to  [FPDocs, Create a Notification webhook](https://fintechprimitives.com/docs/api/#create-a-notification-webhook)
+    If the event is not received, as a fallback mechanism, fetch the payment using the ID generated in step 4 and you will receive the URI in the response as follows:
 
     ```json
 
@@ -138,6 +142,8 @@ The **FP-Cybrilla POA Gateway** enables you(BuyerApp) to build custom checkout e
     If the Investor choice of payment is via UPI Collect, then once the order is submitted, collect request will be sent to the Investor's UPI app for them to complete the payment.
 
     You can store the UPI ID(VPA) collected from the Investor and prepoluate the UPI ID for them to directly select the Collect flow without entering the UPI ID(VPA) again.
+
+    > Note: When the user selects one of the Collect, QR or Intent, disable the other options as there is no provision to create multiple payments against the same order(s). 
 
 7. **Order processing:** Based on the order processed at the RTAs, the order will move to its final state of either `successful` or `failed`.
 
