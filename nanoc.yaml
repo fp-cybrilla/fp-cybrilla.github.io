@@ -179,6 +179,10 @@ sidebar:
         link: "/fp-cybrillapoa-gateway/capabilities"
       - title: AMCs Live
         link: "/fp-cybrillapoa-gateway/amcs"  
+      - subsection:
+        - heading: "Use cases"
+        - title: Monthly SIP
+          link: "/fp-cybrillapoa-gateway/usecase-monthly-sips"        
   - dropdown_menu_title: Investor Reporting
     dropdown_menu_items: 
       - title: Overview
