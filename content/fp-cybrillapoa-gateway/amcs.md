@@ -8,4 +8,5 @@
 7. Quant Mutual Fund
 8. UTI Mutual Fund
 9. Kotak Mutual Fund
-10. DSP
+10. DSP Mutual Fund
+11. Motilal Oswal Mutual Fund
