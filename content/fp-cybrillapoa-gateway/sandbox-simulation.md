@@ -16,5 +16,6 @@ To ensure an order is successfully simulated in the sandbox environment:
 For rules of Bank account verification simulation, Refer to [here](https://docs.fintechprimitives.com/identity/verification/perform-bank-account-verification/)
 
 ### Order Simulation
+* ABSL and Ipru AMC schemes are available in the Sandbox environment for testing purposes.
 * Orders with amounts ending in 0, once successfully submitted to the `cybrillapoa` gateway, are automatically simulated as successful at the RTA.
 * Orders with amounts ending in 1, once successfully submitted to the `cybrillapoa` gateway, are automatically simulated as failed at the RTA.
