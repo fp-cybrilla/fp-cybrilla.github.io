@@ -36,4 +36,4 @@ Call [FPDocs, update individual investor](https://fintechprimitives.com/docs/api
 ```
 `tax_status` attribute captures the India income tax residential status of the investor for that financial year as known at the time of capturing this information.
 
-The following information cannot be changed once captured: `type`, `tax_status`, `pan`, `date_of_birth`, `country_of_birth` and `place_of_birth`.
+The following information cannot be changed once captured: `type`,`name`, `tax_status`, `pan`, `date_of_birth`,`occupation`,`gender`, `country_of_birth` and `place_of_birth`.
