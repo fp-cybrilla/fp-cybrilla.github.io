@@ -6,7 +6,7 @@ Note: Beta programs might come with certain limitations. To learn more about bet
 |Investor type|Holding pattern|Status|
 |---|---|---|
 |Resident Individual|Single|Supported|
-|NRIs|Any|Yet to be supported|
+|NRIs|Any|Supported|
 |Others|Any|Not supported|
 
 #### 2. KYC
@@ -33,10 +33,10 @@ Note: CVL KYC Status check is charged separately.
 |Category|Capabilities|
 |---|---|
 |Frequencies supported|Business Day Daily SIP, Monthly SIP supported. Other frequencies not supported|
-|SIP Creation | Single SIP creation supported. Batch SIP creation yet to be supported|
+|SIP Creation | Single SIP creation supported. Batch SIP creation supported|
 |Payment collection on day of SIP registration|Supported|
 |SIP Cancellation|Supported|
-|SIP Amount modification|Yet to be supported|
+|SIP Amount modification|Supported|
 
 Note: To understand more about current Daily SIP schedule, click <a href="https://poa.cybrilla.com/docs/capabilities/sip-daily" target="_blank" rel="noopener noreferrer">here.</a>
 
@@ -67,8 +67,8 @@ Note: To understand more about current Daily SIP schedule, click <a href="https:
 
 |Method|Status|
 |---|---|
-|UPI|Supported(for lumpsume purchases)|
-|Netbanking|Supported(for lumpsume purchases)|
+|UPI|Supported(for lumpsum purchases)|
+|Netbanking|Supported(for lumpsum purchases)|
 |UPI Autopay| Supported(For SIPs)|
 |E-NACH| Supported(For SIPs)|
 
