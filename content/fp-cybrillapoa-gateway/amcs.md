@@ -10,3 +10,8 @@
 9. Kotak Mutual Fund
 10. DSP Mutual Fund
 11. Motilal Oswal Mutual Fund
+12. Edelweiss Mutual Fund
+13. Quantum Mutual Fund
+14. JM Financial Mutual Fund
+15. PGIM India Mutual Fund
+16. Invesco Mutual Fund
