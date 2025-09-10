@@ -8,7 +8,6 @@ Webhook notifications enable you to listen to events on FP objects, so that your
 
 Events are a way of letting you know when something interesting happens on the FP objects. When an event occurs, we create a new event object. If you have registered a webhook endpoint to receive that event, we send it to your endpoint as part of a POST request. Refer [FP events](https://fintechprimitives.com/docs/api/#event-object) which can be notified via webhooks
 
-
 ### Setup Webhook notification
 
 Follow the below steps to configure a webhook notification, signature verification and handling failure & duplicate events
@@ -134,28 +133,9 @@ if (generatedSignature === headerSignature) {
 }
 ```
 
-#### FP webhook notification delivery failure and retry mechanism
-
-If the webhook notification does not deliver successfully in the first attempt then basis the responses recieved from the client application, further retry happens from FP. When FP calls the client application's webhook endpoint, it expects a 2XX response from the client application within timeout period of `3000 milliseconds`, else it assumed as failure and scheduled to retry.
-
-FP attempts to deliver a webhook notification up to `5 times` with a delay of fixed interval. If the webhook notification is not acknowledged by your application after 5 attempts, the notification is not delivered further. If your endpoint has been disabled or deleted or is not functional when FP attempts a notification, future retries of the notification will be prevented.
-
-
-| Type | Response from client application | Notification state | Retry webhook notification to client application?                                             |
-| ---- | ----------------------- | --------------- | ------------------------------------------------------ |
-| 1    | FP recieved 2XX         | Success         | No                                                     |
-| 2    | FP recieved 4XX         | Failure         | No
-| 3    | FP recieved 5XX         | Failure         | Retry until 5 times |
-| 4    | FP recieved timeout     | Failure         | Retry until 5 times |
-
-
-#### Handle duplicate events
-
-Webhook endpoints might occasionally receive the same event more than once. For example, your application may have received an event via webhook notification, but did not acknowledge it within `timeout period` or with correct status. In this case. FP retry logic will kick-in and attempt to deliver the same notification again. We advise you to guard against duplicate event receipts by making your event processing `idempotent`. One way of doing this is logging the events you have processed, and skip an event processing basis the already logged events.
-
 #### Order of events
 
-FP does not guarantee delivery of events in the order in which they are generated on an object. Though most of the delivery is expected in-order, but in case of notification retry, there may be a possibility of out-of-orders events and duplicacy. 
+FP does not guarantee delivery of events in the order in which they are generated on an object. Though most of the delivery is expected in-order. 
 
 In order to avoid issues because of out-of-orders events & duplicacy, we recommend below practises in the client application recieving the webhook notifications:
 
