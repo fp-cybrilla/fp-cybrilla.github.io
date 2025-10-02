@@ -185,6 +185,8 @@ sidebar:
         - heading: "Use cases"
         - title: Monthly SIP
           link: "/fp-cybrillapoa-gateway/usecase-monthly-sips"        
+        - title: Business day Daily SIP
+          link: "/fp-cybrillapoa-gateway/usecase-business-day-daily-sips"                
         - title: Collecting payments on your own  
           link: "/fp-cybrillapoa-gateway/collecting-payment-on-your-own"
   - dropdown_menu_title: Investor Reporting
