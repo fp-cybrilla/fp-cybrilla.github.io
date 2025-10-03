@@ -15,3 +15,5 @@
 14. JM Financial Mutual Fund
 15. PGIM India Mutual Fund
 16. Invesco Mutual Fund
+17. Zerodha Mutual Fund
+18. Bandhan Mutual Fund
