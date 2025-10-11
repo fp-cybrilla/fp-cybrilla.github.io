@@ -234,6 +234,8 @@ sidebar:
         link: "/general-topics/best-practices-guide/"
       - title: Security Assurance
         link: "/general-topics/security_assurance/"  
+      - title: Incident Reports
+        link: "/general-topics/incident-reports/"  
       - subsection:
         - heading: Compliance
         - title: Overview
