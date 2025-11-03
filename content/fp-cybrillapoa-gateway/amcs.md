@@ -17,3 +17,4 @@
 16. Invesco Mutual Fund
 17. Zerodha Mutual Fund
 18. Bandhan Mutual Fund
+19. Capitalmind Mutual Fund
