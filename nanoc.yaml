@@ -175,6 +175,8 @@ sidebar:
         link: "/fp-cybrillapoa-gateway/going-live/"
       - title: Custom Checkout
         link: "/fp-cybrillapoa-gateway/custom-checkout"
+      - title: Payment Retry
+        link: "/fp-cybrillapoa-gateway/payment-retry"
       - title: Sandbox Simulation
         link: "/fp-cybrillapoa-gateway/sandbox-simulation"
       - title: Capabilities

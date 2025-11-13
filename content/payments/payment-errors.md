@@ -26,6 +26,7 @@ Please be aware that this list is not exhaustive, and we will continue to update
 |`invalid_credentials`| Payment failed due to invalid credentials. Please retry using correct credentials.| User has entered wrong credentials. User can retry using the correct credentials. This can be wrong wrong netbanking username, password  or pin.|
 |`payment_failed`| Payment was unsuccessful due to a temporary issue. Please retry after sometime.| Payment processing or mandate registration failed due to error at bank or payment gateway. No specific error code received from gateway in this case.|
 |`invalid_bank_account`| Payment failed as your bank account is inoperative, blocked or closed. Try another account or contact your bank for details.| The investor bank has declined the debit request. The reasons can be because of the account being blocked, Please ask the investor to  check  with their banks|
+|`late_authorised_refunded`|	Payment was authorised late by your bank. Any debited amount has been refunded.|	This occurs when the payment is initially marked as failed or expired due to no response from the bank or payment gateway within the stipulated time, but the bank later authorises the transaction. Since the system had already treated the payment as failed, the amount is automatically refunded to prevent duplicate debit or reconciliation mismatch. Refunded amount must reflect in Investor's bank account in 3-5 working days.|
 
 
 <!-- ### Payment API error codes and their meaning
