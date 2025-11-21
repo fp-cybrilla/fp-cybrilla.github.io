@@ -1,5 +1,4 @@
 ## Business Day Daily SIPs
-<br>
 
 #### 1. Schedule
 The following schedule is available for business day daily SIPs (assuming that Monday to Friday are working days, and Saturday and Sunday are market holidays):
