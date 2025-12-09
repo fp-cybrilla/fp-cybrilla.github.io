@@ -8,7 +8,7 @@ title: Compliance
 FP takes care of operational changes introduced due to any new sebi / amfi circulars so your application is always compliant with the regulations.
 
 ##### Dec 5, 2025
-1. [Interim communication - Revised nomination opt-out workflows](../changes/interim-revised-nomination-opt-out-workflows/)
+1. [Revised nomination opt-out workflows](../changes/revised-nomination-opt-out-workflows/)
 <br /><br />
 
 ##### May 19, 2025
