@@ -171,8 +171,6 @@ sidebar:
     dropdown_menu_items: 
       - title: Overview
         link: "/fp-cybrillapoa-gateway/overview/"
-      - title: Cybrilla POA vs. FP
-        link: "/fp-cybrillapoa-gateway/fp-vs-cybrillapoa/"
       - title: Going Live
         link: "/fp-cybrillapoa-gateway/going-live/"
       - title: Custom Checkout
