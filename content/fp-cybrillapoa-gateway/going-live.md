@@ -18,5 +18,8 @@ To begin: Contact customerservice@cybrilla.com to schedule a call for assistance
 ### 3. Schedule Product Demo Review
 Set up a product readiness demo call by reaching out to customerservice@cybrilla.com. This step ensures your product setup meets all technical and complaince requirements before going live.
 
-### 4. Receive Production Credentials
+### 4. Set Up Mailback Report Subscription with RTAs
+Configure the mailback report subscription with the RTAs on the portal. For enabling the subscription, contact customerservice@cybrilla.com.
+
+### 5. Receive Production Credentials
 After completing all the above steps, the Cybrilla Onboarding Team will share your production credentials.
