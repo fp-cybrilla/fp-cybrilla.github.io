@@ -72,7 +72,9 @@ Based on the Netbanking or UPI type chosen (**Intent / QR / Collect**), the inve
 
 #### Payment Retry Flow
 
-When the first payment attempt fails or expires, you can allow the investor to **retry the payment** without creating a new purchase order.  
+When the first payment attempt fails or expires, you can allow the investor to **retry the payment** without creating a new purchase order. 
+> Same flow can be utilised to **retry payment for an SIP instalment** using Netbanking and UPI payment methods when the initial payment is failed. You can utilise the List all MF Purchases
+(https://fintechprimitives.com/docs/api/#list-all-mf-purchases) to fetch the instalment AMC order ID to retry the payments.
 
 1. **When to Retry:**
 A retry can be initiated when:

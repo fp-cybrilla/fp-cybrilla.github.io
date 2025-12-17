@@ -81,7 +81,7 @@ Follow the below steps to customise the payment checkout page for Netbanking, UP
               "contact": "FP_Payment_response.sdk_options.razorpay.contact"   //your customer's contact
           },
           "retry": {
-              "enabled": false,      //Pass the 'retry' parameter as 'false'.
+              "enabled": false,      //Pass the 'retry' parameter as 'false' mandatorily to ensure there are no payment failures.
     
           },
           "theme": {
@@ -125,31 +125,26 @@ Similar steps must be followed for E-Mandate/UPI Autopay authorisation page cust
       ```json
 
       {
-          "id": 1692,
-          "token_url": "{{base_url}}/api/pg/payments/netbanking/razorpay?txnId=2c8a6e76-f622-47d8-90c2-746f9fb1d577&txnType=0",
+          "id": 3844,
+          "token_url": "https://cyberion.s.finprim.com/api/pg/payments/netbanking/razorpay?txnId=516716bc-f427-4597-aadc-70cc2fa9c1fc&txnType=1",
           "sdk_options": {
-              "razorpay": {
-                  "callback_url": "{{base_url}}/api/pg/payments/netbanking/razorpay/capture/1692",
-                  "bank_code": "ICIC",
-                  "amount": 100000,
-                  "method": {
-                      "wallet": false,
-                      "netbanking": true,
-                      "card": false,
-                      "upi": false
-                  },
-                  "bank_account_holder_name": "Abhin",   
-                  "customer_id": "cust_LN282jrS8faukL",
-                  "order_id": "order_LPLoYDzTOOKCUD",
-                  "bank_account_ifsc": "ICIC0000801",
-                  "key": "rzp_test_yOMeNF4w46S7lK",
-                  "email": "abhin@cybrilla.com",
-                  "contact": "9642991181"
-              }
+              "callback_url": "https://cyberion.s.finprim.com/api/pg/payments/netbanking/razorpay/capture/3844",
+              "bank_account_number": "9800000001",
+              "method": {
+              "emandate": true
+              },
+              "contact": "9012893478",
+              "bank_account_holder_name": "Rajesh Ranjan",
+              "customer_id": "cust_KteJTwLgDpzkbp",
+              "order_id": "order_RseTTBmjbGcaPn",
+              "bank_account_ifsc": "ICIC0000611",
+              "key": "rzp_test_wsOAR3HBBzJAKj",
+              "email": "tony.soprano@gmail.com"
           }
       }
 
       ```
+> Note: For UPI Autopay authorisation payment, `bank_account_holder_name`, `bank_account_ifsc`, `contact` and `email` are not provided in the FP response. Please utilise the FP Investor Profile APIs to fetch these details.
 
 3. Parameters received in the above response as `'sdk_options' -> 'razorpay'` must be passed on while creating authorisation payment checkout page using Razorpay SDK as detailed in [Razorpay documentation](https://razorpay.com/docs/api/payments/recurring-payments/emandate/create-authorization-transaction#113-create-an-authorization-payment).
 
@@ -172,6 +167,10 @@ Similar steps must be followed for E-Mandate/UPI Autopay authorisation page cust
               "email": "FP_MandateAuth_response.sdk_options.razorpay.email",  //your customer's email
               "contact": "FP_MandateAuth_response.sdk_options.razorpay.contact"   //your customer's contact
             },
+            "retry": {
+              "enabled": false,      //Pass the 'retry' parameter as 'false' mandatorily to ensure there are no payment failures.
+    
+          },
             "handler": function (response) {
               alert(response.razorpay_payment_id);
               alert(response.razorpay_order_id);
