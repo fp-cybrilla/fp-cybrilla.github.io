@@ -167,7 +167,7 @@ sidebar:
         - title: FAQs
           link: "/payments/FAQs"
       # Subsection ends here
-  - dropdown_menu_title: FP-CybrillaPOA gateway (BETA)
+  - dropdown_menu_title: FP-CybrillaPOA gateway
     dropdown_menu_items: 
       - title: Overview
         link: "/fp-cybrillapoa-gateway/overview/"
