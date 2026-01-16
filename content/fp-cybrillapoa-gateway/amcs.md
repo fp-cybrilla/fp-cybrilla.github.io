@@ -18,3 +18,6 @@
 17. Zerodha Mutual Fund
 18. Bandhan Mutual Fund
 19. Capitalmind Mutual Fund
+20. The Wealth Company Mutual Fund
+21. Abakkus Mutual Fund
+22. WhiteOak Capital Mutual Fund
