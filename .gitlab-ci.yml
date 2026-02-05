@@ -27,7 +27,7 @@ preview:
       - vendor/ruby
       - .npm/
   script:
-    - curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
+    - curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
     - apt-get install -y nodejs curl jq
     - npm ci --cache .npm --prefer-offline
     - npx netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --dir output | tee netlify_output.txt
