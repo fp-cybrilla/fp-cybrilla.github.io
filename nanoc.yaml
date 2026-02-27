@@ -71,6 +71,10 @@ sidebar:
         - heading: Verifications
         - title: Verify bank account
           link: "/identity/verification/perform-bank-account-verification/"
+      - subsection:
+        - heading: Lookups
+        - title: Fetch investor details
+          link: "/identity/lookups/fetch-investor-details/"
       - title: FAQs
         link: "/identity/FAQs/"
   - dropdown_menu_title: MF Orders
