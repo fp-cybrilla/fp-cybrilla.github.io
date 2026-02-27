@@ -19,12 +19,12 @@ You can enable UPI intent options in the payment checkout page by passing query 
 
 | Parameter | Values | How it is shown |
 |-----------|--------|-----------------|
-| `REQUESTED_UPI_APPS` | Comma-separated list of app codes, or `ALL` | Only the specified UPI app(s) are shown on the payment checkout page. |
+| `requestedUpiApps` | Comma-separated list of app codes, or `ALL` | Only the specified UPI app(s) are shown on the payment checkout page. |
 | `showUpiCollect` | `true` | Shows the UPI Collect option. Use this option only for iOS apps and iOS mWeb. |
 | `showQR` | `true` | Shows the UPI QR option on mobile. When using this option, you must also pass `&method=UPI` in the Token URL. |
 | `method` | `UPI` | Required when `showQR=true`; must be passed together with `showQR=true`. |
 
-**Supported values for `REQUESTED_UPI_APPS`**
+**Supported values for `requestedUpiApps`**
 
 | App | Code |
 |------|-----|
@@ -52,7 +52,7 @@ Pass `showUpiCollect=true` to show the UPI Collect option on the payment checkou
 
 ##### Example
 ```
-...?txnId=...&txnType=0&REQUESTED_UPI_APPS=PHONE_PE,GOOGLE_PAY
+...?txnId=...&txnType=0&requestedUpiApps=PHONE_PE,GOOGLE_PAY
 ```
 
 #### Option 2: Enable UPI intent using code snippet (to be deprecated)
