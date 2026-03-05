@@ -24,7 +24,7 @@ Therefore, at redemption, the distributor will have to create a screen to show t
 
 #### 3. Special use case: Investor wants to start business day daily SIP instalments on a future date
 
-Future activation is not currently supported. However, a distributor can take consent and initiate mandate authorisation today, and register the business day daily SIP on the day the investor wants.
+Future activation is not currently supported. However, a distributor can take consent and initiate mandate authorisation today, and register the business day daily SIP in FP on the day the investor wants.
 
 ---
 

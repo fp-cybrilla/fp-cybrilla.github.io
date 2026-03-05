@@ -15,7 +15,7 @@ Note: Beta programs might come with certain limitations. To learn more about bet
 |---|---|
 |KYC Status check(CVL)|Supported|
 |New KYC|Supported(For Resident Indian Individuals only)|
-|Modify KYC|Yet to be supported|	
+|Modify KYC|Supported|	
 
 Note: CVL KYC Status check is charged separately. 
 
@@ -32,7 +32,7 @@ Note: CVL KYC Status check is charged separately.
 
 |Category|Capabilities|
 |---|---|
-|Frequencies supported|Business Day Daily SIP, Monthly SIP supported. Other frequencies not supported|
+|Frequencies supported|Business Day Daily SIP,Calendar day Daily SIP, Monthly SIP supported. Other frequencies not supported|
 |SIP Creation | Single SIP creation supported. Batch SIP creation supported|
 |Payment collection on day of SIP registration|Supported|
 |SIP Cancellation|Supported|
@@ -55,12 +55,12 @@ Note: To understand more about current Daily SIP schedule, click <a href="https:
 |SWP|Yet to be supported|
 |STP|Yet to be supported|
 
- **Note about supporting Goal like use cases:** Single payment collection against multiple lumpsum purchase orders OR Single payment collection against multiple first installments of different SIPs are yet to be supported.
+ **Note about supporting Goal like use cases:** Single payment collection against multiple lumpsum purchase orders OR Single payment collection against multiple first installments of different SIPs are supported.
 
 #### 4. Partner type support
 
  - Mutual fund distributors with ARN license are supported
- - RIA support is yet to be available in beta
+ - RIA support is available in beta
  - Other partners are yet to be supported
 
 #### 5. Payment Collection Support
@@ -72,7 +72,7 @@ Note: To understand more about current Daily SIP schedule, click <a href="https:
 |UPI Autopay| Supported(For SIPs)|
 |E-NACH| Supported(For SIPs)|
 
-**Note:** Settlement Cycle: T+1 at present
+**Note:** Settlement Cycle: [Cybrilla POA Settlement TATs](https://poa.cybrilla.com/docs/capabilities/Payments/settlement-TATs)
 > Since all payments and mandates are issued in Cybrilla’s name, investors using your app will see “Cybrilla” in their UPI authorizations, mandate details and bank statements. Please ensure they understand that Cybrilla is the official partner facilitating and processing these mutual-fund transactions.
 
 #### 6. List of banks supported for Netbanking
