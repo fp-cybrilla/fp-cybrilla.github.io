@@ -169,27 +169,11 @@ const ROADMAP = {
     consideration: [
       {
         short: "Orders against existing corporate folios",
-        detail: "Allow distributors to place orders against corporate folios that were created through existing processes, without needing to re-create the folio on the platform."
-      },
-      {
-        short: "Universal instant redemption for ONDC API",
-        detail: "Distributors using the FP-ONDC API can offer instant redemption to investors without needing individual tie-ups with each AMC."
-      },
-      {
-        short: "Multi-gateway support within a single tenant",
-        detail: "RTA customers will be able to place orders through both the ONDC gateway and the RTA gateway within the same tenant, without needing separate integrations."
-      },
-      {
-        short: "Skip or pause an active SIP",
-        detail: "Investors will be able to temporarily pause or skip individual SIP instalments without cancelling the mandate or the overall SIP."
+        detail: "Corporate investors will be able to place orders against their existing folios through FP-ONDC"
       },
       {
         short: "Weekly SIP frequency",
         detail: "Enable investors to set up SIPs with a weekly deduction frequency, in addition to the existing monthly and fortnightly options."
-      },
-      {
-        short: "Capital gains report",
-        detail: "Generate capital gains reports for investors, covering both short-term and long-term gains across their mutual fund portfolio."
       },
     ],
 
@@ -197,12 +181,27 @@ const ROADMAP = {
       {
         short: "Switch by units, amount, or switch all",
         detail: "Investors will be able to initiate switch transactions specifying the number of units, a rupee amount, or choosing to switch the entire holding — giving full flexibility in how switches are placed.",
-        month: "Mar"
+        month: "Apr"
       },
       {
-        short: "Mandate + first instalment in one UPI step",
-        detail: "For 'first instalment today' SIPs, investors will authorise an autopay mandate and pay the first instalment in a single UPI interaction. The first instalment will be debited within 24–28 hours.",
-        month: "Mar"
+        short: "Universal instant redemption for ONDC API",
+        detail: "Distributors using the FP-ONDC API can offer instant redemption to investors without needing individual tie-ups with each AMC. We will initially going live ",
+        month: "May"
+      },
+      {
+        short: "Multi-gateway support within a single tenant",
+        detail: "RTA customers will be able to place orders through both the ONDC gateway and the RTA gateway within the same tenant, without needing separate integrations.",
+        month: "May"
+      },
+      {
+        short: "Skip or pause an active SIP",
+        detail: "Investors will be able to skip SIP instalments without cancelling the mandate or SIP. The skip instalment feature can be used programmatically to pause an SIP",
+        month: "Apr"
+      },
+      {
+        short: "Capital gains report",
+        detail: "Generate capital gains reports for investors.",
+        month: "Apr"
       },
     ],
 
@@ -231,41 +230,40 @@ const ROADMAP = {
       },
       {
         short: "Ability to cancel mandates",
-        detail: "Allow investors or distributors to cancel existing autopay mandates directly through the platform, without needing to contact the bank or NPCI separately."
+        detail: "Allow investors or distributors to cancel existing autopay mandates directly through the platform."
       },
     ],
 
     development: [
       {
         short: "Same-day settlement for batch purchases and SIPs",
-        detail: "Batch lumpsum purchases and SIP instalments will settle on the same day for select AMCs, reducing the gap between payment and unit allotment.",
-        month: "Mar"
+        detail: "Batch lumpsum purchases and SIP instalments will settle on the same day for select AMCs.",
+        month: "Apr"
       },
       {
         short: "Payment failure window cut from T+7 days to T+30 min",
         detail: "Failed payments will be flagged within 30 minutes instead of the current T+7 day window, enabling investors to retry much faster and reducing the risk of missing NAV-sensitive transactions.",
-        month: "Mar"
+        month: "Apr"
       },
       {
         short: "Token URL UX redesign",
         detail: "A redesigned payment token URL experience, especially aimed at new MF distributors building their first investor-facing app — cleaner layout, clearer calls to action, and a better mobile experience.",
-        month: "Mar"
-      },
-      {
-        short: "Mandate + first instalment in one UPI interaction",
-        detail: "For 'first instalment today' SIPs, investors will be able to authorise an autopay mandate and make the first instalment payment in a single UPI interaction. The first instalment will be debited within 24–28 hours.",
-        month: "Mar"
+        month: "Apr"
       },
     ],
 
     launched: [
       {
+        short: "Mandate + first instalment in one UPI interaction",
+        detail: "For 'first instalment today' SIPs, investors will be able to authorise an autopay mandate and initiate the first instalment payment in a single UPI interaction. The first instalment will be debited within 24–28 hours."
+      },
+      {
         short: "Manual retry for failed lumpsum and SIP payments",
-        detail: "Investors or distributors can now manually trigger a payment retry for failed lumpsum orders and SIP instalments, without needing to raise a support ticket."
+        detail: "Payments can now be retried manually for an existing order. The investor will not have to place a fresh order just to retry a payment."
       },
       {
         short: "Auto-retry for failed mandate-based SIP payments",
-        detail: "SIP payments that fail due to technical reasons (not insufficient funds) are now automatically retried, reducing instances of missed instalments without investor intervention."
+        detail: "SIP payments that fail due to technical reasons are now automatically retried upto 3 times, reducing instances of missed instalments without investor intervention."
       },
     ],
 
