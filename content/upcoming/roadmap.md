@@ -54,7 +54,7 @@ title: Product Roadmap
 
   /* Card summary row */
   .rm-card-summary { display: flex; align-items: center; gap: 8px; padding: 11px 12px; }
-  .rm-card-summary-text { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 13px; color: var(--text-secondary); }
+  .rm-card-summary-text { flex: 1; min-width: 0; white-space: normal; font-size: 13px; color: var(--text-secondary); }
 
   /* Expand button */
   .rm-expand-btn { flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(--border); background: transparent; cursor: pointer; color: var(--muted); font-size: 11px; transition: background 0.12s, border-color 0.12s, color 0.12s; }
