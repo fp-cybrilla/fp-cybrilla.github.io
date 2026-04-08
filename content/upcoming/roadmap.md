@@ -226,7 +226,7 @@ const ROADMAP = {
     consideration: [
       {
         short: "Mandate auth + first payment in one step",
-        detail: "A unified flow that lets investors authorise an autopay mandate and make the first payment in a single interaction — removing the current two-step process."
+        detail: "A unified flow that lets investors authorise an autopay mandate and make the first instalment payment in the same instance."
       },
       {
         short: "Ability to cancel mandates",
@@ -254,8 +254,8 @@ const ROADMAP = {
 
     launched: [
       {
-        short: "Mandate + first instalment in one UPI interaction",
-        detail: "For 'first instalment today' SIPs, investors will be able to authorise an autopay mandate and initiate the first instalment payment in a single UPI interaction. The first instalment will be debited within 24–28 hours."
+        short: "Mandate against lumpsum purchases",
+        detail: "Use case: For 'first instalment today' SIPs, investors will be able to authorise an autopay mandate and initiate the first instalment payment in a single UPI interaction. The first instalment will be debited within 24–28 hours of mandate authorisation."
       },
       {
         short: "Manual retry for failed lumpsum and SIP payments",
