@@ -181,7 +181,7 @@ sidebar:
         link: "/fp-cybrillapoa-gateway/custom-checkout"
       - title: Payment Retry
         link: "/fp-cybrillapoa-gateway/payment-retry"
-      - title: Mandate Lump Sum Use Cases
+      - title: Mandate Lumpsum Use Cases
         link: "/fp-cybrillapoa-gateway/mandate-lumpsum-usecases"  
       - title: Sandbox Simulation
         link: "/fp-cybrillapoa-gateway/sandbox-simulation"
