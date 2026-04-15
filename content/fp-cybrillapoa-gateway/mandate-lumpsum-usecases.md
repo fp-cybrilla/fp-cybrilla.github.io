@@ -1,6 +1,6 @@
-# `generate_first_installment_now` — Use Case Guide
+# Mandate Lumpsum Usecases
 
-## Overview
+//## Overview
 
 `generate_first_installment_now` is a flag available on MF purchase plans that, when set to `true`, generates the first installment of a plan **immediately at the time of plan creation**, bypassing the default minimum gap restriction.
 
@@ -30,24 +30,24 @@ By setting `generate_first_installment_now = true` on plan creation, you can col
 
 Create the investor profile and MF investment account using [FPDocs, Create Investor Profile](https://fintechprimitives.com/docs/api/#create-an-investor-profile) and [FPDocs, Create MF Investment Account](https://fintechprimitives.com/docs/api/#create-an-mf-investment-account).
 
-```
-POST /v2/investor_profiles
-POST /v2/mf_investment_accounts
-```
+//```
+//POST /v2/investor_profiles
+//POST /v2/mf_investment_accounts
+//```
 
 **Step 2 — Create and authorise a mandate**
 
 Create a mandate for the investor using [FPDocs, Create a mandate](https://fintechprimitives.com/docs/api/#create-a-mandate-enach-upi-autopay).
 
-```
+<!-- ```
 POST /api/pg/mandates
-```
+``` -->
 
 Initiate the authorisation using [FPDocs, Authorize a mandate](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach-and-upi-autopay) and redirect the investor to the `token_url` returned in the response to complete mandate authorisation. This follows the same redirect-and-return pattern as a typical payment checkout.
 
-```
+<!-- ```
 POST /api/pg/payments/emandate/auth
-```
+``` -->
 
 Once the investor completes authorisation, they are redirected back to your configured `payment_postback_url`. Wait for `mandate_status = APPROVED` before proceeding.
 
@@ -55,7 +55,7 @@ Once the investor completes authorisation, they are redirected back to your conf
 
 Create the plan with `generate_first_installment_now = true` using [FPDocs, Create MF Purchase Plan](https://fintechprimitives.com/docs/api/#create-a-purchase-plan). The plan enters `created` state and FP-ONDC begins its asynchronous review.
 
-```
+<!-- ```
 POST /v2/mf_purchase_plans
 
 {
@@ -73,7 +73,7 @@ POST /v2/mf_purchase_plans
   "gateway": "ondc",
   "user_ip": "x.x.x.x"
 }
-```
+``` -->
 
 **Step 4 — Wait for review completion**
 
@@ -83,7 +83,7 @@ Listen for the `mf_purchase_plan.review_completed` webhook event. Once received,
 
 Obtain OTP consent from the investor and confirm the plan using [FPDocs, Update MF Purchase Plan](https://fintechprimitives.com/docs/api/#update-a-purchase-plan).
 
-```
+<!-- ```
 PATCH /v2/mf_purchase_plans
 
 {
@@ -95,7 +95,7 @@ PATCH /v2/mf_purchase_plans
     "mobile": "9XXXXXXXXX"
   }
 }
-```
+``` -->
 
 The plan moves to `submitted` then `active` automatically.
 
@@ -103,22 +103,22 @@ The plan moves to `submitted` then `active` automatically.
 
 Fetch the installment using [FPDocs, List all MF Purchases](https://fintechprimitives.com/docs/api/#list-all-mf-purchases) and retrieve the `old_id`. This is required for payment creation.
 
-```
+<!-- ```
 GET /v2/mf_purchases?plan=mfpp_xxx
-```
+``` -->
 
 **Step 7 — Create payment**
 
 Create payment against the installment using [FPDocs, Create an eNACH or UPI Autopay Payment](https://fintechprimitives.com/docs/api/#create-an-enach-or-upi-autopay-payment).
 
-```
+<!-- ```
 POST /api/pg/payments/nach
 
 {
   "mandate_id": <mandate_id>,
   "amc_order_ids": [<installment_old_id>]
 }
-```
+``` -->
 
 The investor's first SIP payment is collected on the same day. Subsequent installments follow the normal monthly schedule.
 
@@ -126,17 +126,17 @@ The investor's first SIP payment is collected on the same day. Subsequent instal
 
 Simulate the mandate reaching APPROVED state using [FPDocs, Mandate Simulation](https://fintechprimitives.com/docs/api/#mandate-simulation):
 
-```
+<!-- ```
 POST /api/pg/simulate/mandates/{mandate_id}
 Body: { "status": "APPROVED" }
-```
+``` -->
 
 Simulate the first installment order reaching a successful state using [FPDocs, Order Simulation](https://fintechprimitives.com/docs/api/#order-simulation):
 
-```
+<!-- ```
 POST /api/oms/simulate/orders/{amc_order_id}
 Body: { "status": "SUCCESSFUL" }
-```
+``` -->
 
 ---
 
@@ -156,15 +156,15 @@ By creating a non-systematic purchase plan with `generate_first_installment_now 
 
 If the investor does not have an APPROVED mandate, create one using [FPDocs, Create a mandate](https://fintechprimitives.com/docs/api/#create-a-mandate-enach-upi-autopay) and initiate authorisation using [FPDocs, Authorize a mandate](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach-and-upi-autopay) as part of the checkout flow.
 
-```
+<!-- ```
 POST /api/pg/mandates
-```
+``` -->
 
 Redirect the investor to the `token_url` returned in the response to complete authorisation. Once done, they are redirected back to your `payment_postback_url`.
 
-```
+<!-- ```
 POST /api/pg/payments/emandate/auth
-```
+``` -->
 
 Wait for `mandate_status = APPROVED`.
 
@@ -172,7 +172,7 @@ Wait for `mandate_status = APPROVED`.
 
 Create the plan with `systematic = false`, `number_of_installments = 1`, and `generate_first_installment_now = true` using [FPDocs, Create MF Purchase Plan](https://fintechprimitives.com/docs/api/#create-a-purchase-plan).
 
-```
+<!-- ```
 POST /v2/mf_purchase_plans
 
 {
@@ -189,21 +189,21 @@ POST /v2/mf_purchase_plans
   "gateway": "rta",
   "user_ip": "x.x.x.x"
 }
-```
+``` -->
 
 **Step 3 — Fetch the generated installment**
 
 Fetch the installment using [FPDocs, List all MF Purchases](https://fintechprimitives.com/docs/api/#list-all-mf-purchases).
 
-```
+<!-- ```
 GET /v2/mf_purchases?plan=mfpp_xxx
-```
+``` -->
 
 **Step 4 — Collect consent and confirm the order**
 
 Confirm the order using [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase).
 
-```
+<!-- ```
 PATCH /v2/mf_purchases
 
 {
@@ -215,24 +215,24 @@ PATCH /v2/mf_purchases
     "mobile": "9XXXXXXXXX"
   }
 }
-```
+``` -->
 
 **Step 5 — Create payment via eNACH mandate**
 
 Create payment against the installment using [FPDocs, Create an eNACH or UPI Autopay Payment](https://fintechprimitives.com/docs/api/#create-an-enach-or-upi-autopay-payment).
 
-```
+<!-- ```
 POST /api/pg/payments/nach
 
 {
   "mandate_id": <mandate_id>,
   "amc_order_ids": [<installment_old_id>]
 }
-```
+``` -->
 
 The lump sum is debited via the investor's eNACH mandate. The plan completes after this single installment and no further installments are generated.
 
-### Sandbox Simulation
+<!-- ### Sandbox Simulation
 
 Simulate mandate approval and order success:
 
@@ -245,7 +245,7 @@ Body: { "status": "APPROVED" }
 
 POST /api/oms/simulate/orders/{amc_order_id}
 Body: { "status": "SUCCESSFUL" }
-```
+``` -->
 
 ---
 
@@ -265,9 +265,9 @@ A retry can be initiated when the previous payment attempt is marked as `FAILED`
 
 Listen for the `payment.failed` webhook event, or poll the payment using [FPDocs, Fetch a payment](https://fintechprimitives.com/docs/api/#fetch-a-payment).
 
-```
+<!-- ```
 GET /api/pg/payments/{payment_id}
-```
+``` -->
 
 Confirm `status = FAILED`.
 
@@ -275,9 +275,9 @@ Confirm `status = FAILED`.
 
 Fetch the order using [FPDocs, Fetch a MF Purchase](https://fintechprimitives.com/docs/api/#fetch-a-mf-purchase) and confirm it is not in `failed` or `cancelled` state. If the order is in `pending` state, also confirm it has not exceeded the expiry window by checking `scheduled_on`.
 
-```
+<!-- ```
 GET /v2/mf_purchases/{order_id}
-```
+``` -->
 
 **Step 3 — Create a new payment**
 
@@ -285,29 +285,29 @@ Use the same `amc_order_ids` as before. The order does not need to be re-confirm
 
 For eNACH or UPI Autopay, use [FPDocs, Create an eNACH or UPI Autopay Payment](https://fintechprimitives.com/docs/api/#create-an-enach-or-upi-autopay-payment):
 
-```
+<!-- ```
 POST /api/pg/payments/nach
 
 {
   "mandate_id": <mandate_id>,
   "amc_order_ids": [<order_old_id>]
 }
-```
+``` -->
 
 For Netbanking or UPI, use [FPDocs, Create a payment](https://fintechprimitives.com/docs/api/#create-a-payment):
 
-```
+<!-- ```
 POST /api/pg/payments/netbanking
 
 {
   "amc_order_ids": [<order_old_id>],
   "payment_postback_url": "https://yourapp.com/payment_status"
 }
-```
+``` -->
 
 If this retry also fails, the same process can be repeated. There is no limit on the number of payment attempts as long as the order remains actionable.
 
-### Sandbox Simulation
+<!-- ### Sandbox Simulation
 
 Simulate a failure then a successful retry using [FPDocs, Payment Simulation](https://fintechprimitives.com/docs/api/#payment-simulation):
 
@@ -317,7 +317,7 @@ Body: { "status": "FAILED" }
 
 POST /api/pg/simulate/payments/{new_payment_id}
 Body: { "status": "APPROVED" }
-```
+``` -->
 
 ---
 
@@ -335,7 +335,7 @@ By setting `generate_first_installment_now = true`, the first purchase is genera
 
 Create the plan using [FPDocs, Create MF Purchase Plan](https://fintechprimitives.com/docs/api/#create-a-purchase-plan). The plan activates immediately and the first installment is generated in `pending` state.
 
-```
+<!-- ```
 POST /v2/mf_purchase_plans
 
 {
@@ -351,21 +351,21 @@ POST /v2/mf_purchase_plans
   "gateway": "rta",
   "user_ip": "x.x.x.x"
 }
-```
+``` -->
 
 **Step 2 — Fetch the generated installment**
 
 Fetch the installment using [FPDocs, List all MF Purchases](https://fintechprimitives.com/docs/api/#list-all-mf-purchases).
 
-```
+<!-- ```
 GET /v2/mf_purchases?plan=mfpp_xxx
-```
+``` -->
 
 **Step 3 — Collect consent and confirm the order**
 
 Confirm the order using [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase).
 
-```
+<!-- ```
 PATCH /v2/mf_purchases
 
 {
@@ -377,26 +377,26 @@ PATCH /v2/mf_purchases
     "mobile": "9XXXXXXXXX"
   }
 }
-```
+``` -->
 
 **Step 4 — Create payment**
 
 Since this is a non-systematic plan, each installment is treated as a lump sum purchase. Payment can be collected via Netbanking, UPI, or an eNACH mandate using [FPDocs, Create a payment](https://fintechprimitives.com/docs/api/#create-a-payment).
 
-```
+<!-- ```
 POST /api/pg/payments/netbanking
 
 {
   "amc_order_ids": [<installment_old_id>],
   "payment_postback_url": "https://yourapp.com/payment_status"
 }
-```
+``` -->
 
 Subsequent quarterly installments are generated automatically by FP on the scheduled installment day from the next cycle.
 
 ---
 
-## API Quick Reference
+<!-- ## API Quick Reference
 
 | Action | Method | Link |
 |--------|--------|------|
@@ -415,4 +415,4 @@ Subsequent quarterly installments are generated automatically by FP on the sched
 
 ---
 
-Need help? Contact the support team at customerservice@cybrilla.com
+Need help? Contact the support team at customerservice@cybrilla.com -->
