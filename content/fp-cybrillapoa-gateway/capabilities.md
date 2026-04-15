@@ -69,10 +69,12 @@ Note: To understand more about current Daily SIP schedule, click <a href="https:
 |---|---|
 |UPI|Supported(for lumpsum purchases)|
 |Netbanking|Supported(for lumpsum purchases)|
-|UPI Autopay| Supported(For SIPs)|
-|E-NACH| Supported(For SIPs)|
+|UPI Autopay| Supported(For Single Lumpsum purchases & SIPs)|
+|E-NACH| Supported(For Single Lumpsum purchases & SIPs)|
 
-**Note:** Settlement Cycle: [Cybrilla POA Settlement TATs](https://poa.cybrilla.com/docs/capabilities/Payments/settlement-TATs)
+**Note:** 
+- Batch orders are not supported for mandate based payments.
+- Settlement Cycle: [Cybrilla POA Settlement TATs](https://poa.cybrilla.com/docs/capabilities/Payments/settlement-TATs)
 > Since all payments and mandates are issued in Cybrilla’s name, investors using your app will see “Cybrilla” in their UPI authorizations, mandate details and bank statements. Please ensure they understand that Cybrilla is the official partner facilitating and processing these mutual-fund transactions.
 
 #### 6. List of banks supported for Netbanking
