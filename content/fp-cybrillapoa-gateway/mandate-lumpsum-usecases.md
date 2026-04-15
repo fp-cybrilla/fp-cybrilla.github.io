@@ -1,4 +1,4 @@
-# Mandate Lumpsum Usecases
+## Mandate Lumpsum Usecases
 
 //## Overview
 
@@ -30,10 +30,10 @@ By setting `generate_first_installment_now = true` on plan creation, you can col
 
 Create the investor profile and MF investment account using [FPDocs, Create Investor Profile](https://fintechprimitives.com/docs/api/#create-an-investor-profile) and [FPDocs, Create MF Investment Account](https://fintechprimitives.com/docs/api/#create-an-mf-investment-account).
 
-//```
+<!-- //```
 //POST /v2/investor_profiles
 //POST /v2/mf_investment_accounts
-//```
+//``` -->
 
 **Step 2 — Create and authorise a mandate**
 
