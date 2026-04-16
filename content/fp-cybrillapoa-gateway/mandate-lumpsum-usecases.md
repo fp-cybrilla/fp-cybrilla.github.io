@@ -1,4 +1,4 @@
-# Mandate Lumpsum Usecases
+# Mandate Lumpsum Use cases
 
 The **FP–Cybrilla POA Gateway** allows you to use mandates to collect payments for both SIPs and one-time (lumpsum) investments. This document covers how to use mandates effectively across onboarding, SIPs, lumpsum payments, and payment retries.
 
