@@ -8,7 +8,7 @@ The **FP–Cybrilla POA Gateway** allows you to use mandates to collect payments
 
 ### Use Case 1: New Investor Onboarding
 
-When an investor completes onboarding and sets up a SIP, the first installment would normally be triggered on a future date. You can instead collect the first installment immediately using `generate_first_installment_now = true`, completing the full investment journey in a single session.
+When an investor completes onboarding and sets up an SIP, the first installment would normally be triggered on a future date. You can instead collect the first installment immediately using `generate_first_installment_now = true`, completing the full investment journey in a single session.
 
 #### Flow
 
@@ -20,7 +20,7 @@ When an investor completes onboarding and sets up a SIP, the first installment w
    
     Initiate the authorization using [FPDocs, Authorize a mandate](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach-and-upi-autopay) and redirect the investor to the `token_url` returned in the response to complete mandate authorization. This follows the same redirect-and-return pattern as a typical payment checkout.
    
-    Once the investor completes authorization, they are redirected back to your configured `payment_postback_url`. **Wait for `mandate_status = APPROVED` before proceeding.**
+    Once the investor completes authorization, they are redirected back to your configured `payment_postback_url`. **Wait for `mandate_status = APPROVED` before proceeding**.
 
 3. **Create the purchase plan**
     Create the plan with `generate_first_installment_now = true` using [FPDocs, Create MF Purchase Plan](https://fintechprimitives.com/docs/api/#create-a-purchase-plan). The plan enters `created` state and FP-ONDC begins its asynchronous review.
@@ -31,7 +31,7 @@ When an investor completes onboarding and sets up a SIP, the first installment w
 5. **Collect consent and confirm the plan**
     Obtain OTP consent from the investor and confirm the plan using [FPDocs, Update MF Purchase Plan](https://fintechprimitives.com/docs/api/#update-a-purchase-plan).
    
-    Consent must be updated against `mf_purchase_plan` and the plan state should be marked as `confirmed`. When the Purchase Plan is `confirmed`, it will be submitted to the gateway; the order is marked as `submitted` and then moved to `active` state automatically.
+    Consent must be [FPDocs, updated](https://fintechprimitives.com/docs/api/#update-a-purchase-plan) against `mf_purchase_plan` and the plan state should be marked as `confirmed`. When the Purchase Plan is `confirmed`, it will be submitted to the gateway; the order is marked as `submitted` and then moved to `active` state automatically.
    
     > **Note:** Please ensure that an `APPROVED` mandate is added as `payment_source` to the Plan before it is `confirmed`.
 
@@ -41,11 +41,13 @@ When an investor completes onboarding and sets up a SIP, the first installment w
 7. **Create payment**
     Create payment against the installment using [FPDocs, Create an eNACH or UPI Autopay Payment](https://fintechprimitives.com/docs/api/#create-an-enach-or-upi-autopay-payment).
 
+Based on your workflow, you can either create the mandate before or after taking the consent.
+
 ---
 
-### Use Case 2: Lump Sum Purchase for Large Amounts
+### Use Case 2: Lumpsum Purchase for Large Amounts
 
-For larger investments (e.g. where UPI limits apply), mandates provide a more reliable payment method. In this flow, you directly create a purchase order and collect payment via mandate.
+You can now use mandates directly for lumpsum payments, which is especially useful for high-value investments where standard UPI limits might be exceeded. Instead of relying on immediate checkout methods, you can simply create a Purchase Order directly and collect the payment via the investor's authorized mandate.
 
 #### Flow
 
@@ -59,7 +61,7 @@ For larger investments (e.g. where UPI limits apply), mandates provide a more re
 
 3. **Create payment via eNACH mandate**
     Create payment against the installment using [FPDocs, Create an eNACH or UPI Autopay Payment](https://fintechprimitives.com/docs/api/#create-an-enach-or-upi-autopay-payment).
-    The lump sum is debited via the investor's mandate.
+    The lumpsum is debited via the investor's mandate.
 
 ---
 
@@ -71,9 +73,9 @@ The gateway allows you to retry mandate-based payments without recreating the or
 * The previous payment attempt is `FAILED`.
 * The order remains in `submitted`.
 * No pending or successful payment exists for the same order.
-* The order is not marked as failed due to payment failure and remains submitted.
+* The order is not marked as failed due to expiry and remains submitted.
 
-As per settlement TATs, eNACH mandate debits happen on day T. If a debit fails on day T, the earliest a retry can be attempted is once the failure is confirmed, which may mean the retry effectively falls on T+1.
+As per [settlement TATs](https://poa.cybrilla.com/docs/capabilities/Payments/settlement-TATs), mandate debits happen on day T. If a debit fails on day T, the earliest a retry can be attempted is once the failure is confirmed, which may mean the retry effectively falls on T+1.
 
 As per SEBI guidelines, systematic purchase plans are subject to auto-cancellation if consecutive installments fail beyond a threshold: 3 consecutive failures for daily, weekly, fortnightly, and monthly frequencies, and 2 for quarterly, half-yearly, and yearly frequencies.
 
@@ -88,5 +90,5 @@ As per SEBI guidelines, systematic purchase plans are subject to auto-cancellati
 3. **Create a new payment**
     Use the same `amc_order_ids` as before. The order does not need to be re-confirmed.
    
-    * For **eNACH or UPI Autopay**, use [FPDocs, Create an eNACH or UPI Autopay Payment](https://fintechprimitives.com/docs/api/#create-an-enach-or-upi-autopay-payment).
-    * For **Netbanking or UPI**, use [FPDocs, Create a payment](https://fintechprimitives.com/docs/api/#create-a-payment).
+    For **eNACH or UPI Autopay**, use [FPDocs, Create an eNACH or UPI Autopay Payment](https://fintechprimitives.com/docs/api/#create-an-enach-or-upi-autopay-payment).
+    For **Netbanking or UPI**, use [FPDocs, Create a payment](https://fintechprimitives.com/docs/api/#create-a-payment).
