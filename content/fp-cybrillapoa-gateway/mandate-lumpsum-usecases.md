@@ -1,6 +1,6 @@
 ## Mandate Lumpsum Usecases
 
-//## Overview
+<!-- //## Overview -->
 
 `generate_first_installment_now` is a flag available on MF purchase plans that, when set to `true`, generates the first installment of a plan **immediately at the time of plan creation**, bypassing the default minimum gap restriction.
 
@@ -18,7 +18,7 @@ By default, FP enforces a minimum gap of at least 1 calendar day between plan re
 
 ---
 
-## Use Case 1 — New Investor Onboarding
+### Use Case 1 — New Investor Onboarding
 
 When a new investor completes onboarding, sets up their profile, approves a mandate, and registers a SIP, the first SIP installment would normally only trigger on the next scheduled installment date, which could be days or weeks away. The investor completes the entire setup without any confirmation that their investment has actually started.
 
@@ -140,7 +140,7 @@ Body: { "status": "SUCCESSFUL" }
 
 ---
 
-## Use Case 2 — Lump Sum Purchase for Large Amounts Using an eNACH Mandate
+### Use Case 2 — Lump Sum Purchase for Large Amounts
 
 For lump sum investments above Rs. 5 lakhs, UPI is not supported as a payment method. Netbanking, while available, is prone to late authorisations across banks, where the payment is authorised by the investor but the debit confirmation reaches the system significantly later than expected, resulting in payment failures. For amounts in this range, an eNACH mandate is the more dependable payment path.
 
@@ -249,7 +249,7 @@ Body: { "status": "SUCCESSFUL" }
 
 ---
 
-## Use Case 3 — Payment Retry for a Failed Installment
+### Use Case 3 — Payment Retry for a Failed Installment
 
 When a mandate-based debit is attempted for an installment and fails, for example due to insufficient balance in the investor's account at the time of debit, you can request the investor to retry payment rather than cancelling the plan or creating a new one. The installment remains in its current state and does not need to go back through consent or confirmation. You create a new payment against the same `amc_order_id`.
 
@@ -295,124 +295,3 @@ POST /api/pg/payments/nach
 ``` -->
 
 For Netbanking or UPI, use [FPDocs, Create a payment](https://fintechprimitives.com/docs/api/#create-a-payment):
-
-<!-- ```
-POST /api/pg/payments/netbanking
-
-{
-  "amc_order_ids": [<order_old_id>],
-  "payment_postback_url": "https://yourapp.com/payment_status"
-}
-``` -->
-
-If this retry also fails, the same process can be repeated. There is no limit on the number of payment attempts as long as the order remains actionable.
-
-<!-- ### Sandbox Simulation
-
-Simulate a failure then a successful retry using [FPDocs, Payment Simulation](https://fintechprimitives.com/docs/api/#payment-simulation):
-
-```
-POST /api/pg/simulate/payments/{payment_id}
-Body: { "status": "FAILED" }
-
-POST /api/pg/simulate/payments/{new_payment_id}
-Body: { "status": "APPROVED" }
-``` -->
-
----
-
-## Use Case 4 — Immediate First Purchase on a Non-Systematic Scheduled Plan
-
-When setting up a non-systematic quarterly or half-yearly purchase plan, the first installment would normally only be generated at the next scheduled cycle date, potentially months away. This is relevant for distributors setting up scheduled lump sum plans where the first purchase needs to be initiated on the day the plan is created.
-
-By setting `generate_first_installment_now = true`, the first purchase is generated immediately on plan creation. All subsequent installments then follow the normal frequency-based schedule from that point forward.
-
-> **Note:** Non-systematic purchase plans are supported on the RTA gateway only. FP-ONDC supports systematic plans only.
-
-### Flow (RTA Gateway)
-
-**Step 1 — Create the non-systematic plan**
-
-Create the plan using [FPDocs, Create MF Purchase Plan](https://fintechprimitives.com/docs/api/#create-a-purchase-plan). The plan activates immediately and the first installment is generated in `pending` state.
-
-<!-- ```
-POST /v2/mf_purchase_plans
-
-{
-  "mf_investment_account": "mfia_xxx",
-  "scheme": "INF204KA1B64",
-  "frequency": "quarterly",
-  "installment_day": 1,
-  "amount": 50000,
-  "number_of_installments": 8,
-  "systematic": false,
-  "generate_first_installment_now": true,
-  "auto_generate_installments": true,
-  "gateway": "rta",
-  "user_ip": "x.x.x.x"
-}
-``` -->
-
-**Step 2 — Fetch the generated installment**
-
-Fetch the installment using [FPDocs, List all MF Purchases](https://fintechprimitives.com/docs/api/#list-all-mf-purchases).
-
-<!-- ```
-GET /v2/mf_purchases?plan=mfpp_xxx
-``` -->
-
-**Step 3 — Collect consent and confirm the order**
-
-Confirm the order using [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase).
-
-<!-- ```
-PATCH /v2/mf_purchases
-
-{
-  "id": "mfp_xxx",
-  "state": "confirmed",
-  "consent": {
-    "email": "investor@example.com",
-    "isd_code": "91",
-    "mobile": "9XXXXXXXXX"
-  }
-}
-``` -->
-
-**Step 4 — Create payment**
-
-Since this is a non-systematic plan, each installment is treated as a lump sum purchase. Payment can be collected via Netbanking, UPI, or an eNACH mandate using [FPDocs, Create a payment](https://fintechprimitives.com/docs/api/#create-a-payment).
-
-<!-- ```
-POST /api/pg/payments/netbanking
-
-{
-  "amc_order_ids": [<installment_old_id>],
-  "payment_postback_url": "https://yourapp.com/payment_status"
-}
-``` -->
-
-Subsequent quarterly installments are generated automatically by FP on the scheduled installment day from the next cycle.
-
----
-
-<!-- ## API Quick Reference
-
-| Action | Method | Link |
-|--------|--------|------|
-| Create purchase plan | POST | [FPDocs, Create MF Purchase Plan](https://fintechprimitives.com/docs/api/#create-a-purchase-plan) |
-| Update / confirm plan | PATCH | [FPDocs, Update MF Purchase Plan](https://fintechprimitives.com/docs/api/#update-a-purchase-plan) |
-| List installments for a plan | GET | [FPDocs, List all MF Purchases](https://fintechprimitives.com/docs/api/#list-all-mf-purchases) |
-| Confirm a purchase order | PATCH | [FPDocs, Update a MF Purchase](https://fintechprimitives.com/docs/api/#update-a-mf-purchase) |
-| Create mandate | POST | [FPDocs, Create a mandate](https://fintechprimitives.com/docs/api/#create-a-mandate-enach-upi-autopay) |
-| Authorise mandate | POST | [FPDocs, Authorize a mandate](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach-and-upi-autopay) |
-| Create eNACH / UPI Autopay payment | POST | [FPDocs, Create an eNACH or UPI Autopay Payment](https://fintechprimitives.com/docs/api/#create-an-enach-or-upi-autopay-payment) |
-| Create Netbanking / UPI payment | POST | [FPDocs, Create a payment](https://fintechprimitives.com/docs/api/#create-a-payment) |
-| Fetch payment | GET | [FPDocs, Fetch a payment](https://fintechprimitives.com/docs/api/#fetch-a-payment) |
-| Simulate mandate status (sandbox) | POST | [FPDocs, Mandate Simulation](https://fintechprimitives.com/docs/api/#mandate-simulation) |
-| Simulate payment status (sandbox) | POST | [FPDocs, Payment Simulation](https://fintechprimitives.com/docs/api/#payment-simulation) |
-| Simulate order status (sandbox) | POST | [FPDocs, Order Simulation](https://fintechprimitives.com/docs/api/#order-simulation) |
-
----
-
-Need help? Contact the support team at customerservice@cybrilla.com -->
