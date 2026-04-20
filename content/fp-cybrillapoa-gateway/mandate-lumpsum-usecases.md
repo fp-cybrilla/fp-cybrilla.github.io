@@ -8,7 +8,7 @@ The **FP–Cybrilla POA Gateway** allows you to use mandates to collect payments
 
 ### Use Case 1: New Investor Onboarding
 
-When an investor completes onboarding and sets up an SIP, the first installment would normally be triggered on a future date. You can instead collect the first installment immediately using `generate_first_installment_now = true`, completing the full investment journey in a single session.
+When an investor completes onboarding and sets up an SIP, the first installment would normally be triggered on a future date. You can instead collect the payment against first installment immediately using `generate_first_installment_now = true`, completing the full investment journey in a single session.
 
 #### Flow
 
@@ -18,7 +18,7 @@ When an investor completes onboarding and sets up an SIP, the first installment 
 2. **Create and authorize a mandate**
     Create a mandate for the investor using [FPDocs, Create a mandate](https://fintechprimitives.com/docs/api/#create-a-mandate-enach-upi-autopay).
    
-    Initiate the authorization using [FPDocs, Authorize a mandate](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach-and-upi-autopay) and redirect the investor to the `token_url` returned in the response to complete mandate authorization. This follows the same redirect-and-return pattern as a typical payment checkout.
+    Initiate the authorization using [FPDocs, Authorize a mandate](https://fintechprimitives.com/docs/api/#authorize-a-mandate-enach-and-upi-autopay) and redirect the investor to the `token_url` returned in the response to complete mandate authorization or use your own [Custom checkout page](/fp-cybrillapoa-gateway/custom-checkout/). This follows the same redirect-and-return pattern as a typical payment checkout.
    
     Once the investor completes authorization, they are redirected back to your configured `payment_postback_url`. **Wait for `mandate_status = APPROVED` before proceeding**.
 
@@ -47,7 +47,7 @@ Based on your workflow, you can either create the mandate before or after taking
 
 ### Use Case 2: Lumpsum Purchase for Large Amounts
 
-You can now use mandates directly for lumpsum payments, which is especially useful for high-value investments where standard UPI limits might be exceeded. Instead of relying on immediate checkout methods, you can simply create a Purchase Order directly and collect the payment via the investor's authorized mandate.
+You can now use mandates directly for lumpsum payments, which is especially useful for high-value investments where standard UPI limits might be exceeded. Instead of relying on immediate checkout methods, you can simply create a Purchase Order directly, take consent and collect the payment via the investor's authorized mandate.
 
 #### Flow
 
@@ -61,7 +61,7 @@ You can now use mandates directly for lumpsum payments, which is especially usef
 
 3. **Create payment via eNACH mandate**
     Create payment against the installment using [FPDocs, Create an eNACH or UPI Autopay Payment](https://fintechprimitives.com/docs/api/#create-an-enach-or-upi-autopay-payment).
-    The lumpsum is debited via the investor's mandate.
+    The lumpsum is debited via the investor's mandate as per the [Settlement TATs](https://poa.cybrilla.com/docs/capabilities/Payments/settlement-TATs).
 
 ---
 
@@ -75,9 +75,9 @@ The gateway allows you to retry mandate-based payments without recreating the or
 * No pending or successful payment exists for the same order.
 * The order is not marked as failed due to expiry and remains submitted.
 
-As per [settlement TATs](https://poa.cybrilla.com/docs/capabilities/Payments/settlement-TATs), mandate debits happen on day T. If a debit fails on day T, the earliest a retry can be attempted is once the failure is confirmed, which may mean the retry effectively falls on T+1.
+As per [Settlement TATs](https://poa.cybrilla.com/docs/capabilities/Payments/settlement-TATs), mandate debits happen on day T. If a debit fails on day T, the earliest a retry can be attempted is once the failure is confirmed, which may mean the retry effectively falls on T+1.
 
-As per SEBI guidelines, systematic purchase plans are subject to auto-cancellation if consecutive installments fail beyond a threshold: 3 consecutive failures for daily, weekly, fortnightly, and monthly frequencies, and 2 for quarterly, half-yearly, and yearly frequencies.
+As per SEBI guidelines, systematic purchase plans are subject to auto-cancellation if consecutive installments fail beyond a threshold: 3 consecutive instalment failures for SIPS.
 
 #### Flow
 
