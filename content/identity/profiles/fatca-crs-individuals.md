@@ -20,14 +20,18 @@ Call [FPDocs, update individual investor](https://fintechprimitives.com/docs/api
   "first_tax_residency": {
     "country": "IN",
     "taxid_type": "pan",
-    "taxid_number": "arrpp7775n"
+    "taxid_number": "arrpp7775n",
+    "applicable_from": null,
+    "applicable_to": null
   },
   "second_tax_residency": {
     "country": "US",
-    "taxid_type": "irs_number",
-    "taxid_number": "abc123"
+    "taxid_type": "tin",
+    "taxid_number": " 810-02-5239",
+    "applicable_from": "2012-09-02",
+    "applicable_to": "2099-12-31"
   }
 }
 ```
 
-You can capture upto 4 countries of tax residency by populating `third_tax_residency` and `fourth_tax_residency`
+You can capture upto 4 countries of tax residency by populating `third_tax_residency` and `fourth_tax_residency`. Suppose a non-indian tax residency details is provided by the investor, then ensure you also collect the `tin` details along with `applicable_from` and `applicable_to` dates of that tax residency period.
