@@ -189,6 +189,8 @@ sidebar:
         link: "/fp-cybrillapoa-gateway/capabilities"
       - title: AMCs Live
         link: "/fp-cybrillapoa-gateway/amcs"  
+      - title: Migrating from RTA to ONDC
+        link: "/fp-cybrillapoa-gateway/rta_ondc_migration_guide"    
       - subsection:
         - heading: "Use cases"
         - title: Monthly SIP
