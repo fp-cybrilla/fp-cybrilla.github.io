@@ -128,13 +128,21 @@ const ROADMAP = {
 
     development: [
       {
-        short: "Integration with KFintech KRA for KYC",
-        detail: "KFin KRA will act as a back up, ensuring onboardings are not blocked in case CVL is down.",
-        month: "Apr"
-      },
-      {
         short: "Silent bank account verification via Penniless BAV",
         detail: "Bank account will be done silently in the background (as compared to pennydrop), thereby providing a better investor onboarding experience.",
+        month: "May"
+      },
+      {
+        short: "Status visibility for a new KYC submission",
+        detail: "Distributors will be able to see the status of KYC request applications for non-compliant investors. They will be notified when the investor is ready to invest.",
+        month: "May"
+      },
+    ],
+
+    launched: [
+      {
+        short: "Integration with KFintech KRA for KYC",
+        detail: "KFin KRA will act as a back up, ensuring onboardings are not blocked in case CVL is down.",
         month: "Apr"
       },
       {
@@ -142,9 +150,6 @@ const ROADMAP = {
         detail: "Optimisations to the algorithm that determines bank account verification confidence scores, improving accuracy and reducing false negatives.",
         month: "Apr"
       },
-    ],
-
-    launched: [
       {
         short: "Simplified Digilocker flow for investors",
         detail: "Improved the Digilocker experience for two types of cases: investors who don't have a Digilocker account, and those whose Digilocker account isn't linked to Aadhaar. They will be able to complete onboarding within the distributor app itself."
@@ -181,7 +186,7 @@ const ROADMAP = {
       {
         short: "Switch by units, amount, or switch all",
         detail: "Investors will be able to initiate switch transactions specifying the number of units, a rupee amount, or choosing to switch the entire holding — giving full flexibility in how switches are placed.",
-        month: "Apr"
+        month: "May"
       },
       {
         short: "Universal instant redemption for ONDC API",
@@ -193,19 +198,17 @@ const ROADMAP = {
         detail: "RTA customers will be able to place orders through both the ONDC gateway and the RTA gateway within the same tenant, without needing separate integrations.",
         month: "May"
       },
+    ],
+
+    launched: [
       {
         short: "Skip or pause an active SIP",
         detail: "Investors will be able to skip SIP instalments without cancelling the mandate or SIP. The skip instalment feature can be used programmatically to pause an SIP",
-        month: "Apr"
       },
       {
         short: "Capital gains report",
         detail: "Generate capital gains reports for investors.",
-        month: "Apr"
       },
-    ],
-
-    launched: [
       {
         short: "Orders against folios created outside ONDC",
         detail: "Distributors can now place orders against folios that were created outside the ONDC platform, removing the prior restriction that required folios to originate within ONDC."
@@ -232,27 +235,26 @@ const ROADMAP = {
         short: "Ability to cancel mandates",
         detail: "Allow investors or distributors to cancel existing autopay mandates directly through the platform."
       },
+      {
+        short: "Same-day settlement for batch purchases and SIPs",
+        detail: "Batch lumpsum purchases and SIP instalments will settle on the same day for select AMCs.",
+      },
     ],
 
     development: [
       {
-        short: "Same-day settlement for batch purchases and SIPs",
-        detail: "Batch lumpsum purchases and SIP instalments will settle on the same day for select AMCs.",
-        month: "Apr"
+        short: "Token URL UX redesign",
+        detail: "A redesigned payment token URL experience, especially aimed at new MF distributors building their first investor-facing app — cleaner layout, clearer calls to action, and a better mobile experience.",
+        month: "May"
       },
+    ],
+
+    launched: [
       {
         short: "Payment failure window cut from T+7 days to T+30 min",
         detail: "Failed payments will be flagged within 30 minutes instead of the current T+7 day window, enabling investors to retry much faster and reducing the risk of missing NAV-sensitive transactions.",
         month: "Apr"
       },
-      {
-        short: "Token URL UX redesign",
-        detail: "A redesigned payment token URL experience, especially aimed at new MF distributors building their first investor-facing app — cleaner layout, clearer calls to action, and a better mobile experience.",
-        month: "Apr"
-      },
-    ],
-
-    launched: [
       {
         short: "Mandate against lumpsum purchases",
         detail: "Use case: For 'first instalment today' SIPs, investors will be able to authorise an autopay mandate and initiate the first instalment payment in a single UPI interaction. The first instalment will be debited within 24–28 hours of mandate authorisation."
@@ -274,7 +276,7 @@ const ROADMAP = {
 // ============================================================
 // LAST UPDATED DATE — change this whenever you edit the roadmap
 // ============================================================
-const LAST_UPDATED = "1st April, 2026";
+const LAST_UPDATED = "1st June, 2026";
 
 // ============================================================
 // ⛔ DO NOT EDIT ANYTHING BELOW THIS LINE
