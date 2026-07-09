@@ -1,4 +1,4 @@
-## Going Live Checklist
+## Going Live Checklist (Archived and old)
 To proceed with going live on the platform, please ensure the following steps are completed:
 
 ### 1. Sign Up on the ONDC Portal

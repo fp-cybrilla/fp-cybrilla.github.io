@@ -1,84 +1,25 @@
----
-title: Overview
----
-## Go live checklist
-Use this guide to prepare yourself for going live with your FP integration
+## Going Live Checklist
+To proceed with going live on the platform, please ensure the following steps are completed:
 
-### Prerequisites
+### 1. Sign Up on the ONDC Portal
+A signup on the ONDC portal is mandatory using your registered ARN details, as all transactions are routed via ONDC.
 
-You need to do the following activities before you can start distributing mutual funds on FP:  
-1. Get your distribution license (*You'll need a minimum of 2 weeks for this*)
-2. Signup with AMCs as Channel Partner (*You'll need a minimum of 4 weeks for this*)
-3. Register with CAMS & KFintech RTAs
-4. [Signup with Razorpay for Payments](/going-live/signing-up-with-razorpay)
-5. Signup with CVL KRA for checking KYC (*You'll need 2-3 weeks for this*)
+To begin: Contact customerservice@cybrilla.com to schedule a call for assistance with the signup process.
+#### What to prepare before the call:
+- **Business details** (ARN, contact info, etc.)  
+  Fill out this [form](https://docs.google.com/forms/d/e/1FAIpQLSdxsqzDcO5y6F-T5zXUK5pUfOL8NSL-c6ktZY3TiCHSii8ZTw/viewform) in advance.
+- **Aadhaar eSign availability** Aadhaar-based eSign is part of the signup process. Please ensure the authorized signatory is available during the call.
+- **Disclosure document** Prepare the required disclosure in advance.  
+  Contact customerservice@cybrilla.com to get a sample/template.
 
-### Activate your FP Account
+### 2. Esign the POA Agreement
+- Contact customerservice@cybrilla.com for an eSign link to complete the legal signing process.
 
-After you got your license and completed your signups as mentioned in the Prerequisites section above, provide us the following information to activate your FP account.
+### 3. Schedule Product Demo Review
+Set up a product readiness demo call by reaching out to customerservice@cybrilla.com. This step ensures your product setup meets all technical and complaince requirements before going live.
 
-#### 1. Business details
-- [ ] ARN (Registration Number issued by AMFI)  
-OR
-- [ ] RIA code (Registered Investment Advisor code issued by SEBI)
-- [ ] EUIN (Employee unique identification number)
-- [ ] Registered location of your business
+### 4. Set Up Mailback Report Subscription with RTAs
+Configure the mailback report subscription with the RTAs on the portal. For enabling the subscription, contact customerservice@cybrilla.com.
 
-#### 2. AMC details
-- [ ] List of AMCs whose schemes you want enabled for distribution
-
-*Collection bank account details for each AMC that needs to be enabled*
-- [ ] Bank name
-- [ ] Account holder name
-- [ ] Account number
-- [ ] IFSC code
-
-#### 3. CAMS
-**Required details**
-- [ ] User code
-- [ ] Online broker code
-- [ ] STP credentials
-  - STP username
-  - STP password
-- [ ] Answers to CAMS Fundsnet security questions
-
-#### 4. Karvy
-**Required details**
-- [ ] User code
-- [ ] Broker code
-- [ ] STP credentials
-  - STP username
-  - STP password
-  - STP app identifier
-  - STP arn number
-  - STP branch code
-
-#### 5. CVL KRA A/c details
-- [ ] CVL Username
-- [ ] CVL POS Code
-- [ ] CVL Password
-
-#### 6. Payment gateway account details
-**6a. Razorpay**
-
-*Razorpay account 1 (with third party validation enabled)*
-- [ ] Merchant ID
-- [ ] Live account api key id
-- [ ] Live account api key secret
-
-*Razorpay account 2 (with third party validation disabled)*
-- [ ] Merchant ID
-- [ ] Live account api key id
-- [ ] Live account api key secret
-- [ ] ENach/E-mandate processing terminal bank (Contact your Razorpay Relationship Manager)
-- [ ] ENach/E-mandate processing cut-off time (Contact your Razorpay Relationship Manager)
-
-**6b. BillDesk**
-
-*V2 API credentials*
-- [ ] Merchant ID 
-- [ ] Client ID 
-
-#### 7. Postback URLs
-- [ ] Default Netbanking payment postback URL
-- [ ] Default e-mandate authorization postback URL
+### 5. Receive Production Credentials
+After completing all the above steps, the Cybrilla Onboarding Team will share your production credentials.

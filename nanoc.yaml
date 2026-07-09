@@ -174,9 +174,7 @@ sidebar:
   - dropdown_menu_title: FP-CybrillaPOA gateway
     dropdown_menu_items: 
       - title: Overview
-        link: "/fp-cybrillapoa-gateway/overview/"
-      - title: Going Live
-        link: "/fp-cybrillapoa-gateway/going-live/"
+        link: "/fp-cybrillapoa-gateway/overview/"      
       - title: Custom Checkout
         link: "/fp-cybrillapoa-gateway/custom-checkout"
       - title: Payment Retry
@@ -239,9 +237,7 @@ sidebar:
       #- title: Release notes      
        # link: "/general-topics/release-notes/"
       - title: Deprecated features 
-        link: "/general-topics/deprecation-notes/"
-      - title: BSE Validations
-        link: "/general-topics/bse_validations/"
+        link: "/general-topics/deprecation-notes/"      
       - title: Best Practices Guide
         link: "/general-topics/best-practices-guide/"
       - title: Security Assurance
