@@ -1,7 +1,7 @@
 ---
 title: Investor servicing Overview
 ---
-## Investor servicing
+## Investor servicing (Not available)
 #### Know about handling MF investor service requests with FP APIs
 
 Currently FP supports Non-financial / Non-commercial transactions which deal with any service requests pertaining to modification of certain information that are mapped to an account or a folio.
