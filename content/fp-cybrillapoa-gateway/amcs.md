@@ -25,15 +25,15 @@
 24. Mirae Asset Mutual Fund
 25. HSBC Mutual Fund
 26. Canara Robeco Mutual Fund
+27. Navi Mutual Fund
+28. Tata Mutual Fund
+29. Helios Mutual Fund
 
 ## AMCs about to go live
 1. SBI
-2. Navi
-3. Tata MF
-4. Franklin
-5. PPFAS 
-6. Baroda BNP Paribas
-7. LIC MF
-8. Mahindra Manulife MF
-9. Helios MF
-10. Angel One MF
+2. Franklin
+3. PPFAS 
+4. Baroda BNP Paribas
+5. LIC MF
+6. Mahindra Manulife MF
+7. Angel One MF
