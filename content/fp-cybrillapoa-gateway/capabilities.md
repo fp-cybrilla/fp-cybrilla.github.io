@@ -51,9 +51,9 @@ Note: To understand more about current Daily SIP schedule, click <a href="https:
 
 |Category|Capability|
 |---|---|
-|Switch|Yet to be supported|
-|SWP|Yet to be supported|
-|STP|Yet to be supported|
+|Switch|Supported|
+|SWP|Supported|
+|STP|Supported|
 
  **Note about supporting Goal like use cases:** Single payment collection against multiple lumpsum purchase orders OR Single payment collection against multiple first installments of different SIPs are supported.
 
